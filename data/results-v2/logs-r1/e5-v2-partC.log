@@ -1,0 +1,5 @@
+E5 n=100000 random ratio=0.001 done
+E5 n=100000 random ratio=0.01 done
+E5 n=100000 clustered ratio=0.001 done
+E5 n=100000 clustered ratio=0.01 done
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v2\e5-incremental-v2-partC.json (1820.4 s)

@@ -1,0 +1,146 @@
+{
+ "id": "n1000-s1000",
+ "n": 1000,
+ "seed": 1000,
+ "nodes": 1000,
+ "edges": 1479,
+ "defectEdits": 20,
+ "violations": 9,
+ "violationsByClass": {
+  "relationType": 4,
+  "requiredAttr": 3,
+  "multiplicity": 1,
+  "tracePolicy": 1
+ },
+ "engine": {
+  "normalizeMs": 1.4291,
+  "validateSamplesMs": [
+   37.3244,
+   80.4102,
+   4.3552,
+   3.7981,
+   36.7481,
+   5.1488,
+   2.6332
+  ],
+  "validateMs": 5.1488,
+  "validateCoreSamplesMs": [
+   1.3074,
+   1.2031,
+   1.368,
+   1.1787,
+   1.0505,
+   1.1486,
+   1.0863
+  ],
+  "validateCoreMs": 1.1787
+ },
+ "reference": {
+  "samplesMs": [
+   772.4516,
+   747.0052,
+   721.628
+  ],
+  "equal": true,
+  "medianMs": 747.0052
+ },
+ "incremental": {
+  "strategy": 3,
+  "edits": 20,
+  "stepSamplesMs": [
+   0.133,
+   0.3383,
+   0.1463,
+   0.346,
+   0.6828,
+   0.4703,
+   0.1819,
+   0.6318,
+   0.4585,
+   0.1867,
+   0.1209,
+   0.1911,
+   0.2813,
+   0.1481,
+   0.1299,
+   0.3167,
+   0.1506,
+   0.2418,
+   0.3476,
+   0.1046
+  ],
+  "stepMedianMs": 0.21644999999999998
+ },
+ "post": [
+  {
+   "edit": {
+    "kind": "setAttr",
+    "id": "P137",
+    "attr": "mass",
+    "value": 50
+   },
+   "violations": [
+    "MULT:Requirement|satisfy|in|R128",
+    "REQ:Component.mass|C117",
+    "REQ:Component.name|C190",
+    "REQ:View.name|W30",
+    "TRACE:FUN2REQ|F146",
+    "TYPE:connect|edit#d18",
+    "TYPE:connect|edit#d2",
+    "TYPE:satisfy|edit#d19",
+    "TYPE:verify|edit#d10"
+   ],
+   "batchEqual": true
+  },
+  {
+   "edit": {
+    "kind": "delEdge",
+    "id": "e939"
+   },
+   "violations": [
+    "MULT:Requirement|satisfy|in|R128",
+    "MULT:Requirement|verify|in|R171",
+    "REQ:Component.mass|C117",
+    "REQ:Component.name|C190",
+    "REQ:View.name|W30",
+    "TRACE:FUN2REQ|F146",
+    "TYPE:connect|edit#d18",
+    "TYPE:connect|edit#d2",
+    "TYPE:satisfy|edit#d19",
+    "TYPE:verify|edit#d10"
+   ],
+   "batchEqual": true
+  },
+  {
+   "edit": {
+    "kind": "setAttr",
+    "id": "P172",
+    "attr": "name"
+   },
+   "violations": [
+    "MULT:Requirement|satisfy|in|R128",
+    "REQ:Component.mass|C117",
+    "REQ:Component.name|C190",
+    "REQ:Port.name|P172",
+    "REQ:View.name|W30",
+    "TRACE:FUN2REQ|F146",
+    "TYPE:connect|edit#d18",
+    "TYPE:connect|edit#d2",
+    "TYPE:satisfy|edit#d19",
+    "TYPE:verify|edit#d10"
+   ],
+   "batchEqual": true
+  }
+ ],
+ "violationKeys": [
+  "MULT:Requirement|satisfy|in|R128",
+  "REQ:Component.mass|C117",
+  "REQ:Component.name|C190",
+  "REQ:View.name|W30",
+  "TRACE:FUN2REQ|F146",
+  "TYPE:connect|edit#d18",
+  "TYPE:connect|edit#d2",
+  "TYPE:satisfy|edit#d19",
+  "TYPE:verify|edit#d10"
+ ]
+}

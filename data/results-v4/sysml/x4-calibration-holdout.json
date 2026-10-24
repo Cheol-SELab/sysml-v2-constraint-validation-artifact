@@ -1,0 +1,188 @@
+{
+ "experiment": "X4 E7 recalibration on the SysML-v2-Release corpus with holdout",
+ "eligibleUnits": 61,
+ "rule": "units with >= 10 nodes (specialization mode, levels = all); seeded random split",
+ "calibrationUnits": [
+  "validation/05-State-based Behavior",
+  "training/36. Variability",
+  "training/28. Individuals",
+  "training/27. Occurrences",
+  "training/29. Expressions",
+  "examples/Import Tests",
+  "validation/08-Requirements",
+  "validation/12-Dependency Relationships",
+  "validation/14-Language Extensions",
+  "training/19. Terminate Actions",
+  "examples/Flashlight Example",
+  "examples/Metadata Examples",
+  "examples/Arrowhead Framework Example",
+  "examples/Interaction Sequencing Examples",
+  "training/31. Constraints",
+  "examples/Cause and Effect Examples",
+  "training/13. Flows",
+  "examples/Simple Tests",
+  "validation/15-Properties-Values-Expressions",
+  "training/30. Calculations",
+  "training/16. Conditional Succession",
+  "validation/11-View and Viewpoint",
+  "training/42. Views",
+  "training/07. Parts",
+  "training/25. Transitions",
+  "training/17. Control",
+  "examples/Room Model",
+  "examples/Geometry Examples",
+  "validation/03-Function-based Behavior",
+  "training/39. Metadata",
+  "training/10. Ports"
+ ],
+ "holdoutUnits": [
+  "validation/06-Individual and Snapshots",
+  "training/24. States",
+  "training/38. Allocation",
+  "training/40. Filtering",
+  "validation/02-Parts Interconnection",
+  "training/14. Action Definitions",
+  "examples/Variability Examples",
+  "training/11. Interfaces",
+  "examples/State Space Representation Examples",
+  "validation/09-Verification",
+  "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly",
+  "training/21. Asynchronous Messaging",
+  "training/34. Verification",
+  "training/05. Redefinition",
+  "training/32. Requirements",
+  "examples/Mass Roll-up Example",
+  "validation/07-Variant Configuration",
+  "examples/Requirements Examples",
+  "examples/Individuals Examples",
+  "validation/10-Analysis and Trades",
+  "examples/Vehicle Example",
+  "examples/v1 Spec Examples/8.4.5 Constraining Decomposition",
+  "training/12. Binding Connectors",
+  "training/33. Analysis",
+  "training/09. Connections",
+  "examples/Analysis Examples",
+  "validation/04-Functional Allocation",
+  "training/35. Use Cases",
+  "validation/01-Parts Tree",
+  "validation/13-Model Containment"
+ ],
+ "sampleSizes": {
+  "calibration": {
+   "nodes": 1216,
+   "degrees": 1216,
+   "components": 670
+  },
+  "holdout": {
+   "nodes": 1498,
+   "degrees": 1498,
+   "components": 858
+  },
+  "syntheticModelsPerEvaluation": 40,
+  "syntheticNodesPerModel": 39
+ },
+ "test": "two-sample Kolmogorov-Smirnov D with permutation p-value (2000 permutations; valid for discrete data with ties); asymptotic 5% critical value reported for comparison only",
+ "defaultParameters": {
+  "portsPerComponent": 0.8,
+  "depth": 3,
+  "dependDensity": 0.5,
+  "redundancy": 0.4
+ },
+ "calibratedParameters": {
+  "portsPerComponent": 2,
+  "depth": 1,
+  "dependDensity": 0,
+  "redundancy": 0
+ },
+ "calibrationSumD": 1.0802,
+ "holdoutBeforeCalibration": {
+  "degree": {
+   "d": 0.5132,
+   "p": 0.0005,
+   "n1": 1498,
+   "n2": 1560,
+   "asymptoticCritical005": 0.0492
+  },
+  "containmentDepth": {
+   "d": 0.1622,
+   "p": 0.0005,
+   "n1": 1498,
+   "n2": 1560,
+   "asymptoticCritical005": 0.0492
+  },
+  "distanceToRequirement": {
+   "d": 0.788,
+   "p": 0.0005,
+   "n1": 858,
+   "n2": 400,
+   "asymptoticCritical005": 0.0823
+  }
+ },
+ "holdoutAfterCalibration": {
+  "degree": {
+   "d": 0.6171,
+   "p": 0.0005,
+   "n1": 1498,
+   "n2": 1560,
+   "asymptoticCritical005": 0.0492
+  },
+  "containmentDepth": {
+   "d": 0.2377,
+   "p": 0.0005,
+   "n1": 1498,
+   "n2": 1560,
+   "asymptoticCritical005": 0.0492
+  },
+  "distanceToRequirement": {
+   "d": 0.2814,
+   "p": 0.0005,
+   "n1": 858,
+   "n2": 400,
+   "asymptoticCritical005": 0.0823
+  }
+ },
+ "calibrationAfterCalibration": {
+  "degree": {
+   "d": 0.6894,
+   "p": 0.0005,
+   "n1": 1216,
+   "n2": 1560,
+   "asymptoticCritical005": 0.052
+  },
+  "containmentDepth": {
+   "d": 0.1028,
+   "p": 0.0005,
+   "n1": 1216,
+   "n2": 1560,
+   "asymptoticCritical005": 0.052
+  },
+  "distanceToRequirement": {
+   "d": 0.2881,
+   "p": 0.0005,
+   "n1": 670,
+   "n2": 400,
+   "asymptoticCritical005": 0.0859
+  }
+ },
+ "realCorpusComposition": {
+  "edgeTypes": {
+   "contain": 1297,
+   "satisfy": 20,
+   "connect": 78,
+   "allocate": 16,
+   "verify": 6,
+   "expose": 97,
+   "dependOn": 1,
+   "subject": 3
+  },
+  "nodeTypes": {
+   "Function": 633,
+   "Component": 1528,
+   "Port": 352,
+   "Requirement": 144,
+   "Interface": 19,
+   "VerificationCase": 15,
+   "View": 23
+  }
+ }
+}

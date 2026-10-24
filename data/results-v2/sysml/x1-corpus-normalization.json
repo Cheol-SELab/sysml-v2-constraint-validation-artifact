@@ -1,0 +1,2751 @@
+{
+ "experiment": "X1 corpus and S1 normalization",
+ "provenance": {
+  "source": "https://github.com/Systems-Modeling/SysML-v2-Release",
+  "tag": "2026-08",
+  "commit": "fb97b754f29588b8e9c7a35f370880cd15eb29e7",
+  "license": "EPL-2.0 (models and libraries, per repository README \"Licensing\")",
+  "paths": [
+   "sysml/src/examples",
+   "sysml/src/training",
+   "sysml/src/validation"
+  ],
+  "library": "sysml.library (*.sysml; *.kerml kernel files are not parsed)",
+  "engineSha256": "6e95af309dc8a1a5fb18e7fe6d9fd147815057a7757c2476a1cc51d404e77479",
+  "note": "downloaded files are treated as data only; no script inside the corpus was executed"
+ },
+ "corpus": {
+  "units": 83,
+  "unitsByGroup": {
+   "examples": 24,
+   "training": 42,
+   "validation": 17
+  },
+  "files": 252,
+  "filesParsed": 252,
+  "parseFailures": [],
+  "lines": 14979,
+  "statements": 8651,
+  "library": {
+   "files": 58,
+   "parsed": 58,
+   "failures": []
+  },
+  "unitList": [
+   {
+    "id": "examples/Analysis Examples",
+    "files": 4,
+    "lines": 513,
+    "statements": 356,
+    "sha256": "2fa78b9e9c45bf73b12b1849aa1032d707b90314f8f5b2925d8a9d714d352f31"
+   },
+   {
+    "id": "examples/Arrowhead Framework Example",
+    "files": 4,
+    "lines": 454,
+    "statements": 249,
+    "sha256": "f71e90c9a7502f5189a6b132bf77fbc882d567f97f44cbf182daf3ab0ade7788"
+   },
+   {
+    "id": "examples/Association Examples",
+    "files": 3,
+    "lines": 105,
+    "statements": 59,
+    "sha256": "c411325f8f55d9326afa72531c049fa6ca42835d676171794e069ead72f10972"
+   },
+   {
+    "id": "examples/Camera Example",
+    "files": 2,
+    "lines": 26,
+    "statements": 17,
+    "sha256": "efba74a8d3b1c21700f1172c2434f37906b2ad86de83ae5bb1385ce37457d6fd"
+   },
+   {
+    "id": "examples/Cause and Effect Examples",
+    "files": 2,
+    "lines": 80,
+    "statements": 50,
+    "sha256": "63ad46ab04fd440de997ebee56bf7b849843aaecf4f35f2abde98578e392fcf9"
+   },
+   {
+    "id": "examples/Comment Examples",
+    "files": 1,
+    "lines": 15,
+    "statements": 10,
+    "sha256": "7aeb698a4d7a8606f424a3d733057e39c51340bd3be41540f99312a957839993"
+   },
+   {
+    "id": "examples/Flashlight Example",
+    "files": 1,
+    "lines": 59,
+    "statements": 34,
+    "sha256": "38be4903230c7ddc0d52858f1f1e4fca02a3f064310428d0fd9cdcbf4b25753d"
+   },
+   {
+    "id": "examples/Geometry Examples",
+    "files": 5,
+    "lines": 514,
+    "statements": 280,
+    "sha256": "ef30c27901e4e659a49003b0557fb20de19015f9fb74398ed7c063d5b56b0a06"
+   },
+   {
+    "id": "examples/Import Tests",
+    "files": 4,
+    "lines": 86,
+    "statements": 45,
+    "sha256": "630e7a7f69b82a572ab3eae446017070df630323068a21e601fe69cb830db185"
+   },
+   {
+    "id": "examples/Individuals Examples",
+    "files": 2,
+    "lines": 154,
+    "statements": 82,
+    "sha256": "41a77495cc9ecff36b91723fe92844fd7e71372e0db895fc14e1718e2e06a1d1"
+   },
+   {
+    "id": "examples/Interaction Sequencing Examples",
+    "files": 6,
+    "lines": 571,
+    "statements": 341,
+    "sha256": "7fef1087dceb3dc2eea2aa18b4b0d48484045601c6c1be6103e7330b8c1c6569"
+   },
+   {
+    "id": "examples/Mass Roll-up Example",
+    "files": 3,
+    "lines": 181,
+    "statements": 94,
+    "sha256": "f7ea16d58974b5cdbca0226824ae5dadf182fcf21611ed435de1bb51ccf472b9"
+   },
+   {
+    "id": "examples/Metadata Examples",
+    "files": 5,
+    "lines": 122,
+    "statements": 74,
+    "sha256": "ea481c59168bd635556c58f2ac925a336fff98e7bf37b087741ee5c97c038ef7"
+   },
+   {
+    "id": "examples/Packet Example",
+    "files": 2,
+    "lines": 52,
+    "statements": 30,
+    "sha256": "1bfc1752fef6da8f479ba813fb6839165048240e17dc10c7232fac7118f66cc7"
+   },
+   {
+    "id": "examples/Requirements Examples",
+    "files": 3,
+    "lines": 118,
+    "statements": 69,
+    "sha256": "cba317638e0bb0e09e005b4d44a01eaf8285dbb29825906e7413d6f9842047a8"
+   },
+   {
+    "id": "examples/Room Model",
+    "files": 1,
+    "lines": 78,
+    "statements": 41,
+    "sha256": "7e8d0aa89d0c503179ef99845628c5c0641a4d4010b8de94faf67a93fc19d0e2"
+   },
+   {
+    "id": "examples/Simple Tests",
+    "files": 35,
+    "lines": 1319,
+    "statements": 779,
+    "sha256": "6ecb09a1fd68e4eb7775e955bdaa2d19b782a862f2fe2f272a91747bb616573b"
+   },
+   {
+    "id": "examples/State Space Representation Examples",
+    "files": 2,
+    "lines": 385,
+    "statements": 229,
+    "sha256": "9dba7578e0ff3b0ae24a44566f5a4ea0261a1b48a1c929002da234b79599842c"
+   },
+   {
+    "id": "examples/Timeslice and Snapshot Examples",
+    "files": 1,
+    "lines": 51,
+    "statements": 23,
+    "sha256": "dc276082dcc93d689356e1e09068b60211dcd760eb472e5f8a4fc3c98cbb32fd"
+   },
+   {
+    "id": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly",
+    "files": 2,
+    "lines": 186,
+    "statements": 101,
+    "sha256": "652e1967dc3174abc930245b24cd4bfd9a66738ff401b7aa6a258bcf69a0f853"
+   },
+   {
+    "id": "examples/v1 Spec Examples/8.4.5 Constraining Decomposition",
+    "files": 2,
+    "lines": 123,
+    "statements": 65,
+    "sha256": "1c59d800914d584666f7f5d3b98e134b006e86f08bdd74f91a9cdb01b21d1d40"
+   },
+   {
+    "id": "examples/v1 Spec Examples/D.4.7.8 Dynamics",
+    "files": 1,
+    "lines": 88,
+    "statements": 63,
+    "sha256": "de83dd304289c02e2ee0836fdf56899b95eb9b1764a4632b74c76d02ceb420ef"
+   },
+   {
+    "id": "examples/Variability Examples",
+    "files": 1,
+    "lines": 165,
+    "statements": 85,
+    "sha256": "a511b1c9cd2435c2d146212cc3ea03f466fff12b6a82845b623d36ce19f65a5e"
+   },
+   {
+    "id": "examples/Vehicle Example",
+    "files": 4,
+    "lines": 1847,
+    "statements": 1215,
+    "sha256": "66dee85419d4ca7407da87784575ce278ec26f8ab3ac5ee19bba3eed25dee817"
+   },
+   {
+    "id": "training/01. Packages",
+    "files": 3,
+    "lines": 47,
+    "statements": 21,
+    "sha256": "b3f21de3054360d5b92f9f79ff809168ea9ddee5ea822443635372ad33f1f867"
+   },
+   {
+    "id": "training/02. Part Definitions",
+    "files": 1,
+    "lines": 20,
+    "statements": 12,
+    "sha256": "b8ae83b3615d8d38246f2b8e84c1c97bbc56d35921fe5850e3a7df8c3e5122ea"
+   },
+   {
+    "id": "training/03. Generalization",
+    "files": 1,
+    "lines": 19,
+    "statements": 9,
+    "sha256": "6d4bd9cdda0d30e85062aa6de80d70bcbf18db7a09a84919c84d67393db09765"
+   },
+   {
+    "id": "training/04. Subsetting",
+    "files": 1,
+    "lines": 15,
+    "statements": 10,
+    "sha256": "df49cc044d8a40b2b90b0b2b1bf70ee61a84e881cb8a9e291a4faa3fc4b4229c"
+   },
+   {
+    "id": "training/05. Redefinition",
+    "files": 1,
+    "lines": 25,
+    "statements": 14,
+    "sha256": "b66c042dca5456f245b48c6aedb6387241919c2fbe1e2ca37082b6ec5fb0f84d"
+   },
+   {
+    "id": "training/06. Enumeration Definitions",
+    "files": 2,
+    "lines": 49,
+    "statements": 32,
+    "sha256": "3f10e5ab2cc8f8cdf4a9d987d435a86caef67ed33101f21b66153408428e6b41"
+   },
+   {
+    "id": "training/07. Parts",
+    "files": 2,
+    "lines": 58,
+    "statements": 25,
+    "sha256": "26ac2b0d4513bff675b320c78e5bd307ddf7b495f5393c44cceffd73a664c932"
+   },
+   {
+    "id": "training/08. Items",
+    "files": 1,
+    "lines": 17,
+    "statements": 9,
+    "sha256": "88a7675842dce58d0dd7579e73a394158d3c3426be3936dc7c78927b3e683858"
+   },
+   {
+    "id": "training/09. Connections",
+    "files": 1,
+    "lines": 42,
+    "statements": 27,
+    "sha256": "e7fc4491963fc04bbf7c2e4480d13d9199725f78312eacd252712b0053d223a0"
+   },
+   {
+    "id": "training/10. Ports",
+    "files": 2,
+    "lines": 46,
+    "statements": 26,
+    "sha256": "b19a86544f47012db94bf64fd9cb6654a5f41df35dfdc0d923c01ebc219a5749"
+   },
+   {
+    "id": "training/11. Interfaces",
+    "files": 2,
+    "lines": 42,
+    "statements": 24,
+    "sha256": "a152699f9c5c1dd76b55294dd8da4281964af349464864476d9fdcce1410ca4e"
+   },
+   {
+    "id": "training/12. Binding Connectors",
+    "files": 2,
+    "lines": 55,
+    "statements": 34,
+    "sha256": "b8758c2535d3961da4c25ca927906ca6104a8f234664a2df60b03a3a73dad191"
+   },
+   {
+    "id": "training/13. Flows",
+    "files": 3,
+    "lines": 61,
+    "statements": 31,
+    "sha256": "7b9e20c804f32432d0acb2bf22aa83ff258f3c8da8036a4974bd66d7081d64f6"
+   },
+   {
+    "id": "training/14. Action Definitions",
+    "files": 4,
+    "lines": 97,
+    "statements": 87,
+    "sha256": "ca3d76575ba1489691acfc7f273a9e57e5a34d63b8f56b3c3a5b3676f639e34f"
+   },
+   {
+    "id": "training/15. Actions",
+    "files": 1,
+    "lines": 27,
+    "statements": 23,
+    "sha256": "7a9da38489f0e3cbf778195fcea0f38c757dc9f8d33626f4dd32b2aba38d259d"
+   },
+   {
+    "id": "training/16. Conditional Succession",
+    "files": 2,
+    "lines": 63,
+    "statements": 50,
+    "sha256": "9511f1360ba44680e56adae862be93f781c12f2ff50cf8e12847bbcf0014dfc2"
+   },
+   {
+    "id": "training/17. Control",
+    "files": 5,
+    "lines": 172,
+    "statements": 119,
+    "sha256": "460d271ed5468a1137b2c5c04cf9c7cc195f254f814c0f0660121566ac27da2e"
+   },
+   {
+    "id": "training/18. Action Performance",
+    "files": 1,
+    "lines": 22,
+    "statements": 11,
+    "sha256": "848f64be403ecca04171e2f3849f31499d19f4ea61c009cf97e7d5d586d498a0"
+   },
+   {
+    "id": "training/19. Terminate Actions",
+    "files": 2,
+    "lines": 48,
+    "statements": 27,
+    "sha256": "7da307e6ca6fd6fdf9c35226e7dc9c2953c20778966e9cf08fa47a13ad26b6cc"
+   },
+   {
+    "id": "training/20. Assignment Actions",
+    "files": 1,
+    "lines": 41,
+    "statements": 31,
+    "sha256": "aecb79e8abf417245a1bc9c7ded131d462a27fae60cac0cbf24ae325592a6e3c"
+   },
+   {
+    "id": "training/21. Asynchronous Messaging",
+    "files": 2,
+    "lines": 73,
+    "statements": 52,
+    "sha256": "dd50b27fea9d63befa2cebd899eeb68d42278c00b692a93be9b7c486948caf77"
+   },
+   {
+    "id": "training/22. Opaque Actions",
+    "files": 1,
+    "lines": 19,
+    "statements": 6,
+    "sha256": "73c0a6d7e9fd29e9ec07556efbcc92dce649434edd93fc2fcef2acf5da534eb0"
+   },
+   {
+    "id": "training/23. State Definitions",
+    "files": 2,
+    "lines": 55,
+    "statements": 24,
+    "sha256": "92ea7a47333d2b6637710427a15c97877d31286560fb505535d7e15768a3ec36"
+   },
+   {
+    "id": "training/24. States",
+    "files": 3,
+    "lines": 92,
+    "statements": 53,
+    "sha256": "b09ef33b86afeaa44666194fe3eb95861c0089015ce3416fb2c1a281c3419b8b"
+   },
+   {
+    "id": "training/25. Transitions",
+    "files": 3,
+    "lines": 119,
+    "statements": 70,
+    "sha256": "9fa4521dae0f58da29d29ce9dd46897008920948dbfbf4bf1dd30534e161470d"
+   },
+   {
+    "id": "training/26. State Exhibition",
+    "files": 1,
+    "lines": 15,
+    "statements": 7,
+    "sha256": "a9a987e4d47a4f4c6a750302b3cb4f7020ab51af3bde78b2970b3477a7f5574a"
+   },
+   {
+    "id": "training/27. Occurrences",
+    "files": 7,
+    "lines": 286,
+    "statements": 156,
+    "sha256": "2230e0a0634e83b51b69eea83bd10039c256d911d809c1d4a2f6f3069ed7eced"
+   },
+   {
+    "id": "training/28. Individuals",
+    "files": 3,
+    "lines": 72,
+    "statements": 39,
+    "sha256": "a00e5a2675fa0e32d89ff323ca86900a92687757f1ce6c150fd0b7a02780f8f2"
+   },
+   {
+    "id": "training/29. Expressions",
+    "files": 4,
+    "lines": 116,
+    "statements": 55,
+    "sha256": "82a71565bdc89f0708417809cd51824c6aca4e2f8c42bd7fe741c425bb83f738"
+   },
+   {
+    "id": "training/30. Calculations",
+    "files": 3,
+    "lines": 94,
+    "statements": 76,
+    "sha256": "db5f8c57b3bc561905793c9387710a1488a4aadf6a147db5708d37f1b8982c8c"
+   },
+   {
+    "id": "training/31. Constraints",
+    "files": 7,
+    "lines": 238,
+    "statements": 155,
+    "sha256": "e219b463d592c720d22f143b9f59ca923ddecdb0dbb13a2dc7f362914fc18c5a"
+   },
+   {
+    "id": "training/32. Requirements",
+    "files": 4,
+    "lines": 127,
+    "statements": 74,
+    "sha256": "48ea58ecd5e086f8ac88215814eecd61de440f40b69374418fed6539d7fcf891"
+   },
+   {
+    "id": "training/33. Analysis",
+    "files": 3,
+    "lines": 162,
+    "statements": 101,
+    "sha256": "c47cf201e55cf88d97472ba37c011dab480405afe14c1a1145773300b02deaa2"
+   },
+   {
+    "id": "training/34. Verification",
+    "files": 2,
+    "lines": 99,
+    "statements": 50,
+    "sha256": "8f7d423e427a3c8ade76c2c75fb4d03a205fd7eee4c6a9ba5ddd79c1a2e94814"
+   },
+   {
+    "id": "training/35. Use Cases",
+    "files": 2,
+    "lines": 77,
+    "statements": 46,
+    "sha256": "24a1fca71c7a059747289ab38f817ce606b0f9fd3e3b09af1e5927cc10894e05"
+   },
+   {
+    "id": "training/36. Variability",
+    "files": 3,
+    "lines": 74,
+    "statements": 39,
+    "sha256": "ddf3b09d9a742aba9b6f0d3a7bf07ae4dd0dc5a497baafeeeb994065aca574aa"
+   },
+   {
+    "id": "training/37. Dependencies",
+    "files": 1,
+    "lines": 27,
+    "statements": 9,
+    "sha256": "29b37e28676198e1e51a1a84975e0df04c31ca6e3181bcf996f1ba4f4d78f074"
+   },
+   {
+    "id": "training/38. Allocation",
+    "files": 2,
+    "lines": 72,
+    "statements": 39,
+    "sha256": "1a43cafdcba32dea509b58842703da67d03c31db90bb033e51b743625b3a66ea"
+   },
+   {
+    "id": "training/39. Metadata",
+    "files": 2,
+    "lines": 52,
+    "statements": 41,
+    "sha256": "4f29530f61126be9c22892efc81609ca6d1e8107b1591de50ef6f9d53b80260c"
+   },
+   {
+    "id": "training/40. Filtering",
+    "files": 2,
+    "lines": 72,
+    "statements": 64,
+    "sha256": "7c1ef31740de58d1a92d4231481aba05db7bf4e35d70775a9004f67301400e1a"
+   },
+   {
+    "id": "training/41. Language Extension",
+    "files": 3,
+    "lines": 92,
+    "statements": 52,
+    "sha256": "22f146c31c763ce7343b8635367d9b5334e91fff3422252f39731b618dde2ec8"
+   },
+   {
+    "id": "training/42. Views",
+    "files": 2,
+    "lines": 73,
+    "statements": 37,
+    "sha256": "4cf8c204d0a7011c049972c16a94d13669fe78d34d5f0009a8d0643fe706e0b1"
+   },
+   {
+    "id": "validation/01-Parts Tree",
+    "files": 3,
+    "lines": 262,
+    "statements": 102,
+    "sha256": "194761876460a53da05f2e46ac174bd0541f967fc4a0847b7093c07c3f579afc"
+   },
+   {
+    "id": "validation/02-Parts Interconnection",
+    "files": 2,
+    "lines": 296,
+    "statements": 137,
+    "sha256": "ed6f737b20b887c0c3eb0a5ac5ca57d0d21163e1f8dd6bf85a29203fc7cf8105"
+   },
+   {
+    "id": "validation/03-Function-based Behavior",
+    "files": 8,
+    "lines": 575,
+    "statements": 307,
+    "sha256": "5ec476c221c6bc5381a12eed742c1132c83d9bc78c7c29a01852ed0b27e07813"
+   },
+   {
+    "id": "validation/04-Functional Allocation",
+    "files": 1,
+    "lines": 110,
+    "statements": 49,
+    "sha256": "b32c9c1f24cb099e70bc8c166753b2d168299a2b3c415f2c7d192b2ff86bf84a"
+   },
+   {
+    "id": "validation/05-State-based Behavior",
+    "files": 3,
+    "lines": 602,
+    "statements": 247,
+    "sha256": "cf2a0c45ea3c1970649b8e349d061d6f69ef7662f04dcfb6cc97ba509cf4422d"
+   },
+   {
+    "id": "validation/06-Individual and Snapshots",
+    "files": 1,
+    "lines": 167,
+    "statements": 93,
+    "sha256": "958de2d4ebd3b4027e7e40f55d9038f658cf611a963b49e8c9319b4cb782be30"
+   },
+   {
+    "id": "validation/07-Variant Configuration",
+    "files": 3,
+    "lines": 272,
+    "statements": 157,
+    "sha256": "f24ff201e13459f5dd00083403fbb67d0be80258deaa8932f747b2c62e9a2cc5"
+   },
+   {
+    "id": "validation/08-Requirements",
+    "files": 1,
+    "lines": 205,
+    "statements": 102,
+    "sha256": "170b0767a383c23ecd80351f5a6b1710308224eb3a960383864cac5c1b786318"
+   },
+   {
+    "id": "validation/09-Verification",
+    "files": 1,
+    "lines": 115,
+    "statements": 59,
+    "sha256": "9860cdec0319db3a12d709579c046fc496cfab843a55c47a5fd411030f17dc0c"
+   },
+   {
+    "id": "validation/10-Analysis and Trades",
+    "files": 4,
+    "lines": 421,
+    "statements": 247,
+    "sha256": "6ea301f1caa33c5c17bc786fcd5cd40b4b35577494047f0d14f1386f7cdf8718"
+   },
+   {
+    "id": "validation/11-View and Viewpoint",
+    "files": 2,
+    "lines": 123,
+    "statements": 86,
+    "sha256": "7e2ab5a05c9aa9115ffccc046a99ebd88b3b5b06f677df6acde62ad71d4087a9"
+   },
+   {
+    "id": "validation/12-Dependency Relationships",
+    "files": 3,
+    "lines": 98,
+    "statements": 56,
+    "sha256": "93a2dee33e9f72f4af158426f82d85abc89202b289a3dcd6df43c81cd0e0729c"
+   },
+   {
+    "id": "validation/13-Model Containment",
+    "files": 4,
+    "lines": 213,
+    "statements": 140,
+    "sha256": "3d422c8fcb85e3ff0db70eeb8c47191628c2b883dc613636c6303023dd19797d"
+   },
+   {
+    "id": "validation/14-Language Extensions",
+    "files": 3,
+    "lines": 290,
+    "statements": 156,
+    "sha256": "9537860273de5b99c868b757ab5bf7d8d69c62b0e49d06a10cd3018ff6d9e249"
+   },
+   {
+    "id": "validation/15-Properties-Values-Expressions",
+    "files": 14,
+    "lines": 693,
+    "statements": 356,
+    "sha256": "2eead86dd6e0a8eb9da76a5789196352746a0cdde2c127f06f2744c02aa4ce5c"
+   },
+   {
+    "id": "validation/17-Sequence Modeling",
+    "files": 2,
+    "lines": 84,
+    "statements": 50,
+    "sha256": "1453245e2beb8aaef5a97e3b6b42de173cd3c98e4dfb0ca1860dc0ee74ea6f40"
+   },
+   {
+    "id": "validation/18-Use Case",
+    "files": 1,
+    "lines": 89,
+    "statements": 49,
+    "sha256": "fb5f9590e33aef25d650922ed4023edfd4d6e9695691119088423e77561317c7"
+   }
+  ]
+ },
+ "anchors": {
+  "Component": "Parts::Part",
+  "Port": "Ports::Port",
+  "Requirement": "Requirements::RequirementCheck",
+  "Function": "Actions::Action",
+  "VerificationCase": "VerificationCases::VerificationCase",
+  "Interface": "Interfaces::Interface",
+  "View": "Views::View"
+ },
+ "keywordMapping": {
+  "part def": "Component",
+  "part": "Component",
+  "port def": "Port",
+  "port": "Port",
+  "requirement def": "Requirement",
+  "requirement": "Requirement",
+  "action def": "Function",
+  "action": "Function",
+  "verification def": "VerificationCase",
+  "verification": "VerificationCase",
+  "interface def": "Interface",
+  "view def": "View",
+  "view": "View"
+ },
+ "perMode": [
+  {
+   "mode": "keyword",
+   "levels": "all",
+   "nodes": {
+    "n": 83,
+    "min": 0,
+    "q1": 6,
+    "median": 16,
+    "q3": 30.5,
+    "max": 387,
+    "sum": 2401
+   },
+   "edges": {
+    "n": 83,
+    "min": 0,
+    "q1": 1,
+    "median": 6,
+    "q3": 15,
+    "max": 249,
+    "sum": 1216
+   },
+   "unitsWithEmptyGraph": 3,
+   "statementCategories": {
+    "node": 2401,
+    "attribute": 461,
+    "edge": 100,
+    "context": 1527,
+    "annotation": 522,
+    "lost": 3614,
+    "folded": 26
+   },
+   "statements": 8651,
+   "lossRate": 0.4178,
+   "lossRateExclAnnotation": 0.4446,
+   "perUnitLossRate": {
+    "n": 83,
+    "min": 0,
+    "q1": 0.188,
+    "median": 0.404,
+    "q3": 0.565,
+    "max": 0.9492,
+    "sum": 31.589499999999994
+   },
+   "lostByReason": [
+    {
+     "reason": "reference feature",
+     "count": 1326
+    },
+    {
+     "reason": "feature without kind keyword",
+     "count": 518
+    },
+    {
+     "reason": "behavior control not mapped to T_V/T_E",
+     "count": 241
+    },
+    {
+     "reason": "expression not mapped to T_V/T_E",
+     "count": 169
+    },
+    {
+     "reason": "attribute of element not in G",
+     "count": 135
+    },
+    {
+     "reason": "state not mapped to T_V/T_E",
+     "count": 131
+    },
+    {
+     "reason": "succession not mapped to T_V/T_E",
+     "count": 116
+    },
+    {
+     "reason": "perform relationship not in T_E",
+     "count": 113
+    },
+    {
+     "reason": "item def not mapped to T_V/T_E",
+     "count": 84
+    },
+    {
+     "reason": "flow edge: end not in G",
+     "count": 82
+    },
+    {
+     "reason": "bind relationship not in T_E",
+     "count": 64
+    },
+    {
+     "reason": "constraint not mapped to T_V/T_E",
+     "count": 64
+    },
+    {
+     "reason": "item not mapped to T_V/T_E",
+     "count": 58
+    },
+    {
+     "reason": "occurrence def not mapped to T_V/T_E",
+     "count": 40
+    },
+    {
+     "reason": "calc def not mapped to T_V/T_E",
+     "count": 39
+    },
+    {
+     "reason": "occurrence not mapped to T_V/T_E",
+     "count": 32
+    },
+    {
+     "reason": "exhibit relationship not in T_E",
+     "count": 29
+    },
+    {
+     "reason": "calc not mapped to T_V/T_E",
+     "count": 28
+    },
+    {
+     "reason": "analysis not mapped to T_V/T_E",
+     "count": 26
+    },
+    {
+     "reason": "message relationship not in T_E",
+     "count": 26
+    },
+    {
+     "reason": "connect edge: end not in G",
+     "count": 26
+    },
+    {
+     "reason": "connection def not mapped to T_V/T_E",
+     "count": 26
+    },
+    {
+     "reason": "constraint def not mapped to T_V/T_E",
+     "count": 21
+    },
+    {
+     "reason": "use case not mapped to T_V/T_E",
+     "count": 19
+    },
+    {
+     "reason": "state def not mapped to T_V/T_E",
+     "count": 17
+    },
+    {
+     "reason": "filter not mapped to T_V/T_E",
+     "count": 16
+    },
+    {
+     "reason": "analysis def not mapped to T_V/T_E",
+     "count": 14
+    },
+    {
+     "reason": "message not mapped to T_V/T_E",
+     "count": 14
+    },
+    {
+     "reason": "connection not mapped to T_V/T_E",
+     "count": 13
+    },
+    {
+     "reason": "include relationship not in T_E",
+     "count": 13
+    },
+    {
+     "reason": "succession relationship not in T_E",
+     "count": 12
+    },
+    {
+     "reason": "render not mapped to T_V/T_E",
+     "count": 12
+    },
+    {
+     "reason": "dependency edge: end not in G",
+     "count": 9
+    },
+    {
+     "reason": "interface not mapped to T_V/T_E",
+     "count": 8
+    },
+    {
+     "reason": "use case def not mapped to T_V/T_E",
+     "count": 8
+    },
+    {
+     "reason": "flow edge: unresolved reference; unresolved reference",
+     "count": 7
+    },
+    {
+     "reason": "flow not mapped to T_V/T_E",
+     "count": 6
+    },
+    {
+     "reason": "concern not mapped to T_V/T_E",
+     "count": 6
+    },
+    {
+     "reason": "allocate edge: end not in G",
+     "count": 6
+    },
+    {
+     "reason": "satisfy edge: end not in G",
+     "count": 5
+    },
+    {
+     "reason": "allocation def not mapped to T_V/T_E",
+     "count": 5
+    },
+    {
+     "reason": "expose edge: end not in G",
+     "count": 5
+    },
+    {
+     "reason": "flow edge: unresolved reference; end not in G",
+     "count": 3
+    },
+    {
+     "reason": "rendering not mapped to T_V/T_E",
+     "count": 3
+    },
+    {
+     "reason": "viewpoint def not mapped to T_V/T_E",
+     "count": 3
+    },
+    {
+     "reason": "viewpoint not mapped to T_V/T_E",
+     "count": 3
+    },
+    {
+     "reason": "connect edge: unresolved reference; unresolved reference",
+     "count": 3
+    },
+    {
+     "reason": "satisfy relationship not in T_E",
+     "count": 2
+    },
+    {
+     "reason": "flow def not mapped to T_V/T_E",
+     "count": 2
+    },
+    {
+     "reason": "concern def not mapped to T_V/T_E",
+     "count": 2
+    },
+    {
+     "reason": "flow edge: end not in G (part); unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "flow edge: end not in G (feature); unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "flow edge: unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "rendering def not mapped to T_V/T_E",
+     "count": 1
+    }
+   ],
+   "relationshipEndResolution": {
+    "resolved": 469,
+    "unresolved": 26,
+    "rate": 0.9475
+   },
+   "nodeClassCounts": {
+    "Function": 374,
+    "Component": 1499,
+    "Port": 341,
+    "Requirement": 130,
+    "Interface": 19,
+    "VerificationCase": 15,
+    "View": 23
+   },
+   "multiClassNodes": {},
+   "edgeTypeCounts": {
+    "contain": 1106,
+    "satisfy": 15,
+    "connect": 72,
+    "allocate": 12,
+    "verify": 6,
+    "dependOn": 1,
+    "expose": 4
+   },
+   "edgesViaReferenceChain": 0,
+   "inheritedAttributeValues": 0
+  },
+  {
+   "mode": "keyword",
+   "levels": "usage",
+   "nodes": {
+    "n": 83,
+    "min": 0,
+    "q1": 3,
+    "median": 9,
+    "q3": 21.5,
+    "max": 277,
+    "sum": 1623
+   },
+   "edges": {
+    "n": 83,
+    "min": 0,
+    "q1": 0,
+    "median": 4,
+    "q3": 12.5,
+    "max": 217,
+    "sum": 966
+   },
+   "unitsWithEmptyGraph": 12,
+   "statementCategories": {
+    "node": 1623,
+    "attribute": 213,
+    "edge": 94,
+    "context": 1527,
+    "lost": 4646,
+    "annotation": 522,
+    "folded": 26
+   },
+   "statements": 8651,
+   "lossRate": 0.537,
+   "lossRateExclAnnotation": 0.5715,
+   "perUnitLossRate": {
+    "n": 83,
+    "min": 0.0286,
+    "q1": 0.437,
+    "median": 0.546,
+    "q3": 0.672,
+    "max": 0.9492,
+    "sum": 44.60769999999999
+   },
+   "lostByReason": [
+    {
+     "reason": "reference feature",
+     "count": 1326
+    },
+    {
+     "reason": "feature without kind keyword",
+     "count": 518
+    },
+    {
+     "reason": "part def not mapped to T_V/T_E",
+     "count": 502
+    },
+    {
+     "reason": "attribute of element not in G",
+     "count": 383
+    },
+    {
+     "reason": "behavior control not mapped to T_V/T_E",
+     "count": 241
+    },
+    {
+     "reason": "expression not mapped to T_V/T_E",
+     "count": 169
+    },
+    {
+     "reason": "state not mapped to T_V/T_E",
+     "count": 131
+    },
+    {
+     "reason": "succession not mapped to T_V/T_E",
+     "count": 116
+    },
+    {
+     "reason": "action def not mapped to T_V/T_E",
+     "count": 113
+    },
+    {
+     "reason": "perform relationship not in T_E",
+     "count": 113
+    },
+    {
+     "reason": "port def not mapped to T_V/T_E",
+     "count": 93
+    },
+    {
+     "reason": "item def not mapped to T_V/T_E",
+     "count": 84
+    },
+    {
+     "reason": "flow edge: end not in G",
+     "count": 82
+    },
+    {
+     "reason": "bind relationship not in T_E",
+     "count": 64
+    },
+    {
+     "reason": "constraint not mapped to T_V/T_E",
+     "count": 64
+    },
+    {
+     "reason": "item not mapped to T_V/T_E",
+     "count": 58
+    },
+    {
+     "reason": "occurrence def not mapped to T_V/T_E",
+     "count": 40
+    },
+    {
+     "reason": "calc def not mapped to T_V/T_E",
+     "count": 39
+    },
+    {
+     "reason": "requirement def not mapped to T_V/T_E",
+     "count": 33
+    },
+    {
+     "reason": "occurrence not mapped to T_V/T_E",
+     "count": 32
+    },
+    {
+     "reason": "exhibit relationship not in T_E",
+     "count": 29
+    },
+    {
+     "reason": "calc not mapped to T_V/T_E",
+     "count": 28
+    },
+    {
+     "reason": "analysis not mapped to T_V/T_E",
+     "count": 26
+    },
+    {
+     "reason": "message relationship not in T_E",
+     "count": 26
+    },
+    {
+     "reason": "connect edge: end not in G",
+     "count": 26
+    },
+    {
+     "reason": "connection def not mapped to T_V/T_E",
+     "count": 26
+    },
+    {
+     "reason": "constraint def not mapped to T_V/T_E",
+     "count": 21
+    },
+    {
+     "reason": "interface def not mapped to T_V/T_E",
+     "count": 19
+    },
+    {
+     "reason": "use case not mapped to T_V/T_E",
+     "count": 19
+    },
+    {
+     "reason": "state def not mapped to T_V/T_E",
+     "count": 17
+    },
+    {
+     "reason": "filter not mapped to T_V/T_E",
+     "count": 16
+    },
+    {
+     "reason": "analysis def not mapped to T_V/T_E",
+     "count": 14
+    },
+    {
+     "reason": "message not mapped to T_V/T_E",
+     "count": 14
+    },
+    {
+     "reason": "connection not mapped to T_V/T_E",
+     "count": 13
+    },
+    {
+     "reason": "include relationship not in T_E",
+     "count": 13
+    },
+    {
+     "reason": "succession relationship not in T_E",
+     "count": 12
+    },
+    {
+     "reason": "render not mapped to T_V/T_E",
+     "count": 12
+    },
+    {
+     "reason": "view def not mapped to T_V/T_E",
+     "count": 10
+    },
+    {
+     "reason": "dependency edge: end not in G",
+     "count": 9
+    },
+    {
+     "reason": "interface not mapped to T_V/T_E",
+     "count": 8
+    },
+    {
+     "reason": "verification def not mapped to T_V/T_E",
+     "count": 8
+    },
+    {
+     "reason": "use case def not mapped to T_V/T_E",
+     "count": 8
+    },
+    {
+     "reason": "flow edge: unresolved reference; unresolved reference",
+     "count": 7
+    },
+    {
+     "reason": "flow not mapped to T_V/T_E",
+     "count": 6
+    },
+    {
+     "reason": "satisfy edge: end not in G",
+     "count": 6
+    },
+    {
+     "reason": "concern not mapped to T_V/T_E",
+     "count": 6
+    },
+    {
+     "reason": "allocate edge: end not in G",
+     "count": 6
+    },
+    {
+     "reason": "allocation def not mapped to T_V/T_E",
+     "count": 5
+    },
+    {
+     "reason": "expose edge: end not in G",
+     "count": 5
+    },
+    {
+     "reason": "flow edge: unresolved reference; end not in G",
+     "count": 3
+    },
+    {
+     "reason": "rendering not mapped to T_V/T_E",
+     "count": 3
+    },
+    {
+     "reason": "viewpoint def not mapped to T_V/T_E",
+     "count": 3
+    },
+    {
+     "reason": "viewpoint not mapped to T_V/T_E",
+     "count": 3
+    },
+    {
+     "reason": "connect edge: unresolved reference; unresolved reference",
+     "count": 3
+    },
+    {
+     "reason": "satisfy relationship not in T_E",
+     "count": 2
+    },
+    {
+     "reason": "verify edge: no enclosing verification case in G; end not in G",
+     "count": 2
+    },
+    {
+     "reason": "verify edge: no enclosing verification case in G",
+     "count": 2
+    },
+    {
+     "reason": "flow def not mapped to T_V/T_E",
+     "count": 2
+    },
+    {
+     "reason": "concern def not mapped to T_V/T_E",
+     "count": 2
+    },
+    {
+     "reason": "flow edge: end not in G (part); unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "flow edge: end not in G (feature); unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "flow edge: unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "rendering def not mapped to T_V/T_E",
+     "count": 1
+    },
+    {
+     "reason": "satisfy edge: no enclosing node; end not in G",
+     "count": 1
+    }
+   ],
+   "relationshipEndResolution": {
+    "resolved": 469,
+    "unresolved": 26,
+    "rate": 0.9475
+   },
+   "nodeClassCounts": {
+    "Function": 261,
+    "Component": 997,
+    "Port": 248,
+    "Requirement": 97,
+    "VerificationCase": 7,
+    "View": 13
+   },
+   "multiClassNodes": {},
+   "edgeTypeCounts": {
+    "contain": 862,
+    "satisfy": 13,
+    "connect": 72,
+    "allocate": 12,
+    "dependOn": 1,
+    "verify": 2,
+    "expose": 4
+   },
+   "edgesViaReferenceChain": 0,
+   "inheritedAttributeValues": 0
+  },
+  {
+   "mode": "specialization",
+   "levels": "all",
+   "nodes": {
+    "n": 83,
+    "min": 0,
+    "q1": 9,
+    "median": 18,
+    "q3": 34,
+    "max": 461,
+    "sum": 2819
+   },
+   "edges": {
+    "n": 83,
+    "min": 0,
+    "q1": 3,
+    "median": 8,
+    "q3": 16.5,
+    "max": 295,
+    "sum": 1448
+   },
+   "unitsWithEmptyGraph": 1,
+   "statementCategories": {
+    "node": 2819,
+    "attribute": 857,
+    "edge": 115,
+    "context": 1641,
+    "annotation": 522,
+    "lost": 2671,
+    "folded": 26
+   },
+   "statements": 8651,
+   "lossRate": 0.3088,
+   "lossRateExclAnnotation": 0.3286,
+   "perUnitLossRate": {
+    "n": 83,
+    "min": 0,
+    "q1": 0.143,
+    "median": 0.279,
+    "q3": 0.42,
+    "max": 0.8413,
+    "sum": 24.548300000000005
+   },
+   "lostByReason": [
+    {
+     "reason": "reference feature",
+     "count": 1023
+    },
+    {
+     "reason": "behavior control not mapped to T_V/T_E",
+     "count": 241
+    },
+    {
+     "reason": "attribute of element not in G",
+     "count": 223
+    },
+    {
+     "reason": "expression not mapped to T_V/T_E",
+     "count": 169
+    },
+    {
+     "reason": "feature not mapped to T_V/T_E",
+     "count": 166
+    },
+    {
+     "reason": "succession not mapped to T_V/T_E",
+     "count": 116
+    },
+    {
+     "reason": "perform relationship not in T_E",
+     "count": 113
+    },
+    {
+     "reason": "item def not mapped to T_V/T_E",
+     "count": 82
+    },
+    {
+     "reason": "flow edge: end not in G",
+     "count": 82
+    },
+    {
+     "reason": "bind relationship not in T_E",
+     "count": 64
+    },
+    {
+     "reason": "constraint not mapped to T_V/T_E",
+     "count": 64
+    },
+    {
+     "reason": "item not mapped to T_V/T_E",
+     "count": 54
+    },
+    {
+     "reason": "occurrence not mapped to T_V/T_E",
+     "count": 32
+    },
+    {
+     "reason": "exhibit relationship not in T_E",
+     "count": 29
+    },
+    {
+     "reason": "message relationship not in T_E",
+     "count": 26
+    },
+    {
+     "reason": "constraint def not mapped to T_V/T_E",
+     "count": 21
+    },
+    {
+     "reason": "connect edge: end not in G",
+     "count": 20
+    },
+    {
+     "reason": "occurrence def not mapped to T_V/T_E",
+     "count": 18
+    },
+    {
+     "reason": "filter not mapped to T_V/T_E",
+     "count": 16
+    },
+    {
+     "reason": "message not mapped to T_V/T_E",
+     "count": 14
+    },
+    {
+     "reason": "connection not mapped to T_V/T_E",
+     "count": 13
+    },
+    {
+     "reason": "include relationship not in T_E",
+     "count": 13
+    },
+    {
+     "reason": "succession relationship not in T_E",
+     "count": 12
+    },
+    {
+     "reason": "render not mapped to T_V/T_E",
+     "count": 12
+    },
+    {
+     "reason": "dependency edge: end not in G",
+     "count": 9
+    },
+    {
+     "reason": "interface not mapped to T_V/T_E",
+     "count": 8
+    },
+    {
+     "reason": "flow edge: unresolved reference; unresolved reference",
+     "count": 7
+    },
+    {
+     "reason": "flow not mapped to T_V/T_E",
+     "count": 6
+    },
+    {
+     "reason": "expose edge: end not in G",
+     "count": 5
+    },
+    {
+     "reason": "flow edge: unresolved reference; end not in G",
+     "count": 3
+    },
+    {
+     "reason": "connect edge: unresolved reference; unresolved reference",
+     "count": 3
+    },
+    {
+     "reason": "satisfy relationship not in T_E",
+     "count": 2
+    },
+    {
+     "reason": "allocate edge: end not in G",
+     "count": 2
+    },
+    {
+     "reason": "flow edge: end not in G (part); unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "flow edge: end not in G (feature); unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "flow edge: unresolved reference",
+     "count": 1
+    }
+   ],
+   "relationshipEndResolution": {
+    "resolved": 469,
+    "unresolved": 26,
+    "rate": 0.9475
+   },
+   "nodeClassCounts": {
+    "Function": 675,
+    "Component": 1648,
+    "Port": 352,
+    "Requirement": 144,
+    "Interface": 19,
+    "VerificationCase": 15,
+    "View": 23
+   },
+   "multiClassNodes": {
+    "Interface+Component": 19,
+    "VerificationCase+Function": 15,
+    "View+Component": 23
+   },
+   "edgeTypeCounts": {
+    "contain": 1323,
+    "satisfy": 20,
+    "connect": 78,
+    "allocate": 16,
+    "verify": 6,
+    "dependOn": 1,
+    "expose": 4
+   },
+   "edgesViaReferenceChain": 6,
+   "inheritedAttributeValues": 96
+  },
+  {
+   "mode": "specialization",
+   "levels": "usage",
+   "nodes": {
+    "n": 83,
+    "min": 0,
+    "q1": 5,
+    "median": 11,
+    "q3": 23.5,
+    "max": 324,
+    "sum": 1900
+   },
+   "edges": {
+    "n": 83,
+    "min": 0,
+    "q1": 0,
+    "median": 6,
+    "q3": 14.5,
+    "max": 262,
+    "sum": 1161
+   },
+   "unitsWithEmptyGraph": 7,
+   "statementCategories": {
+    "node": 1900,
+    "attribute": 409,
+    "edge": 106,
+    "context": 1641,
+    "lost": 4047,
+    "annotation": 522,
+    "folded": 26
+   },
+   "statements": 8651,
+   "lossRate": 0.4678,
+   "lossRateExclAnnotation": 0.4978,
+   "perUnitLossRate": {
+    "n": 83,
+    "min": 0.0286,
+    "q1": 0.362,
+    "median": 0.5,
+    "q3": 0.606,
+    "max": 0.9492,
+    "sum": 39.88399999999999
+   },
+   "lostByReason": [
+    {
+     "reason": "reference feature",
+     "count": 1023
+    },
+    {
+     "reason": "attribute of element not in G",
+     "count": 671
+    },
+    {
+     "reason": "part def not mapped to T_V/T_E",
+     "count": 502
+    },
+    {
+     "reason": "behavior control not mapped to T_V/T_E",
+     "count": 241
+    },
+    {
+     "reason": "expression not mapped to T_V/T_E",
+     "count": 169
+    },
+    {
+     "reason": "feature not mapped to T_V/T_E",
+     "count": 166
+    },
+    {
+     "reason": "succession not mapped to T_V/T_E",
+     "count": 116
+    },
+    {
+     "reason": "action def not mapped to T_V/T_E",
+     "count": 113
+    },
+    {
+     "reason": "perform relationship not in T_E",
+     "count": 113
+    },
+    {
+     "reason": "port def not mapped to T_V/T_E",
+     "count": 93
+    },
+    {
+     "reason": "item def not mapped to T_V/T_E",
+     "count": 84
+    },
+    {
+     "reason": "flow edge: end not in G",
+     "count": 82
+    },
+    {
+     "reason": "bind relationship not in T_E",
+     "count": 64
+    },
+    {
+     "reason": "constraint not mapped to T_V/T_E",
+     "count": 64
+    },
+    {
+     "reason": "item not mapped to T_V/T_E",
+     "count": 54
+    },
+    {
+     "reason": "occurrence def not mapped to T_V/T_E",
+     "count": 40
+    },
+    {
+     "reason": "calc def not mapped to T_V/T_E",
+     "count": 39
+    },
+    {
+     "reason": "requirement def not mapped to T_V/T_E",
+     "count": 33
+    },
+    {
+     "reason": "occurrence not mapped to T_V/T_E",
+     "count": 32
+    },
+    {
+     "reason": "exhibit relationship not in T_E",
+     "count": 29
+    },
+    {
+     "reason": "message relationship not in T_E",
+     "count": 26
+    },
+    {
+     "reason": "connection def not mapped to T_V/T_E",
+     "count": 26
+    },
+    {
+     "reason": "constraint def not mapped to T_V/T_E",
+     "count": 21
+    },
+    {
+     "reason": "connect edge: end not in G",
+     "count": 20
+    },
+    {
+     "reason": "interface def not mapped to T_V/T_E",
+     "count": 19
+    },
+    {
+     "reason": "state def not mapped to T_V/T_E",
+     "count": 17
+    },
+    {
+     "reason": "filter not mapped to T_V/T_E",
+     "count": 16
+    },
+    {
+     "reason": "analysis def not mapped to T_V/T_E",
+     "count": 14
+    },
+    {
+     "reason": "message not mapped to T_V/T_E",
+     "count": 14
+    },
+    {
+     "reason": "connection not mapped to T_V/T_E",
+     "count": 13
+    },
+    {
+     "reason": "include relationship not in T_E",
+     "count": 13
+    },
+    {
+     "reason": "succession relationship not in T_E",
+     "count": 12
+    },
+    {
+     "reason": "render not mapped to T_V/T_E",
+     "count": 12
+    },
+    {
+     "reason": "view def not mapped to T_V/T_E",
+     "count": 10
+    },
+    {
+     "reason": "dependency edge: end not in G",
+     "count": 9
+    },
+    {
+     "reason": "interface not mapped to T_V/T_E",
+     "count": 8
+    },
+    {
+     "reason": "verification def not mapped to T_V/T_E",
+     "count": 8
+    },
+    {
+     "reason": "use case def not mapped to T_V/T_E",
+     "count": 8
+    },
+    {
+     "reason": "flow edge: unresolved reference; unresolved reference",
+     "count": 7
+    },
+    {
+     "reason": "flow not mapped to T_V/T_E",
+     "count": 6
+    },
+    {
+     "reason": "allocation def not mapped to T_V/T_E",
+     "count": 5
+    },
+    {
+     "reason": "expose edge: end not in G",
+     "count": 5
+    },
+    {
+     "reason": "satisfy edge: end not in G",
+     "count": 4
+    },
+    {
+     "reason": "flow edge: unresolved reference; end not in G",
+     "count": 3
+    },
+    {
+     "reason": "viewpoint def not mapped to T_V/T_E",
+     "count": 3
+    },
+    {
+     "reason": "connect edge: unresolved reference; unresolved reference",
+     "count": 3
+    },
+    {
+     "reason": "satisfy relationship not in T_E",
+     "count": 2
+    },
+    {
+     "reason": "verify edge: no enclosing verification case in G; end not in G",
+     "count": 2
+    },
+    {
+     "reason": "verify edge: no enclosing verification case in G",
+     "count": 2
+    },
+    {
+     "reason": "flow def not mapped to T_V/T_E",
+     "count": 2
+    },
+    {
+     "reason": "concern def not mapped to T_V/T_E",
+     "count": 2
+    },
+    {
+     "reason": "allocate edge: end not in G",
+     "count": 2
+    },
+    {
+     "reason": "flow edge: end not in G (part); unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "flow edge: end not in G (feature); unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "flow edge: unresolved reference",
+     "count": 1
+    },
+    {
+     "reason": "rendering def not mapped to T_V/T_E",
+     "count": 1
+    },
+    {
+     "reason": "satisfy edge: no enclosing node",
+     "count": 1
+    }
+   ],
+   "relationshipEndResolution": {
+    "resolved": 469,
+    "unresolved": 26,
+    "rate": 0.9475
+   },
+   "nodeClassCounts": {
+    "Function": 474,
+    "Component": 1061,
+    "Port": 259,
+    "Requirement": 106,
+    "VerificationCase": 7,
+    "View": 13
+   },
+   "multiClassNodes": {
+    "VerificationCase+Function": 7,
+    "View+Component": 13
+   },
+   "edgeTypeCounts": {
+    "contain": 1045,
+    "satisfy": 15,
+    "connect": 78,
+    "allocate": 16,
+    "dependOn": 1,
+    "verify": 2,
+    "expose": 4
+   },
+   "edgesViaReferenceChain": 5,
+   "inheritedAttributeValues": 92
+  }
+ ],
+ "modeDifferencesPerUnit": [
+  {
+   "unit": "examples/Analysis Examples",
+   "keywordNodes": 36,
+   "specializationNodes": 57,
+   "onlySpec": 21,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 15,
+   "specializationEdges": 24
+  },
+  {
+   "unit": "examples/Arrowhead Framework Example",
+   "keywordNodes": 36,
+   "specializationNodes": 57,
+   "onlySpec": 21,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 17,
+   "specializationEdges": 30
+  },
+  {
+   "unit": "examples/Association Examples",
+   "keywordNodes": 0,
+   "specializationNodes": 8,
+   "onlySpec": 8,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "examples/Camera Example",
+   "keywordNodes": 9,
+   "specializationNodes": 9,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 4,
+   "specializationEdges": 4
+  },
+  {
+   "unit": "examples/Cause and Effect Examples",
+   "keywordNodes": 12,
+   "specializationNodes": 15,
+   "onlySpec": 3,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 7,
+   "specializationEdges": 7
+  },
+  {
+   "unit": "examples/Comment Examples",
+   "keywordNodes": 1,
+   "specializationNodes": 1,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "examples/Flashlight Example",
+   "keywordNodes": 14,
+   "specializationNodes": 14,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 11,
+   "specializationEdges": 11
+  },
+  {
+   "unit": "examples/Geometry Examples",
+   "keywordNodes": 39,
+   "specializationNodes": 42,
+   "onlySpec": 3,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 25,
+   "specializationEdges": 28
+  },
+  {
+   "unit": "examples/Import Tests",
+   "keywordNodes": 17,
+   "specializationNodes": 17,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "examples/Individuals Examples",
+   "keywordNodes": 11,
+   "specializationNodes": 15,
+   "onlySpec": 4,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 1,
+   "specializationEdges": 4
+  },
+  {
+   "unit": "examples/Interaction Sequencing Examples",
+   "keywordNodes": 82,
+   "specializationNodes": 86,
+   "onlySpec": 4,
+   "onlyKeyword": 0,
+   "classChanged": 4,
+   "keywordEdges": 38,
+   "specializationEdges": 38
+  },
+  {
+   "unit": "examples/Mass Roll-up Example",
+   "keywordNodes": 30,
+   "specializationNodes": 30,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 16,
+   "specializationEdges": 16
+  },
+  {
+   "unit": "examples/Metadata Examples",
+   "keywordNodes": 18,
+   "specializationNodes": 19,
+   "onlySpec": 1,
+   "onlyKeyword": 0,
+   "classChanged": 3,
+   "keywordEdges": 4,
+   "specializationEdges": 4
+  },
+  {
+   "unit": "examples/Packet Example",
+   "keywordNodes": 5,
+   "specializationNodes": 5,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "examples/Requirements Examples",
+   "keywordNodes": 31,
+   "specializationNodes": 32,
+   "onlySpec": 1,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 15,
+   "specializationEdges": 16
+  },
+  {
+   "unit": "examples/Room Model",
+   "keywordNodes": 17,
+   "specializationNodes": 17,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 7,
+   "specializationEdges": 7
+  },
+  {
+   "unit": "examples/Simple Tests",
+   "keywordNodes": 220,
+   "specializationNodes": 278,
+   "onlySpec": 58,
+   "onlyKeyword": 0,
+   "classChanged": 11,
+   "keywordEdges": 97,
+   "specializationEdges": 125
+  },
+  {
+   "unit": "examples/State Space Representation Examples",
+   "keywordNodes": 49,
+   "specializationNodes": 64,
+   "onlySpec": 15,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 21,
+   "specializationEdges": 44
+  },
+  {
+   "unit": "examples/Timeslice and Snapshot Examples",
+   "keywordNodes": 1,
+   "specializationNodes": 5,
+   "onlySpec": 4,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly",
+   "keywordNodes": 55,
+   "specializationNodes": 59,
+   "onlySpec": 4,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 30,
+   "specializationEdges": 30
+  },
+  {
+   "unit": "examples/v1 Spec Examples/8.4.5 Constraining Decomposition",
+   "keywordNodes": 51,
+   "specializationNodes": 51,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 28,
+   "specializationEdges": 28
+  },
+  {
+   "unit": "examples/v1 Spec Examples/D.4.7.8 Dynamics",
+   "keywordNodes": 0,
+   "specializationNodes": 0,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "examples/Variability Examples",
+   "keywordNodes": 47,
+   "specializationNodes": 47,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 19,
+   "specializationEdges": 19
+  },
+  {
+   "unit": "examples/Vehicle Example",
+   "keywordNodes": 387,
+   "specializationNodes": 461,
+   "onlySpec": 74,
+   "onlyKeyword": 0,
+   "classChanged": 16,
+   "keywordEdges": 249,
+   "specializationEdges": 295
+  },
+  {
+   "unit": "training/01. Packages",
+   "keywordNodes": 3,
+   "specializationNodes": 3,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "training/02. Part Definitions",
+   "keywordNodes": 4,
+   "specializationNodes": 4,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 1,
+   "specializationEdges": 1
+  },
+  {
+   "unit": "training/03. Generalization",
+   "keywordNodes": 7,
+   "specializationNodes": 7,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 1,
+   "specializationEdges": 1
+  },
+  {
+   "unit": "training/04. Subsetting",
+   "keywordNodes": 9,
+   "specializationNodes": 9,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 4,
+   "specializationEdges": 4
+  },
+  {
+   "unit": "training/05. Redefinition",
+   "keywordNodes": 13,
+   "specializationNodes": 13,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 6,
+   "specializationEdges": 6
+  },
+  {
+   "unit": "training/06. Enumeration Definitions",
+   "keywordNodes": 2,
+   "specializationNodes": 2,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "training/07. Parts",
+   "keywordNodes": 23,
+   "specializationNodes": 23,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 12,
+   "specializationEdges": 12
+  },
+  {
+   "unit": "training/08. Items",
+   "keywordNodes": 2,
+   "specializationNodes": 2,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 1,
+   "specializationEdges": 1
+  },
+  {
+   "unit": "training/09. Connections",
+   "keywordNodes": 20,
+   "specializationNodes": 21,
+   "onlySpec": 1,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 12,
+   "specializationEdges": 12
+  },
+  {
+   "unit": "training/10. Ports",
+   "keywordNodes": 13,
+   "specializationNodes": 13,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 4,
+   "specializationEdges": 4
+  },
+  {
+   "unit": "training/11. Interfaces",
+   "keywordNodes": 14,
+   "specializationNodes": 14,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 2,
+   "keywordEdges": 4,
+   "specializationEdges": 4
+  },
+  {
+   "unit": "training/12. Binding Connectors",
+   "keywordNodes": 16,
+   "specializationNodes": 16,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 8,
+   "specializationEdges": 8
+  },
+  {
+   "unit": "training/13. Flows",
+   "keywordNodes": 13,
+   "specializationNodes": 14,
+   "onlySpec": 1,
+   "onlyKeyword": 0,
+   "classChanged": 1,
+   "keywordEdges": 6,
+   "specializationEdges": 6
+  },
+  {
+   "unit": "training/14. Action Definitions",
+   "keywordNodes": 20,
+   "specializationNodes": 20,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 8,
+   "specializationEdges": 8
+  },
+  {
+   "unit": "training/15. Actions",
+   "keywordNodes": 9,
+   "specializationNodes": 9,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 2,
+   "specializationEdges": 2
+  },
+  {
+   "unit": "training/16. Conditional Succession",
+   "keywordNodes": 18,
+   "specializationNodes": 18,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 4,
+   "specializationEdges": 4
+  },
+  {
+   "unit": "training/17. Control",
+   "keywordNodes": 45,
+   "specializationNodes": 45,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 15,
+   "specializationEdges": 15
+  },
+  {
+   "unit": "training/18. Action Performance",
+   "keywordNodes": 6,
+   "specializationNodes": 6,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 2,
+   "specializationEdges": 2
+  },
+  {
+   "unit": "training/19. Terminate Actions",
+   "keywordNodes": 11,
+   "specializationNodes": 11,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 4,
+   "specializationEdges": 4
+  },
+  {
+   "unit": "training/20. Assignment Actions",
+   "keywordNodes": 2,
+   "specializationNodes": 2,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "training/21. Asynchronous Messaging",
+   "keywordNodes": 20,
+   "specializationNodes": 20,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 10,
+   "specializationEdges": 10
+  },
+  {
+   "unit": "training/22. Opaque Actions",
+   "keywordNodes": 2,
+   "specializationNodes": 2,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "training/23. State Definitions",
+   "keywordNodes": 0,
+   "specializationNodes": 8,
+   "onlySpec": 8,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 6
+  },
+  {
+   "unit": "training/24. States",
+   "keywordNodes": 2,
+   "specializationNodes": 19,
+   "onlySpec": 17,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 11
+  },
+  {
+   "unit": "training/25. Transitions",
+   "keywordNodes": 9,
+   "specializationNodes": 22,
+   "onlySpec": 13,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 2,
+   "specializationEdges": 12
+  },
+  {
+   "unit": "training/26. State Exhibition",
+   "keywordNodes": 2,
+   "specializationNodes": 2,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 1,
+   "specializationEdges": 1
+  },
+  {
+   "unit": "training/27. Occurrences",
+   "keywordNodes": 58,
+   "specializationNodes": 58,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 38,
+   "specializationEdges": 38
+  },
+  {
+   "unit": "training/28. Individuals",
+   "keywordNodes": 11,
+   "specializationNodes": 18,
+   "onlySpec": 7,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 6,
+   "specializationEdges": 8
+  },
+  {
+   "unit": "training/29. Expressions",
+   "keywordNodes": 24,
+   "specializationNodes": 24,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 12,
+   "specializationEdges": 12
+  },
+  {
+   "unit": "training/30. Calculations",
+   "keywordNodes": 3,
+   "specializationNodes": 11,
+   "onlySpec": 8,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 1,
+   "specializationEdges": 5
+  },
+  {
+   "unit": "training/31. Constraints",
+   "keywordNodes": 24,
+   "specializationNodes": 27,
+   "onlySpec": 3,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 8,
+   "specializationEdges": 10
+  },
+  {
+   "unit": "training/32. Requirements",
+   "keywordNodes": 21,
+   "specializationNodes": 21,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 7,
+   "specializationEdges": 8
+  },
+  {
+   "unit": "training/33. Analysis",
+   "keywordNodes": 9,
+   "specializationNodes": 23,
+   "onlySpec": 14,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 3,
+   "specializationEdges": 12
+  },
+  {
+   "unit": "training/34. Verification",
+   "keywordNodes": 12,
+   "specializationNodes": 16,
+   "onlySpec": 4,
+   "onlyKeyword": 0,
+   "classChanged": 2,
+   "keywordEdges": 5,
+   "specializationEdges": 5
+  },
+  {
+   "unit": "training/35. Use Cases",
+   "keywordNodes": 5,
+   "specializationNodes": 11,
+   "onlySpec": 6,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 1
+  },
+  {
+   "unit": "training/36. Variability",
+   "keywordNodes": 21,
+   "specializationNodes": 21,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 9,
+   "specializationEdges": 9
+  },
+  {
+   "unit": "training/37. Dependencies",
+   "keywordNodes": 3,
+   "specializationNodes": 3,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 2,
+   "specializationEdges": 2
+  },
+  {
+   "unit": "training/38. Allocation",
+   "keywordNodes": 21,
+   "specializationNodes": 22,
+   "onlySpec": 1,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 6,
+   "specializationEdges": 7
+  },
+  {
+   "unit": "training/39. Metadata",
+   "keywordNodes": 11,
+   "specializationNodes": 11,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 9,
+   "specializationEdges": 9
+  },
+  {
+   "unit": "training/40. Filtering",
+   "keywordNodes": 26,
+   "specializationNodes": 26,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 24,
+   "specializationEdges": 24
+  },
+  {
+   "unit": "training/41. Language Extension",
+   "keywordNodes": 2,
+   "specializationNodes": 3,
+   "onlySpec": 1,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 1,
+   "specializationEdges": 1
+  },
+  {
+   "unit": "training/42. Views",
+   "keywordNodes": 8,
+   "specializationNodes": 12,
+   "onlySpec": 4,
+   "onlyKeyword": 0,
+   "classChanged": 6,
+   "keywordEdges": 2,
+   "specializationEdges": 4
+  },
+  {
+   "unit": "validation/01-Parts Tree",
+   "keywordNodes": 55,
+   "specializationNodes": 55,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 35,
+   "specializationEdges": 35
+  },
+  {
+   "unit": "validation/02-Parts Interconnection",
+   "keywordNodes": 91,
+   "specializationNodes": 91,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 2,
+   "keywordEdges": 60,
+   "specializationEdges": 60
+  },
+  {
+   "unit": "validation/03-Function-based Behavior",
+   "keywordNodes": 111,
+   "specializationNodes": 113,
+   "onlySpec": 2,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 52,
+   "specializationEdges": 52
+  },
+  {
+   "unit": "validation/04-Functional Allocation",
+   "keywordNodes": 18,
+   "specializationNodes": 18,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 17,
+   "specializationEdges": 17
+  },
+  {
+   "unit": "validation/05-State-based Behavior",
+   "keywordNodes": 35,
+   "specializationNodes": 80,
+   "onlySpec": 45,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 6,
+   "specializationEdges": 39
+  },
+  {
+   "unit": "validation/06-Individual and Snapshots",
+   "keywordNodes": 4,
+   "specializationNodes": 20,
+   "onlySpec": 16,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 9
+  },
+  {
+   "unit": "validation/07-Variant Configuration",
+   "keywordNodes": 126,
+   "specializationNodes": 126,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 75,
+   "specializationEdges": 75
+  },
+  {
+   "unit": "validation/08-Requirements",
+   "keywordNodes": 30,
+   "specializationNodes": 30,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 1,
+   "keywordEdges": 15,
+   "specializationEdges": 15
+  },
+  {
+   "unit": "validation/09-Verification",
+   "keywordNodes": 15,
+   "specializationNodes": 19,
+   "onlySpec": 4,
+   "onlyKeyword": 0,
+   "classChanged": 2,
+   "keywordEdges": 7,
+   "specializationEdges": 7
+  },
+  {
+   "unit": "validation/10-Analysis and Trades",
+   "keywordNodes": 48,
+   "specializationNodes": 73,
+   "onlySpec": 25,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 21,
+   "specializationEdges": 32
+  },
+  {
+   "unit": "validation/11-View and Viewpoint",
+   "keywordNodes": 32,
+   "specializationNodes": 34,
+   "onlySpec": 2,
+   "onlyKeyword": 0,
+   "classChanged": 7,
+   "keywordEdges": 22,
+   "specializationEdges": 23
+  },
+  {
+   "unit": "validation/12-Dependency Relationships",
+   "keywordNodes": 16,
+   "specializationNodes": 17,
+   "onlySpec": 1,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 7,
+   "specializationEdges": 9
+  },
+  {
+   "unit": "validation/13-Model Containment",
+   "keywordNodes": 38,
+   "specializationNodes": 38,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 33,
+   "specializationEdges": 33
+  },
+  {
+   "unit": "validation/14-Language Extensions",
+   "keywordNodes": 30,
+   "specializationNodes": 35,
+   "onlySpec": 5,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 14,
+   "specializationEdges": 14
+  },
+  {
+   "unit": "validation/15-Properties-Values-Expressions",
+   "keywordNodes": 30,
+   "specializationNodes": 34,
+   "onlySpec": 4,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 8,
+   "specializationEdges": 8
+  },
+  {
+   "unit": "validation/17-Sequence Modeling",
+   "keywordNodes": 6,
+   "specializationNodes": 6,
+   "onlySpec": 0,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 0
+  },
+  {
+   "unit": "validation/18-Use Case",
+   "keywordNodes": 4,
+   "specializationNodes": 9,
+   "onlySpec": 5,
+   "onlyKeyword": 0,
+   "classChanged": 0,
+   "keywordEdges": 0,
+   "specializationEdges": 1
+  }
+ ],
+ "modeDifferencesTotal": {
+  "nodesOnlyInSpecialization": 418,
+  "nodesOnlyInKeyword": 0,
+  "nodesWithChangedClassSet": 57,
+  "unitsAffected": 41
+ },
+ "unresolvedReferences": [
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 86,
+   "ref": "apspm.pub"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 86,
+   "ref": "mqget.APIS_MQTT.pub"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 88,
+   "ref": "apsc.subscr"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 88,
+   "ref": "mqgive.APIS_MQTT.subscr"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 90,
+   "ref": "tlu.cll"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 90,
+   "ref": "apsph.cll"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 92,
+   "ref": "apspm.retall"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 92,
+   "ref": "mqget.APIS_MQTT.retall"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 94,
+   "ref": "mqgive.APIS_MQTT.retall"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 94,
+   "ref": "apsc.retall"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 96,
+   "ref": "apsph.retrn"
+  },
+  {
+   "file": "examples/Arrowhead Framework Example/AHFSequences.sysml",
+   "line": 96,
+   "ref": "tlu.retrn"
+  },
+  {
+   "file": "examples/Simple Tests/ActionTest.sysml",
+   "line": 33,
+   "ref": "snd.receiver"
+  },
+  {
+   "file": "examples/Simple Tests/ControlNodeTest.sysml",
+   "line": 10,
+   "ref": "F.a"
+  },
+  {
+   "file": "examples/Simple Tests/ControlNodeTest.sysml",
+   "line": 21,
+   "ref": "F.b1"
+  },
+  {
+   "file": "examples/Simple Tests/ControlNodeTest.sysml",
+   "line": 22,
+   "ref": "F.b2"
+  },
+  {
+   "file": "examples/Simple Tests/PartTest.sysml",
+   "line": 27,
+   "ref": "a1.aa.receiver"
+  },
+  {
+   "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+   "line": 759,
+   "ref": "trigger1.ignitionCmd"
+  },
+  {
+   "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+   "line": 1001,
+   "ref": "lugNutCompositePort.lugNutPort1"
+  },
+  {
+   "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+   "line": 1001,
+   "ref": "shankCompositePort.shankPort1"
+  },
+  {
+   "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+   "line": 1005,
+   "ref": "lugNutCompositePort.lugNutPort2"
+  },
+  {
+   "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+   "line": 1005,
+   "ref": "shankCompositePort.shankPort2"
+  },
+  {
+   "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+   "line": 1009,
+   "ref": "lugNutCompositePort.lugNutPort3"
+  },
+  {
+   "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+   "line": 1009,
+   "ref": "shankCompositePort.shankPort3"
+  },
+  {
+   "file": "examples/Vehicle Example/VehicleUsages.sysml",
+   "line": 93,
+   "ref": "transDrive.driveTorque"
+  },
+  {
+   "file": "examples/Vehicle Example/VehicleUsages.sysml",
+   "line": 93,
+   "ref": "axleDrive.driveTorque"
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+Copy of codes/selab-metamodel-validator/results-v4 without work/, snapshot/tree/ (source tree copy; hashes in snapshot/snapshot-sha256.json) and n2-engine-rerun/*/model.json, post*.json (generated inputs, reproducible with cli-bench-shacl gen).

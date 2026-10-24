@@ -1,0 +1,4360 @@
+{
+  "experiment": "M4-mutation-analysis-r10",
+  "command": "G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\r10-mutation\\run-mutation-r10.js --output results-v4\\mutation-r10 --workers 3",
+  "node": "v22.15.1",
+  "startedAt": "2026-10-24T00:25:12.581Z",
+  "snapshotTree": "G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\results-v4\\snapshot\\tree",
+  "snapshotSourceDigest": "fe2e65431c689e3f7802c256db3f942694bb19bf003018d9f1213bf29b3c4434",
+  "harnessSha256": "9ac8dfadd91208e1fe3cde091fa03095eae9d85f7a4d7a5990094940cd3156b9",
+  "driverSha256": "0220606decdc7661d0bbd5e55a08f81ccb9f1fd09d73372a63f19187f40b09a8",
+  "generatorCheckedAgainst": {
+    "file": "G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\results-v4\\mutation\\m4-mutation-analysis.json",
+    "mutants": 391,
+    "identical": true
+  },
+  "workers": 3,
+  "timeoutMs": 180000,
+  "r10Only": false,
+  "harness": "R8 reduced E1 (BE-base -> BE-ext -> PB -> INV, unchanged) then R10-IN (S1 input boundary) -> R10-SES (rejected/reusing change sets; S1, S2, S3, S3e, S3t sessions; scope, fallback and S1 specifications) -> R10-API (applyChanges support ids, groundingNodes, evidencePath); first failing stage recorded",
+  "baselineHarness": {
+    "killedBy": null,
+    "detail": "",
+    "timing": {
+      "BE-base": 19033,
+      "BE-ext": 56090,
+      "PB": 1535,
+      "INV": 305,
+      "R10-IN": 338,
+      "R10-SES": 46274,
+      "R10-API": 104
+    },
+    "ms": 124629
+  },
+  "total": {
+    "mutants": 391,
+    "killed": 322,
+    "survived": 69,
+    "mutationScore": 0.8235,
+    "byStage": {
+      "BE-base": 156,
+      "R10-SES": 24,
+      "crash:BE-base": 36,
+      "survived": 69,
+      "R10-API": 9,
+      "timeout": 14,
+      "BE-ext": 23,
+      "crash:BE-ext": 9,
+      "PB": 21,
+      "crash:load": 1,
+      "crash:R10-SES": 1,
+      "R10-IN": 25,
+      "crash:PB": 2,
+      "crash:INV": 1
+    }
+  },
+  "byFile": {
+    "validator/engine.ts": {
+      "role": "engine (rule evaluation)",
+      "mutants": 75,
+      "killed": 73,
+      "survived": 2,
+      "mutationScore": 0.9733,
+      "byStage": {
+        "BE-base": 58,
+        "R10-SES": 6,
+        "crash:BE-base": 6,
+        "survived": 2,
+        "R10-API": 2,
+        "timeout": 1
+      }
+    },
+    "incremental/session.ts": {
+      "role": "incremental session",
+      "mutants": 77,
+      "killed": 65,
+      "survived": 12,
+      "mutationScore": 0.8442,
+      "byStage": {
+        "BE-base": 17,
+        "survived": 12,
+        "crash:BE-base": 12,
+        "BE-ext": 10,
+        "crash:BE-ext": 8,
+        "PB": 7,
+        "R10-SES": 11
+      }
+    },
+    "witness/acyclicWitness.ts": {
+      "role": "witness store (acyclic)",
+      "mutants": 59,
+      "killed": 39,
+      "survived": 20,
+      "mutationScore": 0.661,
+      "byStage": {
+        "PB": 7,
+        "survived": 20,
+        "BE-ext": 5,
+        "timeout": 6,
+        "BE-base": 21
+      }
+    },
+    "witness/traceWitness.ts": {
+      "role": "witness store (trace)",
+      "mutants": 53,
+      "killed": 45,
+      "survived": 8,
+      "mutationScore": 0.8491,
+      "byStage": {
+        "BE-base": 25,
+        "crash:BE-base": 5,
+        "survived": 8,
+        "timeout": 4,
+        "BE-ext": 6,
+        "PB": 1,
+        "R10-SES": 1,
+        "R10-API": 3
+      }
+    },
+    "witness/tarjan.ts": {
+      "role": "Tarjan SCC (BatchGlobal)",
+      "mutants": 30,
+      "killed": 30,
+      "survived": 0,
+      "mutationScore": 1,
+      "byStage": {
+        "BE-base": 23,
+        "crash:BE-base": 2,
+        "PB": 2,
+        "timeout": 2,
+        "crash:load": 1
+      }
+    },
+    "catalog/rules.ts": {
+      "role": "shared: rule derivation, value domains, violation keys",
+      "mutants": 25,
+      "killed": 8,
+      "survived": 17,
+      "mutationScore": 0.32,
+      "byStage": {
+        "survived": 17,
+        "crash:R10-SES": 1,
+        "R10-SES": 1,
+        "BE-base": 2,
+        "PB": 4
+      }
+    },
+    "model/graph.ts": {
+      "role": "shared: normalization, change application, neighbourhoods",
+      "mutants": 72,
+      "killed": 62,
+      "survived": 10,
+      "mutationScore": 0.8611,
+      "byStage": {
+        "R10-IN": 25,
+        "crash:BE-base": 11,
+        "survived": 10,
+        "BE-base": 10,
+        "BE-ext": 2,
+        "crash:BE-ext": 1,
+        "crash:PB": 2,
+        "R10-API": 4,
+        "R10-SES": 5,
+        "crash:INV": 1,
+        "timeout": 1
+      }
+    }
+  },
+  "byOperator": {
+    "ROR": {
+      "mutants": 95,
+      "killed": 74,
+      "survived": 21,
+      "mutationScore": 0.7789,
+      "byStage": {
+        "BE-base": 44,
+        "R10-SES": 4,
+        "R10-API": 1,
+        "survived": 21,
+        "crash:BE-base": 4,
+        "BE-ext": 4,
+        "crash:BE-ext": 2,
+        "PB": 7,
+        "timeout": 1,
+        "R10-IN": 7
+      }
+    },
+    "LCR": {
+      "mutants": 38,
+      "killed": 31,
+      "survived": 7,
+      "mutationScore": 0.8158,
+      "byStage": {
+        "BE-base": 14,
+        "crash:BE-base": 3,
+        "crash:BE-ext": 2,
+        "R10-SES": 5,
+        "survived": 7,
+        "BE-ext": 3,
+        "R10-API": 1,
+        "R10-IN": 2,
+        "crash:PB": 1
+      }
+    },
+    "NEG": {
+      "mutants": 155,
+      "killed": 144,
+      "survived": 11,
+      "mutationScore": 0.929,
+      "byStage": {
+        "BE-base": 75,
+        "crash:BE-base": 22,
+        "R10-API": 4,
+        "R10-SES": 9,
+        "BE-ext": 13,
+        "PB": 6,
+        "crash:BE-ext": 4,
+        "survived": 11,
+        "timeout": 1,
+        "crash:load": 1,
+        "crash:R10-SES": 1,
+        "R10-IN": 7,
+        "crash:INV": 1
+      }
+    },
+    "BOOL": {
+      "mutants": 13,
+      "killed": 8,
+      "survived": 5,
+      "mutationScore": 0.6154,
+      "byStage": {
+        "BE-base": 6,
+        "survived": 5,
+        "R10-API": 1,
+        "R10-SES": 1
+      }
+    },
+    "STMT": {
+      "mutants": 50,
+      "killed": 28,
+      "survived": 22,
+      "mutationScore": 0.56,
+      "byStage": {
+        "BE-base": 9,
+        "crash:BE-base": 6,
+        "R10-SES": 3,
+        "survived": 22,
+        "crash:BE-ext": 1,
+        "timeout": 3,
+        "R10-API": 2,
+        "PB": 1,
+        "R10-IN": 2,
+        "crash:PB": 1
+      }
+    },
+    "INC": {
+      "mutants": 22,
+      "killed": 20,
+      "survived": 2,
+      "mutationScore": 0.9091,
+      "byStage": {
+        "BE-base": 3,
+        "timeout": 9,
+        "survived": 2,
+        "PB": 5,
+        "BE-ext": 1,
+        "R10-IN": 2
+      }
+    },
+    "CONST": {
+      "mutants": 18,
+      "killed": 17,
+      "survived": 1,
+      "mutationScore": 0.9444,
+      "byStage": {
+        "R10-SES": 2,
+        "BE-base": 5,
+        "BE-ext": 2,
+        "PB": 2,
+        "survived": 1,
+        "R10-IN": 5,
+        "crash:BE-base": 1
+      }
+    }
+  },
+  "survivors": [
+    {
+      "id": 27,
+      "file": "validator/engine.ts",
+      "line": 156,
+      "operator": "BOOL",
+      "original": "return true;",
+      "mutated": "return false;"
+    },
+    {
+      "id": 59,
+      "file": "validator/engine.ts",
+      "line": 291,
+      "operator": "ROR",
+      "original": "while (head < queue.length) {",
+      "mutated": "while (head <= queue.length) {"
+    },
+    {
+      "id": 82,
+      "file": "incremental/session.ts",
+      "line": 137,
+      "operator": "ROR",
+      "original": "if (prev && prev.anchor !== v.anchor) this.localByAnchor.get(prev.anchor)?.delete(key);",
+      "mutated": "if (prev && prev.anchor === v.anchor) this.localByAnchor.get(prev.anchor)?.delete(key);"
+    },
+    {
+      "id": 95,
+      "file": "incremental/session.ts",
+      "line": 210,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}"
+    },
+    {
+      "id": 101,
+      "file": "incremental/session.ts",
+      "line": 219,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}"
+    },
+    {
+      "id": 107,
+      "file": "incremental/session.ts",
+      "line": 227,
+      "operator": "STMT",
+      "original": "if (!this.g.edges.has(p.edge.id)) break;",
+      "mutated": "if (!this.g.edges.has(p.edge.id)) {}"
+    },
+    {
+      "id": 109,
+      "file": "incremental/session.ts",
+      "line": 230,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}"
+    },
+    {
+      "id": 113,
+      "file": "incremental/session.ts",
+      "line": 235,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 115,
+      "file": "incremental/session.ts",
+      "line": 238,
+      "operator": "STMT",
+      "original": "if (!this.g.nodes.has(p.id)) break;",
+      "mutated": "if (!this.g.nodes.has(p.id)) {}"
+    },
+    {
+      "id": 117,
+      "file": "incremental/session.ts",
+      "line": 241,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}"
+    },
+    {
+      "id": 119,
+      "file": "incremental/session.ts",
+      "line": 245,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 120,
+      "file": "incremental/session.ts",
+      "line": 249,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 135,
+      "file": "incremental/session.ts",
+      "line": 285,
+      "operator": "NEG",
+      "original": "if (this.eagerOutput) {",
+      "mutated": "if (!(this.eagerOutput)) {"
+    },
+    {
+      "id": 150,
+      "file": "incremental/session.ts",
+      "line": 341,
+      "operator": "INC",
+      "original": "const version = ++this.version;",
+      "mutated": "const version = --this.version;"
+    },
+    {
+      "id": 153,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "original": "return v === null || v === undefined ? undefined : this.compId.get(v);",
+      "mutated": "return v !== null || v === undefined ? undefined : this.compId.get(v);"
+    },
+    {
+      "id": 154,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "original": "return v === null || v === undefined ? undefined : this.compId.get(v);",
+      "mutated": "return v === null || v !== undefined ? undefined : this.compId.get(v);"
+    },
+    {
+      "id": 155,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "LCR",
+      "original": "return v === null || v === undefined ? undefined : this.compId.get(v);",
+      "mutated": "return v === null && v === undefined ? undefined : this.compId.get(v);"
+    },
+    {
+      "id": 156,
+      "file": "witness/acyclicWitness.ts",
+      "line": 73,
+      "operator": "ROR",
+      "original": "while (a > 0) {",
+      "mutated": "while (a >= 0) {"
+    },
+    {
+      "id": 159,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "ROR",
+      "original": "if (c === undefined || c === loCid) a--;",
+      "mutated": "if (c !== undefined || c === loCid) a--;"
+    },
+    {
+      "id": 165,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "ROR",
+      "original": "while (b < this.order.length - 1) {",
+      "mutated": "while (b <= this.order.length - 1) {"
+    },
+    {
+      "id": 166,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "INC",
+      "original": "while (b < this.order.length - 1) {",
+      "mutated": "while (b < this.order.length + 1) {"
+    },
+    {
+      "id": 168,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "ROR",
+      "original": "if (c === undefined || c === hiCid) b++;",
+      "mutated": "if (c !== undefined || c === hiCid) b++;"
+    },
+    {
+      "id": 178,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "original": "if (v !== null && v !== undefined && this.g.nodes.has(v)) out.push(v);",
+      "mutated": "if (v !== null || v !== undefined && this.g.nodes.has(v)) out.push(v);"
+    },
+    {
+      "id": 179,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "original": "if (v !== null && v !== undefined && this.g.nodes.has(v)) out.push(v);",
+      "mutated": "if (v !== null && v !== undefined || this.g.nodes.has(v)) out.push(v);"
+    },
+    {
+      "id": 193,
+      "file": "witness/acyclicWitness.ts",
+      "line": 143,
+      "operator": "NEG",
+      "original": "if (!this.pos.has(v)) return;",
+      "mutated": "if (!(!this.pos.has(v))) return;"
+    },
+    {
+      "id": 194,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "ROR",
+      "original": "if (old !== undefined) this.nonTrivial.delete(old);",
+      "mutated": "if (old === undefined) this.nonTrivial.delete(old);"
+    },
+    {
+      "id": 195,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "NEG",
+      "original": "if (old !== undefined) this.nonTrivial.delete(old);",
+      "mutated": "if (!(old !== undefined)) this.nonTrivial.delete(old);"
+    },
+    {
+      "id": 196,
+      "file": "witness/acyclicWitness.ts",
+      "line": 155,
+      "operator": "NEG",
+      "original": "if (!this.pos.has(u)) this.onAddNode(u);",
+      "mutated": "if (!(!this.pos.has(u))) this.onAddNode(u);"
+    },
+    {
+      "id": 197,
+      "file": "witness/acyclicWitness.ts",
+      "line": 156,
+      "operator": "NEG",
+      "original": "if (!this.pos.has(v)) this.onAddNode(v);",
+      "mutated": "if (!(!this.pos.has(v))) this.onAddNode(v);"
+    },
+    {
+      "id": 202,
+      "file": "witness/acyclicWitness.ts",
+      "line": 168,
+      "operator": "ROR",
+      "original": "if (pu < pv) {",
+      "mutated": "if (pu <= pv) {"
+    },
+    {
+      "id": 204,
+      "file": "witness/acyclicWitness.ts",
+      "line": 178,
+      "operator": "LCR",
+      "original": "if (!this.pos.has(u) || !this.pos.has(v)) {",
+      "mutated": "if (!this.pos.has(u) && !this.pos.has(v)) {"
+    },
+    {
+      "id": 206,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "ROR",
+      "original": "if (u === v) {",
+      "mutated": "if (u !== v) {"
+    },
+    {
+      "id": 207,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "NEG",
+      "original": "if (u === v) {",
+      "mutated": "if (!(u === v)) {"
+    },
+    {
+      "id": 210,
+      "file": "witness/acyclicWitness.ts",
+      "line": 201,
+      "operator": "ROR",
+      "original": "out.sort((a, b) => (a.witness.join(',') < b.witness.join(',') ? -1 : 1));",
+      "mutated": "out.sort((a, b) => (a.witness.join(',') <= b.witness.join(',') ? -1 : 1));"
+    },
+    {
+      "id": 219,
+      "file": "witness/traceWitness.ts",
+      "line": 81,
+      "operator": "ROR",
+      "original": "while (head < queue.length) {",
+      "mutated": "while (head <= queue.length) {"
+    },
+    {
+      "id": 230,
+      "file": "witness/traceWitness.ts",
+      "line": 124,
+      "operator": "ROR",
+      "original": "while (head < queue.length) {",
+      "mutated": "while (head <= queue.length) {"
+    },
+    {
+      "id": 245,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "ROR",
+      "original": "if (eid !== undefined) {",
+      "mutated": "if (eid === undefined) {"
+    },
+    {
+      "id": 246,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "NEG",
+      "original": "if (eid !== undefined) {",
+      "mutated": "if (!(eid !== undefined)) {"
+    },
+    {
+      "id": 249,
+      "file": "witness/traceWitness.ts",
+      "line": 190,
+      "operator": "STMT",
+      "original": "if (this.reaches.has(u)) continue;",
+      "mutated": "if (this.reaches.has(u)) {}"
+    },
+    {
+      "id": 254,
+      "file": "witness/traceWitness.ts",
+      "line": 199,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 259,
+      "file": "witness/traceWitness.ts",
+      "line": 229,
+      "operator": "STMT",
+      "original": "if (!this.g.nodes.has(id)) continue;",
+      "mutated": "if (!this.g.nodes.has(id)) {}"
+    },
+    {
+      "id": 260,
+      "file": "witness/traceWitness.ts",
+      "line": 232,
+      "operator": "ROR",
+      "original": "out.sort((a, b) => (a.witness[0] < b.witness[0] ? -1 : 1));",
+      "mutated": "out.sort((a, b) => (a.witness[0] <= b.witness[0] ? -1 : 1));"
+    },
+    {
+      "id": 294,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "NEG",
+      "original": "if (!a) continue;",
+      "mutated": "if (!(!a)) continue;"
+    },
+    {
+      "id": 295,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "STMT",
+      "original": "if (!a) continue;",
+      "mutated": "if (!a) {}"
+    },
+    {
+      "id": 297,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "ROR",
+      "original": "for (const r of rules) if (!r.global && r.radius > k) k = r.radius;",
+      "mutated": "for (const r of rules) if (!r.global && r.radius >= k) k = r.radius;"
+    },
+    {
+      "id": 302,
+      "file": "catalog/rules.ts",
+      "line": 69,
+      "operator": "BOOL",
+      "original": "if (v === undefined) return false;",
+      "mutated": "if (v === undefined) return true;"
+    },
+    {
+      "id": 304,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' && v >= d.min && v < d.max;"
+    },
+    {
+      "id": 305,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' && v > d.min && v <= d.max;"
+    },
+    {
+      "id": 306,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' || v >= d.min && v <= d.max;"
+    },
+    {
+      "id": 307,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' && v >= d.min || v <= d.max;"
+    },
+    {
+      "id": 309,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "ROR",
+      "original": "return typeof v === 'string' && v.length > 0;",
+      "mutated": "return typeof v === 'string' && v.length >= 0;"
+    },
+    {
+      "id": 310,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "LCR",
+      "original": "return typeof v === 'string' && v.length > 0;",
+      "mutated": "return typeof v === 'string' || v.length > 0;"
+    },
+    {
+      "id": 311,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "CONST",
+      "original": "return typeof v === 'string' && v.length > 0;",
+      "mutated": "return typeof v === 'string' && v.length > 1;"
+    },
+    {
+      "id": 312,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "ROR",
+      "original": "if (a.size !== b.size) return false;",
+      "mutated": "if (a.size === b.size) return false;"
+    },
+    {
+      "id": 313,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "NEG",
+      "original": "if (a.size !== b.size) return false;",
+      "mutated": "if (!(a.size !== b.size)) return false;"
+    },
+    {
+      "id": 314,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "BOOL",
+      "original": "if (a.size !== b.size) return false;",
+      "mutated": "if (a.size !== b.size) return true;"
+    },
+    {
+      "id": 315,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "NEG",
+      "original": "for (const x of a) if (!b.has(x)) return false;",
+      "mutated": "for (const x of a) if (!(!b.has(x))) return false;"
+    },
+    {
+      "id": 316,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "BOOL",
+      "original": "for (const x of a) if (!b.has(x)) return false;",
+      "mutated": "for (const x of a) if (!b.has(x)) return true;"
+    },
+    {
+      "id": 317,
+      "file": "catalog/rules.ts",
+      "line": 104,
+      "operator": "BOOL",
+      "original": "return true;",
+      "mutated": "return false;"
+    },
+    {
+      "id": 332,
+      "file": "model/graph.ts",
+      "line": 78,
+      "operator": "STMT",
+      "original": "continue;",
+      "mutated": "{}"
+    },
+    {
+      "id": 334,
+      "file": "model/graph.ts",
+      "line": 89,
+      "operator": "STMT",
+      "original": "continue;",
+      "mutated": "{}"
+    },
+    {
+      "id": 372,
+      "file": "model/graph.ts",
+      "line": 201,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 375,
+      "file": "model/graph.ts",
+      "line": 209,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 377,
+      "file": "model/graph.ts",
+      "line": 214,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 378,
+      "file": "model/graph.ts",
+      "line": 228,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 379,
+      "file": "model/graph.ts",
+      "line": 233,
+      "operator": "NEG",
+      "original": "if (e) {",
+      "mutated": "if (!(e)) {"
+    },
+    {
+      "id": 380,
+      "file": "model/graph.ts",
+      "line": 238,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 382,
+      "file": "model/graph.ts",
+      "line": 245,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 384,
+      "file": "model/graph.ts",
+      "line": 252,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    }
+  ],
+  "mutants": [
+    {
+      "id": 0,
+      "file": "validator/engine.ts",
+      "line": 60,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[MULT:B|s|out|n0] reference-only=[]",
+      "ms": 615
+    },
+    {
+      "id": 1,
+      "file": "validator/engine.ts",
+      "line": 65,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[MULT:B|s|out|n0]",
+      "ms": 593
+    },
+    {
+      "id": 2,
+      "file": "validator/engine.ts",
+      "line": 65,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[MULT:B|s|out|n0]",
+      "ms": 547
+    },
+    {
+      "id": 3,
+      "file": "validator/engine.ts",
+      "line": 65,
+      "operator": "INC",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[MULT:A|r|out|n0] reference-only=[]",
+      "ms": 204
+    },
+    {
+      "id": 4,
+      "file": "validator/engine.ts",
+      "line": 94,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TYPE:r|e0]",
+      "ms": 208
+    },
+    {
+      "id": 5,
+      "file": "validator/engine.ts",
+      "line": 97,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ATTR:A.p|n0]",
+      "ms": 196
+    },
+    {
+      "id": 6,
+      "file": "validator/engine.ts",
+      "line": 100,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[DOM:A.p|n0] reference-only=[]",
+      "ms": 204
+    },
+    {
+      "id": 7,
+      "file": "validator/engine.ts",
+      "line": 100,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[DOM:A.p|n0] reference-only=[]",
+      "ms": 209
+    },
+    {
+      "id": 8,
+      "file": "validator/engine.ts",
+      "line": 104,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[MULT:B|s|out|n0] reference-only=[]",
+      "ms": 231
+    },
+    {
+      "id": 9,
+      "file": "validator/engine.ts",
+      "line": 104,
+      "operator": "ROR",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"delNode\",\"id\":\"n0\"},{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"g3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"}}]: violations only-first=[] only-second=[MULT:A|r|out|n0]",
+      "ms": 84270
+    },
+    {
+      "id": 10,
+      "file": "validator/engine.ts",
+      "line": 104,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[MULT:A|r|out|n0] reference-only=[]",
+      "ms": 207
+    },
+    {
+      "id": 11,
+      "file": "validator/engine.ts",
+      "line": 104,
+      "operator": "CONST",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"delNode\",\"id\":\"n0\"},{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"g3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"}}]: violations only-first=[] only-second=[MULT:A|r|out|n0]",
+      "ms": 84827
+    },
+    {
+      "id": 12,
+      "file": "validator/engine.ts",
+      "line": 105,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[MULT:A|r|out|n0] reference-only=[]",
+      "ms": 209
+    },
+    {
+      "id": 13,
+      "file": "validator/engine.ts",
+      "line": 105,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[MULT:B|s|out|n0]",
+      "ms": 201
+    },
+    {
+      "id": 14,
+      "file": "validator/engine.ts",
+      "line": 108,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ISO:A|n0]",
+      "ms": 199
+    },
+    {
+      "id": 15,
+      "file": "validator/engine.ts",
+      "line": 108,
+      "operator": "CONST",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[ISO:A|n0 ISO:A|n1] batch-only=[]",
+      "ms": 309
+    },
+    {
+      "id": 16,
+      "file": "validator/engine.ts",
+      "line": 128,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'has')",
+      "ms": 274
+    },
+    {
+      "id": 17,
+      "file": "validator/engine.ts",
+      "line": 133,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[VIEW:D|n0,n0]",
+      "ms": 224
+    },
+    {
+      "id": 18,
+      "file": "validator/engine.ts",
+      "line": 133,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[VIEW:D|n0,n0]",
+      "ms": 227
+    },
+    {
+      "id": 19,
+      "file": "validator/engine.ts",
+      "line": 137,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[VIEW:D|n0,n0]",
+      "ms": 239
+    },
+    {
+      "id": 20,
+      "file": "validator/engine.ts",
+      "line": 137,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[VIEW:D|n0,n0] reference-only=[]",
+      "ms": 244
+    },
+    {
+      "id": 21,
+      "file": "validator/engine.ts",
+      "line": 140,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: owners is not iterable",
+      "ms": 285
+    },
+    {
+      "id": 22,
+      "file": "validator/engine.ts",
+      "line": 145,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[VIEW:D|n0,n1]",
+      "ms": 992
+    },
+    {
+      "id": 23,
+      "file": "validator/engine.ts",
+      "line": 145,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[VIEW:D|n0,n1]",
+      "ms": 1019
+    },
+    {
+      "id": 24,
+      "file": "validator/engine.ts",
+      "line": 151,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[VIEW:D|n0,n0]",
+      "ms": 251
+    },
+    {
+      "id": 25,
+      "file": "validator/engine.ts",
+      "line": 151,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[VIEW:D|n0,n0] batch-only=[]",
+      "ms": 927
+    },
+    {
+      "id": 26,
+      "file": "validator/engine.ts",
+      "line": 153,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[VIEW:D|n0,n0]",
+      "ms": 237
+    },
+    {
+      "id": 27,
+      "file": "validator/engine.ts",
+      "line": 156,
+      "operator": "BOOL",
+      "killedBy": null,
+      "detail": "",
+      "ms": 137996
+    },
+    {
+      "id": 28,
+      "file": "validator/engine.ts",
+      "line": 199,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: scope is not iterable",
+      "ms": 223
+    },
+    {
+      "id": 29,
+      "file": "validator/engine.ts",
+      "line": 200,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[TYPE:s|e0 TYPE:t|e0] reference-only=[TYPE:r|e0]",
+      "ms": 217
+    },
+    {
+      "id": 30,
+      "file": "validator/engine.ts",
+      "line": 200,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[TYPE:s|e0 TYPE:t|e0] reference-only=[TYPE:r|e0]",
+      "ms": 216
+    },
+    {
+      "id": 31,
+      "file": "validator/engine.ts",
+      "line": 205,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[TYPE:s|e0 TYPE:t|e0] batch-only=[TYPE:r|e0]",
+      "ms": 197
+    },
+    {
+      "id": 32,
+      "file": "validator/engine.ts",
+      "line": 205,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[TYPE:s|e0 TYPE:t|e0] batch-only=[TYPE:r|e0]",
+      "ms": 216
+    },
+    {
+      "id": 33,
+      "file": "validator/engine.ts",
+      "line": 215,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: scope is not iterable",
+      "ms": 218
+    },
+    {
+      "id": 34,
+      "file": "validator/engine.ts",
+      "line": 216,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ISO:B|n0 MULT:B|s|out|n0] reference-only=[ATTR:A.p|n0 ISO:A|n0]",
+      "ms": 217
+    },
+    {
+      "id": 35,
+      "file": "validator/engine.ts",
+      "line": 216,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ISO:B|n0 MULT:B|s|out|n0] reference-only=[ATTR:A.p|n0 ISO:A|n0]",
+      "ms": 216
+    },
+    {
+      "id": 36,
+      "file": "validator/engine.ts",
+      "line": 221,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[ISO:B|n0 MULT:B|s|out|n0] batch-only=[DOM:A.p|n0 ISO:A|n0]",
+      "ms": 221
+    },
+    {
+      "id": 37,
+      "file": "validator/engine.ts",
+      "line": 221,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[ISO:B|n0 MULT:B|s|out|n0] batch-only=[]",
+      "ms": 220
+    },
+    {
+      "id": 38,
+      "file": "validator/engine.ts",
+      "line": 221,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[ISO:B|n0 MULT:B|s|out|n0] batch-only=[DOM:A.p|n0 ISO:A|n0]",
+      "ms": 227
+    },
+    {
+      "id": 39,
+      "file": "validator/engine.ts",
+      "line": 232,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[VIEW:D|n0,n0]",
+      "ms": 268
+    },
+    {
+      "id": 40,
+      "file": "validator/engine.ts",
+      "line": 232,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[VIEW:D|n0,n0] reference-only=[]",
+      "ms": 305
+    },
+    {
+      "id": 41,
+      "file": "validator/engine.ts",
+      "line": 232,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[VIEW:D|n0,n0]",
+      "ms": 327
+    },
+    {
+      "id": 42,
+      "file": "validator/engine.ts",
+      "line": 232,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[VIEW:D|n0,n0] reference-only=[]",
+      "ms": 283
+    },
+    {
+      "id": 43,
+      "file": "validator/engine.ts",
+      "line": 237,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: scope is not iterable",
+      "ms": 200
+    },
+    {
+      "id": 44,
+      "file": "validator/engine.ts",
+      "line": 238,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[VIEW:D|n0,n0] reference-only=[]",
+      "ms": 215
+    },
+    {
+      "id": 45,
+      "file": "validator/engine.ts",
+      "line": 238,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[VIEW:D|n0,n0] reference-only=[]",
+      "ms": 199
+    },
+    {
+      "id": 46,
+      "file": "validator/engine.ts",
+      "line": 243,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[VIEW:D|n0,n0] batch-only=[]",
+      "ms": 214
+    },
+    {
+      "id": 47,
+      "file": "validator/engine.ts",
+      "line": 243,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[VIEW:D|n0,n0] batch-only=[]",
+      "ms": 219
+    },
+    {
+      "id": 48,
+      "file": "validator/engine.ts",
+      "line": 243,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[VIEW:D|n0,n0] batch-only=[]",
+      "ms": 216
+    },
+    {
+      "id": 49,
+      "file": "validator/engine.ts",
+      "line": 254,
+      "operator": "ROR",
+      "killedBy": "R10-API",
+      "detail": "groundingNodes TYPE:r|e2 in api-tiny-0: [\"e2\"] expected [\"n4\",\"n3\"]",
+      "ms": 141131
+    },
+    {
+      "id": 50,
+      "file": "validator/engine.ts",
+      "line": 254,
+      "operator": "NEG",
+      "killedBy": "R10-API",
+      "detail": "groundingNodes TYPE:r|e2 in api-tiny-0: [\"e2\"] expected [\"n4\",\"n3\"]",
+      "ms": 140046
+    },
+    {
+      "id": 51,
+      "file": "validator/engine.ts",
+      "line": 264,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ATTR:A.p|n0 ISO:A|n0]",
+      "ms": 292
+    },
+    {
+      "id": 52,
+      "file": "validator/engine.ts",
+      "line": 267,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[DOM:A.p|n0 MULT:A|r|out|n0] reference-only=[ATTR:A.p|n0 ISO:A|n0]",
+      "ms": 228
+    },
+    {
+      "id": 53,
+      "file": "validator/engine.ts",
+      "line": 275,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TRACE:TP|n0]",
+      "ms": 228
+    },
+    {
+      "id": 54,
+      "file": "validator/engine.ts",
+      "line": 275,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TRACE:TP|n0]",
+      "ms": 233
+    },
+    {
+      "id": 55,
+      "file": "validator/engine.ts",
+      "line": 283,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TRACE:TP|n0]",
+      "ms": 246
+    },
+    {
+      "id": 56,
+      "file": "validator/engine.ts",
+      "line": 283,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TRACE:TP|n0]",
+      "ms": 301
+    },
+    {
+      "id": 57,
+      "file": "validator/engine.ts",
+      "line": 289,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TRACE:TP|n0]",
+      "ms": 289
+    },
+    {
+      "id": 58,
+      "file": "validator/engine.ts",
+      "line": 289,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TRACE:TP|n0]",
+      "ms": 272
+    },
+    {
+      "id": 59,
+      "file": "validator/engine.ts",
+      "line": 291,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 139128
+    },
+    {
+      "id": 60,
+      "file": "validator/engine.ts",
+      "line": 292,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180048
+    },
+    {
+      "id": 61,
+      "file": "validator/engine.ts",
+      "line": 295,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[TRACE:TP|n1] reference-only=[]",
+      "ms": 913
+    },
+    {
+      "id": 62,
+      "file": "validator/engine.ts",
+      "line": 295,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TRACE:TP|n1]",
+      "ms": 795
+    },
+    {
+      "id": 63,
+      "file": "validator/engine.ts",
+      "line": 296,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[TRACE:TP|n1] reference-only=[]",
+      "ms": 763
+    },
+    {
+      "id": 64,
+      "file": "validator/engine.ts",
+      "line": 296,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "detail": "RangeError: Invalid array length",
+      "ms": 10882
+    },
+    {
+      "id": 65,
+      "file": "validator/engine.ts",
+      "line": 304,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TRACE:TP|n0]",
+      "ms": 211
+    },
+    {
+      "id": 66,
+      "file": "validator/engine.ts",
+      "line": 304,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TRACE:TP|n0]",
+      "ms": 208
+    },
+    {
+      "id": 67,
+      "file": "validator/engine.ts",
+      "line": 304,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[TRACE:TP|n0] reference-only=[]",
+      "ms": 214
+    },
+    {
+      "id": 68,
+      "file": "validator/engine.ts",
+      "line": 305,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[TRACE:TP|n0]",
+      "ms": 213
+    },
+    {
+      "id": 69,
+      "file": "validator/engine.ts",
+      "line": 318,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ATTR:A.p|n0 ISO:A|n0 TRACE:TP|n0]",
+      "ms": 205
+    },
+    {
+      "id": 70,
+      "file": "validator/engine.ts",
+      "line": 329,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem2: serialization differs under rule permutation",
+      "ms": 242
+    },
+    {
+      "id": 71,
+      "file": "validator/engine.ts",
+      "line": 340,
+      "operator": "NEG",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: violations only-first=[] only-second=[TRACE:TP|n0]",
+      "ms": 82412
+    },
+    {
+      "id": 72,
+      "file": "validator/engine.ts",
+      "line": 340,
+      "operator": "STMT",
+      "killedBy": "R10-SES",
+      "detail": "S1 step 0 threw TypeError: Cannot read properties of undefined (reading 'type') changes=[{\"kind\":\"delNode\",\"id\":\"n0\"}]",
+      "ms": 82425
+    },
+    {
+      "id": 73,
+      "file": "validator/engine.ts",
+      "line": 348,
+      "operator": "NEG",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x3\",\"type\":\"t\",\"src\":\"n0\",\"tgt\":\"n0\"}}]: violations only-first=[] only-second=[ACYC:t|n0]",
+      "ms": 82440
+    },
+    {
+      "id": 74,
+      "file": "validator/engine.ts",
+      "line": 348,
+      "operator": "STMT",
+      "killedBy": "R10-SES",
+      "detail": "S1 step 11 threw TypeError: Cannot read properties of undefined (reading 'push') changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"fn21\",\"type\":\"C\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f22\",\"type\":\"r\",\"src\":\"fn0\",\"tgt\":\"fn21\"}}]",
+      "ms": 138387
+    },
+    {
+      "id": 75,
+      "file": "incremental/session.ts",
+      "line": 123,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 216
+    },
+    {
+      "id": 76,
+      "file": "incremental/session.ts",
+      "line": 123,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 193
+    },
+    {
+      "id": 77,
+      "file": "incremental/session.ts",
+      "line": 123,
+      "operator": "CONST",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 210
+    },
+    {
+      "id": 78,
+      "file": "incremental/session.ts",
+      "line": 125,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 193
+    },
+    {
+      "id": 79,
+      "file": "incremental/session.ts",
+      "line": 125,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 197
+    },
+    {
+      "id": 80,
+      "file": "incremental/session.ts",
+      "line": 126,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 225
+    },
+    {
+      "id": 81,
+      "file": "incremental/session.ts",
+      "line": 126,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 214
+    },
+    {
+      "id": 82,
+      "file": "incremental/session.ts",
+      "line": 137,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 143092
+    },
+    {
+      "id": 83,
+      "file": "incremental/session.ts",
+      "line": 137,
+      "operator": "LCR",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'anchor')",
+      "ms": 211
+    },
+    {
+      "id": 84,
+      "file": "incremental/session.ts",
+      "line": 137,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'anchor')",
+      "ms": 196
+    },
+    {
+      "id": 85,
+      "file": "incremental/session.ts",
+      "line": 140,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'add')",
+      "ms": 194
+    },
+    {
+      "id": 86,
+      "file": "incremental/session.ts",
+      "line": 179,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "changeApplication: changes=[{\"kind\":\"delNode\",\"id\":\"n0\"}] node count 1 vs 0",
+      "ms": 20561
+    },
+    {
+      "id": 87,
+      "file": "incremental/session.ts",
+      "line": 184,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delNode\",\"id\":\"n0\"}] incremental-only=[] batch-only=[ACYC:t|n1]",
+      "ms": 20471
+    },
+    {
+      "id": 88,
+      "file": "incremental/session.ts",
+      "line": 198,
+      "operator": "ROR",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'type')",
+      "ms": 222
+    },
+    {
+      "id": 89,
+      "file": "incremental/session.ts",
+      "line": 198,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'type')",
+      "ms": 228
+    },
+    {
+      "id": 90,
+      "file": "incremental/session.ts",
+      "line": 200,
+      "operator": "ROR",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"C\",\"attrs\":{\"p\":1}}}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 21134
+    },
+    {
+      "id": 91,
+      "file": "incremental/session.ts",
+      "line": 200,
+      "operator": "LCR",
+      "killedBy": "crash:BE-ext",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'type')",
+      "ms": 21167
+    },
+    {
+      "id": 92,
+      "file": "incremental/session.ts",
+      "line": 200,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"C\",\"attrs\":{\"p\":1}}}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 21374
+    },
+    {
+      "id": 93,
+      "file": "incremental/session.ts",
+      "line": 201,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"C\",\"attrs\":{\"p\":1}}}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 21071
+    },
+    {
+      "id": 94,
+      "file": "incremental/session.ts",
+      "line": 210,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "detail": "P4: aerospace-n53-s20260201 step 3 only-first=[] only-second=[TRACE:FUN2REQ|new_508508034]",
+      "ms": 85157
+    },
+    {
+      "id": 95,
+      "file": "incremental/session.ts",
+      "line": 210,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 142938
+    },
+    {
+      "id": 96,
+      "file": "incremental/session.ts",
+      "line": 211,
+      "operator": "NEG",
+      "killedBy": "crash:BE-ext",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'onAddNode')",
+      "ms": 20536
+    },
+    {
+      "id": 97,
+      "file": "incremental/session.ts",
+      "line": 214,
+      "operator": "STMT",
+      "killedBy": "crash:BE-ext",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'src')",
+      "ms": 20664
+    },
+    {
+      "id": 98,
+      "file": "incremental/session.ts",
+      "line": 217,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 347
+    },
+    {
+      "id": 99,
+      "file": "incremental/session.ts",
+      "line": 217,
+      "operator": "STMT",
+      "killedBy": "R10-SES",
+      "detail": "S3 r10-zero sg-n2-t2-v0-0 step 0 changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"e0\",\"type\":\"s\",\"src\":\"n1\",\"tgt\":\"n0\"}}]: violations only-first=[] only-second=[TRACE:TP|n1]",
+      "ms": 92661
+    },
+    {
+      "id": 100,
+      "file": "incremental/session.ts",
+      "line": 219,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 329
+    },
+    {
+      "id": 101,
+      "file": "incremental/session.ts",
+      "line": 219,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 139567
+    },
+    {
+      "id": 102,
+      "file": "incremental/session.ts",
+      "line": 220,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'onAddEdge')",
+      "ms": 306
+    },
+    {
+      "id": 103,
+      "file": "incremental/session.ts",
+      "line": 221,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 288
+    },
+    {
+      "id": 104,
+      "file": "incremental/session.ts",
+      "line": 221,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 287
+    },
+    {
+      "id": 105,
+      "file": "incremental/session.ts",
+      "line": 224,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "detail": "changeApplication: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] edge count 0 vs 1",
+      "ms": 317
+    },
+    {
+      "id": 106,
+      "file": "incremental/session.ts",
+      "line": 227,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "changeApplication: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] edge count 1 vs 0",
+      "ms": 234
+    },
+    {
+      "id": 107,
+      "file": "incremental/session.ts",
+      "line": 227,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 140283
+    },
+    {
+      "id": 108,
+      "file": "incremental/session.ts",
+      "line": 230,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 213
+    },
+    {
+      "id": 109,
+      "file": "incremental/session.ts",
+      "line": 230,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 142234
+    },
+    {
+      "id": 110,
+      "file": "incremental/session.ts",
+      "line": 231,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'onDelEdge')",
+      "ms": 217
+    },
+    {
+      "id": 111,
+      "file": "incremental/session.ts",
+      "line": 232,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 223
+    },
+    {
+      "id": 112,
+      "file": "incremental/session.ts",
+      "line": 232,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 230
+    },
+    {
+      "id": 113,
+      "file": "incremental/session.ts",
+      "line": 235,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 141446
+    },
+    {
+      "id": 114,
+      "file": "incremental/session.ts",
+      "line": 238,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "changeApplication: changes=[{\"kind\":\"delNode\",\"id\":\"n0\"}] node count 1 vs 0",
+      "ms": 21095
+    },
+    {
+      "id": 115,
+      "file": "incremental/session.ts",
+      "line": 238,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 140485
+    },
+    {
+      "id": 116,
+      "file": "incremental/session.ts",
+      "line": 241,
+      "operator": "NEG",
+      "killedBy": "R10-SES",
+      "detail": "S3 tiny rs-tiny-2 step 10 changes=[{\"kind\":\"delNode\",\"id\":\"n1\"},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f13\",\"type\":\"s\",\"src\":\"n1\",\"tgt\":\"n1\"}},{\"kind\":\"addNode\",\"node\":{\"id\":\"n1\",\"type\":\"C\",\"attrs\":{}}}]: violations only-first=[TRACE:TP|n1] only-second=[]",
+      "ms": 141744
+    },
+    {
+      "id": 117,
+      "file": "incremental/session.ts",
+      "line": 241,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 138598
+    },
+    {
+      "id": 118,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "NEG",
+      "killedBy": "crash:BE-ext",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'onDelNode')",
+      "ms": 20289
+    },
+    {
+      "id": 119,
+      "file": "incremental/session.ts",
+      "line": 245,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 140226
+    },
+    {
+      "id": 120,
+      "file": "incremental/session.ts",
+      "line": 249,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 138902
+    },
+    {
+      "id": 121,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "ROR",
+      "killedBy": "R10-SES",
+      "detail": "S3t0.25 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: global path batch=0 incremental=2 expected batch=2 of 2",
+      "ms": 84877
+    },
+    {
+      "id": 122,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "ROR",
+      "killedBy": "R10-SES",
+      "detail": "S3t1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: global path batch=2 incremental=0 expected batch=0 of 2",
+      "ms": 83360
+    },
+    {
+      "id": 123,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "LCR",
+      "killedBy": "R10-SES",
+      "detail": "S3 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: global path batch=2 incremental=0 expected batch=0 of 2",
+      "ms": 92406
+    },
+    {
+      "id": 124,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "NEG",
+      "killedBy": "R10-SES",
+      "detail": "S3 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: global path batch=2 incremental=0 expected batch=0 of 2",
+      "ms": 91721
+    },
+    {
+      "id": 125,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "CONST",
+      "killedBy": "R10-SES",
+      "detail": "S3t0.25 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: global path batch=0 incremental=2 expected batch=2 of 2",
+      "ms": 84517
+    },
+    {
+      "id": 126,
+      "file": "incremental/session.ts",
+      "line": 272,
+      "operator": "ROR",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"C\",\"attrs\":{\"p\":1}}}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 19653
+    },
+    {
+      "id": 127,
+      "file": "incremental/session.ts",
+      "line": 272,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"C\",\"attrs\":{\"p\":1}}}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 20223
+    },
+    {
+      "id": 128,
+      "file": "incremental/session.ts",
+      "line": 272,
+      "operator": "CONST",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"C\",\"attrs\":{\"p\":1}}}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 20854
+    },
+    {
+      "id": 129,
+      "file": "incremental/session.ts",
+      "line": 274,
+      "operator": "ROR",
+      "killedBy": "crash:BE-ext",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'src')",
+      "ms": 20492
+    },
+    {
+      "id": 130,
+      "file": "incremental/session.ts",
+      "line": 274,
+      "operator": "ROR",
+      "killedBy": "crash:BE-ext",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'src')",
+      "ms": 20421
+    },
+    {
+      "id": 131,
+      "file": "incremental/session.ts",
+      "line": 274,
+      "operator": "ROR",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'src')",
+      "ms": 245
+    },
+    {
+      "id": 132,
+      "file": "incremental/session.ts",
+      "line": 274,
+      "operator": "LCR",
+      "killedBy": "crash:BE-ext",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'src')",
+      "ms": 20164
+    },
+    {
+      "id": 133,
+      "file": "incremental/session.ts",
+      "line": 274,
+      "operator": "LCR",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'src')",
+      "ms": 237
+    },
+    {
+      "id": 134,
+      "file": "incremental/session.ts",
+      "line": 274,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'src')",
+      "ms": 418
+    },
+    {
+      "id": 135,
+      "file": "incremental/session.ts",
+      "line": 285,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 139228
+    },
+    {
+      "id": 136,
+      "file": "incremental/session.ts",
+      "line": 287,
+      "operator": "NEG",
+      "killedBy": "R10-SES",
+      "detail": "S3e r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: violations only-first=[ATTR:A.p|n0] only-second=[]",
+      "ms": 83830
+    },
+    {
+      "id": 137,
+      "file": "incremental/session.ts",
+      "line": 296,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[ATTR:A.p|n0] batch-only=[]",
+      "ms": 221
+    },
+    {
+      "id": 138,
+      "file": "incremental/session.ts",
+      "line": 296,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: ks is not iterable",
+      "ms": 262
+    },
+    {
+      "id": 139,
+      "file": "incremental/session.ts",
+      "line": 307,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "detail": "P5: aerospace-n53-s20260201 step 24 only-first=[TRACE:FUN2REQ|F7] only-second=[]",
+      "ms": 87737
+    },
+    {
+      "id": 140,
+      "file": "incremental/session.ts",
+      "line": 307,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "detail": "P5: aerospace-n53-s20260201 step 24 only-first=[TRACE:FUN2REQ|F7] only-second=[]",
+      "ms": 88271
+    },
+    {
+      "id": 141,
+      "file": "incremental/session.ts",
+      "line": 307,
+      "operator": "CONST",
+      "killedBy": "PB",
+      "detail": "P5: aerospace-n53-s20260201 step 24 only-first=[TRACE:FUN2REQ|F7] only-second=[]",
+      "ms": 83503
+    },
+    {
+      "id": 142,
+      "file": "incremental/session.ts",
+      "line": 311,
+      "operator": "NEG",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: violations only-first=[] only-second=[TRACE:TP|n0]",
+      "ms": 85541
+    },
+    {
+      "id": 143,
+      "file": "incremental/session.ts",
+      "line": 313,
+      "operator": "LCR",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"nx\",\"type\":\"C\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x4\",\"type\":\"s\",\"src\":\"n0\",\"tgt\":\"nx\"}}]: violations only-first=[TRACE:TP|n0] only-second=[]",
+      "ms": 85237
+    },
+    {
+      "id": 144,
+      "file": "incremental/session.ts",
+      "line": 313,
+      "operator": "LCR",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"delNode\",\"id\":\"no-such-node\"},{\"kind\":\"setAttr\",\"id\":\"no-such-node\",\"attr\":\"p\",\"value\":1},{\"kind\":\"delEdge\",\"id\":\"no-such-edge\"}]: violations only-first=[] only-second=[TRACE:TP|n0]",
+      "ms": 85467
+    },
+    {
+      "id": 145,
+      "file": "incremental/session.ts",
+      "line": 316,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "detail": "P5: aerospace-n53-s20260201 step 0 only-first=[] only-second=[TRACE:FUN2REQ|F6]",
+      "ms": 88072
+    },
+    {
+      "id": 146,
+      "file": "incremental/session.ts",
+      "line": 316,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "detail": "P5: aerospace-n53-s20260201 step 0 only-first=[] only-second=[TRACE:FUN2REQ|F6]",
+      "ms": 87936
+    },
+    {
+      "id": 147,
+      "file": "incremental/session.ts",
+      "line": 316,
+      "operator": "CONST",
+      "killedBy": "PB",
+      "detail": "P5: aerospace-n53-s20260201 step 0 only-first=[] only-second=[TRACE:FUN2REQ|F6]",
+      "ms": 87211
+    },
+    {
+      "id": 148,
+      "file": "incremental/session.ts",
+      "line": 323,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"C\",\"attrs\":{\"p\":1}}}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 23414
+    },
+    {
+      "id": 149,
+      "file": "incremental/session.ts",
+      "line": 330,
+      "operator": "NEG",
+      "killedBy": "crash:BE-ext",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'rebuild')",
+      "ms": 20129
+    },
+    {
+      "id": 150,
+      "file": "incremental/session.ts",
+      "line": 341,
+      "operator": "INC",
+      "killedBy": null,
+      "detail": "",
+      "ms": 137343
+    },
+    {
+      "id": 151,
+      "file": "incremental/session.ts",
+      "line": 346,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'map')",
+      "ms": 216
+    },
+    {
+      "id": 152,
+      "file": "witness/acyclicWitness.ts",
+      "line": 48,
+      "operator": "INC",
+      "killedBy": "PB",
+      "detail": "P7: aerospace-n100-s141821410 stress step 19 only-first=[] only-second=[ACYC:dependOn|C0,C16,C21,stn247]",
+      "ms": 84763
+    },
+    {
+      "id": 153,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 143004
+    },
+    {
+      "id": 154,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 141332
+    },
+    {
+      "id": 155,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "LCR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 142246
+    },
+    {
+      "id": 156,
+      "file": "witness/acyclicWitness.ts",
+      "line": 73,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 144892
+    },
+    {
+      "id": 157,
+      "file": "witness/acyclicWitness.ts",
+      "line": 73,
+      "operator": "CONST",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e2\"},{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\"}] incremental-only=[] batch-only=[ACYC:t|n0]",
+      "ms": 20930
+    },
+    {
+      "id": 158,
+      "file": "witness/acyclicWitness.ts",
+      "line": 74,
+      "operator": "INC",
+      "killedBy": "PB",
+      "detail": "P7: aerospace-n40-s141821407 stress step 18 only-first=[] only-second=[ACYC:dependOn|C0,C1,stn43]",
+      "ms": 88033
+    },
+    {
+      "id": 159,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 138677
+    },
+    {
+      "id": 160,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "ROR",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e2\"},{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\"}] incremental-only=[] batch-only=[ACYC:t|n0]",
+      "ms": 21363
+    },
+    {
+      "id": 161,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "LCR",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e2\"},{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\"}] incremental-only=[] batch-only=[ACYC:t|n0]",
+      "ms": 21379
+    },
+    {
+      "id": 162,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e2\"},{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\"}] incremental-only=[] batch-only=[ACYC:t|n0]",
+      "ms": 22195
+    },
+    {
+      "id": 163,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180055
+    },
+    {
+      "id": 164,
+      "file": "witness/acyclicWitness.ts",
+      "line": 76,
+      "operator": "STMT",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180043
+    },
+    {
+      "id": 165,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 139339
+    },
+    {
+      "id": 166,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "INC",
+      "killedBy": null,
+      "detail": "",
+      "ms": 142849
+    },
+    {
+      "id": 167,
+      "file": "witness/acyclicWitness.ts",
+      "line": 79,
+      "operator": "INC",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x3\",\"type\":\"t\",\"src\":\"n0\",\"tgt\":\"n0\"}}] incremental-only=[ACYC:t|n0] batch-only=[ACYC:t|n0,n1]",
+      "ms": 33032
+    },
+    {
+      "id": 168,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 141573
+    },
+    {
+      "id": 169,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 488
+    },
+    {
+      "id": 170,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 463
+    },
+    {
+      "id": 171,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 459
+    },
+    {
+      "id": 172,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180043
+    },
+    {
+      "id": 173,
+      "file": "witness/acyclicWitness.ts",
+      "line": 81,
+      "operator": "STMT",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180036
+    },
+    {
+      "id": 174,
+      "file": "witness/acyclicWitness.ts",
+      "line": 89,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 231
+    },
+    {
+      "id": 175,
+      "file": "witness/acyclicWitness.ts",
+      "line": 89,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180049
+    },
+    {
+      "id": 176,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 210
+    },
+    {
+      "id": 177,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 230
+    },
+    {
+      "id": 178,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 132337
+    },
+    {
+      "id": 179,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 139441
+    },
+    {
+      "id": 180,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 258
+    },
+    {
+      "id": 181,
+      "file": "witness/acyclicWitness.ts",
+      "line": 98,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 307
+    },
+    {
+      "id": 182,
+      "file": "witness/acyclicWitness.ts",
+      "line": 98,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[ACYC:t|n0]",
+      "ms": 305
+    },
+    {
+      "id": 183,
+      "file": "witness/acyclicWitness.ts",
+      "line": 98,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 285
+    },
+    {
+      "id": 184,
+      "file": "witness/acyclicWitness.ts",
+      "line": 98,
+      "operator": "CONST",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 355
+    },
+    {
+      "id": 185,
+      "file": "witness/acyclicWitness.ts",
+      "line": 107,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "detail": "P7: aerospace-n40-s141821407 stress step 12 only-first=[] only-second=[ACYC:dependOn|C4,C5,stn25]",
+      "ms": 83752
+    },
+    {
+      "id": 186,
+      "file": "witness/acyclicWitness.ts",
+      "line": 107,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180135
+    },
+    {
+      "id": 187,
+      "file": "witness/acyclicWitness.ts",
+      "line": 110,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 240
+    },
+    {
+      "id": 188,
+      "file": "witness/acyclicWitness.ts",
+      "line": 110,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 288
+    },
+    {
+      "id": 189,
+      "file": "witness/acyclicWitness.ts",
+      "line": 116,
+      "operator": "INC",
+      "killedBy": "PB",
+      "detail": "P4: automotive-n84-s20260202 step 20 only-first=[] only-second=[ACYC:dependOn|C8]",
+      "ms": 83016
+    },
+    {
+      "id": 190,
+      "file": "witness/acyclicWitness.ts",
+      "line": 121,
+      "operator": "INC",
+      "killedBy": "PB",
+      "detail": "P7: aerospace-n40-s141821407 stress step 3 only-first=[] only-second=[ACYC:dependOn|C6,C8,stn5]",
+      "ms": 83156
+    },
+    {
+      "id": 191,
+      "file": "witness/acyclicWitness.ts",
+      "line": 135,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "detail": "P4: aerospace-n53-s20260210 step 25 only-first=[] only-second=[ACYC:dependOn|new_741260554]",
+      "ms": 85382
+    },
+    {
+      "id": 192,
+      "file": "witness/acyclicWitness.ts",
+      "line": 136,
+      "operator": "INC",
+      "killedBy": "PB",
+      "detail": "P4: automotive-n84-s20260202 step 20 only-first=[] only-second=[ACYC:dependOn|C8]",
+      "ms": 83573
+    },
+    {
+      "id": 193,
+      "file": "witness/acyclicWitness.ts",
+      "line": 143,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 137179
+    },
+    {
+      "id": 194,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 139946
+    },
+    {
+      "id": 195,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 139603
+    },
+    {
+      "id": 196,
+      "file": "witness/acyclicWitness.ts",
+      "line": 155,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 136796
+    },
+    {
+      "id": 197,
+      "file": "witness/acyclicWitness.ts",
+      "line": 156,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 136246
+    },
+    {
+      "id": 198,
+      "file": "witness/acyclicWitness.ts",
+      "line": 157,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 307
+    },
+    {
+      "id": 199,
+      "file": "witness/acyclicWitness.ts",
+      "line": 157,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 311
+    },
+    {
+      "id": 200,
+      "file": "witness/acyclicWitness.ts",
+      "line": 162,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 309
+    },
+    {
+      "id": 201,
+      "file": "witness/acyclicWitness.ts",
+      "line": 162,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 296
+    },
+    {
+      "id": 202,
+      "file": "witness/acyclicWitness.ts",
+      "line": 168,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 134766
+    },
+    {
+      "id": 203,
+      "file": "witness/acyclicWitness.ts",
+      "line": 168,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 300
+    },
+    {
+      "id": 204,
+      "file": "witness/acyclicWitness.ts",
+      "line": 178,
+      "operator": "LCR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 134307
+    },
+    {
+      "id": 205,
+      "file": "witness/acyclicWitness.ts",
+      "line": 178,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0] batch-only=[]",
+      "ms": 233
+    },
+    {
+      "id": 206,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 137344
+    },
+    {
+      "id": 207,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 139077
+    },
+    {
+      "id": 208,
+      "file": "witness/acyclicWitness.ts",
+      "line": 187,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0,n1] batch-only=[]",
+      "ms": 301
+    },
+    {
+      "id": 209,
+      "file": "witness/acyclicWitness.ts",
+      "line": 187,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[ACYC:t|n0,n1] batch-only=[]",
+      "ms": 327
+    },
+    {
+      "id": 210,
+      "file": "witness/acyclicWitness.ts",
+      "line": 201,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 135829
+    },
+    {
+      "id": 211,
+      "file": "witness/traceWitness.ts",
+      "line": 38,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 243
+    },
+    {
+      "id": 212,
+      "file": "witness/traceWitness.ts",
+      "line": 38,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 218
+    },
+    {
+      "id": 213,
+      "file": "witness/traceWitness.ts",
+      "line": 43,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[TRACE:TP|n1] batch-only=[]",
+      "ms": 784
+    },
+    {
+      "id": 214,
+      "file": "witness/traceWitness.ts",
+      "line": 48,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 275
+    },
+    {
+      "id": 215,
+      "file": "witness/traceWitness.ts",
+      "line": 53,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'add')",
+      "ms": 261
+    },
+    {
+      "id": 216,
+      "file": "witness/traceWitness.ts",
+      "line": 72,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 215
+    },
+    {
+      "id": 217,
+      "file": "witness/traceWitness.ts",
+      "line": 72,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 228
+    },
+    {
+      "id": 218,
+      "file": "witness/traceWitness.ts",
+      "line": 78,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 236
+    },
+    {
+      "id": 219,
+      "file": "witness/traceWitness.ts",
+      "line": 81,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 134189
+    },
+    {
+      "id": 220,
+      "file": "witness/traceWitness.ts",
+      "line": 82,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180042
+    },
+    {
+      "id": 221,
+      "file": "witness/traceWitness.ts",
+      "line": 85,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[TRACE:TP|n1] batch-only=[]",
+      "ms": 983
+    },
+    {
+      "id": 222,
+      "file": "witness/traceWitness.ts",
+      "line": 85,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[TRACE:TP|n1]",
+      "ms": 885
+    },
+    {
+      "id": 223,
+      "file": "witness/traceWitness.ts",
+      "line": 87,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[TRACE:TP|n1] batch-only=[]",
+      "ms": 741
+    },
+    {
+      "id": 224,
+      "file": "witness/traceWitness.ts",
+      "line": 87,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "detail": "RangeError: Invalid array length",
+      "ms": 15982
+    },
+    {
+      "id": 225,
+      "file": "witness/traceWitness.ts",
+      "line": 99,
+      "operator": "ROR",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"nx\",\"type\":\"C\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x4\",\"type\":\"s\",\"src\":\"n0\",\"tgt\":\"nx\"}}] incremental-only=[TRACE:TP|nx] batch-only=[]",
+      "ms": 18972
+    },
+    {
+      "id": 226,
+      "file": "witness/traceWitness.ts",
+      "line": 99,
+      "operator": "LCR",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"nx\",\"type\":\"C\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x4\",\"type\":\"s\",\"src\":\"n0\",\"tgt\":\"nx\"}}] incremental-only=[TRACE:TP|nx] batch-only=[]",
+      "ms": 19166
+    },
+    {
+      "id": 227,
+      "file": "witness/traceWitness.ts",
+      "line": 99,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"nx\",\"type\":\"C\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x4\",\"type\":\"s\",\"src\":\"n0\",\"tgt\":\"nx\"}}] incremental-only=[TRACE:TP|nx] batch-only=[]",
+      "ms": 18675
+    },
+    {
+      "id": 228,
+      "file": "witness/traceWitness.ts",
+      "line": 101,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "detail": "P4: aerospace-n53-s20260201 step 3 only-first=[] only-second=[TRACE:FUN2REQ|new_508508034]",
+      "ms": 76971
+    },
+    {
+      "id": 229,
+      "file": "witness/traceWitness.ts",
+      "line": 104,
+      "operator": "NEG",
+      "killedBy": "R10-SES",
+      "detail": "S3 r10-zero sg-n1-t0-v0-0 step 0 changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":2}}}]: violations only-first=[] only-second=[TRACE:TP|n0]",
+      "ms": 79754
+    },
+    {
+      "id": 230,
+      "file": "witness/traceWitness.ts",
+      "line": 124,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 126208
+    },
+    {
+      "id": 231,
+      "file": "witness/traceWitness.ts",
+      "line": 125,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180043
+    },
+    {
+      "id": 232,
+      "file": "witness/traceWitness.ts",
+      "line": 128,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[TRACE:TP|n1]",
+      "ms": 834
+    },
+    {
+      "id": 233,
+      "file": "witness/traceWitness.ts",
+      "line": 128,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[TRACE:TP|n1]",
+      "ms": 861
+    },
+    {
+      "id": 234,
+      "file": "witness/traceWitness.ts",
+      "line": 130,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "RangeError: Invalid array length",
+      "ms": 18283
+    },
+    {
+      "id": 235,
+      "file": "witness/traceWitness.ts",
+      "line": 130,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "detail": "RangeError: Invalid array length",
+      "ms": 18147
+    },
+    {
+      "id": 236,
+      "file": "witness/traceWitness.ts",
+      "line": 142,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[TRACE:TP|n1]",
+      "ms": 774
+    },
+    {
+      "id": 237,
+      "file": "witness/traceWitness.ts",
+      "line": 142,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[TRACE:TP|n1]",
+      "ms": 740
+    },
+    {
+      "id": 238,
+      "file": "witness/traceWitness.ts",
+      "line": 146,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"nx\",\"type\":\"C\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x4\",\"type\":\"s\",\"src\":\"n0\",\"tgt\":\"nx\"}}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 18804
+    },
+    {
+      "id": 239,
+      "file": "witness/traceWitness.ts",
+      "line": 150,
+      "operator": "LCR",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"nx\",\"type\":\"C\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x4\",\"type\":\"s\",\"src\":\"n0\",\"tgt\":\"nx\"}}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 18328
+    },
+    {
+      "id": 240,
+      "file": "witness/traceWitness.ts",
+      "line": 150,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"nx\",\"type\":\"C\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x4\",\"type\":\"s\",\"src\":\"n0\",\"tgt\":\"nx\"}}] incremental-only=[TRACE:TP|n0] batch-only=[]",
+      "ms": 18512
+    },
+    {
+      "id": 241,
+      "file": "witness/traceWitness.ts",
+      "line": 163,
+      "operator": "ROR",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180039
+    },
+    {
+      "id": 242,
+      "file": "witness/traceWitness.ts",
+      "line": 163,
+      "operator": "CONST",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[TRACE:TP|n2]",
+      "ms": 3368
+    },
+    {
+      "id": 243,
+      "file": "witness/traceWitness.ts",
+      "line": 165,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[TRACE:TP|n2]",
+      "ms": 3307
+    },
+    {
+      "id": 244,
+      "file": "witness/traceWitness.ts",
+      "line": 165,
+      "operator": "STMT",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180036
+    },
+    {
+      "id": 245,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 118585
+    },
+    {
+      "id": 246,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 125387
+    },
+    {
+      "id": 247,
+      "file": "witness/traceWitness.ts",
+      "line": 177,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'tgt')",
+      "ms": 258
+    },
+    {
+      "id": 248,
+      "file": "witness/traceWitness.ts",
+      "line": 190,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[TRACE:TP|n1] batch-only=[]",
+      "ms": 771
+    },
+    {
+      "id": 249,
+      "file": "witness/traceWitness.ts",
+      "line": 190,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 127225
+    },
+    {
+      "id": 250,
+      "file": "witness/traceWitness.ts",
+      "line": 193,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[TRACE:TP|n1] batch-only=[]",
+      "ms": 748
+    },
+    {
+      "id": 251,
+      "file": "witness/traceWitness.ts",
+      "line": 193,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[TRACE:TP|n1]",
+      "ms": 797
+    },
+    {
+      "id": 252,
+      "file": "witness/traceWitness.ts",
+      "line": 194,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[TRACE:TP|n1] batch-only=[]",
+      "ms": 797
+    },
+    {
+      "id": 253,
+      "file": "witness/traceWitness.ts",
+      "line": 194,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[TRACE:TP|n1] batch-only=[]",
+      "ms": 777
+    },
+    {
+      "id": 254,
+      "file": "witness/traceWitness.ts",
+      "line": 199,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 128506
+    },
+    {
+      "id": 255,
+      "file": "witness/traceWitness.ts",
+      "line": 208,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[TRACE:TP|n1]",
+      "ms": 844
+    },
+    {
+      "id": 256,
+      "file": "witness/traceWitness.ts",
+      "line": 212,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[TRACE:TP|n1]",
+      "ms": 892
+    },
+    {
+      "id": 257,
+      "file": "witness/traceWitness.ts",
+      "line": 212,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] incremental-only=[] batch-only=[TRACE:TP|n1]",
+      "ms": 986
+    },
+    {
+      "id": 258,
+      "file": "witness/traceWitness.ts",
+      "line": 229,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[] batch-only=[TRACE:TP|n0]",
+      "ms": 384
+    },
+    {
+      "id": 259,
+      "file": "witness/traceWitness.ts",
+      "line": 229,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 131055
+    },
+    {
+      "id": 260,
+      "file": "witness/traceWitness.ts",
+      "line": 232,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 129896
+    },
+    {
+      "id": 261,
+      "file": "witness/traceWitness.ts",
+      "line": 241,
+      "operator": "LCR",
+      "killedBy": "R10-API",
+      "detail": "evidencePath(n3) threw TypeError: Cannot read properties of undefined (reading 'tgt') in api-tiny-0",
+      "ms": 128848
+    },
+    {
+      "id": 262,
+      "file": "witness/traceWitness.ts",
+      "line": 246,
+      "operator": "NEG",
+      "killedBy": "R10-API",
+      "detail": "evidencePath(n2) [\"e3\"] is not a r|s path to a C in api-tiny-13",
+      "ms": 131731
+    },
+    {
+      "id": 263,
+      "file": "witness/traceWitness.ts",
+      "line": 246,
+      "operator": "STMT",
+      "killedBy": "R10-API",
+      "detail": "evidencePath(n2) [\"e2\",\"e3\",\"e10\"] is not a r|s path to a C in api-r10-zero-9",
+      "ms": 131003
+    },
+    {
+      "id": 264,
+      "file": "witness/tarjan.ts",
+      "line": 30,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 258
+    },
+    {
+      "id": 265,
+      "file": "witness/tarjan.ts",
+      "line": 30,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 261
+    },
+    {
+      "id": 266,
+      "file": "witness/tarjan.ts",
+      "line": 30,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[ACYC:t|n0,n1] batch-only=[]",
+      "ms": 286
+    },
+    {
+      "id": 267,
+      "file": "witness/tarjan.ts",
+      "line": 31,
+      "operator": "LCR",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'has')",
+      "ms": 202
+    },
+    {
+      "id": 268,
+      "file": "witness/tarjan.ts",
+      "line": 31,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 314
+    },
+    {
+      "id": 269,
+      "file": "witness/tarjan.ts",
+      "line": 31,
+      "operator": "STMT",
+      "killedBy": "PB",
+      "detail": "P7: aerospace-n40-s141821407 stress step 8 only-first=[ACYC:dependOn|C6,C8,stn5] only-second=[]",
+      "ms": 80560
+    },
+    {
+      "id": 270,
+      "file": "witness/tarjan.ts",
+      "line": 38,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ACYC:t|n0]",
+      "ms": 196
+    },
+    {
+      "id": 271,
+      "file": "witness/tarjan.ts",
+      "line": 38,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[ACYC:t|n1] batch-only=[]",
+      "ms": 260
+    },
+    {
+      "id": 272,
+      "file": "witness/tarjan.ts",
+      "line": 43,
+      "operator": "INC",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 270
+    },
+    {
+      "id": 273,
+      "file": "witness/tarjan.ts",
+      "line": 50,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "detail": "P7: aerospace-n40-s141821407 stress step 17 only-first=[] only-second=[ACYC:dependOn|C0,stn43]",
+      "ms": 77365
+    },
+    {
+      "id": 274,
+      "file": "witness/tarjan.ts",
+      "line": 50,
+      "operator": "NEG",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180037
+    },
+    {
+      "id": 275,
+      "file": "witness/tarjan.ts",
+      "line": 51,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180064
+    },
+    {
+      "id": 276,
+      "file": "witness/tarjan.ts",
+      "line": 52,
+      "operator": "NEG",
+      "killedBy": "crash:load",
+      "detail": "",
+      "ms": 30361
+    },
+    {
+      "id": 277,
+      "file": "witness/tarjan.ts",
+      "line": 55,
+      "operator": "INC",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ACYC:t|n0,n1] reference-only=[]",
+      "ms": 2837
+    },
+    {
+      "id": 278,
+      "file": "witness/tarjan.ts",
+      "line": 59,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 268
+    },
+    {
+      "id": 279,
+      "file": "witness/tarjan.ts",
+      "line": 68,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ACYC:t|n0]",
+      "ms": 196
+    },
+    {
+      "id": 280,
+      "file": "witness/tarjan.ts",
+      "line": 68,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ACYC:t|n0]",
+      "ms": 194
+    },
+    {
+      "id": 281,
+      "file": "witness/tarjan.ts",
+      "line": 74,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ACYC:t|n0,] reference-only=[]",
+      "ms": 192
+    },
+    {
+      "id": 282,
+      "file": "witness/tarjan.ts",
+      "line": 74,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ACYC:t|n0,] reference-only=[]",
+      "ms": 196
+    },
+    {
+      "id": 283,
+      "file": "witness/tarjan.ts",
+      "line": 74,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "detail": "RangeError: Invalid array length",
+      "ms": 5035
+    },
+    {
+      "id": 284,
+      "file": "witness/tarjan.ts",
+      "line": 91,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ACYC:t|n0] reference-only=[]",
+      "ms": 195
+    },
+    {
+      "id": 285,
+      "file": "witness/tarjan.ts",
+      "line": 91,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ACYC:t|n0]",
+      "ms": 210
+    },
+    {
+      "id": 286,
+      "file": "witness/tarjan.ts",
+      "line": 91,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ACYC:t|n0] reference-only=[]",
+      "ms": 191
+    },
+    {
+      "id": 287,
+      "file": "witness/tarjan.ts",
+      "line": 91,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ACYC:t|n0] reference-only=[]",
+      "ms": 199
+    },
+    {
+      "id": 288,
+      "file": "witness/tarjan.ts",
+      "line": 91,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ACYC:t|n0]",
+      "ms": 201
+    },
+    {
+      "id": 289,
+      "file": "witness/tarjan.ts",
+      "line": 93,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ACYC:t|n0] reference-only=[]",
+      "ms": 189
+    },
+    {
+      "id": 290,
+      "file": "witness/tarjan.ts",
+      "line": 101,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ACYC:t|n0] reference-only=[]",
+      "ms": 202
+    },
+    {
+      "id": 291,
+      "file": "witness/tarjan.ts",
+      "line": 101,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ACYC:t|n0]",
+      "ms": 221
+    },
+    {
+      "id": 292,
+      "file": "witness/tarjan.ts",
+      "line": 101,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ACYC:t|n0] reference-only=[]",
+      "ms": 187
+    },
+    {
+      "id": 293,
+      "file": "witness/tarjan.ts",
+      "line": 101,
+      "operator": "CONST",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[] reference-only=[ACYC:t|n0,n1]",
+      "ms": 258
+    },
+    {
+      "id": 294,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 99375
+    },
+    {
+      "id": 295,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 136518
+    },
+    {
+      "id": 296,
+      "file": "catalog/rules.ts",
+      "line": 38,
+      "operator": "NEG",
+      "killedBy": "crash:R10-SES",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'viewType')",
+      "ms": 111083
+    },
+    {
+      "id": 297,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 137873
+    },
+    {
+      "id": 298,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "LCR",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-noview sg-n2-t0-v0-3 step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: scopeSize 1 expected 2",
+      "ms": 119318
+    },
+    {
+      "id": 299,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n2\",\"tgt\":\"n0\"}}] incremental-only=[VIEW:D|n0,n1] batch-only=[]",
+      "ms": 6268
+    },
+    {
+      "id": 300,
+      "file": "catalog/rules.ts",
+      "line": 69,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "detail": "P3: clean model aerospace-n53-s20260201 has 77 violations: DOM:Component.criticality|C0\nDOM:Component.criticality|C1\nDOM:Component.criticality|C10\nDOM:Component.criticality|C11\nDOM:Component.criticality|C",
+      "ms": 84173
+    },
+    {
+      "id": 301,
+      "file": "catalog/rules.ts",
+      "line": 69,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "detail": "P3: clean model aerospace-n53-s20260201 has 77 violations: DOM:Component.criticality|C0\nDOM:Component.criticality|C1\nDOM:Component.criticality|C10\nDOM:Component.criticality|C11\nDOM:Component.criticality|C",
+      "ms": 83902
+    },
+    {
+      "id": 302,
+      "file": "catalog/rules.ts",
+      "line": 69,
+      "operator": "BOOL",
+      "killedBy": null,
+      "detail": "",
+      "ms": 139252
+    },
+    {
+      "id": 303,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "detail": "P3: clean model aerospace-n53-s20260201 has 13 violations: DOM:Component.mass|C0\nDOM:Component.mass|C1\nDOM:Component.mass|C10\nDOM:Component.mass|C11\nDOM:Component.mass|C12\nDOM:Component.mass|C2\nDOM:Compon",
+      "ms": 82306
+    },
+    {
+      "id": 304,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 133904
+    },
+    {
+      "id": 305,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 134227
+    },
+    {
+      "id": 306,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 134996
+    },
+    {
+      "id": 307,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 133671
+    },
+    {
+      "id": 308,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "detail": "P3: clean model aerospace-n53-s20260201 has 24 violations: DOM:Component.name|C0\nDOM:Component.name|C1\nDOM:Component.name|C10\nDOM:Component.name|C11\nDOM:Component.name|C12\nDOM:Component.name|C2\nDOM:Compon",
+      "ms": 80843
+    },
+    {
+      "id": 309,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 137511
+    },
+    {
+      "id": 310,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "LCR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 135884
+    },
+    {
+      "id": 311,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "CONST",
+      "killedBy": null,
+      "detail": "",
+      "ms": 138241
+    },
+    {
+      "id": 312,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "ROR",
+      "killedBy": null,
+      "detail": "",
+      "ms": 136689
+    },
+    {
+      "id": 313,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 134756
+    },
+    {
+      "id": 314,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "BOOL",
+      "killedBy": null,
+      "detail": "",
+      "ms": 135447
+    },
+    {
+      "id": 315,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 135530
+    },
+    {
+      "id": 316,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "BOOL",
+      "killedBy": null,
+      "detail": "",
+      "ms": 132139
+    },
+    {
+      "id": 317,
+      "file": "catalog/rules.ts",
+      "line": 104,
+      "operator": "BOOL",
+      "killedBy": null,
+      "detail": "",
+      "ms": 130670
+    },
+    {
+      "id": 318,
+      "file": "catalog/rules.ts",
+      "line": 109,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem1: engine-only=[ATTR:A.p|n0 ISO:A|n0 TRACE:TP|n0] reference-only=[ATTR:A.p|n0 ISO:A|n0 TRACE:TP|n0]",
+      "ms": 188
+    },
+    {
+      "id": 319,
+      "file": "model/graph.ts",
+      "line": 40,
+      "operator": "NEG",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\",\"type",
+      "ms": 82962
+    },
+    {
+      "id": 320,
+      "file": "model/graph.ts",
+      "line": 46,
+      "operator": "NEG",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\",\"type",
+      "ms": 81692
+    },
+    {
+      "id": 321,
+      "file": "model/graph.ts",
+      "line": 49,
+      "operator": "ROR",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\",\"type",
+      "ms": 82427
+    },
+    {
+      "id": 322,
+      "file": "model/graph.ts",
+      "line": 49,
+      "operator": "NEG",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\",\"type",
+      "ms": 84183
+    },
+    {
+      "id": 323,
+      "file": "model/graph.ts",
+      "line": 49,
+      "operator": "CONST",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\",\"type",
+      "ms": 85393
+    },
+    {
+      "id": 324,
+      "file": "model/graph.ts",
+      "line": 51,
+      "operator": "STMT",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\",\"type",
+      "ms": 83780
+    },
+    {
+      "id": 325,
+      "file": "model/graph.ts",
+      "line": 53,
+      "operator": "ROR",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\",\"type",
+      "ms": 83487
+    },
+    {
+      "id": 326,
+      "file": "model/graph.ts",
+      "line": 53,
+      "operator": "NEG",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\",\"type",
+      "ms": 83371
+    },
+    {
+      "id": 327,
+      "file": "model/graph.ts",
+      "line": 53,
+      "operator": "INC",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in4\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n1\",\"tgt\":\"n1\"},{\"id\":\"e2\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"",
+      "ms": 83908
+    },
+    {
+      "id": 328,
+      "file": "model/graph.ts",
+      "line": 55,
+      "operator": "ROR",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\",\"type",
+      "ms": 83365
+    },
+    {
+      "id": 329,
+      "file": "model/graph.ts",
+      "line": 55,
+      "operator": "NEG",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\",\"type",
+      "ms": 83408
+    },
+    {
+      "id": 330,
+      "file": "model/graph.ts",
+      "line": 55,
+      "operator": "CONST",
+      "killedBy": "R10-IN",
+      "detail": "checkModelInput(contain) {\"id\":\"in4\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n1\",\"tgt\":\"n1\"},{\"id\":\"e2\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"",
+      "ms": 84937
+    },
+    {
+      "id": 331,
+      "file": "model/graph.ts",
+      "line": 76,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "Error: invalid model input: duplicateNodeId(n0)",
+      "ms": 193
+    },
+    {
+      "id": 332,
+      "file": "model/graph.ts",
+      "line": 78,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 133834
+    },
+    {
+      "id": 333,
+      "file": "model/graph.ts",
+      "line": 87,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "Error: invalid model input: duplicateEdgeId(e0)",
+      "ms": 207
+    },
+    {
+      "id": 334,
+      "file": "model/graph.ts",
+      "line": 89,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 135176
+    },
+    {
+      "id": 335,
+      "file": "model/graph.ts",
+      "line": 94,
+      "operator": "LCR",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":false}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4",
+      "ms": 82577
+    },
+    {
+      "id": 336,
+      "file": "model/graph.ts",
+      "line": 94,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "changeApplication: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] edge count 0 vs 1",
+      "ms": 194
+    },
+    {
+      "id": 337,
+      "file": "model/graph.ts",
+      "line": 96,
+      "operator": "STMT",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":false}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4",
+      "ms": 81966
+    },
+    {
+      "id": 338,
+      "file": "model/graph.ts",
+      "line": 102,
+      "operator": "ROR",
+      "killedBy": "crash:BE-base",
+      "detail": "Error: invalid model input: ",
+      "ms": 201
+    },
+    {
+      "id": 339,
+      "file": "model/graph.ts",
+      "line": 102,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "Error: invalid model input: ",
+      "ms": 190
+    },
+    {
+      "id": 340,
+      "file": "model/graph.ts",
+      "line": 102,
+      "operator": "CONST",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":false}) {\"id\":\"in5\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}},{\"id\":\"n2\",\"type\":\"A\",\"attrs\":{\"p\":2}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":3}}],\"edges\":[{\"id\":\"e0\",\"type\":\"own\",\"src\":\"ghost\",\"tgt\":\"n1\"},{\"id\":\"e1\",\"type\":\"contain\",\"sr",
+      "ms": 79930
+    },
+    {
+      "id": 341,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "ROR",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":false}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4",
+      "ms": 79500
+    },
+    {
+      "id": 342,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "ROR",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"policy\":\"reject\",\"withReport\":false}) {\"id\":\"in2\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":",
+      "ms": 73722
+    },
+    {
+      "id": 343,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "LCR",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":false}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4",
+      "ms": 71798
+    },
+    {
+      "id": 344,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "Error: invalid model input: ",
+      "ms": 187
+    },
+    {
+      "id": 345,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "CONST",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"policy\":\"reject\",\"withReport\":false}) {\"id\":\"in8\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}}],\"edges\":[{\"id\":\"e0\",\"type\":\"r\",\"src\":\"n1\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"own\",\"src\":\"n0\",\"tgt\":\"n1\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n1\",\"tgt\":\"n0\"},{\"id",
+      "ms": 71512
+    },
+    {
+      "id": 346,
+      "file": "model/graph.ts",
+      "line": 104,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'push')",
+      "ms": 187
+    },
+    {
+      "id": 347,
+      "file": "model/graph.ts",
+      "line": 108,
+      "operator": "ROR",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":true}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\"",
+      "ms": 82316
+    },
+    {
+      "id": 348,
+      "file": "model/graph.ts",
+      "line": 108,
+      "operator": "NEG",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":true}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\"",
+      "ms": 83468
+    },
+    {
+      "id": 349,
+      "file": "model/graph.ts",
+      "line": 108,
+      "operator": "INC",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":true}) {\"id\":\"in4\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n1\",\"tgt\":\"n1\"},{\"id\":\"e2\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"t",
+      "ms": 83720
+    },
+    {
+      "id": 350,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "ROR",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":true}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\"",
+      "ms": 85204
+    },
+    {
+      "id": 351,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "NEG",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":true}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e2\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"},{\"id\":\"e4\"",
+      "ms": 82490
+    },
+    {
+      "id": 352,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "CONST",
+      "killedBy": "R10-IN",
+      "detail": "normalize({\"withReport\":true}) {\"id\":\"in4\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"type\":\"r\",\"src\":\"n1\",\"tgt\":\"n1\"},{\"id\":\"e2\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e3\",\"t",
+      "ms": 82198
+    },
+    {
+      "id": 353,
+      "file": "model/graph.ts",
+      "line": 135,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'tgt')",
+      "ms": 196
+    },
+    {
+      "id": 354,
+      "file": "model/graph.ts",
+      "line": 137,
+      "operator": "ROR",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'tgt')",
+      "ms": 189
+    },
+    {
+      "id": 355,
+      "file": "model/graph.ts",
+      "line": 137,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'tgt')",
+      "ms": 214
+    },
+    {
+      "id": 356,
+      "file": "model/graph.ts",
+      "line": 137,
+      "operator": "CONST",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'tgt')",
+      "ms": 207
+    },
+    {
+      "id": 357,
+      "file": "model/graph.ts",
+      "line": 142,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "changeApplication: changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"C\",\"attrs\":{\"p\":1}}}] adjacency of n0",
+      "ms": 19620
+    },
+    {
+      "id": 358,
+      "file": "model/graph.ts",
+      "line": 143,
+      "operator": "NEG",
+      "killedBy": "crash:BE-ext",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'push')",
+      "ms": 19596
+    },
+    {
+      "id": 359,
+      "file": "model/graph.ts",
+      "line": 153,
+      "operator": "LCR",
+      "killedBy": "crash:PB",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'push')",
+      "ms": 81496
+    },
+    {
+      "id": 360,
+      "file": "model/graph.ts",
+      "line": 153,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "changeApplication: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] edge count 0 vs 1",
+      "ms": 315
+    },
+    {
+      "id": 361,
+      "file": "model/graph.ts",
+      "line": 153,
+      "operator": "BOOL",
+      "killedBy": "R10-API",
+      "detail": "applyChanges support tiny api-tiny-0 step 1 changes=[{\"kind\":\"delNode\",\"id\":\"n2\"},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f0\",\"type\":\"r\",\"src\":\"n4\",\"tgt\":\"n2\"}},{\"kind\":\"addNode\",\"node\":{\"id\":\"n2\",\"type\":\"D\",\"attrs\":{}}},{\"kind\":\"setAttr\",\"id\":\"n2\",\"attr\":\"p\",\"value\":\"\"}]: only-first=[f0 n4] only-second=[]",
+      "ms": 134089
+    },
+    {
+      "id": 362,
+      "file": "model/graph.ts",
+      "line": 154,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "changeApplication: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] edge count 0 vs 1",
+      "ms": 285
+    },
+    {
+      "id": 363,
+      "file": "model/graph.ts",
+      "line": 154,
+      "operator": "BOOL",
+      "killedBy": "R10-SES",
+      "detail": "S3 r10-zero sg-n2-t2-v0-0 step 0 changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"e0\",\"type\":\"s\",\"src\":\"n1\",\"tgt\":\"n0\"}}]: violations only-first=[] only-second=[TRACE:TP|n1]",
+      "ms": 88706
+    },
+    {
+      "id": 364,
+      "file": "model/graph.ts",
+      "line": 158,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n1\",\"tgt\":\"n0\"}}] incremental-only=[] batch-only=[ACYC:t|n0,n1]",
+      "ms": 309
+    },
+    {
+      "id": 365,
+      "file": "model/graph.ts",
+      "line": 163,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "changeApplication: changes=[{\"kind\":\"delEdge\",\"id\":\"e0\"}] edge count 1 vs 0",
+      "ms": 197
+    },
+    {
+      "id": 366,
+      "file": "model/graph.ts",
+      "line": 171,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "detail": "changeApplication: changes=[{\"kind\":\"delNode\",\"id\":\"n0\"}] node count 1 vs 0",
+      "ms": 20249
+    },
+    {
+      "id": 367,
+      "file": "model/graph.ts",
+      "line": 180,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "changeApplication: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] node n0",
+      "ms": 210
+    },
+    {
+      "id": 368,
+      "file": "model/graph.ts",
+      "line": 181,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "detail": "changeApplication: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] node n0",
+      "ms": 216
+    },
+    {
+      "id": 369,
+      "file": "model/graph.ts",
+      "line": 181,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "changeApplication: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] node n0",
+      "ms": 206
+    },
+    {
+      "id": 370,
+      "file": "model/graph.ts",
+      "line": 193,
+      "operator": "STMT",
+      "killedBy": "R10-API",
+      "detail": "applyChanges support tiny api-tiny-0 step 1 changes=[{\"kind\":\"delNode\",\"id\":\"n2\"},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f0\",\"type\":\"r\",\"src\":\"n4\",\"tgt\":\"n2\"}},{\"kind\":\"addNode\",\"node\":{\"id\":\"n2\",\"type\":\"D\",\"attrs\":{}}},{\"kind\":\"setAttr\",\"id\":\"n2\",\"attr\":\"p\",\"value\":\"\"}]: only-first=[] only-second=[]",
+      "ms": 135531
+    },
+    {
+      "id": 371,
+      "file": "model/graph.ts",
+      "line": 197,
+      "operator": "NEG",
+      "killedBy": "R10-API",
+      "detail": "applyChanges support tiny api-tiny-0 step 1 changes=[{\"kind\":\"delNode\",\"id\":\"n2\"},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f0\",\"type\":\"r\",\"src\":\"n4\",\"tgt\":\"n2\"}},{\"kind\":\"addNode\",\"node\":{\"id\":\"n2\",\"type\":\"D\",\"attrs\":{}}},{\"kind\":\"setAttr\",\"id\":\"n2\",\"attr\":\"p\",\"value\":\"\"}]: only-first=[] only-second=[e1 n5]",
+      "ms": 135021
+    },
+    {
+      "id": 372,
+      "file": "model/graph.ts",
+      "line": 201,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 136482
+    },
+    {
+      "id": 373,
+      "file": "model/graph.ts",
+      "line": 206,
+      "operator": "STMT",
+      "killedBy": "crash:PB",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'src')",
+      "ms": 83072
+    },
+    {
+      "id": 374,
+      "file": "model/graph.ts",
+      "line": 208,
+      "operator": "NEG",
+      "killedBy": "R10-API",
+      "detail": "applyChanges support tiny api-tiny-0 step 1 changes=[{\"kind\":\"delNode\",\"id\":\"n2\"},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f0\",\"type\":\"r\",\"src\":\"n4\",\"tgt\":\"n2\"}},{\"kind\":\"addNode\",\"node\":{\"id\":\"n2\",\"type\":\"D\",\"attrs\":{}}},{\"kind\":\"setAttr\",\"id\":\"n2\",\"attr\":\"p\",\"value\":\"\"}]: only-first=[f0 n4] only-second=[]",
+      "ms": 135306
+    },
+    {
+      "id": 375,
+      "file": "model/graph.ts",
+      "line": 209,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 137424
+    },
+    {
+      "id": 376,
+      "file": "model/graph.ts",
+      "line": 212,
+      "operator": "NEG",
+      "killedBy": "crash:INV",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'id')",
+      "ms": 81591
+    },
+    {
+      "id": 377,
+      "file": "model/graph.ts",
+      "line": 214,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 132610
+    },
+    {
+      "id": 378,
+      "file": "model/graph.ts",
+      "line": 228,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 134909
+    },
+    {
+      "id": 379,
+      "file": "model/graph.ts",
+      "line": 233,
+      "operator": "NEG",
+      "killedBy": null,
+      "detail": "",
+      "ms": 136217
+    },
+    {
+      "id": 380,
+      "file": "model/graph.ts",
+      "line": 238,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 132136
+    },
+    {
+      "id": 381,
+      "file": "model/graph.ts",
+      "line": 241,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "detail": "TypeError: Cannot read properties of undefined (reading 'src')",
+      "ms": 229
+    },
+    {
+      "id": 382,
+      "file": "model/graph.ts",
+      "line": 245,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 134957
+    },
+    {
+      "id": 383,
+      "file": "model/graph.ts",
+      "line": 248,
+      "operator": "NEG",
+      "killedBy": "R10-SES",
+      "detail": "S1 step 0 threw TypeError: Cannot read properties of undefined (reading 'src') changes=[{\"kind\":\"delNode\",\"id\":\"no-such-node\"},{\"kind\":\"setAttr\",\"id\":\"no-such-node\",\"attr\":\"p\",\"value\":1},{\"kind\":\"delEdge\",\"id\":\"no-such-edge\"}]",
+      "ms": 80644
+    },
+    {
+      "id": 384,
+      "file": "model/graph.ts",
+      "line": 252,
+      "operator": "STMT",
+      "killedBy": null,
+      "detail": "",
+      "ms": 133702
+    },
+    {
+      "id": 385,
+      "file": "model/graph.ts",
+      "line": 267,
+      "operator": "LCR",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"g1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"}}]: scopeSize 2 expected 1",
+      "ms": 81559
+    },
+    {
+      "id": 386,
+      "file": "model/graph.ts",
+      "line": 267,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}] incremental-only=[ATTR:A.p|n0] batch-only=[DOM:A.p|n0]",
+      "ms": 193
+    },
+    {
+      "id": 387,
+      "file": "model/graph.ts",
+      "line": 272,
+      "operator": "ROR",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-zero rs-r10-zero-0 step 9 changes=[{\"kind\":\"setAttr\",\"id\":\"n6\",\"attr\":\"p\"}]: scopeSize 4 expected 3",
+      "ms": 133067
+    },
+    {
+      "id": 388,
+      "file": "model/graph.ts",
+      "line": 272,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "detail": "",
+      "ms": 180043
+    },
+    {
+      "id": 389,
+      "file": "model/graph.ts",
+      "line": 277,
+      "operator": "NEG",
+      "killedBy": "R10-SES",
+      "detail": "S1 r10-zero sg-n2-t0-v0-3 step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: scopeSize 1 expected 2",
+      "ms": 79204
+    },
+    {
+      "id": 390,
+      "file": "model/graph.ts",
+      "line": 284,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "detail": "theorem4and6: changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x0\",\"type\":\"t\",\"src\":\"n2\",\"tgt\":\"n0\"}}] incremental-only=[VIEW:D|n0,n1] batch-only=[]",
+      "ms": 6382
+    }
+  ],
+  "elapsedMs": 6837551
+}

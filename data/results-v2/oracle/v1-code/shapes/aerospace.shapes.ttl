@@ -1,0 +1,147 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix o: <urn:oracle:> .
+
+<urn:oracle:shape:TYPE%3Asatisfy> a sh:NodeShape ; sh:targetClass <urn:oracle:edgetype:satisfy> ;
+  sh:property <urn:oracle:shape:TYPE%3Asatisfy/src> , <urn:oracle:shape:TYPE%3Asatisfy/tgt> .
+<urn:oracle:shape:TYPE%3Asatisfy/src> a sh:PropertyShape ; sh:path o:src ; sh:or ( [ sh:class <urn:oracle:type:Component> ] ) .
+<urn:oracle:shape:TYPE%3Asatisfy/tgt> a sh:PropertyShape ; sh:path o:tgt ; sh:or ( [ sh:class <urn:oracle:type:Requirement> ] ) .
+
+<urn:oracle:shape:TYPE%3Averify> a sh:NodeShape ; sh:targetClass <urn:oracle:edgetype:verify> ;
+  sh:property <urn:oracle:shape:TYPE%3Averify/src> , <urn:oracle:shape:TYPE%3Averify/tgt> .
+<urn:oracle:shape:TYPE%3Averify/src> a sh:PropertyShape ; sh:path o:src ; sh:or ( [ sh:class <urn:oracle:type:VerificationCase> ] ) .
+<urn:oracle:shape:TYPE%3Averify/tgt> a sh:PropertyShape ; sh:path o:tgt ; sh:or ( [ sh:class <urn:oracle:type:Requirement> ] ) .
+
+<urn:oracle:shape:TYPE%3Aallocate> a sh:NodeShape ; sh:targetClass <urn:oracle:edgetype:allocate> ;
+  sh:property <urn:oracle:shape:TYPE%3Aallocate/src> , <urn:oracle:shape:TYPE%3Aallocate/tgt> .
+<urn:oracle:shape:TYPE%3Aallocate/src> a sh:PropertyShape ; sh:path o:src ; sh:or ( [ sh:class <urn:oracle:type:Function> ] ) .
+<urn:oracle:shape:TYPE%3Aallocate/tgt> a sh:PropertyShape ; sh:path o:tgt ; sh:or ( [ sh:class <urn:oracle:type:Component> ] ) .
+
+<urn:oracle:shape:TYPE%3Aconnect> a sh:NodeShape ; sh:targetClass <urn:oracle:edgetype:connect> ;
+  sh:property <urn:oracle:shape:TYPE%3Aconnect/src> , <urn:oracle:shape:TYPE%3Aconnect/tgt> .
+<urn:oracle:shape:TYPE%3Aconnect/src> a sh:PropertyShape ; sh:path o:src ; sh:or ( [ sh:class <urn:oracle:type:Port> ] ) .
+<urn:oracle:shape:TYPE%3Aconnect/tgt> a sh:PropertyShape ; sh:path o:tgt ; sh:or ( [ sh:class <urn:oracle:type:Port> ] ) .
+
+<urn:oracle:shape:TYPE%3Acontain> a sh:NodeShape ; sh:targetClass <urn:oracle:edgetype:contain> ;
+  sh:property <urn:oracle:shape:TYPE%3Acontain/src> , <urn:oracle:shape:TYPE%3Acontain/tgt> .
+<urn:oracle:shape:TYPE%3Acontain/src> a sh:PropertyShape ; sh:path o:src ; sh:or ( [ sh:class <urn:oracle:type:Component> ] ) .
+<urn:oracle:shape:TYPE%3Acontain/tgt> a sh:PropertyShape ; sh:path o:tgt ; sh:or ( [ sh:class <urn:oracle:type:Component> ] [ sh:class <urn:oracle:type:Port> ] ) .
+
+<urn:oracle:shape:TYPE%3AdependOn> a sh:NodeShape ; sh:targetClass <urn:oracle:edgetype:dependOn> ;
+  sh:property <urn:oracle:shape:TYPE%3AdependOn/src> , <urn:oracle:shape:TYPE%3AdependOn/tgt> .
+<urn:oracle:shape:TYPE%3AdependOn/src> a sh:PropertyShape ; sh:path o:src ; sh:or ( [ sh:class <urn:oracle:type:Component> ] ) .
+<urn:oracle:shape:TYPE%3AdependOn/tgt> a sh:PropertyShape ; sh:path o:tgt ; sh:or ( [ sh:class <urn:oracle:type:Component> ] ) .
+
+<urn:oracle:shape:TYPE%3Aexpose> a sh:NodeShape ; sh:targetClass <urn:oracle:edgetype:expose> ;
+  sh:property <urn:oracle:shape:TYPE%3Aexpose/src> , <urn:oracle:shape:TYPE%3Aexpose/tgt> .
+<urn:oracle:shape:TYPE%3Aexpose/src> a sh:PropertyShape ; sh:path o:src ; sh:or ( [ sh:class <urn:oracle:type:View> ] ) .
+<urn:oracle:shape:TYPE%3Aexpose/tgt> a sh:PropertyShape ; sh:path o:tgt ; sh:or ( [ sh:class <urn:oracle:type:Component> ] [ sh:class <urn:oracle:type:Port> ] ) .
+
+<urn:oracle:shape:TYPE%3Asubject> a sh:NodeShape ; sh:targetClass <urn:oracle:edgetype:subject> ;
+  sh:property <urn:oracle:shape:TYPE%3Asubject/src> , <urn:oracle:shape:TYPE%3Asubject/tgt> .
+<urn:oracle:shape:TYPE%3Asubject/src> a sh:PropertyShape ; sh:path o:src ; sh:or ( [ sh:class <urn:oracle:type:View> ] ) .
+<urn:oracle:shape:TYPE%3Asubject/tgt> a sh:PropertyShape ; sh:path o:tgt ; sh:or ( [ sh:class <urn:oracle:type:Component> ] ) .
+
+<urn:oracle:shape:REQ%3ARequirement.name> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Requirement> ; sh:property <urn:oracle:shape:REQ%3ARequirement.name/p> .
+<urn:oracle:shape:REQ%3ARequirement.name/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:name> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3ARequirement.priority> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Requirement> ; sh:property <urn:oracle:shape:REQ%3ARequirement.priority/p> .
+<urn:oracle:shape:REQ%3ARequirement.priority/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:priority> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3AFunction.name> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Function> ; sh:property <urn:oracle:shape:REQ%3AFunction.name/p> .
+<urn:oracle:shape:REQ%3AFunction.name/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:name> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3AComponent.name> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Component> ; sh:property <urn:oracle:shape:REQ%3AComponent.name/p> .
+<urn:oracle:shape:REQ%3AComponent.name/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:name> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3AComponent.criticality> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Component> ; sh:property <urn:oracle:shape:REQ%3AComponent.criticality/p> .
+<urn:oracle:shape:REQ%3AComponent.criticality/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:criticality> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3AComponent.mass> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Component> ; sh:property <urn:oracle:shape:REQ%3AComponent.mass/p> .
+<urn:oracle:shape:REQ%3AComponent.mass/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:mass> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3AInterface.name> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Interface> ; sh:property <urn:oracle:shape:REQ%3AInterface.name/p> .
+<urn:oracle:shape:REQ%3AInterface.name/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:name> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3APort.name> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Port> ; sh:property <urn:oracle:shape:REQ%3APort.name/p> .
+<urn:oracle:shape:REQ%3APort.name/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:name> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3APort.direction> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Port> ; sh:property <urn:oracle:shape:REQ%3APort.direction/p> .
+<urn:oracle:shape:REQ%3APort.direction/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:direction> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3AVerificationCase.name> a sh:NodeShape ; sh:targetClass <urn:oracle:type:VerificationCase> ; sh:property <urn:oracle:shape:REQ%3AVerificationCase.name/p> .
+<urn:oracle:shape:REQ%3AVerificationCase.name/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:name> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3AVerificationCase.method> a sh:NodeShape ; sh:targetClass <urn:oracle:type:VerificationCase> ; sh:property <urn:oracle:shape:REQ%3AVerificationCase.method/p> .
+<urn:oracle:shape:REQ%3AVerificationCase.method/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:method> ; sh:minCount 1 .
+
+<urn:oracle:shape:REQ%3AView.name> a sh:NodeShape ; sh:targetClass <urn:oracle:type:View> ; sh:property <urn:oracle:shape:REQ%3AView.name/p> .
+<urn:oracle:shape:REQ%3AView.name/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:name> ; sh:minCount 1 .
+
+<urn:oracle:shape:DOM%3AComponent.criticality> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Component> ; sh:property <urn:oracle:shape:DOM%3AComponent.criticality/p> .
+<urn:oracle:shape:DOM%3AComponent.criticality/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:criticality> ; sh:in ( "A" "B" "C" "D" ) .
+
+<urn:oracle:shape:DOM%3AComponent.mass> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Component> ; sh:property <urn:oracle:shape:DOM%3AComponent.mass/p> .
+<urn:oracle:shape:DOM%3AComponent.mass/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:mass> ; sh:or ( [ sh:datatype xsd:integer ] [ sh:datatype xsd:decimal ] [ sh:datatype xsd:double ] ) ; sh:minInclusive "0"^^xsd:integer ; sh:maxInclusive "10000"^^xsd:integer .
+
+<urn:oracle:shape:DOM%3ARequirement.priority> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Requirement> ; sh:property <urn:oracle:shape:DOM%3ARequirement.priority/p> .
+<urn:oracle:shape:DOM%3ARequirement.priority/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:priority> ; sh:in ( "high" "medium" "low" ) .
+
+<urn:oracle:shape:DOM%3APort.direction> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Port> ; sh:property <urn:oracle:shape:DOM%3APort.direction/p> .
+<urn:oracle:shape:DOM%3APort.direction/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:direction> ; sh:in ( "in" "out" ) .
+
+<urn:oracle:shape:DOM%3AVerificationCase.method> a sh:NodeShape ; sh:targetClass <urn:oracle:type:VerificationCase> ; sh:property <urn:oracle:shape:DOM%3AVerificationCase.method/p> .
+<urn:oracle:shape:DOM%3AVerificationCase.method/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:method> ; sh:in ( "test" "analysis" "inspection" "demonstration" ) .
+
+<urn:oracle:shape:DOM%3AComponent.name> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Component> ; sh:property <urn:oracle:shape:DOM%3AComponent.name/p> .
+<urn:oracle:shape:DOM%3AComponent.name/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:name> ; sh:datatype xsd:string ; sh:minLength 1 .
+
+<urn:oracle:shape:DOM%3ARequirement.name> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Requirement> ; sh:property <urn:oracle:shape:DOM%3ARequirement.name/p> .
+<urn:oracle:shape:DOM%3ARequirement.name/p> a sh:PropertyShape ; sh:path <urn:oracle:attr:name> ; sh:datatype xsd:string ; sh:minLength 1 .
+
+<urn:oracle:shape:MULT%3ARequirement%7Csatisfy%7Cin> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Requirement> ; sh:property <urn:oracle:shape:MULT%3ARequirement%7Csatisfy%7Cin/p> .
+<urn:oracle:shape:MULT%3ARequirement%7Csatisfy%7Cin/p> a sh:PropertyShape ; sh:path [ sh:inversePath o:tgt ] ;
+  sh:qualifiedValueShape [ sh:class <urn:oracle:edgetype:satisfy> ] ; sh:qualifiedMinCount 1 .
+
+<urn:oracle:shape:MULT%3ARequirement%7Cverify%7Cin> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Requirement> ; sh:property <urn:oracle:shape:MULT%3ARequirement%7Cverify%7Cin/p> .
+<urn:oracle:shape:MULT%3ARequirement%7Cverify%7Cin/p> a sh:PropertyShape ; sh:path [ sh:inversePath o:tgt ] ;
+  sh:qualifiedValueShape [ sh:class <urn:oracle:edgetype:verify> ] ; sh:qualifiedMinCount 1 .
+
+<urn:oracle:shape:MULT%3AFunction%7Callocate%7Cout> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Function> ; sh:property <urn:oracle:shape:MULT%3AFunction%7Callocate%7Cout/p> .
+<urn:oracle:shape:MULT%3AFunction%7Callocate%7Cout/p> a sh:PropertyShape ; sh:path [ sh:inversePath o:src ] ;
+  sh:qualifiedValueShape [ sh:class <urn:oracle:edgetype:allocate> ] ; sh:qualifiedMinCount 1 ; sh:qualifiedMaxCount 1 .
+
+<urn:oracle:shape:MULT%3APort%7Ccontain%7Cin> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Port> ; sh:property <urn:oracle:shape:MULT%3APort%7Ccontain%7Cin/p> .
+<urn:oracle:shape:MULT%3APort%7Ccontain%7Cin/p> a sh:PropertyShape ; sh:path [ sh:inversePath o:tgt ] ;
+  sh:qualifiedValueShape [ sh:class <urn:oracle:edgetype:contain> ] ; sh:qualifiedMinCount 1 ; sh:qualifiedMaxCount 1 .
+
+<urn:oracle:shape:MULT%3AView%7Csubject%7Cout> a sh:NodeShape ; sh:targetClass <urn:oracle:type:View> ; sh:property <urn:oracle:shape:MULT%3AView%7Csubject%7Cout/p> .
+<urn:oracle:shape:MULT%3AView%7Csubject%7Cout/p> a sh:PropertyShape ; sh:path [ sh:inversePath o:src ] ;
+  sh:qualifiedValueShape [ sh:class <urn:oracle:edgetype:subject> ] ; sh:qualifiedMinCount 1 ; sh:qualifiedMaxCount 1 .
+
+<urn:oracle:shape:ISO%3ARequirement> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Requirement> ;
+  sh:or ( [ sh:path [ sh:inversePath o:src ] ; sh:minCount 1 ] [ sh:path [ sh:inversePath o:tgt ] ; sh:minCount 1 ] ) .
+
+<urn:oracle:shape:ISO%3AFunction> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Function> ;
+  sh:or ( [ sh:path [ sh:inversePath o:src ] ; sh:minCount 1 ] [ sh:path [ sh:inversePath o:tgt ] ; sh:minCount 1 ] ) .
+
+<urn:oracle:shape:ISO%3AComponent> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Component> ;
+  sh:or ( [ sh:path [ sh:inversePath o:src ] ; sh:minCount 1 ] [ sh:path [ sh:inversePath o:tgt ] ; sh:minCount 1 ] ) .
+
+<urn:oracle:shape:ISO%3AInterface> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Interface> ;
+  sh:or ( [ sh:path [ sh:inversePath o:src ] ; sh:minCount 1 ] [ sh:path [ sh:inversePath o:tgt ] ; sh:minCount 1 ] ) .
+
+<urn:oracle:shape:ISO%3APort> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Port> ;
+  sh:or ( [ sh:path [ sh:inversePath o:src ] ; sh:minCount 1 ] [ sh:path [ sh:inversePath o:tgt ] ; sh:minCount 1 ] ) .
+
+<urn:oracle:shape:ISO%3AVerificationCase> a sh:NodeShape ; sh:targetClass <urn:oracle:type:VerificationCase> ;
+  sh:or ( [ sh:path [ sh:inversePath o:src ] ; sh:minCount 1 ] [ sh:path [ sh:inversePath o:tgt ] ; sh:minCount 1 ] ) .
+
+<urn:oracle:shape:VIEW%3AView> a sh:NodeShape ; sh:targetClass <urn:oracle:type:View> ;
+  sh:sparql [ a sh:SPARQLConstraint ; sh:select "SELECT $this ?value WHERE { $this <urn:oracle:rel:expose> ?value . FILTER NOT EXISTS { $this <urn:oracle:rel:subject> ?value } FILTER NOT EXISTS { $this <urn:oracle:rel:subject> ?s . ?s <urn:oracle:rel:contain> ?value } }" ] .
+
+<urn:oracle:shape:ACYC%3AdependOn> a sh:NodeShape ; sh:targetClass <urn:oracle:edgetype:dependOn> ;
+  sh:sparql [ a sh:SPARQLConstraint ; sh:select "SELECT $this WHERE { $this <urn:oracle:src> ?u ; <urn:oracle:tgt> ?v . ?v <urn:oracle:rel:dependOn>* ?u . }" ] .
+
+<urn:oracle:shape:TRACE%3AFUN2REQ> a sh:NodeShape ; sh:targetClass <urn:oracle:type:Function> ;
+  sh:sparql [ a sh:SPARQLConstraint ; sh:select "SELECT $this WHERE { FILTER NOT EXISTS { $this (<urn:oracle:rel:allocate>|<urn:oracle:rel:satisfy>)+ ?r . FILTER EXISTS { ?r a <urn:oracle:type:Requirement> } } }" ] .

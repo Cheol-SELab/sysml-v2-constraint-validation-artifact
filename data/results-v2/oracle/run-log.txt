@@ -1,0 +1,31 @@
+R4 independent-oracle experiments (review items M4, M6). Host: Windows 11, Node v22.15.1, Python 3.11.0,
+pyshacl 0.40.1, rdflib 7.6.0 (oracle-py/requirements-lock.txt). Other research agents ran experiments on the
+same host at the same time; wall-clock times are indicative only.
+
+Snapshots (compiled with CODE/node_modules/typescript, outside CODE/dist):
+  v1-code       = codes/_archive/selab-metamodel-validator-v1/src + src/oracle + src/cli-oracle.ts
+                  (the code that produced the manuscript's E1-E3 numbers)
+  current-code  = CODE/src as of 2026-10-21 ~01:05 (R1/R2 revisions) + oracle files
+  ORACLE_DIR    = CODE/oracle-py for all runs
+
+Commands (from the snapshot directory, ORACLE_DIR set):
+  node dist/cli-oracle.js independence|shapes|e7|e2|random|scale --out results-v2/oracle/v1-code
+  node dist/cli-oracle.js e3 --out results-v2/oracle/v1-code                 7670 s, exit 0
+  node dist/cli-oracle.js e2 --out results-v2/oracle/v1-code                 2795 s, exit 0
+  node dist/cli-oracle.js random --out results-v2/oracle/v1-code             1526 s, exit 0
+  node dist/cli-oracle.js scale --out results-v2/oracle/v1-code               558 s, exit 0
+  node dist/cli-oracle.js sysml --corpus CODE/corpus/SysML-v2-Release --out results-v2/oracle/current-code   175 s, exit 0
+  node dist/cli-oracle.js random --fixed 1000 --rcat 100 --out results-v2/oracle/current-code              540 s, exit 0
+  node dist/cli-oracle.js variants --out results-v2/oracle/oracle-only        724 s, exit 0
+  python oracle-py/shared_code_mutants.py <v1 snapshot> <work> results-v2/oracle/shared-code-mutants <tsc> [--e2-only]
+  python -m unittest test_oracle.py (oracle-py)                               12 tests OK
+
+Notes:
+  - v1-code/logs/chain.log "e2 exit 127": first E2 attempt killed on purpose (the naive reference
+    implementation was being run on 10,000-node models); partial log kept as
+    logs/e2-aborted-reference-at-10k.log. The complete E2 run is logs/e2.log / chain-e2.log
+    (reference implementation limited to <= 1000 nodes, as in the original E2).
+  - An earlier full round (before the TRACE query reordering and per-model data graphs; same SPARQL
+    semantics, identical counts where completed) was discarded and is not part of these results.
+  - e3-reproduction-check.json: regenerated E3 instances vs PKG/data/results/e3-raw-records.json,
+    matched by (catalog, n, seed, defect type): 871/871 identical expected sets.

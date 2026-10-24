@@ -1,0 +1,12 @@
+E3 aerospace n=100: runs so far 30, defects 79
+E3 aerospace n=500: runs so far 60, defects 172
+E3 aerospace n=1000: runs so far 90, defects 280
+E3 automotive n=100: runs so far 120, defects 359
+E3 automotive n=500: runs so far 150, defects 452
+E3 automotive n=1000: runs so far 180, defects 560
+E3 robotics n=100: runs so far 210, defects 636
+E3 robotics n=500: runs so far 240, defects 745
+E3 robotics n=1000: runs so far 270, defects 871
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v2\oracle\v1-code\e3-oracle-rescoring.json
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v2\oracle\v1-code\e3-oracle-raw.json
+done in 7670.4 s

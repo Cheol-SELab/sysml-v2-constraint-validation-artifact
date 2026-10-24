@@ -1,0 +1,1080 @@
+{
+ "experiment": "X2 validation of public SysML v2 models",
+ "adjudicationRules": {
+  "order": "first matching rule wins: N1-N4, T, P1-P7",
+  "N": "false violation caused by normalization loss (N1 reference-chain context conflation; N2 non-literal attribute expression; N3 node named as an end of an unmapped relationship; N4 owner not mapped into G)",
+  "T": "true violation of a rule implied by SysML v2 well-formedness (satisfy/verify target not a requirement, verify source not a verification case, expose source not a view)",
+  "P": "catalog policy differs from the intent of the well-formed example (P1 attribute never declared; P2 declared without value; P3 legal value outside catalog domain; P4 legal relation outside allowed type pairs; P5 coverage/allocation/subject multiplicity; P6 isolation/view/trace; P7 definition-level anchor)"
+ },
+ "engineEquivalence": {
+  "checked": 453,
+  "allEqual": true,
+  "mismatches": []
+ },
+ "configurations": [
+  {
+   "catalog": "aerospace",
+   "mode": "keyword",
+   "levels": "all",
+   "unitsValidated": 80,
+   "violations": 5671,
+   "violationsPerUnit": {
+    "n": 80,
+    "min": 3,
+    "q1": 17.5,
+    "median": 36,
+    "q3": 78.5,
+    "max": 818,
+    "sum": 5671
+   },
+   "byRuleClass": {
+    "TYPE": 253,
+    "ATTR": 3404,
+    "MULT": 737,
+    "ISO": 885,
+    "TRACE": 374,
+    "DOM": 14,
+    "VIEW": 4
+   },
+   "byRule": {
+    "ATTR:Component.criticality": 1499,
+    "ATTR:Component.mass": 1473,
+    "ISO:Component": 505,
+    "TRACE:FUN2REQ": 374,
+    "MULT:Function|allocate|out": 373,
+    "ATTR:Port.direction": 280,
+    "TYPE:contain": 219,
+    "ISO:Function": 193,
+    "ATTR:Requirement.priority": 130,
+    "MULT:Requirement|verify|in": 124,
+    "MULT:Requirement|satisfy|in": 116,
+    "MULT:Port|contain|in": 101,
+    "ISO:Port": 90,
+    "ISO:Requirement": 72,
+    "MULT:View|subject|out": 23,
+    "TYPE:connect": 22,
+    "ISO:Interface": 19,
+    "ATTR:VerificationCase.method": 15,
+    "DOM:Port.direction": 14,
+    "TYPE:allocate": 12,
+    "ISO:VerificationCase": 6,
+    "ATTR:Function.name": 5,
+    "VIEW:View": 4,
+    "ATTR:Requirement.name": 2
+   },
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 640,
+     "vacuous": 537,
+     "vacuousRate": 0.8391,
+     "unitsWhereNonVacuous": 67
+    },
+    "ATTR": {
+     "rulePairs": 960,
+     "vacuous": 588,
+     "vacuousRate": 0.6125,
+     "unitsWhereNonVacuous": 80
+    },
+    "DOM": {
+     "rulePairs": 560,
+     "vacuous": 266,
+     "vacuousRate": 0.475,
+     "unitsWhereNonVacuous": 78
+    },
+    "MULT": {
+     "rulePairs": 400,
+     "vacuous": 303,
+     "vacuousRate": 0.7575,
+     "unitsWhereNonVacuous": 49
+    },
+    "ISO": {
+     "rulePairs": 480,
+     "vacuous": 312,
+     "vacuousRate": 0.65,
+     "unitsWhereNonVacuous": 80
+    },
+    "VIEW": {
+     "rulePairs": 80,
+     "vacuous": 76,
+     "vacuousRate": 0.95,
+     "unitsWhereNonVacuous": 4
+    },
+    "ACYC": {
+     "rulePairs": 80,
+     "vacuous": 79,
+     "vacuousRate": 0.9875,
+     "unitsWhereNonVacuous": 1
+    },
+    "TRACE": {
+     "rulePairs": 80,
+     "vacuous": 42,
+     "vacuousRate": 0.525,
+     "unitsWhereNonVacuous": 38
+    }
+   },
+   "verdicts": {
+    "P": 5532,
+    "N": 139
+   },
+   "verdictCodes": {
+    "P4": 253,
+    "P1": 3365,
+    "P2": 37,
+    "P7": 974,
+    "P5": 452,
+    "P6": 437,
+    "N4": 89,
+    "P3": 14,
+    "N3": 48,
+    "N2": 2
+   },
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "aerospace",
+   "mode": "keyword",
+   "levels": "usage",
+   "unitsValidated": 71,
+   "violations": 3782,
+   "violationsPerUnit": {
+    "n": 71,
+    "min": 3,
+    "q1": 15,
+    "median": 24,
+    "q3": 59.5,
+    "max": 581,
+    "sum": 3782
+   },
+   "byRuleClass": {
+    "TYPE": 196,
+    "ATTR": 2295,
+    "MULT": 542,
+    "ISO": 476,
+    "TRACE": 261,
+    "DOM": 8,
+    "VIEW": 4
+   },
+   "byRule": {
+    "ATTR:Component.criticality": 997,
+    "ATTR:Component.mass": 975,
+    "TRACE:FUN2REQ": 261,
+    "MULT:Function|allocate|out": 260,
+    "ISO:Component": 229,
+    "ATTR:Port.direction": 212,
+    "TYPE:contain": 162,
+    "ISO:Function": 142,
+    "ATTR:Requirement.priority": 97,
+    "MULT:Requirement|verify|in": 95,
+    "MULT:Port|contain|in": 89,
+    "MULT:Requirement|satisfy|in": 85,
+    "ISO:Port": 55,
+    "ISO:Requirement": 47,
+    "TYPE:connect": 22,
+    "MULT:View|subject|out": 13,
+    "TYPE:allocate": 12,
+    "DOM:Port.direction": 8,
+    "ATTR:VerificationCase.method": 7,
+    "ATTR:Function.name": 5,
+    "VIEW:View": 4,
+    "ISO:VerificationCase": 3,
+    "ATTR:Requirement.name": 2
+   },
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 568,
+     "vacuous": 481,
+     "vacuousRate": 0.8468,
+     "unitsWhereNonVacuous": 54
+    },
+    "ATTR": {
+     "rulePairs": 852,
+     "vacuous": 536,
+     "vacuousRate": 0.6291,
+     "unitsWhereNonVacuous": 71
+    },
+    "DOM": {
+     "rulePairs": 497,
+     "vacuous": 248,
+     "vacuousRate": 0.499,
+     "unitsWhereNonVacuous": 64
+    },
+    "MULT": {
+     "rulePairs": 355,
+     "vacuous": 261,
+     "vacuousRate": 0.7352,
+     "unitsWhereNonVacuous": 46
+    },
+    "ISO": {
+     "rulePairs": 426,
+     "vacuous": 284,
+     "vacuousRate": 0.6667,
+     "unitsWhereNonVacuous": 70
+    },
+    "VIEW": {
+     "rulePairs": 71,
+     "vacuous": 67,
+     "vacuousRate": 0.9437,
+     "unitsWhereNonVacuous": 4
+    },
+    "ACYC": {
+     "rulePairs": 71,
+     "vacuous": 70,
+     "vacuousRate": 0.9859,
+     "unitsWhereNonVacuous": 1
+    },
+    "TRACE": {
+     "rulePairs": 71,
+     "vacuous": 36,
+     "vacuousRate": 0.507,
+     "unitsWhereNonVacuous": 35
+    }
+   },
+   "verdicts": {
+    "P": 3390,
+    "N": 392
+   },
+   "verdictCodes": {
+    "P4": 196,
+    "P1": 2280,
+    "P5": 454,
+    "N4": 358,
+    "P6": 439,
+    "P3": 8,
+    "N3": 32,
+    "P2": 13,
+    "N2": 2
+   },
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "aerospace",
+   "mode": "specialization",
+   "levels": "all",
+   "unitsValidated": 82,
+   "violations": 6940,
+   "violationsPerUnit": {
+    "n": 82,
+    "min": 3,
+    "q1": 23.25,
+    "median": 50,
+    "q3": 86.75,
+    "max": 1049,
+    "sum": 6940
+   },
+   "byRuleClass": {
+    "TYPE": 441,
+    "ATTR": 3673,
+    "DOM": 25,
+    "MULT": 1068,
+    "ISO": 1054,
+    "TRACE": 675,
+    "VIEW": 4
+   },
+   "byRule": {
+    "ATTR:Component.criticality": 1648,
+    "ATTR:Component.mass": 1610,
+    "TRACE:FUN2REQ": 675,
+    "MULT:Function|allocate|out": 670,
+    "ISO:Component": 600,
+    "TYPE:contain": 403,
+    "ISO:Function": 269,
+    "ATTR:Port.direction": 246,
+    "ATTR:Requirement.priority": 144,
+    "MULT:Requirement|verify|in": 138,
+    "MULT:Requirement|satisfy|in": 125,
+    "MULT:Port|contain|in": 112,
+    "ISO:Port": 93,
+    "ISO:Requirement": 67,
+    "MULT:View|subject|out": 23,
+    "DOM:Port.direction": 22,
+    "TYPE:connect": 22,
+    "ISO:Interface": 19,
+    "TYPE:allocate": 16,
+    "ATTR:VerificationCase.method": 15,
+    "ATTR:Function.name": 7,
+    "ISO:VerificationCase": 6,
+    "VIEW:View": 4,
+    "DOM:Component.mass": 3,
+    "ATTR:Requirement.name": 2,
+    "ATTR:Component.name": 1
+   },
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 656,
+     "vacuous": 546,
+     "vacuousRate": 0.8323,
+     "unitsWhereNonVacuous": 72
+    },
+    "ATTR": {
+     "rulePairs": 984,
+     "vacuous": 600,
+     "vacuousRate": 0.6098,
+     "unitsWhereNonVacuous": 82
+    },
+    "DOM": {
+     "rulePairs": 574,
+     "vacuous": 273,
+     "vacuousRate": 0.4756,
+     "unitsWhereNonVacuous": 79
+    },
+    "MULT": {
+     "rulePairs": 410,
+     "vacuous": 304,
+     "vacuousRate": 0.7415,
+     "unitsWhereNonVacuous": 54
+    },
+    "ISO": {
+     "rulePairs": 492,
+     "vacuous": 316,
+     "vacuousRate": 0.6423,
+     "unitsWhereNonVacuous": 82
+    },
+    "VIEW": {
+     "rulePairs": 82,
+     "vacuous": 78,
+     "vacuousRate": 0.9512,
+     "unitsWhereNonVacuous": 4
+    },
+    "ACYC": {
+     "rulePairs": 82,
+     "vacuous": 81,
+     "vacuousRate": 0.9878,
+     "unitsWhereNonVacuous": 1
+    },
+    "TRACE": {
+     "rulePairs": 82,
+     "vacuous": 39,
+     "vacuousRate": 0.4756,
+     "unitsWhereNonVacuous": 43
+    }
+   },
+   "verdicts": {
+    "P": 6789,
+    "N": 151
+   },
+   "verdictCodes": {
+    "P4": 437,
+    "P1": 3554,
+    "P2": 110,
+    "P3": 25,
+    "P7": 1311,
+    "P5": 676,
+    "P6": 676,
+    "N4": 91,
+    "N3": 47,
+    "N1": 4,
+    "N2": 9
+   },
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "aerospace",
+   "mode": "specialization",
+   "levels": "usage",
+   "unitsValidated": 76,
+   "violations": 4542,
+   "violationsPerUnit": {
+    "n": 76,
+    "min": 3,
+    "q1": 16,
+    "median": 29,
+    "q3": 66,
+    "max": 689,
+    "sum": 4542
+   },
+   "byRuleClass": {
+    "TYPE": 355,
+    "ATTR": 2389,
+    "DOM": 19,
+    "MULT": 778,
+    "ISO": 523,
+    "TRACE": 474,
+    "VIEW": 4
+   },
+   "byRule": {
+    "ATTR:Component.criticality": 1061,
+    "ATTR:Component.mass": 1027,
+    "TRACE:FUN2REQ": 474,
+    "MULT:Function|allocate|out": 469,
+    "TYPE:contain": 317,
+    "ISO:Component": 249,
+    "ATTR:Port.direction": 178,
+    "ISO:Function": 169,
+    "ATTR:Requirement.priority": 106,
+    "MULT:Requirement|verify|in": 104,
+    "MULT:Port|contain|in": 100,
+    "MULT:Requirement|satisfy|in": 92,
+    "ISO:Port": 58,
+    "ISO:Requirement": 44,
+    "TYPE:connect": 22,
+    "DOM:Port.direction": 16,
+    "TYPE:allocate": 16,
+    "MULT:View|subject|out": 13,
+    "ATTR:VerificationCase.method": 7,
+    "ATTR:Function.name": 7,
+    "VIEW:View": 4,
+    "ISO:VerificationCase": 3,
+    "DOM:Component.mass": 3,
+    "ATTR:Requirement.name": 2,
+    "ATTR:Component.name": 1
+   },
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 608,
+     "vacuous": 513,
+     "vacuousRate": 0.8438,
+     "unitsWhereNonVacuous": 61
+    },
+    "ATTR": {
+     "rulePairs": 912,
+     "vacuous": 578,
+     "vacuousRate": 0.6338,
+     "unitsWhereNonVacuous": 76
+    },
+    "DOM": {
+     "rulePairs": 532,
+     "vacuous": 270,
+     "vacuousRate": 0.5075,
+     "unitsWhereNonVacuous": 67
+    },
+    "MULT": {
+     "rulePairs": 380,
+     "vacuous": 277,
+     "vacuousRate": 0.7289,
+     "unitsWhereNonVacuous": 51
+    },
+    "ISO": {
+     "rulePairs": 456,
+     "vacuous": 304,
+     "vacuousRate": 0.6667,
+     "unitsWhereNonVacuous": 76
+    },
+    "VIEW": {
+     "rulePairs": 76,
+     "vacuous": 72,
+     "vacuousRate": 0.9474,
+     "unitsWhereNonVacuous": 4
+    },
+    "ACYC": {
+     "rulePairs": 76,
+     "vacuous": 75,
+     "vacuousRate": 0.9868,
+     "unitsWhereNonVacuous": 1
+    },
+    "TRACE": {
+     "rulePairs": 76,
+     "vacuous": 36,
+     "vacuousRate": 0.4737,
+     "unitsWhereNonVacuous": 40
+    }
+   },
+   "verdicts": {
+    "P": 4109,
+    "N": 433
+   },
+   "verdictCodes": {
+    "P4": 351,
+    "P1": 2309,
+    "P2": 71,
+    "P3": 19,
+    "P5": 679,
+    "N4": 390,
+    "P6": 680,
+    "N3": 30,
+    "N1": 4,
+    "N2": 9
+   },
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "automotive",
+   "mode": "keyword",
+   "levels": "all",
+   "unitsValidated": 80,
+   "violations": 5671,
+   "violationsPerUnit": {
+    "n": 80,
+    "min": 3,
+    "q1": 17.5,
+    "median": 36,
+    "q3": 78.5,
+    "max": 818,
+    "sum": 5671
+   },
+   "byRuleClass": {
+    "TYPE": 253,
+    "ATTR": 3404,
+    "MULT": 737,
+    "ISO": 885,
+    "TRACE": 374,
+    "DOM": 14,
+    "VIEW": 4
+   },
+   "byRule": {
+    "ATTR:Component.criticality": 1499,
+    "ATTR:Component.mass": 1473,
+    "ISO:Component": 505,
+    "TRACE:FUN2REQ": 374,
+    "MULT:Function|allocate|out": 373,
+    "ATTR:Port.direction": 280,
+    "TYPE:contain": 219,
+    "ISO:Function": 193,
+    "ATTR:Requirement.priority": 130,
+    "MULT:Requirement|verify|in": 124,
+    "MULT:Requirement|satisfy|in": 116,
+    "MULT:Port|contain|in": 101,
+    "ISO:Port": 90,
+    "ISO:Requirement": 72,
+    "MULT:View|subject|out": 23,
+    "TYPE:connect": 22,
+    "ISO:Interface": 19,
+    "ATTR:VerificationCase.method": 15,
+    "DOM:Port.direction": 14,
+    "TYPE:allocate": 12,
+    "ISO:VerificationCase": 6,
+    "ATTR:Function.name": 5,
+    "VIEW:View": 4,
+    "ATTR:Requirement.name": 2
+   },
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 640,
+     "vacuous": 537,
+     "vacuousRate": 0.8391,
+     "unitsWhereNonVacuous": 67
+    },
+    "ATTR": {
+     "rulePairs": 960,
+     "vacuous": 588,
+     "vacuousRate": 0.6125,
+     "unitsWhereNonVacuous": 80
+    },
+    "DOM": {
+     "rulePairs": 560,
+     "vacuous": 266,
+     "vacuousRate": 0.475,
+     "unitsWhereNonVacuous": 78
+    },
+    "MULT": {
+     "rulePairs": 400,
+     "vacuous": 303,
+     "vacuousRate": 0.7575,
+     "unitsWhereNonVacuous": 49
+    },
+    "ISO": {
+     "rulePairs": 480,
+     "vacuous": 312,
+     "vacuousRate": 0.65,
+     "unitsWhereNonVacuous": 80
+    },
+    "VIEW": {
+     "rulePairs": 80,
+     "vacuous": 76,
+     "vacuousRate": 0.95,
+     "unitsWhereNonVacuous": 4
+    },
+    "ACYC": {
+     "rulePairs": 80,
+     "vacuous": 79,
+     "vacuousRate": 0.9875,
+     "unitsWhereNonVacuous": 1
+    },
+    "TRACE": {
+     "rulePairs": 80,
+     "vacuous": 42,
+     "vacuousRate": 0.525,
+     "unitsWhereNonVacuous": 38
+    }
+   },
+   "verdicts": {
+    "P": 5532,
+    "N": 139
+   },
+   "verdictCodes": {
+    "P4": 253,
+    "P1": 3365,
+    "P2": 37,
+    "P7": 974,
+    "P5": 452,
+    "P6": 437,
+    "N4": 89,
+    "P3": 14,
+    "N3": 48,
+    "N2": 2
+   },
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "automotive",
+   "mode": "keyword",
+   "levels": "usage",
+   "unitsValidated": 71,
+   "violations": 3782,
+   "violationsPerUnit": {
+    "n": 71,
+    "min": 3,
+    "q1": 15,
+    "median": 24,
+    "q3": 59.5,
+    "max": 581,
+    "sum": 3782
+   },
+   "byRuleClass": {
+    "TYPE": 196,
+    "ATTR": 2295,
+    "MULT": 542,
+    "ISO": 476,
+    "TRACE": 261,
+    "DOM": 8,
+    "VIEW": 4
+   },
+   "byRule": {
+    "ATTR:Component.criticality": 997,
+    "ATTR:Component.mass": 975,
+    "TRACE:FUN2REQ": 261,
+    "MULT:Function|allocate|out": 260,
+    "ISO:Component": 229,
+    "ATTR:Port.direction": 212,
+    "TYPE:contain": 162,
+    "ISO:Function": 142,
+    "ATTR:Requirement.priority": 97,
+    "MULT:Requirement|verify|in": 95,
+    "MULT:Port|contain|in": 89,
+    "MULT:Requirement|satisfy|in": 85,
+    "ISO:Port": 55,
+    "ISO:Requirement": 47,
+    "TYPE:connect": 22,
+    "MULT:View|subject|out": 13,
+    "TYPE:allocate": 12,
+    "DOM:Port.direction": 8,
+    "ATTR:VerificationCase.method": 7,
+    "ATTR:Function.name": 5,
+    "VIEW:View": 4,
+    "ISO:VerificationCase": 3,
+    "ATTR:Requirement.name": 2
+   },
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 568,
+     "vacuous": 481,
+     "vacuousRate": 0.8468,
+     "unitsWhereNonVacuous": 54
+    },
+    "ATTR": {
+     "rulePairs": 852,
+     "vacuous": 536,
+     "vacuousRate": 0.6291,
+     "unitsWhereNonVacuous": 71
+    },
+    "DOM": {
+     "rulePairs": 497,
+     "vacuous": 248,
+     "vacuousRate": 0.499,
+     "unitsWhereNonVacuous": 64
+    },
+    "MULT": {
+     "rulePairs": 355,
+     "vacuous": 261,
+     "vacuousRate": 0.7352,
+     "unitsWhereNonVacuous": 46
+    },
+    "ISO": {
+     "rulePairs": 426,
+     "vacuous": 284,
+     "vacuousRate": 0.6667,
+     "unitsWhereNonVacuous": 70
+    },
+    "VIEW": {
+     "rulePairs": 71,
+     "vacuous": 67,
+     "vacuousRate": 0.9437,
+     "unitsWhereNonVacuous": 4
+    },
+    "ACYC": {
+     "rulePairs": 71,
+     "vacuous": 70,
+     "vacuousRate": 0.9859,
+     "unitsWhereNonVacuous": 1
+    },
+    "TRACE": {
+     "rulePairs": 71,
+     "vacuous": 36,
+     "vacuousRate": 0.507,
+     "unitsWhereNonVacuous": 35
+    }
+   },
+   "verdicts": {
+    "P": 3390,
+    "N": 392
+   },
+   "verdictCodes": {
+    "P4": 196,
+    "P1": 2280,
+    "P5": 454,
+    "N4": 358,
+    "P6": 439,
+    "P3": 8,
+    "N3": 32,
+    "P2": 13,
+    "N2": 2
+   },
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "automotive",
+   "mode": "specialization",
+   "levels": "all",
+   "unitsValidated": 82,
+   "violations": 6940,
+   "violationsPerUnit": {
+    "n": 82,
+    "min": 3,
+    "q1": 23.25,
+    "median": 50,
+    "q3": 86.75,
+    "max": 1049,
+    "sum": 6940
+   },
+   "byRuleClass": {
+    "TYPE": 441,
+    "ATTR": 3673,
+    "DOM": 25,
+    "MULT": 1068,
+    "ISO": 1054,
+    "TRACE": 675,
+    "VIEW": 4
+   },
+   "byRule": {
+    "ATTR:Component.criticality": 1648,
+    "ATTR:Component.mass": 1610,
+    "TRACE:FUN2REQ": 675,
+    "MULT:Function|allocate|out": 670,
+    "ISO:Component": 600,
+    "TYPE:contain": 403,
+    "ISO:Function": 269,
+    "ATTR:Port.direction": 246,
+    "ATTR:Requirement.priority": 144,
+    "MULT:Requirement|verify|in": 138,
+    "MULT:Requirement|satisfy|in": 125,
+    "MULT:Port|contain|in": 112,
+    "ISO:Port": 93,
+    "ISO:Requirement": 67,
+    "MULT:View|subject|out": 23,
+    "DOM:Port.direction": 22,
+    "TYPE:connect": 22,
+    "ISO:Interface": 19,
+    "TYPE:allocate": 16,
+    "ATTR:VerificationCase.method": 15,
+    "ATTR:Function.name": 7,
+    "ISO:VerificationCase": 6,
+    "VIEW:View": 4,
+    "DOM:Component.mass": 3,
+    "ATTR:Requirement.name": 2,
+    "ATTR:Component.name": 1
+   },
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 656,
+     "vacuous": 546,
+     "vacuousRate": 0.8323,
+     "unitsWhereNonVacuous": 72
+    },
+    "ATTR": {
+     "rulePairs": 984,
+     "vacuous": 600,
+     "vacuousRate": 0.6098,
+     "unitsWhereNonVacuous": 82
+    },
+    "DOM": {
+     "rulePairs": 574,
+     "vacuous": 273,
+     "vacuousRate": 0.4756,
+     "unitsWhereNonVacuous": 79
+    },
+    "MULT": {
+     "rulePairs": 410,
+     "vacuous": 304,
+     "vacuousRate": 0.7415,
+     "unitsWhereNonVacuous": 54
+    },
+    "ISO": {
+     "rulePairs": 492,
+     "vacuous": 316,
+     "vacuousRate": 0.6423,
+     "unitsWhereNonVacuous": 82
+    },
+    "VIEW": {
+     "rulePairs": 82,
+     "vacuous": 78,
+     "vacuousRate": 0.9512,
+     "unitsWhereNonVacuous": 4
+    },
+    "ACYC": {
+     "rulePairs": 82,
+     "vacuous": 81,
+     "vacuousRate": 0.9878,
+     "unitsWhereNonVacuous": 1
+    },
+    "TRACE": {
+     "rulePairs": 82,
+     "vacuous": 39,
+     "vacuousRate": 0.4756,
+     "unitsWhereNonVacuous": 43
+    }
+   },
+   "verdicts": {
+    "P": 6789,
+    "N": 151
+   },
+   "verdictCodes": {
+    "P4": 437,
+    "P1": 3554,
+    "P2": 110,
+    "P3": 25,
+    "P7": 1311,
+    "P5": 676,
+    "P6": 676,
+    "N4": 91,
+    "N3": 47,
+    "N1": 4,
+    "N2": 9
+   },
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "automotive",
+   "mode": "specialization",
+   "levels": "usage",
+   "unitsValidated": 76,
+   "violations": 4542,
+   "violationsPerUnit": {
+    "n": 76,
+    "min": 3,
+    "q1": 16,
+    "median": 29,
+    "q3": 66,
+    "max": 689,
+    "sum": 4542
+   },
+   "byRuleClass": {
+    "TYPE": 355,
+    "ATTR": 2389,
+    "DOM": 19,
+    "MULT": 778,
+    "ISO": 523,
+    "TRACE": 474,
+    "VIEW": 4
+   },
+   "byRule": {
+    "ATTR:Component.criticality": 1061,
+    "ATTR:Component.mass": 1027,
+    "TRACE:FUN2REQ": 474,
+    "MULT:Function|allocate|out": 469,
+    "TYPE:contain": 317,
+    "ISO:Component": 249,
+    "ATTR:Port.direction": 178,
+    "ISO:Function": 169,
+    "ATTR:Requirement.priority": 106,
+    "MULT:Requirement|verify|in": 104,
+    "MULT:Port|contain|in": 100,
+    "MULT:Requirement|satisfy|in": 92,
+    "ISO:Port": 58,
+    "ISO:Requirement": 44,
+    "TYPE:connect": 22,
+    "DOM:Port.direction": 16,
+    "TYPE:allocate": 16,
+    "MULT:View|subject|out": 13,
+    "ATTR:VerificationCase.method": 7,
+    "ATTR:Function.name": 7,
+    "VIEW:View": 4,
+    "ISO:VerificationCase": 3,
+    "DOM:Component.mass": 3,
+    "ATTR:Requirement.name": 2,
+    "ATTR:Component.name": 1
+   },
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 608,
+     "vacuous": 513,
+     "vacuousRate": 0.8438,
+     "unitsWhereNonVacuous": 61
+    },
+    "ATTR": {
+     "rulePairs": 912,
+     "vacuous": 578,
+     "vacuousRate": 0.6338,
+     "unitsWhereNonVacuous": 76
+    },
+    "DOM": {
+     "rulePairs": 532,
+     "vacuous": 270,
+     "vacuousRate": 0.5075,
+     "unitsWhereNonVacuous": 67
+    },
+    "MULT": {
+     "rulePairs": 380,
+     "vacuous": 277,
+     "vacuousRate": 0.7289,
+     "unitsWhereNonVacuous": 51
+    },
+    "ISO": {
+     "rulePairs": 456,
+     "vacuous": 304,
+     "vacuousRate": 0.6667,
+     "unitsWhereNonVacuous": 76
+    },
+    "VIEW": {
+     "rulePairs": 76,
+     "vacuous": 72,
+     "vacuousRate": 0.9474,
+     "unitsWhereNonVacuous": 4
+    },
+    "ACYC": {
+     "rulePairs": 76,
+     "vacuous": 75,
+     "vacuousRate": 0.9868,
+     "unitsWhereNonVacuous": 1
+    },
+    "TRACE": {
+     "rulePairs": 76,
+     "vacuous": 36,
+     "vacuousRate": 0.4737,
+     "unitsWhereNonVacuous": 40
+    }
+   },
+   "verdicts": {
+    "P": 4109,
+    "N": 433
+   },
+   "verdictCodes": {
+    "P4": 351,
+    "P1": 2309,
+    "P2": 71,
+    "P3": 19,
+    "P5": 679,
+    "N4": 390,
+    "P6": 680,
+    "N3": 30,
+    "N1": 4,
+    "N2": 9
+   },
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "sysml-wellformedness",
+   "mode": "keyword",
+   "levels": "all",
+   "unitsValidated": 80,
+   "violations": 0,
+   "violationsPerUnit": {
+    "n": 80,
+    "min": 0,
+    "q1": 0,
+    "median": 0,
+    "q3": 0,
+    "max": 0,
+    "sum": 0
+   },
+   "byRuleClass": {},
+   "byRule": {},
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 640,
+     "vacuous": 537,
+     "vacuousRate": 0.8391,
+     "unitsWhereNonVacuous": 67
+    }
+   },
+   "verdicts": {},
+   "verdictCodes": {},
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "sysml-wellformedness",
+   "mode": "keyword",
+   "levels": "usage",
+   "unitsValidated": 71,
+   "violations": 0,
+   "violationsPerUnit": {
+    "n": 71,
+    "min": 0,
+    "q1": 0,
+    "median": 0,
+    "q3": 0,
+    "max": 0,
+    "sum": 0
+   },
+   "byRuleClass": {},
+   "byRule": {},
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 568,
+     "vacuous": 481,
+     "vacuousRate": 0.8468,
+     "unitsWhereNonVacuous": 54
+    }
+   },
+   "verdicts": {},
+   "verdictCodes": {},
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "sysml-wellformedness",
+   "mode": "specialization",
+   "levels": "all",
+   "unitsValidated": 82,
+   "violations": 0,
+   "violationsPerUnit": {
+    "n": 82,
+    "min": 0,
+    "q1": 0,
+    "median": 0,
+    "q3": 0,
+    "max": 0,
+    "sum": 0
+   },
+   "byRuleClass": {},
+   "byRule": {},
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 656,
+     "vacuous": 546,
+     "vacuousRate": 0.8323,
+     "unitsWhereNonVacuous": 72
+    }
+   },
+   "verdicts": {},
+   "verdictCodes": {},
+   "trueViolationCandidates": []
+  },
+  {
+   "catalog": "sysml-wellformedness",
+   "mode": "specialization",
+   "levels": "usage",
+   "unitsValidated": 76,
+   "violations": 0,
+   "violationsPerUnit": {
+    "n": 76,
+    "min": 0,
+    "q1": 0,
+    "median": 0,
+    "q3": 0,
+    "max": 0,
+    "sum": 0
+   },
+   "byRuleClass": {},
+   "byRule": {},
+   "vacuity": {
+    "TYPE": {
+     "rulePairs": 608,
+     "vacuous": 513,
+     "vacuousRate": 0.8438,
+     "unitsWhereNonVacuous": 61
+    }
+   },
+   "verdicts": {},
+   "verdictCodes": {},
+   "trueViolationCandidates": []
+  }
+ ]
+}

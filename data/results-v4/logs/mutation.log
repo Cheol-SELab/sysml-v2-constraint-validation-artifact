@@ -1,0 +1,18 @@
+[2026-10-22 20:39:17] start mutation: env MUT_ROOT=G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/snapshot/tree MUT_TS_ROOT=G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator node --max-old-space-size=16000 dist-r8/cli-v2.js mutation --output G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/mutation
+mutation: 25/391
+mutation: 50/391
+mutation: 75/391
+mutation: 100/391
+mutation: 125/391
+mutation: 150/391
+mutation: 175/391
+mutation: 200/391
+mutation: 225/391
+mutation: 250/391
+mutation: 275/391
+mutation: 300/391
+mutation: 325/391
+mutation: 350/391
+mutation: 375/391
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\mutation\m4-mutation-analysis.json (6626.5 s)
+[2026-10-22 22:29:44] end mutation rc=0 elapsed=6627s

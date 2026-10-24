@@ -1,0 +1,810 @@
+{
+ "experiment": "N2 same-runtime and JVM SHACL baselines on the same Turtle data and shapes",
+ "method": "aerospace catalog; generated models (seeds 1000-1002) with max(20, 0.02 n) random edits (X3 (a) vocabulary) as defects; one Turtle encoding (oracle-py/rdf_export) and one shapes graph (oracle-py/shapes.translate) for every engine; SHACL Core engines (rdf-validate-shacl, shacl-engine without SPARQL plugin) get the shapes without sh:sparql (VIEW, ACYC, TRACE removed) and are compared with the engine on the same rule subset; times are validation only (parsing and shape compilation excluded), warm-up runs then the median of repeated runs on the same in-memory data; afterOneEdit: SHACL full re-validation of the post-edit graph vs the proposed incremental step (strategy 3) for the same edit; runs were sequential (one process at a time)",
+ "machine": {
+  "node": "v22.15.1",
+  "platform": "win32",
+  "cpus": "13th Gen Intel(R) Core(TM) i5-13600KF",
+  "cores": 20,
+  "memGB": 64
+ },
+ "engine": [
+  {
+   "n": 1000,
+   "nodes": 1000,
+   "edges": 1479,
+   "violations": [
+    9,
+    18,
+    12
+   ],
+   "engineFullMsMedian": 2.9952,
+   "engineCoreSubsetMsMedian": 1.4286,
+   "referenceMsMedian": 800.95,
+   "referenceEqualsEngine": true,
+   "incrementalStepMsMedian": 0.24215,
+   "incrementalEqualsBatchAfterEdit": true
+  },
+  {
+   "n": 10000,
+   "nodes": 10000,
+   "edges": 14995,
+   "violations": [
+    135,
+    153,
+    141
+   ],
+   "engineFullMsMedian": 34.7035,
+   "engineCoreSubsetMsMedian": 21.2151,
+   "referenceMsMedian": null,
+   "referenceEqualsEngine": true,
+   "incrementalStepMsMedian": 0.4087,
+   "incrementalEqualsBatchAfterEdit": true
+  },
+  {
+   "n": 100000,
+   "nodes": 100000,
+   "edges": 149910,
+   "violations": [
+    1408,
+    1430,
+    1471
+   ],
+   "engineFullMsMedian": 695.6971,
+   "engineCoreSubsetMsMedian": 401.4052,
+   "referenceMsMedian": null,
+   "referenceEqualsEngine": true,
+   "incrementalStepMsMedian": 1.1614,
+   "incrementalEqualsBatchAfterEdit": true
+  }
+ ],
+ "rows": [
+  {
+   "n": 1000,
+   "engine": "jena-shacl",
+   "version": "<development>",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "all",
+   "runs": 9,
+   "shaclValidateMsMedian": 130.44599997997284,
+   "proposedMsMedian": 0.24215,
+   "ratioMedian": 536.1449012417785,
+   "ratioMin": 454.7158122775218,
+   "ratioMax": 766.0632311084561,
+   "expectedViolations": 124,
+   "shaclViolations": 124,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 863.7749999761581
+  },
+  {
+   "n": 1000,
+   "engine": "pyshacl",
+   "version": "0.40.1",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "all",
+   "runs": 9,
+   "shaclValidateMsMedian": 5987.981599988416,
+   "proposedMsMedian": 0.24215,
+   "ratioMedian": 24559.036547815394,
+   "ratioMin": 21171.915957060137,
+   "ratioMax": 29949.100909737695,
+   "expectedViolations": 124,
+   "shaclViolations": 124,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 554.9156999913976
+  },
+  {
+   "n": 1000,
+   "engine": "rdf-validate-shacl",
+   "version": "0.6.5",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 9,
+   "shaclValidateMsMedian": 974.3425999879837,
+   "proposedMsMedian": 0.24215,
+   "ratioMedian": 3961.4252922286096,
+   "ratioMin": 3520.3937693061957,
+   "ratioMax": 4273.077089479859,
+   "expectedViolations": 105,
+   "shaclViolations": 105,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 158.30860006809235
+  },
+  {
+   "n": 1000,
+   "engine": "shacl-engine",
+   "version": "1.1.3",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "all",
+   "runs": 9,
+   "shaclValidateMsMedian": 78940.60839998722,
+   "proposedMsMedian": 0.24215,
+   "ratioMedian": 315479.78401824064,
+   "ratioMin": 282619.79858721106,
+   "ratioMax": 479549.9601561355,
+   "expectedViolations": 124,
+   "shaclViolations": 124,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 157.76279997825623
+  },
+  {
+   "n": 1000,
+   "engine": "shacl-engine-core",
+   "version": "1.1.3",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 9,
+   "shaclValidateMsMedian": 432.77069997787476,
+   "proposedMsMedian": 0.24215,
+   "ratioMedian": 1746.8232998036367,
+   "ratioMin": 1541.6337622829244,
+   "ratioMax": 1936.4241172330526,
+   "expectedViolations": 105,
+   "shaclViolations": 105,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 179.58700001239777
+  },
+  {
+   "n": 10000,
+   "engine": "jena-shacl",
+   "version": "<development>",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "all",
+   "runs": 9,
+   "shaclValidateMsMedian": 678.0712999105453,
+   "proposedMsMedian": 0.4087,
+   "ratioMedian": 1761.4372400190944,
+   "ratioMin": 1367.691457036144,
+   "ratioMax": 2282.6229250007,
+   "expectedViolations": 1297,
+   "shaclViolations": 1297,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 1336.0156999826431
+  },
+  {
+   "n": 10000,
+   "engine": "rdf-validate-shacl",
+   "version": "0.6.5",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 9,
+   "shaclValidateMsMedian": 9642.809399962425,
+   "proposedMsMedian": 0.4087,
+   "ratioMedian": 23848.34352816,
+   "ratioMin": 21384.916600975466,
+   "ratioMax": 31752.29881422322,
+   "expectedViolations": 1124,
+   "shaclViolations": 1124,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 813.0191000699997
+  },
+  {
+   "n": 10000,
+   "engine": "shacl-engine-core",
+   "version": "1.1.3",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 9,
+   "shaclValidateMsMedian": 4577.789999961853,
+   "proposedMsMedian": 0.4087,
+   "ratioMedian": 11339.318081718335,
+   "ratioMin": 9689.565737297782,
+   "ratioMax": 14558.639051414762,
+   "expectedViolations": 1124,
+   "shaclViolations": 1124,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 804.7214999198914
+  },
+  {
+   "n": 100000,
+   "engine": "jena-shacl",
+   "version": "<development>",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "all",
+   "runs": 3,
+   "shaclValidateMsMedian": 6143.523699998856,
+   "proposedMsMedian": 1.1614,
+   "ratioMedian": 5274.8138453559295,
+   "ratioMin": 4726.672662535121,
+   "ratioMax": 5844.295757228743,
+   "expectedViolations": 4310,
+   "shaclViolations": 4310,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 4540.020499944687
+  },
+  {
+   "n": 100000,
+   "engine": "rdf-validate-shacl",
+   "version": "0.6.5",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 3,
+   "shaclValidateMsMedian": 159971.3450000286,
+   "proposedMsMedian": 1.1614,
+   "ratioMedian": 139779.6506849734,
+   "ratioMin": 112842.62335557338,
+   "ratioMax": 141224.35741340806,
+   "expectedViolations": 3721,
+   "shaclViolations": 3721,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 10046.924500107765
+  },
+  {
+   "n": 100000,
+   "engine": "shacl-engine-core",
+   "version": "1.1.3",
+   "kind": "afterOneEdit",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 3,
+   "shaclValidateMsMedian": 67199.63269996643,
+   "proposedMsMedian": 1.1614,
+   "ratioMedian": 57860.88574131775,
+   "ratioMin": 50656.659542238194,
+   "ratioMax": 62884.280251132106,
+   "expectedViolations": 3721,
+   "shaclViolations": 3721,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 9892.64359998703
+  },
+  {
+   "n": 1000,
+   "engine": "jena-shacl",
+   "version": "<development>",
+   "kind": "full",
+   "comparedRuleClasses": "all",
+   "runs": 3,
+   "shaclValidateMsMedian": 121.04770004749298,
+   "proposedMsMedian": 2.9952,
+   "ratioMedian": 37.59366684315319,
+   "ratioMin": 20.20290073561202,
+   "ratioMax": 50.99776308410443,
+   "expectedViolations": 39,
+   "shaclViolations": 39,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 860.7668000459671
+  },
+  {
+   "n": 1000,
+   "engine": "pyshacl",
+   "version": "0.40.1",
+   "kind": "full",
+   "comparedRuleClasses": "all",
+   "runs": 3,
+   "shaclValidateMsMedian": 6097.020599991083,
+   "proposedMsMedian": 2.9952,
+   "ratioMedian": 2035.5971554457408,
+   "ratioMin": 998.534214569656,
+   "ratioMax": 2109.2675220202723,
+   "expectedViolations": 39,
+   "shaclViolations": 39,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 583.7091000285
+  },
+  {
+   "n": 1000,
+   "engine": "rdf-validate-shacl",
+   "version": "0.6.5",
+   "kind": "full",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 3,
+   "shaclValidateMsMedian": 950.2580000162125,
+   "proposedMsMedian": 1.4286,
+   "ratioMedian": 656.3952820951591,
+   "ratioMin": 510.3230984469877,
+   "ratioMax": 674.7074694804121,
+   "expectedViolations": 33,
+   "shaclViolations": 33,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 172.85730004310608
+  },
+  {
+   "n": 1000,
+   "engine": "shacl-engine",
+   "version": "1.1.3",
+   "kind": "full",
+   "comparedRuleClasses": "all",
+   "runs": 3,
+   "shaclValidateMsMedian": 79481.4496999979,
+   "proposedMsMedian": 2.9952,
+   "ratioMedian": 25333.485677082124,
+   "ratioMin": 13265.479955270363,
+   "ratioMax": 31563.708114353925,
+   "expectedViolations": 39,
+   "shaclViolations": 39,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 164.1042000055313
+  },
+  {
+   "n": 1000,
+   "engine": "shacl-engine-core",
+   "version": "1.1.3",
+   "kind": "full",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 3,
+   "shaclValidateMsMedian": 424.4749000072479,
+   "proposedMsMedian": 1.4286,
+   "ratioMedian": 297.17744640087056,
+   "ratioMin": 216.15309462889527,
+   "ratioMax": 301.38802897418907,
+   "expectedViolations": 33,
+   "shaclViolations": 33,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 199.9817999601364
+  },
+  {
+   "n": 10000,
+   "engine": "jena-shacl",
+   "version": "<development>",
+   "kind": "full",
+   "comparedRuleClasses": "all",
+   "runs": 3,
+   "shaclValidateMsMedian": 676.8934999704361,
+   "proposedMsMedian": 34.7035,
+   "ratioMedian": 21.533790538748875,
+   "ratioMin": 16.624999385255606,
+   "ratioMax": 21.624849784168642,
+   "expectedViolations": 429,
+   "shaclViolations": 429,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 1464.5760000944138
+  },
+  {
+   "n": 10000,
+   "engine": "pyshacl",
+   "version": "0.40.1",
+   "kind": "full",
+   "comparedRuleClasses": "all",
+   "runs": 3,
+   "shaclValidateMsMedian": 60460.08260000963,
+   "proposedMsMedian": 34.7035,
+   "ratioMedian": 1755.3715360095384,
+   "ratioMin": 1470.3126605646048,
+   "ratioMax": 1963.6910130244446,
+   "expectedViolations": 429,
+   "shaclViolations": 429,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 5626.296799979173
+  },
+  {
+   "n": 10000,
+   "engine": "rdf-validate-shacl",
+   "version": "0.6.5",
+   "kind": "full",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 3,
+   "shaclValidateMsMedian": 10053.24799990654,
+   "proposedMsMedian": 21.2151,
+   "ratioMedian": 450.53712214761254,
+   "ratioMin": 436.61745992045877,
+   "ratioMax": 764.8948423573405,
+   "expectedViolations": 372,
+   "shaclViolations": 372,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 956.7292000055313
+  },
+  {
+   "n": 10000,
+   "engine": "shacl-engine-core",
+   "version": "1.1.3",
+   "kind": "full",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 3,
+   "shaclValidateMsMedian": 5867.911599993706,
+   "proposedMsMedian": 21.2151,
+   "ratioMedian": 260.3603644670758,
+   "ratioMin": 212.4444334438582,
+   "ratioMax": 342.9802321635731,
+   "expectedViolations": 372,
+   "shaclViolations": 372,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 986.5879999399185
+  },
+  {
+   "n": 100000,
+   "engine": "jena-shacl",
+   "version": "<development>",
+   "kind": "full",
+   "comparedRuleClasses": "all",
+   "runs": 3,
+   "shaclValidateMsMedian": 6487.036899924278,
+   "proposedMsMedian": 695.6971,
+   "ratioMedian": 9.324513354913048,
+   "ratioMin": 9.228895756869647,
+   "ratioMax": 9.359168947124697,
+   "expectedViolations": 4309,
+   "shaclViolations": 4309,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 4576.986299991608
+  },
+  {
+   "n": 100000,
+   "engine": "rdf-validate-shacl",
+   "version": "0.6.5",
+   "kind": "full",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 3,
+   "shaclValidateMsMedian": 148480.5993000269,
+   "proposedMsMedian": 401.4052,
+   "ratioMedian": 397.66192257843636,
+   "ratioMin": 367.2638895425065,
+   "ratioMax": 401.4555297241929,
+   "expectedViolations": 3720,
+   "shaclViolations": 3720,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 9824.327100038528
+  },
+  {
+   "n": 100000,
+   "engine": "shacl-engine-core",
+   "version": "1.1.3",
+   "kind": "full",
+   "comparedRuleClasses": "SHACL Core subset (VIEW, ACYC, TRACE excluded)",
+   "runs": 3,
+   "shaclValidateMsMedian": 69233.37580001354,
+   "proposedMsMedian": 401.4052,
+   "ratioMedian": 185.42137799159454,
+   "ratioMin": 172.30900068810527,
+   "ratioMax": 187.93390344730028,
+   "expectedViolations": 3720,
+   "shaclViolations": 3720,
+   "engineOnly": 0,
+   "shaclOnly": 0,
+   "unknownShapes": 0,
+   "parseMsMedian": 9605.677500009537
+  }
+ ],
+ "failedRuns": [
+  {
+   "case": "n10000-s1000",
+   "engine": "shacl-engine",
+   "file": "shacl-shacl-engine-data.json",
+   "error": "exit 127 (timeout 5400s if 124)"
+  },
+  {
+   "case": "n10000-s1001",
+   "engine": "shacl-engine",
+   "file": "shacl-shacl-engine-data.json",
+   "error": "exit 127 (timeout 5400s if 124)"
+  },
+  {
+   "case": "n10000-s1002",
+   "engine": "shacl-engine",
+   "file": "shacl-shacl-engine-data.json",
+   "error": "exit 127 (timeout 5400s if 124)"
+  }
+ ],
+ "inputs": {
+  "n1000-s1000/data-post0.ttl": {
+   "bytes": 415133,
+   "sha256": "302ad3ba983145c48e51b0a1aff8539f511e4c69e9e5f723951c5f52143da2f7"
+  },
+  "n1000-s1000/data-post1.ttl": {
+   "bytes": 414935,
+   "sha256": "c9f8b83dd52c61a0376b5ca3b0b5ff05ea6344da56a0b7c55fa7dffe47adf9e8"
+  },
+  "n1000-s1000/data-post2.ttl": {
+   "bytes": 415083,
+   "sha256": "1494602c82629124ce147daf646d910c2704fb098279496b93aeddb2f744c349"
+  },
+  "n1000-s1000/data.ttl": {
+   "bytes": 415115,
+   "sha256": "0deb18e33c5b09463a745fc832223878d3b9f5a4a25ae8d032e6dddc58f5e1bd"
+  },
+  "n1000-s1000/model.json": {
+   "bytes": 170397,
+   "sha256": "bf51842f06a7db9a868f620c5a32ba4ce1034f7cfcaf617d1bec2884d2b1a7d4"
+  },
+  "n1000-s1000/post0.json": {
+   "bytes": 170413,
+   "sha256": "0fa2d30ada640c44610e3f66c971ae88830a3d14bb8c36a8cfbada0695d93981"
+  },
+  "n1000-s1000/post1.json": {
+   "bytes": 170348,
+   "sha256": "905a20f98f7dc42dead42ed7d25de6840f8371187af753dca4c16965f183055c"
+  },
+  "n1000-s1000/post2.json": {
+   "bytes": 170379,
+   "sha256": "115bf4ec8d59766f56752790a7f26f9d453bec7fa1296bfb5842355812bab5e5"
+  },
+  "n1000-s1001/data-post0.ttl": {
+   "bytes": 415022,
+   "sha256": "64bc5b8b5fdabc3e7a6f4b8909e0d15e68568bb604333da832d47b8cb866daf0"
+  },
+  "n1000-s1001/data-post1.ttl": {
+   "bytes": 414859,
+   "sha256": "943da8a7bb0fd91a9df5713259fd5abf52380e52c7090bc4a392352dab9ff737"
+  },
+  "n1000-s1001/data-post2.ttl": {
+   "bytes": 414848,
+   "sha256": "885f7888a9120f773ea2d5112d173a1a47a218d3145fe240cb2a43a156612bf7"
+  },
+  "n1000-s1001/data.ttl": {
+   "bytes": 415039,
+   "sha256": "4126ddf8a9d0f9b1802769183c20f3536866dcffc5e5b3da4b7762d9f04cd665"
+  },
+  "n1000-s1001/model.json": {
+   "bytes": 170417,
+   "sha256": "c27dcbfddebc6e547bbe62e9e169e25adce45bfd21cf9d17b81e52ae31ae7823"
+  },
+  "n1000-s1001/post0.json": {
+   "bytes": 170406,
+   "sha256": "eda1f377430c03eba3130ac17d7a89c2f06b6ddbf264f6fb7489e5fb24d83aa2"
+  },
+  "n1000-s1001/post1.json": {
+   "bytes": 170368,
+   "sha256": "56aee085bbc2dda3e9971802920abc259fc18f90ebc78974be6c52c696bf892c"
+  },
+  "n1000-s1001/post2.json": {
+   "bytes": 170366,
+   "sha256": "bd61d5b99944b0ba6e011d202429863346f7d29ac49bd03024999d8596e0ac6d"
+  },
+  "n1000-s1002/data-post0.ttl": {
+   "bytes": 425618,
+   "sha256": "13068550ecf2e8ce508de24099b8662cde442ffef267414c8cbdc56ad435d73d"
+  },
+  "n1000-s1002/data-post1.ttl": {
+   "bytes": 425617,
+   "sha256": "1992a03196c20b68b0734d3b92d3a923af38f5e6b39f1801f53ed20d01eff238"
+  },
+  "n1000-s1002/data-post2.ttl": {
+   "bytes": 425426,
+   "sha256": "eeda930f124ad1800d0910b078fc7fd146d67713fb853f5314ba01d54edd96f6"
+  },
+  "n1000-s1002/data.ttl": {
+   "bytes": 425618,
+   "sha256": "d8d6123b2d99c80dc2da04de50c39fc07f69c6bf4b509c47ecc33856b4b1f35a"
+  },
+  "n1000-s1002/model.json": {
+   "bytes": 173669,
+   "sha256": "a67016c40dd0998f73dacd2e36f70922b397e8a15707ae34781b6dcfbd7f51fe"
+  },
+  "n1000-s1002/post0.json": {
+   "bytes": 173675,
+   "sha256": "0aa5c106a3c06a990c1758c4589b91e6432efd16570c3d65e37ddf6e551d1d9e"
+  },
+  "n1000-s1002/post1.json": {
+   "bytes": 173674,
+   "sha256": "b7f4a4eb67f6b8fbf8b627ef484061b0dd2862c8757fb8b089e086bd9b28aa10"
+  },
+  "n1000-s1002/post2.json": {
+   "bytes": 173617,
+   "sha256": "17a35561d2b7d1a8b31bef952f5db2da7f199a010db6850f5578ce6062c2085d"
+  },
+  "n10000-s1000/data-post0.ttl": {
+   "bytes": 4266700,
+   "sha256": "2822f51c0c080334a8e816cc51058bbb3d5e725d67b4a62e09e02f9c9a7cad08"
+  },
+  "n10000-s1000/data-post1.ttl": {
+   "bytes": 4266694,
+   "sha256": "a39ffbe82e30392222e4133a267367cd5e70ffc7c694445f863268f07deac9ca"
+  },
+  "n10000-s1000/data-post2.ttl": {
+   "bytes": 4266884,
+   "sha256": "f7b39f6a3f3c7ae317cbe08581f2c5307743d8a28bc08bd1a53c451918058185"
+  },
+  "n10000-s1000/data.ttl": {
+   "bytes": 4266889,
+   "sha256": "2453ae60883e0e510ed18c55ff70872d49cd392dafb6071d40ded8bb198629d7"
+  },
+  "n10000-s1000/model.json": {
+   "bytes": 1779666,
+   "sha256": "c24bde2eaa47b3773f6e6416e1f8e9fc61a980aa202cab77ab1d0cedc26c537d"
+  },
+  "n10000-s1000/post0.json": {
+   "bytes": 1779616,
+   "sha256": "1937f24e6637704be9b02b9bba02b959e66da08de414938e8e0901ffd74d6e90"
+  },
+  "n10000-s1000/post1.json": {
+   "bytes": 1779612,
+   "sha256": "aef3f05b297d1627837d8ebbe3ddc65a9c85c0079b063172841c18d95e26abd8"
+  },
+  "n10000-s1000/post2.json": {
+   "bytes": 1779671,
+   "sha256": "1852e053a00981833617e9b759aaf043f263feb9ca8d5fa5f1c9a2eaabdfd8b3"
+  },
+  "n10000-s1001/data-post0.ttl": {
+   "bytes": 4266296,
+   "sha256": "b0cd992f6161541d083bfbbb56091017a2f7f3ddb9fe5c17e81e8aae17b2bfb1"
+  },
+  "n10000-s1001/data-post1.ttl": {
+   "bytes": 4266313,
+   "sha256": "ed0cd93cbaf327eeb3a636c4e463e99627451b201e77411721e406c087f18aa7"
+  },
+  "n10000-s1001/data-post2.ttl": {
+   "bytes": 4266510,
+   "sha256": "538aa2fd76cf7dfa3878e71d153ae47a9b22401ae5cf1bf21fa0772ac7d56868"
+  },
+  "n10000-s1001/data.ttl": {
+   "bytes": 4266322,
+   "sha256": "9a8b02db66428829509815d742957b91d02f5032e816be052d3c65b01afd8ff1"
+  },
+  "n10000-s1001/model.json": {
+   "bytes": 1779453,
+   "sha256": "6801bc1f9b21a6879fd43d390da3ae95e5d57dbb496add607282e0815749aaae"
+  },
+  "n10000-s1001/post0.json": {
+   "bytes": 1779441,
+   "sha256": "ba81a2ee5188fcd97cd891f915f99a9b4fc815f72b969bf38d8595c938415856"
+  },
+  "n10000-s1001/post1.json": {
+   "bytes": 1779454,
+   "sha256": "b2c3d47e59aa469ce5a36c6497be83c29d25fa5380103c7b42c39221dde91823"
+  },
+  "n10000-s1001/post2.json": {
+   "bytes": 1779519,
+   "sha256": "f813bafa2fb5504f5df4cf4b32c0e09930681ebd64ce394080285dac172ee91b"
+  },
+  "n10000-s1002/data-post0.ttl": {
+   "bytes": 4277145,
+   "sha256": "135f27f99bea8e16bafe90f6bb3840efbb887353db5652332e14612834c1ee21"
+  },
+  "n10000-s1002/data-post1.ttl": {
+   "bytes": 4277523,
+   "sha256": "a6ff62ccebda3cfb93f1e92b35e83b4ca3b23b073345e4ff2d25873bdbf6a984"
+  },
+  "n10000-s1002/data-post2.ttl": {
+   "bytes": 4277349,
+   "sha256": "d181587a91e7d7b0ec0e7aba7510cc97f4403251e54c3d5f31bd5b4302f18390"
+  },
+  "n10000-s1002/data.ttl": {
+   "bytes": 4277327,
+   "sha256": "a1fbd40ba43f15651904c94d2b554cdde543f29bf99b25c86d650b0fefb3bd67"
+  },
+  "n10000-s1002/model.json": {
+   "bytes": 1783008,
+   "sha256": "cecbd6817133db4466f1e4f0e1e0d7c218a3385e89ee0ef35cca7788deff04a8"
+  },
+  "n10000-s1002/post0.json": {
+   "bytes": 1782957,
+   "sha256": "b1ce02deb42dd6dceb34bdf38a99359ade5bfb9ba95c4298f90e81942b2f62d6"
+  },
+  "n10000-s1002/post1.json": {
+   "bytes": 1783074,
+   "sha256": "562588d4c83eee32ccf087ff93a7800fd7b4acf67957a0cd7c9ea3da33f471ae"
+  },
+  "n10000-s1002/post2.json": {
+   "bytes": 1783028,
+   "sha256": "62945776f294fa07d606abb522e215a7f0f993d966e5099ba18f0d9c1324caff"
+  },
+  "n100000-s1000/data-post0.ttl": {
+   "bytes": 43408652,
+   "sha256": "8d85bae61b0d14df92c553c798b3e7eb2dcbd2cdcf1efdd3ddecac25f48c18b4"
+  },
+  "n100000-s1000/data-post1.ttl": {
+   "bytes": 43408652,
+   "sha256": "95c36f3f3ad5d7be47785c10da8a3fd96ccf6cd17aef49465499339ce7a66a17"
+  },
+  "n100000-s1000/data-post2.ttl": {
+   "bytes": 43408854,
+   "sha256": "326c774c5969b85c05f749acf59093fdbb9565e287523a70d87c02e5ee9f4151"
+  },
+  "n100000-s1000/data.ttl": {
+   "bytes": 43408652,
+   "sha256": "169e8e8d6fe97d90224974d942c0db4ae1b0703c2292fa01aaff2e61064973fd"
+  },
+  "n100000-s1000/model.json": {
+   "bytes": 18425625,
+   "sha256": "d7e390bb1620e2e296d0dd5ee7dfd574dab6394c1c49df97e0eb7f01e6ea5ae8"
+  },
+  "n100000-s1000/post0.json": {
+   "bytes": 18425631,
+   "sha256": "eb129d605325f83b4f3d28fb79fb1db6793043a9f4cfb4913dc48674042401f8"
+  },
+  "n100000-s1000/post1.json": {
+   "bytes": 18425631,
+   "sha256": "278e03a76c7180cacab776a35ea570070ace1fb38425043902f3e88bde11fc62"
+  },
+  "n100000-s1000/post2.json": {
+   "bytes": 18425695,
+   "sha256": "882d6fb00e258fa3d00ade07733575c5c20c7a93ebce88626b26a51893e624af"
+  },
+  "n100000-s1001/data-post0.ttl": {
+   "bytes": 43457746,
+   "sha256": "004959e5fc6098637927e4bc54e9a6805ef4458fe51aade0b316fb240e63b5b0"
+  },
+  "n100000-s1001/data-post1.ttl": {
+   "bytes": 43457945,
+   "sha256": "1d9ddc47d5db6d6d406bd7163b185300e46abc1eeb042090a0b86baff5d46a74"
+  },
+  "n100000-s1001/data-post2.ttl": {
+   "bytes": 43457732,
+   "sha256": "31b85f4e6a913d983c050c61475c3c48e637d8924b8393ef5f67eb840ff386d1"
+  },
+  "n100000-s1001/data.ttl": {
+   "bytes": 43457746,
+   "sha256": "004959e5fc6098637927e4bc54e9a6805ef4458fe51aade0b316fb240e63b5b0"
+  },
+  "n100000-s1001/model.json": {
+   "bytes": 18442014,
+   "sha256": "e9f5d76c49d98ffae940d8307cd708b80fb527de0866f5b3c3003971caef817a"
+  },
+  "n100000-s1001/post0.json": {
+   "bytes": 18442020,
+   "sha256": "46f8eca5d29941c575dcaeefbedf6f6977da170eb4844a60f6b53a960780c443"
+  },
+  "n100000-s1001/post1.json": {
+   "bytes": 18442082,
+   "sha256": "259d2b631eed355159ceaba6cc824a7c6e0b25fe036c9bede2aa167f36372709"
+  },
+  "n100000-s1001/post2.json": {
+   "bytes": 18442006,
+   "sha256": "f4d218406b35aa41363aaccedd7d38578b306b11da50165ed4278f96ae4233bc"
+  },
+  "n100000-s1002/data-post0.ttl": {
+   "bytes": 43459655,
+   "sha256": "f7081e61b4174293df0847a4ad115b9c504c07f3d73c3be92c99aae9a1b38566"
+  },
+  "n100000-s1002/data-post1.ttl": {
+   "bytes": 43460053,
+   "sha256": "757dacd31583f796e8e759e95312485ae2784bb3f6ed3937dda670a9ec2339da"
+  },
+  "n100000-s1002/data-post2.ttl": {
+   "bytes": 43460046,
+   "sha256": "a6dfb98a651cd6a40a7c971a8332eb51e207cc60c53660bce630a3e991d69025"
+  },
+  "n100000-s1002/data.ttl": {
+   "bytes": 43459854,
+   "sha256": "e8dc8ad1bee7426ae663d8e9c5c042e7eb9ebfa29ddcf568ec2d65b78f8da07a"
+  },
+  "n100000-s1002/model.json": {
+   "bytes": 18443091,
+   "sha256": "57f4b8a1b71e58f4480ec7ce0a1aa69266ec7ff81207e22ab681018de0f4b093"
+  },
+  "n100000-s1002/post0.json": {
+   "bytes": 18443034,
+   "sha256": "128fd1aafab7b716dd8e9bd6adf5fe386861eb21250f34f004ec7af34db52e88"
+  },
+  "n100000-s1002/post1.json": {
+   "bytes": 18443159,
+   "sha256": "77310c0b0e59bec2043b3f022d08de2b237b204c96025223116215f05f717c5f"
+  },
+  "n100000-s1002/post2.json": {
+   "bytes": 18443161,
+   "sha256": "d7ab03accad70fadc02b5a0e5ee360aeae795f5af17f0771f72fc11f2b346021"
+  }
+ }
+}

@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "command": "node dist-r8\\cli-r8.js wf2 --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/r8",
+    "node": "v22.15.1",
+    "execArgv": [],
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "loadavgAtStart": [
+      0,
+      0,
+      0
+    ],
+    "startedAt": "2026-10-23T03:03:06.343Z",
+    "elapsedSec": 2.6
+  },
+  "catalog": {
+    "id": "sysml-wellformedness",
+    "nodeTypes": [
+      "Requirement",
+      "Function",
+      "Component",
+      "Interface",
+      "Port",
+      "VerificationCase",
+      "View"
+    ],
+    "edgeTypes": [
+      "satisfy",
+      "verify",
+      "allocate",
+      "connect",
+      "contain",
+      "dependOn",
+      "expose",
+      "subject"
+    ],
+    "allowed": {
+      "satisfy": {
+        "src": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ],
+        "tgt": [
+          "Requirement"
+        ]
+      },
+      "verify": {
+        "src": [
+          "VerificationCase"
+        ],
+        "tgt": [
+          "Requirement"
+        ]
+      },
+      "allocate": {
+        "src": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ],
+        "tgt": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ]
+      },
+      "connect": {
+        "src": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ],
+        "tgt": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ]
+      },
+      "contain": {
+        "src": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ],
+        "tgt": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ]
+      },
+      "dependOn": {
+        "src": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ],
+        "tgt": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ]
+      },
+      "expose": {
+        "src": [
+          "View"
+        ],
+        "tgt": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ]
+      },
+      "subject": {
+        "src": [
+          "View"
+        ],
+        "tgt": [
+          "Requirement",
+          "Function",
+          "Component",
+          "Interface",
+          "Port",
+          "VerificationCase",
+          "View"
+        ]
+      }
+    },
+    "requiredAttr": {},
+    "domain": {},
+    "multiplicity": {
+      "Requirement|contain|in": [
+        0,
+        1
+      ],
+      "Function|contain|in": [
+        0,
+        1
+      ],
+      "Component|contain|in": [
+        0,
+        1
+      ],
+      "Interface|contain|in": [
+        0,
+        1
+      ],
+      "Port|contain|in": [
+        0,
+        1
+      ],
+      "VerificationCase|contain|in": [
+        0,
+        1
+      ],
+      "View|contain|in": [
+        0,
+        1
+      ]
+    },
+    "acyclic": [
+      "contain"
+    ],
+    "tracePolicy": [],
+    "nonIsolated": []
+  },
+  "sources": "sysml.library/Systems Library/SysML.sysml (satisfiedRequirement : RequirementUsage[1..1], verifiedRequirement, ViewUsage::exposedElement), Kernel Libraries/Kernel Semantic Library/KerML.kerml (Element::owner : Element[0..1])",
+  "notExpressible": [
+    "PortUsage/PortDefinition: nested usages that are not PortUsages must not be composite (contain(Port, x) with x not a Port needs a guard on the pair of end types; TYPE allows only a product Src x Tgt)",
+    "InterfaceUsage/InterfaceDefinition ends must be PortUsages (S1 maps connection, interface and flow usages to one edge type connect)",
+    "Connector ends must be Features (in levels=all a definition can be a node; the level is not part of tau_V)"
+  ],
+  "configs": [
+    {
+      "mode": "specialization",
+      "levels": "all",
+      "units": 82,
+      "rules": 16,
+      "targetsByRule": {
+        "TYPE:satisfy": 20,
+        "TYPE:verify": 6,
+        "TYPE:allocate": 16,
+        "TYPE:connect": 78,
+        "TYPE:contain": 1323,
+        "TYPE:dependOn": 1,
+        "TYPE:expose": 97,
+        "TYPE:subject": 3,
+        "MULT:Requirement|contain|in": 144,
+        "MULT:Function|contain|in": 675,
+        "MULT:Component|contain|in": 1648,
+        "MULT:Interface|contain|in": 19,
+        "MULT:Port|contain|in": 352,
+        "MULT:VerificationCase|contain|in": 15,
+        "MULT:View|contain|in": 23,
+        "ACYC:contain": 1323
+      },
+      "targetEdgesTypeRulesOriginal": 123,
+      "targetEdgesTypeRulesAll": 1544,
+      "targetEdgesAcyclicContain": 1323,
+      "targetNodesOwnerMultiplicity": 2876,
+      "violations": 0,
+      "violationsByRule": {},
+      "examples": []
+    },
+    {
+      "mode": "specialization",
+      "levels": "usage",
+      "units": 76,
+      "rules": 16,
+      "targetsByRule": {
+        "TYPE:satisfy": 15,
+        "TYPE:verify": 2,
+        "TYPE:allocate": 16,
+        "TYPE:connect": 78,
+        "TYPE:contain": 1045,
+        "TYPE:dependOn": 1,
+        "TYPE:expose": 97,
+        "TYPE:subject": 3,
+        "MULT:Requirement|contain|in": 106,
+        "MULT:Function|contain|in": 474,
+        "MULT:Component|contain|in": 1061,
+        "MULT:Interface|contain|in": 0,
+        "MULT:Port|contain|in": 259,
+        "MULT:VerificationCase|contain|in": 7,
+        "MULT:View|contain|in": 13,
+        "ACYC:contain": 1045
+      },
+      "targetEdgesTypeRulesOriginal": 114,
+      "targetEdgesTypeRulesAll": 1257,
+      "targetEdgesAcyclicContain": 1045,
+      "targetNodesOwnerMultiplicity": 1920,
+      "violations": 0,
+      "violationsByRule": {},
+      "examples": []
+    },
+    {
+      "mode": "keyword",
+      "levels": "all",
+      "units": 80,
+      "rules": 16,
+      "targetsByRule": {
+        "TYPE:satisfy": 15,
+        "TYPE:verify": 6,
+        "TYPE:allocate": 12,
+        "TYPE:connect": 72,
+        "TYPE:contain": 1106,
+        "TYPE:dependOn": 1,
+        "TYPE:expose": 97,
+        "TYPE:subject": 3,
+        "MULT:Requirement|contain|in": 130,
+        "MULT:Function|contain|in": 374,
+        "MULT:Component|contain|in": 1499,
+        "MULT:Interface|contain|in": 19,
+        "MULT:Port|contain|in": 341,
+        "MULT:VerificationCase|contain|in": 15,
+        "MULT:View|contain|in": 23,
+        "ACYC:contain": 1106
+      },
+      "targetEdgesTypeRulesOriginal": 118,
+      "targetEdgesTypeRulesAll": 1312,
+      "targetEdgesAcyclicContain": 1106,
+      "targetNodesOwnerMultiplicity": 2401,
+      "violations": 0,
+      "violationsByRule": {},
+      "examples": []
+    },
+    {
+      "mode": "keyword",
+      "levels": "usage",
+      "units": 71,
+      "rules": 16,
+      "targetsByRule": {
+        "TYPE:satisfy": 13,
+        "TYPE:verify": 2,
+        "TYPE:allocate": 12,
+        "TYPE:connect": 72,
+        "TYPE:contain": 862,
+        "TYPE:dependOn": 1,
+        "TYPE:expose": 97,
+        "TYPE:subject": 3,
+        "MULT:Requirement|contain|in": 97,
+        "MULT:Function|contain|in": 261,
+        "MULT:Component|contain|in": 997,
+        "MULT:Interface|contain|in": 0,
+        "MULT:Port|contain|in": 248,
+        "MULT:VerificationCase|contain|in": 7,
+        "MULT:View|contain|in": 13,
+        "ACYC:contain": 862
+      },
+      "targetEdgesTypeRulesOriginal": 112,
+      "targetEdgesTypeRulesAll": 1062,
+      "targetEdgesAcyclicContain": 862,
+      "targetNodesOwnerMultiplicity": 1623,
+      "violations": 0,
+      "violationsByRule": {},
+      "examples": []
+    }
+  ]
+}

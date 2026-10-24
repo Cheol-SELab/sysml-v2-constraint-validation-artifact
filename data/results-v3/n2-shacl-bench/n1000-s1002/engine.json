@@ -1,0 +1,160 @@
+{
+ "id": "n1000-s1002",
+ "n": 1000,
+ "seed": 1002,
+ "nodes": 1000,
+ "edges": 1535,
+ "defectEdits": 20,
+ "violations": 12,
+ "violationsByClass": {
+  "relationType": 4,
+  "requiredAttr": 2,
+  "multiplicity": 4,
+  "viewConsistency": 2
+ },
+ "engine": {
+  "normalizeMs": 0.7696,
+  "validateSamplesMs": [
+   4.1955,
+   2.8357,
+   3.6564,
+   2.9306,
+   2.8183,
+   2.4573,
+   3.251
+  ],
+  "validateMs": 2.9306,
+  "validateCoreSamplesMs": [
+   1.8629,
+   1.9777,
+   1.5227,
+   1.9303,
+   1.483,
+   1.4472,
+   1.886
+  ],
+  "validateCoreMs": 1.8629
+ },
+ "reference": {
+  "samplesMs": [
+   807.3598,
+   848.4276,
+   787.1055
+  ],
+  "equal": true,
+  "medianMs": 807.3598
+ },
+ "incremental": {
+  "strategy": 3,
+  "edits": 20,
+  "stepSamplesMs": [
+   0.1387,
+   0.2676,
+   0.2724,
+   0.2473,
+   0.249,
+   0.1457,
+   0.1994,
+   0.4896,
+   0.4248,
+   0.594,
+   0.1389,
+   0.5529,
+   0.1965,
+   0.2123,
+   0.2276,
+   0.3203,
+   0.2342,
+   0.1643,
+   0.1851,
+   0.1746
+  ],
+  "stepMedianMs": 0.2309
+ },
+ "post": [
+  {
+   "edit": {
+    "kind": "setAttr",
+    "id": "F94",
+    "attr": "mass"
+   },
+   "violations": [
+    "MULT:Port|contain|in|P129",
+    "MULT:Port|contain|in|P166",
+    "MULT:Requirement|verify|in|R65",
+    "MULT:View|subject|out|W31",
+    "REQ:Component.criticality|C244",
+    "REQ:Component.criticality|C5",
+    "TYPE:connect|edit#d6",
+    "TYPE:contain|edit#d1",
+    "TYPE:contain|edit#d18",
+    "TYPE:satisfy|edit#d10",
+    "VIEW:View|C31,W31",
+    "VIEW:View|P31,W31"
+   ],
+   "batchEqual": true
+  },
+  {
+   "edit": {
+    "kind": "setAttr",
+    "id": "R48",
+    "attr": "priority",
+    "value": 12000
+   },
+   "violations": [
+    "DOM:Requirement.priority|R48",
+    "MULT:Port|contain|in|P129",
+    "MULT:Port|contain|in|P166",
+    "MULT:Requirement|verify|in|R65",
+    "MULT:View|subject|out|W31",
+    "REQ:Component.criticality|C244",
+    "REQ:Component.criticality|C5",
+    "TYPE:connect|edit#d6",
+    "TYPE:contain|edit#d1",
+    "TYPE:contain|edit#d18",
+    "TYPE:satisfy|edit#d10",
+    "VIEW:View|C31,W31",
+    "VIEW:View|P31,W31"
+   ],
+   "batchEqual": true
+  },
+  {
+   "edit": {
+    "kind": "delEdge",
+    "id": "e1136"
+   },
+   "violations": [
+    "ISO:Function|F103",
+    "MULT:Function|allocate|out|F103",
+    "MULT:Port|contain|in|P129",
+    "MULT:Port|contain|in|P166",
+    "MULT:Requirement|verify|in|R65",
+    "MULT:View|subject|out|W31",
+    "REQ:Component.criticality|C244",
+    "REQ:Component.criticality|C5",
+    "TRACE:FUN2REQ|F103",
+    "TYPE:connect|edit#d6",
+    "TYPE:contain|edit#d1",
+    "TYPE:contain|edit#d18",
+    "TYPE:satisfy|edit#d10",
+    "VIEW:View|C31,W31",
+    "VIEW:View|P31,W31"
+   ],
+   "batchEqual": true
+  }
+ ],
+ "violationKeys": [
+  "MULT:Port|contain|in|P129",
+  "MULT:Port|contain|in|P166",
+  "MULT:Requirement|verify|in|R65",
+  "MULT:View|subject|out|W31",
+  "REQ:Component.criticality|C244",
+  "REQ:Component.criticality|C5",
+  "TYPE:connect|edit#d6",
+  "TYPE:contain|edit#d1",
+  "TYPE:contain|edit#d18",
+  "TYPE:satisfy|edit#d10",
+  "VIEW:View|C31,W31",
+  "VIEW:View|P31,W31"
+ ]
+}

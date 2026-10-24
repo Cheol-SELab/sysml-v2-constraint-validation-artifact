@@ -1,0 +1,25 @@
+E6 order-subject n=1000 seed=0 all=27.23ms ops=32645
+E6 order-subject n=1000 seed=1 all=5.62ms ops=32562
+E6 order-subject n=1000 seed=2 all=8.39ms ops=32616
+E6 order-subject n=3000 seed=0 all=21.99ms ops=217833
+E6 order-subject n=3000 seed=1 all=16.22ms ops=217752
+E6 order-subject n=3000 seed=2 all=19.72ms ops=217632
+E6 order-subject n=10000 seed=0 all=180.16ms ops=2125574
+E6 order-subject n=10000 seed=1 all=202.45ms ops=2126022
+E6 order-subject n=10000 seed=2 all=165.17ms ops=2126039
+E6 order-subject n=30000 seed=0 all=1810.38ms ops=18377737
+E6 order-subject n=30000 seed=1 all=1797.17ms ops=18377515
+E6 order-subject n=30000 seed=2 all=1868.08ms ops=18377816
+E6 order-target n=1000 seed=0 all=19.49ms ops=13456
+E6 order-target n=1000 seed=1 all=5.68ms ops=13389
+E6 order-target n=1000 seed=2 all=5.87ms ops=13449
+E6 order-target n=3000 seed=0 all=18.67ms ops=40301
+E6 order-target n=3000 seed=1 all=24.58ms ops=40233
+E6 order-target n=3000 seed=2 all=19.78ms ops=40102
+E6 order-target n=10000 seed=0 all=120.32ms ops=133840
+E6 order-target n=10000 seed=1 all=120.20ms ops=134308
+E6 order-target n=10000 seed=2 all=136.05ms ops=134239
+E6 order-target n=30000 seed=0 all=594.80ms ops=402461
+E6 order-target n=30000 seed=1 all=587.03ms ops=402307
+E6 order-target n=30000 seed=2 all=538.46ms ops=402588
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v2\e6-view-order-comparison.json (153.7 s)

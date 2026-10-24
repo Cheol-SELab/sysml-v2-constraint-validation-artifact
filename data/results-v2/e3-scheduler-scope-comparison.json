@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "command": "node dist/cli-v2.js e3sched --output G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\results-v2",
+    "subcommand": "e3sched",
+    "node": "v22.15.1",
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "maxOldSpaceMiB": 8240,
+    "startedAt": "2026-10-21T04:20:12.647Z",
+    "elapsedSec": 823.3
+  },
+  "experiment": "E3-scheduler-scope",
+  "sizes": [
+    100,
+    500,
+    1000
+  ],
+  "seedsPerCell": 30,
+  "catalogs": [
+    "aerospace",
+    "automotive",
+    "robotics"
+  ],
+  "byScopeMode": {
+    "pre": {
+      "runs": 270,
+      "accepted": 871,
+      "rejectedOverlap": 11067,
+      "rejectedInfeasible": 0,
+      "equationChecks": 270,
+      "equationFailures": 0,
+      "perType": {
+        "D2": 103,
+        "D8": 69,
+        "D7": 270,
+        "D1": 77,
+        "D4": 115,
+        "D3": 100,
+        "D6": 65,
+        "D5": 72
+      }
+    },
+    "prepost": {
+      "runs": 270,
+      "accepted": 871,
+      "rejectedOverlap": 11067,
+      "rejectedInfeasible": 0,
+      "equationChecks": 270,
+      "equationFailures": 0,
+      "perType": {
+        "D2": 103,
+        "D8": 69,
+        "D7": 270,
+        "D1": 77,
+        "D4": 115,
+        "D3": 100,
+        "D6": 65,
+        "D5": 72
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+[2026-10-22 23:15:36] start oracle-scale: ORACLE_DIR=G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/oracle-py node dist-r8/cli-oracle.js scale --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/oracle-scale --work G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/oracle-scale
+pin: affinity=0x4 priority=AboveNormal pid=15968
+node:fs:1364
+  const result = binding.mkdir(
+                         ^
+
+Error: ENOENT: no such file or directory, mkdir 'G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\G;C:\Program'
+    at Object.mkdirSync (node:fs:1364:26)
+    at runOracle (G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\dist-r8\oracle\bridge.js:56:8)
+    at scale (G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\dist-r8\cli-oracle.js:649:44)
+    at main (G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\dist-r8\cli-oracle.js:706:9)
+    at Object.<anonymous> (G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\dist-r8\cli-oracle.js:719:1)
+    at Module._compile (node:internal/modules/cjs/loader:1730:14)
+    at Object..js (node:internal/modules/cjs/loader:1895:10)
+    at Module.load (node:internal/modules/cjs/loader:1465:32)
+    at Function._load (node:internal/modules/cjs/loader:1282:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'mkdir',
+  path: 'G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\G;C:\\Program'
+}
+
+Node.js v22.15.1
+[2026-10-22 23:15:38] end oracle-scale rc=1 elapsed=1s
+[2026-10-23 01:57:22] start oracle-scale: ORACLE_DIR=G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/oracle-py node dist-r8/cli-oracle.js scale --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/oracle-scale --work G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/oracle-scale
+pin: affinity=0x4 priority=AboveNormal pid=73592
+scale n=100 100-1000: engine 1.90 ms, shacl 608 ms (rdf 17 ms)
+scale n=100 100-1001: engine 0.55 ms, shacl 569 ms (rdf 32 ms)
+scale n=100 100-1002: engine 0.98 ms, shacl 587 ms (rdf 34 ms)
+scale n=500 500-1000: engine 2.19 ms, shacl 2832 ms (rdf 105 ms)
+scale n=500 500-1001: engine 2.04 ms, shacl 2800 ms (rdf 110 ms)
+scale n=500 500-1002: engine 2.17 ms, shacl 2846 ms (rdf 87 ms)
+scale n=1000 1000-1000: engine 2.34 ms, shacl 5624 ms (rdf 190 ms)
+scale n=1000 1000-1001: engine 2.41 ms, shacl 5585 ms (rdf 207 ms)
+scale n=1000 1000-1002: engine 2.62 ms, shacl 5701 ms (rdf 236 ms)
+scale n=2000 2000-1000: engine 6.23 ms, shacl 11253 ms (rdf 394 ms)
+scale n=2000 2000-1001: engine 5.31 ms, shacl 11260 ms (rdf 423 ms)
+scale n=2000 2000-1002: engine 5.28 ms, shacl 11131 ms (rdf 474 ms)
+scale n=5000 5000-1000: engine 11.94 ms, shacl 27918 ms (rdf 1001 ms)
+scale n=5000 5000-1001: engine 10.50 ms, shacl 27976 ms (rdf 1100 ms)
+scale n=5000 5000-1002: engine 10.54 ms, shacl 27676 ms (rdf 1163 ms)
+scale n=10000 10000-1000: engine 24.04 ms, shacl 55444 ms (rdf 2263 ms)
+scale n=10000 10000-1001: engine 23.99 ms, shacl 56069 ms (rdf 2396 ms)
+scale n=10000 10000-1002: engine 24.47 ms, shacl 56732 ms (rdf 2283 ms)
+written: results-v4\oracle-scale\shacl-timing.json
+done in 455.3 s
+[2026-10-23 02:04:58] end oracle-scale rc=0 elapsed=456s

@@ -1,0 +1,17 @@
+[2026-10-22 21:49:24] start oracle-random: node --max-old-space-size=16000 dist-r8/cli-oracle.js random --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/oracle-random --work G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/oracle-random
+random fixed aerospace: {"cases":3000,"engineViolations":39716,"oracleViolations":39716,"agreeingCases":3000,"mismatchingCases":0,"mismatchingCasesReference":0,"engineVsReferenceMismatchingCases":0,"referenceSkipped":0,"engineOnlyByRule":{},"oracleOnlyByRule":{},"violationsByRuleClass":{"DOM":5398,"MULT":7544,"REQ":8144,"TYPE":13543,"ISO":2628,"TRACE":1686,"ACYC":554,"VIEW":219},"ruleCountMismatches":0}
+random fixed automotive: {"cases":3000,"engineViolations":39441,"oracleViolations":39441,"agreeingCases":3000,"mismatchingCases":0,"mismatchingCasesReference":0,"engineVsReferenceMismatchingCases":0,"referenceSkipped":0,"engineOnlyByRule":{},"oracleOnlyByRule":{},"violationsByRuleClass":{"DOM":5587,"MULT":7369,"REQ":8180,"TYPE":13214,"ACYC":559,"ISO":2727,"VIEW":173,"TRACE":1632},"ruleCountMismatches":0}
+random fixed robotics: {"cases":3000,"engineViolations":40639,"oracleViolations":40639,"agreeingCases":3000,"mismatchingCases":0,"mismatchingCasesReference":0,"engineVsReferenceMismatchingCases":0,"referenceSkipped":0,"engineOnlyByRule":{},"oracleOnlyByRule":{},"violationsByRuleClass":{"DOM":6185,"REQ":8745,"TYPE":13188,"ACYC":580,"MULT":7304,"VIEW":207,"TRACE":1693,"ISO":2737},"ruleCountMismatches":0}
+random fixed swap-restrictive: {"cases":3000,"engineViolations":39868,"oracleViolations":39868,"agreeingCases":3000,"mismatchingCases":0,"mismatchingCasesReference":0,"engineVsReferenceMismatchingCases":0,"referenceSkipped":0,"engineOnlyByRule":{},"oracleOnlyByRule":{},"violationsByRuleClass":{"DOM":5469,"MULT":7649,"REQ":8278,"TYPE":13258,"TRACE":1661,"ACYC":580,"ISO":2777,"VIEW":196},"ruleCountMismatches":0}
+random fixed counterexample: {"cases":3000,"engineViolations":41088,"oracleViolations":41088,"agreeingCases":3000,"mismatchingCases":0,"mismatchingCasesReference":0,"engineVsReferenceMismatchingCases":0,"referenceSkipped":0,"engineOnlyByRule":{},"oracleOnlyByRule":{},"violationsByRuleClass":{"REQ":8049,"TYPE":13518,"DOM":5316,"ISO":2713,"MULT":7456,"TRACE":3251,"ACYC":569,"VIEW":216},"ruleCountMismatches":0}
+random catalogs 50/400: mismatching 0
+random catalogs 100/400: mismatching 0
+random catalogs 150/400: mismatching 0
+random catalogs 200/400: mismatching 0
+random catalogs 250/400: mismatching 0
+random catalogs 300/400: mismatching 0
+random catalogs 350/400: mismatching 0
+random catalogs 400/400: mismatching 0
+written: results-v4\oracle-random\differential-random.json
+done in 1955.9 s
+[2026-10-22 22:22:01] end oracle-random rc=0 elapsed=1957s

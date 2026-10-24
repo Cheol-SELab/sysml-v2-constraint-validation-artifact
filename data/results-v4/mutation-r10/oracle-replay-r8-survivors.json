@@ -1,0 +1,3706 @@
+{
+  "experiment": "r10-oracle-replay",
+  "command": "G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\r10-mutation\\oracle-replay.js run --cache results-v4/mutation-r10/oracle-cache.json --mutants results-v4/mutation/m4-mutation-analysis.json --output results-v4/mutation-r10/oracle-replay-r8-survivors.json --workers 1",
+  "cache": {
+    "file": "G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\results-v4\\mutation-r10\\oracle-cache.json",
+    "sha256": "b67abeb9a6a9e91eec97ffdae85b01082886bd9947cda2dcd8b91cf969948e8a"
+  },
+  "mutantsFrom": "G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\results-v4\\mutation\\m4-mutation-analysis.json",
+  "method": "mutated snapshot dist; per case E = engineKeys(validate(normalizeToTypedGraph(model))); caughtO = E differs from the cached SHACL-oracle keys or E throws; caughtB = same against the blind SQL oracle on the sanitized blind input (blind set only); engineVsReference = E differs from the mutated reference implementation",
+  "baseline": {
+    "cases": 6150,
+    "caughtO": 0,
+    "caughtB": 0,
+    "crashes": 0,
+    "engineVsReference": 0,
+    "perSet": {
+      "random": {
+        "cases": 3250,
+        "caughtO": 0,
+        "caughtB": 0,
+        "crashes": 0,
+        "engineVsReference": 0
+      },
+      "blind": {
+        "cases": 2900,
+        "caughtO": 0,
+        "caughtB": 0,
+        "crashes": 0,
+        "engineVsReference": 0
+      }
+    },
+    "example": null
+  },
+  "rows": [
+    {
+      "id": 9,
+      "file": "validator/engine.ts",
+      "line": 104,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 192,
+      "caughtB": 128,
+      "crashes": 0,
+      "engineVsReference": 192,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 64,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 64
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 128,
+          "caughtB": 128,
+          "crashes": 0,
+          "engineVsReference": 128
+        }
+      },
+      "example": {
+        "caseId": "rc2-0",
+        "engineOnly": [],
+        "oracleOnly": [
+          "MULT:E|p|in|n1"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "file": "validator/engine.ts",
+      "line": 104,
+      "operator": "CONST",
+      "cases": 6150,
+      "caughtO": 192,
+      "caughtB": 128,
+      "crashes": 0,
+      "engineVsReference": 192,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 64,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 64
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 128,
+          "caughtB": 128,
+          "crashes": 0,
+          "engineVsReference": 128
+        }
+      },
+      "example": {
+        "caseId": "rc2-0",
+        "engineOnly": [],
+        "oracleOnly": [
+          "MULT:E|p|in|n1"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "file": "validator/engine.ts",
+      "line": 156,
+      "operator": "BOOL",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 49,
+      "file": "validator/engine.ts",
+      "line": 254,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 50,
+      "file": "validator/engine.ts",
+      "line": 254,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 59,
+      "file": "validator/engine.ts",
+      "line": 291,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 71,
+      "file": "validator/engine.ts",
+      "line": 340,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 72,
+      "file": "validator/engine.ts",
+      "line": 340,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 73,
+      "file": "validator/engine.ts",
+      "line": 348,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 74,
+      "file": "validator/engine.ts",
+      "line": 348,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 82,
+      "file": "incremental/session.ts",
+      "line": 137,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 95,
+      "file": "incremental/session.ts",
+      "line": 210,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 99,
+      "file": "incremental/session.ts",
+      "line": 217,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 101,
+      "file": "incremental/session.ts",
+      "line": 219,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 107,
+      "file": "incremental/session.ts",
+      "line": 227,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 109,
+      "file": "incremental/session.ts",
+      "line": 230,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 113,
+      "file": "incremental/session.ts",
+      "line": 235,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 115,
+      "file": "incremental/session.ts",
+      "line": 238,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 116,
+      "file": "incremental/session.ts",
+      "line": 241,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 117,
+      "file": "incremental/session.ts",
+      "line": 241,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 119,
+      "file": "incremental/session.ts",
+      "line": 245,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 120,
+      "file": "incremental/session.ts",
+      "line": 249,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 121,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 122,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 123,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 124,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 125,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "CONST",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 135,
+      "file": "incremental/session.ts",
+      "line": 285,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 136,
+      "file": "incremental/session.ts",
+      "line": 287,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 142,
+      "file": "incremental/session.ts",
+      "line": 311,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 143,
+      "file": "incremental/session.ts",
+      "line": 313,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 144,
+      "file": "incremental/session.ts",
+      "line": 313,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 150,
+      "file": "incremental/session.ts",
+      "line": 341,
+      "operator": "INC",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 153,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 154,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 155,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 156,
+      "file": "witness/acyclicWitness.ts",
+      "line": 73,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 159,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 165,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 166,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "INC",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 168,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 178,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 179,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 193,
+      "file": "witness/acyclicWitness.ts",
+      "line": 143,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 194,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 195,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 196,
+      "file": "witness/acyclicWitness.ts",
+      "line": 155,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 197,
+      "file": "witness/acyclicWitness.ts",
+      "line": 156,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 202,
+      "file": "witness/acyclicWitness.ts",
+      "line": 168,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 204,
+      "file": "witness/acyclicWitness.ts",
+      "line": 178,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 206,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 207,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 210,
+      "file": "witness/acyclicWitness.ts",
+      "line": 201,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 219,
+      "file": "witness/traceWitness.ts",
+      "line": 81,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 229,
+      "file": "witness/traceWitness.ts",
+      "line": 104,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 230,
+      "file": "witness/traceWitness.ts",
+      "line": 124,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 245,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 246,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 249,
+      "file": "witness/traceWitness.ts",
+      "line": 190,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 254,
+      "file": "witness/traceWitness.ts",
+      "line": 199,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 259,
+      "file": "witness/traceWitness.ts",
+      "line": 229,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 260,
+      "file": "witness/traceWitness.ts",
+      "line": 232,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 261,
+      "file": "witness/traceWitness.ts",
+      "line": 241,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 262,
+      "file": "witness/traceWitness.ts",
+      "line": 246,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 263,
+      "file": "witness/traceWitness.ts",
+      "line": 246,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 294,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 5674,
+      "caughtB": 2721,
+      "crashes": 1575,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 2953,
+          "caughtB": 0,
+          "crashes": 675,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 2721,
+          "caughtB": 2721,
+          "crashes": 900,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-0",
+        "engineOnly": [],
+        "oracleOnly": [
+          "TYPE:allocate|e1",
+          "TYPE:allocate|e2",
+          "TYPE:connect|e8",
+          "TYPE:contain|e0"
+        ]
+      }
+    },
+    {
+      "id": 295,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 1575,
+      "caughtB": 900,
+      "crashes": 1575,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 675,
+          "caughtB": 0,
+          "crashes": 675,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 900,
+          "caughtB": 900,
+          "crashes": 900,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "rc0-0",
+        "error": "TypeError: Cannot read properties of undefined (reading 'src')"
+      }
+    },
+    {
+      "id": 296,
+      "file": "catalog/rules.ts",
+      "line": 38,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 1223,
+      "caughtB": 803,
+      "crashes": 800,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 420,
+          "caughtB": 0,
+          "crashes": 200,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 803,
+          "caughtB": 803,
+          "crashes": 600,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-21",
+        "engineOnly": [],
+        "oracleOnly": [
+          "VIEW:View|n2,n2"
+        ]
+      }
+    },
+    {
+      "id": 297,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 298,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 302,
+      "file": "catalog/rules.ts",
+      "line": 69,
+      "operator": "BOOL",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 304,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 208,
+      "caughtB": 105,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 103,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 105,
+          "caughtB": 105,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-42",
+        "engineOnly": [
+          "DOM:Component.mass|n5"
+        ],
+        "oracleOnly": []
+      }
+    },
+    {
+      "id": 305,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 278,
+      "caughtB": 154,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 124,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 154,
+          "caughtB": 154,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-72",
+        "engineOnly": [
+          "DOM:Component.mass|n0"
+        ],
+        "oracleOnly": []
+      }
+    },
+    {
+      "id": 306,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 1249,
+      "caughtB": 686,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 563,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 686,
+          "caughtB": 686,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-8",
+        "engineOnly": [],
+        "oracleOnly": [
+          "DOM:Component.mass|n0"
+        ]
+      }
+    },
+    {
+      "id": 307,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 1370,
+      "caughtB": 777,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 593,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 777,
+          "caughtB": 777,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-8",
+        "engineOnly": [],
+        "oracleOnly": [
+          "DOM:Component.mass|n0"
+        ]
+      }
+    },
+    {
+      "id": 309,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 152,
+      "caughtB": 84,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 68,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 84,
+          "caughtB": 84,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-5",
+        "engineOnly": [],
+        "oracleOnly": [
+          "DOM:Requirement.name|n0"
+        ]
+      }
+    },
+    {
+      "id": 310,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 152,
+      "caughtB": 84,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 68,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 84,
+          "caughtB": 84,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-5",
+        "engineOnly": [],
+        "oracleOnly": [
+          "DOM:Requirement.name|n0"
+        ]
+      }
+    },
+    {
+      "id": 311,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "CONST",
+      "cases": 6150,
+      "caughtO": 976,
+      "caughtB": 510,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 466,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 510,
+          "caughtB": 510,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-5",
+        "engineOnly": [
+          "DOM:Requirement.name|n3"
+        ],
+        "oracleOnly": []
+      }
+    },
+    {
+      "id": 312,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 313,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 314,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "BOOL",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 315,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 316,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "BOOL",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 317,
+      "file": "catalog/rules.ts",
+      "line": 104,
+      "operator": "BOOL",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 319,
+      "file": "model/graph.ts",
+      "line": 40,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 320,
+      "file": "model/graph.ts",
+      "line": 46,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 321,
+      "file": "model/graph.ts",
+      "line": 49,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 322,
+      "file": "model/graph.ts",
+      "line": 49,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 323,
+      "file": "model/graph.ts",
+      "line": 49,
+      "operator": "CONST",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 324,
+      "file": "model/graph.ts",
+      "line": 51,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 325,
+      "file": "model/graph.ts",
+      "line": 53,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 326,
+      "file": "model/graph.ts",
+      "line": 53,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 327,
+      "file": "model/graph.ts",
+      "line": 53,
+      "operator": "INC",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 328,
+      "file": "model/graph.ts",
+      "line": 55,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 329,
+      "file": "model/graph.ts",
+      "line": 55,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 330,
+      "file": "model/graph.ts",
+      "line": 55,
+      "operator": "CONST",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 332,
+      "file": "model/graph.ts",
+      "line": 78,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 334,
+      "file": "model/graph.ts",
+      "line": 89,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 335,
+      "file": "model/graph.ts",
+      "line": 94,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 1981,
+      "caughtB": 997,
+      "crashes": 1981,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 984,
+          "caughtB": 0,
+          "crashes": 984,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 997,
+          "caughtB": 997,
+          "crashes": 997,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-0",
+        "error": "TypeError: Cannot read properties of undefined (reading 'push')"
+      }
+    },
+    {
+      "id": 337,
+      "file": "model/graph.ts",
+      "line": 96,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 2007,
+      "caughtB": 1011,
+      "crashes": 2007,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 996,
+          "caughtB": 0,
+          "crashes": 996,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 1011,
+          "caughtB": 1011,
+          "crashes": 1011,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-0",
+        "error": "TypeError: Cannot read properties of undefined (reading 'push')"
+      }
+    },
+    {
+      "id": 340,
+      "file": "model/graph.ts",
+      "line": 102,
+      "operator": "CONST",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 341,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 2007,
+      "caughtB": 1011,
+      "crashes": 2007,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 996,
+          "caughtB": 0,
+          "crashes": 996,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 1011,
+          "caughtB": 1011,
+          "crashes": 1011,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-0",
+        "error": "Error: invalid model input: danglingEndpoint(e7)"
+      }
+    },
+    {
+      "id": 342,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 343,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 2007,
+      "caughtB": 1011,
+      "crashes": 2007,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 996,
+          "caughtB": 0,
+          "crashes": 996,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 1011,
+          "caughtB": 1011,
+          "crashes": 1011,
+          "engineVsReference": 0
+        }
+      },
+      "example": {
+        "caseId": "aerospace-0",
+        "error": "Error: invalid model input: danglingEndpoint(e7)"
+      }
+    },
+    {
+      "id": 345,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "CONST",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 347,
+      "file": "model/graph.ts",
+      "line": 108,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 348,
+      "file": "model/graph.ts",
+      "line": 108,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 349,
+      "file": "model/graph.ts",
+      "line": 108,
+      "operator": "INC",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 350,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 351,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 352,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "CONST",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 361,
+      "file": "model/graph.ts",
+      "line": 153,
+      "operator": "BOOL",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 363,
+      "file": "model/graph.ts",
+      "line": 154,
+      "operator": "BOOL",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 370,
+      "file": "model/graph.ts",
+      "line": 193,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 371,
+      "file": "model/graph.ts",
+      "line": 197,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 372,
+      "file": "model/graph.ts",
+      "line": 201,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 374,
+      "file": "model/graph.ts",
+      "line": 208,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 375,
+      "file": "model/graph.ts",
+      "line": 209,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 377,
+      "file": "model/graph.ts",
+      "line": 214,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 378,
+      "file": "model/graph.ts",
+      "line": 228,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 379,
+      "file": "model/graph.ts",
+      "line": 233,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 380,
+      "file": "model/graph.ts",
+      "line": 238,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 382,
+      "file": "model/graph.ts",
+      "line": 245,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 383,
+      "file": "model/graph.ts",
+      "line": 248,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 384,
+      "file": "model/graph.ts",
+      "line": 252,
+      "operator": "STMT",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 385,
+      "file": "model/graph.ts",
+      "line": 267,
+      "operator": "LCR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 387,
+      "file": "model/graph.ts",
+      "line": 272,
+      "operator": "ROR",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    },
+    {
+      "id": 389,
+      "file": "model/graph.ts",
+      "line": 277,
+      "operator": "NEG",
+      "cases": 6150,
+      "caughtO": 0,
+      "caughtB": 0,
+      "crashes": 0,
+      "engineVsReference": 0,
+      "perSet": {
+        "random": {
+          "cases": 3250,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        },
+        "blind": {
+          "cases": 2900,
+          "caughtO": 0,
+          "caughtB": 0,
+          "crashes": 0,
+          "engineVsReference": 0
+        }
+      },
+      "example": null
+    }
+  ],
+  "seconds": 116.411,
+  "toolSha256": "cbf6c76c862ee7affee9886a4fbcac4bf80a9d060022812419c1e06a1bf05a88"
+}

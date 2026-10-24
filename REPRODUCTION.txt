@@ -1,0 +1,54 @@
+Reproduction preparation (Windows; not performed as part of this editorial revision)
+
+1. Keep the published checkout untouched. Copy or clone this repository AGAIN into a new ASCII path
+   without spaces, for example C:/research/access-run-001. Never use the research repository
+   or an earlier run directory. The attachment stores historical data in data/, not code/results-v4.
+2. Prerequisites: Windows, Git for Windows/Git Bash (bash, cygpath, timeout, git), Windows
+   PowerShell, Node.js (recorded version 22.15.1), npm and Python 3.11. Corpus retrieval
+   and dependency installation require network access. The historical timing driver assumes
+   logical CPU 2 exists and requests affinity mask 0x4/AboveNormal; inspect the host mapping.
+3. From the NEW extraction root, before any generated files:
+     python -B verify_public.py
+     python -B ieee-access/check_reproduction.py
+4. In Git Bash, from that NEW extraction root:
+     cd code
+     npm ci --ignore-scripts
+     python -m venv oracle-py/.venv
+     oracle-py/.venv/Scripts/python.exe -m pip install -r oracle-py/requirements-lock.txt
+     python -B tools/fetch-corpus.py
+     node node_modules/typescript/bin/tsc -p tsconfig.r8.json
+     test ! -e results-v4 || { echo 'STOP: output already exists'; exit 1; }
+     node tools/snapshot-r8.js
+   The snapshot prepares results-v4/snapshot/tree and records this NEW build, not the original
+   historical snapshot. The corpus manifest preserves tag/file identities; this fetched export
+   need not recreate corpus-history/repo, so the snapshot's git tag-ref probe can report unavailable.
+   Use corpus-manifest.json for the fetched tag identities.
+5. To intentionally run a reproduction, choose the driver mode only AFTER preparation:
+     export MSYS_NO_PATHCONV=1
+     bash tools/run-r8-final.sh correctness
+   or (strictly serialized, with no other benchmark work running):
+     export MSYS_NO_PATHCONV=1
+     bash tools/run-r8-final.sh timing
+   Each mode is an expensive research execution. Do not rerun a mode in the same working copy.
+   Inspect results-v4/logs/exit-codes.txt and every job log: the driver's overall exit status
+   does not certify each child job succeeded. pin.ps1 catches affinity/priority failures;
+   any 'could not set affinity/priority' message means the requested placement was not established.
+   The helper launches before applying affinity, so it does not guarantee placement from startup.
+   No timing execution, affinity validation or empirical replication was done in this revision.
+
+Dependency provenance and N2 limitation
+
+pin.ps1 is included with its current SHA-256 as a supplemental source. Its identity was NOT
+captured in the historical 85-source snapshot; inclusion now does not retroactively establish it.
+The original historical source manifest and data bytes remain unchanged.
+The original run-r8-final.sh and snapshot-r8.js are retained without rewriting historical code.
+The driver includes historical diagnostic jobs (including a legacy expose diagnostic); any newly
+created outputs are reproduction diagnostics, not replacements for the manuscript evidence.
+This driver is not an exhaustive recipe for every later mutation/analysis extension; table and
+claim indexes identify the relevant retained evidence and source modules separately.
+
+N2 table audit: python -B ieee-access/audit_shacl.py exactly reaggregates retained samples and
+checks the paired-edit sensitivity paragraph. This does not reconstruct the original N2 binary:
+Jena records only <development>, and the main snapshot has later list-on-read behavior. The
+N2 comparison numbers remain historical observations, not new measurements from the included code.
+

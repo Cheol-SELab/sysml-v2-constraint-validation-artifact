@@ -1,0 +1,14 @@
+table_label,evidence_paths_in_attachment,audit_or_aggregation,code_identity,boundary
+tab:position,ieee-access/main.tex;ieee-access/references.tex,"Literature mapping; illustrative cases, no measured comparison",none,No experiment
+tab:s1map,code/src/sysml/normalize.ts;code/src/sysml/parser.ts,Read mapping and loss branches,recorded main snapshot,Source interpretation contract
+tab:rules,code/src/catalog/rules.ts;code/src/reference/referenceSemantics.ts,Compare template and evidence projection definitions,recorded main snapshot,Mathematical specification
+tab:exmodel,data/results-v4/r5-example/,Read worked-example recorded stage outputs; node verify-numbers.js,recorded main snapshot,Illustrative case
+tab:evidence,ieee-access/claims-evidence.csv,Follow implementation-specific claims to evidence,mixed identities explicitly separated,Do not transfer test coverage
+tab:timing,data/results-v4/n14/n14-e5-history.json;data/results-v4/sysml/x5-timing.json,node verify-numbers.js; python -B ieee-access/verify.py,recorded main snapshot,Maintenance and list costs separate
+tab:e3,data/results-v4/e3/;data/results-v4/r5-e3e4/,node verify-numbers.js; code/src/experiments/e3v2.ts,recorded main snapshot,Specification consistency
+tab:shacl,data/results-v3/n2-shacl-bench/n2-summary.json;data/results-v3/n2-shacl-bench/compare.json;data/results-v3/n2-shacl-bench/engine-cases.json,python -B ieee-access/audit_shacl.py; code/bench-shacl/summarize.mjs,Separate N2 session; runtime identities in per-input records; main-snapshot harness is not reassigned to historical execution,Per-seed ratios; 20-edit median denominators; Jena runtime version incomplete
+tab:e5,data/results-v4/e5/e5-incremental-v4.json,node verify-numbers.js; code/src/experiments/e5v2.ts,recorded main snapshot,Maintenance-only incremental costs
+tab:e6,data/results-v4/e6/,node verify-numbers.js; code/src/experiments/e6v2.ts,recorded main snapshot,Kernel costs; historical fitted exponents
+tab:hyp,data/results-v4/;ieee-access/claims-evidence.csv,node verify-numbers.js; follow E1-E7 evidence rows,recorded main snapshot with N2 separately marked,Retained historical verdicts
+tab:workloads,code/src/generator/syntheticModelGenerator.ts;code/src/oracle/randomModels.ts;code/src/experiments/e5v2.ts;code/src/verification/propertyTests.ts,Inspect generation and selection branches; no experiment rerun,recorded main snapshot,Attempt counts differ from applied edits and unique changed elements
+tab:example-io,data/results-v4/r5-example/worked-example.json;data/results-v4/r8/n17-worked-example-sysml.json,python -B ieee-access/audit_example.py,recorded main snapshot,"Independent edits from clean graph; exact stored-report excerpts, not a public API schema"

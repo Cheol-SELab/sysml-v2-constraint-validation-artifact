@@ -1,0 +1,452 @@
+[
+  {
+    "path": "code/bench-shacl/jena/dependency-reduced-pom.xml",
+    "sha256": "a7f61f385027cddbd62fa90ec1c566e8fb73c250af0a0d4b04600494cdb9293c",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/bench-shacl/jena/pom.xml",
+    "sha256": "494d3513659f5c041a02cbde71654cdb1f940a1696b6ce01e991ccfcea4aef4c",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/bench-shacl/jena/src/main/java/bench/RunJena.java",
+    "sha256": "34bf21db23ef958e192021bfadb35d6a71e895652081d29fdcedaabf916bd9e9",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/bench-shacl/package-lock.json",
+    "sha256": "c151c952fc9b4faec4aced68e9bc2bd9805221e1d1433cfaf1c421592fcaedc1",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/bench-shacl/package.json",
+    "sha256": "8a144b86df854b696aa7b1381521ce4a22655533803a7aa21bce5a7308b9dc9b",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/bench-shacl/run-bench.sh",
+    "sha256": "7d7505b85b6ac111eb9c1d99a8f8b0b1816b82d1d90ab3f92a0cfc5d8b820912",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/bench-shacl/run-js.mjs",
+    "sha256": "7adc9738656be946597eb2c68341cf76d053d4132311b9d77e650c9306576e1e",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/bench-shacl/summarize.mjs",
+    "sha256": "cbebb6557304d4822284720ece431d5b9b60ff9f8ce0f596532512de210a53ce",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/blind-compare/run_blind_on.py",
+    "sha256": "8ed910223353ae8f0848265c9cf36a2ab67cba8d5b4290061c0f3c45522c0917",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/examples/public-models/omg-training-vehicle.json",
+    "sha256": "c2464f8b7d20af704e7492ec4f6c2c0adf8c46976aa269ca075a18318c9e1cca",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/examples/public-models/vehicle-powertrain-case.json",
+    "sha256": "63263a4b3cbbbac23f6b7ec0fbe7099bf9d55b80e99889774371c7fab206764d",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/examples/worked-example-sysml/examples/UAV Excerpt/uav-excerpt.sysml",
+    "sha256": "3ebfdff21026151849faef3480fa53e2016fe231d73951cca122acc3430df2e0",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/export_ttl.py",
+    "sha256": "5f3dee0b80d790d36821efecc4500211d75368e2528a2f07f226882e34d701c2",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/oracle_spec.py",
+    "sha256": "8b2aa5941004865aaecacbc4d9aec069f502d738ee231241226f48f79bb176d6",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/rdf_export.py",
+    "sha256": "44a6aa25605f2551cc955a208e481379cd102c3b0d6872198216739c3150dca6",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/requirements-lock.txt",
+    "sha256": "fc614a544e23e6206ab89bcb6846c02c990e94d95553f760dd7bacc2c96c24c6",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/run_oracle_multi.py",
+    "sha256": "921c4aa6e8cda302ed5db46869021688f4441fadc769a1ba8a5fd97e37d6bef0",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/run_oracle.py",
+    "sha256": "a40f82d9186074c6645cd2ae3a7ed0c8382719cc015aca8a52e457c1c2603069",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/shapes_core.py",
+    "sha256": "2f19ea75a7de486ab9b2e0c3510fcebc507b5fcd74fd21a7a64d3c5c1de82220",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/shapes.py",
+    "sha256": "873e51e8e78296d1d0cd33b5902eac5604a586de1b49f8b8c09051f3de3a9675",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/shared_code_mutants.py",
+    "sha256": "f038e8eff7114ea8cc2c91573b4b165af130bf3808e8c7c642ce8640e8037d9c",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/test_oracle.py",
+    "sha256": "248bed31b5b93bd2429ce8aa1c7bc073ce485216f1b20b441977292b7c9b055f",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/oracle-py/time_pyshacl.py",
+    "sha256": "746b6417bd8a7f687faaf0efe8e01df55cf7f699fc088dc71da9f76c99cc3b57",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/package-lock.json",
+    "sha256": "19f3c9aacb822bafb7c8629ce36377cd60b07edc5a52f8f10b8a2a4b892f28cb",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/package.json",
+    "sha256": "9c47b11b4d6379cb8a5cbe044c2efc35a3096e2f9cd2d91186cbc4a3f1df4c09",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/catalog/domains.ts",
+    "sha256": "d60c2c1164a0d22ffbfaac0702d1ff06ddc9a2b68acf3282915c4541eb64c545",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/catalog/rules.ts",
+    "sha256": "aa8a5187a59b3c5471c9d49171166a67d9d4ee1b7855f4c2480ddf421b5f8fd6",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/cli-bench-shacl.ts",
+    "sha256": "9b673c84ba7364254ebf9de86477d98ea0043f8beb2dca801c5d3c672cd9f469",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/cli-blind.ts",
+    "sha256": "8969229030b880ee01312b71c0a5fb994f84bc6e5b9a97e61ad4b151c705f4e2",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/cli-oracle.ts",
+    "sha256": "4ca08b84ba050ff60d35df77f194d0e0adbc4ffe63f02c4beab66a307897d8af",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/cli-r8.ts",
+    "sha256": "099fbbf318c8450b367c3d0c23dc385ede31772e49d4590ad0edbf922ac66c49",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/cli-spec-oracle.ts",
+    "sha256": "660caefdc34892e2a0cb065ed2f0021e4dae8abae6cf8e89b66d6c452132144a",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/cli-sysml.ts",
+    "sha256": "7f54dcc7cc48ccc2a19f922c962260c0e0a50a37663e0bf92273075b1349ebb0",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/cli-v2.ts",
+    "sha256": "5d7bf50df497a14810e9f3b3a14382f660d4949da2b379610c728192dad8bd0f",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/cli.ts",
+    "sha256": "4e488aaa1a6e8a54b35af2973eaeb3780b6088ced43d545cab14933f751cd099",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/evaluation/baselines.ts",
+    "sha256": "b9c5ac7dace1a259908dac43e328f8dcf36c9b7766dcb6f844962bb77b0d5e5a",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/evaluation/metrics.ts",
+    "sha256": "fed44318ae7735d7e1c05dd990cc8e8b5c8c6ba4e47785164813b27f24fbfc58",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/evaluation/stats.ts",
+    "sha256": "a13bec609b20ba54c39aa8bb47fd649dbfcd3138ea2e1fcac4fe51b1720cdd73",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/experiments/e1e4.ts",
+    "sha256": "9f6d48db58812fcd0f174cc0e5f1db0d59f4adc7d38332a31c887b0ccfd94695",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/experiments/e1v2.ts",
+    "sha256": "f19bf7daadd1a57daa244c83e4fc74c8037228a9e68e003461d1568a77922947",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/experiments/e3sched.ts",
+    "sha256": "3695c90550a382e632741f0146070d26183d92f50384eab4cf1a7afa002e14bb",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/experiments/e3v2.ts",
+    "sha256": "6c32aa35e15947b778a52a83c19e45484cdf0ac72541218b6d1c0bfd86c5be36",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/experiments/e5e7.ts",
+    "sha256": "7f3b50b59ba91fd3a936b0d2a195875e3bde6a4071da6e25d8ee39907b76d718",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/experiments/e5history.ts",
+    "sha256": "1cf60a1d46fa92e02821adfe8864f58ca9debb6b168dfec4b95abef90782c12a",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/experiments/e5v2.ts",
+    "sha256": "fa60c5de7db0c7ec70be55aee315a5159790b98a6ac077dac625debbb8e04aa7",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/experiments/e6v2.ts",
+    "sha256": "4ba06d08c2e04b05f3bd063a1b6a16d664e33d98751726f3dd0679aaa5c516f8",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/experiments/workedExample.ts",
+    "sha256": "b5332227771fcd10b07cc62c36a401b82f7df7d74c4514661cd36727d20ca0d8",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/generator/counterexampleFamily.ts",
+    "sha256": "ae4d6e92d297c87bae95e9d39a41b0bfb292d38d28e1f91ef79ff3d19ddf9a7a",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/generator/hubGenerator.ts",
+    "sha256": "5af5a03759495545029ffc1dfe18e2c0b6ddc98d62dd1f4b0fd76183d3a6f364",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/generator/syntheticModelGenerator.ts",
+    "sha256": "a294ab144c822a102e5501d55266ad6e53a30782107c39810a639e6bd8098cb7",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/incremental/session.ts",
+    "sha256": "61fc72b6f3a06a2a58de1a697a002b38994792e2a67e598c0b21c2d700d1dfb6",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/injector/defectInjector.ts",
+    "sha256": "f65791c772c852fccc5d4fa1e278172f48d0a5a98a3842b9b22c7289fb18e735",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/injector/defectOperators.ts",
+    "sha256": "c93ad00094d738f7a3c2af35a86da525fdfd728533468f7bb474f8ed33924f3e",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/model/graph.ts",
+    "sha256": "798fcb25b25a5a8611e1b16bedfdfffe4ebcd674ffe2dd71dbd8c3c847b460e1",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/model/types.ts",
+    "sha256": "e192d715c1430a09cfac403e35bc7b0497d61ad437194d95f83645950d724b2d",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/oracle/bridge.ts",
+    "sha256": "367865410d76926132f7093aabf81c900e6a3e3c351677d080fb9803c49fb35a",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/oracle/compare.ts",
+    "sha256": "51021689403422d17bb9f62422c73a81a0a0f2e99e80e7d23d8002dfe575a213",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/oracle/randomModels.ts",
+    "sha256": "9e0974216209a9e4b961c8e16b38fc88dff72fdac5ccf73224d5b5f7265d28a9",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/reference/referenceSemantics.ts",
+    "sha256": "1f5fe5b605b38d08e6c751c234438fc7da5aa4fae195f1eace14002d9799a72f",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/sysml/adjudicate.ts",
+    "sha256": "b8d23725ab98f25f8834b0b4a78d0594cc2c91434ea68ed870448f9644cf8d9b",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/sysml/corpus.ts",
+    "sha256": "01f53f02abd50c881f835c5854c9bc7004099d8a13a9979175169d0bee4b18b2",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/sysml/experiments.ts",
+    "sha256": "af723d9a352cce7f1fac1900b02d04c52a29c30be5b4c94c348f0799adbeae24",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/sysml/lexer.ts",
+    "sha256": "813578256414b550e365e79c944864ad10fa230c1fedd6f9de5a7af22d31cf05",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/sysml/normalize.ts",
+    "sha256": "d75d6302a9b4dbdc131cbd72615bc85597f3a2f9796b92c4fef8868ad2aac730",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/sysml/parser.ts",
+    "sha256": "f70ebf24c09eaad4bd8d1fae09b72916ae5f6540a08835629413b6c8004f124b",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/sysml/selftest.ts",
+    "sha256": "c93360900a850379033f3f57901cb66ad120fded69b37e42050aba925531cb07",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/sysml/semantics.ts",
+    "sha256": "65bb10a69538332a6393bcd2331e0f85f94b68e21ec66c70bc305f17aeb48dd8",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/sysml/specEngine.ts",
+    "sha256": "8d93d124e940ef9f82ccf1c4e96887aabb8c40b36abfebd2980651fc8f4e20c7",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/util/rng.ts",
+    "sha256": "14f7d5c156bee20185ea45fe883658728a2c35aeebc13cead9e27dec392a7b8f",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/util/timing.ts",
+    "sha256": "87f1d3fd418512921b4c037a5cab16f126ff278dc6e6f6f87933ef9fea59e842",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/validator/engine.ts",
+    "sha256": "c6b09f34e5642e85428aa139223745dd0c3ff01abc0ee786857041b502c85303",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/validator/engineCsr.ts",
+    "sha256": "c9c22d0f7c1bed5d54b6f6c0170df0bdd2be9ad4dc9f7570bdff9dc9121a71d6",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/verification/boundedExhaustive.ts",
+    "sha256": "88289ce9d0892a6cb6454fc9c03c50774e8fdc6662c4e2147d605fd9b7a7eb2c",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/verification/invarianceTests.ts",
+    "sha256": "fe436936830bd5dfe669718138f2c44e31df66f6f045a89765ef7a8a51c4de53",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/verification/modelChanges.ts",
+    "sha256": "85bc0715e65afdceda04df3808fa4415f8607fa60358610f06b31a839a7cf9ad",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/verification/mutationAnalysis.ts",
+    "sha256": "c15d320a42a94efc6ef28125cb36beb4efceb0f9fee9e601007b194f38f7aeb7",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/verification/mutationHarness.ts",
+    "sha256": "e66a8dd95b9791bd83bc8a270bbee77716fc16be919b25ef6949f7fb4ac11796",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/verification/propertyTests.ts",
+    "sha256": "761a8af23c982b7dbdadc17931eeb201608223b2e9e5eb35c4f5d94c2fb70c1f",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/witness/acyclicWitness.ts",
+    "sha256": "0c27f5d8cf651fe63bf4ef90954b682c5b5a7f615b67cfd2db375c14452608cd",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/witness/tarjan.ts",
+    "sha256": "384f36410f5fec6495f76ce1d1d67c3d9cc42fa7a4dc4427a9f98bcfb4e318ab",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/src/witness/traceWitness.ts",
+    "sha256": "058cc3582aee435d66fcfc61668ef9fae21b6590a298c5a9503a36617713c5f0",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/tools/run-r8-final.sh",
+    "sha256": "3aec5f8812282aec063cf1c66409a75d29f020cbbf2c7f4ecf6d1d820b4bf5ea",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/tools/snapshot-r8.js",
+    "sha256": "d02a43f10fef419825d8d31beaf77d4b4f6616de4fe6410adf9280d844ea08a4",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/tsconfig.json",
+    "sha256": "1941ac21adc4781427d754a0e87e122c664ae29e1e32147d096452971735a04b",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/tsconfig.r8.json",
+    "sha256": "b2130e9571a8c42250d2634738c7db9eac749ab3cf9ef64c25a225c5ecc2c458",
+    "identity": "recorded main snapshot"
+  },
+  {
+    "path": "code/r10-mutation/classify-survivors.js",
+    "sha256": "089f8630c3162cccdc404f6badb77f9abf4b0643637ed685126da3727f92a567",
+    "identity": "supplemental current source; not reassigned to historical run"
+  },
+  {
+    "path": "code/r10-mutation/harness-r10.js",
+    "sha256": "9ac8dfadd91208e1fe3cde091fa03095eae9d85f7a4d7a5990094940cd3156b9",
+    "identity": "supplemental current source; not reassigned to historical run"
+  },
+  {
+    "path": "code/r10-mutation/oracle-replay.js",
+    "sha256": "cbf6c76c862ee7affee9886a4fbcac4bf80a9d060022812419c1e06a1bf05a88",
+    "identity": "supplemental current source; not reassigned to historical run"
+  },
+  {
+    "path": "code/r10-mutation/run-mutation-r10.js",
+    "sha256": "0220606decdc7661d0bbd5e55a08f81ccb9f1fd09d73372a63f19187f40b09a8",
+    "identity": "supplemental current source; not reassigned to historical run"
+  },
+  {
+    "path": "code/tools/pin.ps1",
+    "sha256": "9c169b220ee73b6c8f61c7825305d7717f45aa9b29a044c5c3978412c8f89a5a",
+    "identity": "supplemental current source; not reassigned to historical run"
+  }
+]

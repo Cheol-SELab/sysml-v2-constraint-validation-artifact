@@ -1,0 +1,6 @@
+E3/E4: defect injection under the exact oracle, and baseline separation
+written: results-v2\r5-recheck-e3e4\e3-detection-accuracy.json
+written: results-v2\r5-recheck-e3e4\e4-expressiveness-separation.json
+written: results-v2\r5-recheck-e3e4\e3-raw-records.json
+done in 359.9 s
+rc=0

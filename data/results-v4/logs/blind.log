@@ -1,0 +1,32 @@
+[2026-10-22 22:56:24] start blind: node dist-r8/cli-blind.js --blind G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/../oracle-blind --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/n20-blind --work G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/blind
+oracle batches 4/23
+oracle batches 8/23
+oracle batches 12/23
+oracle batches 16/23
+oracle batches 20/23
+oracle batches 23/23
+written G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\n20-blind\n20-blind-threeway.json
+{
+ "storedReproduced": true,
+ "totals": {
+  "E": 36514,
+  "O": 36514,
+  "B": 37612,
+  "Bsan": 36514,
+  "R": 36514
+ },
+ "mismatchCases": {
+  "EvsO": 0,
+  "EvsB": 929,
+  "OvsB": 929,
+  "EvsBsan": 0,
+  "OvsBsan": 0,
+  "EvsRef": 0
+ },
+ "patterns": {
+  "B": 1227,
+  "EO": 129
+ },
+ "patternsSan": {}
+}
+[2026-10-22 23:00:23] end blind rc=0 elapsed=239s

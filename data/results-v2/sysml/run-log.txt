@@ -1,0 +1,6 @@
+wrote G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v2\sysml in 52 s
+
+real	0m52.813s
+user	0m0.031s
+sys	0m0.077s
+rc=0

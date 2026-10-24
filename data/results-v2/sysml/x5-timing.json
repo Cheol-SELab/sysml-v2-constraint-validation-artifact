@@ -1,0 +1,775 @@
+{
+ "experiment": "X5 validation time on real SysML v2 models (spec mode, aerospace catalog)",
+ "environment": {
+  "node": "v22.15.1",
+  "platform": "win32",
+  "arch": "x64"
+ },
+ "perUnit": [
+  {
+   "unit": "examples/Analysis Examples",
+   "nodes": 57,
+   "edges": 24,
+   "s1NormalizeMs": 39.028,
+   "batchValidateMs": 0.338,
+   "incrementalMedianMs": 0.4509,
+   "incrementalMaxMs": 1.6993
+  },
+  {
+   "unit": "examples/Arrowhead Framework Example",
+   "nodes": 57,
+   "edges": 30,
+   "s1NormalizeMs": 10.52,
+   "batchValidateMs": 0.2567,
+   "incrementalMedianMs": 0.2615,
+   "incrementalMaxMs": 0.7122
+  },
+  {
+   "unit": "examples/Association Examples",
+   "nodes": 8,
+   "edges": 0,
+   "s1NormalizeMs": 11.91,
+   "batchValidateMs": 0.0341,
+   "incrementalMedianMs": 0.0777,
+   "incrementalMaxMs": 6.6678
+  },
+  {
+   "unit": "examples/Camera Example",
+   "nodes": 9,
+   "edges": 4,
+   "s1NormalizeMs": 10.824,
+   "batchValidateMs": 0.0455,
+   "incrementalMedianMs": 0.0921,
+   "incrementalMaxMs": 0.1337
+  },
+  {
+   "unit": "examples/Cause and Effect Examples",
+   "nodes": 15,
+   "edges": 7,
+   "s1NormalizeMs": 11.475,
+   "batchValidateMs": 0.0775,
+   "incrementalMedianMs": 0.1325,
+   "incrementalMaxMs": 0.2515
+  },
+  {
+   "unit": "examples/Comment Examples",
+   "nodes": 1,
+   "edges": 0,
+   "s1NormalizeMs": 11.012,
+   "batchValidateMs": 0.012,
+   "incrementalMedianMs": 0.0339,
+   "incrementalMaxMs": 0.4354
+  },
+  {
+   "unit": "examples/Flashlight Example",
+   "nodes": 14,
+   "edges": 11,
+   "s1NormalizeMs": 9.818,
+   "batchValidateMs": 0.1001,
+   "incrementalMedianMs": 0.1435,
+   "incrementalMaxMs": 0.2483
+  },
+  {
+   "unit": "examples/Geometry Examples",
+   "nodes": 42,
+   "edges": 28,
+   "s1NormalizeMs": 33.431,
+   "batchValidateMs": 0.1179,
+   "incrementalMedianMs": 0.1502,
+   "incrementalMaxMs": 0.4887
+  },
+  {
+   "unit": "examples/Import Tests",
+   "nodes": 17,
+   "edges": 0,
+   "s1NormalizeMs": 10.438,
+   "batchValidateMs": 0.0767,
+   "incrementalMedianMs": 0.1034,
+   "incrementalMaxMs": 0.2015
+  },
+  {
+   "unit": "examples/Individuals Examples",
+   "nodes": 15,
+   "edges": 4,
+   "s1NormalizeMs": 58.597,
+   "batchValidateMs": 0.0749,
+   "incrementalMedianMs": 0.0686,
+   "incrementalMaxMs": 0.1505
+  },
+  {
+   "unit": "examples/Interaction Sequencing Examples",
+   "nodes": 86,
+   "edges": 38,
+   "s1NormalizeMs": 20.964,
+   "batchValidateMs": 0.5463,
+   "incrementalMedianMs": 0.4427,
+   "incrementalMaxMs": 3.5332
+  },
+  {
+   "unit": "examples/Mass Roll-up Example",
+   "nodes": 30,
+   "edges": 16,
+   "s1NormalizeMs": 23.851,
+   "batchValidateMs": 0.2057,
+   "incrementalMedianMs": 0.1359,
+   "incrementalMaxMs": 1.2212
+  },
+  {
+   "unit": "examples/Metadata Examples",
+   "nodes": 19,
+   "edges": 4,
+   "s1NormalizeMs": 10.502,
+   "batchValidateMs": 0.0541,
+   "incrementalMedianMs": 0.0683,
+   "incrementalMaxMs": 5.9559
+  },
+  {
+   "unit": "examples/Packet Example",
+   "nodes": 5,
+   "edges": 0,
+   "s1NormalizeMs": 11.545,
+   "batchValidateMs": 0.0317,
+   "incrementalMedianMs": 0.0288,
+   "incrementalMaxMs": 0.1356
+  },
+  {
+   "unit": "examples/Requirements Examples",
+   "nodes": 32,
+   "edges": 16,
+   "s1NormalizeMs": 16.242,
+   "batchValidateMs": 0.1207,
+   "incrementalMedianMs": 0.1807,
+   "incrementalMaxMs": 0.4019
+  },
+  {
+   "unit": "examples/Room Model",
+   "nodes": 17,
+   "edges": 7,
+   "s1NormalizeMs": 17.512,
+   "batchValidateMs": 0.0807,
+   "incrementalMedianMs": 0.0939,
+   "incrementalMaxMs": 0.3445
+  },
+  {
+   "unit": "examples/Simple Tests",
+   "nodes": 278,
+   "edges": 125,
+   "s1NormalizeMs": 25.982,
+   "batchValidateMs": 1.6046,
+   "incrementalMedianMs": 1.3371,
+   "incrementalMaxMs": 3.5898
+  },
+  {
+   "unit": "examples/State Space Representation Examples",
+   "nodes": 64,
+   "edges": 44,
+   "s1NormalizeMs": 29.308,
+   "batchValidateMs": 0.2075,
+   "incrementalMedianMs": 0.4119,
+   "incrementalMaxMs": 4.5669
+  },
+  {
+   "unit": "examples/Timeslice and Snapshot Examples",
+   "nodes": 5,
+   "edges": 0,
+   "s1NormalizeMs": 15.02,
+   "batchValidateMs": 0.0281,
+   "incrementalMedianMs": 0.0392,
+   "incrementalMaxMs": 0.0678
+  },
+  {
+   "unit": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly",
+   "nodes": 59,
+   "edges": 30,
+   "s1NormalizeMs": 27.827,
+   "batchValidateMs": 0.1407,
+   "incrementalMedianMs": 0.2607,
+   "incrementalMaxMs": 5.229
+  },
+  {
+   "unit": "examples/v1 Spec Examples/8.4.5 Constraining Decomposition",
+   "nodes": 51,
+   "edges": 28,
+   "s1NormalizeMs": 12.96,
+   "batchValidateMs": 0.232,
+   "incrementalMedianMs": 0.2468,
+   "incrementalMaxMs": 0.6665
+  },
+  {
+   "unit": "examples/Variability Examples",
+   "nodes": 47,
+   "edges": 19,
+   "s1NormalizeMs": 11.491,
+   "batchValidateMs": 0.2031,
+   "incrementalMedianMs": 0.2184,
+   "incrementalMaxMs": 0.3741
+  },
+  {
+   "unit": "examples/Vehicle Example",
+   "nodes": 461,
+   "edges": 295,
+   "s1NormalizeMs": 119.365,
+   "batchValidateMs": 3.0519,
+   "incrementalMedianMs": 2.172,
+   "incrementalMaxMs": 8.0935
+  },
+  {
+   "unit": "training/01. Packages",
+   "nodes": 3,
+   "edges": 0,
+   "s1NormalizeMs": 10.897,
+   "batchValidateMs": 0.0147,
+   "incrementalMedianMs": 0.0236,
+   "incrementalMaxMs": 0.1042
+  },
+  {
+   "unit": "training/02. Part Definitions",
+   "nodes": 4,
+   "edges": 1,
+   "s1NormalizeMs": 9.57,
+   "batchValidateMs": 0.0268,
+   "incrementalMedianMs": 0.0384,
+   "incrementalMaxMs": 0.1274
+  },
+  {
+   "unit": "training/03. Generalization",
+   "nodes": 7,
+   "edges": 1,
+   "s1NormalizeMs": 11.762,
+   "batchValidateMs": 0.0261,
+   "incrementalMedianMs": 0.0313,
+   "incrementalMaxMs": 0.1086
+  },
+  {
+   "unit": "training/04. Subsetting",
+   "nodes": 9,
+   "edges": 4,
+   "s1NormalizeMs": 13.919,
+   "batchValidateMs": 0.0458,
+   "incrementalMedianMs": 0.0661,
+   "incrementalMaxMs": 0.0994
+  },
+  {
+   "unit": "training/05. Redefinition",
+   "nodes": 13,
+   "edges": 6,
+   "s1NormalizeMs": 12.722,
+   "batchValidateMs": 0.0486,
+   "incrementalMedianMs": 0.0451,
+   "incrementalMaxMs": 0.1199
+  },
+  {
+   "unit": "training/06. Enumeration Definitions",
+   "nodes": 2,
+   "edges": 0,
+   "s1NormalizeMs": 12.838,
+   "batchValidateMs": 0.0206,
+   "incrementalMedianMs": 0.0286,
+   "incrementalMaxMs": 0.2343
+  },
+  {
+   "unit": "training/07. Parts",
+   "nodes": 23,
+   "edges": 12,
+   "s1NormalizeMs": 11.476,
+   "batchValidateMs": 0.0686,
+   "incrementalMedianMs": 0.1374,
+   "incrementalMaxMs": 0.3772
+  },
+  {
+   "unit": "training/08. Items",
+   "nodes": 2,
+   "edges": 1,
+   "s1NormalizeMs": 11.381,
+   "batchValidateMs": 0.0167,
+   "incrementalMedianMs": 0.0289,
+   "incrementalMaxMs": 0.0412
+  },
+  {
+   "unit": "training/09. Connections",
+   "nodes": 21,
+   "edges": 12,
+   "s1NormalizeMs": 11.596,
+   "batchValidateMs": 0.1201,
+   "incrementalMedianMs": 0.1315,
+   "incrementalMaxMs": 0.3855
+  },
+  {
+   "unit": "training/10. Ports",
+   "nodes": 13,
+   "edges": 4,
+   "s1NormalizeMs": 11.13,
+   "batchValidateMs": 0.0663,
+   "incrementalMedianMs": 0.0763,
+   "incrementalMaxMs": 0.3623
+  },
+  {
+   "unit": "training/11. Interfaces",
+   "nodes": 14,
+   "edges": 4,
+   "s1NormalizeMs": 11.124,
+   "batchValidateMs": 0.0683,
+   "incrementalMedianMs": 0.0881,
+   "incrementalMaxMs": 0.1119
+  },
+  {
+   "unit": "training/12. Binding Connectors",
+   "nodes": 16,
+   "edges": 8,
+   "s1NormalizeMs": 11.585,
+   "batchValidateMs": 0.0939,
+   "incrementalMedianMs": 0.0945,
+   "incrementalMaxMs": 0.2402
+  },
+  {
+   "unit": "training/13. Flows",
+   "nodes": 14,
+   "edges": 6,
+   "s1NormalizeMs": 12.472,
+   "batchValidateMs": 0.0733,
+   "incrementalMedianMs": 0.0891,
+   "incrementalMaxMs": 0.2502
+  },
+  {
+   "unit": "training/14. Action Definitions",
+   "nodes": 20,
+   "edges": 8,
+   "s1NormalizeMs": 10.29,
+   "batchValidateMs": 0.1008,
+   "incrementalMedianMs": 0.1228,
+   "incrementalMaxMs": 0.2877
+  },
+  {
+   "unit": "training/15. Actions",
+   "nodes": 9,
+   "edges": 2,
+   "s1NormalizeMs": 11.268,
+   "batchValidateMs": 0.0755,
+   "incrementalMedianMs": 0.0721,
+   "incrementalMaxMs": 0.4981
+  },
+  {
+   "unit": "training/16. Conditional Succession",
+   "nodes": 18,
+   "edges": 4,
+   "s1NormalizeMs": 14.98,
+   "batchValidateMs": 0.1051,
+   "incrementalMedianMs": 0.1077,
+   "incrementalMaxMs": 7.4023
+  },
+  {
+   "unit": "training/17. Control",
+   "nodes": 45,
+   "edges": 15,
+   "s1NormalizeMs": 10.64,
+   "batchValidateMs": 0.2245,
+   "incrementalMedianMs": 0.2548,
+   "incrementalMaxMs": 6.7977
+  },
+  {
+   "unit": "training/18. Action Performance",
+   "nodes": 6,
+   "edges": 2,
+   "s1NormalizeMs": 11.934,
+   "batchValidateMs": 0.032,
+   "incrementalMedianMs": 0.0498,
+   "incrementalMaxMs": 0.0878
+  },
+  {
+   "unit": "training/19. Terminate Actions",
+   "nodes": 11,
+   "edges": 4,
+   "s1NormalizeMs": 10.478,
+   "batchValidateMs": 0.0697,
+   "incrementalMedianMs": 0.0893,
+   "incrementalMaxMs": 7.1075
+  },
+  {
+   "unit": "training/20. Assignment Actions",
+   "nodes": 2,
+   "edges": 0,
+   "s1NormalizeMs": 21.116,
+   "batchValidateMs": 0.0213,
+   "incrementalMedianMs": 0.0237,
+   "incrementalMaxMs": 0.9408
+  },
+  {
+   "unit": "training/21. Asynchronous Messaging",
+   "nodes": 20,
+   "edges": 10,
+   "s1NormalizeMs": 10.297,
+   "batchValidateMs": 0.0927,
+   "incrementalMedianMs": 0.1307,
+   "incrementalMaxMs": 0.2752
+  },
+  {
+   "unit": "training/22. Opaque Actions",
+   "nodes": 2,
+   "edges": 0,
+   "s1NormalizeMs": 8.703,
+   "batchValidateMs": 0.0117,
+   "incrementalMedianMs": 0.0189,
+   "incrementalMaxMs": 0.0333
+  },
+  {
+   "unit": "training/23. State Definitions",
+   "nodes": 8,
+   "edges": 6,
+   "s1NormalizeMs": 9.36,
+   "batchValidateMs": 0.0345,
+   "incrementalMedianMs": 0.0392,
+   "incrementalMaxMs": 0.0623
+  },
+  {
+   "unit": "training/24. States",
+   "nodes": 19,
+   "edges": 11,
+   "s1NormalizeMs": 9.265,
+   "batchValidateMs": 0.0664,
+   "incrementalMedianMs": 0.0663,
+   "incrementalMaxMs": 0.1647
+  },
+  {
+   "unit": "training/25. Transitions",
+   "nodes": 22,
+   "edges": 12,
+   "s1NormalizeMs": 19.923,
+   "batchValidateMs": 0.062,
+   "incrementalMedianMs": 0.1213,
+   "incrementalMaxMs": 5.1118
+  },
+  {
+   "unit": "training/26. State Exhibition",
+   "nodes": 2,
+   "edges": 1,
+   "s1NormalizeMs": 12.565,
+   "batchValidateMs": 0.0096,
+   "incrementalMedianMs": 0.0202,
+   "incrementalMaxMs": 0.1426
+  },
+  {
+   "unit": "training/27. Occurrences",
+   "nodes": 58,
+   "edges": 38,
+   "s1NormalizeMs": 9.589,
+   "batchValidateMs": 0.1531,
+   "incrementalMedianMs": 0.2718,
+   "incrementalMaxMs": 1.6251
+  },
+  {
+   "unit": "training/28. Individuals",
+   "nodes": 18,
+   "edges": 8,
+   "s1NormalizeMs": 8.282,
+   "batchValidateMs": 0.0387,
+   "incrementalMedianMs": 0.0966,
+   "incrementalMaxMs": 0.1721
+  },
+  {
+   "unit": "training/29. Expressions",
+   "nodes": 24,
+   "edges": 12,
+   "s1NormalizeMs": 14.642,
+   "batchValidateMs": 0.1105,
+   "incrementalMedianMs": 0.0704,
+   "incrementalMaxMs": 0.1753
+  },
+  {
+   "unit": "training/30. Calculations",
+   "nodes": 11,
+   "edges": 5,
+   "s1NormalizeMs": 20.312,
+   "batchValidateMs": 0.062,
+   "incrementalMedianMs": 0.0554,
+   "incrementalMaxMs": 0.1107
+  },
+  {
+   "unit": "training/31. Constraints",
+   "nodes": 27,
+   "edges": 10,
+   "s1NormalizeMs": 16.352,
+   "batchValidateMs": 0.1158,
+   "incrementalMedianMs": 0.1378,
+   "incrementalMaxMs": 0.2024
+  },
+  {
+   "unit": "training/32. Requirements",
+   "nodes": 21,
+   "edges": 8,
+   "s1NormalizeMs": 23.563,
+   "batchValidateMs": 0.0572,
+   "incrementalMedianMs": 0.0811,
+   "incrementalMaxMs": 5.6073
+  },
+  {
+   "unit": "training/33. Analysis",
+   "nodes": 23,
+   "edges": 12,
+   "s1NormalizeMs": 22.935,
+   "batchValidateMs": 0.0642,
+   "incrementalMedianMs": 0.138,
+   "incrementalMaxMs": 0.1871
+  },
+  {
+   "unit": "training/34. Verification",
+   "nodes": 16,
+   "edges": 5,
+   "s1NormalizeMs": 16.213,
+   "batchValidateMs": 0.0951,
+   "incrementalMedianMs": 0.0955,
+   "incrementalMaxMs": 0.1353
+  },
+  {
+   "unit": "training/35. Use Cases",
+   "nodes": 11,
+   "edges": 1,
+   "s1NormalizeMs": 9.713,
+   "batchValidateMs": 0.0557,
+   "incrementalMedianMs": 0.0728,
+   "incrementalMaxMs": 0.1022
+  },
+  {
+   "unit": "training/36. Variability",
+   "nodes": 21,
+   "edges": 9,
+   "s1NormalizeMs": 17.951,
+   "batchValidateMs": 0.0836,
+   "incrementalMedianMs": 0.0895,
+   "incrementalMaxMs": 0.1816
+  },
+  {
+   "unit": "training/37. Dependencies",
+   "nodes": 3,
+   "edges": 2,
+   "s1NormalizeMs": 9.73,
+   "batchValidateMs": 0.0199,
+   "incrementalMedianMs": 0.0359,
+   "incrementalMaxMs": 0.0509
+  },
+  {
+   "unit": "training/38. Allocation",
+   "nodes": 22,
+   "edges": 7,
+   "s1NormalizeMs": 10.544,
+   "batchValidateMs": 0.0972,
+   "incrementalMedianMs": 0.1138,
+   "incrementalMaxMs": 7.0418
+  },
+  {
+   "unit": "training/39. Metadata",
+   "nodes": 11,
+   "edges": 9,
+   "s1NormalizeMs": 18.903,
+   "batchValidateMs": 0.0616,
+   "incrementalMedianMs": 0.1121,
+   "incrementalMaxMs": 0.1585
+  },
+  {
+   "unit": "training/40. Filtering",
+   "nodes": 26,
+   "edges": 24,
+   "s1NormalizeMs": 11.029,
+   "batchValidateMs": 0.1558,
+   "incrementalMedianMs": 0.1873,
+   "incrementalMaxMs": 0.8021
+  },
+  {
+   "unit": "training/41. Language Extension",
+   "nodes": 3,
+   "edges": 1,
+   "s1NormalizeMs": 11.492,
+   "batchValidateMs": 0.0228,
+   "incrementalMedianMs": 0.0335,
+   "incrementalMaxMs": 0.2325
+  },
+  {
+   "unit": "training/42. Views",
+   "nodes": 12,
+   "edges": 4,
+   "s1NormalizeMs": 9.177,
+   "batchValidateMs": 0.0413,
+   "incrementalMedianMs": 0.0884,
+   "incrementalMaxMs": 1.7106
+  },
+  {
+   "unit": "validation/01-Parts Tree",
+   "nodes": 55,
+   "edges": 35,
+   "s1NormalizeMs": 17.634,
+   "batchValidateMs": 0.1641,
+   "incrementalMedianMs": 0.1811,
+   "incrementalMaxMs": 0.4062
+  },
+  {
+   "unit": "validation/02-Parts Interconnection",
+   "nodes": 91,
+   "edges": 60,
+   "s1NormalizeMs": 11.048,
+   "batchValidateMs": 0.4741,
+   "incrementalMedianMs": 0.3679,
+   "incrementalMaxMs": 0.57
+  },
+  {
+   "unit": "validation/03-Function-based Behavior",
+   "nodes": 113,
+   "edges": 52,
+   "s1NormalizeMs": 24.394,
+   "batchValidateMs": 0.5701,
+   "incrementalMedianMs": 0.5334,
+   "incrementalMaxMs": 3.1811
+  },
+  {
+   "unit": "validation/04-Functional Allocation",
+   "nodes": 18,
+   "edges": 17,
+   "s1NormalizeMs": 15.207,
+   "batchValidateMs": 0.097,
+   "incrementalMedianMs": 0.1088,
+   "incrementalMaxMs": 0.2597
+  },
+  {
+   "unit": "validation/05-State-based Behavior",
+   "nodes": 80,
+   "edges": 39,
+   "s1NormalizeMs": 18.448,
+   "batchValidateMs": 0.5347,
+   "incrementalMedianMs": 0.3657,
+   "incrementalMaxMs": 4.1272
+  },
+  {
+   "unit": "validation/06-Individual and Snapshots",
+   "nodes": 20,
+   "edges": 9,
+   "s1NormalizeMs": 19.143,
+   "batchValidateMs": 0.0549,
+   "incrementalMedianMs": 0.1176,
+   "incrementalMaxMs": 0.1665
+  },
+  {
+   "unit": "validation/07-Variant Configuration",
+   "nodes": 126,
+   "edges": 75,
+   "s1NormalizeMs": 13.8,
+   "batchValidateMs": 0.7379,
+   "incrementalMedianMs": 0.5109,
+   "incrementalMaxMs": 5.1183
+  },
+  {
+   "unit": "validation/08-Requirements",
+   "nodes": 30,
+   "edges": 15,
+   "s1NormalizeMs": 24.664,
+   "batchValidateMs": 0.2175,
+   "incrementalMedianMs": 0.0918,
+   "incrementalMaxMs": 0.2278
+  },
+  {
+   "unit": "validation/09-Verification",
+   "nodes": 19,
+   "edges": 7,
+   "s1NormalizeMs": 19.354,
+   "batchValidateMs": 0.0804,
+   "incrementalMedianMs": 0.1163,
+   "incrementalMaxMs": 0.3325
+  },
+  {
+   "unit": "validation/10-Analysis and Trades",
+   "nodes": 73,
+   "edges": 32,
+   "s1NormalizeMs": 30.881,
+   "batchValidateMs": 0.3313,
+   "incrementalMedianMs": 0.3972,
+   "incrementalMaxMs": 1.1133
+  },
+  {
+   "unit": "validation/11-View and Viewpoint",
+   "nodes": 34,
+   "edges": 23,
+   "s1NormalizeMs": 13.132,
+   "batchValidateMs": 0.1565,
+   "incrementalMedianMs": 0.2276,
+   "incrementalMaxMs": 0.2782
+  },
+  {
+   "unit": "validation/12-Dependency Relationships",
+   "nodes": 17,
+   "edges": 9,
+   "s1NormalizeMs": 22.762,
+   "batchValidateMs": 0.0854,
+   "incrementalMedianMs": 0.1092,
+   "incrementalMaxMs": 0.1548
+  },
+  {
+   "unit": "validation/13-Model Containment",
+   "nodes": 38,
+   "edges": 33,
+   "s1NormalizeMs": 10.88,
+   "batchValidateMs": 0.0806,
+   "incrementalMedianMs": 0.1602,
+   "incrementalMaxMs": 0.4945
+  },
+  {
+   "unit": "validation/14-Language Extensions",
+   "nodes": 35,
+   "edges": 14,
+   "s1NormalizeMs": 13.938,
+   "batchValidateMs": 0.141,
+   "incrementalMedianMs": 0.1959,
+   "incrementalMaxMs": 0.2622
+  },
+  {
+   "unit": "validation/15-Properties-Values-Expressions",
+   "nodes": 34,
+   "edges": 8,
+   "s1NormalizeMs": 21.449,
+   "batchValidateMs": 0.1442,
+   "incrementalMedianMs": 0.1726,
+   "incrementalMaxMs": 0.5664
+  },
+  {
+   "unit": "validation/17-Sequence Modeling",
+   "nodes": 6,
+   "edges": 0,
+   "s1NormalizeMs": 9.661,
+   "batchValidateMs": 0.0292,
+   "incrementalMedianMs": 0.0398,
+   "incrementalMaxMs": 0.1323
+  },
+  {
+   "unit": "validation/18-Use Case",
+   "nodes": 9,
+   "edges": 1,
+   "s1NormalizeMs": 8.871,
+   "batchValidateMs": 0.0275,
+   "incrementalMedianMs": 0.0687,
+   "incrementalMaxMs": 0.153
+  }
+ ],
+ "batchValidateMs": {
+  "n": 82,
+  "min": 0.0096,
+  "q1": 0.046,
+  "median": 0.079,
+  "q3": 0.143,
+  "max": 3.0519,
+  "sum": 14.396999999999998
+ },
+ "incrementalMedianMs": {
+  "n": 82,
+  "min": 0.0189,
+  "q1": 0.068,
+  "median": 0.106,
+  "q3": 0.179,
+  "max": 2.172,
+  "sum": 14.590999999999998
+ },
+ "s1NormalizeMs": {
+  "n": 82,
+  "min": 8.282,
+  "q1": 10.838,
+  "median": 12.519,
+  "q3": 19.083,
+  "max": 119.365,
+  "sum": 1388.6060000000004
+ }
+}

@@ -1,0 +1,376 @@
+{
+  "meta": {
+    "command": "node dist-r8\\cli-r8.js wex --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/r8",
+    "node": "v22.15.1",
+    "execArgv": [],
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "loadavgAtStart": [
+      0,
+      0,
+      0
+    ],
+    "startedAt": "2026-10-23T03:03:02.241Z",
+    "elapsedSec": 0.3
+  },
+  "file": "examples\\worked-example-sysml\\examples\\UAV Excerpt\\uav-excerpt.sysml",
+  "sha256": "3ebfdff21026151849faef3480fa53e2016fe231d73951cca122acc3430df2e0",
+  "lines": 21,
+  "text": "package UavExcerpt {\n\trequirement AttitudeHold { attribute priority = \"high\"; }\n\taction StabilizeAttitude;\n\tpart FlightController {\n\t\tattribute criticality = \"A\"; attribute mass = 2.5;\n\t\tport cmdOut { out item cmd; }\n\t}\n\tpart PowerUnit {\n\t\tattribute criticality = \"B\"; attribute mass = 4.0;\n\t\tport cmdIn { in item cmd; }\n\t}\n\tconnect FlightController.cmdOut to PowerUnit.cmdIn;\n\tallocate StabilizeAttitude to FlightController;\n\tsatisfy AttitudeHold by FlightController;\n\tverification HilAttitudeTest {\n\t\tattribute method = \"test\";\n\t\tobjective { verify AttitudeHold; }\n\t}\n\tview PowerView { expose PowerUnit::*; }\n\tdependency FlightController to PowerUnit;\n}\n",
+  "catalog": "aerospace",
+  "rows": [
+    {
+      "mode": "keyword",
+      "nodes": [
+        {
+          "name": "AttitudeHold",
+          "type": "Requirement",
+          "classes": [
+            "Requirement"
+          ],
+          "attrs": {
+            "name": "AttitudeHold",
+            "priority": "high"
+          },
+          "line": 2
+        },
+        {
+          "name": "StabilizeAttitude",
+          "type": "Function",
+          "classes": [
+            "Function"
+          ],
+          "attrs": {
+            "name": "StabilizeAttitude"
+          },
+          "line": 3
+        },
+        {
+          "name": "FlightController",
+          "type": "Component",
+          "classes": [
+            "Component"
+          ],
+          "attrs": {
+            "name": "FlightController",
+            "criticality": "A",
+            "mass": 2.5
+          },
+          "line": 4
+        },
+        {
+          "name": "cmdOut",
+          "type": "Port",
+          "classes": [
+            "Port"
+          ],
+          "attrs": {
+            "name": "cmdOut",
+            "direction": "out"
+          },
+          "line": 6
+        },
+        {
+          "name": "PowerUnit",
+          "type": "Component",
+          "classes": [
+            "Component"
+          ],
+          "attrs": {
+            "name": "PowerUnit",
+            "criticality": "B",
+            "mass": 4
+          },
+          "line": 8
+        },
+        {
+          "name": "cmdIn",
+          "type": "Port",
+          "classes": [
+            "Port"
+          ],
+          "attrs": {
+            "name": "cmdIn",
+            "direction": "in"
+          },
+          "line": 10
+        },
+        {
+          "name": "HilAttitudeTest",
+          "type": "VerificationCase",
+          "classes": [
+            "VerificationCase"
+          ],
+          "attrs": {
+            "name": "HilAttitudeTest",
+            "method": "test"
+          },
+          "line": 15
+        },
+        {
+          "name": "PowerView",
+          "type": "View",
+          "classes": [
+            "View"
+          ],
+          "attrs": {
+            "name": "PowerView"
+          },
+          "line": 19
+        }
+      ],
+      "edges": [
+        {
+          "type": "contain",
+          "src": "FlightController",
+          "tgt": "cmdOut",
+          "line": 6
+        },
+        {
+          "type": "contain",
+          "src": "PowerUnit",
+          "tgt": "cmdIn",
+          "line": 10
+        },
+        {
+          "type": "connect",
+          "src": "cmdOut",
+          "tgt": "cmdIn",
+          "line": 12
+        },
+        {
+          "type": "allocate",
+          "src": "StabilizeAttitude",
+          "tgt": "FlightController",
+          "line": 13
+        },
+        {
+          "type": "satisfy",
+          "src": "FlightController",
+          "tgt": "AttitudeHold",
+          "line": 14
+        },
+        {
+          "type": "verify",
+          "src": "HilAttitudeTest",
+          "tgt": "AttitudeHold",
+          "line": 17
+        },
+        {
+          "type": "expose",
+          "src": "PowerView",
+          "tgt": "cmdIn",
+          "line": 19
+        },
+        {
+          "type": "dependOn",
+          "src": "FlightController",
+          "tgt": "PowerUnit",
+          "line": 20
+        },
+        {
+          "type": "subject",
+          "src": "PowerView",
+          "tgt": "PowerUnit",
+          "line": 19
+        }
+      ],
+      "isomorphicToTable3": true,
+      "engineViolations": [],
+      "multiClassViolations": [],
+      "lostStatements": [
+        {
+          "line": 6,
+          "kind": "item",
+          "reason": "reference feature (out item)"
+        },
+        {
+          "line": 10,
+          "kind": "item",
+          "reason": "reference feature (in item)"
+        }
+      ]
+    },
+    {
+      "mode": "specialization",
+      "nodes": [
+        {
+          "name": "AttitudeHold",
+          "type": "Requirement",
+          "classes": [
+            "Requirement"
+          ],
+          "attrs": {
+            "name": "AttitudeHold",
+            "priority": "high"
+          },
+          "line": 2
+        },
+        {
+          "name": "StabilizeAttitude",
+          "type": "Function",
+          "classes": [
+            "Function"
+          ],
+          "attrs": {
+            "name": "StabilizeAttitude"
+          },
+          "line": 3
+        },
+        {
+          "name": "FlightController",
+          "type": "Component",
+          "classes": [
+            "Component"
+          ],
+          "attrs": {
+            "name": "FlightController",
+            "criticality": "A",
+            "mass": 2.5
+          },
+          "line": 4
+        },
+        {
+          "name": "cmdOut",
+          "type": "Port",
+          "classes": [
+            "Port"
+          ],
+          "attrs": {
+            "name": "cmdOut",
+            "direction": "out"
+          },
+          "line": 6
+        },
+        {
+          "name": "PowerUnit",
+          "type": "Component",
+          "classes": [
+            "Component"
+          ],
+          "attrs": {
+            "name": "PowerUnit",
+            "criticality": "B",
+            "mass": 4
+          },
+          "line": 8
+        },
+        {
+          "name": "cmdIn",
+          "type": "Port",
+          "classes": [
+            "Port"
+          ],
+          "attrs": {
+            "name": "cmdIn",
+            "direction": "in"
+          },
+          "line": 10
+        },
+        {
+          "name": "HilAttitudeTest",
+          "type": "VerificationCase",
+          "classes": [
+            "VerificationCase",
+            "Function"
+          ],
+          "attrs": {
+            "name": "HilAttitudeTest",
+            "method": "test"
+          },
+          "line": 15
+        },
+        {
+          "name": "PowerView",
+          "type": "View",
+          "classes": [
+            "View",
+            "Component"
+          ],
+          "attrs": {
+            "name": "PowerView"
+          },
+          "line": 19
+        }
+      ],
+      "edges": [
+        {
+          "type": "contain",
+          "src": "FlightController",
+          "tgt": "cmdOut",
+          "line": 6
+        },
+        {
+          "type": "contain",
+          "src": "PowerUnit",
+          "tgt": "cmdIn",
+          "line": 10
+        },
+        {
+          "type": "connect",
+          "src": "cmdOut",
+          "tgt": "cmdIn",
+          "line": 12
+        },
+        {
+          "type": "allocate",
+          "src": "StabilizeAttitude",
+          "tgt": "FlightController",
+          "line": 13
+        },
+        {
+          "type": "satisfy",
+          "src": "FlightController",
+          "tgt": "AttitudeHold",
+          "line": 14
+        },
+        {
+          "type": "verify",
+          "src": "HilAttitudeTest",
+          "tgt": "AttitudeHold",
+          "line": 17
+        },
+        {
+          "type": "expose",
+          "src": "PowerView",
+          "tgt": "cmdIn",
+          "line": 19
+        },
+        {
+          "type": "dependOn",
+          "src": "FlightController",
+          "tgt": "PowerUnit",
+          "line": 20
+        },
+        {
+          "type": "subject",
+          "src": "PowerView",
+          "tgt": "PowerUnit",
+          "line": 19
+        }
+      ],
+      "isomorphicToTable3": true,
+      "engineViolations": [],
+      "multiClassViolations": [
+        "ATTR:Component.criticality|PowerView",
+        "ATTR:Component.mass|PowerView",
+        "MULT:Function|allocate|out|HilAttitudeTest",
+        "TRACE:FUN2REQ|HilAttitudeTest"
+      ],
+      "lostStatements": [
+        {
+          "line": 6,
+          "kind": "item",
+          "reason": "reference feature (out item)"
+        },
+        {
+          "line": 10,
+          "kind": "item",
+          "reason": "reference feature (in item)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{"mutant": "original", "description": "unmutated snapshot", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "S2-mult-direction", "description": "multiplicity direction reversed in rule derivation", "cleanModels": 60, "cleanModelsWithViolations": 60, "violations": 14970}
+{"mutant": "S2-mult-upper-off-by-one", "description": "finite upper multiplicity bound derived one too large", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "S2-required-first-only", "description": "only the first required attribute of each type becomes a rule", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "DOM-range-lower-exclusive", "description": "range lower bound treated as exclusive", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "DOM-range-upper-exclusive", "description": "range upper bound treated as exclusive", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "DOM-nonempty-accepts-empty", "description": "empty string accepted as non-empty", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "DOM-enum-loose-equality", "description": "enum membership by string coercion (1 == \"1\")", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "S1-drop-self-loops", "description": "normalisation silently drops self-loop relations", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}

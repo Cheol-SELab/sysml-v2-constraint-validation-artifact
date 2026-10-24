@@ -1,0 +1,11 @@
+Rights and third-party sources
+==============================
+Public availability does not add a blanket reuse license. No additional license
+has been applied to the authors' original code/data in this initial publication.
+For reuse permissions contact cheol@selab.ai. Existing third-party rights and
+notices remain applicable.
+
+The separately retrieved SysML-v2-Release models/libraries are identified as
+EPL-2.0 in code/corpus-manifest.json. Retrieval preserves LICENSE and README
+identities. The full upstream corpus is not redistributed here. Dependencies
+retain their own licenses; installed dependencies are excluded from this archive.

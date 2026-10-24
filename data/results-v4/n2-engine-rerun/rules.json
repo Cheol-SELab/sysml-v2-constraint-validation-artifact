@@ -1,0 +1,535 @@
+{
+ "rules": [
+  {
+   "id": "TYPE:satisfy",
+   "cls": "relationType",
+   "layer": "core"
+  },
+  {
+   "id": "TYPE:verify",
+   "cls": "relationType",
+   "layer": "core"
+  },
+  {
+   "id": "TYPE:allocate",
+   "cls": "relationType",
+   "layer": "core"
+  },
+  {
+   "id": "TYPE:connect",
+   "cls": "relationType",
+   "layer": "core"
+  },
+  {
+   "id": "TYPE:contain",
+   "cls": "relationType",
+   "layer": "core"
+  },
+  {
+   "id": "TYPE:dependOn",
+   "cls": "relationType",
+   "layer": "core"
+  },
+  {
+   "id": "TYPE:expose",
+   "cls": "relationType",
+   "layer": "core"
+  },
+  {
+   "id": "TYPE:subject",
+   "cls": "relationType",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:Requirement.name",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:Requirement.priority",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:Function.name",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:Component.name",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:Component.criticality",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:Component.mass",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:Interface.name",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:Port.name",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:Port.direction",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:VerificationCase.name",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:VerificationCase.method",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "REQ:View.name",
+   "cls": "requiredAttr",
+   "layer": "core"
+  },
+  {
+   "id": "DOM:Component.criticality",
+   "cls": "attrDomain",
+   "layer": "core"
+  },
+  {
+   "id": "DOM:Component.mass",
+   "cls": "attrDomain",
+   "layer": "core"
+  },
+  {
+   "id": "DOM:Requirement.priority",
+   "cls": "attrDomain",
+   "layer": "core"
+  },
+  {
+   "id": "DOM:Port.direction",
+   "cls": "attrDomain",
+   "layer": "core"
+  },
+  {
+   "id": "DOM:VerificationCase.method",
+   "cls": "attrDomain",
+   "layer": "core"
+  },
+  {
+   "id": "DOM:Component.name",
+   "cls": "attrDomain",
+   "layer": "core"
+  },
+  {
+   "id": "DOM:Requirement.name",
+   "cls": "attrDomain",
+   "layer": "core"
+  },
+  {
+   "id": "MULT:Requirement|satisfy|in",
+   "cls": "multiplicity",
+   "layer": "core"
+  },
+  {
+   "id": "MULT:Requirement|verify|in",
+   "cls": "multiplicity",
+   "layer": "core"
+  },
+  {
+   "id": "MULT:Function|allocate|out",
+   "cls": "multiplicity",
+   "layer": "core"
+  },
+  {
+   "id": "MULT:Port|contain|in",
+   "cls": "multiplicity",
+   "layer": "core"
+  },
+  {
+   "id": "MULT:View|subject|out",
+   "cls": "multiplicity",
+   "layer": "core"
+  },
+  {
+   "id": "ISO:Requirement",
+   "cls": "isolated",
+   "layer": "core"
+  },
+  {
+   "id": "ISO:Function",
+   "cls": "isolated",
+   "layer": "core"
+  },
+  {
+   "id": "ISO:Component",
+   "cls": "isolated",
+   "layer": "core"
+  },
+  {
+   "id": "ISO:Interface",
+   "cls": "isolated",
+   "layer": "core"
+  },
+  {
+   "id": "ISO:Port",
+   "cls": "isolated",
+   "layer": "core"
+  },
+  {
+   "id": "ISO:VerificationCase",
+   "cls": "isolated",
+   "layer": "core"
+  },
+  {
+   "id": "VIEW:View",
+   "cls": "viewConsistency",
+   "layer": "sparql"
+  },
+  {
+   "id": "ACYC:dependOn",
+   "cls": "acyclic",
+   "layer": "sparql-path"
+  },
+  {
+   "id": "TRACE:FUN2REQ",
+   "cls": "tracePolicy",
+   "layer": "sparql-path"
+  }
+ ],
+ "shapeToRule": {
+  "urn:oracle:shape:TYPE%3Asatisfy": {
+   "id": "TYPE:satisfy",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Asatisfy/src": {
+   "id": "TYPE:satisfy",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Asatisfy/tgt": {
+   "id": "TYPE:satisfy",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Averify": {
+   "id": "TYPE:verify",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Averify/src": {
+   "id": "TYPE:verify",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Averify/tgt": {
+   "id": "TYPE:verify",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Aallocate": {
+   "id": "TYPE:allocate",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Aallocate/src": {
+   "id": "TYPE:allocate",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Aallocate/tgt": {
+   "id": "TYPE:allocate",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Aconnect": {
+   "id": "TYPE:connect",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Aconnect/src": {
+   "id": "TYPE:connect",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Aconnect/tgt": {
+   "id": "TYPE:connect",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Acontain": {
+   "id": "TYPE:contain",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Acontain/src": {
+   "id": "TYPE:contain",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Acontain/tgt": {
+   "id": "TYPE:contain",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3AdependOn": {
+   "id": "TYPE:dependOn",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3AdependOn/src": {
+   "id": "TYPE:dependOn",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3AdependOn/tgt": {
+   "id": "TYPE:dependOn",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Aexpose": {
+   "id": "TYPE:expose",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Aexpose/src": {
+   "id": "TYPE:expose",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Aexpose/tgt": {
+   "id": "TYPE:expose",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Asubject": {
+   "id": "TYPE:subject",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Asubject/src": {
+   "id": "TYPE:subject",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:TYPE%3Asubject/tgt": {
+   "id": "TYPE:subject",
+   "cls": "relationType"
+  },
+  "urn:oracle:shape:REQ%3ARequirement.name": {
+   "id": "REQ:Requirement.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3ARequirement.name/p": {
+   "id": "REQ:Requirement.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3ARequirement.priority": {
+   "id": "REQ:Requirement.priority",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3ARequirement.priority/p": {
+   "id": "REQ:Requirement.priority",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AFunction.name": {
+   "id": "REQ:Function.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AFunction.name/p": {
+   "id": "REQ:Function.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AComponent.name": {
+   "id": "REQ:Component.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AComponent.name/p": {
+   "id": "REQ:Component.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AComponent.criticality": {
+   "id": "REQ:Component.criticality",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AComponent.criticality/p": {
+   "id": "REQ:Component.criticality",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AComponent.mass": {
+   "id": "REQ:Component.mass",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AComponent.mass/p": {
+   "id": "REQ:Component.mass",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AInterface.name": {
+   "id": "REQ:Interface.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AInterface.name/p": {
+   "id": "REQ:Interface.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3APort.name": {
+   "id": "REQ:Port.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3APort.name/p": {
+   "id": "REQ:Port.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3APort.direction": {
+   "id": "REQ:Port.direction",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3APort.direction/p": {
+   "id": "REQ:Port.direction",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AVerificationCase.name": {
+   "id": "REQ:VerificationCase.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AVerificationCase.name/p": {
+   "id": "REQ:VerificationCase.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AVerificationCase.method": {
+   "id": "REQ:VerificationCase.method",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AVerificationCase.method/p": {
+   "id": "REQ:VerificationCase.method",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AView.name": {
+   "id": "REQ:View.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:REQ%3AView.name/p": {
+   "id": "REQ:View.name",
+   "cls": "requiredAttr"
+  },
+  "urn:oracle:shape:DOM%3AComponent.criticality": {
+   "id": "DOM:Component.criticality",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3AComponent.criticality/p": {
+   "id": "DOM:Component.criticality",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3AComponent.mass": {
+   "id": "DOM:Component.mass",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3AComponent.mass/p": {
+   "id": "DOM:Component.mass",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3ARequirement.priority": {
+   "id": "DOM:Requirement.priority",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3ARequirement.priority/p": {
+   "id": "DOM:Requirement.priority",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3APort.direction": {
+   "id": "DOM:Port.direction",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3APort.direction/p": {
+   "id": "DOM:Port.direction",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3AVerificationCase.method": {
+   "id": "DOM:VerificationCase.method",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3AVerificationCase.method/p": {
+   "id": "DOM:VerificationCase.method",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3AComponent.name": {
+   "id": "DOM:Component.name",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3AComponent.name/p": {
+   "id": "DOM:Component.name",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3ARequirement.name": {
+   "id": "DOM:Requirement.name",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:DOM%3ARequirement.name/p": {
+   "id": "DOM:Requirement.name",
+   "cls": "attrDomain"
+  },
+  "urn:oracle:shape:MULT%3ARequirement%7Csatisfy%7Cin": {
+   "id": "MULT:Requirement|satisfy|in",
+   "cls": "multiplicity"
+  },
+  "urn:oracle:shape:MULT%3ARequirement%7Csatisfy%7Cin/p": {
+   "id": "MULT:Requirement|satisfy|in",
+   "cls": "multiplicity"
+  },
+  "urn:oracle:shape:MULT%3ARequirement%7Cverify%7Cin": {
+   "id": "MULT:Requirement|verify|in",
+   "cls": "multiplicity"
+  },
+  "urn:oracle:shape:MULT%3ARequirement%7Cverify%7Cin/p": {
+   "id": "MULT:Requirement|verify|in",
+   "cls": "multiplicity"
+  },
+  "urn:oracle:shape:MULT%3AFunction%7Callocate%7Cout": {
+   "id": "MULT:Function|allocate|out",
+   "cls": "multiplicity"
+  },
+  "urn:oracle:shape:MULT%3AFunction%7Callocate%7Cout/p": {
+   "id": "MULT:Function|allocate|out",
+   "cls": "multiplicity"
+  },
+  "urn:oracle:shape:MULT%3APort%7Ccontain%7Cin": {
+   "id": "MULT:Port|contain|in",
+   "cls": "multiplicity"
+  },
+  "urn:oracle:shape:MULT%3APort%7Ccontain%7Cin/p": {
+   "id": "MULT:Port|contain|in",
+   "cls": "multiplicity"
+  },
+  "urn:oracle:shape:MULT%3AView%7Csubject%7Cout": {
+   "id": "MULT:View|subject|out",
+   "cls": "multiplicity"
+  },
+  "urn:oracle:shape:MULT%3AView%7Csubject%7Cout/p": {
+   "id": "MULT:View|subject|out",
+   "cls": "multiplicity"
+  },
+  "urn:oracle:shape:ISO%3ARequirement": {
+   "id": "ISO:Requirement",
+   "cls": "isolated"
+  },
+  "urn:oracle:shape:ISO%3AFunction": {
+   "id": "ISO:Function",
+   "cls": "isolated"
+  },
+  "urn:oracle:shape:ISO%3AComponent": {
+   "id": "ISO:Component",
+   "cls": "isolated"
+  },
+  "urn:oracle:shape:ISO%3AInterface": {
+   "id": "ISO:Interface",
+   "cls": "isolated"
+  },
+  "urn:oracle:shape:ISO%3APort": {
+   "id": "ISO:Port",
+   "cls": "isolated"
+  },
+  "urn:oracle:shape:ISO%3AVerificationCase": {
+   "id": "ISO:VerificationCase",
+   "cls": "isolated"
+  },
+  "urn:oracle:shape:VIEW%3AView": {
+   "id": "VIEW:View",
+   "cls": "viewConsistency"
+  },
+  "urn:oracle:shape:ACYC%3AdependOn": {
+   "id": "ACYC:dependOn",
+   "cls": "acyclic"
+  },
+  "urn:oracle:shape:TRACE%3AFUN2REQ": {
+   "id": "TRACE:FUN2REQ",
+   "cls": "tracePolicy"
+  }
+ }
+}

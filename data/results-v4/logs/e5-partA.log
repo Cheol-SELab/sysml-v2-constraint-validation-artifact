@@ -1,0 +1,32 @@
+[2026-10-22 23:15:33] start e5-partA: R1_TAG=partA E5_SIZES=500,1000,5000 E5_SKIP_LARGE=1 node --max-old-space-size=16000 dist-r8/cli-v2.js e5 --output G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/e5
+pin: could not set affinity/priority: The property 'ProcessorAffinity' cannot be found on this object. Verify that the property exists and can be set.
+pin: affinity=0x4 priority=AboveNormal pid=
+[2026-10-22 23:15:34] end e5-partA rc=0 elapsed=1s
+[2026-10-22 23:46:59] start e5-partA: R1_TAG=partA E5_SIZES=500,1000,5000 E5_SKIP_LARGE=1 node --max-old-space-size=16000 dist-r8/cli-v2.js e5 --output G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/e5
+pin: affinity=0x4 priority=AboveNormal pid=45948
+E5 n=500 random ratio=0.001 done
+E5 n=500 random ratio=0.01 done
+E5 n=500 random ratio=0.05 done
+E5 n=500 random ratio=0.1 done
+E5 n=500 clustered ratio=0.001 done
+E5 n=500 clustered ratio=0.01 done
+E5 n=500 clustered ratio=0.05 done
+E5 n=500 clustered ratio=0.1 done
+E5 n=1000 random ratio=0.001 done
+E5 n=1000 random ratio=0.01 done
+E5 n=1000 random ratio=0.05 done
+E5 n=1000 random ratio=0.1 done
+E5 n=1000 clustered ratio=0.001 done
+E5 n=1000 clustered ratio=0.01 done
+E5 n=1000 clustered ratio=0.05 done
+E5 n=1000 clustered ratio=0.1 done
+E5 n=5000 random ratio=0.001 done
+E5 n=5000 random ratio=0.01 done
+E5 n=5000 random ratio=0.05 done
+E5 n=5000 random ratio=0.1 done
+E5 n=5000 clustered ratio=0.001 done
+E5 n=5000 clustered ratio=0.01 done
+E5 n=5000 clustered ratio=0.05 done
+E5 n=5000 clustered ratio=0.1 done
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\e5\e5-incremental-v2-partA.json (1325.1 s)
+[2026-10-23 00:09:05] end e5-partA rc=0 elapsed=1326s

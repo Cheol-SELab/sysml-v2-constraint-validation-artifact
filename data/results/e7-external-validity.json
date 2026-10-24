@@ -1,0 +1,110 @@
+{
+  "experiment": "E7",
+  "publicModels": [
+    {
+      "id": "omg-training-vehicle",
+      "nodes": 19,
+      "edges": 23
+    },
+    {
+      "id": "vehicle-powertrain-case",
+      "nodes": 22,
+      "edges": 27
+    }
+  ],
+  "calibration": {
+    "defaultParameters": {
+      "portsPerComponent": 0.8,
+      "depth": 3,
+      "dependDensity": 0.5,
+      "redundancy": 0.4
+    },
+    "calibratedParameters": {
+      "portsPerComponent": 2,
+      "depth": 3,
+      "dependDensity": 0,
+      "redundancy": 0
+    },
+    "ksBeforeCalibration": {
+      "degree": {
+        "d": 0.341,
+        "critical005": 0.232,
+        "reject005": true
+      },
+      "containmentDepth": {
+        "d": 0.438,
+        "critical005": 0.232,
+        "reject005": true
+      },
+      "distanceToRequirement": {
+        "d": 0.503,
+        "critical005": 0.437,
+        "reject005": true
+      },
+      "sumD": 1.282
+    },
+    "ksAfterCalibration": {
+      "degree": {
+        "d": 0.089,
+        "critical005": 0.232,
+        "reject005": false
+      },
+      "containmentDepth": {
+        "d": 0.152,
+        "critical005": 0.232,
+        "reject005": false
+      },
+      "distanceToRequirement": {
+        "d": 0.017,
+        "critical005": 0.437,
+        "reject005": false
+      },
+      "sumD": 0.257
+    },
+    "note": "public sample is small, so the KS test has low power; the statistic is reported as a calibration diagnostic, not as an equivalence claim"
+  },
+  "validationOfPublicModels": [
+    {
+      "model": "omg-training-vehicle",
+      "nodes": 19,
+      "edges": 23,
+      "violations": 14,
+      "byRule": [
+        {
+          "ruleId": "ATTR:Component.criticality",
+          "count": 6
+        },
+        {
+          "ruleId": "ATTR:Component.mass",
+          "count": 5
+        },
+        {
+          "ruleId": "MULT:Requirement|verify|in",
+          "count": 3
+        }
+      ],
+      "classification": "violations originating from catalog policy elements absent in the public model (verification cases, views, functions) are policy-driven, not model defects"
+    },
+    {
+      "model": "vehicle-powertrain-case",
+      "nodes": 22,
+      "edges": 27,
+      "violations": 14,
+      "byRule": [
+        {
+          "ruleId": "ATTR:Component.criticality",
+          "count": 6
+        },
+        {
+          "ruleId": "ATTR:Component.mass",
+          "count": 5
+        },
+        {
+          "ruleId": "MULT:Requirement|verify|in",
+          "count": 3
+        }
+      ],
+      "classification": "violations originating from catalog policy elements absent in the public model (verification cases, views, functions) are policy-driven, not model defects"
+    }
+  ]
+}

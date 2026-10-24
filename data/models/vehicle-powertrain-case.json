@@ -1,0 +1,62 @@
+{
+  "_provenance": "Manual transcription of the structural subset of the public vehicle powertrain example distributed with the OMG SysML-v2-Release examples (parts, ports, flow connections, satisfy relations), converted into the typed-graph exchange schema used by this prototype. Parameters are mapped to node attributes.",
+  "id": "vehicle-powertrain-case",
+  "nodes": [
+    { "id": "VEH_001", "type": "Component", "attrs": { "name": "Vehicle", "mass": 1650 } },
+    { "id": "ENG_001", "type": "Component", "attrs": { "name": "Engine", "displacement": 2.0, "maxTorque": 350 } },
+    { "id": "TRN_001", "type": "Component", "attrs": { "name": "Transmission", "gearCount": 8 } },
+    { "id": "AXL_001", "type": "Component", "attrs": { "name": "RearAxle", "finalDriveRatio": 3.42 } },
+    { "id": "ECU_001", "type": "Component", "attrs": { "name": "EngineController", "idleRpm": 800 } },
+    { "id": "DRV_001", "type": "Component", "attrs": { "name": "DriverModel" } },
+
+    { "id": "P_ENG_TRQ_OUT", "type": "Port", "attrs": { "name": "torqueOut", "direction": "out" } },
+    { "id": "P_ENG_RPM_OUT", "type": "Port", "attrs": { "name": "rpmOut", "direction": "out" } },
+    { "id": "P_ENG_THR_IN", "type": "Port", "attrs": { "name": "throttleIn", "direction": "in" } },
+    { "id": "P_TRN_TRQ_IN", "type": "Port", "attrs": { "name": "torqueIn", "direction": "in" } },
+    { "id": "P_TRN_TRQ_OUT", "type": "Port", "attrs": { "name": "torqueOut", "direction": "out" } },
+    { "id": "P_TRN_GEAR_IN", "type": "Port", "attrs": { "name": "gearIn", "direction": "in" } },
+    { "id": "P_AXL_TRQ_IN", "type": "Port", "attrs": { "name": "torqueIn", "direction": "in" } },
+    { "id": "P_AXL_SPD_OUT", "type": "Port", "attrs": { "name": "wheelSpeedOut", "direction": "out" } },
+    { "id": "P_ECU_RPM_IN", "type": "Port", "attrs": { "name": "rpmIn", "direction": "in" } },
+    { "id": "P_ECU_THR_OUT", "type": "Port", "attrs": { "name": "throttleCmdOut", "direction": "out" } },
+    { "id": "P_ECU_GEAR_OUT", "type": "Port", "attrs": { "name": "gearCmdOut", "direction": "out" } },
+    { "id": "P_DRV_SPD_IN", "type": "Port", "attrs": { "name": "vehicleSpeedIn", "direction": "in" } },
+    { "id": "P_VEH_SPD_IN", "type": "Port", "attrs": { "name": "wheelSpeedIn", "direction": "in" } },
+
+    { "id": "REQ_ACCEL", "type": "Requirement", "attrs": { "name": "acceleration", "priority": "high" } },
+    { "id": "REQ_FUEL", "type": "Requirement", "attrs": { "name": "idleRpmBand", "priority": "medium" } },
+    { "id": "REQ_SHIFT", "type": "Requirement", "attrs": { "name": "shiftTime", "priority": "high" } }
+  ],
+  "edges": [
+    { "id": "own_1", "type": "contain", "src": "VEH_001", "tgt": "ENG_001" },
+    { "id": "own_2", "type": "contain", "src": "VEH_001", "tgt": "TRN_001" },
+    { "id": "own_3", "type": "contain", "src": "VEH_001", "tgt": "AXL_001" },
+    { "id": "own_4", "type": "contain", "src": "VEH_001", "tgt": "ECU_001" },
+
+    { "id": "own_5", "type": "contain", "src": "ENG_001", "tgt": "P_ENG_TRQ_OUT" },
+    { "id": "own_6", "type": "contain", "src": "ENG_001", "tgt": "P_ENG_RPM_OUT" },
+    { "id": "own_7", "type": "contain", "src": "ENG_001", "tgt": "P_ENG_THR_IN" },
+    { "id": "own_8", "type": "contain", "src": "TRN_001", "tgt": "P_TRN_TRQ_IN" },
+    { "id": "own_9", "type": "contain", "src": "TRN_001", "tgt": "P_TRN_TRQ_OUT" },
+    { "id": "own_10", "type": "contain", "src": "TRN_001", "tgt": "P_TRN_GEAR_IN" },
+    { "id": "own_11", "type": "contain", "src": "AXL_001", "tgt": "P_AXL_TRQ_IN" },
+    { "id": "own_12", "type": "contain", "src": "AXL_001", "tgt": "P_AXL_SPD_OUT" },
+    { "id": "own_13", "type": "contain", "src": "ECU_001", "tgt": "P_ECU_RPM_IN" },
+    { "id": "own_14", "type": "contain", "src": "ECU_001", "tgt": "P_ECU_THR_OUT" },
+    { "id": "own_15", "type": "contain", "src": "ECU_001", "tgt": "P_ECU_GEAR_OUT" },
+    { "id": "own_16", "type": "contain", "src": "DRV_001", "tgt": "P_DRV_SPD_IN" },
+    { "id": "own_17", "type": "contain", "src": "VEH_001", "tgt": "P_VEH_SPD_IN" },
+
+    { "id": "C_ENG_TRN", "type": "connect", "src": "P_ENG_TRQ_OUT", "tgt": "P_TRN_TRQ_IN" },
+    { "id": "C_TRN_AXL", "type": "connect", "src": "P_TRN_TRQ_OUT", "tgt": "P_AXL_TRQ_IN" },
+    { "id": "C_ENG_ECU", "type": "connect", "src": "P_ENG_RPM_OUT", "tgt": "P_ECU_RPM_IN" },
+    { "id": "C_ECU_ENG", "type": "connect", "src": "P_ECU_THR_OUT", "tgt": "P_ENG_THR_IN" },
+    { "id": "C_ECU_TRN", "type": "connect", "src": "P_ECU_GEAR_OUT", "tgt": "P_TRN_GEAR_IN" },
+    { "id": "C_AXL_DRV", "type": "connect", "src": "P_AXL_SPD_OUT", "tgt": "P_DRV_SPD_IN" },
+    { "id": "C_AXL_VEH", "type": "connect", "src": "P_AXL_SPD_OUT", "tgt": "P_VEH_SPD_IN" },
+
+    { "id": "R_SAT_ACCEL", "type": "satisfy", "src": "VEH_001", "tgt": "REQ_ACCEL" },
+    { "id": "R_SAT_FUEL", "type": "satisfy", "src": "ECU_001", "tgt": "REQ_FUEL" },
+    { "id": "R_SAT_SHIFT", "type": "satisfy", "src": "TRN_001", "tgt": "REQ_SHIFT" }
+  ]
+}

@@ -1,0 +1,3921 @@
+{
+  "meta": {
+    "command": "node dist/cli-v2.js mutation --output G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\results-v2",
+    "subcommand": "mutation",
+    "node": "v22.15.1",
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "maxOldSpaceMiB": 4144,
+    "startedAt": "2026-10-21T04:42:14.331Z",
+    "elapsedSec": 5641.4
+  },
+  "experiment": "M4-mutation-analysis",
+  "root": "C:\\Users\\PCYOUNG\\AppData\\Local\\Temp\\claude\\G--SW-SW-SELab-SELab-Researches-selab-research-papers\\d8e01205-6fec-4d2d-b804-becc973415e7\\scratchpad\\r1\\snap-final",
+  "workers": 2,
+  "timeoutMs": 180000,
+  "harness": "reduced E1: BE-base (n<=2,m<=3; n=3,m<=2; templates T1-T3) -> BE-ext (T4-T10) -> PB (12 cases x 30 steps, P1-P6, P1f) -> INV (9 cases x 10 steps, I1-I3); first failing stage recorded",
+  "baselineHarness": {
+    "killedBy": null,
+    "detail": "",
+    "ms": 49970
+  },
+  "operators": "ROR, LCR, NEG, BOOL, STMT, INC, CONST (first-order, one textual change per mutant)",
+  "excludedLines": [
+    "^\\s*(\\/\\/|\\*|\\/\\*)",
+    "^\\s*import ",
+    "`",
+    "opCounter",
+    "\\bwork\\b",
+    "fallbacks",
+    "removedLocal",
+    "GlobalRules\\+\\+",
+    "throw new Error",
+    "console\\."
+  ],
+  "total": {
+    "mutants": 349,
+    "killed": 241,
+    "survived": 108,
+    "mutationScore": 0.6905,
+    "byStage": {
+      "BE-base": 147,
+      "survived": 108,
+      "crash:BE-base": 25,
+      "timeout": 14,
+      "BE-ext": 22,
+      "crash:BE-ext": 10,
+      "PB": 16,
+      "INV": 1,
+      "crash:load": 1,
+      "crash:PB": 4,
+      "crash:INV": 1
+    }
+  },
+  "byFile": {
+    "validator/engine.ts": {
+      "role": "engine (rule evaluation)",
+      "mutants": 75,
+      "killed": 65,
+      "survived": 10,
+      "mutationScore": 0.8667,
+      "byStage": {
+        "BE-base": 58,
+        "survived": 10,
+        "crash:BE-base": 6,
+        "timeout": 1
+      }
+    },
+    "incremental/session.ts": {
+      "role": "incremental session",
+      "mutants": 68,
+      "killed": 46,
+      "survived": 22,
+      "mutationScore": 0.6765,
+      "byStage": {
+        "BE-base": 15,
+        "survived": 22,
+        "BE-ext": 9,
+        "crash:BE-base": 7,
+        "crash:BE-ext": 8,
+        "PB": 7
+      }
+    },
+    "witness/acyclicWitness.ts": {
+      "role": "witness store (acyclic)",
+      "mutants": 59,
+      "killed": 36,
+      "survived": 23,
+      "mutationScore": 0.6102,
+      "byStage": {
+        "survived": 23,
+        "BE-ext": 5,
+        "timeout": 6,
+        "BE-base": 21,
+        "PB": 3,
+        "INV": 1
+      }
+    },
+    "witness/traceWitness.ts": {
+      "role": "witness store (trace)",
+      "mutants": 53,
+      "killed": 41,
+      "survived": 12,
+      "mutationScore": 0.7736,
+      "byStage": {
+        "BE-base": 25,
+        "crash:BE-base": 5,
+        "survived": 12,
+        "timeout": 4,
+        "BE-ext": 6,
+        "PB": 1
+      }
+    },
+    "witness/tarjan.ts": {
+      "role": "Tarjan SCC (BatchGlobal)",
+      "mutants": 30,
+      "killed": 28,
+      "survived": 2,
+      "mutationScore": 0.9333,
+      "byStage": {
+        "BE-base": 23,
+        "crash:BE-base": 2,
+        "survived": 2,
+        "timeout": 2,
+        "crash:load": 1
+      }
+    },
+    "catalog/rules.ts": {
+      "role": "shared: rule derivation, value domains, violation keys",
+      "mutants": 25,
+      "killed": 6,
+      "survived": 19,
+      "mutationScore": 0.24,
+      "byStage": {
+        "survived": 19,
+        "BE-base": 2,
+        "PB": 4
+      }
+    },
+    "model/graph.ts": {
+      "role": "shared: normalization, change application, neighbourhoods",
+      "mutants": 39,
+      "killed": 19,
+      "survived": 20,
+      "mutationScore": 0.4872,
+      "byStage": {
+        "survived": 20,
+        "PB": 1,
+        "crash:BE-base": 5,
+        "BE-ext": 2,
+        "crash:BE-ext": 2,
+        "crash:PB": 4,
+        "BE-base": 3,
+        "crash:INV": 1,
+        "timeout": 1
+      }
+    }
+  },
+  "byOperator": {
+    "ROR": {
+      "mutants": 86,
+      "killed": 58,
+      "survived": 28,
+      "mutationScore": 0.6744,
+      "byStage": {
+        "BE-base": 43,
+        "survived": 28,
+        "crash:BE-base": 3,
+        "BE-ext": 4,
+        "crash:BE-ext": 2,
+        "PB": 5,
+        "timeout": 1
+      }
+    },
+    "LCR": {
+      "mutants": 36,
+      "killed": 22,
+      "survived": 14,
+      "mutationScore": 0.6111,
+      "byStage": {
+        "BE-base": 14,
+        "crash:BE-ext": 2,
+        "survived": 14,
+        "crash:BE-base": 2,
+        "BE-ext": 3,
+        "crash:PB": 1
+      }
+    },
+    "NEG": {
+      "mutants": 137,
+      "killed": 111,
+      "survived": 26,
+      "mutationScore": 0.8102,
+      "byStage": {
+        "BE-base": 68,
+        "crash:BE-base": 14,
+        "survived": 26,
+        "BE-ext": 12,
+        "PB": 7,
+        "crash:BE-ext": 5,
+        "timeout": 1,
+        "crash:load": 1,
+        "crash:PB": 2,
+        "crash:INV": 1
+      }
+    },
+    "BOOL": {
+      "mutants": 12,
+      "killed": 6,
+      "survived": 6,
+      "mutationScore": 0.5,
+      "byStage": {
+        "BE-base": 6,
+        "survived": 6
+      }
+    },
+    "STMT": {
+      "mutants": 46,
+      "killed": 18,
+      "survived": 28,
+      "mutationScore": 0.3913,
+      "byStage": {
+        "BE-base": 8,
+        "crash:BE-base": 5,
+        "survived": 28,
+        "crash:BE-ext": 1,
+        "timeout": 3,
+        "crash:PB": 1
+      }
+    },
+    "INC": {
+      "mutants": 19,
+      "killed": 16,
+      "survived": 3,
+      "mutationScore": 0.8421,
+      "byStage": {
+        "BE-base": 3,
+        "timeout": 9,
+        "survived": 3,
+        "BE-ext": 1,
+        "PB": 2,
+        "INV": 1
+      }
+    },
+    "CONST": {
+      "mutants": 13,
+      "killed": 10,
+      "survived": 3,
+      "mutationScore": 0.7692,
+      "byStage": {
+        "survived": 3,
+        "BE-base": 5,
+        "BE-ext": 2,
+        "PB": 2,
+        "crash:BE-base": 1
+      }
+    }
+  },
+  "survivors": [
+    {
+      "id": 9,
+      "file": "validator/engine.ts",
+      "line": 97,
+      "operator": "ROR",
+      "original": "const upperOk = r.max < 0 || count <= r.max;",
+      "mutated": "const upperOk = r.max <= 0 || count <= r.max;"
+    },
+    {
+      "id": 11,
+      "file": "validator/engine.ts",
+      "line": 97,
+      "operator": "CONST",
+      "original": "const upperOk = r.max < 0 || count <= r.max;",
+      "mutated": "const upperOk = r.max < 1 || count <= r.max;"
+    },
+    {
+      "id": 27,
+      "file": "validator/engine.ts",
+      "line": 135,
+      "operator": "BOOL",
+      "original": "return true;",
+      "mutated": "return false;"
+    },
+    {
+      "id": 49,
+      "file": "validator/engine.ts",
+      "line": 233,
+      "operator": "ROR",
+      "original": "if (v.kind === 'relationType') {",
+      "mutated": "if (v.kind !== 'relationType') {"
+    },
+    {
+      "id": 50,
+      "file": "validator/engine.ts",
+      "line": 233,
+      "operator": "NEG",
+      "original": "if (v.kind === 'relationType') {",
+      "mutated": "if (!(v.kind === 'relationType')) {"
+    },
+    {
+      "id": 59,
+      "file": "validator/engine.ts",
+      "line": 270,
+      "operator": "ROR",
+      "original": "while (head < queue.length) {",
+      "mutated": "while (head <= queue.length) {"
+    },
+    {
+      "id": 71,
+      "file": "validator/engine.ts",
+      "line": 319,
+      "operator": "NEG",
+      "original": "if (!n) continue;",
+      "mutated": "if (!(!n)) continue;"
+    },
+    {
+      "id": 72,
+      "file": "validator/engine.ts",
+      "line": 319,
+      "operator": "STMT",
+      "original": "if (!n) continue;",
+      "mutated": "if (!n) {}"
+    },
+    {
+      "id": 73,
+      "file": "validator/engine.ts",
+      "line": 327,
+      "operator": "NEG",
+      "original": "if (!sub.nodes.has(e.tgt)) continue;",
+      "mutated": "if (!(!sub.nodes.has(e.tgt))) continue;"
+    },
+    {
+      "id": 74,
+      "file": "validator/engine.ts",
+      "line": 327,
+      "operator": "STMT",
+      "original": "if (!sub.nodes.has(e.tgt)) continue;",
+      "mutated": "if (!sub.nodes.has(e.tgt)) {}"
+    },
+    {
+      "id": 82,
+      "file": "incremental/session.ts",
+      "line": 157,
+      "operator": "NEG",
+      "original": "if (!this.g.nodes.has(ch.id)) return [];",
+      "mutated": "if (!(!this.g.nodes.has(ch.id))) return [];"
+    },
+    {
+      "id": 91,
+      "file": "incremental/session.ts",
+      "line": 188,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}"
+    },
+    {
+      "id": 95,
+      "file": "incremental/session.ts",
+      "line": 195,
+      "operator": "STMT",
+      "original": "if (!addEdge(this.g, p.edge)) break;",
+      "mutated": "if (!addEdge(this.g, p.edge)) {}"
+    },
+    {
+      "id": 97,
+      "file": "incremental/session.ts",
+      "line": 197,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}"
+    },
+    {
+      "id": 101,
+      "file": "incremental/session.ts",
+      "line": 202,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 103,
+      "file": "incremental/session.ts",
+      "line": 205,
+      "operator": "STMT",
+      "original": "if (!this.g.edges.has(p.edge.id)) break;",
+      "mutated": "if (!this.g.edges.has(p.edge.id)) {}"
+    },
+    {
+      "id": 105,
+      "file": "incremental/session.ts",
+      "line": 208,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}"
+    },
+    {
+      "id": 109,
+      "file": "incremental/session.ts",
+      "line": 213,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 110,
+      "file": "incremental/session.ts",
+      "line": 216,
+      "operator": "NEG",
+      "original": "if (!this.g.nodes.has(p.id)) break;",
+      "mutated": "if (!(!this.g.nodes.has(p.id))) break;"
+    },
+    {
+      "id": 111,
+      "file": "incremental/session.ts",
+      "line": 216,
+      "operator": "STMT",
+      "original": "if (!this.g.nodes.has(p.id)) break;",
+      "mutated": "if (!this.g.nodes.has(p.id)) {}"
+    },
+    {
+      "id": 112,
+      "file": "incremental/session.ts",
+      "line": 219,
+      "operator": "NEG",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!(!s.valid)) continue;"
+    },
+    {
+      "id": 113,
+      "file": "incremental/session.ts",
+      "line": 219,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}"
+    },
+    {
+      "id": 115,
+      "file": "incremental/session.ts",
+      "line": 223,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 116,
+      "file": "incremental/session.ts",
+      "line": 227,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 117,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "ROR",
+      "original": "if (this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "mutated": "if (this.strategy !== 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {"
+    },
+    {
+      "id": 118,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "ROR",
+      "original": "if (this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "mutated": "if (this.strategy === 3 && changes.length >= this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {"
+    },
+    {
+      "id": 119,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "LCR",
+      "original": "if (this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "mutated": "if (this.strategy === 3 || changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {"
+    },
+    {
+      "id": 120,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "NEG",
+      "original": "if (this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "mutated": "if (!(this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size))) {"
+    },
+    {
+      "id": 121,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "CONST",
+      "original": "if (this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "mutated": "if (this.strategy === 4 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {"
+    },
+    {
+      "id": 135,
+      "file": "incremental/session.ts",
+      "line": 279,
+      "operator": "NEG",
+      "original": "for (const v of evaluateGlobalRuleBatch(sub, r)) if (scope.has(v.anchor)) recomputed.push(v);",
+      "mutated": "for (const v of evaluateGlobalRuleBatch(sub, r)) if (!(scope.has(v.anchor))) recomputed.push(v);"
+    },
+    {
+      "id": 136,
+      "file": "incremental/session.ts",
+      "line": 281,
+      "operator": "LCR",
+      "original": "const kept = this.global.filter((v) => !scope.has(v.anchor) && (this.g.nodes.has(v.anchor) || this.g.edges.has(v.anchor)));",
+      "mutated": "const kept = this.global.filter((v) => !scope.has(v.anchor) || (this.g.nodes.has(v.anchor) || this.g.edges.has(v.anchor)));"
+    },
+    {
+      "id": 137,
+      "file": "incremental/session.ts",
+      "line": 281,
+      "operator": "LCR",
+      "original": "const kept = this.global.filter((v) => !scope.has(v.anchor) && (this.g.nodes.has(v.anchor) || this.g.edges.has(v.anchor)));",
+      "mutated": "const kept = this.global.filter((v) => !scope.has(v.anchor) && (this.g.nodes.has(v.anchor) && this.g.edges.has(v.anchor)));"
+    },
+    {
+      "id": 143,
+      "file": "witness/acyclicWitness.ts",
+      "line": 48,
+      "operator": "INC",
+      "original": "const cid = this.nextComp++;",
+      "mutated": "const cid = this.nextComp--;"
+    },
+    {
+      "id": 144,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "original": "return v === null || v === undefined ? undefined : this.compId.get(v);",
+      "mutated": "return v !== null || v === undefined ? undefined : this.compId.get(v);"
+    },
+    {
+      "id": 145,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "original": "return v === null || v === undefined ? undefined : this.compId.get(v);",
+      "mutated": "return v === null || v !== undefined ? undefined : this.compId.get(v);"
+    },
+    {
+      "id": 146,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "LCR",
+      "original": "return v === null || v === undefined ? undefined : this.compId.get(v);",
+      "mutated": "return v === null && v === undefined ? undefined : this.compId.get(v);"
+    },
+    {
+      "id": 147,
+      "file": "witness/acyclicWitness.ts",
+      "line": 73,
+      "operator": "ROR",
+      "original": "while (a > 0) {",
+      "mutated": "while (a >= 0) {"
+    },
+    {
+      "id": 149,
+      "file": "witness/acyclicWitness.ts",
+      "line": 74,
+      "operator": "INC",
+      "original": "const c = cidOf(a - 1);",
+      "mutated": "const c = cidOf(a + 1);"
+    },
+    {
+      "id": 150,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "ROR",
+      "original": "if (c === undefined || c === loCid) a--;",
+      "mutated": "if (c !== undefined || c === loCid) a--;"
+    },
+    {
+      "id": 156,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "ROR",
+      "original": "while (b < this.order.length - 1) {",
+      "mutated": "while (b <= this.order.length - 1) {"
+    },
+    {
+      "id": 157,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "INC",
+      "original": "while (b < this.order.length - 1) {",
+      "mutated": "while (b < this.order.length + 1) {"
+    },
+    {
+      "id": 159,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "ROR",
+      "original": "if (c === undefined || c === hiCid) b++;",
+      "mutated": "if (c !== undefined || c === hiCid) b++;"
+    },
+    {
+      "id": 169,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "original": "if (v !== null && v !== undefined && this.g.nodes.has(v)) out.push(v);",
+      "mutated": "if (v !== null || v !== undefined && this.g.nodes.has(v)) out.push(v);"
+    },
+    {
+      "id": 170,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "original": "if (v !== null && v !== undefined && this.g.nodes.has(v)) out.push(v);",
+      "mutated": "if (v !== null && v !== undefined || this.g.nodes.has(v)) out.push(v);"
+    },
+    {
+      "id": 176,
+      "file": "witness/acyclicWitness.ts",
+      "line": 107,
+      "operator": "ROR",
+      "original": "for (let i = startPos; i <= endPos; i++) this.order[i] = null;",
+      "mutated": "for (let i = startPos; i < endPos; i++) this.order[i] = null;"
+    },
+    {
+      "id": 184,
+      "file": "witness/acyclicWitness.ts",
+      "line": 143,
+      "operator": "NEG",
+      "original": "if (!this.pos.has(v)) return;",
+      "mutated": "if (!(!this.pos.has(v))) return;"
+    },
+    {
+      "id": 185,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "ROR",
+      "original": "if (old !== undefined) this.nonTrivial.delete(old);",
+      "mutated": "if (old === undefined) this.nonTrivial.delete(old);"
+    },
+    {
+      "id": 186,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "NEG",
+      "original": "if (old !== undefined) this.nonTrivial.delete(old);",
+      "mutated": "if (!(old !== undefined)) this.nonTrivial.delete(old);"
+    },
+    {
+      "id": 187,
+      "file": "witness/acyclicWitness.ts",
+      "line": 155,
+      "operator": "NEG",
+      "original": "if (!this.pos.has(u)) this.onAddNode(u);",
+      "mutated": "if (!(!this.pos.has(u))) this.onAddNode(u);"
+    },
+    {
+      "id": 188,
+      "file": "witness/acyclicWitness.ts",
+      "line": 156,
+      "operator": "NEG",
+      "original": "if (!this.pos.has(v)) this.onAddNode(v);",
+      "mutated": "if (!(!this.pos.has(v))) this.onAddNode(v);"
+    },
+    {
+      "id": 193,
+      "file": "witness/acyclicWitness.ts",
+      "line": 168,
+      "operator": "ROR",
+      "original": "if (pu < pv) {",
+      "mutated": "if (pu <= pv) {"
+    },
+    {
+      "id": 195,
+      "file": "witness/acyclicWitness.ts",
+      "line": 178,
+      "operator": "LCR",
+      "original": "if (!this.pos.has(u) || !this.pos.has(v)) {",
+      "mutated": "if (!this.pos.has(u) && !this.pos.has(v)) {"
+    },
+    {
+      "id": 197,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "ROR",
+      "original": "if (u === v) {",
+      "mutated": "if (u !== v) {"
+    },
+    {
+      "id": 198,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "NEG",
+      "original": "if (u === v) {",
+      "mutated": "if (!(u === v)) {"
+    },
+    {
+      "id": 201,
+      "file": "witness/acyclicWitness.ts",
+      "line": 201,
+      "operator": "ROR",
+      "original": "out.sort((a, b) => (a.witness.join(',') < b.witness.join(',') ? -1 : 1));",
+      "mutated": "out.sort((a, b) => (a.witness.join(',') <= b.witness.join(',') ? -1 : 1));"
+    },
+    {
+      "id": 210,
+      "file": "witness/traceWitness.ts",
+      "line": 81,
+      "operator": "ROR",
+      "original": "while (head < queue.length) {",
+      "mutated": "while (head <= queue.length) {"
+    },
+    {
+      "id": 220,
+      "file": "witness/traceWitness.ts",
+      "line": 104,
+      "operator": "NEG",
+      "original": "if (this.isTarget(v)) this.propagateFrom(v);",
+      "mutated": "if (!(this.isTarget(v))) this.propagateFrom(v);"
+    },
+    {
+      "id": 221,
+      "file": "witness/traceWitness.ts",
+      "line": 124,
+      "operator": "ROR",
+      "original": "while (head < queue.length) {",
+      "mutated": "while (head <= queue.length) {"
+    },
+    {
+      "id": 236,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "ROR",
+      "original": "if (eid !== undefined) {",
+      "mutated": "if (eid === undefined) {"
+    },
+    {
+      "id": 237,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "NEG",
+      "original": "if (eid !== undefined) {",
+      "mutated": "if (!(eid !== undefined)) {"
+    },
+    {
+      "id": 240,
+      "file": "witness/traceWitness.ts",
+      "line": 190,
+      "operator": "STMT",
+      "original": "if (this.reaches.has(u)) continue;",
+      "mutated": "if (this.reaches.has(u)) {}"
+    },
+    {
+      "id": 245,
+      "file": "witness/traceWitness.ts",
+      "line": 199,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 250,
+      "file": "witness/traceWitness.ts",
+      "line": 229,
+      "operator": "STMT",
+      "original": "if (!this.g.nodes.has(id)) continue;",
+      "mutated": "if (!this.g.nodes.has(id)) {}"
+    },
+    {
+      "id": 251,
+      "file": "witness/traceWitness.ts",
+      "line": 232,
+      "operator": "ROR",
+      "original": "out.sort((a, b) => (a.witness[0] < b.witness[0] ? -1 : 1));",
+      "mutated": "out.sort((a, b) => (a.witness[0] <= b.witness[0] ? -1 : 1));"
+    },
+    {
+      "id": 252,
+      "file": "witness/traceWitness.ts",
+      "line": 241,
+      "operator": "LCR",
+      "original": "while (this.succ.has(cur) && !guard.has(cur)) {",
+      "mutated": "while (this.succ.has(cur) || !guard.has(cur)) {"
+    },
+    {
+      "id": 253,
+      "file": "witness/traceWitness.ts",
+      "line": 246,
+      "operator": "NEG",
+      "original": "if (this.isTarget(cur)) break;",
+      "mutated": "if (!(this.isTarget(cur))) break;"
+    },
+    {
+      "id": 254,
+      "file": "witness/traceWitness.ts",
+      "line": 246,
+      "operator": "STMT",
+      "original": "if (this.isTarget(cur)) break;",
+      "mutated": "if (this.isTarget(cur)) {}"
+    },
+    {
+      "id": 260,
+      "file": "witness/tarjan.ts",
+      "line": 31,
+      "operator": "STMT",
+      "original": "if (region && !region.has(e.tgt)) continue;",
+      "mutated": "if (region && !region.has(e.tgt)) {}"
+    },
+    {
+      "id": 264,
+      "file": "witness/tarjan.ts",
+      "line": 50,
+      "operator": "ROR",
+      "original": "if (frame.i < frame.succs.length) {",
+      "mutated": "if (frame.i <= frame.succs.length) {"
+    },
+    {
+      "id": 285,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "NEG",
+      "original": "if (!a) continue;",
+      "mutated": "if (!(!a)) continue;"
+    },
+    {
+      "id": 286,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "STMT",
+      "original": "if (!a) continue;",
+      "mutated": "if (!a) {}"
+    },
+    {
+      "id": 287,
+      "file": "catalog/rules.ts",
+      "line": 38,
+      "operator": "NEG",
+      "original": "if (c.viewPolicy) {",
+      "mutated": "if (!(c.viewPolicy)) {"
+    },
+    {
+      "id": 288,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "ROR",
+      "original": "for (const r of rules) if (!r.global && r.radius > k) k = r.radius;",
+      "mutated": "for (const r of rules) if (!r.global && r.radius >= k) k = r.radius;"
+    },
+    {
+      "id": 289,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "LCR",
+      "original": "for (const r of rules) if (!r.global && r.radius > k) k = r.radius;",
+      "mutated": "for (const r of rules) if (!r.global || r.radius > k) k = r.radius;"
+    },
+    {
+      "id": 293,
+      "file": "catalog/rules.ts",
+      "line": 69,
+      "operator": "BOOL",
+      "original": "if (v === undefined) return false;",
+      "mutated": "if (v === undefined) return true;"
+    },
+    {
+      "id": 295,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' && v >= d.min && v < d.max;"
+    },
+    {
+      "id": 296,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' && v > d.min && v <= d.max;"
+    },
+    {
+      "id": 297,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' || v >= d.min && v <= d.max;"
+    },
+    {
+      "id": 298,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' && v >= d.min || v <= d.max;"
+    },
+    {
+      "id": 300,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "ROR",
+      "original": "return typeof v === 'string' && v.length > 0;",
+      "mutated": "return typeof v === 'string' && v.length >= 0;"
+    },
+    {
+      "id": 301,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "LCR",
+      "original": "return typeof v === 'string' && v.length > 0;",
+      "mutated": "return typeof v === 'string' || v.length > 0;"
+    },
+    {
+      "id": 302,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "CONST",
+      "original": "return typeof v === 'string' && v.length > 0;",
+      "mutated": "return typeof v === 'string' && v.length > 1;"
+    },
+    {
+      "id": 303,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "ROR",
+      "original": "if (a.size !== b.size) return false;",
+      "mutated": "if (a.size === b.size) return false;"
+    },
+    {
+      "id": 304,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "NEG",
+      "original": "if (a.size !== b.size) return false;",
+      "mutated": "if (!(a.size !== b.size)) return false;"
+    },
+    {
+      "id": 305,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "BOOL",
+      "original": "if (a.size !== b.size) return false;",
+      "mutated": "if (a.size !== b.size) return true;"
+    },
+    {
+      "id": 306,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "NEG",
+      "original": "for (const x of a) if (!b.has(x)) return false;",
+      "mutated": "for (const x of a) if (!(!b.has(x))) return false;"
+    },
+    {
+      "id": 307,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "BOOL",
+      "original": "for (const x of a) if (!b.has(x)) return false;",
+      "mutated": "for (const x of a) if (!b.has(x)) return true;"
+    },
+    {
+      "id": 308,
+      "file": "catalog/rules.ts",
+      "line": 104,
+      "operator": "BOOL",
+      "original": "return true;",
+      "mutated": "return false;"
+    },
+    {
+      "id": 310,
+      "file": "model/graph.ts",
+      "line": 22,
+      "operator": "LCR",
+      "original": "if (!g.nodes.has(e.src) || !g.nodes.has(e.tgt)) continue;",
+      "mutated": "if (!g.nodes.has(e.src) && !g.nodes.has(e.tgt)) continue;"
+    },
+    {
+      "id": 312,
+      "file": "model/graph.ts",
+      "line": 22,
+      "operator": "STMT",
+      "original": "if (!g.nodes.has(e.src) || !g.nodes.has(e.tgt)) continue;",
+      "mutated": "if (!g.nodes.has(e.src) || !g.nodes.has(e.tgt)) {}"
+    },
+    {
+      "id": 321,
+      "file": "model/graph.ts",
+      "line": 62,
+      "operator": "BOOL",
+      "original": "if (!g.nodes.has(edge.src) || !g.nodes.has(edge.tgt)) return false;",
+      "mutated": "if (!g.nodes.has(edge.src) || !g.nodes.has(edge.tgt)) return true;"
+    },
+    {
+      "id": 326,
+      "file": "model/graph.ts",
+      "line": 89,
+      "operator": "ROR",
+      "original": "if (value === undefined) delete n.attrs[attr];",
+      "mutated": "if (value !== undefined) delete n.attrs[attr];"
+    },
+    {
+      "id": 327,
+      "file": "model/graph.ts",
+      "line": 89,
+      "operator": "NEG",
+      "original": "if (value === undefined) delete n.attrs[attr];",
+      "mutated": "if (!(value === undefined)) delete n.attrs[attr];"
+    },
+    {
+      "id": 328,
+      "file": "model/graph.ts",
+      "line": 101,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 329,
+      "file": "model/graph.ts",
+      "line": 105,
+      "operator": "NEG",
+      "original": "if (e) touched.push(e.src, e.tgt, e.id);",
+      "mutated": "if (!(e)) touched.push(e.src, e.tgt, e.id);"
+    },
+    {
+      "id": 330,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 332,
+      "file": "model/graph.ts",
+      "line": 116,
+      "operator": "NEG",
+      "original": "if (addEdge(g, c.edge)) touched.push(c.edge.id, c.edge.src, c.edge.tgt);",
+      "mutated": "if (!(addEdge(g, c.edge))) touched.push(c.edge.id, c.edge.src, c.edge.tgt);"
+    },
+    {
+      "id": 333,
+      "file": "model/graph.ts",
+      "line": 117,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 335,
+      "file": "model/graph.ts",
+      "line": 122,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 336,
+      "file": "model/graph.ts",
+      "line": 136,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 337,
+      "file": "model/graph.ts",
+      "line": 141,
+      "operator": "NEG",
+      "original": "if (e) {",
+      "mutated": "if (!(e)) {"
+    },
+    {
+      "id": 338,
+      "file": "model/graph.ts",
+      "line": 146,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 340,
+      "file": "model/graph.ts",
+      "line": 153,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 341,
+      "file": "model/graph.ts",
+      "line": 156,
+      "operator": "NEG",
+      "original": "if (e) {",
+      "mutated": "if (!(e)) {"
+    },
+    {
+      "id": 342,
+      "file": "model/graph.ts",
+      "line": 160,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}"
+    },
+    {
+      "id": 343,
+      "file": "model/graph.ts",
+      "line": 175,
+      "operator": "LCR",
+      "original": "if (g.nodes.has(s) && !seen.has(s)) {",
+      "mutated": "if (g.nodes.has(s) || !seen.has(s)) {"
+    },
+    {
+      "id": 345,
+      "file": "model/graph.ts",
+      "line": 180,
+      "operator": "ROR",
+      "original": "for (let d = 0; d < k; d++) {",
+      "mutated": "for (let d = 0; d <= k; d++) {"
+    },
+    {
+      "id": 347,
+      "file": "model/graph.ts",
+      "line": 185,
+      "operator": "NEG",
+      "original": "if (!seen.has(e.tgt)) {",
+      "mutated": "if (!(!seen.has(e.tgt))) {"
+    }
+  ],
+  "mutants": [
+    {
+      "id": 0,
+      "file": "validator/engine.ts",
+      "line": 53,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 469
+    },
+    {
+      "id": 1,
+      "file": "validator/engine.ts",
+      "line": 58,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 455
+    },
+    {
+      "id": 2,
+      "file": "validator/engine.ts",
+      "line": 58,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 276
+    },
+    {
+      "id": 3,
+      "file": "validator/engine.ts",
+      "line": 58,
+      "operator": "INC",
+      "killedBy": "BE-base",
+      "ms": 249
+    },
+    {
+      "id": 4,
+      "file": "validator/engine.ts",
+      "line": 87,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 211
+    },
+    {
+      "id": 5,
+      "file": "validator/engine.ts",
+      "line": 90,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 215
+    },
+    {
+      "id": 6,
+      "file": "validator/engine.ts",
+      "line": 93,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 211
+    },
+    {
+      "id": 7,
+      "file": "validator/engine.ts",
+      "line": 93,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 281
+    },
+    {
+      "id": 8,
+      "file": "validator/engine.ts",
+      "line": 97,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 282
+    },
+    {
+      "id": 9,
+      "file": "validator/engine.ts",
+      "line": 97,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 62128
+    },
+    {
+      "id": 10,
+      "file": "validator/engine.ts",
+      "line": 97,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 201
+    },
+    {
+      "id": 11,
+      "file": "validator/engine.ts",
+      "line": 97,
+      "operator": "CONST",
+      "killedBy": null,
+      "ms": 61771
+    },
+    {
+      "id": 12,
+      "file": "validator/engine.ts",
+      "line": 98,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 158
+    },
+    {
+      "id": 13,
+      "file": "validator/engine.ts",
+      "line": 98,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 162
+    },
+    {
+      "id": 14,
+      "file": "validator/engine.ts",
+      "line": 101,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 147
+    },
+    {
+      "id": 15,
+      "file": "validator/engine.ts",
+      "line": 101,
+      "operator": "CONST",
+      "killedBy": "BE-base",
+      "ms": 177
+    },
+    {
+      "id": 16,
+      "file": "validator/engine.ts",
+      "line": 107,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 170
+    },
+    {
+      "id": 17,
+      "file": "validator/engine.ts",
+      "line": 112,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 184
+    },
+    {
+      "id": 18,
+      "file": "validator/engine.ts",
+      "line": 112,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 184
+    },
+    {
+      "id": 19,
+      "file": "validator/engine.ts",
+      "line": 116,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 196
+    },
+    {
+      "id": 20,
+      "file": "validator/engine.ts",
+      "line": 116,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "ms": 189
+    },
+    {
+      "id": 21,
+      "file": "validator/engine.ts",
+      "line": 119,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 187
+    },
+    {
+      "id": 22,
+      "file": "validator/engine.ts",
+      "line": 124,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 666
+    },
+    {
+      "id": 23,
+      "file": "validator/engine.ts",
+      "line": 124,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 668
+    },
+    {
+      "id": 24,
+      "file": "validator/engine.ts",
+      "line": 130,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 201
+    },
+    {
+      "id": 25,
+      "file": "validator/engine.ts",
+      "line": 130,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "ms": 720
+    },
+    {
+      "id": 26,
+      "file": "validator/engine.ts",
+      "line": 132,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "ms": 188
+    },
+    {
+      "id": 27,
+      "file": "validator/engine.ts",
+      "line": 135,
+      "operator": "BOOL",
+      "killedBy": null,
+      "ms": 59018
+    },
+    {
+      "id": 28,
+      "file": "validator/engine.ts",
+      "line": 178,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 187
+    },
+    {
+      "id": 29,
+      "file": "validator/engine.ts",
+      "line": 179,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 189
+    },
+    {
+      "id": 30,
+      "file": "validator/engine.ts",
+      "line": 179,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 175
+    },
+    {
+      "id": 31,
+      "file": "validator/engine.ts",
+      "line": 184,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 179
+    },
+    {
+      "id": 32,
+      "file": "validator/engine.ts",
+      "line": 184,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 193
+    },
+    {
+      "id": 33,
+      "file": "validator/engine.ts",
+      "line": 194,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 186
+    },
+    {
+      "id": 34,
+      "file": "validator/engine.ts",
+      "line": 195,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 212
+    },
+    {
+      "id": 35,
+      "file": "validator/engine.ts",
+      "line": 195,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 205
+    },
+    {
+      "id": 36,
+      "file": "validator/engine.ts",
+      "line": 200,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 207
+    },
+    {
+      "id": 37,
+      "file": "validator/engine.ts",
+      "line": 200,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 247
+    },
+    {
+      "id": 38,
+      "file": "validator/engine.ts",
+      "line": 200,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 183
+    },
+    {
+      "id": 39,
+      "file": "validator/engine.ts",
+      "line": 211,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 233
+    },
+    {
+      "id": 40,
+      "file": "validator/engine.ts",
+      "line": 211,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 238
+    },
+    {
+      "id": 41,
+      "file": "validator/engine.ts",
+      "line": 211,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 217
+    },
+    {
+      "id": 42,
+      "file": "validator/engine.ts",
+      "line": 211,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "ms": 199
+    },
+    {
+      "id": 43,
+      "file": "validator/engine.ts",
+      "line": 216,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 170
+    },
+    {
+      "id": 44,
+      "file": "validator/engine.ts",
+      "line": 217,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 210
+    },
+    {
+      "id": 45,
+      "file": "validator/engine.ts",
+      "line": 217,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 203
+    },
+    {
+      "id": 46,
+      "file": "validator/engine.ts",
+      "line": 222,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 255
+    },
+    {
+      "id": 47,
+      "file": "validator/engine.ts",
+      "line": 222,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 235
+    },
+    {
+      "id": 48,
+      "file": "validator/engine.ts",
+      "line": 222,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 182
+    },
+    {
+      "id": 49,
+      "file": "validator/engine.ts",
+      "line": 233,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 60496
+    },
+    {
+      "id": 50,
+      "file": "validator/engine.ts",
+      "line": 233,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 65384
+    },
+    {
+      "id": 51,
+      "file": "validator/engine.ts",
+      "line": 243,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 197
+    },
+    {
+      "id": 52,
+      "file": "validator/engine.ts",
+      "line": 246,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 198
+    },
+    {
+      "id": 53,
+      "file": "validator/engine.ts",
+      "line": 254,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 221
+    },
+    {
+      "id": 54,
+      "file": "validator/engine.ts",
+      "line": 254,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 329
+    },
+    {
+      "id": 55,
+      "file": "validator/engine.ts",
+      "line": 262,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 259
+    },
+    {
+      "id": 56,
+      "file": "validator/engine.ts",
+      "line": 262,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 235
+    },
+    {
+      "id": 57,
+      "file": "validator/engine.ts",
+      "line": 268,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 242
+    },
+    {
+      "id": 58,
+      "file": "validator/engine.ts",
+      "line": 268,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 256
+    },
+    {
+      "id": 59,
+      "file": "validator/engine.ts",
+      "line": 270,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 62927
+    },
+    {
+      "id": 60,
+      "file": "validator/engine.ts",
+      "line": 271,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "ms": 180057
+    },
+    {
+      "id": 61,
+      "file": "validator/engine.ts",
+      "line": 274,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 546
+    },
+    {
+      "id": 62,
+      "file": "validator/engine.ts",
+      "line": 274,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "ms": 640
+    },
+    {
+      "id": 63,
+      "file": "validator/engine.ts",
+      "line": 275,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 544
+    },
+    {
+      "id": 64,
+      "file": "validator/engine.ts",
+      "line": 275,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "ms": 9967
+    },
+    {
+      "id": 65,
+      "file": "validator/engine.ts",
+      "line": 283,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 212
+    },
+    {
+      "id": 66,
+      "file": "validator/engine.ts",
+      "line": 283,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 221
+    },
+    {
+      "id": 67,
+      "file": "validator/engine.ts",
+      "line": 283,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "ms": 230
+    },
+    {
+      "id": 68,
+      "file": "validator/engine.ts",
+      "line": 284,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 220
+    },
+    {
+      "id": 69,
+      "file": "validator/engine.ts",
+      "line": 297,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 195
+    },
+    {
+      "id": 70,
+      "file": "validator/engine.ts",
+      "line": 308,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 196
+    },
+    {
+      "id": 71,
+      "file": "validator/engine.ts",
+      "line": 319,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 53211
+    },
+    {
+      "id": 72,
+      "file": "validator/engine.ts",
+      "line": 319,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 53313
+    },
+    {
+      "id": 73,
+      "file": "validator/engine.ts",
+      "line": 327,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 54228
+    },
+    {
+      "id": 74,
+      "file": "validator/engine.ts",
+      "line": 327,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 63969
+    },
+    {
+      "id": 75,
+      "file": "incremental/session.ts",
+      "line": 109,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 216
+    },
+    {
+      "id": 76,
+      "file": "incremental/session.ts",
+      "line": 109,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 214
+    },
+    {
+      "id": 77,
+      "file": "incremental/session.ts",
+      "line": 109,
+      "operator": "CONST",
+      "killedBy": "BE-base",
+      "ms": 240
+    },
+    {
+      "id": 78,
+      "file": "incremental/session.ts",
+      "line": 111,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 246
+    },
+    {
+      "id": 79,
+      "file": "incremental/session.ts",
+      "line": 111,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 224
+    },
+    {
+      "id": 80,
+      "file": "incremental/session.ts",
+      "line": 112,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 244
+    },
+    {
+      "id": 81,
+      "file": "incremental/session.ts",
+      "line": 112,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 241
+    },
+    {
+      "id": 82,
+      "file": "incremental/session.ts",
+      "line": 157,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 63218
+    },
+    {
+      "id": 83,
+      "file": "incremental/session.ts",
+      "line": 162,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 16811
+    },
+    {
+      "id": 84,
+      "file": "incremental/session.ts",
+      "line": 176,
+      "operator": "ROR",
+      "killedBy": "crash:BE-base",
+      "ms": 272
+    },
+    {
+      "id": 85,
+      "file": "incremental/session.ts",
+      "line": 176,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 208
+    },
+    {
+      "id": 86,
+      "file": "incremental/session.ts",
+      "line": 178,
+      "operator": "ROR",
+      "killedBy": "BE-ext",
+      "ms": 15975
+    },
+    {
+      "id": 87,
+      "file": "incremental/session.ts",
+      "line": 178,
+      "operator": "LCR",
+      "killedBy": "crash:BE-ext",
+      "ms": 16091
+    },
+    {
+      "id": 88,
+      "file": "incremental/session.ts",
+      "line": 178,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 16306
+    },
+    {
+      "id": 89,
+      "file": "incremental/session.ts",
+      "line": 179,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 16667
+    },
+    {
+      "id": 90,
+      "file": "incremental/session.ts",
+      "line": 188,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "ms": 58511
+    },
+    {
+      "id": 91,
+      "file": "incremental/session.ts",
+      "line": 188,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 58216
+    },
+    {
+      "id": 92,
+      "file": "incremental/session.ts",
+      "line": 189,
+      "operator": "NEG",
+      "killedBy": "crash:BE-ext",
+      "ms": 15483
+    },
+    {
+      "id": 93,
+      "file": "incremental/session.ts",
+      "line": 192,
+      "operator": "STMT",
+      "killedBy": "crash:BE-ext",
+      "ms": 15619
+    },
+    {
+      "id": 94,
+      "file": "incremental/session.ts",
+      "line": 195,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 246
+    },
+    {
+      "id": 95,
+      "file": "incremental/session.ts",
+      "line": 195,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 59740
+    },
+    {
+      "id": 96,
+      "file": "incremental/session.ts",
+      "line": 197,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 236
+    },
+    {
+      "id": 97,
+      "file": "incremental/session.ts",
+      "line": 197,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 58794
+    },
+    {
+      "id": 98,
+      "file": "incremental/session.ts",
+      "line": 198,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 210
+    },
+    {
+      "id": 99,
+      "file": "incremental/session.ts",
+      "line": 199,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 215
+    },
+    {
+      "id": 100,
+      "file": "incremental/session.ts",
+      "line": 199,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 237
+    },
+    {
+      "id": 101,
+      "file": "incremental/session.ts",
+      "line": 202,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 58804
+    },
+    {
+      "id": 102,
+      "file": "incremental/session.ts",
+      "line": 205,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 15964
+    },
+    {
+      "id": 103,
+      "file": "incremental/session.ts",
+      "line": 205,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 60162
+    },
+    {
+      "id": 104,
+      "file": "incremental/session.ts",
+      "line": 208,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 182
+    },
+    {
+      "id": 105,
+      "file": "incremental/session.ts",
+      "line": 208,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 62826
+    },
+    {
+      "id": 106,
+      "file": "incremental/session.ts",
+      "line": 209,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 195
+    },
+    {
+      "id": 107,
+      "file": "incremental/session.ts",
+      "line": 210,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 196
+    },
+    {
+      "id": 108,
+      "file": "incremental/session.ts",
+      "line": 210,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 201
+    },
+    {
+      "id": 109,
+      "file": "incremental/session.ts",
+      "line": 213,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 62405
+    },
+    {
+      "id": 110,
+      "file": "incremental/session.ts",
+      "line": 216,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 58537
+    },
+    {
+      "id": 111,
+      "file": "incremental/session.ts",
+      "line": 216,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 59450
+    },
+    {
+      "id": 112,
+      "file": "incremental/session.ts",
+      "line": 219,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 58343
+    },
+    {
+      "id": 113,
+      "file": "incremental/session.ts",
+      "line": 219,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 56417
+    },
+    {
+      "id": 114,
+      "file": "incremental/session.ts",
+      "line": 220,
+      "operator": "NEG",
+      "killedBy": "crash:BE-ext",
+      "ms": 12848
+    },
+    {
+      "id": 115,
+      "file": "incremental/session.ts",
+      "line": 223,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 65876
+    },
+    {
+      "id": 116,
+      "file": "incremental/session.ts",
+      "line": 227,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 64636
+    },
+    {
+      "id": 117,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 63994
+    },
+    {
+      "id": 118,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 66168
+    },
+    {
+      "id": 119,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 78778
+    },
+    {
+      "id": 120,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 80266
+    },
+    {
+      "id": 121,
+      "file": "incremental/session.ts",
+      "line": 242,
+      "operator": "CONST",
+      "killedBy": null,
+      "ms": 64491
+    },
+    {
+      "id": 122,
+      "file": "incremental/session.ts",
+      "line": 250,
+      "operator": "ROR",
+      "killedBy": "BE-ext",
+      "ms": 15655
+    },
+    {
+      "id": 123,
+      "file": "incremental/session.ts",
+      "line": 250,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 15245
+    },
+    {
+      "id": 124,
+      "file": "incremental/session.ts",
+      "line": 250,
+      "operator": "CONST",
+      "killedBy": "BE-ext",
+      "ms": 15832
+    },
+    {
+      "id": 125,
+      "file": "incremental/session.ts",
+      "line": 252,
+      "operator": "ROR",
+      "killedBy": "crash:BE-ext",
+      "ms": 16106
+    },
+    {
+      "id": 126,
+      "file": "incremental/session.ts",
+      "line": 252,
+      "operator": "ROR",
+      "killedBy": "crash:BE-ext",
+      "ms": 16071
+    },
+    {
+      "id": 127,
+      "file": "incremental/session.ts",
+      "line": 252,
+      "operator": "ROR",
+      "killedBy": "crash:BE-base",
+      "ms": 207
+    },
+    {
+      "id": 128,
+      "file": "incremental/session.ts",
+      "line": 252,
+      "operator": "LCR",
+      "killedBy": "crash:BE-ext",
+      "ms": 16563
+    },
+    {
+      "id": 129,
+      "file": "incremental/session.ts",
+      "line": 252,
+      "operator": "LCR",
+      "killedBy": "crash:BE-base",
+      "ms": 205
+    },
+    {
+      "id": 130,
+      "file": "incremental/session.ts",
+      "line": 252,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 229
+    },
+    {
+      "id": 131,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 207
+    },
+    {
+      "id": 132,
+      "file": "incremental/session.ts",
+      "line": 275,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "ms": 68052
+    },
+    {
+      "id": 133,
+      "file": "incremental/session.ts",
+      "line": 275,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "ms": 66177
+    },
+    {
+      "id": 134,
+      "file": "incremental/session.ts",
+      "line": 275,
+      "operator": "CONST",
+      "killedBy": "PB",
+      "ms": 62066
+    },
+    {
+      "id": 135,
+      "file": "incremental/session.ts",
+      "line": 279,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 62841
+    },
+    {
+      "id": 136,
+      "file": "incremental/session.ts",
+      "line": 281,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 64752
+    },
+    {
+      "id": 137,
+      "file": "incremental/session.ts",
+      "line": 281,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 65430
+    },
+    {
+      "id": 138,
+      "file": "incremental/session.ts",
+      "line": 284,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "ms": 66784
+    },
+    {
+      "id": 139,
+      "file": "incremental/session.ts",
+      "line": 284,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "ms": 66214
+    },
+    {
+      "id": 140,
+      "file": "incremental/session.ts",
+      "line": 284,
+      "operator": "CONST",
+      "killedBy": "PB",
+      "ms": 65452
+    },
+    {
+      "id": 141,
+      "file": "incremental/session.ts",
+      "line": 291,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 17684
+    },
+    {
+      "id": 142,
+      "file": "incremental/session.ts",
+      "line": 298,
+      "operator": "NEG",
+      "killedBy": "crash:BE-ext",
+      "ms": 16165
+    },
+    {
+      "id": 143,
+      "file": "witness/acyclicWitness.ts",
+      "line": 48,
+      "operator": "INC",
+      "killedBy": null,
+      "ms": 65435
+    },
+    {
+      "id": 144,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 65185
+    },
+    {
+      "id": 145,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 63266
+    },
+    {
+      "id": 146,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 65428
+    },
+    {
+      "id": 147,
+      "file": "witness/acyclicWitness.ts",
+      "line": 73,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 64667
+    },
+    {
+      "id": 148,
+      "file": "witness/acyclicWitness.ts",
+      "line": 73,
+      "operator": "CONST",
+      "killedBy": "BE-ext",
+      "ms": 16522
+    },
+    {
+      "id": 149,
+      "file": "witness/acyclicWitness.ts",
+      "line": 74,
+      "operator": "INC",
+      "killedBy": null,
+      "ms": 64654
+    },
+    {
+      "id": 150,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 66654
+    },
+    {
+      "id": 151,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "ROR",
+      "killedBy": "BE-ext",
+      "ms": 18256
+    },
+    {
+      "id": 152,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "LCR",
+      "killedBy": "BE-ext",
+      "ms": 15816
+    },
+    {
+      "id": 153,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 16308
+    },
+    {
+      "id": 154,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "ms": 180050
+    },
+    {
+      "id": 155,
+      "file": "witness/acyclicWitness.ts",
+      "line": 76,
+      "operator": "STMT",
+      "killedBy": "timeout",
+      "ms": 180048
+    },
+    {
+      "id": 156,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 69067
+    },
+    {
+      "id": 157,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "INC",
+      "killedBy": null,
+      "ms": 68660
+    },
+    {
+      "id": 158,
+      "file": "witness/acyclicWitness.ts",
+      "line": 79,
+      "operator": "INC",
+      "killedBy": "BE-ext",
+      "ms": 23254
+    },
+    {
+      "id": 159,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 60505
+    },
+    {
+      "id": 160,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 330
+    },
+    {
+      "id": 161,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 340
+    },
+    {
+      "id": 162,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 364
+    },
+    {
+      "id": 163,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "ms": 180046
+    },
+    {
+      "id": 164,
+      "file": "witness/acyclicWitness.ts",
+      "line": 81,
+      "operator": "STMT",
+      "killedBy": "timeout",
+      "ms": 180056
+    },
+    {
+      "id": 165,
+      "file": "witness/acyclicWitness.ts",
+      "line": 89,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 183
+    },
+    {
+      "id": 166,
+      "file": "witness/acyclicWitness.ts",
+      "line": 89,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "ms": 180061
+    },
+    {
+      "id": 167,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 171
+    },
+    {
+      "id": 168,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 170
+    },
+    {
+      "id": 169,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 63133
+    },
+    {
+      "id": 170,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 61539
+    },
+    {
+      "id": 171,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 195
+    },
+    {
+      "id": 172,
+      "file": "witness/acyclicWitness.ts",
+      "line": 98,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 224
+    },
+    {
+      "id": 173,
+      "file": "witness/acyclicWitness.ts",
+      "line": 98,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 220
+    },
+    {
+      "id": 174,
+      "file": "witness/acyclicWitness.ts",
+      "line": 98,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 216
+    },
+    {
+      "id": 175,
+      "file": "witness/acyclicWitness.ts",
+      "line": 98,
+      "operator": "CONST",
+      "killedBy": "BE-base",
+      "ms": 252
+    },
+    {
+      "id": 176,
+      "file": "witness/acyclicWitness.ts",
+      "line": 107,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 67641
+    },
+    {
+      "id": 177,
+      "file": "witness/acyclicWitness.ts",
+      "line": 107,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "ms": 180149
+    },
+    {
+      "id": 178,
+      "file": "witness/acyclicWitness.ts",
+      "line": 110,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 218
+    },
+    {
+      "id": 179,
+      "file": "witness/acyclicWitness.ts",
+      "line": 110,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 212
+    },
+    {
+      "id": 180,
+      "file": "witness/acyclicWitness.ts",
+      "line": 116,
+      "operator": "INC",
+      "killedBy": "PB",
+      "ms": 71147
+    },
+    {
+      "id": 181,
+      "file": "witness/acyclicWitness.ts",
+      "line": 121,
+      "operator": "INC",
+      "killedBy": "INV",
+      "ms": 68501
+    },
+    {
+      "id": 182,
+      "file": "witness/acyclicWitness.ts",
+      "line": 135,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "ms": 65972
+    },
+    {
+      "id": 183,
+      "file": "witness/acyclicWitness.ts",
+      "line": 136,
+      "operator": "INC",
+      "killedBy": "PB",
+      "ms": 67033
+    },
+    {
+      "id": 184,
+      "file": "witness/acyclicWitness.ts",
+      "line": 143,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 67770
+    },
+    {
+      "id": 185,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 65802
+    },
+    {
+      "id": 186,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 66291
+    },
+    {
+      "id": 187,
+      "file": "witness/acyclicWitness.ts",
+      "line": 155,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 66052
+    },
+    {
+      "id": 188,
+      "file": "witness/acyclicWitness.ts",
+      "line": 156,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 62857
+    },
+    {
+      "id": 189,
+      "file": "witness/acyclicWitness.ts",
+      "line": 157,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 263
+    },
+    {
+      "id": 190,
+      "file": "witness/acyclicWitness.ts",
+      "line": 157,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 255
+    },
+    {
+      "id": 191,
+      "file": "witness/acyclicWitness.ts",
+      "line": 162,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 257
+    },
+    {
+      "id": 192,
+      "file": "witness/acyclicWitness.ts",
+      "line": 162,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 256
+    },
+    {
+      "id": 193,
+      "file": "witness/acyclicWitness.ts",
+      "line": 168,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 59243
+    },
+    {
+      "id": 194,
+      "file": "witness/acyclicWitness.ts",
+      "line": 168,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 210
+    },
+    {
+      "id": 195,
+      "file": "witness/acyclicWitness.ts",
+      "line": 178,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 51394
+    },
+    {
+      "id": 196,
+      "file": "witness/acyclicWitness.ts",
+      "line": 178,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 183
+    },
+    {
+      "id": 197,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 49517
+    },
+    {
+      "id": 198,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 52311
+    },
+    {
+      "id": 199,
+      "file": "witness/acyclicWitness.ts",
+      "line": 187,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 198
+    },
+    {
+      "id": 200,
+      "file": "witness/acyclicWitness.ts",
+      "line": 187,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 211
+    },
+    {
+      "id": 201,
+      "file": "witness/acyclicWitness.ts",
+      "line": 201,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 51884
+    },
+    {
+      "id": 202,
+      "file": "witness/traceWitness.ts",
+      "line": 38,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 176
+    },
+    {
+      "id": 203,
+      "file": "witness/traceWitness.ts",
+      "line": 38,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 174
+    },
+    {
+      "id": 204,
+      "file": "witness/traceWitness.ts",
+      "line": 43,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 614
+    },
+    {
+      "id": 205,
+      "file": "witness/traceWitness.ts",
+      "line": 48,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 173
+    },
+    {
+      "id": 206,
+      "file": "witness/traceWitness.ts",
+      "line": 53,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 185
+    },
+    {
+      "id": 207,
+      "file": "witness/traceWitness.ts",
+      "line": 72,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 189
+    },
+    {
+      "id": 208,
+      "file": "witness/traceWitness.ts",
+      "line": 72,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 171
+    },
+    {
+      "id": 209,
+      "file": "witness/traceWitness.ts",
+      "line": 78,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 163
+    },
+    {
+      "id": 210,
+      "file": "witness/traceWitness.ts",
+      "line": 81,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 47247
+    },
+    {
+      "id": 211,
+      "file": "witness/traceWitness.ts",
+      "line": 82,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "ms": 180049
+    },
+    {
+      "id": 212,
+      "file": "witness/traceWitness.ts",
+      "line": 85,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 552
+    },
+    {
+      "id": 213,
+      "file": "witness/traceWitness.ts",
+      "line": 85,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "ms": 574
+    },
+    {
+      "id": 214,
+      "file": "witness/traceWitness.ts",
+      "line": 87,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 582
+    },
+    {
+      "id": 215,
+      "file": "witness/traceWitness.ts",
+      "line": 87,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "ms": 12040
+    },
+    {
+      "id": 216,
+      "file": "witness/traceWitness.ts",
+      "line": 99,
+      "operator": "ROR",
+      "killedBy": "BE-ext",
+      "ms": 15353
+    },
+    {
+      "id": 217,
+      "file": "witness/traceWitness.ts",
+      "line": 99,
+      "operator": "LCR",
+      "killedBy": "BE-ext",
+      "ms": 14387
+    },
+    {
+      "id": 218,
+      "file": "witness/traceWitness.ts",
+      "line": 99,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 14417
+    },
+    {
+      "id": 219,
+      "file": "witness/traceWitness.ts",
+      "line": 101,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "ms": 58279
+    },
+    {
+      "id": 220,
+      "file": "witness/traceWitness.ts",
+      "line": 104,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 60557
+    },
+    {
+      "id": 221,
+      "file": "witness/traceWitness.ts",
+      "line": 124,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 62245
+    },
+    {
+      "id": 222,
+      "file": "witness/traceWitness.ts",
+      "line": 125,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "ms": 180048
+    },
+    {
+      "id": 223,
+      "file": "witness/traceWitness.ts",
+      "line": 128,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 646
+    },
+    {
+      "id": 224,
+      "file": "witness/traceWitness.ts",
+      "line": 128,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "ms": 624
+    },
+    {
+      "id": 225,
+      "file": "witness/traceWitness.ts",
+      "line": 130,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 14851
+    },
+    {
+      "id": 226,
+      "file": "witness/traceWitness.ts",
+      "line": 130,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "ms": 17536
+    },
+    {
+      "id": 227,
+      "file": "witness/traceWitness.ts",
+      "line": 142,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 676
+    },
+    {
+      "id": 228,
+      "file": "witness/traceWitness.ts",
+      "line": 142,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 674
+    },
+    {
+      "id": 229,
+      "file": "witness/traceWitness.ts",
+      "line": 146,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 15422
+    },
+    {
+      "id": 230,
+      "file": "witness/traceWitness.ts",
+      "line": 150,
+      "operator": "LCR",
+      "killedBy": "BE-ext",
+      "ms": 16323
+    },
+    {
+      "id": 231,
+      "file": "witness/traceWitness.ts",
+      "line": 150,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 14459
+    },
+    {
+      "id": 232,
+      "file": "witness/traceWitness.ts",
+      "line": 163,
+      "operator": "ROR",
+      "killedBy": "timeout",
+      "ms": 180042
+    },
+    {
+      "id": 233,
+      "file": "witness/traceWitness.ts",
+      "line": 163,
+      "operator": "CONST",
+      "killedBy": "BE-base",
+      "ms": 2988
+    },
+    {
+      "id": 234,
+      "file": "witness/traceWitness.ts",
+      "line": 165,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 3064
+    },
+    {
+      "id": 235,
+      "file": "witness/traceWitness.ts",
+      "line": 165,
+      "operator": "STMT",
+      "killedBy": "timeout",
+      "ms": 180048
+    },
+    {
+      "id": 236,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 53943
+    },
+    {
+      "id": 237,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 59066
+    },
+    {
+      "id": 238,
+      "file": "witness/traceWitness.ts",
+      "line": 177,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 246
+    },
+    {
+      "id": 239,
+      "file": "witness/traceWitness.ts",
+      "line": 190,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 743
+    },
+    {
+      "id": 240,
+      "file": "witness/traceWitness.ts",
+      "line": 190,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 65041
+    },
+    {
+      "id": 241,
+      "file": "witness/traceWitness.ts",
+      "line": 193,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 744
+    },
+    {
+      "id": 242,
+      "file": "witness/traceWitness.ts",
+      "line": 193,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "ms": 751
+    },
+    {
+      "id": 243,
+      "file": "witness/traceWitness.ts",
+      "line": 194,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 702
+    },
+    {
+      "id": 244,
+      "file": "witness/traceWitness.ts",
+      "line": 194,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 724
+    },
+    {
+      "id": 245,
+      "file": "witness/traceWitness.ts",
+      "line": 199,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 66293
+    },
+    {
+      "id": 246,
+      "file": "witness/traceWitness.ts",
+      "line": 208,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 771
+    },
+    {
+      "id": 247,
+      "file": "witness/traceWitness.ts",
+      "line": 212,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 727
+    },
+    {
+      "id": 248,
+      "file": "witness/traceWitness.ts",
+      "line": 212,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 756
+    },
+    {
+      "id": 249,
+      "file": "witness/traceWitness.ts",
+      "line": 229,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 232
+    },
+    {
+      "id": 250,
+      "file": "witness/traceWitness.ts",
+      "line": 229,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 65084
+    },
+    {
+      "id": 251,
+      "file": "witness/traceWitness.ts",
+      "line": 232,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 66056
+    },
+    {
+      "id": 252,
+      "file": "witness/traceWitness.ts",
+      "line": 241,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 64500
+    },
+    {
+      "id": 253,
+      "file": "witness/traceWitness.ts",
+      "line": 246,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 65201
+    },
+    {
+      "id": 254,
+      "file": "witness/traceWitness.ts",
+      "line": 246,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 66666
+    },
+    {
+      "id": 255,
+      "file": "witness/tarjan.ts",
+      "line": 30,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 273
+    },
+    {
+      "id": 256,
+      "file": "witness/tarjan.ts",
+      "line": 30,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 274
+    },
+    {
+      "id": 257,
+      "file": "witness/tarjan.ts",
+      "line": 30,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "ms": 282
+    },
+    {
+      "id": 258,
+      "file": "witness/tarjan.ts",
+      "line": 31,
+      "operator": "LCR",
+      "killedBy": "crash:BE-base",
+      "ms": 268
+    },
+    {
+      "id": 259,
+      "file": "witness/tarjan.ts",
+      "line": 31,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 291
+    },
+    {
+      "id": 260,
+      "file": "witness/tarjan.ts",
+      "line": 31,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 63807
+    },
+    {
+      "id": 261,
+      "file": "witness/tarjan.ts",
+      "line": 38,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 227
+    },
+    {
+      "id": 262,
+      "file": "witness/tarjan.ts",
+      "line": 38,
+      "operator": "STMT",
+      "killedBy": "BE-base",
+      "ms": 413
+    },
+    {
+      "id": 263,
+      "file": "witness/tarjan.ts",
+      "line": 43,
+      "operator": "INC",
+      "killedBy": "BE-base",
+      "ms": 279
+    },
+    {
+      "id": 264,
+      "file": "witness/tarjan.ts",
+      "line": 50,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 62604
+    },
+    {
+      "id": 265,
+      "file": "witness/tarjan.ts",
+      "line": 50,
+      "operator": "NEG",
+      "killedBy": "timeout",
+      "ms": 180058
+    },
+    {
+      "id": 266,
+      "file": "witness/tarjan.ts",
+      "line": 51,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "ms": 180070
+    },
+    {
+      "id": 267,
+      "file": "witness/tarjan.ts",
+      "line": 52,
+      "operator": "NEG",
+      "killedBy": "crash:load",
+      "ms": 41342
+    },
+    {
+      "id": 268,
+      "file": "witness/tarjan.ts",
+      "line": 55,
+      "operator": "INC",
+      "killedBy": "BE-base",
+      "ms": 3300
+    },
+    {
+      "id": 269,
+      "file": "witness/tarjan.ts",
+      "line": 59,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 281
+    },
+    {
+      "id": 270,
+      "file": "witness/tarjan.ts",
+      "line": 68,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 225
+    },
+    {
+      "id": 271,
+      "file": "witness/tarjan.ts",
+      "line": 68,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 231
+    },
+    {
+      "id": 272,
+      "file": "witness/tarjan.ts",
+      "line": 74,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 213
+    },
+    {
+      "id": 273,
+      "file": "witness/tarjan.ts",
+      "line": 74,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 214
+    },
+    {
+      "id": 274,
+      "file": "witness/tarjan.ts",
+      "line": 74,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "ms": 7757
+    },
+    {
+      "id": 275,
+      "file": "witness/tarjan.ts",
+      "line": 91,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 197
+    },
+    {
+      "id": 276,
+      "file": "witness/tarjan.ts",
+      "line": 91,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 184
+    },
+    {
+      "id": 277,
+      "file": "witness/tarjan.ts",
+      "line": 91,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 178
+    },
+    {
+      "id": 278,
+      "file": "witness/tarjan.ts",
+      "line": 91,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 179
+    },
+    {
+      "id": 279,
+      "file": "witness/tarjan.ts",
+      "line": 91,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "ms": 195
+    },
+    {
+      "id": 280,
+      "file": "witness/tarjan.ts",
+      "line": 93,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "ms": 156
+    },
+    {
+      "id": 281,
+      "file": "witness/tarjan.ts",
+      "line": 101,
+      "operator": "ROR",
+      "killedBy": "BE-base",
+      "ms": 310
+    },
+    {
+      "id": 282,
+      "file": "witness/tarjan.ts",
+      "line": 101,
+      "operator": "LCR",
+      "killedBy": "BE-base",
+      "ms": 314
+    },
+    {
+      "id": 283,
+      "file": "witness/tarjan.ts",
+      "line": 101,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 230
+    },
+    {
+      "id": 284,
+      "file": "witness/tarjan.ts",
+      "line": 101,
+      "operator": "CONST",
+      "killedBy": "BE-base",
+      "ms": 244
+    },
+    {
+      "id": 285,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 50126
+    },
+    {
+      "id": 286,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 66675
+    },
+    {
+      "id": 287,
+      "file": "catalog/rules.ts",
+      "line": 38,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 61873
+    },
+    {
+      "id": 288,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 74140
+    },
+    {
+      "id": 289,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 79409
+    },
+    {
+      "id": 290,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 6864
+    },
+    {
+      "id": 291,
+      "file": "catalog/rules.ts",
+      "line": 69,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "ms": 78578
+    },
+    {
+      "id": 292,
+      "file": "catalog/rules.ts",
+      "line": 69,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "ms": 78431
+    },
+    {
+      "id": 293,
+      "file": "catalog/rules.ts",
+      "line": 69,
+      "operator": "BOOL",
+      "killedBy": null,
+      "ms": 74773
+    },
+    {
+      "id": 294,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "ms": 75453
+    },
+    {
+      "id": 295,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 75165
+    },
+    {
+      "id": 296,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 67367
+    },
+    {
+      "id": 297,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 64019
+    },
+    {
+      "id": 298,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 59865
+    },
+    {
+      "id": 299,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "ROR",
+      "killedBy": "PB",
+      "ms": 54316
+    },
+    {
+      "id": 300,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 49584
+    },
+    {
+      "id": 301,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 50781
+    },
+    {
+      "id": 302,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "CONST",
+      "killedBy": null,
+      "ms": 55478
+    },
+    {
+      "id": 303,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 57069
+    },
+    {
+      "id": 304,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 56540
+    },
+    {
+      "id": 305,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "BOOL",
+      "killedBy": null,
+      "ms": 55758
+    },
+    {
+      "id": 306,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 57013
+    },
+    {
+      "id": 307,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "BOOL",
+      "killedBy": null,
+      "ms": 56504
+    },
+    {
+      "id": 308,
+      "file": "catalog/rules.ts",
+      "line": 104,
+      "operator": "BOOL",
+      "killedBy": null,
+      "ms": 56658
+    },
+    {
+      "id": 309,
+      "file": "catalog/rules.ts",
+      "line": 109,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 159
+    },
+    {
+      "id": 310,
+      "file": "model/graph.ts",
+      "line": 22,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 60118
+    },
+    {
+      "id": 311,
+      "file": "model/graph.ts",
+      "line": 22,
+      "operator": "NEG",
+      "killedBy": "PB",
+      "ms": 46946
+    },
+    {
+      "id": 312,
+      "file": "model/graph.ts",
+      "line": 22,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 55345
+    },
+    {
+      "id": 313,
+      "file": "model/graph.ts",
+      "line": 50,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 183
+    },
+    {
+      "id": 314,
+      "file": "model/graph.ts",
+      "line": 52,
+      "operator": "ROR",
+      "killedBy": "crash:BE-base",
+      "ms": 168
+    },
+    {
+      "id": 315,
+      "file": "model/graph.ts",
+      "line": 52,
+      "operator": "NEG",
+      "killedBy": "crash:BE-base",
+      "ms": 165
+    },
+    {
+      "id": 316,
+      "file": "model/graph.ts",
+      "line": 52,
+      "operator": "CONST",
+      "killedBy": "crash:BE-base",
+      "ms": 166
+    },
+    {
+      "id": 317,
+      "file": "model/graph.ts",
+      "line": 57,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 13907
+    },
+    {
+      "id": 318,
+      "file": "model/graph.ts",
+      "line": 58,
+      "operator": "NEG",
+      "killedBy": "crash:BE-ext",
+      "ms": 13216
+    },
+    {
+      "id": 319,
+      "file": "model/graph.ts",
+      "line": 62,
+      "operator": "LCR",
+      "killedBy": "crash:PB",
+      "ms": 53314
+    },
+    {
+      "id": 320,
+      "file": "model/graph.ts",
+      "line": 62,
+      "operator": "NEG",
+      "killedBy": "crash:PB",
+      "ms": 49464
+    },
+    {
+      "id": 321,
+      "file": "model/graph.ts",
+      "line": 62,
+      "operator": "BOOL",
+      "killedBy": null,
+      "ms": 58870
+    },
+    {
+      "id": 322,
+      "file": "model/graph.ts",
+      "line": 66,
+      "operator": "BOOL",
+      "killedBy": "BE-base",
+      "ms": 207
+    },
+    {
+      "id": 323,
+      "file": "model/graph.ts",
+      "line": 71,
+      "operator": "NEG",
+      "killedBy": "crash:BE-ext",
+      "ms": 15336
+    },
+    {
+      "id": 324,
+      "file": "model/graph.ts",
+      "line": 79,
+      "operator": "NEG",
+      "killedBy": "BE-ext",
+      "ms": 17000
+    },
+    {
+      "id": 325,
+      "file": "model/graph.ts",
+      "line": 88,
+      "operator": "NEG",
+      "killedBy": "crash:PB",
+      "ms": 50852
+    },
+    {
+      "id": 326,
+      "file": "model/graph.ts",
+      "line": 89,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 51095
+    },
+    {
+      "id": 327,
+      "file": "model/graph.ts",
+      "line": 89,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 54519
+    },
+    {
+      "id": 328,
+      "file": "model/graph.ts",
+      "line": 101,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 53218
+    },
+    {
+      "id": 329,
+      "file": "model/graph.ts",
+      "line": 105,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 49752
+    },
+    {
+      "id": 330,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 51792
+    },
+    {
+      "id": 331,
+      "file": "model/graph.ts",
+      "line": 114,
+      "operator": "STMT",
+      "killedBy": "crash:PB",
+      "ms": 53536
+    },
+    {
+      "id": 332,
+      "file": "model/graph.ts",
+      "line": 116,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 51523
+    },
+    {
+      "id": 333,
+      "file": "model/graph.ts",
+      "line": 117,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 52244
+    },
+    {
+      "id": 334,
+      "file": "model/graph.ts",
+      "line": 120,
+      "operator": "NEG",
+      "killedBy": "crash:INV",
+      "ms": 53303
+    },
+    {
+      "id": 335,
+      "file": "model/graph.ts",
+      "line": 122,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 52472
+    },
+    {
+      "id": 336,
+      "file": "model/graph.ts",
+      "line": 136,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 54237
+    },
+    {
+      "id": 337,
+      "file": "model/graph.ts",
+      "line": 141,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 54678
+    },
+    {
+      "id": 338,
+      "file": "model/graph.ts",
+      "line": 146,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 54237
+    },
+    {
+      "id": 339,
+      "file": "model/graph.ts",
+      "line": 149,
+      "operator": "STMT",
+      "killedBy": "crash:BE-base",
+      "ms": 167
+    },
+    {
+      "id": 340,
+      "file": "model/graph.ts",
+      "line": 153,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 47791
+    },
+    {
+      "id": 341,
+      "file": "model/graph.ts",
+      "line": 156,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 44765
+    },
+    {
+      "id": 342,
+      "file": "model/graph.ts",
+      "line": 160,
+      "operator": "STMT",
+      "killedBy": null,
+      "ms": 44146
+    },
+    {
+      "id": 343,
+      "file": "model/graph.ts",
+      "line": 175,
+      "operator": "LCR",
+      "killedBy": null,
+      "ms": 42988
+    },
+    {
+      "id": 344,
+      "file": "model/graph.ts",
+      "line": 175,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 127
+    },
+    {
+      "id": 345,
+      "file": "model/graph.ts",
+      "line": 180,
+      "operator": "ROR",
+      "killedBy": null,
+      "ms": 39928
+    },
+    {
+      "id": 346,
+      "file": "model/graph.ts",
+      "line": 180,
+      "operator": "INC",
+      "killedBy": "timeout",
+      "ms": 180040
+    },
+    {
+      "id": 347,
+      "file": "model/graph.ts",
+      "line": 185,
+      "operator": "NEG",
+      "killedBy": null,
+      "ms": 41432
+    },
+    {
+      "id": 348,
+      "file": "model/graph.ts",
+      "line": 192,
+      "operator": "NEG",
+      "killedBy": "BE-base",
+      "ms": 3837
+    }
+  ],
+  "elapsedMs": 5590974
+}

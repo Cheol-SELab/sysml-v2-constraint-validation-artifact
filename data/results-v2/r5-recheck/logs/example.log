@@ -1,0 +1,37 @@
+Worked example: the five procedure stages on one small model
+catalog: aerospace
+
+[stage 1] NormalizeToTypedGraph
+  in : SysML v2-like JSON (8 elements, 9 relations)
+  out: typed attributed graph G with |V|=8, |E|=9
+  detail: {"nodeTypes":["Component","Function","Port","Requirement","VerificationCase","View"],"edgeTypes":["allocate","connect","contain","dependOn","expose","satisfy","subject","verify"],"averageDegree":2.25}
+
+[stage 2] DeriveRules
+  in : catalog aerospace
+  out: rule set R_C with |R|=41 (local 39, global 2)
+  detail: {"byKind":{"relationType":8,"requiredAttr":12,"attrDomain":7,"multiplicity":5,"isolated":6,"viewConsistency":1,"acyclic":1,"tracePolicy":1},"maxLocalRadius":2,"globalRuleIds":["ACYC:dependOn","TRACE:FUN2REQ"],"sampleLocalRuleIds":["TYPE:satisfy","TYPE:verify","TYPE:allocate","TYPE:connect"]}
+
+[stage 3] Validate (full mode)
+  in : G, C, R
+  out: Omega = 0 violations; reference agreement = true
+  detail: {"violations":[],"referenceViolations":0}
+
+[stage 4] Defect exposure
+  in : three single-element edits on the clean model
+  out: 1 violation(s), 1 violation(s), 1 violation(s)
+  detail: {"defects":[{"defect":"wrong relation type (local, radius 1)","edit":"retarget e4: allocate F1 -> C1 becomes F1 -> R1","reported":["TYPE:allocate"]},{"defect":"attribute domain (local, radius 0)","edit":"set C2.criticality = \"X\"","reported":["DOM:Component.criticality"]},{"defect":"dependency cycle (global)","edit":"add e10: dependOn C2 -> C1","reported":["ACYC:dependOn"]}]}
+
+[stage 5] Incremental revalidation
+  in : delta = delete e5 (satisfy C1 -> R1)
+  out: scope |N_k(delta)|=8 of 8 nodes; 2 violation(s); batch agreement = true
+  detail: {"k":2,"scopePreviewSize":8,"witnessWork":4,"violations":[{"ruleId":"MULT:Requirement|satisfy|in","kind":"multiplicity","witness":"R1","message":"in degree of satisfy is 0, expected [1, inf]"},{"ruleId":"TRACE:FUN2REQ","kind":"tracePolicy","witness":"F1","message":"no allocate|satisfy path from F1 to any Requirement"}]}
+
+[defect] wrong relation type (local, radius 1) — retarget e4: allocate F1 -> C1 becomes F1 -> R1
+    TYPE:allocate | witness=e4 | relation e4:allocate connects Function -> Requirement
+[defect] attribute domain (local, radius 0) — set C2.criticality = "X"
+    DOM:Component.criticality | witness=C2 | attribute criticality=X outside domain
+[defect] dependency cycle (global) — add e10: dependOn C2 -> C1
+    ACYC:dependOn | witness=C1,C2 | cyclic dependOn dependency over {C1, C2}
+written: results-v2\r5-recheck\worked-example.json
+done in 0.0 s
+rc=0

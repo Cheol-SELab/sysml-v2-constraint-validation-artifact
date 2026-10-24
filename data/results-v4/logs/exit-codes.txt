@@ -1,0 +1,45 @@
+oracle-e2 rc=0 elapsed=4205s
+e3 rc=0 elapsed=4314s
+oracle-random rc=0 elapsed=1957s
+mutation rc=0 elapsed=6627s
+spec-x3 rc=0 elapsed=3161s
+e1 rc=0 elapsed=1363s
+e3sched rc=0 elapsed=1186s
+oracle-variants rc=0 elapsed=693s
+spec-corpus rc=0 elapsed=618s
+blind rc=0 elapsed=239s
+oracle-small rc=0 elapsed=10s
+oracle-sysml rc=0 elapsed=179s
+r8-light rc=0 elapsed=14s
+shared-mutants-e2 rc=1 elapsed=61s
+sysml-legacy-expose rc=0 elapsed=36s
+oracle-e3 rc=0 elapsed=9022s
+r5 rc=0 elapsed=567s
+shared-mutants-e2-rerun rc=rc=0
+shared-mutants rc=0 elapsed=1850s
+correctness done 2026-10-22 23:14:48
+e6 rc=0 elapsed=1s
+e6order rc=0 elapsed=1s
+e6csr rc=0 elapsed=1s
+gcdiag rc=0 elapsed=1s
+e5hist rc=0 elapsed=1s
+e5-partA rc=0 elapsed=1s
+e5-partB rc=0 elapsed=1s
+e5-partC rc=0 elapsed=1s
+oracle-scale rc=1 elapsed=1s
+sysml rc=0 elapsed=1s
+n2-engine rc=0 elapsed=1s
+timing done 2026-10-22 23:15:40
+NOTE: timing entries above (23:15) are void: pin.ps1 argument binding failed, no experiment ran. tools/pin.ps1 fixed ($args, not hashed); timing rerun with MSYS_NO_PATHCONV=1 below.
+e6 rc=0 elapsed=976s
+e6order rc=0 elapsed=64s
+e6csr rc=0 elapsed=544s
+gcdiag rc=0 elapsed=40s
+e5hist rc=0 elapsed=180s
+e5-partA rc=0 elapsed=1326s
+e5-partB rc=0 elapsed=3634s
+e5-partC rc=0 elapsed=2863s
+oracle-scale rc=0 elapsed=456s
+sysml rc=0 elapsed=28s
+n2-engine rc=0 elapsed=140s
+timing done 2026-10-23 02:07:47

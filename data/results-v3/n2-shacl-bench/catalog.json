@@ -1,0 +1,214 @@
+{
+ "id": "aerospace",
+ "nodeTypes": [
+  "Requirement",
+  "Function",
+  "Component",
+  "Interface",
+  "Port",
+  "VerificationCase",
+  "View"
+ ],
+ "edgeTypes": [
+  "satisfy",
+  "verify",
+  "allocate",
+  "connect",
+  "contain",
+  "dependOn",
+  "expose",
+  "subject"
+ ],
+ "allowed": {
+  "satisfy": {
+   "src": [
+    "Component"
+   ],
+   "tgt": [
+    "Requirement"
+   ]
+  },
+  "verify": {
+   "src": [
+    "VerificationCase"
+   ],
+   "tgt": [
+    "Requirement"
+   ]
+  },
+  "allocate": {
+   "src": [
+    "Function"
+   ],
+   "tgt": [
+    "Component"
+   ]
+  },
+  "connect": {
+   "src": [
+    "Port"
+   ],
+   "tgt": [
+    "Port"
+   ]
+  },
+  "contain": {
+   "src": [
+    "Component"
+   ],
+   "tgt": [
+    "Component",
+    "Port"
+   ]
+  },
+  "dependOn": {
+   "src": [
+    "Component"
+   ],
+   "tgt": [
+    "Component"
+   ]
+  },
+  "expose": {
+   "src": [
+    "View"
+   ],
+   "tgt": [
+    "Component",
+    "Port"
+   ]
+  },
+  "subject": {
+   "src": [
+    "View"
+   ],
+   "tgt": [
+    "Component"
+   ]
+  }
+ },
+ "requiredAttr": {
+  "Requirement": [
+   "name",
+   "priority"
+  ],
+  "Function": [
+   "name"
+  ],
+  "Component": [
+   "name",
+   "criticality",
+   "mass"
+  ],
+  "Interface": [
+   "name"
+  ],
+  "Port": [
+   "name",
+   "direction"
+  ],
+  "VerificationCase": [
+   "name",
+   "method"
+  ],
+  "View": [
+   "name"
+  ]
+ },
+ "domain": {
+  "Component.criticality": {
+   "kind": "enum",
+   "values": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ]
+  },
+  "Component.mass": {
+   "kind": "range",
+   "min": 0,
+   "max": 10000
+  },
+  "Requirement.priority": {
+   "kind": "enum",
+   "values": [
+    "high",
+    "medium",
+    "low"
+   ]
+  },
+  "Port.direction": {
+   "kind": "enum",
+   "values": [
+    "in",
+    "out"
+   ]
+  },
+  "VerificationCase.method": {
+   "kind": "enum",
+   "values": [
+    "test",
+    "analysis",
+    "inspection",
+    "demonstration"
+   ]
+  },
+  "Component.name": {
+   "kind": "nonEmptyString"
+  },
+  "Requirement.name": {
+   "kind": "nonEmptyString"
+  }
+ },
+ "multiplicity": {
+  "Requirement|satisfy|in": [
+   1,
+   -1
+  ],
+  "Requirement|verify|in": [
+   1,
+   -1
+  ],
+  "Function|allocate|out": [
+   1,
+   1
+  ],
+  "Port|contain|in": [
+   1,
+   1
+  ],
+  "View|subject|out": [
+   1,
+   1
+  ]
+ },
+ "acyclic": [
+  "dependOn"
+ ],
+ "tracePolicy": [
+  {
+   "id": "FUN2REQ",
+   "sourceType": "Function",
+   "edgeTypes": [
+    "allocate",
+    "satisfy"
+   ],
+   "targetType": "Requirement"
+  }
+ ],
+ "nonIsolated": [
+  "Requirement",
+  "Function",
+  "Component",
+  "Interface",
+  "Port",
+  "VerificationCase"
+ ],
+ "viewPolicy": {
+  "viewType": "View",
+  "subjectEdgeType": "subject",
+  "exposeEdgeType": "expose",
+  "containEdgeType": "contain"
+ }
+}

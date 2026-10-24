@@ -1,0 +1,94 @@
+{
+  "experiment": "E4",
+  "rows": [
+    {
+      "defect": "D1",
+      "label": "wrong relation source/target type",
+      "instances": 77,
+      "detectedProposed": 77,
+      "detectedBaselineA": 0,
+      "detectedBaselineB": 0,
+      "additionalOverBaselineB": 77
+    },
+    {
+      "defect": "D2",
+      "label": "missing mandatory relation",
+      "instances": 103,
+      "detectedProposed": 103,
+      "detectedBaselineA": 0,
+      "detectedBaselineB": 0,
+      "additionalOverBaselineB": 103
+    },
+    {
+      "defect": "D3",
+      "label": "missing required attribute",
+      "instances": 100,
+      "detectedProposed": 100,
+      "detectedBaselineA": 0,
+      "detectedBaselineB": 0,
+      "additionalOverBaselineB": 100
+    },
+    {
+      "defect": "D4",
+      "label": "attribute value outside domain",
+      "instances": 115,
+      "detectedProposed": 115,
+      "detectedBaselineA": 0,
+      "detectedBaselineB": 0,
+      "additionalOverBaselineB": 115
+    },
+    {
+      "defect": "D5",
+      "label": "broken traceability path",
+      "instances": 72,
+      "detectedProposed": 72,
+      "detectedBaselineA": 0,
+      "detectedBaselineB": 0,
+      "additionalOverBaselineB": 72
+    },
+    {
+      "defect": "D6",
+      "label": "cyclic dependency",
+      "instances": 65,
+      "detectedProposed": 65,
+      "detectedBaselineA": 0,
+      "detectedBaselineB": 0,
+      "additionalOverBaselineB": 65
+    },
+    {
+      "defect": "D7",
+      "label": "isolated element",
+      "instances": 270,
+      "detectedProposed": 270,
+      "detectedBaselineA": 0,
+      "detectedBaselineB": 270,
+      "additionalOverBaselineB": 0
+    },
+    {
+      "defect": "D8",
+      "label": "view-model mismatch",
+      "instances": 69,
+      "detectedProposed": 69,
+      "detectedBaselineA": 0,
+      "detectedBaselineB": 0,
+      "additionalOverBaselineB": 69
+    }
+  ],
+  "additionalDetectionRate": 0.69,
+  "instances": 871,
+  "baselineDescription": {
+    "A": "JSON schema conformance and reference existence",
+    "B": "A plus type-vocabulary conformance, ownership forest well-formedness, orphan-element warning (catalog-independent)",
+    "note": "Baselines are reimplementations of the catalog-independent diagnostic class, not the OMG pilot implementation; see limitations."
+  },
+  "catalogSwap": {
+    "changedEntry": "allowed(allocate).tgt: [Component] vs [Interface]",
+    "proposedWithC1": [],
+    "proposedWithC2": [
+      "TYPE:allocate@a1"
+    ],
+    "baselineAFindings": 0,
+    "baselineBFindings": 0,
+    "baselineOutputIndependentOfCatalog": "by construction: the baseline signatures take the model only"
+  }
+}

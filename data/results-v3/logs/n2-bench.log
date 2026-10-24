@@ -1,0 +1,289 @@
+cpu load at start: 12%
+Thu, Oct 22, 2026  3:13:18 PM
+n1000-s1000: V=1000 E=1479 viol=9 engine=5.99ms core=1.41ms step=0.276ms ref=750ms
+n1000-s1001: V=1000 E=1479 viol=18 engine=3.00ms core=1.43ms step=0.242ms ref=801ms
+n1000-s1002: V=1000 E=1535 viol=12 engine=2.93ms core=1.86ms step=0.231ms ref=807ms
+n10000-s1000: V=10000 E=14995 viol=135 engine=34.70ms core=17.11ms step=0.409ms ref=-ms
+n10000-s1001: V=10000 E=14992 viol=153 engine=40.72ms core=23.03ms step=0.443ms ref=-ms
+n10000-s1002: V=10000 E=15048 viol=141 engine=30.79ms core=21.22ms step=0.316ms ref=-ms
+n100000-s1000: V=100000 E=149658 viol=1408 engine=695.70ms core=401.41ms step=1.418ms ref=-ms
+n100000-s1001: V=100000 E=149910 viol=1430 engine=749.92ms core=373.38ms step=1.051ms ref=-ms
+n100000-s1002: V=100000 E=149911 viol=1471 engine=686.31ms core=401.56ms step=1.161ms ref=-ms
+{"triples": 1148679, "droppedDangling": 0}
+{"triples": 1148679, "droppedDangling": 0}
+{"triples": 1148679, "droppedDangling": 0}
+{"triples": 1148684, "droppedDangling": 0}
+{"triples": 1149921, "droppedDangling": 0}
+{"triples": 1149921, "droppedDangling": 0}
+{"triples": 1149926, "droppedDangling": 0}
+{"triples": 1149921, "droppedDangling": 0}
+{"triples": 1149920, "droppedDangling": 0}
+{"triples": 1149915, "droppedDangling": 0}
+{"triples": 1149925, "droppedDangling": 0}
+{"triples": 1149925, "droppedDangling": 0}
+{"triples": 115011, "droppedDangling": 0}
+{"triples": 115006, "droppedDangling": 0}
+{"triples": 115006, "droppedDangling": 0}
+{"triples": 115011, "droppedDangling": 0}
+{"triples": 115001, "droppedDangling": 0}
+{"triples": 115000, "droppedDangling": 0}
+{"triples": 115001, "droppedDangling": 0}
+{"triples": 115006, "droppedDangling": 0}
+{"triples": 115278, "droppedDangling": 0}
+{"triples": 115273, "droppedDangling": 0}
+{"triples": 115283, "droppedDangling": 0}
+{"triples": 115279, "droppedDangling": 0}
+{"triples": 11397, "droppedDangling": 0}
+{"triples": 11398, "droppedDangling": 0}
+{"triples": 11392, "droppedDangling": 0}
+{"triples": 11396, "droppedDangling": 0}
+{"triples": 11398, "droppedDangling": 0}
+{"triples": 11398, "droppedDangling": 0}
+{"triples": 11393, "droppedDangling": 0}
+{"triples": 11393, "droppedDangling": 0}
+{"triples": 11681, "droppedDangling": 0}
+{"triples": 11681, "droppedDangling": 0}
+{"triples": 11681, "droppedDangling": 0}
+{"triples": 11676, "droppedDangling": 0}
+[15:43:23] jena
+jena-shacl data.ttl: validate 6487.0 ms, 1820 results, parse 4577 ms
+[15:44:07] shacl-engine-core
+shacl-engine-core data.ttl: validate 75437.6 ms, 1621 results, parse 10567 ms
+[15:49:15] rdf-validate-shacl
+rdf-validate-shacl data.ttl: validate 161146.3 ms, 1621 results, parse 9824 ms
+[16:00:08] jena
+jena-shacl data-post0.ttl: validate 6700.8 ms, 1820 results, parse 5334 ms
+[16:00:40] shacl-engine-core
+shacl-engine-core data-post0.ttl: validate 71813.4 ms, 1621 results, parse 9893 ms
+[16:03:18] rdf-validate-shacl
+rdf-validate-shacl data-post0.ttl: validate 159971.3 ms, 1621 results, parse 9758 ms
+[16:08:52] jena
+jena-shacl data.ttl: validate 6920.9 ms, 1862 results, parse 4494 ms
+[16:09:37] shacl-engine-core
+shacl-engine-core data.ttl: validate 69233.4 ms, 1667 results, parse 9606 ms
+[16:14:21] rdf-validate-shacl
+rdf-validate-shacl data.ttl: validate 148480.6 ms, 1667 results, parse 9634 ms
+[16:24:18] jena
+jena-shacl data-post0.ttl: validate 6143.5 ms, 1862 results, parse 4507 ms
+[16:24:48] shacl-engine-core
+shacl-engine-core data-post0.ttl: validate 66104.0 ms, 1667 results, parse 9716 ms
+[16:27:14] rdf-validate-shacl
+rdf-validate-shacl data-post0.ttl: validate 146936.4 ms, 1667 results, parse 10047 ms
+[16:32:18] jena
+jena-shacl data.ttl: validate 6423.3 ms, 1906 results, parse 4704 ms
+[16:33:02] shacl-engine-core
+shacl-engine-core data.ttl: validate 69192.3 ms, 1711 results, parse 9485 ms
+[16:37:46] rdf-validate-shacl
+rdf-validate-shacl data.ttl: validate 147478.2 ms, 1711 results, parse 10304 ms
+[16:47:47] jena
+jena-shacl data-post0.ttl: validate 6126.2 ms, 1907 results, parse 4540 ms
+[16:48:18] shacl-engine-core
+shacl-engine-core data-post0.ttl: validate 67199.6 ms, 1712 results, parse 10118 ms
+[16:50:46] rdf-validate-shacl
+rdf-validate-shacl data-post0.ttl: validate 164018.0 ms, 1712 results, parse 10106 ms
+[16:56:16] jena
+jena-shacl data.ttl: validate 747.3 ms, 173 results, parse 1359 ms
+[16:56:28] shacl-engine-core
+shacl-engine-core data.ttl: validate 5867.9 ms, 155 results, parse 1123 ms
+[16:57:08] rdf-validate-shacl
+rdf-validate-shacl data.ttl: validate 13086.3 ms, 155 results, parse 969 ms
+[16:58:32] shacl-engine
+[17:14:29] pyshacl
+pyshacl data.ttl: validate 60917.5 ms, 173 results
+[17:15:38] jena
+jena-shacl data-post0.ttl: validate 719.9 ms, 175 results, parse 1354 ms
+[17:15:46] shacl-engine-core
+shacl-engine-core data-post0.ttl: validate 4602.3 ms, 156 results, parse 789 ms
+[17:16:08] rdf-validate-shacl
+rdf-validate-shacl data-post0.ttl: validate 12780.1 ms, 156 results, parse 955 ms
+[17:17:06] jena
+jena-shacl data-post1.ttl: validate 852.9 ms, 176 results, parse 1336 ms
+[17:17:16] shacl-engine-core
+shacl-engine-core data-post1.ttl: validate 5774.9 ms, 157 results, parse 924 ms
+[17:17:43] rdf-validate-shacl
+rdf-validate-shacl data-post1.ttl: validate 9746.8 ms, 157 results, parse 883 ms
+[17:18:31] jena
+jena-shacl data-post2.ttl: validate 695.1 ms, 176 results, parse 1368 ms
+[17:18:39] shacl-engine-core
+shacl-engine-core data-post2.ttl: validate 4634.4 ms, 158 results, parse 803 ms
+[17:19:02] rdf-validate-shacl
+rdf-validate-shacl data-post2.ttl: validate 9578.2 ms, 158 results, parse 856 ms
+[17:19:49] jena
+jena-shacl data.ttl: validate 676.9 ms, 197 results, parse 1465 ms
+[17:20:00] shacl-engine-core
+shacl-engine-core data.ttl: validate 5994.9 ms, 177 results, parse 987 ms
+[17:20:42] rdf-validate-shacl
+rdf-validate-shacl data.ttl: validate 10053.2 ms, 177 results, parse 957 ms
+[17:21:52] shacl-engine
+[17:37:02] pyshacl
+pyshacl data.ttl: validate 59864.4 ms, 197 results
+[17:38:09] jena
+jena-shacl data-post0.ttl: validate 651.6 ms, 198 results, parse 1354 ms
+[17:38:17] shacl-engine-core
+shacl-engine-core data-post0.ttl: validate 4293.0 ms, 178 results, parse 881 ms
+[17:38:39] rdf-validate-shacl
+rdf-validate-shacl data-post0.ttl: validate 9642.8 ms, 178 results, parse 797 ms
+[17:39:22] jena
+jena-shacl data-post1.ttl: validate 626.0 ms, 197 results, parse 1314 ms
+[17:39:30] shacl-engine-core
+shacl-engine-core data-post1.ttl: validate 4392.7 ms, 177 results, parse 805 ms
+[17:39:52] rdf-validate-shacl
+rdf-validate-shacl data-post1.ttl: validate 9660.0 ms, 177 results, parse 815 ms
+[17:40:36] jena
+jena-shacl data-post2.ttl: validate 606.0 ms, 199 results, parse 1394 ms
+[17:40:43] shacl-engine-core
+shacl-engine-core data-post2.ttl: validate 4399.5 ms, 179 results, parse 874 ms
+[17:41:05] rdf-validate-shacl
+rdf-validate-shacl data-post2.ttl: validate 9474.6 ms, 179 results, parse 800 ms
+[17:41:48] jena
+jena-shacl data.ttl: validate 665.8 ms, 189 results, parse 1499 ms
+[17:41:58] shacl-engine-core
+shacl-engine-core data.ttl: validate 4507.0 ms, 170 results, parse 775 ms
+[17:42:30] rdf-validate-shacl
+rdf-validate-shacl data.ttl: validate 9558.2 ms, 170 results, parse 783 ms
+[17:43:31] shacl-engine
+[17:58:40] pyshacl
+pyshacl data.ttl: validate 60460.1 ms, 189 results
+[17:59:48] jena
+jena-shacl data-post0.ttl: validate 618.7 ms, 189 results, parse 1283 ms
+[17:59:56] shacl-engine-core
+shacl-engine-core data-post0.ttl: validate 4533.4 ms, 170 results, parse 832 ms
+[18:00:18] rdf-validate-shacl
+rdf-validate-shacl data-post0.ttl: validate 9566.4 ms, 170 results, parse 786 ms
+[18:01:02] jena
+jena-shacl data-post1.ttl: validate 721.9 ms, 190 results, parse 1318 ms
+[18:01:10] shacl-engine-core
+shacl-engine-core data-post1.ttl: validate 4604.2 ms, 171 results, parse 779 ms
+[18:01:32] rdf-validate-shacl
+rdf-validate-shacl data-post1.ttl: validate 10041.7 ms, 171 results, parse 769 ms
+[18:02:17] jena
+jena-shacl data-post2.ttl: validate 678.1 ms, 189 results, parse 1294 ms
+[18:02:25] shacl-engine-core
+shacl-engine-core data-post2.ttl: validate 4577.8 ms, 170 results, parse 767 ms
+[18:02:47] rdf-validate-shacl
+rdf-validate-shacl data-post2.ttl: validate 9535.8 ms, 170 results, parse 813 ms
+[18:03:31] jena
+jena-shacl data.ttl: validate 121.0 ms, 11 results, parse 821 ms
+[18:03:34] shacl-engine-core
+shacl-engine-core data.ttl: validate 424.5 ms, 10 results, parse 220 ms
+[18:03:41] rdf-validate-shacl
+rdf-validate-shacl data.ttl: validate 950.3 ms, 10 results, parse 173 ms
+[18:03:50] shacl-engine
+shacl-engine data.ttl: validate 79481.4 ms, 11 results, parse 164 ms
+[18:09:13] pyshacl
+pyshacl data.ttl: validate 5982.8 ms, 11 results
+[18:09:39] jena
+jena-shacl data-post0.ttl: validate 125.5 ms, 11 results, parse 846 ms
+[18:09:42] shacl-engine-core
+shacl-engine-core data-post0.ttl: validate 425.6 ms, 10 results, parse 195 ms
+[18:09:48] rdf-validate-shacl
+rdf-validate-shacl data-post0.ttl: validate 1011.5 ms, 10 results, parse 158 ms
+[18:09:55] shacl-engine
+shacl-engine data-post0.ttl: validate 79503.5 ms, 11 results, parse 158 ms
+[18:15:20] pyshacl
+pyshacl data-post0.ttl: validate 5988.0 ms, 11 results
+[18:15:45] jena
+jena-shacl data-post1.ttl: validate 130.4 ms, 12 results, parse 860 ms
+[18:15:49] shacl-engine-core
+shacl-engine-core data-post1.ttl: validate 471.0 ms, 11 results, parse 173 ms
+[18:15:54] rdf-validate-shacl
+rdf-validate-shacl data-post1.ttl: validate 1010.3 ms, 11 results, parse 163 ms
+[18:16:02] shacl-engine
+shacl-engine data-post1.ttl: validate 78017.2 ms, 12 results, parse 185 ms
+[18:21:21] pyshacl
+pyshacl data-post1.ttl: validate 5927.4 ms, 12 results
+[18:21:47] jena
+jena-shacl data-post2.ttl: validate 148.0 ms, 12 results, parse 884 ms
+[18:21:51] shacl-engine-core
+shacl-engine-core data-post2.ttl: validate 448.8 ms, 11 results, parse 180 ms
+[18:21:56] rdf-validate-shacl
+rdf-validate-shacl data-post2.ttl: validate 971.8 ms, 11 results, parse 161 ms
+[18:22:04] shacl-engine
+shacl-engine data-post2.ttl: validate 78940.6 ms, 12 results, parse 154 ms
+[18:27:25] pyshacl
+pyshacl data-post2.ttl: validate 5844.5 ms, 12 results
+[18:27:50] jena
+jena-shacl data.ttl: validate 152.7 ms, 18 results, parse 950 ms
+[18:27:54] shacl-engine-core
+shacl-engine-core data.ttl: validate 424.5 ms, 15 results, parse 200 ms
+[18:28:01] rdf-validate-shacl
+rdf-validate-shacl data.ttl: validate 937.7 ms, 15 results, parse 173 ms
+[18:28:10] shacl-engine
+shacl-engine data.ttl: validate 75878.9 ms, 18 results, parse 154 ms
+[18:33:20] pyshacl
+pyshacl data.ttl: validate 6097.0 ms, 18 results
+[18:33:46] jena
+jena-shacl data-post0.ttl: validate 132.5 ms, 18 results, parse 889 ms
+[18:33:50] shacl-engine-core
+shacl-engine-core data-post0.ttl: validate 468.9 ms, 15 results, parse 161 ms
+[18:33:55] rdf-validate-shacl
+rdf-validate-shacl data-post0.ttl: validate 979.4 ms, 15 results, parse 156 ms
+[18:34:03] shacl-engine
+shacl-engine data-post0.ttl: validate 76393.4 ms, 18 results, parse 165 ms
+[18:39:14] pyshacl
+pyshacl data-post0.ttl: validate 6058.9 ms, 18 results
+[18:39:40] jena
+jena-shacl data-post1.ttl: validate 114.5 ms, 19 results, parse 864 ms
+[18:39:43] shacl-engine-core
+shacl-engine-core data-post1.ttl: validate 446.5 ms, 16 results, parse 198 ms
+[18:39:48] rdf-validate-shacl
+rdf-validate-shacl data-post1.ttl: validate 943.6 ms, 16 results, parse 156 ms
+[18:39:56] shacl-engine
+shacl-engine data-post1.ttl: validate 76617.7 ms, 19 results, parse 180 ms
+[18:45:08] pyshacl
+pyshacl data-post1.ttl: validate 5834.4 ms, 19 results
+[18:45:33] jena
+jena-shacl data-post2.ttl: validate 135.2 ms, 18 results, parse 891 ms
+[18:45:37] shacl-engine-core
+shacl-engine-core data-post2.ttl: validate 409.1 ms, 15 results, parse 169 ms
+[18:45:42] rdf-validate-shacl
+rdf-validate-shacl data-post2.ttl: validate 974.3 ms, 15 results, parse 147 ms
+[18:45:50] shacl-engine
+shacl-engine data-post2.ttl: validate 76244.5 ms, 18 results, parse 149 ms
+[18:51:00] pyshacl
+pyshacl data-post2.ttl: validate 5947.0 ms, 18 results
+[18:51:26] jena
+jena-shacl data.ttl: validate 110.2 ms, 14 results, parse 861 ms
+[18:51:30] shacl-engine-core
+shacl-engine-core data.ttl: validate 402.7 ms, 12 results, parse 174 ms
+[18:51:36] rdf-validate-shacl
+rdf-validate-shacl data.ttl: validate 950.7 ms, 12 results, parse 150 ms
+[18:51:45] shacl-engine
+shacl-engine data.ttl: validate 92500.6 ms, 14 results, parse 175 ms
+[18:58:02] pyshacl
+pyshacl data.ttl: validate 6181.4 ms, 14 results
+[18:58:29] jena
+jena-shacl data-post0.ttl: validate 124.9 ms, 14 results, parse 917 ms
+[18:58:32] shacl-engine-core
+shacl-engine-core data-post0.ttl: validate 430.4 ms, 12 results, parse 192 ms
+[18:58:38] rdf-validate-shacl
+rdf-validate-shacl data-post0.ttl: validate 922.8 ms, 12 results, parse 155 ms
+[18:58:45] shacl-engine
+shacl-engine data-post0.ttl: validate 92818.5 ms, 14 results, parse 172 ms
+[19:05:02] pyshacl
+pyshacl data-post0.ttl: validate 6149.3 ms, 14 results
+[19:05:29] jena
+jena-shacl data-post1.ttl: validate 121.0 ms, 15 results, parse 832 ms
+[19:05:32] shacl-engine-core
+shacl-engine-core data-post1.ttl: validate 432.8 ms, 13 results, parse 222 ms
+[19:05:38] rdf-validate-shacl
+rdf-validate-shacl data-post1.ttl: validate 914.7 ms, 13 results, parse 166 ms
+[19:05:45] shacl-engine
+shacl-engine data-post1.ttl: validate 93168.4 ms, 15 results, parse 157 ms
+[19:12:04] pyshacl
+pyshacl data-post1.ttl: validate 6068.7 ms, 15 results
+[19:12:30] jena
+jena-shacl data-post2.ttl: validate 176.9 ms, 17 results, parse 863 ms
+[19:12:34] shacl-engine-core
+shacl-engine-core data-post2.ttl: validate 403.3 ms, 14 results, parse 175 ms
+[19:12:39] rdf-validate-shacl
+rdf-validate-shacl data-post2.ttl: validate 986.7 ms, 14 results, parse 194 ms
+[19:12:46] shacl-engine
+shacl-engine data-post2.ttl: validate 110728.1 ms, 17 results, parse 157 ms
+[19:19:52] pyshacl
+pyshacl data-post2.ttl: validate 6915.2 ms, 17 results
+compared 117 runs -> C:\Users\PCYOUNG\AppData\Local\Temp\claude\G--SW-SW-SELab-SELab-Researches-selab-research-papers\d8e01205-6fec-4d2d-b804-becc973415e7\scratchpad\r6\n2run\compare.json
+[19:20:31] done
+exit 0
+Thu, Oct 22, 2026  7:20:31 PM
+cpu load at end: 3%

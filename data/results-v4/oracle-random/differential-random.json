@@ -1,0 +1,172 @@
+{
+  "experiment": "differential-random",
+  "bounds": {
+    "fixedCatalogModels": 3000,
+    "fixedMaxNodes": 7,
+    "fixedMaxEdges": 10,
+    "randomCatalogs": 400,
+    "modelsPerRandomCatalog": 25,
+    "randomMaxNodes": 6,
+    "randomMaxEdges": 9
+  },
+  "seeds": {
+    "fixed": "910000 + catalog index",
+    "randomCatalogs": 920000
+  },
+  "stats": {
+    "fixed:aerospace": {
+      "cases": 3000,
+      "engineViolations": 39716,
+      "oracleViolations": 39716,
+      "agreeingCases": 3000,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "referenceSkipped": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "DOM": 5398,
+        "MULT": 7544,
+        "REQ": 8144,
+        "TYPE": 13543,
+        "ISO": 2628,
+        "TRACE": 1686,
+        "ACYC": 554,
+        "VIEW": 219
+      },
+      "ruleCountMismatches": 0
+    },
+    "fixed:automotive": {
+      "cases": 3000,
+      "engineViolations": 39441,
+      "oracleViolations": 39441,
+      "agreeingCases": 3000,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "referenceSkipped": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "DOM": 5587,
+        "MULT": 7369,
+        "REQ": 8180,
+        "TYPE": 13214,
+        "ACYC": 559,
+        "ISO": 2727,
+        "VIEW": 173,
+        "TRACE": 1632
+      },
+      "ruleCountMismatches": 0
+    },
+    "fixed:robotics": {
+      "cases": 3000,
+      "engineViolations": 40639,
+      "oracleViolations": 40639,
+      "agreeingCases": 3000,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "referenceSkipped": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "DOM": 6185,
+        "REQ": 8745,
+        "TYPE": 13188,
+        "ACYC": 580,
+        "MULT": 7304,
+        "VIEW": 207,
+        "TRACE": 1693,
+        "ISO": 2737
+      },
+      "ruleCountMismatches": 0
+    },
+    "fixed:swap-restrictive": {
+      "cases": 3000,
+      "engineViolations": 39868,
+      "oracleViolations": 39868,
+      "agreeingCases": 3000,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "referenceSkipped": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "DOM": 5469,
+        "MULT": 7649,
+        "REQ": 8278,
+        "TYPE": 13258,
+        "TRACE": 1661,
+        "ACYC": 580,
+        "ISO": 2777,
+        "VIEW": 196
+      },
+      "ruleCountMismatches": 0
+    },
+    "fixed:counterexample": {
+      "cases": 3000,
+      "engineViolations": 41088,
+      "oracleViolations": 41088,
+      "agreeingCases": 3000,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "referenceSkipped": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "REQ": 8049,
+        "TYPE": 13518,
+        "DOM": 5316,
+        "ISO": 2713,
+        "MULT": 7456,
+        "TRACE": 3251,
+        "ACYC": 569,
+        "VIEW": 216
+      },
+      "ruleCountMismatches": 0
+    },
+    "randomCatalogs": {
+      "cases": 10000,
+      "engineViolations": 92543,
+      "oracleViolations": 92543,
+      "agreeingCases": 10000,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "referenceSkipped": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "DOM": 14726,
+        "ISO": 3766,
+        "MULT": 20561,
+        "REQ": 14814,
+        "TYPE": 26734,
+        "VIEW": 831,
+        "TRACE": 6829,
+        "ACYC": 4282
+      },
+      "ruleCountMismatches": 0
+    }
+  },
+  "mismatchesKept": 0,
+  "mismatches": [],
+  "seconds": 1955.914,
+  "codeIdentity": {
+    "src/validator/engine.ts": "c6b09f34e5642e85428aa139223745dd0c3ff01abc0ee786857041b502c85303",
+    "src/catalog/rules.ts": "aa8a5187a59b3c5471c9d49171166a67d9d4ee1b7855f4c2480ddf421b5f8fd6",
+    "src/catalog/domains.ts": "d60c2c1164a0d22ffbfaac0702d1ff06ddc9a2b68acf3282915c4541eb64c545",
+    "src/reference/referenceSemantics.ts": "1f5fe5b605b38d08e6c751c234438fc7da5aa4fae195f1eace14002d9799a72f",
+    "src/model/graph.ts": "798fcb25b25a5a8611e1b16bedfdfffe4ebcd674ffe2dd71dbd8c3c847b460e1",
+    "src/injector/defectInjector.ts": "f65791c772c852fccc5d4fa1e278172f48d0a5a98a3842b9b22c7289fb18e735",
+    "src/generator/syntheticModelGenerator.ts": "a294ab144c822a102e5501d55266ad6e53a30782107c39810a639e6bd8098cb7",
+    "oracle-py/oracle_spec.py": "8b2aa5941004865aaecacbc4d9aec069f502d738ee231241226f48f79bb176d6",
+    "oracle-py/rdf_export.py": "44a6aa25605f2551cc955a208e481379cd102c3b0d6872198216739c3150dca6",
+    "oracle-py/shapes.py": "873e51e8e78296d1d0cd33b5902eac5604a586de1b49f8b8c09051f3de3a9675",
+    "oracle-py/run_oracle.py": "a40f82d9186074c6645cd2ae3a7ed0c8382719cc015aca8a52e457c1c2603069"
+  }
+}

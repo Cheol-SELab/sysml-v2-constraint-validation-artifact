@@ -1,0 +1,4 @@
+[2026-10-22 22:44:50] start oracle-variants: node dist-r8/cli-oracle.js variants --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/oracle-variants --work G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/oracle-variants
+written: results-v4\oracle-variants\shacl-core-variants.json
+done in 692.4 s
+[2026-10-22 22:56:23] end oracle-variants rc=0 elapsed=693s

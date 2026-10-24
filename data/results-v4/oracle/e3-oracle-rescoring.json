@@ -1,0 +1,172 @@
+{
+  "reproductionOfStoredE3": {
+    "storedRecords": 871,
+    "regeneratedRecords": 871,
+    "identical": 0,
+    "differing": 0,
+    "notRegenerated": 871
+  },
+  "experiment": "e3-oracle-rescoring",
+  "gold": "independent SHACL oracle (pySHACL) on the isolated single-defect model; FP counted at run level against the oracle on the composed model",
+  "runs": 270,
+  "discardedRuns": 0,
+  "defectInstances": 871,
+  "rows": [
+    {
+      "defect": "D1",
+      "instances": 77,
+      "oracleGoldViolations": 77,
+      "tp": 77,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "detectedInstances": 77,
+      "goldAgreesWithReference": 77,
+      "oracleRuleClasses": [
+        "TYPE"
+      ]
+    },
+    {
+      "defect": "D2",
+      "instances": 103,
+      "oracleGoldViolations": 103,
+      "tp": 103,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "detectedInstances": 103,
+      "goldAgreesWithReference": 103,
+      "oracleRuleClasses": [
+        "MULT"
+      ]
+    },
+    {
+      "defect": "D3",
+      "instances": 100,
+      "oracleGoldViolations": 100,
+      "tp": 100,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "detectedInstances": 100,
+      "goldAgreesWithReference": 100,
+      "oracleRuleClasses": [
+        "REQ"
+      ]
+    },
+    {
+      "defect": "D4",
+      "instances": 115,
+      "oracleGoldViolations": 115,
+      "tp": 115,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "detectedInstances": 115,
+      "goldAgreesWithReference": 115,
+      "oracleRuleClasses": [
+        "DOM"
+      ]
+    },
+    {
+      "defect": "D5",
+      "instances": 72,
+      "oracleGoldViolations": 72,
+      "tp": 72,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "detectedInstances": 72,
+      "goldAgreesWithReference": 72,
+      "oracleRuleClasses": [
+        "TRACE"
+      ]
+    },
+    {
+      "defect": "D6",
+      "instances": 65,
+      "oracleGoldViolations": 65,
+      "tp": 65,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "detectedInstances": 65,
+      "goldAgreesWithReference": 65,
+      "oracleRuleClasses": [
+        "ACYC"
+      ]
+    },
+    {
+      "defect": "D7",
+      "instances": 270,
+      "oracleGoldViolations": 270,
+      "tp": 270,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "detectedInstances": 270,
+      "goldAgreesWithReference": 270,
+      "oracleRuleClasses": [
+        "ISO"
+      ]
+    },
+    {
+      "defect": "D8",
+      "instances": 69,
+      "oracleGoldViolations": 69,
+      "tp": 69,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "detectedInstances": 69,
+      "goldAgreesWithReference": 69,
+      "oracleRuleClasses": [
+        "VIEW"
+      ]
+    }
+  ],
+  "total": {
+    "tp": 871,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "runLevelFalsePositives": 0,
+    "runLevelFalseNegatives": 0
+  },
+  "oracleCleanModelsWithViolations": 0,
+  "theorem8EquationFailuresUnderOracle": 0,
+  "referenceVsOracleComposedDisagreements": 0,
+  "goldDisagreementsReferenceVsOracle": 0,
+  "seconds": 9021.245,
+  "codeIdentity": {
+    "src/validator/engine.ts": "c6b09f34e5642e85428aa139223745dd0c3ff01abc0ee786857041b502c85303",
+    "src/catalog/rules.ts": "aa8a5187a59b3c5471c9d49171166a67d9d4ee1b7855f4c2480ddf421b5f8fd6",
+    "src/catalog/domains.ts": "d60c2c1164a0d22ffbfaac0702d1ff06ddc9a2b68acf3282915c4541eb64c545",
+    "src/reference/referenceSemantics.ts": "1f5fe5b605b38d08e6c751c234438fc7da5aa4fae195f1eace14002d9799a72f",
+    "src/model/graph.ts": "798fcb25b25a5a8611e1b16bedfdfffe4ebcd674ffe2dd71dbd8c3c847b460e1",
+    "src/injector/defectInjector.ts": "f65791c772c852fccc5d4fa1e278172f48d0a5a98a3842b9b22c7289fb18e735",
+    "src/generator/syntheticModelGenerator.ts": "a294ab144c822a102e5501d55266ad6e53a30782107c39810a639e6bd8098cb7",
+    "oracle-py/oracle_spec.py": "8b2aa5941004865aaecacbc4d9aec069f502d738ee231241226f48f79bb176d6",
+    "oracle-py/rdf_export.py": "44a6aa25605f2551cc955a208e481379cd102c3b0d6872198216739c3150dca6",
+    "oracle-py/shapes.py": "873e51e8e78296d1d0cd33b5902eac5604a586de1b49f8b8c09051f3de3a9675",
+    "oracle-py/run_oracle.py": "a40f82d9186074c6645cd2ae3a7ed0c8382719cc015aca8a52e457c1c2603069"
+  }
+}

@@ -1,0 +1,12 @@
+[2026-10-22 23:15:35] start e5-partC: R1_TAG=partC E5_ONLY_LARGE=1 E5_LARGE_SEEDS=5 node --max-old-space-size=24000 dist-r8/cli-v2.js e5 --output G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/e5
+pin: could not set affinity/priority: The property 'ProcessorAffinity' cannot be found on this object. Verify that the property exists and can be set.
+pin: affinity=0x4 priority=AboveNormal pid=
+[2026-10-22 23:15:36] end e5-partC rc=0 elapsed=1s
+[2026-10-23 01:09:39] start e5-partC: R1_TAG=partC E5_ONLY_LARGE=1 E5_LARGE_SEEDS=5 node --max-old-space-size=24000 dist-r8/cli-v2.js e5 --output G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/e5
+pin: affinity=0x4 priority=AboveNormal pid=75752
+E5 n=100000 random ratio=0.001 done
+E5 n=100000 random ratio=0.01 done
+E5 n=100000 clustered ratio=0.001 done
+E5 n=100000 clustered ratio=0.01 done
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\e5\e5-incremental-v2-partC.json (2861.8 s)
+[2026-10-23 01:57:22] end e5-partC rc=0 elapsed=2863s

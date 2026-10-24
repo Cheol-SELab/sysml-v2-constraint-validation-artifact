@@ -1,0 +1,3766 @@
+{
+  "meta": {
+    "command": "node dist-r8\\cli-r8.js e5hist --tags G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/corpus-history/tags --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/n14",
+    "node": "v22.15.1",
+    "execArgv": [
+      "--max-old-space-size=16000"
+    ],
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "loadavgAtStart": [
+      0,
+      0,
+      0
+    ],
+    "startedAt": "2026-10-23T03:43:59.074Z",
+    "elapsedSec": 179.7
+  },
+  "experiment": "n14-e5-history",
+  "catalog": "aerospace",
+  "source": "Systems-Modeling/SysML-v2-Release git tags (data only); per tag: sysml/src/{examples,training,validation} with the tag's own sysml.library; S1 specialization classes, levels = all",
+  "tags": [
+    "2022-01",
+    "2022-02",
+    "2022-03",
+    "2022-04",
+    "2022-05",
+    "2022-06",
+    "2022-07",
+    "2022-08",
+    "2022-09",
+    "2022-10",
+    "2022-11",
+    "2022-12",
+    "2023-02",
+    "2023-07",
+    "2023-07.1",
+    "2023-08",
+    "2023-10",
+    "2023-11",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-07",
+    "2024-09",
+    "2024-11",
+    "2024-12",
+    "2025-02",
+    "2025-04",
+    "2025-06",
+    "2025-07",
+    "2025-09",
+    "2025-09.1",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-07",
+    "2026-08"
+  ],
+  "identity": "node key = unit id / qualified name / kind (#k for the k-th repeated key); edge key = type | source key | target key | occurrence",
+  "summary": {
+    "transitions": 42,
+    "emptyTransitions": 16,
+    "nonEmptyTransitions": 26,
+    "diffReproducesNextTag": "42/42",
+    "corpus": {
+      "medianEvents": 38.5,
+      "maxEvents": 2405,
+      "medianChangeRatio": 0.00847,
+      "scopeShareS3": {
+        "median": 0.01,
+        "ci95": [
+          0.006,
+          0.023
+        ],
+        "n": 26
+      },
+      "speedupTime": {
+        "S1": {
+          "median": 44.819,
+          "ci95": [
+            30.134,
+            65.662
+          ],
+          "n": 26
+        },
+        "S2": {
+          "median": 4.202,
+          "ci95": [
+            3.652,
+            4.808
+          ],
+          "n": 26
+        },
+        "S3": {
+          "median": 22.551,
+          "ci95": [
+            17.008,
+            24.71
+          ],
+          "n": 26
+        },
+        "S3t": {
+          "median": 22.191,
+          "ci95": [
+            15.606,
+            25.296
+          ],
+          "n": 26
+        },
+        "S3e": {
+          "median": 6.919,
+          "ci95": [
+            5.965,
+            7.515
+          ],
+          "n": 26
+        }
+      },
+      "speedupOps": {
+        "S1": {
+          "median": 108.616,
+          "ci95": [
+            67.115,
+            207.865
+          ],
+          "n": 26
+        },
+        "S2": {
+          "median": 7.143,
+          "ci95": [
+            6.963,
+            7.312
+          ],
+          "n": 26
+        },
+        "S3": {
+          "median": 95.988,
+          "ci95": [
+            54.307,
+            186.383
+          ],
+          "n": 26
+        },
+        "S3t": {
+          "median": 95.988,
+          "ci95": [
+            54.307,
+            186.383
+          ],
+          "n": 26
+        },
+        "S3e": {
+          "median": 95.988,
+          "ci95": [
+            54.307,
+            186.383
+          ],
+          "n": 26
+        }
+      },
+      "mismatchingViolationsVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "sequenceReplay": {
+        "steps": 26,
+        "perStepMs": {
+          "batch": 17.8825,
+          "S1": 1.2826,
+          "S2": 6.1883,
+          "S3": 1.8808,
+          "S3t": 4.314,
+          "S3e": 4.2292
+        },
+        "speedupTime": {
+          "S1": 13.943,
+          "S2": 2.89,
+          "S3": 9.508,
+          "S3t": 4.145,
+          "S3e": 4.228
+        }
+      }
+    },
+    "unit": {
+      "unitEdits": 58,
+      "medianNodes": 57.5,
+      "medianEvents": 6,
+      "medianChangeRatio": 0.051,
+      "scopeShareS3": {
+        "median": 0.124,
+        "ci95": [
+          0.066,
+          0.2
+        ],
+        "n": 58
+      },
+      "speedupTime": {
+        "S2": {
+          "median": 1.951,
+          "ci95": [
+            1.422,
+            2.268
+          ],
+          "n": 58
+        },
+        "S3": {
+          "median": 3.359,
+          "ci95": [
+            1.986,
+            5.094
+          ],
+          "n": 58
+        },
+        "S3e": {
+          "median": 2.015,
+          "ci95": [
+            1.528,
+            2.494
+          ],
+          "n": 58
+        }
+      },
+      "speedupOps": {
+        "S2": {
+          "median": 3.911,
+          "ci95": [
+            3.195,
+            5.62
+          ],
+          "n": 58
+        },
+        "S3": {
+          "median": 9.221,
+          "ci95": [
+            5.128,
+            17.808
+          ],
+          "n": 58
+        }
+      },
+      "mismatchingViolationsVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    }
+  },
+  "transitions": [
+    {
+      "from": "2022-01",
+      "to": "2022-02",
+      "nodes": 3043,
+      "edges": 1767,
+      "events": 39,
+      "eventsByKind": {
+        "delEdge": 7,
+        "delNode": 6,
+        "addNode": 17,
+        "addEdge": 9
+      },
+      "changeRatio": 0.00811,
+      "changedUnits": 2,
+      "supportNodes": 25,
+      "scopeShareS3": 0.0295,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 82,
+      "batchViolationsAfter": 7297,
+      "stepMs": {
+        "batch": 17.9009,
+        "S1": 1.5291,
+        "S2": 4.9012,
+        "S3": 1.6548,
+        "S3t": 2.115,
+        "S3e": 3.8039
+      },
+      "speedupTime": {
+        "S1": 11.707,
+        "S2": 3.652,
+        "S3": 10.818,
+        "S3t": 8.464,
+        "S3e": 4.706
+      },
+      "ops": {
+        "batch": 24724,
+        "S1": 1241,
+        "S2": 4352,
+        "S3": 1210,
+        "S3t": 1210,
+        "S3e": 1210
+      },
+      "speedupOps": {
+        "S1": 19.923,
+        "S2": 5.681,
+        "S3": 20.433,
+        "S3t": 20.433,
+        "S3e": 20.433
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2022-02",
+      "to": "2022-03",
+      "nodes": 3054,
+      "edges": 1769,
+      "events": 83,
+      "eventsByKind": {
+        "delEdge": 11,
+        "delNode": 28,
+        "addNode": 32,
+        "addEdge": 12
+      },
+      "changeRatio": 0.01721,
+      "changedUnits": 5,
+      "supportNodes": 62,
+      "scopeShareS3": 0.0229,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 169,
+      "batchViolationsAfter": 7308,
+      "stepMs": {
+        "batch": 15.9663,
+        "S1": 0.6728,
+        "S2": 4.5246,
+        "S3": 7.4327,
+        "S3t": 1.5084,
+        "S3e": 2.6481
+      },
+      "speedupTime": {
+        "S1": 23.731,
+        "S2": 3.529,
+        "S3": 2.148,
+        "S3t": 10.585,
+        "S3e": 6.029
+      },
+      "ops": {
+        "batch": 24758,
+        "S1": 339,
+        "S2": 3501,
+        "S3": 440,
+        "S3t": 440,
+        "S3e": 440
+      },
+      "speedupOps": {
+        "S1": 73.032,
+        "S2": 7.072,
+        "S3": 56.268,
+        "S3t": 56.268,
+        "S3e": 56.268
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2022-03",
+      "to": "2022-04",
+      "nodes": 3058,
+      "edges": 1770,
+      "events": 137,
+      "eventsByKind": {
+        "delEdge": 33,
+        "delNode": 43,
+        "addNode": 35,
+        "setAttr": 11,
+        "addEdge": 15
+      },
+      "changeRatio": 0.02838,
+      "changedUnits": 2,
+      "supportNodes": 90,
+      "scopeShareS3": 0.0321,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 181,
+      "batchViolationsAfter": 7303,
+      "stepMs": {
+        "batch": 16.569,
+        "S1": 1.1684,
+        "S2": 5.0701,
+        "S3": 1.294,
+        "S3t": 11.8679,
+        "S3e": 2.9175
+      },
+      "speedupTime": {
+        "S1": 14.181,
+        "S2": 3.268,
+        "S3": 12.804,
+        "S3t": 1.396,
+        "S3e": 5.679
+      },
+      "ops": {
+        "batch": 24681,
+        "S1": 395,
+        "S2": 3544,
+        "S3": 544,
+        "S3t": 6748,
+        "S3e": 544
+      },
+      "speedupOps": {
+        "S1": 62.484,
+        "S2": 6.964,
+        "S3": 45.369,
+        "S3t": 3.658,
+        "S3e": 45.369
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": true
+    },
+    {
+      "from": "2022-04",
+      "to": "2022-05",
+      "nodes": 3050,
+      "edges": 1752,
+      "events": 180,
+      "eventsByKind": {
+        "delEdge": 7,
+        "delNode": 6,
+        "addNode": 106,
+        "addEdge": 61
+      },
+      "changeRatio": 0.03748,
+      "changedUnits": 3,
+      "supportNodes": 115,
+      "scopeShareS3": 0.0578,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 347,
+      "batchViolationsAfter": 7598,
+      "stepMs": {
+        "batch": 16.4774,
+        "S1": 1.9859,
+        "S2": 6.6185,
+        "S3": 2.2978,
+        "S3t": 11.0109,
+        "S3e": 4.6081
+      },
+      "speedupTime": {
+        "S1": 8.297,
+        "S2": 2.49,
+        "S3": 7.171,
+        "S3t": 1.496,
+        "S3e": 3.576
+      },
+      "ops": {
+        "batch": 25491,
+        "S1": 1990,
+        "S2": 5106,
+        "S3": 2097,
+        "S3t": 8434,
+        "S3e": 2097
+      },
+      "speedupOps": {
+        "S1": 12.81,
+        "S2": 4.992,
+        "S3": 12.156,
+        "S3t": 3.022,
+        "S3e": 12.156
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": true
+    },
+    {
+      "from": "2022-05",
+      "to": "2022-06",
+      "nodes": 3150,
+      "edges": 1806,
+      "events": 32,
+      "eventsByKind": {
+        "addNode": 24,
+        "addEdge": 8
+      },
+      "changeRatio": 0.00646,
+      "changedUnits": 2,
+      "supportNodes": 24,
+      "scopeShareS3": 0.0076,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 66,
+      "batchViolationsAfter": 7664,
+      "stepMs": {
+        "batch": 17.33,
+        "S1": 0.2975,
+        "S2": 4.1481,
+        "S3": 0.7232,
+        "S3t": 0.6851,
+        "S3e": 2.306
+      },
+      "speedupTime": {
+        "S1": 58.252,
+        "S2": 4.178,
+        "S3": 23.963,
+        "S3t": 25.296,
+        "S3e": 7.515
+      },
+      "ops": {
+        "batch": 25707,
+        "S1": 216,
+        "S2": 3544,
+        "S3": 245,
+        "S3t": 245,
+        "S3e": 245
+      },
+      "speedupOps": {
+        "S1": 119.014,
+        "S2": 7.254,
+        "S3": 104.927,
+        "S3t": 104.927,
+        "S3e": 104.927
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "nodes": 3174,
+      "edges": 1814,
+      "events": 94,
+      "eventsByKind": {
+        "delEdge": 16,
+        "delNode": 35,
+        "setAttr": 4,
+        "addNode": 26,
+        "addEdge": 13
+      },
+      "changeRatio": 0.01885,
+      "changedUnits": 10,
+      "supportNodes": 67,
+      "scopeShareS3": 0.0269,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 188,
+      "batchViolationsAfter": 7632,
+      "stepMs": {
+        "batch": 21.4985,
+        "S1": 0.6909,
+        "S2": 5.3883,
+        "S3": 1.1073,
+        "S3t": 1.0423,
+        "S3e": 3.0179
+      },
+      "speedupTime": {
+        "S1": 31.117,
+        "S2": 3.99,
+        "S3": 19.415,
+        "S3t": 20.626,
+        "S3e": 7.124
+      },
+      "ops": {
+        "batch": 25705,
+        "S1": 383,
+        "S2": 3682,
+        "S3": 484,
+        "S3t": 484,
+        "S3e": 484
+      },
+      "speedupOps": {
+        "S1": 67.115,
+        "S2": 6.981,
+        "S3": 53.11,
+        "S3t": 53.11,
+        "S3e": 53.11
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2022-07",
+      "to": "2022-08",
+      "nodes": 3165,
+      "edges": 1811,
+      "events": 2405,
+      "eventsByKind": {
+        "delEdge": 703,
+        "delNode": 931,
+        "addNode": 424,
+        "addEdge": 347
+      },
+      "changeRatio": 0.48332,
+      "changedUnits": 9,
+      "supportNodes": 1385,
+      "scopeShareS3": 0.5267,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 3190,
+      "batchViolationsAfter": 6502,
+      "stepMs": {
+        "batch": 17.6154,
+        "S1": 7.3681,
+        "S2": 15.1103,
+        "S3": 11.221,
+        "S3t": 17.3004,
+        "S3e": 14.0425
+      },
+      "speedupTime": {
+        "S1": 2.391,
+        "S2": 1.166,
+        "S3": 1.57,
+        "S3t": 1.018,
+        "S3e": 1.254
+      },
+      "ops": {
+        "batch": 21324,
+        "S1": 4199,
+        "S2": 6516,
+        "S3": 7562,
+        "S3t": 9340,
+        "S3e": 7562
+      },
+      "speedupOps": {
+        "S1": 5.078,
+        "S2": 3.273,
+        "S3": 2.82,
+        "S3t": 2.283,
+        "S3e": 2.82
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": true
+    },
+    {
+      "from": "2022-08",
+      "to": "2022-09",
+      "nodes": 2658,
+      "edges": 1455,
+      "events": 67,
+      "eventsByKind": {
+        "delEdge": 1,
+        "delNode": 2,
+        "addNode": 44,
+        "addEdge": 20
+      },
+      "changeRatio": 0.01629,
+      "changedUnits": 2,
+      "supportNodes": 47,
+      "scopeShareS3": 0.0174,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 96,
+      "batchViolationsAfter": 6588,
+      "stepMs": {
+        "batch": 16.7631,
+        "S1": 0.4588,
+        "S2": 4.0181,
+        "S3": 0.7528,
+        "S3t": 0.7575,
+        "S3e": 2.3057
+      },
+      "speedupTime": {
+        "S1": 36.537,
+        "S2": 4.172,
+        "S3": 22.268,
+        "S3t": 22.13,
+        "S3e": 7.27
+      },
+      "ops": {
+        "batch": 21613,
+        "S1": 309,
+        "S2": 3130,
+        "S3": 377,
+        "S3t": 377,
+        "S3e": 377
+      },
+      "speedupOps": {
+        "S1": 69.945,
+        "S2": 6.905,
+        "S3": 57.329,
+        "S3t": 57.329,
+        "S3e": 57.329
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2022-09",
+      "to": "2022-10",
+      "nodes": 2700,
+      "edges": 1474,
+      "events": 64,
+      "eventsByKind": {
+        "delEdge": 10,
+        "delNode": 20,
+        "addNode": 23,
+        "addEdge": 11
+      },
+      "changeRatio": 0.01533,
+      "changedUnits": 3,
+      "supportNodes": 43,
+      "scopeShareS3": 0.0159,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 109,
+      "batchViolationsAfter": 6595,
+      "stepMs": {
+        "batch": 16.5441,
+        "S1": 0.3222,
+        "S2": 3.1688,
+        "S3": 0.7411,
+        "S3t": 0.8007,
+        "S3e": 2.5887
+      },
+      "speedupTime": {
+        "S1": 51.347,
+        "S2": 5.221,
+        "S3": 22.324,
+        "S3t": 20.662,
+        "S3e": 6.391
+      },
+      "ops": {
+        "batch": 21638,
+        "S1": 144,
+        "S2": 2990,
+        "S3": 228,
+        "S3t": 228,
+        "S3e": 228
+      },
+      "speedupOps": {
+        "S1": 150.264,
+        "S2": 7.237,
+        "S3": 94.904,
+        "S3t": 94.904,
+        "S3e": 94.904
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2022-10",
+      "to": "2022-11",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2022-11",
+      "to": "2022-12",
+      "nodes": 2703,
+      "edges": 1475,
+      "events": 427,
+      "eventsByKind": {
+        "delEdge": 7,
+        "delNode": 6,
+        "addNode": 244,
+        "addEdge": 170
+      },
+      "changeRatio": 0.1022,
+      "changedUnits": 2,
+      "supportNodes": 263,
+      "scopeShareS3": 0.1207,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 579,
+      "batchViolationsAfter": 7122,
+      "stepMs": {
+        "batch": 19.0631,
+        "S1": 3.0479,
+        "S2": 6.2834,
+        "S3": 2.9152,
+        "S3t": 15.6337,
+        "S3e": 5.4148
+      },
+      "speedupTime": {
+        "S1": 6.255,
+        "S2": 3.034,
+        "S3": 6.539,
+        "S3t": 1.219,
+        "S3e": 3.521
+      },
+      "ops": {
+        "batch": 23472,
+        "S1": 3351,
+        "S2": 6095,
+        "S3": 3667,
+        "S3t": 9213,
+        "S3e": 3667
+      },
+      "speedupOps": {
+        "S1": 7.004,
+        "S2": 3.851,
+        "S3": 6.401,
+        "S3t": 2.548,
+        "S3e": 6.401
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": true
+    },
+    {
+      "from": "2022-12",
+      "to": "2023-02",
+      "nodes": 2941,
+      "edges": 1638,
+      "events": 494,
+      "eventsByKind": {
+        "delEdge": 175,
+        "delNode": 237,
+        "setAttr": 10,
+        "addNode": 33,
+        "addEdge": 39
+      },
+      "changeRatio": 0.10788,
+      "changedUnits": 3,
+      "supportNodes": 305,
+      "scopeShareS3": 0.1465,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 653,
+      "batchViolationsAfter": 6665,
+      "stepMs": {
+        "batch": 16.3973,
+        "S1": 3.0061,
+        "S2": 5.7576,
+        "S3": 2.9424,
+        "S3t": 12.0989,
+        "S3e": 5.9418
+      },
+      "speedupTime": {
+        "S1": 5.455,
+        "S2": 2.848,
+        "S3": 5.573,
+        "S3t": 1.355,
+        "S3e": 2.76
+      },
+      "ops": {
+        "batch": 21909,
+        "S1": 1941,
+        "S2": 4666,
+        "S3": 2521,
+        "S3t": 7569,
+        "S3e": 2521
+      },
+      "speedupOps": {
+        "S1": 11.287,
+        "S2": 4.695,
+        "S3": 8.691,
+        "S3t": 2.895,
+        "S3e": 8.691
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": true
+    },
+    {
+      "from": "2023-02",
+      "to": "2023-07",
+      "nodes": 2737,
+      "edges": 1502,
+      "events": 15,
+      "eventsByKind": {
+        "delEdge": 2,
+        "addNode": 6,
+        "addEdge": 7
+      },
+      "changeRatio": 0.00354,
+      "changedUnits": 2,
+      "supportNodes": 11,
+      "scopeShareS3": 0.0062,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 17,
+      "batchViolationsAfter": 6680,
+      "stepMs": {
+        "batch": 14.7107,
+        "S1": 0.294,
+        "S2": 3.1942,
+        "S3": 0.6369,
+        "S3t": 0.6068,
+        "S3e": 2.3538
+      },
+      "speedupTime": {
+        "S1": 50.036,
+        "S2": 4.605,
+        "S3": 23.097,
+        "S3t": 24.243,
+        "S3e": 6.25
+      },
+      "ops": {
+        "batch": 21963,
+        "S1": 152,
+        "S2": 3044,
+        "S3": 156,
+        "S3t": 156,
+        "S3e": 156
+      },
+      "speedupOps": {
+        "S1": 144.493,
+        "S2": 7.215,
+        "S3": 140.788,
+        "S3t": 140.788,
+        "S3e": 140.788
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2023-07",
+      "to": "2023-07.1",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2023-07.1",
+      "to": "2023-08",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2023-08",
+      "to": "2023-10",
+      "nodes": 2743,
+      "edges": 1507,
+      "events": 9,
+      "eventsByKind": {
+        "delEdge": 3,
+        "delNode": 6
+      },
+      "changeRatio": 0.00212,
+      "changedUnits": 4,
+      "supportNodes": 9,
+      "scopeShareS3": 0.0062,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 18,
+      "batchViolationsAfter": 6662,
+      "stepMs": {
+        "batch": 14.2128,
+        "S1": 0.2886,
+        "S2": 2.8368,
+        "S3": 0.6212,
+        "S3t": 0.6387,
+        "S3e": 2.0762
+      },
+      "speedupTime": {
+        "S1": 49.247,
+        "S2": 5.01,
+        "S3": 22.88,
+        "S3t": 22.253,
+        "S3e": 6.846
+      },
+      "ops": {
+        "batch": 21896,
+        "S1": 114,
+        "S2": 3000,
+        "S3": 114,
+        "S3t": 114,
+        "S3e": 114
+      },
+      "speedupOps": {
+        "S1": 192.07,
+        "S2": 7.299,
+        "S3": 192.07,
+        "S3t": 192.07,
+        "S3e": 192.07
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2023-10",
+      "to": "2023-11",
+      "nodes": 2737,
+      "edges": 1504,
+      "events": 9,
+      "eventsByKind": {
+        "addNode": 4,
+        "setAttr": 1,
+        "addEdge": 4
+      },
+      "changeRatio": 0.00212,
+      "changedUnits": 3,
+      "supportNodes": 9,
+      "scopeShareS3": 0.0095,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 12,
+      "batchViolationsAfter": 6672,
+      "stepMs": {
+        "batch": 16.7228,
+        "S1": 0.4424,
+        "S2": 3.1541,
+        "S3": 0.7342,
+        "S3t": 0.7156,
+        "S3e": 2.2148
+      },
+      "speedupTime": {
+        "S1": 37.8,
+        "S2": 5.302,
+        "S3": 22.777,
+        "S3t": 23.369,
+        "S3e": 7.55
+      },
+      "ops": {
+        "batch": 21938,
+        "S1": 245,
+        "S2": 3119,
+        "S3": 226,
+        "S3t": 226,
+        "S3e": 226
+      },
+      "speedupOps": {
+        "S1": 89.543,
+        "S2": 7.034,
+        "S3": 97.071,
+        "S3t": 97.071,
+        "S3e": 97.071
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2023-11",
+      "to": "2024-01",
+      "nodes": 2741,
+      "edges": 1508,
+      "events": 2,
+      "eventsByKind": {
+        "delNode": 1,
+        "addNode": 1
+      },
+      "changeRatio": 0.00047,
+      "changedUnits": 1,
+      "supportNodes": 2,
+      "scopeShareS3": 0.0007,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 6,
+      "batchViolationsAfter": 6672,
+      "stepMs": {
+        "batch": 15.1657,
+        "S1": 0.1158,
+        "S2": 3.4422,
+        "S3": 0.4629,
+        "S3t": 0.4737,
+        "S3e": 1.8975
+      },
+      "speedupTime": {
+        "S1": 130.965,
+        "S2": 4.406,
+        "S3": 32.762,
+        "S3t": 32.015,
+        "S3e": 7.992
+      },
+      "ops": {
+        "batch": 21938,
+        "S1": 8,
+        "S2": 2913,
+        "S3": 11,
+        "S3t": 11,
+        "S3e": 11
+      },
+      "speedupOps": {
+        "S1": 2742.25,
+        "S2": 7.531,
+        "S3": 1994.364,
+        "S3t": 1994.364,
+        "S3e": 1994.364
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2024-01",
+      "to": "2024-02",
+      "nodes": 2741,
+      "edges": 1508,
+      "events": 6,
+      "eventsByKind": {
+        "delNode": 2,
+        "addNode": 2,
+        "addEdge": 2
+      },
+      "changeRatio": 0.00141,
+      "changedUnits": 1,
+      "supportNodes": 5,
+      "scopeShareS3": 0.0018,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 7,
+      "batchViolationsAfter": 6669,
+      "stepMs": {
+        "batch": 12.5948,
+        "S1": 0.14,
+        "S2": 3.8983,
+        "S3": 0.502,
+        "S3t": 0.4954,
+        "S3e": 2.1003
+      },
+      "speedupTime": {
+        "S1": 89.963,
+        "S2": 3.231,
+        "S3": 25.089,
+        "S3t": 25.423,
+        "S3e": 5.997
+      },
+      "ops": {
+        "batch": 21940,
+        "S1": 26,
+        "S2": 2929,
+        "S3": 33,
+        "S3t": 33,
+        "S3e": 33
+      },
+      "speedupOps": {
+        "S1": 843.846,
+        "S2": 7.491,
+        "S3": 664.848,
+        "S3t": 664.848,
+        "S3e": 664.848
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2024-02",
+      "to": "2024-03",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2024-03",
+      "to": "2024-04",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2024-04",
+      "to": "2024-05",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2024-05",
+      "to": "2024-07",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2024-07",
+      "to": "2024-09",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2024-09",
+      "to": "2024-11",
+      "nodes": 2741,
+      "edges": 1510,
+      "events": 1185,
+      "eventsByKind": {
+        "delEdge": 195,
+        "delNode": 382,
+        "addNode": 402,
+        "addEdge": 206
+      },
+      "changeRatio": 0.27876,
+      "changedUnits": 48,
+      "supportNodes": 785,
+      "scopeShareS3": 0.2854,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 1928,
+      "batchViolationsAfter": 6725,
+      "stepMs": {
+        "batch": 18.8319,
+        "S1": 3.6384,
+        "S2": 7.5749,
+        "S3": 3.8643,
+        "S3t": 13.9991,
+        "S3e": 7.7598
+      },
+      "speedupTime": {
+        "S1": 5.176,
+        "S2": 2.486,
+        "S3": 4.873,
+        "S3t": 1.345,
+        "S3e": 2.427
+      },
+      "ops": {
+        "batch": 22055,
+        "S1": 3021,
+        "S2": 5522,
+        "S3": 4584,
+        "S3t": 8448,
+        "S3e": 4584
+      },
+      "speedupOps": {
+        "S1": 7.301,
+        "S2": 3.994,
+        "S3": 4.811,
+        "S3t": 2.611,
+        "S3e": 4.811
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": true
+    },
+    {
+      "from": "2024-11",
+      "to": "2024-12",
+      "nodes": 2761,
+      "edges": 1521,
+      "events": 8,
+      "eventsByKind": {
+        "addNode": 8
+      },
+      "changeRatio": 0.00187,
+      "changedUnits": 1,
+      "supportNodes": 8,
+      "scopeShareS3": 0.0029,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 24,
+      "batchViolationsAfter": 6749,
+      "stepMs": {
+        "batch": 17.36,
+        "S1": 0.1757,
+        "S2": 3.2829,
+        "S3": 0.5969,
+        "S3t": 0.5613,
+        "S3e": 1.945
+      },
+      "speedupTime": {
+        "S1": 98.805,
+        "S2": 5.288,
+        "S3": 29.084,
+        "S3t": 30.928,
+        "S3e": 8.925
+      },
+      "ops": {
+        "batch": 22119,
+        "S1": 64,
+        "S2": 2990,
+        "S3": 72,
+        "S3t": 72,
+        "S3e": 72
+      },
+      "speedupOps": {
+        "S1": 345.609,
+        "S2": 7.398,
+        "S3": 307.208,
+        "S3t": 307.208,
+        "S3e": 307.208
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2024-12",
+      "to": "2025-02",
+      "nodes": 2769,
+      "edges": 1521,
+      "events": 46,
+      "eventsByKind": {
+        "delEdge": 6,
+        "delNode": 10,
+        "addNode": 22,
+        "addEdge": 8
+      },
+      "changeRatio": 0.01072,
+      "changedUnits": 4,
+      "supportNodes": 34,
+      "scopeShareS3": 0.0144,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 77,
+      "batchViolationsAfter": 6790,
+      "stepMs": {
+        "batch": 15.7214,
+        "S1": 0.4202,
+        "S2": 3.9348,
+        "S3": 0.7412,
+        "S3t": 0.7739,
+        "S3e": 2.2488
+      },
+      "speedupTime": {
+        "S1": 37.414,
+        "S2": 3.995,
+        "S3": 21.211,
+        "S3t": 20.315,
+        "S3e": 6.991
+      },
+      "ops": {
+        "batch": 22197,
+        "S1": 226,
+        "S2": 3142,
+        "S3": 274,
+        "S3t": 274,
+        "S3e": 274
+      },
+      "speedupOps": {
+        "S1": 98.217,
+        "S2": 7.065,
+        "S3": 81.011,
+        "S3t": 81.011,
+        "S3e": 81.011
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2025-02",
+      "to": "2025-04",
+      "nodes": 2781,
+      "edges": 1523,
+      "events": 40,
+      "eventsByKind": {
+        "delEdge": 6,
+        "delNode": 14,
+        "addNode": 14,
+        "addEdge": 6
+      },
+      "changeRatio": 0.00929,
+      "changedUnits": 2,
+      "supportNodes": 28,
+      "scopeShareS3": 0.0101,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 62,
+      "batchViolationsAfter": 6790,
+      "stepMs": {
+        "batch": 16.9076,
+        "S1": 0.2686,
+        "S2": 3.3695,
+        "S3": 0.7707,
+        "S3t": 0.6193,
+        "S3e": 2.1801
+      },
+      "speedupTime": {
+        "S1": 62.947,
+        "S2": 5.018,
+        "S3": 21.938,
+        "S3t": 27.301,
+        "S3e": 7.755
+      },
+      "ops": {
+        "batch": 22197,
+        "S1": 109,
+        "S2": 3041,
+        "S3": 163,
+        "S3t": 163,
+        "S3e": 163
+      },
+      "speedupOps": {
+        "S1": 203.642,
+        "S2": 7.299,
+        "S3": 136.178,
+        "S3t": 136.178,
+        "S3e": 136.178
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2025-04",
+      "to": "2025-06",
+      "nodes": 2781,
+      "edges": 1523,
+      "events": 4,
+      "eventsByKind": {
+        "addNode": 2,
+        "addEdge": 2
+      },
+      "changeRatio": 0.00093,
+      "changedUnits": 1,
+      "supportNodes": 5,
+      "scopeShareS3": 0.0029,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 8,
+      "batchViolationsAfter": 6796,
+      "stepMs": {
+        "batch": 17.629,
+        "S1": 0.2139,
+        "S2": 3.1734,
+        "S3": 0.5634,
+        "S3t": 0.5575,
+        "S3e": 2.4622
+      },
+      "speedupTime": {
+        "S1": 82.417,
+        "S2": 5.555,
+        "S3": 31.29,
+        "S3t": 31.622,
+        "S3e": 7.16
+      },
+      "ops": {
+        "batch": 22207,
+        "S1": 64,
+        "S2": 3004,
+        "S3": 62,
+        "S3t": 62,
+        "S3e": 62
+      },
+      "speedupOps": {
+        "S1": 346.984,
+        "S2": 7.392,
+        "S3": 358.177,
+        "S3t": 358.177,
+        "S3e": 358.177
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2025-06",
+      "to": "2025-07",
+      "nodes": 2783,
+      "edges": 1525,
+      "events": 38,
+      "eventsByKind": {
+        "delEdge": 13,
+        "delNode": 1,
+        "addNode": 7,
+        "addEdge": 17
+      },
+      "changeRatio": 0.00882,
+      "changedUnits": 3,
+      "supportNodes": 25,
+      "scopeShareS3": 0.01,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 37,
+      "batchViolationsAfter": 6811,
+      "stepMs": {
+        "batch": 18.321,
+        "S1": 0.4536,
+        "S2": 3.244,
+        "S3": 0.753,
+        "S3t": 0.7621,
+        "S3e": 2.247
+      },
+      "speedupTime": {
+        "S1": 40.39,
+        "S2": 5.648,
+        "S3": 24.331,
+        "S3t": 24.04,
+        "S3e": 8.154
+      },
+      "ops": {
+        "batch": 22266,
+        "S1": 391,
+        "S2": 3318,
+        "S3": 410,
+        "S3t": 410,
+        "S3e": 410
+      },
+      "speedupOps": {
+        "S1": 56.946,
+        "S2": 6.711,
+        "S3": 54.307,
+        "S3t": 54.307,
+        "S3e": 54.307
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2025-07",
+      "to": "2025-09",
+      "nodes": 2789,
+      "edges": 1529,
+      "events": 20,
+      "eventsByKind": {
+        "addNode": 14,
+        "addEdge": 6
+      },
+      "changeRatio": 0.00463,
+      "changedUnits": 1,
+      "supportNodes": 14,
+      "scopeShareS3": 0.005,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 33,
+      "batchViolationsAfter": 6844,
+      "stepMs": {
+        "batch": 17.5991,
+        "S1": 0.2105,
+        "S2": 3.99,
+        "S3": 0.5625,
+        "S3t": 0.5467,
+        "S3e": 2.0924
+      },
+      "speedupTime": {
+        "S1": 83.606,
+        "S2": 4.411,
+        "S3": 31.287,
+        "S3t": 32.192,
+        "S3e": 8.411
+      },
+      "ops": {
+        "batch": 22366,
+        "S1": 100,
+        "S2": 3054,
+        "S3": 120,
+        "S3t": 120,
+        "S3e": 120
+      },
+      "speedupOps": {
+        "S1": 223.66,
+        "S2": 7.324,
+        "S3": 186.383,
+        "S3t": 186.383,
+        "S3e": 186.383
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2025-09",
+      "to": "2025-09.1",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2025-09.1",
+      "to": "2025-10",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2025-10",
+      "to": "2025-11",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2025-11",
+      "to": "2025-12",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2025-12",
+      "to": "2026-01",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2026-01",
+      "to": "2026-02",
+      "nodes": 2803,
+      "edges": 1535,
+      "events": 6,
+      "eventsByKind": {
+        "delNode": 1,
+        "addNode": 3,
+        "addEdge": 2
+      },
+      "changeRatio": 0.00138,
+      "changedUnits": 1,
+      "supportNodes": 5,
+      "scopeShareS3": 0.0036,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 10,
+      "batchViolationsAfter": 6848,
+      "stepMs": {
+        "batch": 16.9837,
+        "S1": 0.2111,
+        "S2": 4.0184,
+        "S3": 0.5569,
+        "S3t": 0.6056,
+        "S3e": 2.1562
+      },
+      "speedupTime": {
+        "S1": 80.453,
+        "S2": 4.226,
+        "S3": 30.497,
+        "S3t": 28.044,
+        "S3e": 7.877
+      },
+      "ops": {
+        "batch": 22384,
+        "S1": 81,
+        "S2": 3042,
+        "S3": 82,
+        "S3t": 82,
+        "S3e": 82
+      },
+      "speedupOps": {
+        "S1": 276.346,
+        "S2": 7.358,
+        "S3": 272.976,
+        "S3t": 272.976,
+        "S3e": 272.976
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2026-02",
+      "to": "2026-03",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2026-03",
+      "to": "2026-04",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2026-04",
+      "to": "2026-05",
+      "events": 0,
+      "reproducesNextTag": true
+    },
+    {
+      "from": "2026-05",
+      "to": "2026-07",
+      "nodes": 2805,
+      "edges": 1537,
+      "events": 17,
+      "eventsByKind": {
+        "addNode": 12,
+        "addEdge": 5
+      },
+      "changeRatio": 0.00392,
+      "changedUnits": 1,
+      "supportNodes": 12,
+      "scopeShareS3": 0.0043,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 25,
+      "batchViolationsAfter": 6873,
+      "stepMs": {
+        "batch": 16.549,
+        "S1": 0.2193,
+        "S2": 3.5165,
+        "S3": 0.5603,
+        "S3t": 0.7496,
+        "S3e": 7.48
+      },
+      "speedupTime": {
+        "S1": 75.463,
+        "S2": 4.706,
+        "S3": 29.536,
+        "S3t": 22.077,
+        "S3e": 2.212
+      },
+      "ops": {
+        "batch": 22467,
+        "S1": 83,
+        "S2": 3053,
+        "S3": 100,
+        "S3t": 100,
+        "S3e": 100
+      },
+      "speedupOps": {
+        "S1": 270.687,
+        "S2": 7.359,
+        "S3": 224.67,
+        "S3t": 224.67,
+        "S3e": 224.67
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    },
+    {
+      "from": "2026-07",
+      "to": "2026-08",
+      "nodes": 2817,
+      "edges": 1542,
+      "events": 4,
+      "eventsByKind": {
+        "addNode": 2,
+        "addEdge": 2
+      },
+      "changeRatio": 0.00092,
+      "changedUnits": 1,
+      "supportNodes": 4,
+      "scopeShareS3": 0.0039,
+      "reproducesNextTag": true,
+      "changedViolationKeys": 4,
+      "batchViolationsAfter": 6877,
+      "stepMs": {
+        "batch": 17.537,
+        "S1": 0.24,
+        "S2": 2.9824,
+        "S3": 0.566,
+        "S3t": 0.5419,
+        "S3e": 2.1504
+      },
+      "speedupTime": {
+        "S1": 73.071,
+        "S2": 5.88,
+        "S3": 30.984,
+        "S3t": 32.362,
+        "S3e": 8.155
+      },
+      "ops": {
+        "batch": 22484,
+        "S1": 85,
+        "S2": 3060,
+        "S3": 80,
+        "S3t": 80,
+        "S3e": 80
+      },
+      "speedupOps": {
+        "S1": 264.518,
+        "S2": 7.348,
+        "S3": 281.05,
+        "S3t": 281.05,
+        "S3e": 281.05
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      },
+      "s3tFallback": false
+    }
+  ],
+  "unitEdits": [
+    {
+      "from": "2022-01",
+      "to": "2022-02",
+      "unit": "examples/Vehicle Example",
+      "nodes": 935,
+      "edges": 720,
+      "events": 35,
+      "changeRatio": 0.0211,
+      "scopeShareS3": 0.0913,
+      "batchViolationsAfter": 2138,
+      "stepMs": {
+        "batch": 6.3474,
+        "S2": 2.4124,
+        "S3": 0.9435,
+        "S3e": 1.3734
+      },
+      "speedupTime": {
+        "S2": 2.631,
+        "S3": 6.728,
+        "S3e": 4.622
+      },
+      "speedupOps": {
+        "S2": 3.972,
+        "S3": 7.141
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-02",
+      "to": "2022-03",
+      "unit": "examples/Vehicle Example",
+      "nodes": 942,
+      "edges": 722,
+      "events": 16,
+      "changeRatio": 0.0096,
+      "scopeShareS3": 0.0191,
+      "batchViolationsAfter": 2138,
+      "stepMs": {
+        "batch": 6.6407,
+        "S2": 1.2144,
+        "S3": 0.3215,
+        "S3e": 0.7697
+      },
+      "speedupTime": {
+        "S2": 5.468,
+        "S3": 20.655,
+        "S3e": 8.628
+      },
+      "speedupOps": {
+        "S2": 7.622,
+        "S3": 64.492
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-02",
+      "to": "2022-03",
+      "unit": "validation/14-Language Extensions",
+      "nodes": 34,
+      "edges": 14,
+      "events": 31,
+      "changeRatio": 0.6458,
+      "scopeShareS3": 0.7143,
+      "batchViolationsAfter": 92,
+      "stepMs": {
+        "batch": 0.085,
+        "S2": 0.1389,
+        "S3": 0.1259,
+        "S3e": 0.1609
+      },
+      "speedupTime": {
+        "S2": 0.612,
+        "S3": 0.675,
+        "S3e": 0.528
+      },
+      "speedupOps": {
+        "S2": 2.185,
+        "S3": 1.916
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-03",
+      "to": "2022-04",
+      "unit": "examples/Arrowhead Framework Example",
+      "nodes": 77,
+      "edges": 49,
+      "events": 114,
+      "changeRatio": 0.9048,
+      "scopeShareS3": 1.4821,
+      "batchViolationsAfter": 136,
+      "stepMs": {
+        "batch": 0.1714,
+        "S2": 0.3677,
+        "S3": 0.4488,
+        "S3e": 0.3966
+      },
+      "speedupTime": {
+        "S2": 0.466,
+        "S3": 0.382,
+        "S3e": 0.432
+      },
+      "speedupOps": {
+        "S2": 1.375,
+        "S3": 0.98
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-03",
+      "to": "2022-04",
+      "unit": "examples/Geometry Examples",
+      "nodes": 4,
+      "edges": 0,
+      "events": 23,
+      "changeRatio": 5.75,
+      "scopeShareS3": 0.8824,
+      "batchViolationsAfter": 39,
+      "stepMs": {
+        "batch": 0.0474,
+        "S2": 0.0792,
+        "S3": 0.0716,
+        "S3e": 0.0754
+      },
+      "speedupTime": {
+        "S2": 0.598,
+        "S3": 0.662,
+        "S3e": 0.629
+      },
+      "speedupOps": {
+        "S2": 1.108,
+        "S3": 0.98
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-04",
+      "to": "2022-05",
+      "unit": "examples/Simple Tests",
+      "nodes": 213,
+      "edges": 93,
+      "events": 4,
+      "changeRatio": 0.0131,
+      "scopeShareS3": 0.0233,
+      "batchViolationsAfter": 564,
+      "stepMs": {
+        "batch": 0.6093,
+        "S2": 0.2373,
+        "S3": 0.0812,
+        "S3e": 0.2395
+      },
+      "speedupTime": {
+        "S2": 2.568,
+        "S3": 7.504,
+        "S3e": 2.544
+      },
+      "speedupOps": {
+        "S2": 6.3,
+        "S3": 46.028
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-04",
+      "to": "2022-05",
+      "unit": "examples/Vehicle Example",
+      "nodes": 942,
+      "edges": 722,
+      "events": 68,
+      "changeRatio": 0.0409,
+      "scopeShareS3": 0.1158,
+      "batchViolationsAfter": 2231,
+      "stepMs": {
+        "batch": 6.8584,
+        "S2": 2.0035,
+        "S3": 1.0822,
+        "S3e": 1.5857
+      },
+      "speedupTime": {
+        "S2": 3.423,
+        "S3": 6.337,
+        "S3e": 4.325
+      },
+      "speedupOps": {
+        "S2": 3.799,
+        "S3": 6.368
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-05",
+      "to": "2022-06",
+      "unit": "examples/Requirements Examples",
+      "nodes": 14,
+      "edges": 9,
+      "events": 19,
+      "changeRatio": 0.8261,
+      "scopeShareS3": 0.44,
+      "batchViolationsAfter": 80,
+      "stepMs": {
+        "batch": 0.0715,
+        "S2": 0.0868,
+        "S3": 0.06,
+        "S3e": 0.0774
+      },
+      "speedupTime": {
+        "S2": 0.824,
+        "S3": 1.192,
+        "S3e": 0.924
+      },
+      "speedupOps": {
+        "S2": 1.966,
+        "S3": 2.14
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "unit": "examples/Analysis Examples",
+      "nodes": 59,
+      "edges": 26,
+      "events": 1,
+      "changeRatio": 0.0118,
+      "scopeShareS3": 0.0508,
+      "batchViolationsAfter": 158,
+      "stepMs": {
+        "batch": 0.1547,
+        "S2": 0.0695,
+        "S3": 0.0369,
+        "S3e": 0.0788
+      },
+      "speedupTime": {
+        "S2": 2.226,
+        "S3": 4.192,
+        "S3e": 1.963
+      },
+      "speedupOps": {
+        "S2": 4.916,
+        "S3": 27.2
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "unit": "examples/Arrowhead Framework Example",
+      "nodes": 56,
+      "edges": 23,
+      "events": 2,
+      "changeRatio": 0.0253,
+      "scopeShareS3": 0.0357,
+      "batchViolationsAfter": 136,
+      "stepMs": {
+        "batch": 0.1233,
+        "S2": 0.052,
+        "S3": 0.0201,
+        "S3e": 0.0492
+      },
+      "speedupTime": {
+        "S2": 2.371,
+        "S3": 6.134,
+        "S3e": 2.506
+      },
+      "speedupOps": {
+        "S2": 6.593,
+        "S3": 55.571
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "unit": "examples/Cause and Effect Examples",
+      "nodes": 13,
+      "edges": 0,
+      "events": 3,
+      "changeRatio": 0.2308,
+      "scopeShareS3": 0.1333,
+      "batchViolationsAfter": 43,
+      "stepMs": {
+        "batch": 0.0358,
+        "S2": 0.0231,
+        "S3": 0.0156,
+        "S3e": 0.0216
+      },
+      "speedupTime": {
+        "S2": 1.55,
+        "S3": 2.295,
+        "S3e": 1.657
+      },
+      "speedupOps": {
+        "S2": 3.767,
+        "S3": 5.65
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "unit": "examples/Flashlight Example",
+      "nodes": 14,
+      "edges": 11,
+      "events": 2,
+      "changeRatio": 0.08,
+      "scopeShareS3": 0.5714,
+      "batchViolationsAfter": 23,
+      "stepMs": {
+        "batch": 0.0361,
+        "S2": 0.038,
+        "S3": 0.0309,
+        "S3e": 0.0355
+      },
+      "speedupTime": {
+        "S2": 0.95,
+        "S3": 1.168,
+        "S3e": 1.017
+      },
+      "speedupOps": {
+        "S2": 1.413,
+        "S3": 1.738
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "unit": "examples/Individuals Examples",
+      "nodes": 15,
+      "edges": 4,
+      "events": 1,
+      "changeRatio": 0.0526,
+      "scopeShareS3": 0.2,
+      "batchViolationsAfter": 41,
+      "stepMs": {
+        "batch": 0.0377,
+        "S2": 0.0294,
+        "S3": 0.0225,
+        "S3e": 0.0321
+      },
+      "speedupTime": {
+        "S2": 1.282,
+        "S3": 1.676,
+        "S3e": 1.174
+      },
+      "speedupOps": {
+        "S2": 3.267,
+        "S3": 6.533
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "unit": "examples/Requirements Examples",
+      "nodes": 25,
+      "edges": 17,
+      "events": 9,
+      "changeRatio": 0.2143,
+      "scopeShareS3": 0.2188,
+      "batchViolationsAfter": 102,
+      "stepMs": {
+        "batch": 0.0954,
+        "S2": 0.0602,
+        "S3": 0.0411,
+        "S3e": 0.0522
+      },
+      "speedupTime": {
+        "S2": 1.585,
+        "S3": 2.321,
+        "S3e": 1.828
+      },
+      "speedupOps": {
+        "S2": 3.299,
+        "S3": 4.972
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "unit": "examples/Simple Tests",
+      "nodes": 215,
+      "edges": 95,
+      "events": 3,
+      "changeRatio": 0.0097,
+      "scopeShareS3": 0.014,
+      "batchViolationsAfter": 561,
+      "stepMs": {
+        "batch": 0.5459,
+        "S2": 0.2037,
+        "S3": 0.0564,
+        "S3e": 0.1663
+      },
+      "speedupTime": {
+        "S2": 2.68,
+        "S3": 9.679,
+        "S3e": 3.283
+      },
+      "speedupOps": {
+        "S2": 6.933,
+        "S3": 127.462
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "unit": "examples/Vehicle Example",
+      "nodes": 976,
+      "edges": 730,
+      "events": 22,
+      "changeRatio": 0.0129,
+      "scopeShareS3": 0.0246,
+      "batchViolationsAfter": 2231,
+      "stepMs": {
+        "batch": 6.8092,
+        "S2": 1.3253,
+        "S3": 0.4114,
+        "S3e": 0.9065
+      },
+      "speedupTime": {
+        "S2": 5.138,
+        "S3": 16.551,
+        "S3e": 7.512
+      },
+      "speedupOps": {
+        "S2": 7.505,
+        "S3": 56.808
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "unit": "training/24. Transitions",
+      "nodes": 15,
+      "edges": 6,
+      "events": 13,
+      "changeRatio": 0.619,
+      "scopeShareS3": 0.3182,
+      "batchViolationsAfter": 60,
+      "stepMs": {
+        "batch": 0.0592,
+        "S2": 0.0543,
+        "S3": 0.045,
+        "S3e": 0.0598
+      },
+      "speedupTime": {
+        "S2": 1.09,
+        "S3": 1.316,
+        "S3e": 0.99
+      },
+      "speedupOps": {
+        "S2": 2.197,
+        "S3": 2.266
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-06",
+      "to": "2022-07",
+      "unit": "validation/03-Function-based Behavior",
+      "nodes": 135,
+      "edges": 60,
+      "events": 38,
+      "changeRatio": 0.1949,
+      "scopeShareS3": 0.2342,
+      "batchViolationsAfter": 285,
+      "stepMs": {
+        "batch": 0.4458,
+        "S2": 0.176,
+        "S3": 0.1156,
+        "S3e": 0.2275
+      },
+      "speedupTime": {
+        "S2": 2.533,
+        "S3": 3.856,
+        "S3e": 1.96
+      },
+      "speedupOps": {
+        "S2": 6.851,
+        "S3": 11.657
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-07",
+      "to": "2022-08",
+      "unit": "examples/Cause and Effect Examples",
+      "nodes": 15,
+      "edges": 1,
+      "events": 6,
+      "changeRatio": 0.375,
+      "scopeShareS3": 0.2667,
+      "batchViolationsAfter": 45,
+      "stepMs": {
+        "batch": 0.0498,
+        "S2": 0.0453,
+        "S3": 0.061,
+        "S3e": 0.0447
+      },
+      "speedupTime": {
+        "S2": 1.099,
+        "S3": 0.816,
+        "S3e": 1.114
+      },
+      "speedupOps": {
+        "S2": 2.429,
+        "S3": 2.975
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-07",
+      "to": "2022-08",
+      "unit": "examples/Metadata Examples",
+      "nodes": 16,
+      "edges": 4,
+      "events": 3,
+      "changeRatio": 0.15,
+      "scopeShareS3": 0.1579,
+      "batchViolationsAfter": 50,
+      "stepMs": {
+        "batch": 0.0486,
+        "S2": 0.0376,
+        "S3": 0.0255,
+        "S3e": 0.0328
+      },
+      "speedupTime": {
+        "S2": 1.293,
+        "S3": 1.906,
+        "S3e": 1.482
+      },
+      "speedupOps": {
+        "S2": 3.091,
+        "S3": 4.533
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-07",
+      "to": "2022-08",
+      "unit": "examples/Requirements Examples",
+      "nodes": 32,
+      "edges": 19,
+      "events": 3,
+      "changeRatio": 0.0588,
+      "scopeShareS3": 0.1875,
+      "batchViolationsAfter": 102,
+      "stepMs": {
+        "batch": 0.0815,
+        "S2": 0.0539,
+        "S3": 0.0344,
+        "S3e": 0.043
+      },
+      "speedupTime": {
+        "S2": 1.512,
+        "S3": 2.369,
+        "S3e": 1.895
+      },
+      "speedupOps": {
+        "S2": 3.045,
+        "S3": 5.78
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-07",
+      "to": "2022-08",
+      "unit": "examples/Simple Tests",
+      "nodes": 214,
+      "edges": 95,
+      "events": 5,
+      "changeRatio": 0.0162,
+      "scopeShareS3": 0.0415,
+      "batchViolationsAfter": 570,
+      "stepMs": {
+        "batch": 0.5639,
+        "S2": 0.2594,
+        "S3": 0.1107,
+        "S3e": 0.2275
+      },
+      "speedupTime": {
+        "S2": 2.174,
+        "S3": 5.094,
+        "S3e": 2.479
+      },
+      "speedupOps": {
+        "S2": 5.749,
+        "S3": 26.141
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-07",
+      "to": "2022-08",
+      "unit": "examples/Vehicle Example",
+      "nodes": 976,
+      "edges": 730,
+      "events": 2338,
+      "changeRatio": 1.3705,
+      "scopeShareS3": 2.9123,
+      "batchViolationsAfter": 1056,
+      "stepMs": {
+        "batch": 2.2776,
+        "S2": 6.8431,
+        "S3": 6.1036,
+        "S3e": 6.2752
+      },
+      "speedupTime": {
+        "S2": 0.333,
+        "S3": 0.373,
+        "S3e": 0.363
+      },
+      "speedupOps": {
+        "S2": 1.097,
+        "S3": 0.583
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-07",
+      "to": "2022-08",
+      "unit": "training/09. Connections",
+      "nodes": 21,
+      "edges": 10,
+      "events": 2,
+      "changeRatio": 0.0645,
+      "scopeShareS3": 0.381,
+      "batchViolationsAfter": 56,
+      "stepMs": {
+        "batch": 0.0504,
+        "S2": 0.0556,
+        "S3": 0.0408,
+        "S3e": 0.0473
+      },
+      "speedupTime": {
+        "S2": 0.906,
+        "S3": 1.235,
+        "S3e": 1.066
+      },
+      "speedupOps": {
+        "S2": 2.069,
+        "S3": 2.647
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-07",
+      "to": "2022-08",
+      "unit": "training/13. Flow Connections",
+      "nodes": 10,
+      "edges": 4,
+      "events": 33,
+      "changeRatio": 2.3571,
+      "scopeShareS3": 1.7692,
+      "batchViolationsAfter": 28,
+      "stepMs": {
+        "batch": 0.0419,
+        "S2": 0.089,
+        "S3": 0.0841,
+        "S3e": 0.0861
+      },
+      "speedupTime": {
+        "S2": 0.471,
+        "S3": 0.498,
+        "S3e": 0.487
+      },
+      "speedupOps": {
+        "S2": 1,
+        "S3": 0.709
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-07",
+      "to": "2022-08",
+      "unit": "training/26. Occurrences",
+      "nodes": 51,
+      "edges": 27,
+      "events": 14,
+      "changeRatio": 0.1795,
+      "scopeShareS3": 0.2727,
+      "batchViolationsAfter": 109,
+      "stepMs": {
+        "batch": 0.2281,
+        "S2": 0.124,
+        "S3": 0.1607,
+        "S3e": 0.117
+      },
+      "speedupTime": {
+        "S2": 1.84,
+        "S3": 1.419,
+        "S3e": 1.95
+      },
+      "speedupOps": {
+        "S2": 3.028,
+        "S3": 4.065
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-07",
+      "to": "2022-08",
+      "unit": "validation/12-Dependency Relationships",
+      "nodes": 17,
+      "edges": 8,
+      "events": 1,
+      "changeRatio": 0.04,
+      "scopeShareS3": 0.2353,
+      "batchViolationsAfter": 44,
+      "stepMs": {
+        "batch": 0.0441,
+        "S2": 0.0392,
+        "S3": 0.0273,
+        "S3e": 0.0354
+      },
+      "speedupTime": {
+        "S2": 1.125,
+        "S3": 1.615,
+        "S3e": 1.246
+      },
+      "speedupOps": {
+        "S2": 2.566,
+        "S3": 3.886
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-08",
+      "to": "2022-09",
+      "unit": "examples/Arrowhead Framework Example",
+      "nodes": 56,
+      "edges": 23,
+      "events": 5,
+      "changeRatio": 0.0633,
+      "scopeShareS3": 0.0727,
+      "batchViolationsAfter": 133,
+      "stepMs": {
+        "batch": 0.1257,
+        "S2": 0.0937,
+        "S3": 0.0291,
+        "S3e": 0.0534
+      },
+      "speedupTime": {
+        "S2": 1.342,
+        "S3": 4.32,
+        "S3e": 2.354
+      },
+      "speedupOps": {
+        "S2": 5.716,
+        "S3": 19.15
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-08",
+      "to": "2022-09",
+      "unit": "examples/Interaction Sequencing Examples",
+      "nodes": 43,
+      "edges": 19,
+      "events": 62,
+      "changeRatio": 1,
+      "scopeShareS3": 0.5,
+      "batchViolationsAfter": 178,
+      "stepMs": {
+        "batch": 0.2183,
+        "S2": 0.2516,
+        "S3": 0.2002,
+        "S3e": 0.2454
+      },
+      "speedupTime": {
+        "S2": 0.868,
+        "S3": 1.09,
+        "S3e": 0.89
+      },
+      "speedupOps": {
+        "S2": 1.746,
+        "S3": 1.653
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-09",
+      "to": "2022-10",
+      "unit": "training/26. Occurrences",
+      "nodes": 55,
+      "edges": 37,
+      "events": 4,
+      "changeRatio": 0.0435,
+      "scopeShareS3": 0.0517,
+      "batchViolationsAfter": 116,
+      "stepMs": {
+        "batch": 0.1282,
+        "S2": 0.0581,
+        "S3": 0.0251,
+        "S3e": 0.0436
+      },
+      "speedupTime": {
+        "S2": 2.207,
+        "S3": 5.108,
+        "S3e": 2.94
+      },
+      "speedupOps": {
+        "S2": 5.8,
+        "S3": 16
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-11",
+      "to": "2022-12",
+      "unit": "examples/Simple Tests",
+      "nodes": 217,
+      "edges": 97,
+      "events": 4,
+      "changeRatio": 0.0127,
+      "scopeShareS3": 0.032,
+      "batchViolationsAfter": 574,
+      "stepMs": {
+        "batch": 0.5824,
+        "S2": 0.2467,
+        "S3": 0.0924,
+        "S3e": 0.2243
+      },
+      "speedupTime": {
+        "S2": 2.361,
+        "S3": 6.303,
+        "S3e": 2.597
+      },
+      "speedupOps": {
+        "S2": 5.975,
+        "S3": 32.519
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-11",
+      "to": "2022-12",
+      "unit": "examples/Vehicle Example",
+      "nodes": 456,
+      "edges": 354,
+      "events": 423,
+      "changeRatio": 0.5222,
+      "scopeShareS3": 0.5029,
+      "batchViolationsAfter": 1579,
+      "stepMs": {
+        "batch": 3.1286,
+        "S2": 2.9766,
+        "S3": 2.6273,
+        "S3e": 2.6839
+      },
+      "speedupTime": {
+        "S2": 1.051,
+        "S3": 1.191,
+        "S3e": 1.166
+      },
+      "speedupOps": {
+        "S2": 1.613,
+        "S3": 1.633
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-12",
+      "to": "2023-02",
+      "unit": "examples/Geometry Examples",
+      "nodes": 17,
+      "edges": 8,
+      "events": 49,
+      "changeRatio": 1.96,
+      "scopeShareS3": 0.8205,
+      "batchViolationsAfter": 84,
+      "stepMs": {
+        "batch": 0.1664,
+        "S2": 0.2683,
+        "S3": 0.1429,
+        "S3e": 0.1494
+      },
+      "speedupTime": {
+        "S2": 0.62,
+        "S3": 1.164,
+        "S3e": 1.114
+      },
+      "speedupOps": {
+        "S2": 1.174,
+        "S3": 1.091
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-12",
+      "to": "2023-02",
+      "unit": "examples/Vehicle Example",
+      "nodes": 692,
+      "edges": 515,
+      "events": 439,
+      "changeRatio": 0.3637,
+      "scopeShareS3": 0.7759,
+      "batchViolationsAfter": 1070,
+      "stepMs": {
+        "batch": 1.6047,
+        "S2": 2.1619,
+        "S3": 1.8582,
+        "S3e": 2.1869
+      },
+      "speedupTime": {
+        "S2": 0.742,
+        "S3": 0.864,
+        "S3e": 0.734
+      },
+      "speedupOps": {
+        "S2": 2.126,
+        "S3": 1.929
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2022-12",
+      "to": "2023-02",
+      "unit": "validation/03-Function-based Behavior",
+      "nodes": 111,
+      "edges": 48,
+      "events": 6,
+      "changeRatio": 0.0377,
+      "scopeShareS3": 0.0796,
+      "batchViolationsAfter": 292,
+      "stepMs": {
+        "batch": 0.2778,
+        "S2": 0.1707,
+        "S3": 0.0984,
+        "S3e": 0.2595
+      },
+      "speedupTime": {
+        "S2": 1.627,
+        "S3": 2.823,
+        "S3e": 1.071
+      },
+      "speedupOps": {
+        "S2": 4.54,
+        "S3": 11.254
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2023-02",
+      "to": "2023-07",
+      "unit": "examples/Arrowhead Framework Example",
+      "nodes": 55,
+      "edges": 23,
+      "events": 9,
+      "changeRatio": 0.1154,
+      "scopeShareS3": 0.1579,
+      "batchViolationsAfter": 136,
+      "stepMs": {
+        "batch": 0.1954,
+        "S2": 0.1006,
+        "S3": 0.0633,
+        "S3e": 0.0911
+      },
+      "speedupTime": {
+        "S2": 1.942,
+        "S3": 3.087,
+        "S3e": 2.145
+      },
+      "speedupOps": {
+        "S2": 3.03,
+        "S3": 4.596
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2023-02",
+      "to": "2023-07",
+      "unit": "examples/Simple Tests",
+      "nodes": 219,
+      "edges": 99,
+      "events": 6,
+      "changeRatio": 0.0189,
+      "scopeShareS3": 0.0359,
+      "batchViolationsAfter": 586,
+      "stepMs": {
+        "batch": 0.5876,
+        "S2": 0.2569,
+        "S3": 0.0816,
+        "S3e": 0.1923
+      },
+      "speedupTime": {
+        "S2": 2.287,
+        "S3": 7.201,
+        "S3e": 3.056
+      },
+      "speedupOps": {
+        "S2": 5.768,
+        "S3": 25.657
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2023-08",
+      "to": "2023-10",
+      "unit": "examples/Analysis Examples",
+      "nodes": 59,
+      "edges": 26,
+      "events": 4,
+      "changeRatio": 0.0471,
+      "scopeShareS3": 0.1228,
+      "batchViolationsAfter": 150,
+      "stepMs": {
+        "batch": 0.1446,
+        "S2": 0.1477,
+        "S3": 0.0894,
+        "S3e": 0.1357
+      },
+      "speedupTime": {
+        "S2": 0.979,
+        "S3": 1.617,
+        "S3e": 1.066
+      },
+      "speedupOps": {
+        "S2": 3.615,
+        "S3": 8.174
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2023-08",
+      "to": "2023-10",
+      "unit": "examples/Simple Tests",
+      "nodes": 223,
+      "edges": 97,
+      "events": 2,
+      "changeRatio": 0.0063,
+      "scopeShareS3": 0.0315,
+      "batchViolationsAfter": 583,
+      "stepMs": {
+        "batch": 0.6069,
+        "S2": 0.2469,
+        "S3": 0.0885,
+        "S3e": 0.1996
+      },
+      "speedupTime": {
+        "S2": 2.458,
+        "S3": 6.858,
+        "S3e": 3.041
+      },
+      "speedupOps": {
+        "S2": 5.712,
+        "S3": 27.548
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2023-08",
+      "to": "2023-10",
+      "unit": "training/33. Verification",
+      "nodes": 18,
+      "edges": 5,
+      "events": 2,
+      "changeRatio": 0.087,
+      "scopeShareS3": 0.125,
+      "batchViolationsAfter": 42,
+      "stepMs": {
+        "batch": 0.0388,
+        "S2": 0.0198,
+        "S3": 0.0118,
+        "S3e": 0.0287
+      },
+      "speedupTime": {
+        "S2": 1.96,
+        "S3": 3.288,
+        "S3e": 1.352
+      },
+      "speedupOps": {
+        "S2": 7,
+        "S3": 29.75
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2023-08",
+      "to": "2023-10",
+      "unit": "validation/09-Verification",
+      "nodes": 20,
+      "edges": 7,
+      "events": 1,
+      "changeRatio": 0.037,
+      "scopeShareS3": 0.0526,
+      "batchViolationsAfter": 48,
+      "stepMs": {
+        "batch": 0.0457,
+        "S2": 0.0218,
+        "S3": 0.0108,
+        "S3e": 0.0178
+      },
+      "speedupTime": {
+        "S2": 2.096,
+        "S3": 4.231,
+        "S3e": 2.567
+      },
+      "speedupOps": {
+        "S2": 7.095,
+        "S3": 74.5
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2023-10",
+      "to": "2023-11",
+      "unit": "examples/Simple Tests",
+      "nodes": 222,
+      "edges": 96,
+      "events": 6,
+      "changeRatio": 0.0189,
+      "scopeShareS3": 0.0711,
+      "batchViolationsAfter": 588,
+      "stepMs": {
+        "batch": 0.8942,
+        "S2": 0.3012,
+        "S3": 0.1615,
+        "S3e": 0.2603
+      },
+      "speedupTime": {
+        "S2": 2.969,
+        "S3": 5.537,
+        "S3e": 3.435
+      },
+      "speedupOps": {
+        "S2": 4.73,
+        "S3": 13.053
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2023-10",
+      "to": "2023-11",
+      "unit": "training/32. Analysis",
+      "nodes": 23,
+      "edges": 12,
+      "events": 1,
+      "changeRatio": 0.0286,
+      "scopeShareS3": 0.1304,
+      "batchViolationsAfter": 65,
+      "stepMs": {
+        "batch": 0.1021,
+        "S2": 0.0384,
+        "S3": 0.027,
+        "S3e": 0.0435
+      },
+      "speedupTime": {
+        "S2": 2.659,
+        "S3": 3.781,
+        "S3e": 2.347
+      },
+      "speedupOps": {
+        "S2": 3.85,
+        "S3": 10.267
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2023-10",
+      "to": "2023-11",
+      "unit": "validation/08-Requirements",
+      "nodes": 29,
+      "edges": 14,
+      "events": 2,
+      "changeRatio": 0.0465,
+      "scopeShareS3": 0.2333,
+      "batchViolationsAfter": 78,
+      "stepMs": {
+        "batch": 0.0723,
+        "S2": 0.0636,
+        "S3": 0.0443,
+        "S3e": 0.0585
+      },
+      "speedupTime": {
+        "S2": 1.137,
+        "S3": 1.632,
+        "S3e": 1.236
+      },
+      "speedupOps": {
+        "S2": 2.28,
+        "S3": 3.449
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2023-11",
+      "to": "2024-01",
+      "unit": "examples/Simple Tests",
+      "nodes": 225,
+      "edges": 99,
+      "events": 2,
+      "changeRatio": 0.0062,
+      "scopeShareS3": 0.0089,
+      "batchViolationsAfter": 588,
+      "stepMs": {
+        "batch": 0.6519,
+        "S2": 0.213,
+        "S3": 0.0582,
+        "S3e": 0.1679
+      },
+      "speedupTime": {
+        "S2": 3.061,
+        "S3": 11.201,
+        "S3e": 3.883
+      },
+      "speedupOps": {
+        "S2": 6.944,
+        "S3": 157.818
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2024-01",
+      "to": "2024-02",
+      "unit": "training/27. Individuals",
+      "nodes": 18,
+      "edges": 6,
+      "events": 6,
+      "changeRatio": 0.25,
+      "scopeShareS3": 0.2778,
+      "batchViolationsAfter": 40,
+      "stepMs": {
+        "batch": 0.0751,
+        "S2": 0.0325,
+        "S3": 0.0219,
+        "S3e": 0.0266
+      },
+      "speedupTime": {
+        "S2": 2.311,
+        "S3": 3.429,
+        "S3e": 2.823
+      },
+      "speedupOps": {
+        "S2": 3.707,
+        "S3": 4.606
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2024-09",
+      "to": "2024-11",
+      "unit": "examples/Simple Tests",
+      "nodes": 225,
+      "edges": 99,
+      "events": 16,
+      "changeRatio": 0.0494,
+      "scopeShareS3": 0.0556,
+      "batchViolationsAfter": 613,
+      "stepMs": {
+        "batch": 0.694,
+        "S2": 0.2799,
+        "S3": 0.1245,
+        "S3e": 0.2283
+      },
+      "speedupTime": {
+        "S2": 2.479,
+        "S3": 5.574,
+        "S3e": 3.04
+      },
+      "speedupOps": {
+        "S2": 5.586,
+        "S3": 19.074
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2024-12",
+      "to": "2025-02",
+      "unit": "examples/Simple Tests",
+      "nodes": 234,
+      "edges": 106,
+      "events": 13,
+      "changeRatio": 0.0382,
+      "scopeShareS3": 0.0658,
+      "batchViolationsAfter": 639,
+      "stepMs": {
+        "batch": 0.7506,
+        "S2": 0.3333,
+        "S3": 0.1441,
+        "S3e": 0.2641
+      },
+      "speedupTime": {
+        "S2": 2.252,
+        "S3": 5.209,
+        "S3e": 2.842
+      },
+      "speedupOps": {
+        "S2": 5.162,
+        "S3": 15.442
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2024-12",
+      "to": "2025-02",
+      "unit": "examples/Vehicle Example",
+      "nodes": 464,
+      "edges": 358,
+      "events": 27,
+      "changeRatio": 0.0328,
+      "scopeShareS3": 0.039,
+      "batchViolationsAfter": 1067,
+      "stepMs": {
+        "batch": 1.7063,
+        "S2": 0.6083,
+        "S3": 0.194,
+        "S3e": 0.4275
+      },
+      "speedupTime": {
+        "S2": 2.805,
+        "S3": 8.795,
+        "S3e": 3.991
+      },
+      "speedupOps": {
+        "S2": 7.489,
+        "S3": 39.462
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2024-12",
+      "to": "2025-02",
+      "unit": "training/13. Flow Connections",
+      "nodes": 13,
+      "edges": 6,
+      "events": 1,
+      "changeRatio": 0.0526,
+      "scopeShareS3": 0.0714,
+      "batchViolationsAfter": 31,
+      "stepMs": {
+        "batch": 0.0361,
+        "S2": 0.0208,
+        "S3": 0.0123,
+        "S3e": 0.0229
+      },
+      "speedupTime": {
+        "S2": 1.736,
+        "S3": 2.935,
+        "S3e": 1.576
+      },
+      "speedupOps": {
+        "S2": 6.412,
+        "S3": 21.8
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2025-04",
+      "to": "2025-06",
+      "unit": "examples/Simple Tests",
+      "nodes": 243,
+      "edges": 110,
+      "events": 4,
+      "changeRatio": 0.0113,
+      "scopeShareS3": 0.0327,
+      "batchViolationsAfter": 645,
+      "stepMs": {
+        "batch": 0.6445,
+        "S2": 0.2822,
+        "S3": 0.1112,
+        "S3e": 0.2637
+      },
+      "speedupTime": {
+        "S2": 2.284,
+        "S3": 5.796,
+        "S3e": 2.444
+      },
+      "speedupOps": {
+        "S2": 5.84,
+        "S3": 30.048
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2025-06",
+      "to": "2025-07",
+      "unit": "examples/Geometry Examples",
+      "nodes": 39,
+      "edges": 25,
+      "events": 6,
+      "changeRatio": 0.0938,
+      "scopeShareS3": 0.1667,
+      "batchViolationsAfter": 90,
+      "stepMs": {
+        "batch": 0.0946,
+        "S2": 0.1154,
+        "S3": 0.062,
+        "S3e": 0.0458
+      },
+      "speedupTime": {
+        "S2": 0.82,
+        "S3": 1.526,
+        "S3e": 2.066
+      },
+      "speedupOps": {
+        "S2": 3.792,
+        "S3": 5.778
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2025-06",
+      "to": "2025-07",
+      "unit": "examples/Simple Tests",
+      "nodes": 245,
+      "edges": 112,
+      "events": 3,
+      "changeRatio": 0.0084,
+      "scopeShareS3": 0.0121,
+      "batchViolationsAfter": 653,
+      "stepMs": {
+        "batch": 0.7231,
+        "S2": 0.2614,
+        "S3": 0.1172,
+        "S3e": 0.1965
+      },
+      "speedupTime": {
+        "S2": 2.766,
+        "S3": 6.17,
+        "S3e": 3.68
+      },
+      "speedupOps": {
+        "S2": 6.614,
+        "S3": 75.4
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2025-06",
+      "to": "2025-07",
+      "unit": "validation/11-View and Viewpoint",
+      "nodes": 34,
+      "edges": 55,
+      "events": 29,
+      "changeRatio": 0.3258,
+      "scopeShareS3": 0.5294,
+      "batchViolationsAfter": 86,
+      "stepMs": {
+        "batch": 0.1163,
+        "S2": 0.1854,
+        "S3": 0.2472,
+        "S3e": 0.1545
+      },
+      "speedupTime": {
+        "S2": 0.627,
+        "S3": 0.47,
+        "S3e": 0.753
+      },
+      "speedupOps": {
+        "S2": 1.503,
+        "S3": 1.531
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2025-07",
+      "to": "2025-09",
+      "unit": "examples/Simple Tests",
+      "nodes": 248,
+      "edges": 112,
+      "events": 20,
+      "changeRatio": 0.0556,
+      "scopeShareS3": 0.0534,
+      "batchViolationsAfter": 686,
+      "stepMs": {
+        "batch": 0.7395,
+        "S2": 0.3479,
+        "S3": 0.1492,
+        "S3e": 0.2896
+      },
+      "speedupTime": {
+        "S2": 2.126,
+        "S3": 4.956,
+        "S3e": 2.554
+      },
+      "speedupOps": {
+        "S2": 5.423,
+        "S3": 16.542
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2026-01",
+      "to": "2026-02",
+      "unit": "examples/Simple Tests",
+      "nodes": 262,
+      "edges": 118,
+      "events": 6,
+      "changeRatio": 0.0158,
+      "scopeShareS3": 0.0379,
+      "batchViolationsAfter": 690,
+      "stepMs": {
+        "batch": 0.7818,
+        "S2": 0.3168,
+        "S3": 0.1243,
+        "S3e": 0.2598
+      },
+      "speedupTime": {
+        "S2": 2.468,
+        "S3": 6.29,
+        "S3e": 3.009
+      },
+      "speedupOps": {
+        "S2": 5.658,
+        "S3": 24.427
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2026-05",
+      "to": "2026-07",
+      "unit": "examples/Simple Tests",
+      "nodes": 264,
+      "edges": 120,
+      "events": 17,
+      "changeRatio": 0.0443,
+      "scopeShareS3": 0.0435,
+      "batchViolationsAfter": 715,
+      "stepMs": {
+        "batch": 1.0279,
+        "S2": 0.376,
+        "S3": 0.1333,
+        "S3e": 0.2597
+      },
+      "speedupTime": {
+        "S2": 2.734,
+        "S3": 7.711,
+        "S3e": 3.958
+      },
+      "speedupOps": {
+        "S2": 5.715,
+        "S3": 20.86
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    },
+    {
+      "from": "2026-07",
+      "to": "2026-08",
+      "unit": "examples/Simple Tests",
+      "nodes": 276,
+      "edges": 125,
+      "events": 4,
+      "changeRatio": 0.01,
+      "scopeShareS3": 0.0396,
+      "batchViolationsAfter": 719,
+      "stepMs": {
+        "batch": 0.8403,
+        "S2": 0.3553,
+        "S3": 0.1276,
+        "S3e": 0.3644
+      },
+      "speedupTime": {
+        "S2": 2.365,
+        "S3": 6.585,
+        "S3e": 2.306
+      },
+      "speedupOps": {
+        "S2": 5.653,
+        "S3": 26.288
+      },
+      "mismatchVsBatch": {
+        "S1": 0,
+        "S2": 0,
+        "S3": 0,
+        "S3t": 0,
+        "S3e": 0
+      }
+    }
+  ]
+}

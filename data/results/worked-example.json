@@ -1,0 +1,187 @@
+{
+  "catalog": "aerospace",
+  "stages": [
+    {
+      "stage": 1,
+      "name": "NormalizeToTypedGraph",
+      "input": "SysML v2-like JSON (8 elements, 9 relations)",
+      "output": "typed attributed graph G with |V|=8, |E|=9",
+      "detail": {
+        "nodeTypes": [
+          "Component",
+          "Function",
+          "Port",
+          "Requirement",
+          "VerificationCase",
+          "View"
+        ],
+        "edgeTypes": [
+          "allocate",
+          "connect",
+          "contain",
+          "dependOn",
+          "expose",
+          "satisfy",
+          "subject",
+          "verify"
+        ],
+        "averageDegree": 2.25
+      }
+    },
+    {
+      "stage": 2,
+      "name": "DeriveRules",
+      "input": "catalog aerospace",
+      "output": "rule set R_C with |R|=41 (local 39, global 2)",
+      "detail": {
+        "byKind": {
+          "relationType": 8,
+          "requiredAttr": 12,
+          "attrDomain": 7,
+          "multiplicity": 5,
+          "isolated": 6,
+          "viewConsistency": 1,
+          "acyclic": 1,
+          "tracePolicy": 1
+        },
+        "maxLocalRadius": 2,
+        "globalRuleIds": [
+          "ACYC:dependOn",
+          "TRACE:FUN2REQ"
+        ],
+        "sampleLocalRuleIds": [
+          "TYPE:satisfy",
+          "TYPE:verify",
+          "TYPE:allocate",
+          "TYPE:connect"
+        ]
+      }
+    },
+    {
+      "stage": 3,
+      "name": "Validate (full mode)",
+      "input": "G, C, R",
+      "output": "Omega = 0 violations; reference agreement = true",
+      "detail": {
+        "violations": [],
+        "referenceViolations": 0
+      }
+    },
+    {
+      "stage": 4,
+      "name": "Defect exposure",
+      "input": "three single-element edits on the clean model",
+      "output": "1 violation(s), 1 violation(s), 1 violation(s)",
+      "detail": {
+        "defects": [
+          {
+            "defect": "wrong relation type (local, radius 1)",
+            "edit": "retarget e4: allocate F1 -> C1 becomes F1 -> R1",
+            "reported": [
+              "TYPE:allocate"
+            ]
+          },
+          {
+            "defect": "attribute domain (local, radius 0)",
+            "edit": "set C2.criticality = \"X\"",
+            "reported": [
+              "DOM:Component.criticality"
+            ]
+          },
+          {
+            "defect": "dependency cycle (global)",
+            "edit": "add e10: dependOn C2 -> C1",
+            "reported": [
+              "ACYC:dependOn"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stage": 5,
+      "name": "Incremental revalidation",
+      "input": "delta = delete e5 (satisfy C1 -> R1)",
+      "output": "scope |N_k(delta)|=8 of 8 nodes; 2 violation(s); batch agreement = true",
+      "detail": {
+        "k": 2,
+        "scopePreviewSize": 8,
+        "witnessWork": 4,
+        "violations": [
+          {
+            "ruleId": "MULT:Requirement|satisfy|in",
+            "kind": "multiplicity",
+            "witness": "R1",
+            "message": "in degree of satisfy is 0, expected [1, inf]"
+          },
+          {
+            "ruleId": "TRACE:FUN2REQ",
+            "kind": "tracePolicy",
+            "witness": "F1",
+            "message": "no allocate|satisfy path from F1 to any Requirement"
+          }
+        ]
+      }
+    }
+  ],
+  "cleanViolations": 0,
+  "defectViolations": [
+    {
+      "defect": "wrong relation type (local, radius 1)",
+      "edit": "retarget e4: allocate F1 -> C1 becomes F1 -> R1",
+      "rows": [
+        {
+          "ruleId": "TYPE:allocate",
+          "kind": "relationType",
+          "witness": "e4",
+          "message": "relation e4:allocate connects Function -> Requirement"
+        }
+      ]
+    },
+    {
+      "defect": "attribute domain (local, radius 0)",
+      "edit": "set C2.criticality = \"X\"",
+      "rows": [
+        {
+          "ruleId": "DOM:Component.criticality",
+          "kind": "attrDomain",
+          "witness": "C2",
+          "message": "attribute criticality=X outside domain"
+        }
+      ]
+    },
+    {
+      "defect": "dependency cycle (global)",
+      "edit": "add e10: dependOn C2 -> C1",
+      "rows": [
+        {
+          "ruleId": "ACYC:dependOn",
+          "kind": "acyclic",
+          "witness": "C1,C2",
+          "message": "cyclic dependOn dependency over {C1, C2}"
+        }
+      ]
+    }
+  ],
+  "incremental": {
+    "change": "delete e5 (satisfy C1 -> R1)",
+    "scopeSize": 8,
+    "graphSize": 8,
+    "radius": 2,
+    "violationsAfter": [
+      {
+        "ruleId": "MULT:Requirement|satisfy|in",
+        "kind": "multiplicity",
+        "witness": "R1",
+        "message": "in degree of satisfy is 0, expected [1, inf]"
+      },
+      {
+        "ruleId": "TRACE:FUN2REQ",
+        "kind": "tracePolicy",
+        "witness": "F1",
+        "message": "no allocate|satisfy path from F1 to any Requirement"
+      }
+    ],
+    "matchesBatch": true
+  }
+}

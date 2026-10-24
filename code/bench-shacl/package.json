@@ -1,0 +1,14 @@
+{
+  "name": "bench-shacl",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Same-runtime (Node.js/V8) and JVM SHACL baselines for the validator benchmark",
+  "type": "module",
+  "dependencies": {
+    "@zazuko/env": "3.0.2",
+    "n3": "2.13.12",
+    "rdf-ext": "2.6.0",
+    "rdf-validate-shacl": "0.6.5",
+    "shacl-engine": "1.1.3"
+  }
+}

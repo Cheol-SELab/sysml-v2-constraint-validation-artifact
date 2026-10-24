@@ -1,0 +1,369 @@
+{
+  "experiment": "shacl-timing",
+  "catalog": "aerospace",
+  "method": "Same generated clean models (aerospace, generator seeds 1000-1002). Engine: median of 5 runs after 1 warm-up (util/timing.timeMedian), normalisation timed separately. pySHACL 0.40.1 / rdflib 7.6.0 (Python 3.11): median of 3 validate() calls (1 call for n >= 5000), no warm-up; JSON->RDF conversion and report parsing timed separately. Both are full (non-incremental) validation; SHACL has no incremental mode.",
+  "machine": "same Windows host as the other experiments; single process each",
+  "rows": [
+    {
+      "n": 100,
+      "seed": "1000",
+      "nodes": 100,
+      "edges": 147,
+      "triples": 1135,
+      "engineNormalizeMs": 0.1426,
+      "engineValidateMs": 1.0083,
+      "shaclRdfConversionMs": 18.873600125312805,
+      "shaclValidateMs": 801.9210000038147,
+      "shaclValidateSamplesMs": [
+        759.9818999767303,
+        801.9210000038147,
+        838.4270000457764
+      ],
+      "shaclReportParseMs": 0.02779996395111084,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 795.319845287925
+    },
+    {
+      "n": 100,
+      "seed": "1001",
+      "nodes": 100,
+      "edges": 150,
+      "triples": 1150,
+      "engineNormalizeMs": 0.0985,
+      "engineValidateMs": 0.99,
+      "shaclRdfConversionMs": 52.241299986839294,
+      "shaclValidateMs": 808.5844999551773,
+      "shaclValidateSamplesMs": [
+        783.2056000232697,
+        808.5844999551773,
+        818.0103999376297
+      ],
+      "shaclReportParseMs": 0.04140007495880127,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 816.7520201567447
+    },
+    {
+      "n": 100,
+      "seed": "1002",
+      "nodes": 100,
+      "edges": 146,
+      "triples": 1130,
+      "engineNormalizeMs": 0.1356,
+      "engineValidateMs": 1.1443,
+      "shaclRdfConversionMs": 23.51900005340576,
+      "shaclValidateMs": 848.1678999662399,
+      "shaclValidateSamplesMs": [
+        787.0493000745773,
+        848.1678999662399,
+        887.0746001005173
+      ],
+      "shaclReportParseMs": 0.052899956703186035,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 741.211133414524
+    },
+    {
+      "n": 500,
+      "seed": "1000",
+      "nodes": 500,
+      "edges": 759,
+      "triples": 5796,
+      "engineNormalizeMs": 1.2245,
+      "engineValidateMs": 2.6855,
+      "shaclRdfConversionMs": 161.48049998283386,
+      "shaclValidateMs": 4037.982299923897,
+      "shaclValidateSamplesMs": [
+        3998.126999974251,
+        4037.982299923897,
+        4148.010800004005
+      ],
+      "shaclReportParseMs": 0.03710007667541504,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1503.624017845428
+    },
+    {
+      "n": 500,
+      "seed": "1001",
+      "nodes": 500,
+      "edges": 729,
+      "triples": 5646,
+      "engineNormalizeMs": 0.3659,
+      "engineValidateMs": 2.8373,
+      "shaclRdfConversionMs": 189.18600010871887,
+      "shaclValidateMs": 3577.7542999982834,
+      "shaclValidateSamplesMs": [
+        3566.2229001522064,
+        3577.7542999982834,
+        3643.433599948883
+      ],
+      "shaclReportParseMs": 0.028399944305419922,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1260.9714517316756
+    },
+    {
+      "n": 500,
+      "seed": "1002",
+      "nodes": 500,
+      "edges": 747,
+      "triples": 5736,
+      "engineNormalizeMs": 0.5726,
+      "engineValidateMs": 2.5403,
+      "shaclRdfConversionMs": 239.81100010871887,
+      "shaclValidateMs": 3661.8426998853683,
+      "shaclValidateSamplesMs": [
+        3577.637099981308,
+        3661.8426998853683,
+        3685.300500035286
+      ],
+      "shaclReportParseMs": 0.03810000419616699,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1441.500098368448
+    },
+    {
+      "n": 1000,
+      "seed": "1000",
+      "nodes": 1000,
+      "edges": 1480,
+      "triples": 11403,
+      "engineNormalizeMs": 1.0791,
+      "engineValidateMs": 4.1841,
+      "shaclRdfConversionMs": 226.0651000738144,
+      "shaclValidateMs": 6775.498899936676,
+      "shaclValidateSamplesMs": [
+        6775.068400025368,
+        6775.498899936676,
+        6978.917499899864
+      ],
+      "shaclReportParseMs": 0.02369999885559082,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1619.3443990193055
+    },
+    {
+      "n": 1000,
+      "seed": "1001",
+      "nodes": 1000,
+      "edges": 1479,
+      "triples": 11398,
+      "engineNormalizeMs": 0.7035,
+      "engineValidateMs": 4.8969,
+      "shaclRdfConversionMs": 265.6863000392914,
+      "shaclValidateMs": 7343.12030005455,
+      "shaclValidateSamplesMs": [
+        6836.997600078583,
+        7343.12030005455,
+        7373.177399992943
+      ],
+      "shaclReportParseMs": 0.027300000190734863,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1499.5446711296026
+    },
+    {
+      "n": 1000,
+      "seed": "1002",
+      "nodes": 1000,
+      "edges": 1534,
+      "triples": 11673,
+      "engineNormalizeMs": 0.8423,
+      "engineValidateMs": 3.8127,
+      "shaclRdfConversionMs": 291.1535999774933,
+      "shaclValidateMs": 7050.451599955559,
+      "shaclValidateSamplesMs": [
+        7050.403300046921,
+        7050.451599955559,
+        7111.118399977684
+      ],
+      "shaclReportParseMs": 0.028400063514709473,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1849.201773010087
+    },
+    {
+      "n": 2000,
+      "seed": "1000",
+      "nodes": 2000,
+      "edges": 2976,
+      "triples": 22885,
+      "engineNormalizeMs": 5.547,
+      "engineValidateMs": 11.3821,
+      "shaclRdfConversionMs": 518.696799993515,
+      "shaclValidateMs": 14899.53049993515,
+      "shaclValidateSamplesMs": [
+        14578.53719997406,
+        14899.53049993515,
+        14974.431100010872
+      ],
+      "shaclReportParseMs": 0.028599977493286133,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1309.0317691757366
+    },
+    {
+      "n": 2000,
+      "seed": "1001",
+      "nodes": 2000,
+      "edges": 2984,
+      "triples": 22925,
+      "engineNormalizeMs": 2.388,
+      "engineValidateMs": 8.7986,
+      "shaclRdfConversionMs": 770.2425999641418,
+      "shaclValidateMs": 14948.705799937248,
+      "shaclValidateSamplesMs": [
+        14274.091400027275,
+        14948.705799937248,
+        14981.155899882317
+      ],
+      "shaclReportParseMs": 0.024299979209899902,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1698.986861539023
+    },
+    {
+      "n": 2000,
+      "seed": "1002",
+      "nodes": 2000,
+      "edges": 3012,
+      "triples": 23065,
+      "engineNormalizeMs": 2.5014,
+      "engineValidateMs": 12.031,
+      "shaclRdfConversionMs": 620.6294000148773,
+      "shaclValidateMs": 13934.103400111198,
+      "shaclValidateSamplesMs": [
+        13819.283100008965,
+        13934.103400111198,
+        14304.872199892998
+      ],
+      "shaclReportParseMs": 0.031999826431274414,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1158.1833097923031
+    },
+    {
+      "n": 5000,
+      "seed": "1000",
+      "nodes": 5000,
+      "edges": 7475,
+      "triples": 57387,
+      "engineNormalizeMs": 4.8302,
+      "engineValidateMs": 13.9286,
+      "shaclRdfConversionMs": 1214.5842999219894,
+      "shaclValidateMs": 33880.57109999657,
+      "shaclValidateSamplesMs": [
+        33880.57109999657
+      ],
+      "shaclReportParseMs": 0.02369999885559082,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 2432.44626882792
+    },
+    {
+      "n": 5000,
+      "seed": "1001",
+      "nodes": 5000,
+      "edges": 7454,
+      "triples": 57282,
+      "engineNormalizeMs": 5.0831,
+      "engineValidateMs": 14.2449,
+      "shaclRdfConversionMs": 1290.6445000171661,
+      "shaclValidateMs": 33940.6941999197,
+      "shaclValidateSamplesMs": [
+        33940.6941999197
+      ],
+      "shaclReportParseMs": 0.03690004348754883,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 2382.655841734214
+    },
+    {
+      "n": 5000,
+      "seed": "1002",
+      "nodes": 5000,
+      "edges": 7496,
+      "triples": 57492,
+      "engineNormalizeMs": 3.8504,
+      "engineValidateMs": 15.6987,
+      "shaclRdfConversionMs": 1407.304999947548,
+      "shaclValidateMs": 32633.830200076103,
+      "shaclValidateSamplesMs": [
+        32633.830200076103
+      ],
+      "shaclReportParseMs": 0.023199915885925293,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 2078.7600374601784
+    },
+    {
+      "n": 10000,
+      "seed": "1000",
+      "nodes": 10000,
+      "edges": 14992,
+      "triples": 114985,
+      "engineNormalizeMs": 9.9652,
+      "engineValidateMs": 36.1147,
+      "shaclRdfConversionMs": 2720.108799934387,
+      "shaclValidateMs": 65845.31560003757,
+      "shaclValidateSamplesMs": [
+        65845.31560003757
+      ],
+      "shaclReportParseMs": 0.031800031661987305,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1823.2275389256336
+    },
+    {
+      "n": 10000,
+      "seed": "1001",
+      "nodes": 10000,
+      "edges": 14960,
+      "triples": 114825,
+      "engineNormalizeMs": 8.1071,
+      "engineValidateMs": 37.9086,
+      "shaclRdfConversionMs": 2848.965299963951,
+      "shaclValidateMs": 65305.13349997997,
+      "shaclValidateSamplesMs": [
+        65305.13349997997
+      ],
+      "shaclReportParseMs": 0.02460002899169922,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1722.6996908347967
+    },
+    {
+      "n": 10000,
+      "seed": "1002",
+      "nodes": 10000,
+      "edges": 15045,
+      "triples": 115250,
+      "engineNormalizeMs": 9.5401,
+      "engineValidateMs": 34.3059,
+      "shaclRdfConversionMs": 2650.8344999551773,
+      "shaclValidateMs": 64131.02999997139,
+      "shaclValidateSamplesMs": [
+        64131.02999997139
+      ],
+      "shaclReportParseMs": 0.02720010280609131,
+      "engineViolations": 0,
+      "shaclViolations": 0,
+      "ratioValidate": 1869.3877729478424
+    }
+  ],
+  "codeIdentity": {
+    "src/validator/engine.ts": "2f82c6bb22ecbe3bd2fe556ab7f5422409febd37394eb15aeab5da832d2ceed4",
+    "src/catalog/rules.ts": "aa8a5187a59b3c5471c9d49171166a67d9d4ee1b7855f4c2480ddf421b5f8fd6",
+    "src/catalog/domains.ts": "d60c2c1164a0d22ffbfaac0702d1ff06ddc9a2b68acf3282915c4541eb64c545",
+    "src/reference/referenceSemantics.ts": "1f5fe5b605b38d08e6c751c234438fc7da5aa4fae195f1eace14002d9799a72f",
+    "src/model/graph.ts": "fe4c6ecd3c8317f943b8e16ca53f477aff64b5db2923f3b708077069d3de2100",
+    "src/injector/defectInjector.ts": "10e06f1943ac571e250676f122bb64b1a9c9bf86905193f0b3e2e5de25f7982d",
+    "src/generator/syntheticModelGenerator.ts": "c84354f2a23bddca56d6e6fe9b451dc8fe5e657b25869a92228e37c32384d356",
+    "oracle-py/oracle_spec.py": "8b2aa5941004865aaecacbc4d9aec069f502d738ee231241226f48f79bb176d6",
+    "oracle-py/rdf_export.py": "44a6aa25605f2551cc955a208e481379cd102c3b0d6872198216739c3150dca6",
+    "oracle-py/shapes.py": "987857e51000d0df61fe2d5e2dfb1623fa6bc7fb31ebff974435a224c7ae9195",
+    "oracle-py/run_oracle.py": "a40f82d9186074c6645cd2ae3a7ed0c8382719cc015aca8a52e457c1c2603069"
+  }
+}

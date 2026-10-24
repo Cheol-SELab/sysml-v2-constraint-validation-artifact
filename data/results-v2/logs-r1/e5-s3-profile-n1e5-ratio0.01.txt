@@ -1,0 +1,13 @@
+node --cpu-prof prof2.js (n=100000, ratio=0.01, 4 random change sets, strategy 3)
+self samples grouped by the direct callee of IncrementalSession.step
+IncrementalSession.step samples: 4776
+applyPrimitive 2522 (52.8%)
+evaluateLocalRule 1921 (40.2%)
+kHopNodes 260 (5.4%)
+step 37 (0.8%)
+putLocal 10 (0.2%)
+violations 9 (0.2%)
+changeSupportNodes 7 (0.1%)
+expand 6 (0.1%)
+invalidateFor 2 (0.0%)
+report 2 (0.0%)

@@ -1,0 +1,77 @@
+{
+  "experiment": "differential-e7",
+  "models": [
+    "omg-training-vehicle",
+    "vehicle-powertrain-case"
+  ],
+  "rows": [
+    {
+      "catalog": "aerospace",
+      "cases": 2,
+      "engineViolations": 28,
+      "oracleViolations": 28,
+      "agreeingCases": 2,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "referenceSkipped": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "MULT": 6,
+        "REQ": 22
+      },
+      "ruleCountMismatches": 0
+    },
+    {
+      "catalog": "automotive",
+      "cases": 2,
+      "engineViolations": 28,
+      "oracleViolations": 28,
+      "agreeingCases": 2,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "referenceSkipped": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "MULT": 6,
+        "REQ": 22
+      },
+      "ruleCountMismatches": 0
+    },
+    {
+      "catalog": "robotics",
+      "cases": 2,
+      "engineViolations": 40,
+      "oracleViolations": 40,
+      "agreeingCases": 2,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "referenceSkipped": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "MULT": 6,
+        "REQ": 34
+      },
+      "ruleCountMismatches": 0
+    }
+  ],
+  "mismatches": [],
+  "codeIdentity": {
+    "src/validator/engine.ts": "c6b09f34e5642e85428aa139223745dd0c3ff01abc0ee786857041b502c85303",
+    "src/catalog/rules.ts": "aa8a5187a59b3c5471c9d49171166a67d9d4ee1b7855f4c2480ddf421b5f8fd6",
+    "src/catalog/domains.ts": "d60c2c1164a0d22ffbfaac0702d1ff06ddc9a2b68acf3282915c4541eb64c545",
+    "src/reference/referenceSemantics.ts": "1f5fe5b605b38d08e6c751c234438fc7da5aa4fae195f1eace14002d9799a72f",
+    "src/model/graph.ts": "798fcb25b25a5a8611e1b16bedfdfffe4ebcd674ffe2dd71dbd8c3c847b460e1",
+    "src/injector/defectInjector.ts": "f65791c772c852fccc5d4fa1e278172f48d0a5a98a3842b9b22c7289fb18e735",
+    "src/generator/syntheticModelGenerator.ts": "a294ab144c822a102e5501d55266ad6e53a30782107c39810a639e6bd8098cb7",
+    "oracle-py/oracle_spec.py": "8b2aa5941004865aaecacbc4d9aec069f502d738ee231241226f48f79bb176d6",
+    "oracle-py/rdf_export.py": "44a6aa25605f2551cc955a208e481379cd102c3b0d6872198216739c3150dca6",
+    "oracle-py/shapes.py": "873e51e8e78296d1d0cd33b5902eac5604a586de1b49f8b8c09051f3de3a9675",
+    "oracle-py/run_oracle.py": "a40f82d9186074c6645cd2ae3a7ed0c8382719cc015aca8a52e457c1c2603069"
+  }
+}

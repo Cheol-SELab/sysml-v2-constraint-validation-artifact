@@ -1,0 +1,18 @@
+{
+ "models": 2900,
+ "batches": 23,
+ "violationsTotal": 37612,
+ "perClass": {
+  "TYPE": 12688,
+  "ATTR": 6818,
+  "MULT": 7460,
+  "ISO": 1784,
+  "TRACE": 1804,
+  "DOM": 5482,
+  "VIEW": 246,
+  "ACYC": 1330
+ },
+ "seconds": 1.41,
+ "python": "3.11.0",
+ "engine": "sqlite3 in-memory + WITH RECURSIVE"
+}

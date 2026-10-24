@@ -1,0 +1,2 @@
+shacl-*.json in n*-s*/ copied from results-v3/n2-shacl-bench (SHACL engine outputs not rerun); engine.json/model.json regenerated from the R8 snapshot
+rules.json copied from results-v3/n2-shacl-bench (shape-to-rule map of the SHACL translation used by those runs)

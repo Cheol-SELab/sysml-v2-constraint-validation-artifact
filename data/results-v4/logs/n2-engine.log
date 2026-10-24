@@ -1,0 +1,16 @@
+[2026-10-22 23:15:39] start n2-engine:  node --max-old-space-size=24000 dist-r8/cli-bench-shacl.js gen --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/n2-engine-rerun --sizes 1000,10000,100000 --reference-max 1000
+pin: could not set affinity/priority: The property 'ProcessorAffinity' cannot be found on this object. Verify that the property exists and can be set.
+pin: affinity=0x4 priority=AboveNormal pid=
+[2026-10-22 23:15:40] end n2-engine rc=0 elapsed=1s
+[2026-10-23 02:05:27] start n2-engine:  node --max-old-space-size=24000 dist-r8/cli-bench-shacl.js gen --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/n2-engine-rerun --sizes 1000,10000,100000 --reference-max 1000
+pin: affinity=0x4 priority=AboveNormal pid=71128
+n1000-s1000: V=1000 E=1479 viol=9 engine=5.15ms core=1.18ms step=0.216ms ref=747ms
+n1000-s1001: V=1000 E=1479 viol=18 engine=2.99ms core=1.67ms step=0.211ms ref=681ms
+n1000-s1002: V=1000 E=1535 viol=12 engine=3.02ms core=1.69ms step=0.200ms ref=737ms
+n10000-s1000: V=10000 E=14995 viol=135 engine=32.41ms core=17.75ms step=0.258ms ref=-ms
+n10000-s1001: V=10000 E=14992 viol=153 engine=38.47ms core=21.57ms step=0.322ms ref=-ms
+n10000-s1002: V=10000 E=15048 viol=141 engine=31.98ms core=17.20ms step=0.272ms ref=-ms
+n100000-s1000: V=100000 E=149658 viol=1408 engine=572.83ms core=334.48ms step=0.360ms ref=-ms
+n100000-s1001: V=100000 E=149910 viol=1430 engine=601.18ms core=319.75ms step=0.370ms ref=-ms
+n100000-s1002: V=100000 E=149911 viol=1471 engine=607.43ms core=309.41ms step=0.378ms ref=-ms
+[2026-10-23 02:07:47] end n2-engine rc=0 elapsed=140s

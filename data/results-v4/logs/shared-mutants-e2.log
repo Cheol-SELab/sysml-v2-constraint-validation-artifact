@@ -1,0 +1,21 @@
+[2026-10-22 23:03:17] start shared-mutants-e2: G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/oracle-py/.venv/Scripts/python.exe -B oracle-py/shared_code_mutants.py G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/snapshot/tree G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/mutants-e2 G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/oracle-shared-code-mutants-e2 G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/node_modules/typescript/lib/tsc.js --e2-only
+{"mutant": "original", "description": "unmutated snapshot", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "S2-mult-direction", "description": "multiplicity direction reversed in rule derivation", "cleanModels": 60, "cleanModelsWithViolations": 60, "violations": 14970}
+{"mutant": "S2-mult-upper-off-by-one", "description": "finite upper multiplicity bound derived one too large", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "S2-required-first-only", "description": "only the first required attribute of each type becomes a rule", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "DOM-range-lower-exclusive", "description": "range lower bound treated as exclusive", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "DOM-range-upper-exclusive", "description": "range upper bound treated as exclusive", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "DOM-nonempty-accepts-empty", "description": "empty string accepted as non-empty", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "DOM-enum-loose-equality", "description": "enum membership by string coercion (1 == \"1\")", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+{"mutant": "S1-drop-self-loops", "description": "normalisation silently drops self-loop relations", "cleanModels": 60, "cleanModelsWithViolations": 0, "violations": 0}
+Traceback (most recent call last):
+  File "G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\oracle-py\shared_code_mutants.py", line 128, in <module>
+    main()
+  File "G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\oracle-py\shared_code_mutants.py", line 59, in main
+    return e2_only(snap, work, out, tsc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\oracle-py\shared_code_mutants.py", line 121, in e2_only
+    with open(os.path.join(out, 'shared-code-mutants-e2.json'), 'x', encoding='utf-8') as fh:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/oracle-shared-code-mutants-e2\\shared-code-mutants-e2.json'
+[2026-10-22 23:04:19] end shared-mutants-e2 rc=1 elapsed=61s

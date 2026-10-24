@@ -1,0 +1,50 @@
+{
+  "experiment": "E1",
+  "boundedExhaustive": {
+    "bounds": [
+      {
+        "nodes": 1,
+        "maxEdges": 3,
+        "attributeVariants": 3
+      },
+      {
+        "nodes": 2,
+        "maxEdges": 3,
+        "attributeVariants": 3
+      },
+      {
+        "nodes": 3,
+        "maxEdges": 3,
+        "attributeVariants": 3
+      },
+      {
+        "nodes": 4,
+        "maxEdges": 2,
+        "attributeVariants": 3
+      }
+    ],
+    "graphsEnumerated": 1552752,
+    "semanticsChecks": 1552752,
+    "orderChecks": 1552752,
+    "incrementalChecks": 4657140,
+    "counterexamples": 0,
+    "firstCounterexamples": [],
+    "elapsedMs": 259475
+  },
+  "propertyBased": {
+    "cases": 30,
+    "changeSteps": 3000,
+    "checks": {
+      "P1": 30,
+      "P2": 30,
+      "P3": 30,
+      "P4": 1500,
+      "P5": 1500,
+      "P6": 30
+    },
+    "counterexamples": 0,
+    "firstFailures": [],
+    "elapsedMs": 3154
+  },
+  "smtCrossCheck": "not executed in this environment (no solver available); reported as a limitation"
+}

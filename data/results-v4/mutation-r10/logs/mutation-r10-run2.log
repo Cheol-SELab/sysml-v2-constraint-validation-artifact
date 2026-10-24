@@ -1,0 +1,19 @@
+[Fri 10/23/2026 20:23:06.51] start run2  
+baseline: {"killedBy":null,"detail":"","timing":{"BE-base":19033,"BE-ext":56090,"PB":1535,"INV":305,"R10-IN":338,"R10-SES":46274,"R10-API":104},"ms":124629}
+mutation-r10: 25/391 (26 -> BE-base)
+mutation-r10: 50/391 (51 -> BE-base)
+mutation-r10: 75/391 (76 -> BE-base)
+mutation-r10: 100/391 (95 -> null)
+mutation-r10: 125/391 (124 -> R10-SES)
+mutation-r10: 150/391 (151 -> crash:BE-base)
+mutation-r10: 175/391 (176 -> BE-base)
+mutation-r10: 200/391 (201 -> BE-base)
+mutation-r10: 225/391 (226 -> BE-ext)
+mutation-r10: 250/391 (251 -> BE-base)
+mutation-r10: 275/391 (276 -> crash:load)
+mutation-r10: 300/391 (300 -> PB)
+mutation-r10: 325/391 (324 -> R10-IN)
+mutation-r10: 350/391 (349 -> R10-IN)
+mutation-r10: 375/391 (374 -> R10-API)
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\mutation-r10\m4-mutation-analysis-r10.json (6837.6 s) score 0.8235
+[Fri 10/23/2026 20:23:06.51] end rc=0  

@@ -1,0 +1,8 @@
+[2026-10-22 23:00:24] start oracle-small: bash -c node dist-r8/cli-oracle.js independence --out 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/oracle-small' --work 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/oracle-small' && node dist-r8/cli-oracle.js shapes --out 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/oracle-small' --work 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/oracle-small' && node dist-r8/cli-oracle.js e7 --out 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/oracle-small' --work 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/oracle-small'
+written: results-v4\oracle-small\independence.json
+done in 0.0 s
+written: results-v4\oracle-small\shacl-expressiveness.json
+done in 6.0 s
+written: results-v4\oracle-small\differential-e7.json
+done in 3.3 s
+[2026-10-22 23:00:34] end oracle-small rc=0 elapsed=10s

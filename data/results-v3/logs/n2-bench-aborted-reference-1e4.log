@@ -1,0 +1,5 @@
+cpu load at start: 20%
+n1000-s1000: V=1000 E=1479 viol=9 engine=5.11ms core=1.27ms step=0.266ms ref=828ms
+n1000-s1001: V=1000 E=1479 viol=18 engine=2.99ms core=1.70ms step=0.226ms ref=781ms
+n1000-s1002: V=1000 E=1535 viol=12 engine=2.96ms core=1.58ms step=0.230ms ref=771ms
+aborted 15:13: reference implementation at n=10^4 exceeded 12 min per seed; rerun with --reference-max 1000

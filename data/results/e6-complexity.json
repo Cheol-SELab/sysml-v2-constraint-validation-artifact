@@ -1,0 +1,91 @@
+{
+  "experiment": "E6",
+  "perSize": [
+    {
+      "n": 100,
+      "medianNodes": 100,
+      "medianEdges": 150.5,
+      "medianTimeAllMs": 0.32,
+      "medianTimeLocalMs": 0.189,
+      "medianTimeGlobalMs": 0.099
+    },
+    {
+      "n": 200,
+      "medianNodes": 200,
+      "medianEdges": 300.5,
+      "medianTimeAllMs": 0.957,
+      "medianTimeLocalMs": 0.457,
+      "medianTimeGlobalMs": 0.212
+    },
+    {
+      "n": 500,
+      "medianNodes": 500,
+      "medianEdges": 748,
+      "medianTimeAllMs": 1.832,
+      "medianTimeLocalMs": 1.342,
+      "medianTimeGlobalMs": 0.581
+    },
+    {
+      "n": 1000,
+      "medianNodes": 1000,
+      "medianEdges": 1497.5,
+      "medianTimeAllMs": 4.607,
+      "medianTimeLocalMs": 3.178,
+      "medianTimeGlobalMs": 1.161
+    },
+    {
+      "n": 2000,
+      "medianNodes": 2000,
+      "medianEdges": 2984.5,
+      "medianTimeAllMs": 8.002,
+      "medianTimeLocalMs": 5.346,
+      "medianTimeGlobalMs": 1.975
+    },
+    {
+      "n": 5000,
+      "medianNodes": 5000,
+      "medianEdges": 7482.5,
+      "medianTimeAllMs": 19.43,
+      "medianTimeLocalMs": 11.793,
+      "medianTimeGlobalMs": 5.78
+    },
+    {
+      "n": 10000,
+      "medianNodes": 10000,
+      "medianEdges": 15001.5,
+      "medianTimeAllMs": 39.666,
+      "medianTimeLocalMs": 25.976,
+      "medianTimeGlobalMs": 15.209
+    }
+  ],
+  "regression": {
+    "all": {
+      "exponent": 1.02,
+      "ci95": [
+        0.988,
+        1.049
+      ],
+      "r2": 0.9821,
+      "includesOne": true
+    },
+    "localRules": {
+      "exponent": 1.039,
+      "ci95": [
+        1.003,
+        1.078
+      ],
+      "r2": 0.9771,
+      "includesOne": false
+    },
+    "globalRules": {
+      "exponent": 1.078,
+      "ci95": [
+        1.034,
+        1.122
+      ],
+      "r2": 0.9771,
+      "includesOne": false
+    }
+  },
+  "protocol": "x = log(n + m), y = log(median runtime of 5 repetitions after one warm-up); OLS with percentile bootstrap CI"
+}

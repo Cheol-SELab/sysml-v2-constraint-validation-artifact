@@ -1,0 +1,142 @@
+{
+  "experiment": "E3",
+  "rows": [
+    {
+      "defect": "D1",
+      "label": "wrong relation source/target type",
+      "targetRuleKind": "relationType",
+      "instances": 77,
+      "tp": 77,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "observedRuleKinds": [
+        "relationType"
+      ]
+    },
+    {
+      "defect": "D2",
+      "label": "missing mandatory relation",
+      "targetRuleKind": "multiplicity",
+      "instances": 103,
+      "tp": 103,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "observedRuleKinds": [
+        "multiplicity"
+      ]
+    },
+    {
+      "defect": "D3",
+      "label": "missing required attribute",
+      "targetRuleKind": "requiredAttr",
+      "instances": 100,
+      "tp": 100,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "observedRuleKinds": [
+        "requiredAttr"
+      ]
+    },
+    {
+      "defect": "D4",
+      "label": "attribute value outside domain",
+      "targetRuleKind": "attrDomain",
+      "instances": 115,
+      "tp": 115,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "observedRuleKinds": [
+        "attrDomain"
+      ]
+    },
+    {
+      "defect": "D5",
+      "label": "broken traceability path",
+      "targetRuleKind": "tracePolicy",
+      "instances": 72,
+      "tp": 72,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "observedRuleKinds": [
+        "tracePolicy"
+      ]
+    },
+    {
+      "defect": "D6",
+      "label": "cyclic dependency",
+      "targetRuleKind": "acyclic",
+      "instances": 65,
+      "tp": 65,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "observedRuleKinds": [
+        "acyclic"
+      ]
+    },
+    {
+      "defect": "D7",
+      "label": "isolated element",
+      "targetRuleKind": "isolated",
+      "instances": 270,
+      "tp": 270,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "observedRuleKinds": [
+        "isolated"
+      ]
+    },
+    {
+      "defect": "D8",
+      "label": "view-model mismatch",
+      "targetRuleKind": "viewConsistency",
+      "instances": 69,
+      "tp": 69,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "observedRuleKinds": [
+        "viewConsistency"
+      ]
+    }
+  ],
+  "total": {
+    "instances": 871,
+    "tp": 871,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1
+  },
+  "runs": 270,
+  "discardedRuns": 0,
+  "discardRate": 0,
+  "rejectedOverlapCandidates": 11067,
+  "rejectedInfeasibleCandidates": 0,
+  "runLevelFalsePositives": 0,
+  "oracleEquationChecks": 270,
+  "oracleEquationFailures": 0
+}

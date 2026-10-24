@@ -1,0 +1,9 @@
+E5 n=20000 random ratio=0.001 done
+E5 n=20000 random ratio=0.01 done
+E5 n=20000 random ratio=0.05 done
+E5 n=20000 random ratio=0.1 done
+E5 n=20000 clustered ratio=0.001 done
+E5 n=20000 clustered ratio=0.01 done
+E5 n=20000 clustered ratio=0.05 done
+E5 n=20000 clustered ratio=0.1 done
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v2\e5-incremental-v2-partB.json (4292.3 s)

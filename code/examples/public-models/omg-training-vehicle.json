@@ -1,0 +1,55 @@
+{
+  "_provenance": "Manual transcription of the structural subset (parts, ports, flow connections, satisfy relations) of the public OMG SysML-v2-Release training 'Vehicle Example'. Source: https://github.com/Systems-Modeling/SysML-v2-Release (sysml/src/training). Transcribed into the typed-graph exchange schema used by this prototype; parameters are mapped to node attributes.",
+  "id": "omg-training-vehicle",
+  "nodes": [
+    { "id": "TV_VEH", "type": "Component", "attrs": { "name": "vehicle_b", "mass": 1800 } },
+    { "id": "TV_TANK", "type": "Component", "attrs": { "name": "fuelTank", "fuelCapacity": 60 } },
+    { "id": "TV_ENG", "type": "Component", "attrs": { "name": "engine", "cyl": 4 } },
+    { "id": "TV_TRSM", "type": "Component", "attrs": { "name": "transmission", "gearRatio": 3.5 } },
+    { "id": "TV_DSHAFT", "type": "Component", "attrs": { "name": "driveshaft" } },
+    { "id": "TV_RAXLE", "type": "Component", "attrs": { "name": "rearAxleAssembly" } },
+
+    { "id": "P_TANK_FUEL_OUT", "type": "Port", "attrs": { "name": "fuelOutPort", "direction": "out" } },
+    { "id": "P_ENG_FUEL_IN", "type": "Port", "attrs": { "name": "fuelInPort", "direction": "in" } },
+    { "id": "P_ENG_DRIVEPWR_OUT", "type": "Port", "attrs": { "name": "drivePwrPort", "direction": "out" } },
+    { "id": "P_TRSM_CLUTCH_IN", "type": "Port", "attrs": { "name": "clutchPort", "direction": "in" } },
+    { "id": "P_TRSM_SHAFT_OUT", "type": "Port", "attrs": { "name": "shaftPort", "direction": "out" } },
+    { "id": "P_DSHAFT_IN", "type": "Port", "attrs": { "name": "shaftPort_d1", "direction": "in" } },
+    { "id": "P_DSHAFT_OUT", "type": "Port", "attrs": { "name": "shaftPort_d2", "direction": "out" } },
+    { "id": "P_RAXLE_IN", "type": "Port", "attrs": { "name": "shaftPort_a", "direction": "in" } },
+    { "id": "P_VEH_SPD_IN", "type": "Port", "attrs": { "name": "vehicleSpeedPort", "direction": "in" } },
+    { "id": "P_RAXLE_SPD_OUT", "type": "Port", "attrs": { "name": "wheelSpeedPort", "direction": "out" } },
+
+    { "id": "REQ_MASS", "type": "Requirement", "attrs": { "name": "vehicleMassLimit", "priority": "high" } },
+    { "id": "REQ_FUEL_ECON", "type": "Requirement", "attrs": { "name": "fuelEconomy", "priority": "medium" } },
+    { "id": "REQ_DRIVEPWR", "type": "Requirement", "attrs": { "name": "drivePower", "priority": "high" } }
+  ],
+  "edges": [
+    { "id": "own_1", "type": "contain", "src": "TV_VEH", "tgt": "TV_TANK" },
+    { "id": "own_2", "type": "contain", "src": "TV_VEH", "tgt": "TV_ENG" },
+    { "id": "own_3", "type": "contain", "src": "TV_VEH", "tgt": "TV_TRSM" },
+    { "id": "own_4", "type": "contain", "src": "TV_VEH", "tgt": "TV_DSHAFT" },
+    { "id": "own_5", "type": "contain", "src": "TV_VEH", "tgt": "TV_RAXLE" },
+
+    { "id": "own_6", "type": "contain", "src": "TV_TANK", "tgt": "P_TANK_FUEL_OUT" },
+    { "id": "own_7", "type": "contain", "src": "TV_ENG", "tgt": "P_ENG_FUEL_IN" },
+    { "id": "own_8", "type": "contain", "src": "TV_ENG", "tgt": "P_ENG_DRIVEPWR_OUT" },
+    { "id": "own_9", "type": "contain", "src": "TV_TRSM", "tgt": "P_TRSM_CLUTCH_IN" },
+    { "id": "own_10", "type": "contain", "src": "TV_TRSM", "tgt": "P_TRSM_SHAFT_OUT" },
+    { "id": "own_11", "type": "contain", "src": "TV_DSHAFT", "tgt": "P_DSHAFT_IN" },
+    { "id": "own_12", "type": "contain", "src": "TV_DSHAFT", "tgt": "P_DSHAFT_OUT" },
+    { "id": "own_13", "type": "contain", "src": "TV_RAXLE", "tgt": "P_RAXLE_IN" },
+    { "id": "own_14", "type": "contain", "src": "TV_VEH", "tgt": "P_VEH_SPD_IN" },
+    { "id": "own_15", "type": "contain", "src": "TV_RAXLE", "tgt": "P_RAXLE_SPD_OUT" },
+
+    { "id": "C_FUEL_FLOW", "type": "connect", "src": "P_TANK_FUEL_OUT", "tgt": "P_ENG_FUEL_IN" },
+    { "id": "C_ENG_TRSM", "type": "connect", "src": "P_ENG_DRIVEPWR_OUT", "tgt": "P_TRSM_CLUTCH_IN" },
+    { "id": "C_TRSM_DSHAFT", "type": "connect", "src": "P_TRSM_SHAFT_OUT", "tgt": "P_DSHAFT_IN" },
+    { "id": "C_DSHAFT_RAXLE", "type": "connect", "src": "P_DSHAFT_OUT", "tgt": "P_RAXLE_IN" },
+    { "id": "C_RAXLE_VEH", "type": "connect", "src": "P_RAXLE_SPD_OUT", "tgt": "P_VEH_SPD_IN" },
+
+    { "id": "R_SAT_MASS", "type": "satisfy", "src": "TV_VEH", "tgt": "REQ_MASS" },
+    { "id": "R_SAT_FUEL", "type": "satisfy", "src": "TV_VEH", "tgt": "REQ_FUEL_ECON" },
+    { "id": "R_SAT_PWR", "type": "satisfy", "src": "TV_ENG", "tgt": "REQ_DRIVEPWR" }
+  ]
+}

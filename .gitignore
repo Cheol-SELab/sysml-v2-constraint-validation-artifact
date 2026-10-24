@@ -1,0 +1,15 @@
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+code/dist/
+code/dist-r8/
+code/dist-review2/
+code/runs/
+code/results/
+code/results-v4/
+code/corpus/
+code/corpus-history/
+code/bench-shacl/jena/target/
+.env
+.env.*

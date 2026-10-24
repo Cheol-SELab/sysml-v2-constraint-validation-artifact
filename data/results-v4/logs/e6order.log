@@ -1,0 +1,32 @@
+[2026-10-22 23:15:28] start e6order:  node --expose-gc --max-old-space-size=24000 dist-r8/cli-v2.js e6order --output G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/e6order
+pin: could not set affinity/priority: The property 'ProcessorAffinity' cannot be found on this object. Verify that the property exists and can be set.
+pin: affinity=0x4 priority=AboveNormal pid=
+[2026-10-22 23:15:29] end e6order rc=0 elapsed=1s
+[2026-10-22 23:33:07] start e6order:  node --expose-gc --max-old-space-size=24000 dist-r8/cli-v2.js e6order --output G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/e6order
+pin: affinity=0x4 priority=AboveNormal pid=16060
+E6 order-subject n=1000 seed=0 all=4.19ms ops=32645
+E6 order-subject n=1000 seed=1 all=3.32ms ops=32562
+E6 order-subject n=1000 seed=2 all=4.31ms ops=32616
+E6 order-subject n=3000 seed=0 all=11.32ms ops=217833
+E6 order-subject n=3000 seed=1 all=10.19ms ops=217752
+E6 order-subject n=3000 seed=2 all=10.58ms ops=217632
+E6 order-subject n=10000 seed=0 all=78.36ms ops=2125574
+E6 order-subject n=10000 seed=1 all=80.36ms ops=2126022
+E6 order-subject n=10000 seed=2 all=72.60ms ops=2126039
+E6 order-subject n=30000 seed=0 all=864.67ms ops=18377737
+E6 order-subject n=30000 seed=1 all=891.39ms ops=18377515
+E6 order-subject n=30000 seed=2 all=818.16ms ops=18377816
+E6 order-target n=1000 seed=0 all=2.87ms ops=13456
+E6 order-target n=1000 seed=1 all=2.31ms ops=13389
+E6 order-target n=1000 seed=2 all=2.85ms ops=13449
+E6 order-target n=3000 seed=0 all=7.71ms ops=40301
+E6 order-target n=3000 seed=1 all=7.12ms ops=40233
+E6 order-target n=3000 seed=2 all=6.99ms ops=40102
+E6 order-target n=10000 seed=0 all=26.73ms ops=133840
+E6 order-target n=10000 seed=1 all=31.94ms ops=134308
+E6 order-target n=10000 seed=2 all=25.87ms ops=134239
+E6 order-target n=30000 seed=0 all=114.31ms ops=402461
+E6 order-target n=30000 seed=1 all=141.61ms ops=402307
+E6 order-target n=30000 seed=2 all=134.63ms ops=402588
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\e6order\e6-view-order-comparison.json (63.7 s)
+[2026-10-22 23:34:11] end e6order rc=0 elapsed=64s

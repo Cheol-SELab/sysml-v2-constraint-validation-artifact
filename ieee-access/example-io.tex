@@ -1,0 +1,56 @@
+\begin{table*}[t]
+\centering
+\caption{Input changes and recorded validator outputs for the worked example. Each change starts independently from the clean keyword-mode graph; the JSON blocks are excerpts of retained records, not a new API schema. Arrows mark display-only line wraps.}
+\label{tab:example-io}
+\begin{minipage}[t]{0.48\textwidth}
+\vspace{0pt}\small
+\textbf{(a) Normal input and output}\par
+Input: source in Table~\ref{tab:exmodel} plus the aerospace catalog. S1 yields 8 nodes and 9 relations; S2 derives 41 rules (39 local, 2 global). Full validation detects zero violations under this catalog; the recorded violation list is empty (\texttt{[]}):
+\begin{lstlisting}[basicstyle=\ttfamily\fontsize{8}{9}\selectfont,columns=fullflexible,keepspaces=true,breaklines=true,breakatwhitespace=true,postbreak=\mbox{\ensuremath{\hookrightarrow}\space},frame=single,aboveskip=4pt,belowskip=6pt,xleftmargin=3pt,xrightmargin=3pt]
+[]
+\end{lstlisting}
+
+\textbf{(b) Attribute-error input and output}\par
+Starting from the clean graph, set \texttt{C2.criticality} to \texttt{"X"}. The recorded \texttt{rows} list is:
+\begin{lstlisting}[basicstyle=\ttfamily\fontsize{8}{9}\selectfont,columns=fullflexible,keepspaces=true,breaklines=true,breakatwhitespace=true,postbreak=\mbox{\ensuremath{\hookrightarrow}\space},frame=single,aboveskip=4pt,belowskip=6pt,xleftmargin=3pt,xrightmargin=3pt]
+[
+  {
+    "ruleId": "DOM:Component.criticality",
+    "kind": "attrDomain",
+    "witness": "C2",
+    "message": "attribute criticality=X outside domain"
+  }
+]
+\end{lstlisting}
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\vspace{0pt}\small
+\textbf{(c) Incremental input and output}\par
+Starting again from the clean graph, delete \texttt{e5}, the \texttt{satisfy} edge from C1 to R1. The retained \texttt{incremental} record is:
+\begin{lstlisting}[basicstyle=\ttfamily\fontsize{8}{9}\selectfont,columns=fullflexible,keepspaces=true,breaklines=true,breakatwhitespace=true,postbreak=\mbox{\ensuremath{\hookrightarrow}\space},frame=single,aboveskip=4pt,belowskip=6pt,xleftmargin=3pt,xrightmargin=3pt]
+{
+  "change": "delete e5 (satisfy C1 -> R1)",
+  "scopeSize": 8,
+  "graphSize": 8,
+  "radius": 2,
+  "violationsAfter": [
+    {
+      "ruleId": "MULT:Requirement|satisfy|in",
+      "kind": "multiplicity",
+      "witness": "R1",
+      "message": "in degree of satisfy is 0, expected [1, inf]"
+    },
+    {
+      "ruleId": "TRACE:FUN2REQ",
+      "kind": "tracePolicy",
+      "witness": "F1",
+      "message": "no allocate|satisfy path from F1 to any Requirement"
+    }
+  ],
+  "matchesBatch": true
+}
+\end{lstlisting}
+
+\end{minipage}
+\end{table*}

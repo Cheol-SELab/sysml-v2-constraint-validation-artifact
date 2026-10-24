@@ -1,0 +1,102 @@
+x3 examples/Analysis Examples: 57 records so far
+x3 examples/Arrowhead Framework Example: 106 records so far
+x3 examples/Association Examples: 142 records so far
+x3 examples/Camera Example: 176 records so far
+x3 examples/Cause and Effect Examples: 208 records so far
+x3 examples/Comment Examples: 238 records so far
+x3 examples/Flashlight Example: 271 records so far
+x3 examples/Geometry Examples: 303 records so far
+x3 examples/Import Tests: 337 records so far
+x3 examples/Individuals Examples: 392 records so far
+x3 examples/Interaction Sequencing Examples: 452 records so far
+x3 examples/Mass Roll-up Example: 504 records so far
+x3 examples/Metadata Examples: 535 records so far
+x3 examples/Packet Example: 576 records so far
+x3 examples/Requirements Examples: 612 records so far
+x3 examples/Room Model: 643 records so far
+x3 examples/Simple Tests: 706 records so far
+x3 examples/State Space Representation Examples: 774 records so far
+x3 examples/Timeslice and Snapshot Examples: 805 records so far
+x3 examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly: 846 records so far
+x3 examples/v1 Spec Examples/8.4.5 Constraining Decomposition: 895 records so far
+x3 examples/Variability Examples: 946 records so far
+x3 examples/Vehicle Example: 1013 records so far
+x3 training/01. Packages: 1043 records so far
+x3 training/02. Part Definitions: 1074 records so far
+x3 training/03. Generalization: 1110 records so far
+x3 training/04. Subsetting: 1153 records so far
+x3 training/05. Redefinition: 1191 records so far
+x3 training/06. Enumeration Definitions: 1230 records so far
+x3 training/07. Parts: 1268 records so far
+x3 training/08. Items: 1298 records so far
+x3 training/09. Connections: 1333 records so far
+x3 training/10. Ports: 1369 records so far
+x3 training/11. Interfaces: 1401 records so far
+x3 training/12. Binding Connectors: 1435 records so far
+x3 training/13. Flows: 1470 records so far
+x3 training/14. Action Definitions: 1502 records so far
+x3 training/15. Actions: 1534 records so far
+x3 training/16. Conditional Succession: 1566 records so far
+x3 training/17. Control: 1599 records so far
+x3 training/18. Action Performance: 1633 records so far
+x3 training/19. Terminate Actions: 1663 records so far
+x3 training/20. Assignment Actions: 1693 records so far
+x3 training/21. Asynchronous Messaging: 1726 records so far
+x3 training/22. Opaque Actions: 1757 records so far
+x3 training/23. State Definitions: 1787 records so far
+x3 training/24. States: 1818 records so far
+x3 training/25. Transitions: 1851 records so far
+x3 training/26. State Exhibition: 1881 records so far
+x3 training/27. Occurrences: 1936 records so far
+x3 training/28. Individuals: 1975 records so far
+x3 training/29. Expressions: 2032 records so far
+x3 training/30. Calculations: 2065 records so far
+x3 training/31. Constraints: 2101 records so far
+x3 training/32. Requirements: 2143 records so far
+x3 training/33. Analysis: 2180 records so far
+x3 training/34. Verification: 2226 records so far
+x3 training/35. Use Cases: 2256 records so far
+x3 training/36. Variability: 2294 records so far
+x3 training/37. Dependencies: 2324 records so far
+x3 training/38. Allocation: 2360 records so far
+x3 training/39. Metadata: 2390 records so far
+x3 training/40. Filtering: 2420 records so far
+x3 training/41. Language Extension: 2456 records so far
+x3 training/42. Views: 2487 records so far
+x3 validation/01-Parts Tree: 2548 records so far
+x3 validation/02-Parts Interconnection: 2586 records so far
+x3 validation/03-Function-based Behavior: 2624 records so far
+x3 validation/04-Functional Allocation: 2654 records so far
+x3 validation/05-State-based Behavior: 2695 records so far
+x3 validation/06-Individual and Snapshots: 2740 records so far
+x3 validation/07-Variant Configuration: 2796 records so far
+x3 validation/08-Requirements: 2839 records so far
+x3 validation/09-Verification: 2883 records so far
+x3 validation/10-Analysis and Trades: 2932 records so far
+x3 validation/11-View and Viewpoint: 2966 records so far
+x3 validation/12-Dependency Relationships: 3002 records so far
+x3 validation/13-Model Containment: 3032 records so far
+x3 validation/14-Language Extensions: 3084 records so far
+x3 validation/15-Properties-Values-Expressions: 3150 records so far
+x3 validation/17-Sequence Modeling: 3184 records so far
+x3 validation/18-Use Case: 3219 records so far
+oracle 200/3219
+oracle 400/3219
+oracle 600/3219
+oracle 800/3219
+oracle 1000/3219
+oracle 1200/3219
+oracle 1400/3219
+oracle 1600/3219
+oracle 1800/3219
+oracle 2000/3219
+oracle 2200/3219
+oracle 2400/3219
+oracle 2600/3219
+oracle 2800/3219
+oracle 3000/3219
+oracle 3200/3219
+oracle 3219/3219
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v3\n1-spec-oracle\n1-x3-oracle.json
+done in 2234.5 s
+exit 0

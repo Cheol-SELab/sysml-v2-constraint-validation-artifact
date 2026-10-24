@@ -1,0 +1,2440 @@
+{
+  "meta": {
+    "command": "node dist/cli-v2.js e5 --output G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\results-v2",
+    "subcommand": "e5",
+    "node": "v22.15.1",
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "maxOldSpaceMiB": 16432,
+    "startedAt": "2026-10-21T05:19:43.484Z",
+    "elapsedSec": 2250.9
+  },
+  "experiment": "E5-v2",
+  "catalog": "aerospace",
+  "protocol": "per (model, ratio, scenario): one pre-generated change sequence replayed by every path on a fresh model copy; one untimed warm-up replay, then reps timed replays; per-step time = replay time / steps; median over replays; change application included and model copy / session construction excluded on every path; speedup = batch per-step time / strategy per-step time, median over seeds with percentile bootstrap CI (2000 resamples)",
+  "paths": {
+    "batch": "apply change set, then full validation",
+    "S1": "naive k-hop: every rule re-evaluated on the induced subgraph of N_k(delta), k = max local radius = 2",
+    "S2": "hybrid: local rules scope-restricted, global rules recomputed in batch every step",
+    "S3": "witness maintenance: local rules scope-restricted, global rules through witness stores",
+    "S3t": "S3 with the validity threshold: stores declared invalid and rebuilt when |Delta| > 0.02 (n + m)"
+  },
+  "opsDefinition": "ops per step = Holds evaluations of local rules + adjacency entries scanned inside Holds + global work units (nodes processed by BatchGlobal; nodes touched by witness maintenance)",
+  "partition": {
+    "E5_SIZES": "500,1000,5000",
+    "E5_RATIOS": null,
+    "E5_SEEDS": null,
+    "E5_SKIP_LARGE": "1",
+    "E5_ONLY_LARGE": null,
+    "E5_LARGE_SEEDS": null
+  },
+  "counterexampleFamilies": [
+    {
+      "family": "cycle",
+      "k": 1,
+      "nodes": 8,
+      "ruleUnderTest": "ACYC:dependOn",
+      "S1Missed": 1,
+      "S1Spurious": 2,
+      "S1SpuriousKeys": [
+        "TRACE:COMP2REQ|C0",
+        "TRACE:COMP2REQ|C1"
+      ],
+      "S2Missed": 0,
+      "S2Spurious": 0,
+      "S2SpuriousKeys": [],
+      "S3Missed": 0,
+      "S3Spurious": 0,
+      "S3SpuriousKeys": []
+    },
+    {
+      "family": "trace",
+      "k": 1,
+      "nodes": 8,
+      "ruleUnderTest": "TRACE:COMP2REQ",
+      "S1Missed": 1,
+      "S1Spurious": 2,
+      "S1SpuriousKeys": [
+        "TRACE:COMP2REQ|C3",
+        "TRACE:COMP2REQ|C4"
+      ],
+      "S2Missed": 0,
+      "S2Spurious": 0,
+      "S2SpuriousKeys": [],
+      "S3Missed": 0,
+      "S3Spurious": 0,
+      "S3SpuriousKeys": []
+    },
+    {
+      "family": "cycle",
+      "k": 2,
+      "nodes": 10,
+      "ruleUnderTest": "ACYC:dependOn",
+      "S1Missed": 1,
+      "S1Spurious": 3,
+      "S1SpuriousKeys": [
+        "TRACE:COMP2REQ|C0",
+        "TRACE:COMP2REQ|C1",
+        "TRACE:COMP2REQ|C2"
+      ],
+      "S2Missed": 0,
+      "S2Spurious": 0,
+      "S2SpuriousKeys": [],
+      "S3Missed": 0,
+      "S3Spurious": 0,
+      "S3SpuriousKeys": []
+    },
+    {
+      "family": "trace",
+      "k": 2,
+      "nodes": 10,
+      "ruleUnderTest": "TRACE:COMP2REQ",
+      "S1Missed": 1,
+      "S1Spurious": 3,
+      "S1SpuriousKeys": [
+        "TRACE:COMP2REQ|C4",
+        "TRACE:COMP2REQ|C5",
+        "TRACE:COMP2REQ|C6"
+      ],
+      "S2Missed": 0,
+      "S2Spurious": 0,
+      "S2SpuriousKeys": [],
+      "S3Missed": 0,
+      "S3Spurious": 0,
+      "S3SpuriousKeys": []
+    },
+    {
+      "family": "cycle",
+      "k": 4,
+      "nodes": 14,
+      "ruleUnderTest": "ACYC:dependOn",
+      "S1Missed": 1,
+      "S1Spurious": 5,
+      "S1SpuriousKeys": [
+        "TRACE:COMP2REQ|C0",
+        "TRACE:COMP2REQ|C1",
+        "TRACE:COMP2REQ|C2",
+        "TRACE:COMP2REQ|C3",
+        "TRACE:COMP2REQ|C4"
+      ],
+      "S2Missed": 0,
+      "S2Spurious": 0,
+      "S2SpuriousKeys": [],
+      "S3Missed": 0,
+      "S3Spurious": 0,
+      "S3SpuriousKeys": []
+    },
+    {
+      "family": "trace",
+      "k": 4,
+      "nodes": 14,
+      "ruleUnderTest": "TRACE:COMP2REQ",
+      "S1Missed": 1,
+      "S1Spurious": 5,
+      "S1SpuriousKeys": [
+        "TRACE:COMP2REQ|C10",
+        "TRACE:COMP2REQ|C6",
+        "TRACE:COMP2REQ|C7",
+        "TRACE:COMP2REQ|C8",
+        "TRACE:COMP2REQ|C9"
+      ],
+      "S2Missed": 0,
+      "S2Spurious": 0,
+      "S2SpuriousKeys": [],
+      "S3Missed": 0,
+      "S3Spurious": 0,
+      "S3SpuriousKeys": []
+    },
+    {
+      "family": "cycle",
+      "k": 8,
+      "nodes": 22,
+      "ruleUnderTest": "ACYC:dependOn",
+      "S1Missed": 1,
+      "S1Spurious": 9,
+      "S1SpuriousKeys": [
+        "TRACE:COMP2REQ|C0",
+        "TRACE:COMP2REQ|C1",
+        "TRACE:COMP2REQ|C2",
+        "TRACE:COMP2REQ|C3",
+        "TRACE:COMP2REQ|C4",
+        "TRACE:COMP2REQ|C5",
+        "TRACE:COMP2REQ|C6",
+        "TRACE:COMP2REQ|C7",
+        "TRACE:COMP2REQ|C8"
+      ],
+      "S2Missed": 0,
+      "S2Spurious": 0,
+      "S2SpuriousKeys": [],
+      "S3Missed": 0,
+      "S3Spurious": 0,
+      "S3SpuriousKeys": []
+    },
+    {
+      "family": "trace",
+      "k": 8,
+      "nodes": 22,
+      "ruleUnderTest": "TRACE:COMP2REQ",
+      "S1Missed": 1,
+      "S1Spurious": 9,
+      "S1SpuriousKeys": [
+        "TRACE:COMP2REQ|C10",
+        "TRACE:COMP2REQ|C11",
+        "TRACE:COMP2REQ|C12",
+        "TRACE:COMP2REQ|C13",
+        "TRACE:COMP2REQ|C14",
+        "TRACE:COMP2REQ|C15",
+        "TRACE:COMP2REQ|C16",
+        "TRACE:COMP2REQ|C17",
+        "TRACE:COMP2REQ|C18"
+      ],
+      "S2Missed": 0,
+      "S2Spurious": 0,
+      "S2SpuriousKeys": [],
+      "S3Missed": 0,
+      "S3Spurious": 0,
+      "S3SpuriousKeys": []
+    }
+  ],
+  "speedup": [
+    {
+      "n": 500,
+      "meanNodes": 500,
+      "meanEdges": 750.1,
+      "scenario": "random",
+      "changeRatio": 0.001,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.0411,
+      "medianStepMs": {
+        "batch": 2.4854,
+        "S1": 0.2191,
+        "S2": 0.9571,
+        "S3": 0.1729,
+        "S3t": 0.1478
+      },
+      "medianOpsPerStep": {
+        "batch": 5261,
+        "S1": 251.7,
+        "S2": 1015.8,
+        "S3": 222.3,
+        "S3t": 222.3
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 11.359,
+          "ci95": [
+            10.297,
+            12.301
+          ]
+        },
+        "hybridS2": {
+          "median": 2.527,
+          "ci95": [
+            2.329,
+            2.998
+          ]
+        },
+        "witnessS3": {
+          "median": 14.988,
+          "ci95": [
+            11.318,
+            15.989
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 16.382,
+          "ci95": [
+            15.741,
+            19.115
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 20.918,
+          "ci95": [
+            17.767,
+            25.369
+          ]
+        },
+        "hybridS2": {
+          "median": 5.181,
+          "ci95": [
+            5.021,
+            5.379
+          ]
+        },
+        "witnessS3": {
+          "median": 23.685,
+          "ci95": [
+            20.125,
+            28.587
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 23.685,
+          "ci95": [
+            20.125,
+            28.587
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 1,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 500,
+      "meanNodes": 500,
+      "meanEdges": 750.1,
+      "scenario": "random",
+      "changeRatio": 0.01,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.191,
+      "medianStepMs": {
+        "batch": 2.3992,
+        "S1": 0.7995,
+        "S2": 1.2647,
+        "S3": 0.6192,
+        "S3t": 0.5582
+      },
+      "medianOpsPerStep": {
+        "batch": 5198.7,
+        "S1": 1060.4,
+        "S2": 1700.6,
+        "S3": 939.2,
+        "S3t": 939.2
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 2.997,
+          "ci95": [
+            2.897,
+            3.583
+          ]
+        },
+        "hybridS2": {
+          "median": 1.911,
+          "ci95": [
+            1.679,
+            2.285
+          ]
+        },
+        "witnessS3": {
+          "median": 3.907,
+          "ci95": [
+            3.324,
+            4.586
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 4.324,
+          "ci95": [
+            3.842,
+            5.148
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 4.907,
+          "ci95": [
+            4.724,
+            5.019
+          ]
+        },
+        "hybridS2": {
+          "median": 3.055,
+          "ci95": [
+            2.993,
+            3.091
+          ]
+        },
+        "witnessS3": {
+          "median": 5.544,
+          "ci95": [
+            5.341,
+            5.68
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 5.544,
+          "ci95": [
+            5.341,
+            5.68
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 28,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 500,
+      "meanNodes": 500,
+      "meanEdges": 750.1,
+      "scenario": "random",
+      "changeRatio": 0.05,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.5087,
+      "medianStepMs": {
+        "batch": 2.7966,
+        "S1": 2.398,
+        "S2": 2.3816,
+        "S3": 1.6624,
+        "S3t": 3.0518
+      },
+      "medianOpsPerStep": {
+        "batch": 4951.9,
+        "S1": 2742.3,
+        "S2": 3114.6,
+        "S3": 2428.8,
+        "S3t": 3825.9
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 1.244,
+          "ci95": [
+            1.003,
+            1.319
+          ]
+        },
+        "hybridS2": {
+          "median": 1.157,
+          "ci95": [
+            1.079,
+            1.289
+          ]
+        },
+        "witnessS3": {
+          "median": 1.801,
+          "ci95": [
+            1.406,
+            1.985
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.894,
+          "ci95": [
+            0.781,
+            0.961
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 1.81,
+          "ci95": [
+            1.762,
+            1.842
+          ]
+        },
+        "hybridS2": {
+          "median": 1.594,
+          "ci95": [
+            1.562,
+            1.613
+          ]
+        },
+        "witnessS3": {
+          "median": 2.045,
+          "ci95": [
+            1.994,
+            2.081
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.295,
+          "ci95": [
+            1.28,
+            1.32
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 1,
+        "s1SpuriousViolations": 48,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 193
+      }
+    },
+    {
+      "n": 500,
+      "meanNodes": 500,
+      "meanEdges": 750.1,
+      "scenario": "random",
+      "changeRatio": 0.1,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.6201,
+      "medianStepMs": {
+        "batch": 2.9654,
+        "S1": 3.0839,
+        "S2": 3.0528,
+        "S3": 2.3071,
+        "S3t": 3.711
+      },
+      "medianOpsPerStep": {
+        "batch": 4646.9,
+        "S1": 3147.1,
+        "S2": 3408.7,
+        "S3": 2834.1,
+        "S3t": 4117
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 0.962,
+          "ci95": [
+            0.92,
+            1.05
+          ]
+        },
+        "hybridS2": {
+          "median": 0.99,
+          "ci95": [
+            0.898,
+            1.077
+          ]
+        },
+        "witnessS3": {
+          "median": 1.243,
+          "ci95": [
+            1.027,
+            1.456
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.779,
+          "ci95": [
+            0.74,
+            0.847
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 1.468,
+          "ci95": [
+            1.454,
+            1.503
+          ]
+        },
+        "hybridS2": {
+          "median": 1.355,
+          "ci95": [
+            1.345,
+            1.379
+          ]
+        },
+        "witnessS3": {
+          "median": 1.635,
+          "ci95": [
+            1.62,
+            1.661
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.122,
+          "ci95": [
+            1.117,
+            1.137
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 1,
+        "s1SpuriousViolations": 29,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 200
+      }
+    },
+    {
+      "n": 500,
+      "meanNodes": 500,
+      "meanEdges": 750.1,
+      "scenario": "clustered",
+      "changeRatio": 0.001,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.045,
+      "medianStepMs": {
+        "batch": 2.7542,
+        "S1": 0.2371,
+        "S2": 0.9736,
+        "S3": 0.1692,
+        "S3t": 0.163
+      },
+      "medianOpsPerStep": {
+        "batch": 5241.6,
+        "S1": 302,
+        "S2": 1059.8,
+        "S3": 265,
+        "S3t": 265
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 11.827,
+          "ci95": [
+            10.288,
+            12.883
+          ]
+        },
+        "hybridS2": {
+          "median": 2.869,
+          "ci95": [
+            2.498,
+            3.082
+          ]
+        },
+        "witnessS3": {
+          "median": 16.53,
+          "ci95": [
+            10.977,
+            21.219
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 16.306,
+          "ci95": [
+            14.121,
+            21.539
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 17.446,
+          "ci95": [
+            15.542,
+            21.589
+          ]
+        },
+        "hybridS2": {
+          "median": 4.967,
+          "ci95": [
+            4.839,
+            5.242
+          ]
+        },
+        "witnessS3": {
+          "median": 19.883,
+          "ci95": [
+            17.535,
+            24.44
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 19.883,
+          "ci95": [
+            17.535,
+            24.44
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 189,
+        "s1MissedViolations": 2,
+        "s1SpuriousViolations": 0,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 500,
+      "meanNodes": 500,
+      "meanEdges": 750.1,
+      "scenario": "clustered",
+      "changeRatio": 0.01,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.1599,
+      "medianStepMs": {
+        "batch": 2.8157,
+        "S1": 0.7932,
+        "S2": 1.3659,
+        "S3": 0.5221,
+        "S3t": 0.5447
+      },
+      "medianOpsPerStep": {
+        "batch": 5136.7,
+        "S1": 915,
+        "S2": 1573.9,
+        "S3": 810.8,
+        "S3t": 810.8
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 3.521,
+          "ci95": [
+            3.232,
+            3.742
+          ]
+        },
+        "hybridS2": {
+          "median": 2.136,
+          "ci95": [
+            1.923,
+            2.281
+          ]
+        },
+        "witnessS3": {
+          "median": 5.388,
+          "ci95": [
+            4.753,
+            6.187
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 5.243,
+          "ci95": [
+            4.259,
+            5.798
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 5.637,
+          "ci95": [
+            5.206,
+            6.028
+          ]
+        },
+        "hybridS2": {
+          "median": 3.277,
+          "ci95": [
+            3.16,
+            3.384
+          ]
+        },
+        "witnessS3": {
+          "median": 6.363,
+          "ci95": [
+            5.872,
+            6.811
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 6.363,
+          "ci95": [
+            5.872,
+            6.811
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 6,
+        "s1SpuriousViolations": 8,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 500,
+      "meanNodes": 500,
+      "meanEdges": 750.1,
+      "scenario": "clustered",
+      "changeRatio": 0.05,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.4423,
+      "medianStepMs": {
+        "batch": 3.0355,
+        "S1": 2.0129,
+        "S2": 2.2317,
+        "S3": 1.5322,
+        "S3t": 2.8525
+      },
+      "medianOpsPerStep": {
+        "batch": 4927.2,
+        "S1": 2023.3,
+        "S2": 2499,
+        "S3": 1800.5,
+        "S3t": 2899.9
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 1.498,
+          "ci95": [
+            1.359,
+            1.812
+          ]
+        },
+        "hybridS2": {
+          "median": 1.351,
+          "ci95": [
+            1.201,
+            1.509
+          ]
+        },
+        "witnessS3": {
+          "median": 2.099,
+          "ci95": [
+            1.822,
+            2.232
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.091,
+          "ci95": [
+            0.931,
+            1.155
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 2.451,
+          "ci95": [
+            2.228,
+            2.584
+          ]
+        },
+        "hybridS2": {
+          "median": 1.984,
+          "ci95": [
+            1.859,
+            2.062
+          ]
+        },
+        "witnessS3": {
+          "median": 2.755,
+          "ci95": [
+            2.501,
+            2.902
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.667,
+          "ci95": [
+            1.562,
+            1.736
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 46,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 162
+      }
+    },
+    {
+      "n": 500,
+      "meanNodes": 500,
+      "meanEdges": 750.1,
+      "scenario": "clustered",
+      "changeRatio": 0.1,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.5052,
+      "medianStepMs": {
+        "batch": 3.1289,
+        "S1": 2.2484,
+        "S2": 2.2952,
+        "S3": 1.7446,
+        "S3t": 3.4902
+      },
+      "medianOpsPerStep": {
+        "batch": 4624.9,
+        "S1": 2133.6,
+        "S2": 2562.3,
+        "S3": 1932.8,
+        "S3t": 3279.2
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 1.281,
+          "ci95": [
+            1.158,
+            1.533
+          ]
+        },
+        "hybridS2": {
+          "median": 1.263,
+          "ci95": [
+            1.195,
+            1.514
+          ]
+        },
+        "witnessS3": {
+          "median": 1.815,
+          "ci95": [
+            1.653,
+            1.93
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.878,
+          "ci95": [
+            0.787,
+            0.955
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 2.202,
+          "ci95": [
+            1.961,
+            2.34
+          ]
+        },
+        "hybridS2": {
+          "median": 1.833,
+          "ci95": [
+            1.685,
+            1.914
+          ]
+        },
+        "witnessS3": {
+          "median": 2.431,
+          "ci95": [
+            2.167,
+            2.6
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.426,
+          "ci95": [
+            1.331,
+            1.472
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 15,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 200
+      }
+    },
+    {
+      "n": 1000,
+      "meanNodes": 1000,
+      "meanEdges": 1492.7,
+      "scenario": "random",
+      "changeRatio": 0.001,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.0193,
+      "medianStepMs": {
+        "batch": 5.5714,
+        "S1": 0.2132,
+        "S2": 1.6608,
+        "S3": 0.1595,
+        "S3t": 0.1456
+      },
+      "medianOpsPerStep": {
+        "batch": 10540,
+        "S1": 257.5,
+        "S2": 1816.8,
+        "S3": 228.7,
+        "S3t": 228.7
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 26.271,
+          "ci95": [
+            22.936,
+            31.812
+          ]
+        },
+        "hybridS2": {
+          "median": 3.452,
+          "ci95": [
+            3.214,
+            3.657
+          ]
+        },
+        "witnessS3": {
+          "median": 35.637,
+          "ci95": [
+            32.933,
+            44.543
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 41.179,
+          "ci95": [
+            33.737,
+            44.757
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 40.908,
+          "ci95": [
+            38.041,
+            45.02
+          ]
+        },
+        "hybridS2": {
+          "median": 5.803,
+          "ci95": [
+            5.756,
+            5.879
+          ]
+        },
+        "witnessS3": {
+          "median": 46.078,
+          "ci95": [
+            43.148,
+            51.228
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 46.078,
+          "ci95": [
+            43.148,
+            51.228
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 0,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 1000,
+      "meanNodes": 1000,
+      "meanEdges": 1492.7,
+      "scenario": "random",
+      "changeRatio": 0.01,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.1806,
+      "medianStepMs": {
+        "batch": 5.3751,
+        "S1": 1.642,
+        "S2": 2.7033,
+        "S3": 1.3363,
+        "S3t": 1.2577
+      },
+      "medianOpsPerStep": {
+        "batch": 10401,
+        "S1": 2030.1,
+        "S2": 3326.4,
+        "S3": 1794.4,
+        "S3t": 1794.4
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 3.152,
+          "ci95": [
+            2.983,
+            3.721
+          ]
+        },
+        "hybridS2": {
+          "median": 2.018,
+          "ci95": [
+            1.879,
+            2.092
+          ]
+        },
+        "witnessS3": {
+          "median": 4.119,
+          "ci95": [
+            3.901,
+            4.605
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 4.275,
+          "ci95": [
+            4.105,
+            4.623
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 5.109,
+          "ci95": [
+            4.894,
+            5.278
+          ]
+        },
+        "hybridS2": {
+          "median": 3.113,
+          "ci95": [
+            3.057,
+            3.174
+          ]
+        },
+        "witnessS3": {
+          "median": 5.748,
+          "ci95": [
+            5.549,
+            5.969
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 5.748,
+          "ci95": [
+            5.549,
+            5.969
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 23,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 1000,
+      "meanNodes": 1000,
+      "meanEdges": 1492.7,
+      "scenario": "random",
+      "changeRatio": 0.05,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.5104,
+      "medianStepMs": {
+        "batch": 6.0996,
+        "S1": 5.045,
+        "S2": 4.9872,
+        "S3": 3.892,
+        "S3t": 6.9878
+      },
+      "medianOpsPerStep": {
+        "batch": 9869.3,
+        "S1": 5424.5,
+        "S2": 6156.6,
+        "S3": 4845.4,
+        "S3t": 7631.1
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 1.244,
+          "ci95": [
+            1.107,
+            1.331
+          ]
+        },
+        "hybridS2": {
+          "median": 1.216,
+          "ci95": [
+            1.154,
+            1.364
+          ]
+        },
+        "witnessS3": {
+          "median": 1.559,
+          "ci95": [
+            1.413,
+            1.782
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.901,
+          "ci95": [
+            0.824,
+            0.966
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 1.81,
+          "ci95": [
+            1.785,
+            1.844
+          ]
+        },
+        "hybridS2": {
+          "median": 1.593,
+          "ci95": [
+            1.576,
+            1.614
+          ]
+        },
+        "witnessS3": {
+          "median": 2.028,
+          "ci95": [
+            1.997,
+            2.07
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.284,
+          "ci95": [
+            1.278,
+            1.308
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 6,
+        "s1SpuriousViolations": 103,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 198
+      }
+    },
+    {
+      "n": 1000,
+      "meanNodes": 1000,
+      "meanEdges": 1492.7,
+      "scenario": "random",
+      "changeRatio": 0.1,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.6019,
+      "medianStepMs": {
+        "batch": 6.0563,
+        "S1": 6.8439,
+        "S2": 6.1196,
+        "S3": 5.1069,
+        "S3t": 8.3513
+      },
+      "medianOpsPerStep": {
+        "batch": 9287.2,
+        "S1": 6303,
+        "S2": 6840.2,
+        "S3": 5749.7,
+        "S3t": 8253
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 0.91,
+          "ci95": [
+            0.836,
+            0.944
+          ]
+        },
+        "hybridS2": {
+          "median": 1.015,
+          "ci95": [
+            0.89,
+            1.117
+          ]
+        },
+        "witnessS3": {
+          "median": 1.206,
+          "ci95": [
+            1.085,
+            1.296
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.706,
+          "ci95": [
+            0.662,
+            0.807
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 1.488,
+          "ci95": [
+            1.45,
+            1.504
+          ]
+        },
+        "hybridS2": {
+          "median": 1.368,
+          "ci95": [
+            1.341,
+            1.38
+          ]
+        },
+        "witnessS3": {
+          "median": 1.631,
+          "ci95": [
+            1.603,
+            1.646
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.131,
+          "ci95": [
+            1.113,
+            1.137
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 1,
+        "s1SpuriousViolations": 102,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 200
+      }
+    },
+    {
+      "n": 1000,
+      "meanNodes": 1000,
+      "meanEdges": 1492.7,
+      "scenario": "clustered",
+      "changeRatio": 0.001,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.0218,
+      "medianStepMs": {
+        "batch": 5.792,
+        "S1": 0.2647,
+        "S2": 1.8747,
+        "S3": 0.1807,
+        "S3t": 0.1849
+      },
+      "medianOpsPerStep": {
+        "batch": 10522.9,
+        "S1": 285.2,
+        "S2": 1838,
+        "S3": 252.3,
+        "S3t": 252.3
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 21.878,
+          "ci95": [
+            18.865,
+            24.445
+          ]
+        },
+        "hybridS2": {
+          "median": 3.111,
+          "ci95": [
+            2.893,
+            3.514
+          ]
+        },
+        "witnessS3": {
+          "median": 34.593,
+          "ci95": [
+            28.197,
+            37.086
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 33.821,
+          "ci95": [
+            25.075,
+            38.118
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 36.808,
+          "ci95": [
+            34.853,
+            42.969
+          ]
+        },
+        "hybridS2": {
+          "median": 5.722,
+          "ci95": [
+            5.665,
+            5.823
+          ]
+        },
+        "witnessS3": {
+          "median": 41.611,
+          "ci95": [
+            38.151,
+            48.713
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 41.611,
+          "ci95": [
+            38.151,
+            48.713
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 188,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 0,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 1000,
+      "meanNodes": 1000,
+      "meanEdges": 1492.7,
+      "scenario": "clustered",
+      "changeRatio": 0.01,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.1468,
+      "medianStepMs": {
+        "batch": 5.5194,
+        "S1": 1.5316,
+        "S2": 2.6309,
+        "S3": 1.1457,
+        "S3t": 1.0086
+      },
+      "medianOpsPerStep": {
+        "batch": 10351.3,
+        "S1": 1708.6,
+        "S2": 3049.4,
+        "S3": 1512.3,
+        "S3t": 1512.3
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 3.593,
+          "ci95": [
+            3.381,
+            4.233
+          ]
+        },
+        "hybridS2": {
+          "median": 2.09,
+          "ci95": [
+            1.919,
+            2.309
+          ]
+        },
+        "witnessS3": {
+          "median": 4.935,
+          "ci95": [
+            4.551,
+            5.643
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 5.407,
+          "ci95": [
+            4.647,
+            5.684
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 6.076,
+          "ci95": [
+            5.851,
+            6.426
+          ]
+        },
+        "hybridS2": {
+          "median": 3.404,
+          "ci95": [
+            3.343,
+            3.494
+          ]
+        },
+        "witnessS3": {
+          "median": 6.865,
+          "ci95": [
+            6.619,
+            7.253
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 6.865,
+          "ci95": [
+            6.619,
+            7.253
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 6,
+        "s1SpuriousViolations": 19,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 1000,
+      "meanNodes": 1000,
+      "meanEdges": 1492.7,
+      "scenario": "clustered",
+      "changeRatio": 0.05,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.4428,
+      "medianStepMs": {
+        "batch": 5.783,
+        "S1": 3.9536,
+        "S2": 4.1386,
+        "S3": 3.2922,
+        "S3t": 5.8022
+      },
+      "medianOpsPerStep": {
+        "batch": 9817.1,
+        "S1": 4275.2,
+        "S2": 5168.6,
+        "S3": 3840.2,
+        "S3t": 6377.9
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 1.484,
+          "ci95": [
+            1.278,
+            1.646
+          ]
+        },
+        "hybridS2": {
+          "median": 1.375,
+          "ci95": [
+            1.223,
+            1.532
+          ]
+        },
+        "witnessS3": {
+          "median": 1.754,
+          "ci95": [
+            1.548,
+            2.202
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.981,
+          "ci95": [
+            0.897,
+            1.111
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 2.289,
+          "ci95": [
+            2.227,
+            2.541
+          ]
+        },
+        "hybridS2": {
+          "median": 1.892,
+          "ci95": [
+            1.848,
+            2.037
+          ]
+        },
+        "witnessS3": {
+          "median": 2.549,
+          "ci95": [
+            2.477,
+            2.83
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.54,
+          "ci95": [
+            1.5,
+            1.677
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 66,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 176
+      }
+    },
+    {
+      "n": 1000,
+      "meanNodes": 1000,
+      "meanEdges": 1492.7,
+      "scenario": "clustered",
+      "changeRatio": 0.1,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.5119,
+      "medianStepMs": {
+        "batch": 6.9098,
+        "S1": 5.1675,
+        "S2": 5.8954,
+        "S3": 4.3671,
+        "S3t": 7.3714
+      },
+      "medianOpsPerStep": {
+        "batch": 9365.6,
+        "S1": 4520.1,
+        "S2": 5356.9,
+        "S3": 4126.2,
+        "S3t": 6824.6
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 1.338,
+          "ci95": [
+            1.185,
+            1.511
+          ]
+        },
+        "hybridS2": {
+          "median": 1.248,
+          "ci95": [
+            1.043,
+            1.452
+          ]
+        },
+        "witnessS3": {
+          "median": 1.574,
+          "ci95": [
+            1.436,
+            1.808
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.888,
+          "ci95": [
+            0.859,
+            1.022
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 2.077,
+          "ci95": [
+            1.923,
+            2.239
+          ]
+        },
+        "hybridS2": {
+          "median": 1.752,
+          "ci95": [
+            1.657,
+            1.851
+          ]
+        },
+        "witnessS3": {
+          "median": 2.272,
+          "ci95": [
+            2.094,
+            2.451
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.374,
+          "ci95": [
+            1.314,
+            1.433
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 62,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 200
+      }
+    },
+    {
+      "n": 5000,
+      "meanNodes": 5000,
+      "meanEdges": 7471.2,
+      "scenario": "random",
+      "changeRatio": 0.001,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.0221,
+      "medianStepMs": {
+        "batch": 36.564,
+        "S1": 1.4809,
+        "S2": 13.6557,
+        "S3": 1.3662,
+        "S3t": 1.2707
+      },
+      "medianOpsPerStep": {
+        "batch": 52740.9,
+        "S1": 1288.5,
+        "S2": 9065,
+        "S3": 1173.9,
+        "S3t": 1173.9
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 25.056,
+          "ci95": [
+            22.6,
+            27.342
+          ]
+        },
+        "hybridS2": {
+          "median": 2.613,
+          "ci95": [
+            2.436,
+            2.88
+          ]
+        },
+        "witnessS3": {
+          "median": 27.256,
+          "ci95": [
+            23.418,
+            30.661
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 28.689,
+          "ci95": [
+            27.342,
+            30.625
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 40.921,
+          "ci95": [
+            39.75,
+            42.28
+          ]
+        },
+        "hybridS2": {
+          "median": 5.816,
+          "ci95": [
+            5.791,
+            5.838
+          ]
+        },
+        "witnessS3": {
+          "median": 44.909,
+          "ci95": [
+            42.637,
+            46.856
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 44.909,
+          "ci95": [
+            42.637,
+            46.856
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 7,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 5000,
+      "meanNodes": 5000,
+      "meanEdges": 7471.2,
+      "scenario": "random",
+      "changeRatio": 0.01,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.1753,
+      "medianStepMs": {
+        "batch": 37.233,
+        "S1": 13.8549,
+        "S2": 23.9949,
+        "S3": 10.2386,
+        "S3t": 10.3684
+      },
+      "medianOpsPerStep": {
+        "batch": 52074.6,
+        "S1": 9978.5,
+        "S2": 16509,
+        "S3": 9029.5,
+        "S3t": 9029.5
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 2.874,
+          "ci95": [
+            2.554,
+            2.969
+          ]
+        },
+        "hybridS2": {
+          "median": 1.548,
+          "ci95": [
+            1.515,
+            1.678
+          ]
+        },
+        "witnessS3": {
+          "median": 3.64,
+          "ci95": [
+            3.407,
+            4.127
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 3.589,
+          "ci95": [
+            3.493,
+            3.968
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 5.221,
+          "ci95": [
+            5.087,
+            5.327
+          ]
+        },
+        "hybridS2": {
+          "median": 3.156,
+          "ci95": [
+            3.115,
+            3.189
+          ]
+        },
+        "witnessS3": {
+          "median": 5.771,
+          "ci95": [
+            5.602,
+            5.907
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 5.771,
+          "ci95": [
+            5.602,
+            5.907
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 147,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 5000,
+      "meanNodes": 5000,
+      "meanEdges": 7471.2,
+      "scenario": "random",
+      "changeRatio": 0.05,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.5136,
+      "medianStepMs": {
+        "batch": 38.87,
+        "S1": 41.4551,
+        "S2": 41.8019,
+        "S3": 31.7768,
+        "S3t": 55.4213
+      },
+      "medianOpsPerStep": {
+        "batch": 49306.3,
+        "S1": 27167.8,
+        "S2": 30876.3,
+        "S3": 25283.7,
+        "S3t": 38197.2
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 0.885,
+          "ci95": [
+            0.856,
+            0.946
+          ]
+        },
+        "hybridS2": {
+          "median": 0.931,
+          "ci95": [
+            0.852,
+            1.015
+          ]
+        },
+        "witnessS3": {
+          "median": 1.138,
+          "ci95": [
+            1.048,
+            1.227
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.697,
+          "ci95": [
+            0.624,
+            0.719
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 1.812,
+          "ci95": [
+            1.785,
+            1.835
+          ]
+        },
+        "hybridS2": {
+          "median": 1.595,
+          "ci95": [
+            1.577,
+            1.61
+          ]
+        },
+        "witnessS3": {
+          "median": 1.939,
+          "ci95": [
+            1.905,
+            1.97
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.289,
+          "ci95": [
+            1.275,
+            1.295
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 579,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 199
+      }
+    },
+    {
+      "n": 5000,
+      "meanNodes": 5000,
+      "meanEdges": 7471.2,
+      "scenario": "random",
+      "changeRatio": 0.1,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.6029,
+      "medianStepMs": {
+        "batch": 43.2082,
+        "S1": 51.1525,
+        "S2": 53.1206,
+        "S3": 49.5147,
+        "S3t": 68.7583
+      },
+      "medianOpsPerStep": {
+        "batch": 46254,
+        "S1": 31198.6,
+        "S2": 33930.6,
+        "S3": 30764.6,
+        "S3t": 41056.5
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 0.806,
+          "ci95": [
+            0.719,
+            0.85
+          ]
+        },
+        "hybridS2": {
+          "median": 0.824,
+          "ci95": [
+            0.769,
+            0.886
+          ]
+        },
+        "witnessS3": {
+          "median": 0.886,
+          "ci95": [
+            0.79,
+            1.008
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.61,
+          "ci95": [
+            0.555,
+            0.718
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 1.476,
+          "ci95": [
+            1.473,
+            1.495
+          ]
+        },
+        "hybridS2": {
+          "median": 1.36,
+          "ci95": [
+            1.358,
+            1.374
+          ]
+        },
+        "witnessS3": {
+          "median": 1.501,
+          "ci95": [
+            1.495,
+            1.51
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.125,
+          "ci95": [
+            1.123,
+            1.134
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 558,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 200
+      }
+    },
+    {
+      "n": 5000,
+      "meanNodes": 5000,
+      "meanEdges": 7471.2,
+      "scenario": "clustered",
+      "changeRatio": 0.001,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.0192,
+      "medianStepMs": {
+        "batch": 34.5413,
+        "S1": 1.3236,
+        "S2": 14.2914,
+        "S3": 1.0807,
+        "S3t": 1.1694
+      },
+      "medianOpsPerStep": {
+        "batch": 52652.4,
+        "S1": 1184.3,
+        "S2": 8971.2,
+        "S3": 1049.7,
+        "S3t": 1049.7
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 25.897,
+          "ci95": [
+            22.208,
+            27.806
+          ]
+        },
+        "hybridS2": {
+          "median": 2.461,
+          "ci95": [
+            2.33,
+            2.654
+          ]
+        },
+        "witnessS3": {
+          "median": 31.956,
+          "ci95": [
+            28.861,
+            35.642
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 31.547,
+          "ci95": [
+            27.007,
+            34.325
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 44.539,
+          "ci95": [
+            42.193,
+            48.398
+          ]
+        },
+        "hybridS2": {
+          "median": 5.882,
+          "ci95": [
+            5.835,
+            5.932
+          ]
+        },
+        "witnessS3": {
+          "median": 50.264,
+          "ci95": [
+            46.643,
+            54.145
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 50.264,
+          "ci95": [
+            46.643,
+            54.145
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 2,
+        "s1SpuriousViolations": 0,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 5000,
+      "meanNodes": 5000,
+      "meanEdges": 7471.2,
+      "scenario": "clustered",
+      "changeRatio": 0.01,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.1497,
+      "medianStepMs": {
+        "batch": 37.9235,
+        "S1": 10.2333,
+        "S2": 21.197,
+        "S3": 9.5577,
+        "S3t": 8.6328
+      },
+      "medianOpsPerStep": {
+        "batch": 51980.7,
+        "S1": 8150.5,
+        "S2": 14904.1,
+        "S3": 7473.8,
+        "S3t": 7473.8
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 3.761,
+          "ci95": [
+            3.427,
+            3.852
+          ]
+        },
+        "hybridS2": {
+          "median": 1.836,
+          "ci95": [
+            1.754,
+            1.953
+          ]
+        },
+        "witnessS3": {
+          "median": 4.166,
+          "ci95": [
+            3.814,
+            4.383
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 4.531,
+          "ci95": [
+            4.052,
+            4.877
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 6.366,
+          "ci95": [
+            6.23,
+            6.461
+          ]
+        },
+        "hybridS2": {
+          "median": 3.481,
+          "ci95": [
+            3.447,
+            3.51
+          ]
+        },
+        "witnessS3": {
+          "median": 6.949,
+          "ci95": [
+            6.837,
+            7.05
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 6.949,
+          "ci95": [
+            6.837,
+            7.05
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 124,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 0
+      }
+    },
+    {
+      "n": 5000,
+      "meanNodes": 5000,
+      "meanEdges": 7471.2,
+      "scenario": "clustered",
+      "changeRatio": 0.05,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.4432,
+      "medianStepMs": {
+        "batch": 37.5916,
+        "S1": 29.0124,
+        "S2": 34.0089,
+        "S3": 28.435,
+        "S3t": 45.6401
+      },
+      "medianOpsPerStep": {
+        "batch": 48938.7,
+        "S1": 21376.6,
+        "S2": 25953.6,
+        "S3": 19800.5,
+        "S3t": 31132.2
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 1.194,
+          "ci95": [
+            1.141,
+            1.294
+          ]
+        },
+        "hybridS2": {
+          "median": 1.135,
+          "ci95": [
+            1.011,
+            1.233
+          ]
+        },
+        "witnessS3": {
+          "median": 1.413,
+          "ci95": [
+            1.275,
+            1.647
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.786,
+          "ci95": [
+            0.739,
+            0.857
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 2.312,
+          "ci95": [
+            2.219,
+            2.469
+          ]
+        },
+        "hybridS2": {
+          "median": 1.903,
+          "ci95": [
+            1.848,
+            1.992
+          ]
+        },
+        "witnessS3": {
+          "median": 2.478,
+          "ci95": [
+            2.376,
+            2.651
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.578,
+          "ci95": [
+            1.474,
+            1.643
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 444,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 178
+      }
+    },
+    {
+      "n": 5000,
+      "meanNodes": 5000,
+      "meanEdges": 7471.2,
+      "scenario": "clustered",
+      "changeRatio": 0.1,
+      "seeds": 10,
+      "stepsPerSeed": 20,
+      "medianScopeShareS3": 0.5191,
+      "medianStepMs": {
+        "batch": 57.2609,
+        "S1": 53.0494,
+        "S2": 52.0041,
+        "S3": 42.4067,
+        "S3t": 70.9803
+      },
+      "medianOpsPerStep": {
+        "batch": 46153.1,
+        "S1": 22098,
+        "S2": 26220.3,
+        "S3": 21191.8,
+        "S3t": 33578
+      },
+      "speedupTime": {
+        "kHopS1": {
+          "median": 1.087,
+          "ci95": [
+            1.007,
+            1.173
+          ]
+        },
+        "hybridS2": {
+          "median": 1.108,
+          "ci95": [
+            1.043,
+            1.203
+          ]
+        },
+        "witnessS3": {
+          "median": 1.363,
+          "ci95": [
+            1.279,
+            1.469
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 0.825,
+          "ci95": [
+            0.745,
+            0.91
+          ]
+        }
+      },
+      "speedupOps": {
+        "kHopS1": {
+          "median": 2.099,
+          "ci95": [
+            1.918,
+            2.175
+          ]
+        },
+        "hybridS2": {
+          "median": 1.771,
+          "ci95": [
+            1.656,
+            1.816
+          ]
+        },
+        "witnessS3": {
+          "median": 2.202,
+          "ci95": [
+            1.979,
+            2.263
+          ]
+        },
+        "witnessThresholdS3t": {
+          "median": 1.388,
+          "ci95": [
+            1.314,
+            1.414
+          ]
+        }
+      },
+      "correctness": {
+        "steps": 200,
+        "s1MissedViolations": 0,
+        "s1SpuriousViolations": 362,
+        "s2MismatchSteps": 0,
+        "s3MismatchSteps": 0,
+        "s3tMismatchSteps": 0,
+        "s3tFallbackSteps": 200
+      }
+    }
+  ],
+  "speedupLarge": [],
+  "elapsedMs": {
+    "main": 2250212,
+    "large": 0
+  }
+}

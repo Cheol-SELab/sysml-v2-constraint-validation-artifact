@@ -1,0 +1,276 @@
+{
+  "experiment": "N1: X3 incremental-scope experiment re-judged by the multi-type SHACL oracle (rdfs mode)",
+  "catalog": "aerospace",
+  "k": 2,
+  "unitsProcessed": 82,
+  "definitions": {
+    "a": "X3 (a) edits of G (same RNG stream 20261020 as sysml/experiments.ts); classes and attributes of other nodes fixed; incremental = scoped re-validation on N_k(delta)",
+    "a2": "(a') the (a) attribute edits whose target element has a non-empty proper down-set, re-read as an edit of H: the attribute feature of the statement is replaced (S1 re-run, inheritance propagates); naive = scope seeded with the edited node, witness = seeded with the edited node and its down-set; 'name' is excluded (identity, not inherited)",
+    "b": "X3 (b) edits of H (same selection); naive / witness scopes as in X3"
+  },
+  "a2Selection": {
+    "candidates": 237,
+    "skippedName": 41,
+    "notExpressible": 0,
+    "propagatedToOthers": 105,
+    "examples": [
+      {
+        "unit": "examples/Analysis Examples",
+        "node": "Velocity#13489",
+        "attr": "method",
+        "value": "x",
+        "inheritorsChanged": [
+          "vel#13541"
+        ]
+      },
+      {
+        "unit": "examples/Analysis Examples",
+        "node": "highwayFuelEconomyRequirement#13732",
+        "attr": "direction",
+        "value": "in",
+        "inheritorsChanged": [
+          "vehicleFuelEconomyRequirement_highway#13876"
+        ]
+      },
+      {
+        "unit": "examples/Arrowhead Framework Example",
+        "node": "SysDD#14110",
+        "attr": "mass",
+        "value": "x",
+        "inheritorsChanged": [
+          "systems#14109",
+          "global_systemsdd#14141"
+        ]
+      },
+      {
+        "unit": "examples/Camera Example",
+        "node": "Focus#14294",
+        "attr": "priority",
+        "value": "high",
+        "inheritorsChanged": [
+          "focus#14301"
+        ]
+      },
+      {
+        "unit": "examples/Cause and Effect Examples",
+        "node": "Causer2#14307",
+        "attr": "method",
+        "value": 50,
+        "inheritorsChanged": [
+          "causer2#14320"
+        ]
+      },
+      {
+        "unit": "examples/Flashlight Example",
+        "node": "LightPort#14388",
+        "attr": "mass",
+        "value": "high",
+        "inheritorsChanged": [
+          "lightPort#14409",
+          "lightPort#14411"
+        ]
+      },
+      {
+        "unit": "examples/Flashlight Example",
+        "node": "LightPort#14388",
+        "attr": "method",
+        "value": "in",
+        "inheritorsChanged": [
+          "lightPort#14409",
+          "lightPort#14411"
+        ]
+      },
+      {
+        "unit": "examples/Flashlight Example",
+        "node": "OnOffCmdPort#14385",
+        "attr": "method",
+        "value": "A",
+        "inheritorsChanged": [
+          "onOffCmdPort#14393",
+          "onOffCmdPort#14402"
+        ]
+      },
+      {
+        "unit": "examples/Import Tests",
+        "node": "A#14821",
+        "attr": "priority",
+        "value": "high",
+        "inheritorsChanged": [
+          "x#14824",
+          "z1#14832"
+        ]
+      },
+      {
+        "unit": "examples/Import Tests",
+        "node": "B#14808",
+        "attr": "priority",
+        "value": 12000,
+        "inheritorsChanged": [
+          "y#14812",
+          "y#14816",
+          "y#14818"
+        ]
+      }
+    ]
+  },
+  "totals": {
+    "a": {
+      "edits": 2460,
+      "batchChanged": 1667,
+      "truthEqualsOracle": 2460,
+      "incEqualsTruth": 2460,
+      "incEqualsOracle": 2460,
+      "naiveEqualsTruth": 0,
+      "naiveEqualsOracle": 0,
+      "witnessEqualsTruth": 0,
+      "witnessEqualsOracle": 0,
+      "naiveWrongWhenChanged": 0,
+      "witnessWrongWhenChanged": 0
+    },
+    "a2": {
+      "edits": 196,
+      "batchChanged": 23,
+      "truthEqualsOracle": 196,
+      "incEqualsTruth": 0,
+      "incEqualsOracle": 0,
+      "naiveEqualsTruth": 173,
+      "naiveEqualsOracle": 173,
+      "witnessEqualsTruth": 196,
+      "witnessEqualsOracle": 196,
+      "naiveWrongWhenChanged": 23,
+      "witnessWrongWhenChanged": 0
+    },
+    "b": {
+      "edits": 563,
+      "batchChanged": 30,
+      "truthEqualsOracle": 563,
+      "incEqualsTruth": 0,
+      "incEqualsOracle": 0,
+      "naiveEqualsTruth": 554,
+      "naiveEqualsOracle": 554,
+      "witnessEqualsTruth": 562,
+      "witnessEqualsOracle": 562,
+      "naiveWrongWhenChanged": 9,
+      "witnessWrongWhenChanged": 1
+    }
+  },
+  "byPartAndKind": {
+    "a:setAttr": {
+      "edits": 837,
+      "batchChanged": 193,
+      "truthEqualsOracle": 837,
+      "incEqualsTruth": 837,
+      "incEqualsOracle": 837,
+      "naiveEqualsTruth": 0,
+      "naiveEqualsOracle": 0,
+      "witnessEqualsTruth": 0,
+      "witnessEqualsOracle": 0,
+      "naiveWrongWhenChanged": 0,
+      "witnessWrongWhenChanged": 0
+    },
+    "a:delEdge": {
+      "edits": 701,
+      "batchChanged": 617,
+      "truthEqualsOracle": 701,
+      "incEqualsTruth": 701,
+      "incEqualsOracle": 701,
+      "naiveEqualsTruth": 0,
+      "naiveEqualsOracle": 0,
+      "witnessEqualsTruth": 0,
+      "witnessEqualsOracle": 0,
+      "naiveWrongWhenChanged": 0,
+      "witnessWrongWhenChanged": 0
+    },
+    "a2:setAttr(propagates)": {
+      "edits": 105,
+      "batchChanged": 23,
+      "truthEqualsOracle": 105,
+      "incEqualsTruth": 0,
+      "incEqualsOracle": 0,
+      "naiveEqualsTruth": 82,
+      "naiveEqualsOracle": 82,
+      "witnessEqualsTruth": 105,
+      "witnessEqualsOracle": 105,
+      "naiveWrongWhenChanged": 23,
+      "witnessWrongWhenChanged": 0
+    },
+    "a2:setAttr(local)": {
+      "edits": 91,
+      "batchChanged": 0,
+      "truthEqualsOracle": 91,
+      "incEqualsTruth": 0,
+      "incEqualsOracle": 0,
+      "naiveEqualsTruth": 91,
+      "naiveEqualsOracle": 91,
+      "witnessEqualsTruth": 91,
+      "witnessEqualsOracle": 91,
+      "naiveWrongWhenChanged": 0,
+      "witnessWrongWhenChanged": 0
+    },
+    "a:addEdge": {
+      "edits": 922,
+      "batchChanged": 857,
+      "truthEqualsOracle": 922,
+      "incEqualsTruth": 922,
+      "incEqualsOracle": 922,
+      "naiveEqualsTruth": 0,
+      "naiveEqualsOracle": 0,
+      "witnessEqualsTruth": 0,
+      "witnessEqualsOracle": 0,
+      "naiveWrongWhenChanged": 0,
+      "witnessWrongWhenChanged": 0
+    },
+    "b:deleteCatalogAttribute": {
+      "edits": 26,
+      "batchChanged": 3,
+      "truthEqualsOracle": 26,
+      "incEqualsTruth": 0,
+      "incEqualsOracle": 0,
+      "naiveEqualsTruth": 25,
+      "naiveEqualsOracle": 25,
+      "witnessEqualsTruth": 26,
+      "witnessEqualsOracle": 26,
+      "naiveWrongWhenChanged": 1,
+      "witnessWrongWhenChanged": 0
+    },
+    "b:removeGeneralizations": {
+      "edits": 379,
+      "batchChanged": 25,
+      "truthEqualsOracle": 379,
+      "incEqualsTruth": 0,
+      "incEqualsOracle": 0,
+      "naiveEqualsTruth": 372,
+      "naiveEqualsOracle": 372,
+      "witnessEqualsTruth": 378,
+      "witnessEqualsOracle": 378,
+      "naiveWrongWhenChanged": 7,
+      "witnessWrongWhenChanged": 1
+    },
+    "b:deleteAttribute": {
+      "edits": 158,
+      "batchChanged": 2,
+      "truthEqualsOracle": 158,
+      "incEqualsTruth": 0,
+      "incEqualsOracle": 0,
+      "naiveEqualsTruth": 157,
+      "naiveEqualsOracle": 157,
+      "witnessEqualsTruth": 158,
+      "witnessEqualsOracle": 158,
+      "naiveWrongWhenChanged": 1,
+      "witnessWrongWhenChanged": 0
+    }
+  },
+  "truthOracleMismatches": [],
+  "codeIdentity": {
+    "src/cli-spec-oracle.ts": "660caefdc34892e2a0cb065ed2f0021e4dae8abae6cf8e89b66d6c452132144a",
+    "src/sysml/specEngine.ts": "8d93d124e940ef9f82ccf1c4e96887aabb8c40b36abfebd2980651fc8f4e20c7",
+    "src/sysml/normalize.ts": "96a4fc4d28626abe5972e2be066301a72cd19bf8d0c0a243467f94d1395ddd74",
+    "src/sysml/semantics.ts": "65bb10a69538332a6393bcd2331e0f85f94b68e21ec66c70bc305f17aeb48dd8",
+    "src/validator/engine.ts": "c6b09f34e5642e85428aa139223745dd0c3ff01abc0ee786857041b502c85303",
+    "src/catalog/rules.ts": "aa8a5187a59b3c5471c9d49171166a67d9d4ee1b7855f4c2480ddf421b5f8fd6",
+    "oracle-py/run_oracle_multi.py": "921c4aa6e8cda302ed5db46869021688f4441fadc769a1ba8a5fd97e37d6bef0",
+    "oracle-py/rdf_export.py": "44a6aa25605f2551cc955a208e481379cd102c3b0d6872198216739c3150dca6",
+    "oracle-py/shapes.py": "987857e51000d0df61fe2d5e2dfb1623fa6bc7fb31ebff974435a224c7ae9195",
+    "oracle-py/run_oracle.py": "a40f82d9186074c6645cd2ae3a7ed0c8382719cc015aca8a52e457c1c2603069"
+  }
+}

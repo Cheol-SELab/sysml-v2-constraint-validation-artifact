@@ -1,0 +1,54 @@
+[2026-10-22 23:03:01] start r8-light: bash -c node dist-r8/cli-r8.js tests --out 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/r8' && node dist-r8/cli-r8.js wex --out 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/r8' && node dist-r8/cli-r8.js csr-eq --out 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/r8' && node dist-r8/cli-r8.js wf2 --out 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/r8' && node dist-r8/cli-blind.js probes --blind 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/../oracle-blind' --out 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/n20-blind-probes' --work 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/probes' && cd oracle-py && 'G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/oracle-py/.venv/Scripts/python.exe' -B -m unittest test_oracle.py
+ok   n21 duplicate node id is rejected
+ok   n21 duplicate edge id is rejected
+ok   n21 dangling edge: dropped and reported (default policy)
+ok   n21 dangling edge: rejected under policy reject
+ok   n21 checkModelInput lists every defect class incl. P_own
+ok   n21 P_own violation is reported but not rejected (MULT can still fire)
+ok   n21 addEdge with an existing id is rejected and leaves G unchanged
+ok   n21 applyChanges ignores a duplicate addEdge (no touched ids)
+ok   n21 incremental session equals batch after a duplicate addEdge (all strategies)
+ok   n21 a dependOn 2-cycle created through a fresh id is still detected
+ok   n12 Baseline B warns on a dependOn cycle (2-cycle, self-loop) and not on a DAG
+ok   n12 Baseline B warns on a requirement without satisfy
+ok   n12 Baseline B output does not depend on the catalog (Prop. 1 premise)
+ok   n17 worked example: S1 (keyword) output is the Table-3 graph
+ok   n17 NamespaceExpose X::* gives subject(view, X) and expose(view, member)
+ok   n17 legacy exposure mapping (no subject) is still available for impact measurement
+16/16 passed
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\r8\r8-tests.json
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\r8\n17-worked-example-sysml.json
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\r8\n13-csr-equivalence.json
+{"generated":{"models":45,"violations":0,"mismatches":0},"hub":{"models":18,"violations":0,"mismatches":0},"random-fixed-catalog":{"models":6000,"violations":95129,"mismatches":0},"random-catalog":{"models":10000,"violations":121308,"mismatches":0}}
+wf2 specialization/all: {}
+wf2 specialization/usage: {}
+wf2 keyword/all: {}
+wf2 keyword/usage: {}
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\r8\n15-wellformedness-extended.json
+written G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\n20-blind-probes\n20-ambiguity-probes.json
+agree    1 DOM range closed [min,max] | E DOM:A.r|a2 DOM:A.r|a3 | O DOM:A.r|a2 DOM:A.r|a3 | B DOM:A.r|a2 DOM:A.r|a3
+agree    2 DOM range: string "1" and boolean true are not numbers | E DOM:A.r|a0 DOM:A.r|a1 | O DOM:A.r|a0 DOM:A.r|a1 | B DOM:A.r|a0 DOM:A.r|a1
+agree    3 DOM enum: value and primitive kind must match ("1" != 1, true != 1, 1 == 1.0) | E DOM:A.e|a0 DOM:A.e|a3 DOM:B.e2|b0 | O DOM:A.e|a0 DOM:A.e|a3 DOM:B.e2|b0 | B DOM:A.e|a0 DOM:A.e|a3 DOM:B.e2|b0
+agree    4 DOM nonEmptyString: " " valid, "" and numbers invalid, no trimming | E DOM:A.s|a1 DOM:A.s|a2 | O DOM:A.s|a1 DOM:A.s|a2 | B DOM:A.s|a1 DOM:A.s|a2
+agree    5 DOM: absent attribute passes (ATTR decides) | E REQ:A.k|a1 | O REQ:A.k|a1 | B REQ:A.k|a1
+agree    6 ATTR: present with "", 0 or false counts as defined | E  | O  | B 
+agree    7 DOM evaluated for a domain key whose attribute is not required | E DOM:A.r|a0 | O DOM:A.r|a0 | B DOM:A.r|a0
+agree    9 edge type absent from Allowed / from the catalog: no TYPE rule | E  | O  | B 
+DISAGREE 10 dangling edge: excluded from G (engine/oracle) vs kept (blind) | E ISO:A|a0 ISO:B|b0 MULT:A|q|in|a0 MULT:A|q|out|a0 MULT:B|p|in|b0 | O ISO:A|a0 ISO:B|b0 MULT:A|q|in|a0 MULT:A|q|out|a0 MULT:B|p|in|b0 | B ACYC:q|a0,ghost ISO:B|b0 MULT:B|p|in|b0 TYPE:p|e0
+agree    11 MULT counts edges (parallel edges count twice); a self-loop counts once out and once in | E MULT:A|q|in|a0 MULT:A|q|in|a1 MULT:A|q|out|a1 | O MULT:A|q|in|a0 MULT:A|q|in|a1 MULT:A|q|out|a1 | B MULT:A|q|in|a0 MULT:A|q|in|a1 MULT:A|q|out|a1
+agree    12 MULT: no edge at all violates a lower bound >= 1 | E MULT:A|q|in|a0 MULT:A|q|out|a0 MULT:B|p|in|b0 | O MULT:A|q|in|a0 MULT:A|q|out|a0 MULT:B|p|in|b0 | B MULT:A|q|in|a0 MULT:A|q|out|a0 MULT:B|p|in|b0
+agree    13 ISO: a self-loop or an edge of an uncatalogued type makes a node non-isolated | E ISO:A|a1 ISO:B|b1 | O ISO:A|a1 ISO:B|b1 | B ISO:A|a1 ISO:B|b1
+agree    14a VIEW: any one of several subject edges suffices; contain starts at tgt(e1) | E VIEW:V|b1,v0 | O VIEW:V|b1,v0 | B VIEW:V|b1,v0
+agree    14b VIEW: repeated expose edges and mutual exposure collapse to one key | E VIEW:V|a0,v0 VIEW:V|v0,v1 | O VIEW:V|a0,v0 VIEW:V|v0,v1 | B VIEW:V|a0,v0 VIEW:V|v0,v1
+agree    14c VIEW: subject, expose and contain edge types coincide (formula applied literally) | E  | O  | B 
+agree    15 ACYC: self-loop is a one-node SCC; one key per SCC | E ACYC:q|a0 ACYC:q|a1,a2,a3 | O ACYC:q|a0 ACYC:q|a1,a2,a3 | B ACYC:q|a0 ACYC:q|a1,a2,a3
+agree    16a TRACE: path length >= 1; a source of the target type on a cycle reaches itself | E TRACE:T0|a2 | O TRACE:T0|a2 | B TRACE:T0|a2
+agree    16b TRACE: empty edge-type set -> every source violates; no target nodes -> every source violates | E TRACE:T1|b0 TRACE:T1|b1 TRACE:T2|b0 TRACE:T2|b1 | O TRACE:T1|b0 TRACE:T1|b1 TRACE:T2|b0 TRACE:T2|b1 | B TRACE:T1|b0 TRACE:T1|b1 TRACE:T2|b0 TRACE:T2|b1
+agree    16c TRACE: no source node -> no violation | E  | O  | B 
+{"engine":"rejected: invalid model input: duplicateNodeId(a0), duplicateEdgeId(e0)","oracle":"rejected: ValueError: duplicate node id a0 in model dup","blind":"rejected: sqlite3.IntegrityError: UNIQUE constraint failed: node.id"}
+.............
+----------------------------------------------------------------------
+Ran 13 tests in 1.306s
+
+OK
+[2026-10-22 23:03:15] end r8-light rc=0 elapsed=14s

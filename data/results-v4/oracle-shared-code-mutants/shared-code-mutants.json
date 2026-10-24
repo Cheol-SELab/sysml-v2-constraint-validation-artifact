@@ -1,0 +1,86 @@
+{
+  "experiment": "shared-code-mutants",
+  "method": "each mutant applied to a copy of the snapshot; random differential run with --fixed 400 (x5 catalogs) --rcat 50 (x25 models); same seeds for all mutants",
+  "rows": [
+    {
+      "mutant": "S2-mult-direction",
+      "file": "src/catalog/rules.ts",
+      "description": "multiplicity direction reversed in rule derivation",
+      "cases": 3250,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineVsOracleMismatchingCases": 938,
+      "referenceVsOracleMismatchingCases": 938,
+      "exit": 0
+    },
+    {
+      "mutant": "S2-mult-upper-off-by-one",
+      "file": "src/catalog/rules.ts",
+      "description": "finite upper multiplicity bound derived one too large",
+      "cases": 3250,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineVsOracleMismatchingCases": 120,
+      "referenceVsOracleMismatchingCases": 120,
+      "exit": 0
+    },
+    {
+      "mutant": "S2-required-first-only",
+      "file": "src/catalog/rules.ts",
+      "description": "only the first required attribute of each type becomes a rule",
+      "cases": 3250,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineVsOracleMismatchingCases": 1674,
+      "referenceVsOracleMismatchingCases": 1674,
+      "exit": 0
+    },
+    {
+      "mutant": "DOM-range-lower-exclusive",
+      "file": "src/catalog/rules.ts",
+      "description": "range lower bound treated as exclusive",
+      "cases": 3250,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineVsOracleMismatchingCases": 124,
+      "referenceVsOracleMismatchingCases": 124,
+      "exit": 0
+    },
+    {
+      "mutant": "DOM-range-upper-exclusive",
+      "file": "src/catalog/rules.ts",
+      "description": "range upper bound treated as exclusive",
+      "cases": 3250,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineVsOracleMismatchingCases": 103,
+      "referenceVsOracleMismatchingCases": 103,
+      "exit": 0
+    },
+    {
+      "mutant": "DOM-nonempty-accepts-empty",
+      "file": "src/catalog/rules.ts",
+      "description": "empty string accepted as non-empty",
+      "cases": 3250,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineVsOracleMismatchingCases": 68,
+      "referenceVsOracleMismatchingCases": 68,
+      "exit": 0
+    },
+    {
+      "mutant": "DOM-enum-loose-equality",
+      "file": "src/catalog/rules.ts",
+      "description": "enum membership by string coercion (1 == \"1\")",
+      "cases": 3250,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineVsOracleMismatchingCases": 5,
+      "referenceVsOracleMismatchingCases": 5,
+      "exit": 0
+    },
+    {
+      "mutant": "S1-drop-self-loops",
+      "file": "src/model/graph.ts",
+      "description": "normalisation silently drops self-loop relations",
+      "cases": 3250,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineVsOracleMismatchingCases": 2010,
+      "referenceVsOracleMismatchingCases": 2010,
+      "exit": 0
+    }
+  ]
+}

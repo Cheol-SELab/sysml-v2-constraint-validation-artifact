@@ -1,0 +1,261 @@
+\section{연구 배경 및 문제 정의}
+
+SysML v2 모델은 part, port, connection, requirement, verification case 등의 요소로 구성되며 표준 API로
+접근할 수 있다. 조직의 모델링 방법론은 표준이 규정하지 않는 타입 어휘, 관계 허용성, 속성 완전성(필수
+속성과 값 도메인), 추적성 정책(요구사항이 충족되는 경로)을 추가로 요구한다. 모델은 다음의 타입 속성
+그래프(typed attributed graph)로 정규화한다.
+\begin{equation}
+G = (V,\ E,\ \mathit{src},\ \mathit{tgt},\ \tau_V,\ \tau_E,\ \mathit{attr})
+\label{eq:graph}
+\end{equation}
+$V$는 모델 요소(노드) 집합, $E$는 관계(엣지) 집합이며 $\mathit{src},\mathit{tgt}: E \rightarrow V$는
+엣지의 시작과 끝 노드를 준다. 같은 노드 쌍 사이에 여러 엣지가 있을 수 있다.
+$\tau_V: V \rightarrow T_V$와 $\tau_E: E \rightarrow T_E$는 노드와 엣지의 타입이고,
+$\mathit{attr}: V \times A \rightarrow \mathit{Val} \cup \{\bot\}$는 노드의 속성 값($\bot$은 미정의)이다.
+노드의 타입과 엣지의 타입$\cdot$끝점은 원시 변경에서 바뀌지 않으며(타입 교체는 \ref{sec:theorems}절), 엣지의
+재연결은 삭제와 추가로 본다.
+두 노드 사이의 거리 $d_G(u,v)$는 엣지 방향과 타입을 무시한 최단 경로 길이이고,
+$N_k^G(S) = \{v \mid \exists u \in S,\ d_G(u,v) \le k\}$는 노드 집합 $S$의 반경 $k$ 근방이다.
+
+메타모델 카탈로그 $C$는 타입 어휘, 허용 관계, 필수 속성과 값 도메인, 다중성,
+추적성 정책을 정의하며, $C$로부터 규칙 집합 $R_C$가 파생된다. 검증 문제는 다음 함수를 계산하는 것이다.
+\begin{equation}
+\Omega(G, C) = \{\, (r, w) \mid r \in R_C,\ G,C,g \models \neg r,\ w = \pi_r(g) \,\}
+\end{equation}
+$r$은 개별 검증 규칙, $g$는 규칙 $r$의 그라운딩(규칙의 변수에 모델 요소를 대입한 것)이며,
+$G,C,g \models \neg r$는 $g$가 $r$을 만족하지 않는다는 뜻이며, 증거 $w = \pi_r(g)$는 위반 판단에 쓰인 요소
+식별자들이다. 곧 유효 여부가 아니라 각 위반의 원인과 위치를 재현 가능하게 산출한다.
+
+%% ============================================================== 3. 관련 연구
+\section{제안 방법}
+
+\subsection{전체 구조와 메타모델 카탈로그}
+\label{sec:arch}
+
+제안 기법은 SysML v2 모델을 타입 속성 그래프로 정규화하고 카탈로그에서 파생한 규칙을 적용하여 위반을 증거와
+함께 산출한다. 절차는 그림~\ref{fig:proc}의 다섯 단계이며, 각 단계의 입출력은 \ref{sec:example}절의 예제로 보인다.
+
+\begin{figure*}[t]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[x=1cm,y=1cm]
+  %% top row: model -> normalize -> graph -> evaluate -> violations -> classify
+  \node[databox]  (m)  at ( 0.0, 0) {SysML v2 model\\(textual notation)};
+  \node[stagebox] (s1) at ( 3.0, 0) {\textbf{S1} Normalize\\\scriptsize metaclass map,\\[-1pt]\scriptsize specialization};
+  \node[databox]  (g)  at ( 6.3, 0) {$G=(V,E,\mathit{src},\mathit{tgt},\tau_V,\tau_E,\mathit{attr})$\\with adjacency index};
+  \node[stagebox] (s3) at (10.4, 0) {\textbf{S3} Evaluate\\\scriptsize local: scoped grounding\\[-1pt]\scriptsize global: witness store};
+  \node[databox]  (om) at (13.8, 0) {$\Omega$ = violations\\with evidence};
+  \node[stagebox] (s4) at (16.9, 0) {\textbf{S4} Classify\\\scriptsize rule class, severity,\\[-1pt]\scriptsize impact scope};
+
+  %% bottom row: catalog -> rule derivation -> rule set;  incremental stage
+  \node[databox]  (c)  at ( 0.0,-1.75) {metamodel catalog $C$\\(types, policies)};
+  \node[stagebox] (s2) at ( 3.0,-1.75) {\textbf{S2} Derive rules\\\scriptsize $C \rightarrow R_C \subseteq L_C$};
+  \node[databox]  (r)  at ( 6.3,-1.75) {$R_C = R_{\mathit{loc}} \uplus R_{\mathit{glob}}$\\radius $k_r$ per rule};
+  \node[stagebox] (s5) at (11.9,-1.75) {\textbf{S5} Revalidate on change set $\Delta$\\\scriptsize recompute scope $N_k(\Delta)$, update witness stores};
+
+  \draw[flow] (m)  -- (s1);
+  \draw[flow] (s1) -- (g);
+  \draw[flow] (g)  -- (s3);
+  \draw[flow] (s3) -- (om);
+  \draw[flow] (om) -- (s4);
+  \draw[flow] (c)  -- (s2);
+  \draw[flow] (s2) -- (r);
+  \draw[flow] (r.north) -- ++(0,0.7) -| ($(s3.south)+(-0.7,0)$);
+  \draw[flow] (s4.south) |- (s5.east);
+  \draw[feedback] (s5.north) -- ($(s3.south)+(0.7,0)$);
+  \node[font=\scriptsize\itshape,anchor=west] at (12.1,-0.95) {edit loop};
+\end{tikzpicture}}
+\bifigcaption{메타모델 기반 의미 검증 절차. 실선은 산출물 흐름, 점선은 변경 집합 $\Delta$에
+              대한 증분 재검증 경로이다}
+             {The metamodel-governed semantic validation procedure. Solid arrows carry
+              artifacts; the dashed arrow is the incremental revalidation path for a change
+              set $\Delta$}
+\label{fig:proc}
+\end{figure*}
+
+카탈로그는 다음 10-튜플이다.
+\begin{equation}
+\begin{split}
+C = (\,& T_V,\ T_E,\ \mathit{Allowed},\ \mathit{RequiredAttr},\ \mathit{Domain},\\
+       & \mathit{Mult},\ \mathit{NonIsolated},\ \mathit{View},\ \mathit{Acyclic},\ \mathit{TracePolicy}\,)
+\end{split}
+\end{equation}
+$\mathit{Allowed} : T_E \rightarrow 2^{T_V} \times 2^{T_V}$는 관계별 허용 시작$\cdot$끝 타입,
+$\mathit{RequiredAttr}$는 노드 타입별 필수 속성, $\mathit{Domain}$은 속성 값 도메인,
+$\mathit{Mult} : T_V \times T_E \times \{\mathit{in},\mathit{out}\} \rightharpoonup \mathbb{N}
+\times (\mathbb{N} \cup \{\infty\})$는 방향별 다중성, $\mathit{NonIsolated} \subseteq T_V$는 고립되면
+안 되는 타입, $\mathit{View}$는 뷰$\cdot$주체$\cdot$노출$\cdot$소유 관계 타입의 지정이다.
+$\mathit{Acyclic} \subseteq T_E$는 비순환이어야 하는 관계 타입, $\mathit{TracePolicy}$는
+(원천 타입 $s$, 관계 타입 집합 $T \subseteq T_E$, 도달 대상 타입 $t'$) 삼중항의 집합이다.
+허용 경로는 경로 언어 $T^{+}$(길이 1 이상)로 고정하며 일반 정규 경로 언어는 범위 밖이다. 값 도메인
+$\mathit{Domain}(t,a)$는 값과 원시 타입이 모두 같은 원소만 허용하는 열거형(정수 1과 문자열 ``1''은 다르다), 수치
+값만 허용하는 닫힌 구간 $[l,h]$, 공백을 제거하지 않은 길이가 1 이상인 문자열형 중 하나이다. 속성이 없는
+경우($\bot$)는 필수 속성 규칙이 판정한다.
+
+\textbf{S1 정규화.} 단계 S1은 SysML v2 텍스트 표기를 구조 부분집합으로 파싱한 뒤 표~\ref{tab:s1map}의
+사상으로 $G$와 타입 계층 $H$를 만든다. 정의와 합성 사용은 노드가, 소유자와 피처가 모두 노드인 소유
+멤버십은 contain 엣지가 되며, 연결$\cdot$충족$\cdot$검증$\cdot$할당$\cdot$의존$\cdot$노출 관계는 각각 $T_E$의
+엣지가 된다. 리터럴 값을 가진 attribute 사용은 소유 노드의 속성이 된다. 카탈로그 타입 $t$는 표준 라이브러리
+정의 $A(t)$(예: Component$\mapsto$\texttt{Parts::Part})에 대응하고, 노드 $x$가 $t$에 속함은
+$x \sqsubseteq A(t)$로 판정한다. $\sqsubseteq$는 타이핑$\cdot$특수화$\cdot$부분집합$\cdot$재정의와 키워드의
+암묵적 라이브러리 상위 타입이 이루는 반사$\cdot$추이 폐쇄이므로, 한 요소가 여러 카탈로그 타입에 속할 수
+있다(view는 \texttt{View} $\sqsubseteq$ \texttt{Part}이므로 Component이기도 하다). 속성 값은 같은 폐쇄를
+따라 상속되며 가장 구체적인 값이 우선한다. 참조 피처는 노드로 만들지 않고, 관계의 끝으로 쓰일 때
+부분집합$\cdot$재정의 사슬을 따라 가리키는 요소로 해소한다. 표현하지 않는 구성요소는 버리지 않고 손실로
+계수한다. KerML의 단일 소유 관계 때문에 S1의 출력은 소유 숲 조건을 만족한다.
+
+\begin{table}[t]
+\centering
+\bitabcaption{S1의 SysML v2 메타클래스 사상}
+             {S1 mapping from SysML v2 metaclasses to $T_V$ and $T_E$}
+\label{tab:s1map}
+\scriptsize
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.47\columnwidth}>{\raggedright\arraybackslash}p{0.47\columnwidth}@{}}
+\toprule
+SysML v2 element (keyword) & Typed graph (library anchor $A(t)$) \\
+\midrule
+Part, Port Definition/Usage & Component (\texttt{Parts::Part}); Port (\texttt{Ports::Port}) \\
+RequirementDefinition/Usage & Requirement (\texttt{Requirements::}\allowbreak\texttt{RequirementCheck}) \\
+ActionDefinition/Usage, incl.\ calc, state, use case & Function (\texttt{Actions::Action}) \\
+VerificationCaseDefinition/Usage & VerificationCase (\texttt{VerificationCases::}\allowbreak\texttt{VerificationCase}) \\
+InterfaceDefinition; ViewDefinition/Usage & Interface; View (\texttt{Interfaces::}\allowbreak\texttt{Interface}; \texttt{Views::View}) \\
+OwningMembership of a composite usage & contain(owner, usage) \\
+Connection/Interface/Flow usage (\texttt{connect}, \texttt{flow}) & connect(end$_1$, end$_2$) \\
+SatisfyRequirementUsage; \texttt{verify} in an objective & satisfy(feature, req.); verify(case, req.) \\
+AllocationUsage; Dependency; Expose & allocate; dependOn(client, supplier); expose(view, elem.) \\
+AttributeUsage with a literal value & $\mathit{attr}$(owner, name), inherited along $\sqsubseteq$ \\
+\midrule
+\multicolumn{2}{@{}p{0.96\columnwidth}@{}}{Not represented (counted as loss): binding, message, succession and
+control nodes, constraint and calculation expressions, perform/exhibit/include, items, metadata, context paths of
+feature chains; reference features are resolved when used as relation ends.}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{\texorpdfstring{규칙 언어 $L_C$와 참조 의미론}{규칙 언어 L\_C와 참조 의미론}}
+\label{sec:lc}
+
+규칙 집합을 임의의 술어 집합으로 두면 어떤 성질도 증명할 수 없으므로, 규칙을 다음 문법의 논리
+단편 $L_C$로 제한한다.
+
+\begin{jokdef}[$L_C$의 문법]\label{def:lc}
+노드 변수 $x$, 엣지 변수 $e$, 타입 집합 $T$, 속성 이름 $a$, 값 도메인 $D$, 상수 $n \in \mathbb{N}$에 대해
+\begin{align*}
+s     &::= x \mid \mathit{src}(e) \mid \mathit{tgt}(e)\\
+\alpha&::= \tau_V(s) \in T \mid \tau_E(e) \in T \mid s = s'\\
+      &\quad\ \mid \mathit{attr}(s,a) \in D \mid \mathit{attr}(s,a) = \bot\\
+\psi  &::= \alpha \mid \neg\psi \mid \psi \wedge \psi \mid \psi \vee \psi \mid \mathsf{Q}\, e \lhd s .\, \psi\\
+\mathsf{Q} &::= \exists \mid \forall \mid \exists^{\ge n} \mid \exists^{\le n}, \quad
+\lhd ::= \lhd^{\mathit{out}} \mid \lhd^{\mathit{in}} \mid \lhd^{\mathit{any}}
+\end{align*}
+이다. 가드 $e \lhd^{\mathit{out}} s$, $e \lhd^{\mathit{in}} s$, $e \lhd^{\mathit{any}} s$는 각각
+$\mathit{src}(e) = s$, $\mathit{tgt}(e) = s$, 둘 중 하나를 뜻하며, 한정자는 이미 값이 정해진 노드 항 $s$에
+접속한 엣지 위로만 범위를 갖는다(가드 한정자). 국소 규칙은 $r = \forall x_0.\,\psi$ 꼴로, 앵커 변수
+$x_0$(노드 또는 엣지)만이 가드 없이 한정된다. 전역 규칙은 원자식 $\mathit{reach}_T(s,s')$($T$ 타입
+엣지로 이루어진 길이 1 이상의 경로가 있음)와 타입 가드 노드 한정자 $\exists y{:}\tau_V(y) \in T'.\,\psi$를
+추가로 쓰며, 표~\ref{tab:rules}의 두 틀(ACYC, TRACE)로 한정한다.
+\end{jokdef}
+
+규칙의 그라운딩 $g$는 앵커 변수와 그 뒤에 이어지는 전칭 가드 한정자 접두부의 변수 값 튜플이고,
+앵커 노드 $\mathit{anc}(g)$는 앵커가 노드이면 그 노드, 엣지이면 그 시작 노드이다. 계수 임계값이 상수이므로
+$\exists^{\ge n}$과 $\exists^{\le n}$은 1차 논리 식의 약식 표기이다. 문법은 앵커 외의 비가드 한정자를
+허용하지 않으므로 ``모델 전체에 루트 System이 정확히 하나'' 같은 전역 개수 조건은 $L_C$로 쓸 수 없고,
+필요하면 세 번째 전역 틀로 추가해야 한다. 타입 원자식이 집합 소속 $\tau_V(s) \in T$이므로, 특수화
+계층 $H$가 변경 집합에 들어오지 않으면(라이브러리 계층이거나 편집 중 고정된 계층) S1이 각 노드의 소속
+타입 집합을 계산해 두고 규칙은 국소로 남는다. 반대로 모델 안의 특수화 관계가 편집되면 그 하향 집합 전체의
+타입 소속과 상속 속성이 바뀌므로 판정이 $\mathit{reach}$에 의존하는 전역 규칙이 되며, 특수화 폐쇄를 증거
+저장소로 유지해야 한다. 이 경계는 \ref{sec:e7}절에서 공개 모델로 확인한다.
+
+\begin{jokdef}[깊이, 반경, 근방 구조]\label{def:radius}
+국소 규칙 $r$의 노드 항 깊이 $\delta$를 다음과 같이 정한다. 앵커가 노드 $x_0$이면 $\delta(x_0) = 0$,
+엣지 $e_0$이면 $\delta(\mathit{src}(e_0)) = 0$, $\delta(\mathit{tgt}(e_0)) = 1$이다. 한정자
+$\mathsf{Q}\, e \lhd^{\mathit{out}} s$에서는 $\delta(\mathit{src}(e)) = \delta(s)$,
+$\delta(\mathit{tgt}(e)) = \delta(s)+1$이고 $\lhd^{\mathit{in}}$은 대칭이며, $\lhd^{\mathit{any}}$에서는
+두 끝 모두 $\delta(s)+1$이다. 반경 $k_r$은 $r$에 나타나는 노드 항 깊이의 최댓값과, 각 한정자
+$\mathsf{Q}\, e \lhd s$에 대한 $\delta(s)+1$의 최댓값 중 큰 값이다(엣지 앵커는 $\delta(\mathit{src}(e_0))+1$을
+포함한다). 노드 $a$의
+반경 $k$ 근방 구조 $B_k(a,G)$는 노드 집합 $N_k^G(\{a\})$와 그 타입$\cdot$속성, 그리고 한 끝 이상이
+$N_{k-1}^G(\{a\})$에 속하는 엣지 전부와 그 타입$\cdot$끝점으로 이루어진다($N_{-1} = \emptyset$).
+규칙 $r$이 $k$-국소라 함은, $B_k(a,G) = B_k(a,G')$인 임의의 $G, G', a$에 대해 앵커가 $a$인 그라운딩의
+집합과 각 그라운딩의 판정이 $G$와 $G'$에서 같음을 뜻한다.
+\end{jokdef}
+
+\begin{joklem}[가드 국소성]\label{lem:guard}
+모든 국소 규칙 $r$은 $k_r$-국소이다.
+\end{joklem}
+
+\begin{jokproof}
+식의 구조에 대한 귀납으로, 깊이 $d$인 노드 항의 값은 $N_d(\{a\})$에 속한다. 반경의 정의에서 한정자의
+기준 항 $s$는 $\delta(s) \le k_r - 1$이므로 한정자는 $N_{k_r-1}(\{a\})$에 접속한 엣지 위로만 범위를 갖는다.
+이 엣지들과 $N_{k_r}(\{a\})$의 타입$\cdot$속성은 $B_{k_r}(a,\cdot)$에 모두 포함되며 계수 임계값은 상수이므로
+모든 부분식의 값이 같다.
+\end{jokproof}
+
+또 $B_k(a,G) = B_k(a,G')$이면 $k' \le k$인 $B_{k'}$도 같다. 길이 $k'$ 이하 경로의 엣지는 한 끝이
+$N_{k'-1} \subseteq N_{k-1}$에 있어 $B_k$에 포함되기 때문이다. 따라서 국소 규칙은 $k \ge k_r$인 모든 $k$에
+대해 $k$-국소이다.
+
+\begin{table*}[t]
+\centering
+\bitabcaption{여덟 규칙 부류의 그라운딩, 논리식 $\varphi_r$(위반은 $\neg\varphi_r$), 반경 $k_r$, 증거 사상 $\pi_r$}
+             {Groundings, formulas $\varphi_r$ (a violation is $\neg\varphi_r$), radii $k_r$ and
+              evidence projections $\pi_r$ of the eight rule classes}
+\label{tab:rules}
+\footnotesize
+\begin{tabular}{l>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}c>{\raggedright\arraybackslash}p{0.09\textwidth}}
+\toprule
+Class & Grounding (guard) & $\varphi_r$ & $k_r$ & $\pi_r$ \\
+\midrule
+TYPE$_t$ & $e$ ($\tau_E(e) = t$)
+  & $\tau_V(\mathit{src}(e)) \in \mathit{Src}_t \wedge \tau_V(\mathit{tgt}(e)) \in \mathit{Tgt}_t$ & 1 & $(e)$ \\
+ATTR$_{t,a}$ & $x$ ($\tau_V(x) = t$) & $\neg(\mathit{attr}(x,a) = \bot)$ & 0 & $(x)$ \\
+DOM$_{t,a}$ & $x$ ($\tau_V(x) = t$) & $\mathit{attr}(x,a) = \bot \vee \mathit{attr}(x,a) \in D_{t,a}$ & 0 & $(x)$ \\
+MULT$_{t,u,\mathit{dir}}$ & $x$ ($\tau_V(x) = t$)
+  & $\exists^{\ge l} e \lhd^{\mathit{dir}} x.\, \tau_E(e) = u \;\wedge\; \exists^{\le h} e \lhd^{\mathit{dir}} x.\, \tau_E(e) = u$
+    \ ($h = \infty$: second conjunct omitted) & 1 & $(x)$ \\
+ISO$_t$ & $x$ ($\tau_V(x) = t$) & $\exists e \lhd^{\mathit{any}} x.\, \top$ & 1 & $(x)$ \\
+VIEW & $(v, e)$ ($\tau_V(v) = \mathit{View}$, $e \lhd^{\mathit{out}} v$, $\tau_E(e) = \mathit{expose}$)
+  & $\exists e_1 \lhd^{\mathit{out}} v.\, \big(\tau_E(e_1) = \mathit{subject} \wedge (\mathit{tgt}(e_1) = \mathit{tgt}(e)
+    \vee \exists e_2 \lhd^{\mathit{out}} \mathit{tgt}(e_1).\, \tau_E(e_2) = \mathit{contain} \wedge \mathit{tgt}(e_2) = \mathit{tgt}(e))\big)$
+  & 2 & $(v, \mathit{tgt}(e))$ \\
+\midrule
+ACYC$_t$ & $e$ ($\tau_E(e) = t$) & $\neg\,\mathit{reach}_{\{t\}}(\mathit{tgt}(e), \mathit{src}(e))$ & -- & SCC of $\mathit{src}(e)$ \\
+TRACE$_{s,T,t'}$ & $x$ ($\tau_V(x) = s$) & $\exists y{:}\tau_V(y) = t'.\ \mathit{reach}_T(x, y)$ & -- & $(x)$ \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+표~\ref{tab:rules}는 카탈로그에서 파생되는 여덟 규칙 부류의 그라운딩, 논리식, 반경, 증거 사상을
+제시한다. S2는 카탈로그 항목마다 이 틀 중 하나를 인스턴스화하므로 $R_C$의 모든 규칙은 이 여덟 틀의
+인스턴스이다. 각 규칙의 선언적 의미론은 실패 그라운딩 집합이고, 참조 의미론 $\Omega^{*}$는 그 증거
+사상의 상이다.
+\begin{align}
+\llbracket r \rrbracket(G, C) &= \{\, g \mid G, C \models \gamma_r(g) \wedge \neg\varphi_r(g) \,\}\\
+\Omega^{*}(G, C, R) &= \bigcup_{r \in R}
+   \{\, \mathit{MkViol}(r, \pi_r(g)) \mid g \in \llbracket r \rrbracket(G,C) \,\}
+\end{align}
+$\gamma_r$은 그라운딩의 가드이고, $\mathit{MkViol}(r,w)$는 (규칙 식별자, 정렬된 증거 튜플)의 정규형
+위반 키이다. 국소 위반 키 $\omega$의 후보 앵커 집합 $\mathit{Anc}(\omega)$는 $\omega$로 사상되는 그라운딩의 앵커
+노드가 될 수 있는 증거 노드이다. 엣지 증거는 그 시작 노드, 노드 하나인 증거는 그 노드이며, VIEW 증거
+$(v, \mathit{tgt}(e))$는 정렬 후 뷰가 어느 쪽인지 복원되지 않으므로 두 노드이다($v_1$이 $v_2$를, $v_2$가 $v_1$을
+노출하는 두 위반은 한 키가 된다). 이하 $\Omega^{*}(G)|_S$는 $\mathit{Anc}(\omega) \cap S \ne \emptyset$인 국소
+위반 키의 부분집합이다. 순환 규칙은 엣지 단위로 정의하되 강연결 요소(SCC) 단위로
+보고하며, 둘의 관계는 다음 보조정리가 준다.
+
+\begin{joklem}[순환 위반의 정규형]\label{lem:scc}
+$t$ 타입 엣지만 남긴 부분 그래프 $G_t$에서, 사상 $\kappa(e) = \mathrm{SCC}_{G_t}(\mathit{src}(e))$는
+$\llbracket \mathrm{ACYC}_t \rrbracket(G)$에서 $G_t$의 비자명 SCC(크기 2 이상이거나 자기 루프를 가진
+SCC) 전체 위로의 전사이다.
+\end{joklem}
+
+\begin{jokproof}
+$e \in \llbracket \mathrm{ACYC}_t \rrbracket$은 $\mathit{tgt}(e)$에서 $\mathit{src}(e)$로 $t$ 경로가 있음,
+곧 두 끝이 같은 SCC에 있고 그 SCC가 $e$를 포함하는 순환을 가짐과 동치이므로 $\kappa(e)$는 비자명하다.
+역으로 비자명 SCC는 내부 엣지를 적어도 하나 가지며 그 엣지는 순환 위에 있다.
+\end{jokproof}
+
+$\Omega^{*}$는 알고리즘과 무관하게 정의되므로 $\Omega = \Omega^{*}$라는 주장은 순환 논증이 아니다. 문맥상
+카탈로그와 규칙 집합이 고정되면 $\Omega^{*}(G)$로 줄여 쓴다. $\mathit{reach}$를 쓰지 않는 규칙을 국소
+규칙($L_C^{\mathit{loc}}$, 표~\ref{tab:rules}의 위쪽 여섯 부류), 두 전역 틀의 규칙을 전역 규칙($L_C^{\mathit{glob}}$)이라
+한다. 문법이 비가드 한정자를 배제하므로 보조정리~\ref{lem:guard}에 의해 국소 규칙은 국소적이다.
+

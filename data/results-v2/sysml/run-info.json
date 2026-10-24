@@ -1,0 +1,23 @@
+{
+ "provenance": {
+  "source": "https://github.com/Systems-Modeling/SysML-v2-Release",
+  "tag": "2026-08",
+  "commit": "fb97b754f29588b8e9c7a35f370880cd15eb29e7",
+  "license": "EPL-2.0 (models and libraries, per repository README \"Licensing\")",
+  "paths": [
+   "sysml/src/examples",
+   "sysml/src/training",
+   "sysml/src/validation"
+  ],
+  "library": "sysml.library (*.sysml; *.kerml kernel files are not parsed)",
+  "engineSha256": "6e95af309dc8a1a5fb18e7fe6d9fd147815057a7757c2476a1cc51d404e77479",
+  "note": "downloaded files are treated as data only; no script inside the corpus was executed"
+ },
+ "selftest": {
+  "ok": true,
+  "failures": []
+ },
+ "quick": false,
+ "wallSeconds": 52,
+ "date": "2026-10-21T03:29:09.103Z"
+}

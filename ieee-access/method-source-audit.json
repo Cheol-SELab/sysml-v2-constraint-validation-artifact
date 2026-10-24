@@ -1,0 +1,47 @@
+[
+  {
+    "source": "code/src/evaluation/stats.ts",
+    "sha256": "a13bec609b20ba54c39aa8bb47fd649dbfcd3138ea2e1fcac4fe51b1720cdd73",
+    "matches_historical_snapshot": true
+  },
+  {
+    "source": "code/src/experiments/e5v2.ts",
+    "sha256": "fa60c5de7db0c7ec70be55aee315a5159790b98a6ac077dac625debbb8e04aa7",
+    "matches_historical_snapshot": true
+  },
+  {
+    "source": "code/src/experiments/e5history.ts",
+    "sha256": "1cf60a1d46fa92e02821adfe8864f58ca9debb6b168dfec4b95abef90782c12a",
+    "matches_historical_snapshot": true
+  },
+  {
+    "source": "code/src/experiments/e6v2.ts",
+    "sha256": "4ba06d08c2e04b05f3bd063a1b6a16d664e33d98751726f3dd0679aaa5c516f8",
+    "matches_historical_snapshot": true
+  },
+  {
+    "source": "code/src/generator/syntheticModelGenerator.ts",
+    "sha256": "a294ab144c822a102e5501d55266ad6e53a30782107c39810a639e6bd8098cb7",
+    "matches_historical_snapshot": true
+  },
+  {
+    "source": "code/src/verification/propertyTests.ts",
+    "sha256": "761a8af23c982b7dbdadc17931eeb201608223b2e9e5eb35c4f5d94c2fb70c1f",
+    "matches_historical_snapshot": true
+  },
+  {
+    "source": "code/src/oracle/randomModels.ts",
+    "sha256": "9e0974216209a9e4b961c8e16b38fc88dff72fdac5ccf73224d5b5f7265d28a9",
+    "matches_historical_snapshot": true
+  },
+  {
+    "source": "code/src/sysml/adjudicate.ts",
+    "sha256": "b8d23725ab98f25f8834b0b4a78d0594cc2c91434ea68ed870448f9644cf8d9b",
+    "matches_historical_snapshot": true
+  },
+  {
+    "source": "code/src/incremental/session.ts",
+    "sha256": "61fc72b6f3a06a2a58de1a697a002b38994792e2a67e598c0b21c2d700d1dfb6",
+    "matches_historical_snapshot": true
+  }
+]

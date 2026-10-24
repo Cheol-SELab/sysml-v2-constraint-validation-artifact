@@ -1,0 +1,1770 @@
+{
+  "meta": {
+    "command": "node dist-r8\\cli-r8.js e6csr --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/n13",
+    "node": "v22.15.1",
+    "execArgv": [
+      "--expose-gc",
+      "--max-old-space-size=24000"
+    ],
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "loadavgAtStart": [
+      0,
+      0,
+      0
+    ],
+    "startedAt": "2026-10-23T03:34:12.876Z",
+    "elapsedSec": 543.5
+  },
+  "gcBeforeTiming": false,
+  "protocol": "E6 bounded-degree generator (aerospace, seeds 21000+s, same sizes/seeds/reps as E6); per model: Map engine (validate) and CSR engine (validateCsr over buildCsr) timed with timeMedian (1 warm-up + reps), full GC before each block; CSR build timed separately; GC events observed during the all-rules timing block (perf_hooks gc entries).",
+  "perSize": [
+    {
+      "n": 1000,
+      "seeds": 10,
+      "elements": 2497.5,
+      "mapAll": 2.331,
+      "mapLocal": 1.204,
+      "mapGlobal": 0.951,
+      "mapTarjanBatch": 0.648,
+      "mapNodeIdSort": 0.081,
+      "csrBuild": 0.332,
+      "csrAll": 0.282,
+      "csrLocal": 0.172,
+      "csrGlobal": 0.077,
+      "mapNsPerElement": 935.345,
+      "csrNsPerElement": 112.865
+    },
+    {
+      "n": 3000,
+      "seeds": 10,
+      "elements": 7490,
+      "mapAll": 6.331,
+      "mapLocal": 3.362,
+      "mapGlobal": 2.635,
+      "mapTarjanBatch": 1.697,
+      "mapNodeIdSort": 0.163,
+      "csrBuild": 0.918,
+      "csrAll": 0.673,
+      "csrLocal": 0.368,
+      "csrGlobal": 0.262,
+      "mapNsPerElement": 844.494,
+      "csrNsPerElement": 89.874
+    },
+    {
+      "n": 10000,
+      "seeds": 10,
+      "elements": 25001.5,
+      "mapAll": 25.834,
+      "mapLocal": 12.852,
+      "mapGlobal": 12.895,
+      "mapTarjanBatch": 8.201,
+      "mapNodeIdSort": 0.53,
+      "csrBuild": 3.397,
+      "csrAll": 1.846,
+      "csrLocal": 0.987,
+      "csrGlobal": 0.811,
+      "mapNsPerElement": 1034.832,
+      "csrNsPerElement": 74.022
+    },
+    {
+      "n": 30000,
+      "seeds": 5,
+      "elements": 74959,
+      "mapAll": 102.84,
+      "mapLocal": 50.345,
+      "mapGlobal": 52.258,
+      "mapTarjanBatch": 38.339,
+      "mapNodeIdSort": 1.723,
+      "csrBuild": 10.506,
+      "csrAll": 5.53,
+      "csrLocal": 2.937,
+      "csrGlobal": 2.314,
+      "mapNsPerElement": 1372.106,
+      "csrNsPerElement": 73.767
+    },
+    {
+      "n": 100000,
+      "seeds": 5,
+      "elements": 249679,
+      "mapAll": 484.659,
+      "mapLocal": 244.714,
+      "mapGlobal": 252.995,
+      "mapTarjanBatch": 180.353,
+      "mapNodeIdSort": 5.535,
+      "csrBuild": 50.792,
+      "csrAll": 18.623,
+      "csrLocal": 9.935,
+      "csrGlobal": 8.228,
+      "mapNsPerElement": 1941.129,
+      "csrNsPerElement": 74.588
+    },
+    {
+      "n": 300000,
+      "seeds": 3,
+      "elements": 749089,
+      "mapAll": 1925.901,
+      "mapLocal": 934.843,
+      "mapGlobal": 966.396,
+      "mapTarjanBatch": 686.418,
+      "mapNodeIdSort": 16.395,
+      "csrBuild": 249.511,
+      "csrAll": 56.837,
+      "csrLocal": 29.828,
+      "csrGlobal": 25.016,
+      "mapNsPerElement": 2570.991,
+      "csrNsPerElement": 75.827
+    },
+    {
+      "n": 1000000,
+      "seeds": 3,
+      "elements": 2498272,
+      "mapAll": 9272.441,
+      "mapLocal": 4806.785,
+      "mapGlobal": 4038.271,
+      "mapTarjanBatch": 2657.329,
+      "mapNodeIdSort": 65.325,
+      "csrBuild": 2140.523,
+      "csrAll": 242.836,
+      "csrLocal": 113.949,
+      "csrGlobal": 130.778,
+      "mapNsPerElement": 3711.542,
+      "csrNsPerElement": 97.236
+    }
+  ],
+  "exponents": {
+    "mapAll": {
+      "exponent": 1.17,
+      "ci95": [
+        1.09,
+        1.22
+      ],
+      "r2": 0.9736,
+      "includesOne": false,
+      "points": 46
+    },
+    "mapLocal": {
+      "exponent": 1.19,
+      "ci95": [
+        1.156,
+        1.215
+      ],
+      "r2": 0.9951,
+      "includesOne": false,
+      "points": 46
+    },
+    "mapGlobal": {
+      "exponent": 1.226,
+      "ci95": [
+        1.211,
+        1.243
+      ],
+      "r2": 0.9977,
+      "includesOne": false,
+      "points": 46
+    },
+    "mapTarjanBatch": {
+      "exponent": 1.241,
+      "ci95": [
+        1.222,
+        1.262
+      ],
+      "r2": 0.9963,
+      "includesOne": false,
+      "points": 46
+    },
+    "mapNodeIdSort": {
+      "exponent": 0.964,
+      "ci95": [
+        0.934,
+        0.988
+      ],
+      "r2": 0.9939,
+      "includesOne": false,
+      "points": 46
+    },
+    "csrAll": {
+      "exponent": 0.929,
+      "ci95": [
+        0.845,
+        0.983
+      ],
+      "r2": 0.9606,
+      "includesOne": false,
+      "points": 46
+    },
+    "csrLocal": {
+      "exponent": 0.929,
+      "ci95": [
+        0.89,
+        0.958
+      ],
+      "r2": 0.9916,
+      "includesOne": false,
+      "points": 46
+    },
+    "csrGlobal": {
+      "exponent": 1.028,
+      "ci95": [
+        0.993,
+        1.052
+      ],
+      "r2": 0.9961,
+      "includesOne": true,
+      "points": 46
+    },
+    "csrBuild": {
+      "exponent": 1.163,
+      "ci95": [
+        1.054,
+        1.235
+      ],
+      "r2": 0.9679,
+      "includesOne": false,
+      "points": 46
+    },
+    "mapAllFrom1e4": {
+      "exponent": 1.275,
+      "ci95": [
+        1.254,
+        1.295
+      ],
+      "r2": 0.9984,
+      "includesOne": false,
+      "points": 26
+    },
+    "csrAllFrom1e4": {
+      "exponent": 1.045,
+      "ci95": [
+        1.008,
+        1.068
+      ],
+      "r2": 0.9978,
+      "includesOne": false,
+      "points": 26
+    }
+  },
+  "allSameViolations": true,
+  "points": [
+    {
+      "n": 1000,
+      "seed": 21000,
+      "nodes": 1000,
+      "edges": 1517,
+      "reps": 5,
+      "mapMs": {
+        "all": 23.3958,
+        "local": 1.2899,
+        "global": 0.9525,
+        "tarjanBatch": 0.6586,
+        "nodeIdSort": 0.092
+      },
+      "csrMs": {
+        "build": 1.5492,
+        "all": 2.7496,
+        "local": 0.2305,
+        "global": 0.1309
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000,
+      "seed": 21001,
+      "nodes": 1000,
+      "edges": 1491,
+      "reps": 5,
+      "mapMs": {
+        "all": 2.6953,
+        "local": 1.3109,
+        "global": 0.95,
+        "tarjanBatch": 0.6493,
+        "nodeIdSort": 0.0927
+      },
+      "csrMs": {
+        "build": 1.1335,
+        "all": 0.4581,
+        "local": 0.1351,
+        "global": 0.0863
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000,
+      "seed": 21002,
+      "nodes": 1000,
+      "edges": 1534,
+      "reps": 5,
+      "mapMs": {
+        "all": 3.1796,
+        "local": 1.1246,
+        "global": 0.9251,
+        "tarjanBatch": 0.6224,
+        "nodeIdSort": 0.0775
+      },
+      "csrMs": {
+        "build": 0.3003,
+        "all": 0.2631,
+        "local": 0.1643,
+        "global": 0.0773
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000,
+      "seed": 21003,
+      "nodes": 1000,
+      "edges": 1487,
+      "reps": 5,
+      "mapMs": {
+        "all": 2.3411,
+        "local": 1.2058,
+        "global": 0.9508,
+        "tarjanBatch": 0.6299,
+        "nodeIdSort": 0.08
+      },
+      "csrMs": {
+        "build": 0.3302,
+        "all": 0.2228,
+        "local": 0.1939,
+        "global": 0.0773
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000,
+      "seed": 21004,
+      "nodes": 1000,
+      "edges": 1497,
+      "reps": 5,
+      "mapMs": {
+        "all": 2.3206,
+        "local": 1.194,
+        "global": 0.9327,
+        "tarjanBatch": 0.6465,
+        "nodeIdSort": 0.0804
+      },
+      "csrMs": {
+        "build": 0.3166,
+        "all": 0.2815,
+        "local": 0.1728,
+        "global": 0.0779
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000,
+      "seed": 21005,
+      "nodes": 1000,
+      "edges": 1494,
+      "reps": 5,
+      "mapMs": {
+        "all": 2.202,
+        "local": 1.0541,
+        "global": 0.9178,
+        "tarjanBatch": 0.6251,
+        "nodeIdSort": 0.0799
+      },
+      "csrMs": {
+        "build": 0.3222,
+        "all": 0.2563,
+        "local": 0.1721,
+        "global": 0.0749
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000,
+      "seed": 21006,
+      "nodes": 1000,
+      "edges": 1515,
+      "reps": 5,
+      "mapMs": {
+        "all": 3.0648,
+        "local": 1.1164,
+        "global": 0.9511,
+        "tarjanBatch": 0.6124,
+        "nodeIdSort": 0.0796
+      },
+      "csrMs": {
+        "build": 0.3212,
+        "all": 0.2507,
+        "local": 0.1725,
+        "global": 0.0771
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000,
+      "seed": 21007,
+      "nodes": 1000,
+      "edges": 1474,
+      "reps": 5,
+      "mapMs": {
+        "all": 2.1149,
+        "local": 1.2276,
+        "global": 0.9904,
+        "tarjanBatch": 0.6523,
+        "nodeIdSort": 0.0815
+      },
+      "csrMs": {
+        "build": 0.4853,
+        "all": 0.284,
+        "local": 0.1711,
+        "global": 0.0766
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000,
+      "seed": 21008,
+      "nodes": 1000,
+      "edges": 1501,
+      "reps": 5,
+      "mapMs": {
+        "all": 2.0739,
+        "local": 1.2029,
+        "global": 0.9535,
+        "tarjanBatch": 0.653,
+        "nodeIdSort": 0.0828
+      },
+      "csrMs": {
+        "build": 0.3386,
+        "all": 0.2826,
+        "local": 0.1727,
+        "global": 0.0784
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000,
+      "seed": 21009,
+      "nodes": 1000,
+      "edges": 1498,
+      "reps": 5,
+      "mapMs": {
+        "all": 2.1482,
+        "local": 1.4907,
+        "global": 0.9646,
+        "tarjanBatch": 0.652,
+        "nodeIdSort": 0.0806
+      },
+      "csrMs": {
+        "build": 0.3335,
+        "all": 0.2832,
+        "local": 0.1696,
+        "global": 0.0775
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 3000,
+      "seed": 21000,
+      "nodes": 3000,
+      "edges": 4516,
+      "reps": 5,
+      "mapMs": {
+        "all": 6.3655,
+        "local": 3.3883,
+        "global": 2.6041,
+        "tarjanBatch": 1.6722,
+        "nodeIdSort": 0.1625
+      },
+      "csrMs": {
+        "build": 1.019,
+        "all": 0.6809,
+        "local": 0.4031,
+        "global": 0.2678
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 3000,
+      "seed": 21001,
+      "nodes": 3000,
+      "edges": 4477,
+      "reps": 5,
+      "mapMs": {
+        "all": 6.2961,
+        "local": 3.2639,
+        "global": 2.4952,
+        "tarjanBatch": 1.7015,
+        "nodeIdSort": 0.1646
+      },
+      "csrMs": {
+        "build": 1.3675,
+        "all": 0.6535,
+        "local": 0.3629,
+        "global": 0.2476
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 3000,
+      "seed": 21002,
+      "nodes": 3000,
+      "edges": 4461,
+      "reps": 5,
+      "mapMs": {
+        "all": 6.1917,
+        "local": 3.3188,
+        "global": 2.7444,
+        "tarjanBatch": 1.715,
+        "nodeIdSort": 0.1638
+      },
+      "csrMs": {
+        "build": 0.91,
+        "all": 0.6531,
+        "local": 0.4095,
+        "global": 0.2719
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 3000,
+      "seed": 21003,
+      "nodes": 3000,
+      "edges": 4514,
+      "reps": 5,
+      "mapMs": {
+        "all": 6.1364,
+        "local": 3.3102,
+        "global": 2.6094,
+        "tarjanBatch": 1.6924,
+        "nodeIdSort": 0.1611
+      },
+      "csrMs": {
+        "build": 0.904,
+        "all": 0.6544,
+        "local": 0.3683,
+        "global": 0.2299
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 3000,
+      "seed": 21004,
+      "nodes": 3000,
+      "edges": 4526,
+      "reps": 5,
+      "mapMs": {
+        "all": 6.2973,
+        "local": 3.3359,
+        "global": 2.6606,
+        "tarjanBatch": 1.7271,
+        "nodeIdSort": 0.1595
+      },
+      "csrMs": {
+        "build": 0.9408,
+        "all": 0.6765,
+        "local": 0.3571,
+        "global": 0.2661
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 3000,
+      "seed": 21005,
+      "nodes": 3000,
+      "edges": 4492,
+      "reps": 5,
+      "mapMs": {
+        "all": 6.5525,
+        "local": 3.5154,
+        "global": 2.8118,
+        "tarjanBatch": 2.0178,
+        "nodeIdSort": 0.1674
+      },
+      "csrMs": {
+        "build": 0.8932,
+        "all": 0.6812,
+        "local": 0.3953,
+        "global": 0.233
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 3000,
+      "seed": 21006,
+      "nodes": 3000,
+      "edges": 4488,
+      "reps": 5,
+      "mapMs": {
+        "all": 6.4103,
+        "local": 3.5286,
+        "global": 2.6046,
+        "tarjanBatch": 1.6412,
+        "nodeIdSort": 0.1613
+      },
+      "csrMs": {
+        "build": 0.9015,
+        "all": 0.6857,
+        "local": 0.3532,
+        "global": 0.2621
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 3000,
+      "seed": 21007,
+      "nodes": 3000,
+      "edges": 4455,
+      "reps": 5,
+      "mapMs": {
+        "all": 6.5019,
+        "local": 4.04,
+        "global": 3.3303,
+        "tarjanBatch": 1.6446,
+        "nodeIdSort": 0.1693
+      },
+      "csrMs": {
+        "build": 0.9222,
+        "all": 0.6699,
+        "local": 0.368,
+        "global": 0.2448
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 3000,
+      "seed": 21008,
+      "nodes": 3000,
+      "edges": 4499,
+      "reps": 5,
+      "mapMs": {
+        "all": 6.728,
+        "local": 3.5577,
+        "global": 2.6665,
+        "tarjanBatch": 1.732,
+        "nodeIdSort": 0.1659
+      },
+      "csrMs": {
+        "build": 0.9211,
+        "all": 0.6596,
+        "local": 0.3571,
+        "global": 0.2635
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 3000,
+      "seed": 21009,
+      "nodes": 3000,
+      "edges": 4484,
+      "reps": 5,
+      "mapMs": {
+        "all": 6.0756,
+        "local": 3.2667,
+        "global": 2.6084,
+        "tarjanBatch": 1.6478,
+        "nodeIdSort": 0.1627
+      },
+      "csrMs": {
+        "build": 0.9154,
+        "all": 0.6766,
+        "local": 0.3875,
+        "global": 0.2611
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 10000,
+      "seed": 21000,
+      "nodes": 10000,
+      "edges": 14904,
+      "reps": 5,
+      "mapMs": {
+        "all": 25.9913,
+        "local": 12.1577,
+        "global": 12.1746,
+        "tarjanBatch": 8.2774,
+        "nodeIdSort": 0.5313
+      },
+      "csrMs": {
+        "build": 3.2092,
+        "all": 1.836,
+        "local": 0.9871,
+        "global": 0.8169
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 10000,
+      "seed": 21001,
+      "nodes": 10000,
+      "edges": 14959,
+      "reps": 5,
+      "mapMs": {
+        "all": 25.152,
+        "local": 12.8981,
+        "global": 12.8231,
+        "tarjanBatch": 7.6757,
+        "nodeIdSort": 0.5298
+      },
+      "csrMs": {
+        "build": 3.4282,
+        "all": 1.855,
+        "local": 0.9988,
+        "global": 0.8198
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 10000,
+      "seed": 21002,
+      "nodes": 10000,
+      "edges": 15056,
+      "reps": 5,
+      "mapMs": {
+        "all": 26.3558,
+        "local": 11.8422,
+        "global": 13.0734,
+        "tarjanBatch": 8.2066,
+        "nodeIdSort": 0.5186
+      },
+      "csrMs": {
+        "build": 3.4143,
+        "all": 2.0746,
+        "local": 0.9831,
+        "global": 0.7695
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 10000,
+      "seed": 21003,
+      "nodes": 10000,
+      "edges": 15026,
+      "reps": 5,
+      "mapMs": {
+        "all": 25.6768,
+        "local": 12.805,
+        "global": 14.2116,
+        "tarjanBatch": 8.107,
+        "nodeIdSort": 0.5483
+      },
+      "csrMs": {
+        "build": 3.3791,
+        "all": 1.7877,
+        "local": 0.969,
+        "global": 0.7595
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 10000,
+      "seed": 21004,
+      "nodes": 10000,
+      "edges": 15061,
+      "reps": 5,
+      "mapMs": {
+        "all": 26.8576,
+        "local": 13.2054,
+        "global": 12.9454,
+        "tarjanBatch": 8.9645,
+        "nodeIdSort": 0.5306
+      },
+      "csrMs": {
+        "build": 3.3757,
+        "all": 1.9633,
+        "local": 1.0066,
+        "global": 0.708
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 10000,
+      "seed": 21005,
+      "nodes": 10000,
+      "edges": 14972,
+      "reps": 5,
+      "mapMs": {
+        "all": 24.8439,
+        "local": 12.2294,
+        "global": 11.506,
+        "tarjanBatch": 7.869,
+        "nodeIdSort": 0.527
+      },
+      "csrMs": {
+        "build": 3.2412,
+        "all": 1.8598,
+        "local": 1.0021,
+        "global": 0.805
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 10000,
+      "seed": 21006,
+      "nodes": 10000,
+      "edges": 15014,
+      "reps": 5,
+      "mapMs": {
+        "all": 32.9752,
+        "local": 15.1324,
+        "global": 15.3535,
+        "tarjanBatch": 10.7171,
+        "nodeIdSort": 0.5324
+      },
+      "csrMs": {
+        "build": 3.4912,
+        "all": 1.8993,
+        "local": 0.981,
+        "global": 0.7277
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 10000,
+      "seed": 21007,
+      "nodes": 10000,
+      "edges": 14989,
+      "reps": 5,
+      "mapMs": {
+        "all": 24.2508,
+        "local": 13.0278,
+        "global": 12.0948,
+        "tarjanBatch": 7.3681,
+        "nodeIdSort": 0.5255
+      },
+      "csrMs": {
+        "build": 3.4266,
+        "all": 1.6942,
+        "local": 0.9687,
+        "global": 0.848
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 10000,
+      "seed": 21008,
+      "nodes": 10000,
+      "edges": 15028,
+      "reps": 5,
+      "mapMs": {
+        "all": 25.112,
+        "local": 13.0048,
+        "global": 13.9153,
+        "tarjanBatch": 9.5433,
+        "nodeIdSort": 0.5302
+      },
+      "csrMs": {
+        "build": 3.5599,
+        "all": 1.8165,
+        "local": 0.9865,
+        "global": 0.8396
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 10000,
+      "seed": 21009,
+      "nodes": 10000,
+      "edges": 14918,
+      "reps": 5,
+      "mapMs": {
+        "all": 28.1886,
+        "local": 12.7038,
+        "global": 12.8445,
+        "tarjanBatch": 8.1963,
+        "nodeIdSort": 0.5315
+      },
+      "csrMs": {
+        "build": 3.2845,
+        "all": 1.6351,
+        "local": 1.0003,
+        "global": 0.8845
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 30000,
+      "seed": 21000,
+      "nodes": 30000,
+      "edges": 44959,
+      "reps": 5,
+      "mapMs": {
+        "all": 102.8517,
+        "local": 52.7577,
+        "global": 50.4528,
+        "tarjanBatch": 35.8641,
+        "nodeIdSort": 1.7231
+      },
+      "csrMs": {
+        "build": 10.9044,
+        "all": 5.5295,
+        "local": 3.0025,
+        "global": 2.3141
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 30000,
+      "seed": 21001,
+      "nodes": 30000,
+      "edges": 44859,
+      "reps": 5,
+      "mapMs": {
+        "all": 102.8396,
+        "local": 50.3445,
+        "global": 55.147,
+        "tarjanBatch": 43.3505,
+        "nodeIdSort": 1.6861
+      },
+      "csrMs": {
+        "build": 10.5063,
+        "all": 5.578,
+        "local": 2.8904,
+        "global": 2.3413
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 30000,
+      "seed": 21002,
+      "nodes": 30000,
+      "edges": 45072,
+      "reps": 5,
+      "mapMs": {
+        "all": 92.1412,
+        "local": 46.4375,
+        "global": 52.846,
+        "tarjanBatch": 39.4201,
+        "nodeIdSort": 1.6861
+      },
+      "csrMs": {
+        "build": 10.7966,
+        "all": 5.209,
+        "local": 3.15,
+        "global": 2.3631
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 30000,
+      "seed": 21003,
+      "nodes": 30000,
+      "edges": 44990,
+      "reps": 5,
+      "mapMs": {
+        "all": 113.9669,
+        "local": 51.9556,
+        "global": 49.3704,
+        "tarjanBatch": 37.335,
+        "nodeIdSort": 1.8382
+      },
+      "csrMs": {
+        "build": 10.4161,
+        "all": 5.7111,
+        "local": 2.9366,
+        "global": 2.2554
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 30000,
+      "seed": 21004,
+      "nodes": 30000,
+      "edges": 44943,
+      "reps": 5,
+      "mapMs": {
+        "all": 94.5317,
+        "local": 44.9787,
+        "global": 52.2576,
+        "tarjanBatch": 38.3394,
+        "nodeIdSort": 1.7906
+      },
+      "csrMs": {
+        "build": 10.4352,
+        "all": 5.4364,
+        "local": 2.9067,
+        "global": 2.2425
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 100000,
+      "seed": 21000,
+      "nodes": 100000,
+      "edges": 149740,
+      "reps": 5,
+      "mapMs": {
+        "all": 466.8019,
+        "local": 224.2963,
+        "global": 252.9952,
+        "tarjanBatch": 180.3527,
+        "nodeIdSort": 5.3566
+      },
+      "csrMs": {
+        "build": 49.4057,
+        "all": 18.5059,
+        "local": 9.9348,
+        "global": 8.2282
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 100000,
+      "seed": 21001,
+      "nodes": 100000,
+      "edges": 149722,
+      "reps": 5,
+      "mapMs": {
+        "all": 515.2421,
+        "local": 257.519,
+        "global": 233.5758,
+        "tarjanBatch": 195.8142,
+        "nodeIdSort": 5.7188
+      },
+      "csrMs": {
+        "build": 45.132,
+        "all": 18.4842,
+        "local": 9.9784,
+        "global": 7.657
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 100000,
+      "seed": 21002,
+      "nodes": 100000,
+      "edges": 149674,
+      "reps": 5,
+      "mapMs": {
+        "all": 474.6268,
+        "local": 212.4614,
+        "global": 235.1684,
+        "tarjanBatch": 172.316,
+        "nodeIdSort": 5.5347
+      },
+      "csrMs": {
+        "build": 51.0959,
+        "all": 18.6612,
+        "local": 10.3461,
+        "global": 9.3011
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 100000,
+      "seed": 21003,
+      "nodes": 100000,
+      "edges": 149608,
+      "reps": 5,
+      "mapMs": {
+        "all": 575.3463,
+        "local": 302.3304,
+        "global": 261.9256,
+        "tarjanBatch": 170.3322,
+        "nodeIdSort": 5.3898
+      },
+      "csrMs": {
+        "build": 53.7409,
+        "all": 18.898,
+        "local": 9.8677,
+        "global": 8.7523
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 100000,
+      "seed": 21004,
+      "nodes": 100000,
+      "edges": 149679,
+      "reps": 5,
+      "mapMs": {
+        "all": 484.6592,
+        "local": 244.7141,
+        "global": 257.7242,
+        "tarjanBatch": 185.5489,
+        "nodeIdSort": 6.3212
+      },
+      "csrMs": {
+        "build": 50.7924,
+        "all": 18.623,
+        "local": 9.8062,
+        "global": 7.7091
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 300000,
+      "seed": 21000,
+      "nodes": 300000,
+      "edges": 448885,
+      "reps": 3,
+      "mapMs": {
+        "all": 1946.111,
+        "local": 934.843,
+        "global": 987.4909,
+        "tarjanBatch": 667.8622,
+        "nodeIdSort": 15.2465
+      },
+      "csrMs": {
+        "build": 248.3963,
+        "all": 57.7397,
+        "local": 29.7978,
+        "global": 25.0162
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 300000,
+      "seed": 21001,
+      "nodes": 300000,
+      "edges": 449558,
+      "reps": 3,
+      "mapMs": {
+        "all": 1916.5371,
+        "local": 938.6416,
+        "global": 936.4765,
+        "tarjanBatch": 769.5086,
+        "nodeIdSort": 16.3948
+      },
+      "csrMs": {
+        "build": 266.0486,
+        "all": 56.8366,
+        "local": 34.2209,
+        "global": 24.9231
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 300000,
+      "seed": 21002,
+      "nodes": 300000,
+      "edges": 449089,
+      "reps": 3,
+      "mapMs": {
+        "all": 1925.9012,
+        "local": 926.8957,
+        "global": 966.3958,
+        "tarjanBatch": 686.4184,
+        "nodeIdSort": 18.851
+      },
+      "csrMs": {
+        "build": 249.5108,
+        "all": 56.2435,
+        "local": 29.8281,
+        "global": 25.2374
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000000,
+      "seed": 21000,
+      "nodes": 1000000,
+      "edges": 1497396,
+      "reps": 3,
+      "mapMs": {
+        "all": 8543.5774,
+        "local": 4709.0396,
+        "global": 3640.5882,
+        "tarjanBatch": 2473.3878,
+        "nodeIdSort": 57.305
+      },
+      "csrMs": {
+        "build": 2078.7067,
+        "all": 242.8363,
+        "local": 103.2242,
+        "global": 119.3045
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000000,
+      "seed": 21001,
+      "nodes": 1000000,
+      "edges": 1498346,
+      "reps": 3,
+      "mapMs": {
+        "all": 10697.6489,
+        "local": 4950.5097,
+        "global": 4111.6168,
+        "tarjanBatch": 2657.3291,
+        "nodeIdSort": 66.6049
+      },
+      "csrMs": {
+        "build": 2140.5232,
+        "all": 270.4214,
+        "local": 113.9494,
+        "global": 136.2009
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    },
+    {
+      "n": 1000000,
+      "seed": 21002,
+      "nodes": 1000000,
+      "edges": 1498272,
+      "reps": 3,
+      "mapMs": {
+        "all": 9272.4408,
+        "local": 4806.7854,
+        "global": 4038.2713,
+        "tarjanBatch": 2725.2708,
+        "nodeIdSort": 65.3247
+      },
+      "csrMs": {
+        "build": 2166.0482,
+        "all": 232.4681,
+        "local": 137.5583,
+        "global": 130.7784
+      },
+      "gcDuringAllReps": {
+        "map": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        },
+        "csr": {
+          "count": 0,
+          "ms": 0,
+          "byKind": {}
+        }
+      },
+      "sameViolations": true
+    }
+  ]
+}

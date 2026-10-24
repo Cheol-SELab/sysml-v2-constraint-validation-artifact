@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "command": "node dist-r8\\cli-r8.js csr-eq --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/r8",
+    "node": "v22.15.1",
+    "execArgv": [],
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "loadavgAtStart": [
+      0,
+      0,
+      0
+    ],
+    "startedAt": "2026-10-23T03:03:02.807Z",
+    "elapsedSec": 3.3
+  },
+  "seeds": {
+    "generated": "31000+s",
+    "hub": "32000+s",
+    "randomFixed": "33000+catalog index",
+    "randomCatalogs": 34000
+  },
+  "results": {
+    "generated": {
+      "models": 45,
+      "violations": 0,
+      "mismatches": 0
+    },
+    "hub": {
+      "models": 18,
+      "violations": 0,
+      "mismatches": 0
+    },
+    "random-fixed-catalog": {
+      "models": 6000,
+      "violations": 95129,
+      "mismatches": 0
+    },
+    "random-catalog": {
+      "models": 10000,
+      "violations": 121308,
+      "mismatches": 0
+    }
+  }
+}

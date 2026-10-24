@@ -1,0 +1,2321 @@
+{
+  "experiment": "r10-survivor-classification",
+  "method": "see header of r10-mutation/classify-survivors.js",
+  "summary": {
+    "survivorsR8": 128,
+    "B": 59,
+    "EQ": 43,
+    "EQC": 17,
+    "C": 9,
+    "C_caughtByShacl": 9,
+    "C_caughtByBlind": 9,
+    "unclassified": 0,
+    "newR8Code": 32
+  },
+  "rows": [
+    {
+      "id": 9,
+      "file": "validator/engine.ts",
+      "line": 104,
+      "operator": "ROR",
+      "original": "const upperOk = r.max < 0 || count <= r.max;",
+      "mutated": "const upperOk = r.max <= 0 || count <= r.max;",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"delNode\",\"id\":\"n0\"},{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\"",
+      "oracleReplay": {
+        "caughtShacl": 192,
+        "caughtBlind": 128,
+        "crashes": 0,
+        "engineVsReference": 192,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 11,
+      "file": "validator/engine.ts",
+      "line": 104,
+      "operator": "CONST",
+      "original": "const upperOk = r.max < 0 || count <= r.max;",
+      "mutated": "const upperOk = r.max < 1 || count <= r.max;",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"delNode\",\"id\":\"n0\"},{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\"",
+      "oracleReplay": {
+        "caughtShacl": 192,
+        "caughtBlind": 128,
+        "crashes": 0,
+        "engineVsReference": 192,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 27,
+      "file": "validator/engine.ts",
+      "line": 156,
+      "operator": "BOOL",
+      "original": "return true;",
+      "mutated": "return false;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "holds(): default branch unreachable, holds is only called for local rule kinds",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 49,
+      "file": "validator/engine.ts",
+      "line": 254,
+      "operator": "ROR",
+      "original": "if (v.kind === 'relationType') {",
+      "mutated": "if (v.kind !== 'relationType') {",
+      "r10KilledBy": "R10-API",
+      "class": "B",
+      "why": "killed by R10-API: groundingNodes TYPE:r|e2 in api-tiny-0: [\"e2\"] expected [\"n4\",\"n3\"]",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 50,
+      "file": "validator/engine.ts",
+      "line": 254,
+      "operator": "NEG",
+      "original": "if (v.kind === 'relationType') {",
+      "mutated": "if (!(v.kind === 'relationType')) {",
+      "r10KilledBy": "R10-API",
+      "class": "B",
+      "why": "killed by R10-API: groundingNodes TYPE:r|e2 in api-tiny-0: [\"e2\"] expected [\"n4\",\"n3\"]",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 59,
+      "file": "validator/engine.ts",
+      "line": 291,
+      "operator": "ROR",
+      "original": "while (head < queue.length) {",
+      "mutated": "while (head <= queue.length) {",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "BFS `head <= queue.length`: the extra iteration reads undefined and scans nothing",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 71,
+      "file": "validator/engine.ts",
+      "line": 340,
+      "operator": "NEG",
+      "original": "if (!n) continue;",
+      "mutated": "if (!(!n)) continue;",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: violations only-first=[] only-second=[TRACE:TP|n0]",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 72,
+      "file": "validator/engine.ts",
+      "line": 340,
+      "operator": "STMT",
+      "original": "if (!n) continue;",
+      "mutated": "if (!n) {}",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 step 0 threw TypeError: Cannot read properties of undefined (reading 'type') changes=[{\"kind\":\"delNode\",\"id\":\"n0\"}]",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 73,
+      "file": "validator/engine.ts",
+      "line": 348,
+      "operator": "NEG",
+      "original": "if (!sub.nodes.has(e.tgt)) continue;",
+      "mutated": "if (!(!sub.nodes.has(e.tgt))) continue;",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x3\",\"type\":\"t\",\"src\":\"n0\",\"tgt\":\"n0\"}}]: violations only-first=[] only-second=[ACYC:t|n",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 74,
+      "file": "validator/engine.ts",
+      "line": 348,
+      "operator": "STMT",
+      "original": "if (!sub.nodes.has(e.tgt)) continue;",
+      "mutated": "if (!sub.nodes.has(e.tgt)) {}",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 step 11 threw TypeError: Cannot read properties of undefined (reading 'push') changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"fn21\",\"type\":\"C\",\"attrs\":{}}},{\"kind\":",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 82,
+      "file": "incremental/session.ts",
+      "line": 137,
+      "operator": "ROR",
+      "original": "if (prev && prev.anchor !== v.anchor) this.localByAnchor.get(prev.anchor)?.delete(key);",
+      "mutated": "if (prev && prev.anchor === v.anchor) this.localByAnchor.get(prev.anchor)?.delete(key);",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "anchor index: a key with two anchors arises only for VIEW (v1,v2)/(v2,v1); a change that can alter either grounding has support within distance 1 of both, so both anchors are in S (k = 2) and the key is re-derived; equivalent for the current rule language",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 95,
+      "file": "incremental/session.ts",
+      "line": 210,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "invalid store also notified of addNode; invalid stores are rebuilt in the same step",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 99,
+      "file": "incremental/session.ts",
+      "line": 217,
+      "operator": "STMT",
+      "original": "if (!addEdge(this.g, p.edge)) break;",
+      "mutated": "if (!addEdge(this.g, p.edge)) {}",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S3 r10-zero sg-n2-t2-v0-0 step 0 changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"e0\",\"type\":\"s\",\"src\":\"n1\",\"tgt\":\"n0\"}}]: violations only-first=[] only-second=[TRACE:T",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 101,
+      "file": "incremental/session.ts",
+      "line": 219,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "invalid store also notified of addEdge; rebuilt in the same step",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 107,
+      "file": "incremental/session.ts",
+      "line": 227,
+      "operator": "STMT",
+      "original": "if (!this.g.edges.has(p.edge.id)) break;",
+      "mutated": "if (!this.g.edges.has(p.edge.id)) {}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "delEdge guard unreachable: expand() emits delEdge only for an edge present at expansion time and applies it immediately",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 109,
+      "file": "incremental/session.ts",
+      "line": 230,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "invalid store also notified of delEdge; rebuilt in the same step",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 113,
+      "file": "incremental/session.ts",
+      "line": 235,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "fall-through from delEdge into delNode case: p.id is undefined, nodes.has(undefined) is false, break",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 115,
+      "file": "incremental/session.ts",
+      "line": 238,
+      "operator": "STMT",
+      "original": "if (!this.g.nodes.has(p.id)) break;",
+      "mutated": "if (!this.g.nodes.has(p.id)) {}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "delNode guard unreachable: expand() emits delNode only for a present node",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 116,
+      "file": "incremental/session.ts",
+      "line": 241,
+      "operator": "NEG",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!(!s.valid)) continue;",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S3 tiny rs-tiny-2 step 10 changes=[{\"kind\":\"delNode\",\"id\":\"n1\"},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f13\",\"type\":\"s\",\"src\":\"n1\",\"tgt\":\"n1\"}},{\"kind\":\"addNode\",\"node\"",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 117,
+      "file": "incremental/session.ts",
+      "line": 241,
+      "operator": "STMT",
+      "original": "if (!s.valid) continue;",
+      "mutated": "if (!s.valid) {}",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "invalid store also notified of delNode; rebuilt in the same step",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 119,
+      "file": "incremental/session.ts",
+      "line": 245,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "fall-through from delNode into setAttr on the removed node: setAttr ignores a missing node",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 120,
+      "file": "incremental/session.ts",
+      "line": 249,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "break removed after the last switch case",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 121,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "ROR",
+      "original": "if (this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "mutated": "if (this.strategy !== 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S3t0.25 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: global path batch=0 incremental=2 expected batch=2 of 2",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 122,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "ROR",
+      "original": "if (this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "mutated": "if (this.strategy === 3 && changes.length >= this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S3t1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: global path batch=2 incremental=0 expected batch=0 of 2",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 123,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "LCR",
+      "original": "if (this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "mutated": "if (this.strategy === 3 || changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S3 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: global path batch=2 incremental=0 expected batch=0 of 2",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 124,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "NEG",
+      "original": "if (this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "mutated": "if (!(this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size))) {",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S3 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: global path batch=2 incremental=0 expected batch=0 of 2",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 125,
+      "file": "incremental/session.ts",
+      "line": 264,
+      "operator": "CONST",
+      "original": "if (this.strategy === 3 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "mutated": "if (this.strategy === 4 && changes.length > this.rebuildThreshold * (this.g.nodes.size + this.g.edges.size)) {",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S3t0.25 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: global path batch=0 incremental=2 expected batch=2 of 2",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 135,
+      "file": "incremental/session.ts",
+      "line": 285,
+      "operator": "NEG",
+      "original": "if (this.eagerOutput) {",
+      "mutated": "if (!(this.eagerOutput)) {",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "default configuration takes the eager branch: same local set (eager and indexed removal are both checked in R10-SES), only the materialisation time differs",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 136,
+      "file": "incremental/session.ts",
+      "line": 287,
+      "operator": "NEG",
+      "original": "if (scope.has(v.anchor)) {",
+      "mutated": "if (!(scope.has(v.anchor))) {",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S3e r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: violations only-first=[ATTR:A.p|n0] only-second=[]",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 142,
+      "file": "incremental/session.ts",
+      "line": 311,
+      "operator": "NEG",
+      "original": "for (const v of evaluateGlobalRuleBatch(sub, r)) if (scope.has(v.anchor)) recomputed.push(v);",
+      "mutated": "for (const v of evaluateGlobalRuleBatch(sub, r)) if (!(scope.has(v.anchor))) recomputed.push(v);",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: violations only-first=[] only-second=[TRACE:TP|n0]",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 143,
+      "file": "incremental/session.ts",
+      "line": 313,
+      "operator": "LCR",
+      "original": "const kept = this.global.filter((v) => !scope.has(v.anchor) && (this.g.nodes.has(v.anchor) || this.g.edges.has(v.anchor)));",
+      "mutated": "const kept = this.global.filter((v) => !scope.has(v.anchor) || (this.g.nodes.has(v.anchor) || this.g.edges.has(v.anchor)));",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"nx\",\"type\":\"C\",\"attrs\":{}}},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"x4\",\"type\":\"s\",\"src\":\"n0\",\"",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 144,
+      "file": "incremental/session.ts",
+      "line": 313,
+      "operator": "LCR",
+      "original": "const kept = this.global.filter((v) => !scope.has(v.anchor) && (this.g.nodes.has(v.anchor) || this.g.edges.has(v.anchor)));",
+      "mutated": "const kept = this.global.filter((v) => !scope.has(v.anchor) && (this.g.nodes.has(v.anchor) && this.g.edges.has(v.anchor)));",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"delNode\",\"id\":\"no-such-node\"},{\"kind\":\"setAttr\",\"id\":\"no-such-node\",\"attr\":\"p\",\"value\":1},{\"kind\":\"delEdge\",\"i",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 150,
+      "file": "incremental/session.ts",
+      "line": 341,
+      "operator": "INC",
+      "original": "const version = ++this.version;",
+      "mutated": "const version = --this.version;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "version counter decremented instead of incremented: values stay distinct per step, the stale-read check is unchanged",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 153,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "original": "return v === null || v === undefined ? undefined : this.compId.get(v);",
+      "mutated": "return v !== null || v === undefined ? undefined : this.compId.get(v);",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "cidOf always undefined: the reindex interval widens to the whole order (correct, more work)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 154,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "ROR",
+      "original": "return v === null || v === undefined ? undefined : this.compId.get(v);",
+      "mutated": "return v === null || v !== undefined ? undefined : this.compId.get(v);",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "same as 153",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 155,
+      "file": "witness/acyclicWitness.ts",
+      "line": 67,
+      "operator": "LCR",
+      "original": "return v === null || v === undefined ? undefined : this.compId.get(v);",
+      "mutated": "return v === null && v === undefined ? undefined : this.compId.get(v);",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "cidOf: `v === null && v === undefined` is false, compId.get(null) is undefined either way",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 156,
+      "file": "witness/acyclicWitness.ts",
+      "line": 73,
+      "operator": "ROR",
+      "original": "while (a > 0) {",
+      "mutated": "while (a >= 0) {",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "lower expansion one step past 0: interval starts at -1, positions stay ordered (more work)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 159,
+      "file": "witness/acyclicWitness.ts",
+      "line": 75,
+      "operator": "ROR",
+      "original": "if (c === undefined || c === loCid) a--;",
+      "mutated": "if (c !== undefined || c === loCid) a--;",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "lower expansion crosses other components: interval over-expanded, still whole components",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 165,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "ROR",
+      "original": "while (b < this.order.length - 1) {",
+      "mutated": "while (b <= this.order.length - 1) {",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "upper expansion one step past the end: a trailing tombstone slot is added",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 166,
+      "file": "witness/acyclicWitness.ts",
+      "line": 78,
+      "operator": "INC",
+      "original": "while (b < this.order.length - 1) {",
+      "mutated": "while (b < this.order.length + 1) {",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "same as 165, two slots",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 168,
+      "file": "witness/acyclicWitness.ts",
+      "line": 80,
+      "operator": "ROR",
+      "original": "if (c === undefined || c === hiCid) b++;",
+      "mutated": "if (c !== undefined || c === hiCid) b++;",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "upper expansion crosses other components (as 159)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 178,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "original": "if (v !== null && v !== undefined && this.g.nodes.has(v)) out.push(v);",
+      "mutated": "if (v !== null || v !== undefined && this.g.nodes.has(v)) out.push(v);",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "slice(): non-null order entries are always live nodes (onDelNode writes a tombstone)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 179,
+      "file": "witness/acyclicWitness.ts",
+      "line": 91,
+      "operator": "LCR",
+      "original": "if (v !== null && v !== undefined && this.g.nodes.has(v)) out.push(v);",
+      "mutated": "if (v !== null && v !== undefined || this.g.nodes.has(v)) out.push(v);",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "slice(): same invariant as 178",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 193,
+      "file": "witness/acyclicWitness.ts",
+      "line": 143,
+      "operator": "NEG",
+      "original": "if (!this.pos.has(v)) return;",
+      "mutated": "if (!(!this.pos.has(v))) return;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "acyclic onDelNode negated: the deleted node keeps a stale slot as an edge-less trivial singleton (edges removed first, slice() filters non-nodes); re-adding the id needs no ordering constraint",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 194,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "ROR",
+      "original": "if (old !== undefined) this.nonTrivial.delete(old);",
+      "mutated": "if (old === undefined) this.nonTrivial.delete(old);",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "onDelNode: incident edges are deleted first (Expand order), so the node is a trivial component when it is removed",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 195,
+      "file": "witness/acyclicWitness.ts",
+      "line": 148,
+      "operator": "NEG",
+      "original": "if (old !== undefined) this.nonTrivial.delete(old);",
+      "mutated": "if (!(old !== undefined)) this.nonTrivial.delete(old);",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "same as 194",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 196,
+      "file": "witness/acyclicWitness.ts",
+      "line": 155,
+      "operator": "NEG",
+      "original": "if (!this.pos.has(u)) this.onAddNode(u);",
+      "mutated": "if (!(!this.pos.has(u))) this.onAddNode(u);",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "onAddEdge: endpoints are always registered (addNode precedes, rebuild registers all), onAddNode returns immediately",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 197,
+      "file": "witness/acyclicWitness.ts",
+      "line": 156,
+      "operator": "NEG",
+      "original": "if (!this.pos.has(v)) this.onAddNode(v);",
+      "mutated": "if (!(!this.pos.has(v))) this.onAddNode(v);",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "same as 196",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 202,
+      "file": "witness/acyclicWitness.ts",
+      "line": 168,
+      "operator": "ROR",
+      "original": "if (pu < pv) {",
+      "mutated": "if (pu <= pv) {",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "pu === pv only when u === v, handled before",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 204,
+      "file": "witness/acyclicWitness.ts",
+      "line": 178,
+      "operator": "LCR",
+      "original": "if (!this.pos.has(u) || !this.pos.has(v)) {",
+      "mutated": "if (!this.pos.has(u) && !this.pos.has(v)) {",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "onDelEdge: both endpoints are always registered (edges are deleted before nodes)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 206,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "ROR",
+      "original": "if (u === v) {",
+      "mutated": "if (u !== v) {",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "self loop falls through to the same-component branch, which reindexes the same range",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 207,
+      "file": "witness/acyclicWitness.ts",
+      "line": 182,
+      "operator": "NEG",
+      "original": "if (u === v) {",
+      "mutated": "if (!(u === v)) {",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "same as 206",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 210,
+      "file": "witness/acyclicWitness.ts",
+      "line": 201,
+      "operator": "ROR",
+      "original": "out.sort((a, b) => (a.witness.join(',') < b.witness.join(',') ? -1 : 1));",
+      "mutated": "out.sort((a, b) => (a.witness.join(',') <= b.witness.join(',') ? -1 : 1));",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "sort tie impossible: distinct components have disjoint member lists",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 219,
+      "file": "witness/traceWitness.ts",
+      "line": 81,
+      "operator": "ROR",
+      "original": "while (head < queue.length) {",
+      "mutated": "while (head <= queue.length) {",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "rebuild BFS one extra empty iteration (work +1)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 229,
+      "file": "witness/traceWitness.ts",
+      "line": 104,
+      "operator": "NEG",
+      "original": "if (this.isTarget(v)) this.propagateFrom(v);",
+      "mutated": "if (!(this.isTarget(v))) this.propagateFrom(v);",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S3 r10-zero sg-n1-t0-v0-0 step 0 changes=[{\"kind\":\"addNode\",\"node\":{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":2}}}]: violations only-first=[] only-second=[TRACE:TP|n0]",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 230,
+      "file": "witness/traceWitness.ts",
+      "line": 124,
+      "operator": "ROR",
+      "original": "while (head < queue.length) {",
+      "mutated": "while (head <= queue.length) {",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "propagateFrom one extra empty iteration (work +1)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 245,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "ROR",
+      "original": "if (eid !== undefined) {",
+      "mutated": "if (eid === undefined) {",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "invalidate keeps stale child links; later over-invalidation is re-resolved (reresolve + propagateFrom)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 246,
+      "file": "witness/traceWitness.ts",
+      "line": 175,
+      "operator": "NEG",
+      "original": "if (eid !== undefined) {",
+      "mutated": "if (!(eid !== undefined)) {",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "same as 245",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 249,
+      "file": "witness/traceWitness.ts",
+      "line": 190,
+      "operator": "STMT",
+      "original": "if (this.reaches.has(u)) continue;",
+      "mutated": "if (this.reaches.has(u)) {}",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "re-resolution of already reaching nodes: evidence re-set, stale child links only",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 254,
+      "file": "witness/traceWitness.ts",
+      "line": 199,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQC",
+      "why": "re-resolution continues after the first evidence edge: extra child links only",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 259,
+      "file": "witness/traceWitness.ts",
+      "line": 229,
+      "operator": "STMT",
+      "original": "if (!this.g.nodes.has(id)) continue;",
+      "mutated": "if (!this.g.nodes.has(id)) {}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "report(): violating never holds a deleted node (onDelNode removes it)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 260,
+      "file": "witness/traceWitness.ts",
+      "line": 232,
+      "operator": "ROR",
+      "original": "out.sort((a, b) => (a.witness[0] < b.witness[0] ? -1 : 1));",
+      "mutated": "out.sort((a, b) => (a.witness[0] <= b.witness[0] ? -1 : 1));",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "sort tie impossible: node ids are unique",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 261,
+      "file": "witness/traceWitness.ts",
+      "line": 241,
+      "operator": "LCR",
+      "original": "while (this.succ.has(cur) && !guard.has(cur)) {",
+      "mutated": "while (this.succ.has(cur) || !guard.has(cur)) {",
+      "r10KilledBy": "R10-API",
+      "class": "B",
+      "why": "killed by R10-API: evidencePath(n3) threw TypeError: Cannot read properties of undefined (reading 'tgt') in api-tiny-0",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 262,
+      "file": "witness/traceWitness.ts",
+      "line": 246,
+      "operator": "NEG",
+      "original": "if (this.isTarget(cur)) break;",
+      "mutated": "if (!(this.isTarget(cur))) break;",
+      "r10KilledBy": "R10-API",
+      "class": "B",
+      "why": "killed by R10-API: evidencePath(n2) [\"e3\"] is not a r|s path to a C in api-tiny-13",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 263,
+      "file": "witness/traceWitness.ts",
+      "line": 246,
+      "operator": "STMT",
+      "original": "if (this.isTarget(cur)) break;",
+      "mutated": "if (this.isTarget(cur)) {}",
+      "r10KilledBy": "R10-API",
+      "class": "B",
+      "why": "killed by R10-API: evidencePath(n2) [\"e2\",\"e3\",\"e10\"] is not a r|s path to a C in api-r10-zero-9",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 294,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "NEG",
+      "original": "if (!a) continue;",
+      "mutated": "if (!(!a)) continue;",
+      "r10KilledBy": null,
+      "class": "C",
+      "why": "shared rule-derivation/value-domain code (catalog/rules.ts)",
+      "oracleReplay": {
+        "caughtShacl": 5674,
+        "caughtBlind": 2721,
+        "crashes": 1575,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 295,
+      "file": "catalog/rules.ts",
+      "line": 13,
+      "operator": "STMT",
+      "original": "if (!a) continue;",
+      "mutated": "if (!a) {}",
+      "r10KilledBy": null,
+      "class": "C",
+      "why": "shared rule-derivation/value-domain code (catalog/rules.ts)",
+      "oracleReplay": {
+        "caughtShacl": 1575,
+        "caughtBlind": 900,
+        "crashes": 1575,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 296,
+      "file": "catalog/rules.ts",
+      "line": 38,
+      "operator": "NEG",
+      "original": "if (c.viewPolicy) {",
+      "mutated": "if (!(c.viewPolicy)) {",
+      "r10KilledBy": "crash:R10-SES",
+      "class": "B",
+      "why": "killed by crash:R10-SES: TypeError: Cannot read properties of undefined (reading 'viewType')",
+      "oracleReplay": {
+        "caughtShacl": 1223,
+        "caughtBlind": 803,
+        "crashes": 800,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 297,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "ROR",
+      "original": "for (const r of rules) if (!r.global && r.radius > k) k = r.radius;",
+      "mutated": "for (const r of rules) if (!r.global && r.radius >= k) k = r.radius;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "maxLocalRadius: `>=` yields the same maximum",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 298,
+      "file": "catalog/rules.ts",
+      "line": 64,
+      "operator": "LCR",
+      "original": "for (const r of rules) if (!r.global && r.radius > k) k = r.radius;",
+      "mutated": "for (const r of rules) if (!r.global || r.radius > k) k = r.radius;",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-noview sg-n2-t0-v0-3 step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: scopeSize 1 expected 2",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 302,
+      "file": "catalog/rules.ts",
+      "line": 69,
+      "operator": "BOOL",
+      "original": "if (v === undefined) return false;",
+      "mutated": "if (v === undefined) return true;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "inDomain(undefined): every caller (engine, engineCsr, reference, specEngine) tests undefined first",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 304,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' && v >= d.min && v < d.max;",
+      "r10KilledBy": null,
+      "class": "C",
+      "why": "shared rule-derivation/value-domain code (catalog/rules.ts)",
+      "oracleReplay": {
+        "caughtShacl": 208,
+        "caughtBlind": 105,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 305,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "ROR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' && v > d.min && v <= d.max;",
+      "r10KilledBy": null,
+      "class": "C",
+      "why": "shared rule-derivation/value-domain code (catalog/rules.ts)",
+      "oracleReplay": {
+        "caughtShacl": 278,
+        "caughtBlind": 154,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 306,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' || v >= d.min && v <= d.max;",
+      "r10KilledBy": null,
+      "class": "C",
+      "why": "shared rule-derivation/value-domain code (catalog/rules.ts)",
+      "oracleReplay": {
+        "caughtShacl": 1249,
+        "caughtBlind": 686,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 307,
+      "file": "catalog/rules.ts",
+      "line": 74,
+      "operator": "LCR",
+      "original": "return typeof v === 'number' && v >= d.min && v <= d.max;",
+      "mutated": "return typeof v === 'number' && v >= d.min || v <= d.max;",
+      "r10KilledBy": null,
+      "class": "C",
+      "why": "shared rule-derivation/value-domain code (catalog/rules.ts)",
+      "oracleReplay": {
+        "caughtShacl": 1370,
+        "caughtBlind": 777,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 309,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "ROR",
+      "original": "return typeof v === 'string' && v.length > 0;",
+      "mutated": "return typeof v === 'string' && v.length >= 0;",
+      "r10KilledBy": null,
+      "class": "C",
+      "why": "shared rule-derivation/value-domain code (catalog/rules.ts)",
+      "oracleReplay": {
+        "caughtShacl": 152,
+        "caughtBlind": 84,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 310,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "LCR",
+      "original": "return typeof v === 'string' && v.length > 0;",
+      "mutated": "return typeof v === 'string' || v.length > 0;",
+      "r10KilledBy": null,
+      "class": "C",
+      "why": "shared rule-derivation/value-domain code (catalog/rules.ts)",
+      "oracleReplay": {
+        "caughtShacl": 152,
+        "caughtBlind": 84,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 311,
+      "file": "catalog/rules.ts",
+      "line": 76,
+      "operator": "CONST",
+      "original": "return typeof v === 'string' && v.length > 0;",
+      "mutated": "return typeof v === 'string' && v.length > 1;",
+      "r10KilledBy": null,
+      "class": "C",
+      "why": "shared rule-derivation/value-domain code (catalog/rules.ts)",
+      "oracleReplay": {
+        "caughtShacl": 976,
+        "caughtBlind": 510,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 312,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "ROR",
+      "original": "if (a.size !== b.size) return false;",
+      "mutated": "if (a.size === b.size) return false;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "setEqual has no caller in the code base (dead function)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 313,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "NEG",
+      "original": "if (a.size !== b.size) return false;",
+      "mutated": "if (!(a.size !== b.size)) return false;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "setEqual dead function",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 314,
+      "file": "catalog/rules.ts",
+      "line": 102,
+      "operator": "BOOL",
+      "original": "if (a.size !== b.size) return false;",
+      "mutated": "if (a.size !== b.size) return true;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "setEqual dead function",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 315,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "NEG",
+      "original": "for (const x of a) if (!b.has(x)) return false;",
+      "mutated": "for (const x of a) if (!(!b.has(x))) return false;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "setEqual dead function",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 316,
+      "file": "catalog/rules.ts",
+      "line": 103,
+      "operator": "BOOL",
+      "original": "for (const x of a) if (!b.has(x)) return false;",
+      "mutated": "for (const x of a) if (!b.has(x)) return true;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "setEqual dead function",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 317,
+      "file": "catalog/rules.ts",
+      "line": 104,
+      "operator": "BOOL",
+      "original": "return true;",
+      "mutated": "return false;",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "setEqual dead function",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 319,
+      "file": "model/graph.ts",
+      "line": 40,
+      "operator": "NEG",
+      "original": "if (ids.has(n.id)) out.push({ kind: 'duplicateNodeId', id: n.id });",
+      "mutated": "if (!(ids.has(n.id))) out.push({ kind: 'duplicateNodeId', id: n.id });",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"ty",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 320,
+      "file": "model/graph.ts",
+      "line": 46,
+      "operator": "NEG",
+      "original": "if (eids.has(e.id)) out.push({ kind: 'duplicateEdgeId', id: e.id });",
+      "mutated": "if (!(eids.has(e.id))) out.push({ kind: 'duplicateEdgeId', id: e.id });",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"ty",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 321,
+      "file": "model/graph.ts",
+      "line": 49,
+      "operator": "ROR",
+      "original": "if (missing.length > 0) {",
+      "mutated": "if (missing.length >= 0) {",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"ty",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 322,
+      "file": "model/graph.ts",
+      "line": 49,
+      "operator": "NEG",
+      "original": "if (missing.length > 0) {",
+      "mutated": "if (!(missing.length > 0)) {",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"ty",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 323,
+      "file": "model/graph.ts",
+      "line": 49,
+      "operator": "CONST",
+      "original": "if (missing.length > 0) {",
+      "mutated": "if (missing.length > 1) {",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"ty",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 324,
+      "file": "model/graph.ts",
+      "line": 51,
+      "operator": "STMT",
+      "original": "continue;",
+      "mutated": "{}",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"ty",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 325,
+      "file": "model/graph.ts",
+      "line": 53,
+      "operator": "ROR",
+      "original": "if (e.type === containEdgeType) owners.set(e.tgt, (owners.get(e.tgt) ?? 0) + 1);",
+      "mutated": "if (e.type !== containEdgeType) owners.set(e.tgt, (owners.get(e.tgt) ?? 0) + 1);",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"ty",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 326,
+      "file": "model/graph.ts",
+      "line": 53,
+      "operator": "NEG",
+      "original": "if (e.type === containEdgeType) owners.set(e.tgt, (owners.get(e.tgt) ?? 0) + 1);",
+      "mutated": "if (!(e.type === containEdgeType)) owners.set(e.tgt, (owners.get(e.tgt) ?? 0) + 1);",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"ty",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 327,
+      "file": "model/graph.ts",
+      "line": 53,
+      "operator": "INC",
+      "original": "if (e.type === containEdgeType) owners.set(e.tgt, (owners.get(e.tgt) ?? 0) + 1);",
+      "mutated": "if (e.type === containEdgeType) owners.set(e.tgt, (owners.get(e.tgt) ?? 0) - 1);",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in4\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 328,
+      "file": "model/graph.ts",
+      "line": 55,
+      "operator": "ROR",
+      "original": "for (const [x, k] of owners) if (k > 1) out.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "mutated": "for (const [x, k] of owners) if (k >= 1) out.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"ty",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 329,
+      "file": "model/graph.ts",
+      "line": 55,
+      "operator": "NEG",
+      "original": "for (const [x, k] of owners) if (k > 1) out.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "mutated": "for (const [x, k] of owners) if (!(k > 1)) out.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e1\",\"ty",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 330,
+      "file": "model/graph.ts",
+      "line": 55,
+      "operator": "CONST",
+      "original": "for (const [x, k] of owners) if (k > 1) out.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "mutated": "for (const [x, k] of owners) if (k > 2) out.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: checkModelInput(contain) {\"id\":\"in4\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 332,
+      "file": "model/graph.ts",
+      "line": 78,
+      "operator": "STMT",
+      "original": "continue;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "duplicate node id: InputError with the same defect list is thrown whether or not the later node overwrites the first",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 334,
+      "file": "model/graph.ts",
+      "line": 89,
+      "operator": "STMT",
+      "original": "continue;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "duplicate edge id: same InputError is thrown at the end of normalisation",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 335,
+      "file": "model/graph.ts",
+      "line": 94,
+      "operator": "LCR",
+      "original": "if (!g.nodes.has(e.src) || !g.nodes.has(e.tgt)) {",
+      "mutated": "if (!g.nodes.has(e.src) && !g.nodes.has(e.tgt)) {",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":false}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"",
+      "oracleReplay": {
+        "caughtShacl": 1981,
+        "caughtBlind": 997,
+        "crashes": 1981,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 337,
+      "file": "model/graph.ts",
+      "line": 96,
+      "operator": "STMT",
+      "original": "continue;",
+      "mutated": "{}",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":false}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"",
+      "oracleReplay": {
+        "caughtShacl": 2007,
+        "caughtBlind": 1011,
+        "crashes": 2007,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 340,
+      "file": "model/graph.ts",
+      "line": 102,
+      "operator": "CONST",
+      "original": "if (fatal.length > 0) throw new InputError(fatal);",
+      "mutated": "if (fatal.length > 1) throw new InputError(fatal);",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":false}) {\"id\":\"in5\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}},{\"id\":\"n2\",\"type\":\"A\",\"attrs\"",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 341,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "ROR",
+      "original": "if (opts.dangling === 'reject' && dangling.length > 0) throw new InputError(dangling);",
+      "mutated": "if (opts.dangling !== 'reject' && dangling.length > 0) throw new InputError(dangling);",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":false}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"",
+      "oracleReplay": {
+        "caughtShacl": 2007,
+        "caughtBlind": 1011,
+        "crashes": 2007,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 342,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "ROR",
+      "original": "if (opts.dangling === 'reject' && dangling.length > 0) throw new InputError(dangling);",
+      "mutated": "if (opts.dangling === 'reject' && dangling.length >= 0) throw new InputError(dangling);",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"policy\":\"reject\",\"withReport\":false}) {\"id\":\"in2\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 343,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "LCR",
+      "original": "if (opts.dangling === 'reject' && dangling.length > 0) throw new InputError(dangling);",
+      "mutated": "if (opts.dangling === 'reject' || dangling.length > 0) throw new InputError(dangling);",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":false}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"",
+      "oracleReplay": {
+        "caughtShacl": 2007,
+        "caughtBlind": 1011,
+        "crashes": 2007,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 345,
+      "file": "model/graph.ts",
+      "line": 103,
+      "operator": "CONST",
+      "original": "if (opts.dangling === 'reject' && dangling.length > 0) throw new InputError(dangling);",
+      "mutated": "if (opts.dangling === 'reject' && dangling.length > 1) throw new InputError(dangling);",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"policy\":\"reject\",\"withReport\":false}) {\"id\":\"in8\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}}],\"edges\":[{",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 347,
+      "file": "model/graph.ts",
+      "line": 108,
+      "operator": "ROR",
+      "original": "for (const eid of list) if (g.edges.get(eid)!.type === 'contain') k++;",
+      "mutated": "for (const eid of list) if (g.edges.get(eid)!.type !== 'contain') k++;",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":true}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 348,
+      "file": "model/graph.ts",
+      "line": 108,
+      "operator": "NEG",
+      "original": "for (const eid of list) if (g.edges.get(eid)!.type === 'contain') k++;",
+      "mutated": "for (const eid of list) if (!(g.edges.get(eid)!.type === 'contain')) k++;",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":true}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 349,
+      "file": "model/graph.ts",
+      "line": 108,
+      "operator": "INC",
+      "original": "for (const eid of list) if (g.edges.get(eid)!.type === 'contain') k++;",
+      "mutated": "for (const eid of list) if (g.edges.get(eid)!.type === 'contain') k--;",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":true}) {\"id\":\"in4\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}}],\"edges\":[{\"id\":\"e0\",\"type\":\"c",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 350,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "ROR",
+      "original": "if (k > 1) opts.report.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "mutated": "if (k >= 1) opts.report.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":true}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 351,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "NEG",
+      "original": "if (k > 1) opts.report.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "mutated": "if (!(k > 1)) opts.report.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":true}) {\"id\":\"in0\",\"nodes\":[{\"id\":\"n0\",\"type\":\"B\",\"attrs\":{\"p\":0}}],\"edges\":[{\"id\":\"e0\",\"type\":\"contain\",\"src\":\"n0\",\"tgt\":\"n0\"},{\"id\":\"e",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 352,
+      "file": "model/graph.ts",
+      "line": 109,
+      "operator": "CONST",
+      "original": "if (k > 1) opts.report.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "mutated": "if (k > 2) opts.report.push({ kind: 'multipleOwners', id: x, detail: String(k) });",
+      "r10KilledBy": "R10-IN",
+      "class": "B",
+      "why": "killed by R10-IN: normalize({\"withReport\":true}) {\"id\":\"in4\",\"nodes\":[{\"id\":\"n0\",\"type\":\"A\",\"attrs\":{\"p\":0}},{\"id\":\"n1\",\"type\":\"B\",\"attrs\":{\"p\":1}}],\"edges\":[{\"id\":\"e0\",\"type\":\"c",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 361,
+      "file": "model/graph.ts",
+      "line": 153,
+      "operator": "BOOL",
+      "original": "if (!g.nodes.has(edge.src) || !g.nodes.has(edge.tgt)) return false;",
+      "mutated": "if (!g.nodes.has(edge.src) || !g.nodes.has(edge.tgt)) return true;",
+      "r10KilledBy": "R10-API",
+      "class": "B",
+      "why": "killed by R10-API: applyChanges support tiny api-tiny-0 step 1 changes=[{\"kind\":\"delNode\",\"id\":\"n2\"},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f0\",\"type\":\"r\",\"src\":\"n4\",\"tgt\":\"n2\"}},{\"kind\"",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 363,
+      "file": "model/graph.ts",
+      "line": 154,
+      "operator": "BOOL",
+      "original": "if (g.edges.has(edge.id)) return false;",
+      "mutated": "if (g.edges.has(edge.id)) return true;",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S3 r10-zero sg-n2-t2-v0-0 step 0 changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"e0\",\"type\":\"s\",\"src\":\"n1\",\"tgt\":\"n0\"}}]: violations only-first=[] only-second=[TRACE:T",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 370,
+      "file": "model/graph.ts",
+      "line": 193,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": "R10-API",
+      "class": "B",
+      "why": "killed by R10-API: applyChanges support tiny api-tiny-0 step 1 changes=[{\"kind\":\"delNode\",\"id\":\"n2\"},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f0\",\"type\":\"r\",\"src\":\"n4\",\"tgt\":\"n2\"}},{\"kind\"",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 371,
+      "file": "model/graph.ts",
+      "line": 197,
+      "operator": "NEG",
+      "original": "if (e) touched.push(e.src, e.tgt, e.id);",
+      "mutated": "if (!(e)) touched.push(e.src, e.tgt, e.id);",
+      "r10KilledBy": "R10-API",
+      "class": "B",
+      "why": "killed by R10-API: applyChanges support tiny api-tiny-0 step 1 changes=[{\"kind\":\"delNode\",\"id\":\"n2\"},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f0\",\"type\":\"r\",\"src\":\"n4\",\"tgt\":\"n2\"}},{\"kind\"",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 372,
+      "file": "model/graph.ts",
+      "line": 201,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "applyChanges fall-through from delNode into setAttr on the removed node: no-op, duplicate id in a Set",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 374,
+      "file": "model/graph.ts",
+      "line": 208,
+      "operator": "NEG",
+      "original": "if (addEdge(g, c.edge)) touched.push(c.edge.id, c.edge.src, c.edge.tgt);",
+      "mutated": "if (!(addEdge(g, c.edge))) touched.push(c.edge.id, c.edge.src, c.edge.tgt);",
+      "r10KilledBy": "R10-API",
+      "class": "B",
+      "why": "killed by R10-API: applyChanges support tiny api-tiny-0 step 1 changes=[{\"kind\":\"delNode\",\"id\":\"n2\"},{\"kind\":\"addEdge\",\"edge\":{\"id\":\"f0\",\"type\":\"r\",\"src\":\"n4\",\"tgt\":\"n2\"}},{\"kind\"",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 375,
+      "file": "model/graph.ts",
+      "line": 209,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "applyChanges fall-through from addEdge into delEdge with c.id undefined: no-op",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 377,
+      "file": "model/graph.ts",
+      "line": 214,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "break removed after the last switch case",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 378,
+      "file": "model/graph.ts",
+      "line": 228,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "changeSupportNodes fall-through: adds undefined, which kHopNodes ignores",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 379,
+      "file": "model/graph.ts",
+      "line": 233,
+      "operator": "NEG",
+      "original": "if (e) {",
+      "mutated": "if (!(e)) {",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "changeSupportNodes: endpoints of the deleted node’s edges are within distance 1 of the node and are added again from the post-state primitives; scope unchanged (checked by the scope specification in R10-SES)",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 380,
+      "file": "model/graph.ts",
+      "line": 238,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "fall-through adds the same id twice to a Set",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 382,
+      "file": "model/graph.ts",
+      "line": 245,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "fall-through into delEdge with c.id undefined: no-op",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 383,
+      "file": "model/graph.ts",
+      "line": 248,
+      "operator": "NEG",
+      "original": "if (e) {",
+      "mutated": "if (!(e)) {",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 step 0 threw TypeError: Cannot read properties of undefined (reading 'src') changes=[{\"kind\":\"delNode\",\"id\":\"no-such-node\"},{\"kind\":\"setAttr\",\"id\":\"no-such-n",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 384,
+      "file": "model/graph.ts",
+      "line": 252,
+      "operator": "STMT",
+      "original": "break;",
+      "mutated": "{}",
+      "r10KilledBy": null,
+      "class": "EQ",
+      "why": "break removed after the last switch case",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 385,
+      "file": "model/graph.ts",
+      "line": 267,
+      "operator": "LCR",
+      "original": "if (g.nodes.has(s) && !seen.has(s)) {",
+      "mutated": "if (g.nodes.has(s) || !seen.has(s)) {",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-zero sg-n1-t0-v0- step 0 changes=[{\"kind\":\"addEdge\",\"edge\":{\"id\":\"g1\",\"type\":\"r\",\"src\":\"n0\",\"tgt\":\"ghost\"}}]: scopeSize 2 expected 1",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 387,
+      "file": "model/graph.ts",
+      "line": 272,
+      "operator": "ROR",
+      "original": "for (let d = 0; d < k; d++) {",
+      "mutated": "for (let d = 0; d <= k; d++) {",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-zero rs-r10-zero-0 step 9 changes=[{\"kind\":\"setAttr\",\"id\":\"n6\",\"attr\":\"p\"}]: scopeSize 4 expected 3",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    },
+    {
+      "id": 389,
+      "file": "model/graph.ts",
+      "line": 277,
+      "operator": "NEG",
+      "original": "if (!seen.has(e.tgt)) {",
+      "mutated": "if (!(!seen.has(e.tgt))) {",
+      "r10KilledBy": "R10-SES",
+      "class": "B",
+      "why": "killed by R10-SES: S1 r10-zero sg-n2-t0-v0-3 step 0 changes=[{\"kind\":\"setAttr\",\"id\":\"n0\",\"attr\":\"p\",\"value\":3}]: scopeSize 1 expected 2",
+      "oracleReplay": {
+        "caughtShacl": 0,
+        "caughtBlind": 0,
+        "crashes": 0,
+        "engineVsReference": 0,
+        "cases": 6150
+      }
+    }
+  ]
+}

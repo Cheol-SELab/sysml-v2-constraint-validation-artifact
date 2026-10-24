@@ -1,0 +1,182 @@
+{
+ "id": "n1000-s1001",
+ "n": 1000,
+ "seed": 1001,
+ "nodes": 1000,
+ "edges": 1479,
+ "defectEdits": 20,
+ "violations": 18,
+ "violationsByClass": {
+  "relationType": 6,
+  "requiredAttr": 3,
+  "attrDomain": 1,
+  "multiplicity": 4,
+  "isolated": 1,
+  "tracePolicy": 3
+ },
+ "engine": {
+  "normalizeMs": 0.6277,
+  "validateSamplesMs": [
+   3.3374,
+   4.4126,
+   2.8756,
+   3.311,
+   2.8461,
+   2.9952,
+   2.4705
+  ],
+  "validateMs": 2.9952,
+  "validateCoreSamplesMs": [
+   1.2687,
+   1.4832,
+   2.0197,
+   1.4286,
+   2.0792,
+   1.3476,
+   1.3071
+  ],
+  "validateCoreMs": 1.4286
+ },
+ "reference": {
+  "samplesMs": [
+   800.95,
+   949.0678,
+   729.3922
+  ],
+  "equal": true,
+  "medianMs": 800.95
+ },
+ "incremental": {
+  "strategy": 3,
+  "edits": 20,
+  "stepSamplesMs": [
+   0.2339,
+   0.1896,
+   0.2857,
+   0.2792,
+   0.1532,
+   0.3618,
+   0.2099,
+   0.2776,
+   0.2791,
+   0.1504,
+   0.2504,
+   0.2062,
+   0.162,
+   0.1241,
+   0.5876,
+   0.478,
+   0.2862,
+   0.2309,
+   0.165,
+   0.2623
+  ],
+  "stepMedianMs": 0.24215
+ },
+ "post": [
+  {
+   "edit": {
+    "kind": "setAttr",
+    "id": "R157",
+    "attr": "name",
+    "value": "test"
+   },
+   "violations": [
+    "DOM:Requirement.priority|R104",
+    "ISO:Function|F142",
+    "MULT:Function|allocate|out|F142",
+    "MULT:Port|contain|in|P86",
+    "MULT:Requirement|satisfy|in|R106",
+    "MULT:Requirement|satisfy|in|R82",
+    "REQ:Component.name|C40",
+    "REQ:Function.name|F143",
+    "REQ:VerificationCase.method|V97",
+    "TRACE:FUN2REQ|F123",
+    "TRACE:FUN2REQ|F142",
+    "TRACE:FUN2REQ|F98",
+    "TYPE:allocate|edit#d5",
+    "TYPE:connect|edit#d2",
+    "TYPE:connect|edit#d7",
+    "TYPE:contain|edit#d4",
+    "TYPE:dependOn|edit#d10",
+    "TYPE:satisfy|edit#d19"
+   ],
+   "batchEqual": true
+  },
+  {
+   "edit": {
+    "kind": "delEdge",
+    "id": "e875"
+   },
+   "violations": [
+    "DOM:Requirement.priority|R104",
+    "ISO:Function|F142",
+    "MULT:Function|allocate|out|F142",
+    "MULT:Port|contain|in|P86",
+    "MULT:Requirement|satisfy|in|R106",
+    "MULT:Requirement|satisfy|in|R82",
+    "MULT:Requirement|verify|in|R145",
+    "REQ:Component.name|C40",
+    "REQ:Function.name|F143",
+    "REQ:VerificationCase.method|V97",
+    "TRACE:FUN2REQ|F123",
+    "TRACE:FUN2REQ|F142",
+    "TRACE:FUN2REQ|F98",
+    "TYPE:allocate|edit#d5",
+    "TYPE:connect|edit#d2",
+    "TYPE:connect|edit#d7",
+    "TYPE:contain|edit#d4",
+    "TYPE:dependOn|edit#d10",
+    "TYPE:satisfy|edit#d19"
+   ],
+   "batchEqual": true
+  },
+  {
+   "edit": {
+    "kind": "delEdge",
+    "id": "e163"
+   },
+   "violations": [
+    "DOM:Requirement.priority|R104",
+    "ISO:Function|F142",
+    "MULT:Function|allocate|out|F142",
+    "MULT:Port|contain|in|P86",
+    "MULT:Requirement|satisfy|in|R106",
+    "MULT:Requirement|satisfy|in|R82",
+    "REQ:Component.name|C40",
+    "REQ:Function.name|F143",
+    "REQ:VerificationCase.method|V97",
+    "TRACE:FUN2REQ|F123",
+    "TRACE:FUN2REQ|F142",
+    "TRACE:FUN2REQ|F98",
+    "TYPE:allocate|edit#d5",
+    "TYPE:connect|edit#d2",
+    "TYPE:connect|edit#d7",
+    "TYPE:contain|edit#d4",
+    "TYPE:dependOn|edit#d10",
+    "TYPE:satisfy|edit#d19"
+   ],
+   "batchEqual": true
+  }
+ ],
+ "violationKeys": [
+  "DOM:Requirement.priority|R104",
+  "ISO:Function|F142",
+  "MULT:Function|allocate|out|F142",
+  "MULT:Port|contain|in|P86",
+  "MULT:Requirement|satisfy|in|R106",
+  "MULT:Requirement|satisfy|in|R82",
+  "REQ:Component.name|C40",
+  "REQ:Function.name|F143",
+  "REQ:VerificationCase.method|V97",
+  "TRACE:FUN2REQ|F123",
+  "TRACE:FUN2REQ|F142",
+  "TRACE:FUN2REQ|F98",
+  "TYPE:allocate|edit#d5",
+  "TYPE:connect|edit#d2",
+  "TYPE:connect|edit#d7",
+  "TYPE:contain|edit#d4",
+  "TYPE:dependOn|edit#d10",
+  "TYPE:satisfy|edit#d19"
+ ]
+}

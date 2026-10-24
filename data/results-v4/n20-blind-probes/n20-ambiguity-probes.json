@@ -1,0 +1,328 @@
+{
+  "experiment": "n20-ambiguity-probes",
+  "note": "one typed-graph probe per observable ambiguity of oracle-blind/INTERPRETATION.md; items 8 (single type, S1 level), 17-19 (naming, dedup, ordering) and 21 (float64) are not observable as violation-set differences on this input format",
+  "rows": [
+    {
+      "item": "1",
+      "question": "DOM range closed [min,max]",
+      "engine": [
+        "DOM:A.r|a2",
+        "DOM:A.r|a3"
+      ],
+      "oracle": [
+        "DOM:A.r|a2",
+        "DOM:A.r|a3"
+      ],
+      "blind": [
+        "DOM:A.r|a2",
+        "DOM:A.r|a3"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "2",
+      "question": "DOM range: string \"1\" and boolean true are not numbers",
+      "engine": [
+        "DOM:A.r|a0",
+        "DOM:A.r|a1"
+      ],
+      "oracle": [
+        "DOM:A.r|a0",
+        "DOM:A.r|a1"
+      ],
+      "blind": [
+        "DOM:A.r|a0",
+        "DOM:A.r|a1"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "3",
+      "question": "DOM enum: value and primitive kind must match (\"1\" != 1, true != 1, 1 == 1.0)",
+      "engine": [
+        "DOM:A.e|a0",
+        "DOM:A.e|a3",
+        "DOM:B.e2|b0"
+      ],
+      "oracle": [
+        "DOM:A.e|a0",
+        "DOM:A.e|a3",
+        "DOM:B.e2|b0"
+      ],
+      "blind": [
+        "DOM:A.e|a0",
+        "DOM:A.e|a3",
+        "DOM:B.e2|b0"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "4",
+      "question": "DOM nonEmptyString: \" \" valid, \"\" and numbers invalid, no trimming",
+      "engine": [
+        "DOM:A.s|a1",
+        "DOM:A.s|a2"
+      ],
+      "oracle": [
+        "DOM:A.s|a1",
+        "DOM:A.s|a2"
+      ],
+      "blind": [
+        "DOM:A.s|a1",
+        "DOM:A.s|a2"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "5",
+      "question": "DOM: absent attribute passes (ATTR decides)",
+      "engine": [
+        "REQ:A.k|a1"
+      ],
+      "oracle": [
+        "REQ:A.k|a1"
+      ],
+      "blind": [
+        "REQ:A.k|a1"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "6",
+      "question": "ATTR: present with \"\", 0 or false counts as defined",
+      "engine": [],
+      "oracle": [],
+      "blind": [],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "7",
+      "question": "DOM evaluated for a domain key whose attribute is not required",
+      "engine": [
+        "DOM:A.r|a0"
+      ],
+      "oracle": [
+        "DOM:A.r|a0"
+      ],
+      "blind": [
+        "DOM:A.r|a0"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "9",
+      "question": "edge type absent from Allowed / from the catalog: no TYPE rule",
+      "engine": [],
+      "oracle": [],
+      "blind": [],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "10",
+      "question": "dangling edge: excluded from G (engine/oracle) vs kept (blind)",
+      "engine": [
+        "ISO:A|a0",
+        "ISO:B|b0",
+        "MULT:A|q|in|a0",
+        "MULT:A|q|out|a0",
+        "MULT:B|p|in|b0"
+      ],
+      "oracle": [
+        "ISO:A|a0",
+        "ISO:B|b0",
+        "MULT:A|q|in|a0",
+        "MULT:A|q|out|a0",
+        "MULT:B|p|in|b0"
+      ],
+      "blind": [
+        "ACYC:q|a0,ghost",
+        "ISO:B|b0",
+        "MULT:B|p|in|b0",
+        "TYPE:p|e0"
+      ],
+      "threeAgreeOnFocus": false,
+      "threeAgreeAll": false
+    },
+    {
+      "item": "11",
+      "question": "MULT counts edges (parallel edges count twice); a self-loop counts once out and once in",
+      "engine": [
+        "MULT:A|q|in|a0",
+        "MULT:A|q|in|a1",
+        "MULT:A|q|out|a1"
+      ],
+      "oracle": [
+        "MULT:A|q|in|a0",
+        "MULT:A|q|in|a1",
+        "MULT:A|q|out|a1"
+      ],
+      "blind": [
+        "MULT:A|q|in|a0",
+        "MULT:A|q|in|a1",
+        "MULT:A|q|out|a1"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "12",
+      "question": "MULT: no edge at all violates a lower bound >= 1",
+      "engine": [
+        "MULT:A|q|in|a0",
+        "MULT:A|q|out|a0",
+        "MULT:B|p|in|b0"
+      ],
+      "oracle": [
+        "MULT:A|q|in|a0",
+        "MULT:A|q|out|a0",
+        "MULT:B|p|in|b0"
+      ],
+      "blind": [
+        "MULT:A|q|in|a0",
+        "MULT:A|q|out|a0",
+        "MULT:B|p|in|b0"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "13",
+      "question": "ISO: a self-loop or an edge of an uncatalogued type makes a node non-isolated",
+      "engine": [
+        "ISO:A|a1",
+        "ISO:B|b1"
+      ],
+      "oracle": [
+        "ISO:A|a1",
+        "ISO:B|b1"
+      ],
+      "blind": [
+        "ISO:A|a1",
+        "ISO:B|b1"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "14a",
+      "question": "VIEW: any one of several subject edges suffices; contain starts at tgt(e1)",
+      "engine": [
+        "VIEW:V|b1,v0"
+      ],
+      "oracle": [
+        "VIEW:V|b1,v0"
+      ],
+      "blind": [
+        "VIEW:V|b1,v0"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "14b",
+      "question": "VIEW: repeated expose edges and mutual exposure collapse to one key",
+      "engine": [
+        "VIEW:V|a0,v0",
+        "VIEW:V|v0,v1"
+      ],
+      "oracle": [
+        "VIEW:V|a0,v0",
+        "VIEW:V|v0,v1"
+      ],
+      "blind": [
+        "VIEW:V|a0,v0",
+        "VIEW:V|v0,v1"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "14c",
+      "question": "VIEW: subject, expose and contain edge types coincide (formula applied literally)",
+      "engine": [],
+      "oracle": [],
+      "blind": [],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "15",
+      "question": "ACYC: self-loop is a one-node SCC; one key per SCC",
+      "engine": [
+        "ACYC:q|a0",
+        "ACYC:q|a1,a2,a3"
+      ],
+      "oracle": [
+        "ACYC:q|a0",
+        "ACYC:q|a1,a2,a3"
+      ],
+      "blind": [
+        "ACYC:q|a0",
+        "ACYC:q|a1,a2,a3"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "16a",
+      "question": "TRACE: path length >= 1; a source of the target type on a cycle reaches itself",
+      "engine": [
+        "TRACE:T0|a2"
+      ],
+      "oracle": [
+        "TRACE:T0|a2"
+      ],
+      "blind": [
+        "TRACE:T0|a2"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "16b",
+      "question": "TRACE: empty edge-type set -> every source violates; no target nodes -> every source violates",
+      "engine": [
+        "TRACE:T1|b0",
+        "TRACE:T1|b1",
+        "TRACE:T2|b0",
+        "TRACE:T2|b1"
+      ],
+      "oracle": [
+        "TRACE:T1|b0",
+        "TRACE:T1|b1",
+        "TRACE:T2|b0",
+        "TRACE:T2|b1"
+      ],
+      "blind": [
+        "TRACE:T1|b0",
+        "TRACE:T1|b1",
+        "TRACE:T2|b0",
+        "TRACE:T2|b1"
+      ],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    },
+    {
+      "item": "16c",
+      "question": "TRACE: no source node -> no violation",
+      "engine": [],
+      "oracle": [],
+      "blind": [],
+      "threeAgreeOnFocus": true,
+      "threeAgreeAll": true
+    }
+  ],
+  "duplicateIds": {
+    "engine": "rejected: invalid model input: duplicateNodeId(a0), duplicateEdgeId(e0)",
+    "oracle": "rejected: ValueError: duplicate node id a0 in model dup",
+    "blind": "rejected: sqlite3.IntegrityError: UNIQUE constraint failed: node.id"
+  }
+}

@@ -1,0 +1,1783 @@
+{
+  "meta": {
+    "command": "node dist/cli-v2.js e6order --output G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\results-v2",
+    "subcommand": "e6order",
+    "node": "v22.15.1",
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "maxOldSpaceMiB": 8240,
+    "startedAt": "2026-10-21T04:43:28.923Z",
+    "elapsedSec": 153.6
+  },
+  "experiment": "E6-v2-view-order",
+  "generator": "generateHubModel {\"portShare\":0.5,\"viewShare\":0,\"hubViews\":4,\"dependShare\":0.5}",
+  "gcBeforeTiming": true,
+  "byOrder": {
+    "subject": {
+      "perSize": [
+        {
+          "n": 1000,
+          "seeds": 3,
+          "medianNodes": 1000,
+          "medianEdges": 2012,
+          "medianTimeMs": {
+            "all": 8.39,
+            "local": 4.735,
+            "global": 1.432,
+            "relationType": 0.656,
+            "requiredAttr": 0.396,
+            "attrDomain": 0.295,
+            "multiplicity": 0.274,
+            "isolated": 0.236,
+            "viewConsistency": 0.741,
+            "acyclic": 1.097,
+            "tracePolicy": 0.415
+          },
+          "medianOps": {
+            "all": 32616,
+            "local": 31018,
+            "global": 1598,
+            "relationType": 2012,
+            "requiredAttr": 2003,
+            "attrDomain": 1446,
+            "multiplicity": 3398,
+            "isolated": 946,
+            "viewConsistency": 21227,
+            "acyclic": 1000,
+            "tracePolicy": 598
+          },
+          "medianOpsPerElement": {
+            "all": 10.8383,
+            "local": 10.3054,
+            "global": 0.5319,
+            "relationType": 0.668,
+            "requiredAttr": 0.665,
+            "attrDomain": 0.4801,
+            "multiplicity": 1.1278,
+            "isolated": 0.3141,
+            "viewConsistency": 7.0501,
+            "acyclic": 0.332,
+            "tracePolicy": 0.198
+          },
+          "medianNsPerOp": {
+            "all": 257.24,
+            "local": 152.91,
+            "global": 898.93,
+            "relationType": 326.04,
+            "requiredAttr": 197.75,
+            "attrDomain": 204.08,
+            "multiplicity": 80.5,
+            "isolated": 249.47,
+            "viewConsistency": 34.95,
+            "acyclic": 1096.6,
+            "tracePolicy": 694.31
+          },
+          "violations": 0
+        },
+        {
+          "n": 3000,
+          "seeds": 3,
+          "medianNodes": 3000,
+          "medianEdges": 5982,
+          "medianTimeMs": {
+            "all": 19.722,
+            "local": 17.818,
+            "global": 7.635,
+            "relationType": 2.857,
+            "requiredAttr": 1.336,
+            "attrDomain": 1.062,
+            "multiplicity": 0.797,
+            "isolated": 0.754,
+            "viewConsistency": 6.369,
+            "acyclic": 4.981,
+            "tracePolicy": 0.868
+          },
+          "medianOps": {
+            "all": 217752,
+            "local": 212981,
+            "global": 4779,
+            "relationType": 5982,
+            "requiredAttr": 6008,
+            "attrDomain": 4336,
+            "multiplicity": 10118,
+            "isolated": 2836,
+            "viewConsistency": 183701,
+            "acyclic": 3000,
+            "tracePolicy": 1779
+          },
+          "medianOpsPerElement": {
+            "all": 24.2432,
+            "local": 23.712,
+            "global": 0.5312,
+            "relationType": 0.666,
+            "requiredAttr": 0.6689,
+            "attrDomain": 0.4827,
+            "multiplicity": 1.1246,
+            "isolated": 0.3157,
+            "viewConsistency": 20.4521,
+            "acyclic": 0.334,
+            "tracePolicy": 0.1983
+          },
+          "medianNsPerOp": {
+            "all": 90.62,
+            "local": 83.63,
+            "global": 1597.59,
+            "relationType": 477.65,
+            "requiredAttr": 222.29,
+            "attrDomain": 244.97,
+            "multiplicity": 78.77,
+            "isolated": 265.76,
+            "viewConsistency": 34.67,
+            "acyclic": 1660.23,
+            "tracePolicy": 487.8
+          },
+          "violations": 0
+        },
+        {
+          "n": 10000,
+          "seeds": 3,
+          "medianNodes": 10000,
+          "medianEdges": 19971,
+          "medianTimeMs": {
+            "all": 180.163,
+            "local": 133.882,
+            "global": 37.46,
+            "relationType": 15.087,
+            "requiredAttr": 8.726,
+            "attrDomain": 5.374,
+            "multiplicity": 8.416,
+            "isolated": 5.245,
+            "viewConsistency": 77.108,
+            "acyclic": 39.967,
+            "tracePolicy": 7.728
+          },
+          "medianOps": {
+            "all": 2126022,
+            "local": 2110086,
+            "global": 15934,
+            "relationType": 19971,
+            "requiredAttr": 20025,
+            "attrDomain": 14450,
+            "multiplicity": 33746,
+            "isolated": 9450,
+            "viewConsistency": 2012357,
+            "acyclic": 10000,
+            "tracePolicy": 5934
+          },
+          "medianOpsPerElement": {
+            "all": 70.936,
+            "local": 70.4043,
+            "global": 0.5316,
+            "relationType": 0.6663,
+            "requiredAttr": 0.6681,
+            "attrDomain": 0.4821,
+            "multiplicity": 1.1241,
+            "isolated": 0.3153,
+            "viewConsistency": 67.1464,
+            "acyclic": 0.3337,
+            "tracePolicy": 0.1982
+          },
+          "medianNsPerOp": {
+            "all": 84.76,
+            "local": 63.46,
+            "global": 2350.97,
+            "relationType": 760.31,
+            "requiredAttr": 435.73,
+            "attrDomain": 371.9,
+            "multiplicity": 249.39,
+            "isolated": 555.06,
+            "viewConsistency": 38.32,
+            "acyclic": 3996.66,
+            "tracePolicy": 1302.24
+          },
+          "violations": 0
+        },
+        {
+          "n": 30000,
+          "seeds": 3,
+          "medianNodes": 30000,
+          "medianEdges": 59898,
+          "medianTimeMs": {
+            "all": 1810.377,
+            "local": 1667.938,
+            "global": 208.896,
+            "relationType": 97.785,
+            "requiredAttr": 48.538,
+            "attrDomain": 40.006,
+            "multiplicity": 48.529,
+            "isolated": 27.031,
+            "viewConsistency": 1398.018,
+            "acyclic": 182.263,
+            "tracePolicy": 34.577
+          },
+          "medianOps": {
+            "all": 18377737,
+            "local": 18329967,
+            "global": 47770,
+            "relationType": 59898,
+            "requiredAttr": 60075,
+            "attrDomain": 43350,
+            "multiplicity": 101026,
+            "isolated": 28350,
+            "viewConsistency": 18037241,
+            "acyclic": 30000,
+            "tracePolicy": 17770
+          },
+          "medianOpsPerElement": {
+            "all": 204.4288,
+            "local": 203.8974,
+            "global": 0.5314,
+            "relationType": 0.6663,
+            "requiredAttr": 0.6683,
+            "attrDomain": 0.4822,
+            "multiplicity": 1.1237,
+            "isolated": 0.3154,
+            "viewConsistency": 200.6415,
+            "acyclic": 0.3337,
+            "tracePolicy": 0.1977
+          },
+          "medianNsPerOp": {
+            "all": 98.51,
+            "local": 90.99,
+            "global": 4373.23,
+            "relationType": 1632.53,
+            "requiredAttr": 807.96,
+            "attrDomain": 922.87,
+            "multiplicity": 480.36,
+            "isolated": 953.46,
+            "viewConsistency": 77.51,
+            "acyclic": 6075.43,
+            "tracePolicy": 1946.13
+          },
+          "violations": 0
+        }
+      ],
+      "regressionAll": {
+        "all": {
+          "time": {
+            "exponent": 1.549,
+            "ci95": [
+              1.237,
+              1.957
+            ],
+            "r2": 0.923,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.868,
+            "ci95": [
+              1.824,
+              1.918
+            ],
+            "r2": 0.9993,
+            "includesOne": false,
+            "points": 12
+          }
+        },
+        "local": {
+          "time": {
+            "exponent": 1.758,
+            "ci95": [
+              1.541,
+              1.979
+            ],
+            "r2": 0.9778,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.881,
+            "ci95": [
+              1.842,
+              1.927
+            ],
+            "r2": 0.9994,
+            "includesOne": false,
+            "points": 12
+          }
+        },
+        "global": {
+          "time": {
+            "exponent": 1.425,
+            "ci95": [
+              1.368,
+              1.466
+            ],
+            "r2": 0.9972,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1,
+            "ci95": [
+              0.999,
+              1.001
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "relationType": {
+          "time": {
+            "exponent": 1.482,
+            "ci95": [
+              1.394,
+              1.559
+            ],
+            "r2": 0.9941,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1,
+            "ci95": [
+              0.999,
+              1
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "requiredAttr": {
+          "time": {
+            "exponent": 1.441,
+            "ci95": [
+              1.34,
+              1.57
+            ],
+            "r2": 0.9898,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.001,
+            "ci95": [
+              0.999,
+              1.002
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "attrDomain": {
+          "time": {
+            "exponent": 1.406,
+            "ci95": [
+              1.218,
+              1.58
+            ],
+            "r2": 0.97,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.001,
+            "ci95": [
+              0.999,
+              1.002
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "multiplicity": {
+          "time": {
+            "exponent": 1.532,
+            "ci95": [
+              1.421,
+              1.698
+            ],
+            "r2": 0.9803,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1,
+            "ci95": [
+              0.999,
+              1.001
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "isolated": {
+          "time": {
+            "exponent": 1.414,
+            "ci95": [
+              1.3,
+              1.519
+            ],
+            "r2": 0.9829,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.001,
+            "ci95": [
+              0.999,
+              1.002
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "viewConsistency": {
+          "time": {
+            "exponent": 2.195,
+            "ci95": [
+              2.044,
+              2.297
+            ],
+            "r2": 0.9937,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.986,
+            "ci95": [
+              1.981,
+              1.99
+            ],
+            "r2": 1,
+            "includesOne": false,
+            "points": 12
+          }
+        },
+        "acyclic": {
+          "time": {
+            "exponent": 1.549,
+            "ci95": [
+              1.502,
+              1.659
+            ],
+            "r2": 0.987,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.001,
+            "ci95": [
+              0.999,
+              1.002
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "tracePolicy": {
+          "time": {
+            "exponent": 1.354,
+            "ci95": [
+              1.245,
+              1.55
+            ],
+            "r2": 0.9624,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 0.998,
+            "ci95": [
+              0.996,
+              1
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        }
+      },
+      "points": [
+        {
+          "n": 1000,
+          "seed": 21000,
+          "nodes": 1000,
+          "edges": 2012,
+          "violations": 0,
+          "time": {
+            "all": 27.234,
+            "local": 4.9825,
+            "global": 1.4273,
+            "relationType": 0.656,
+            "requiredAttr": 0.3961,
+            "attrDomain": 0.287,
+            "multiplicity": 0.4124,
+            "isolated": 0.2374,
+            "viewConsistency": 0.689,
+            "acyclic": 1.0966,
+            "tracePolicy": 0.4145
+          },
+          "ops": {
+            "all": 32645,
+            "local": 31040,
+            "global": 1605,
+            "relationType": 2012,
+            "requiredAttr": 2003,
+            "attrDomain": 1446,
+            "multiplicity": 3398,
+            "isolated": 946,
+            "viewConsistency": 21235,
+            "acyclic": 1000,
+            "tracePolicy": 605
+          }
+        },
+        {
+          "n": 1000,
+          "seed": 21001,
+          "nodes": 1000,
+          "edges": 1995,
+          "violations": 0,
+          "time": {
+            "all": 5.6229,
+            "local": 4.7354,
+            "global": 1.432,
+            "relationType": 0.6266,
+            "requiredAttr": 0.4443,
+            "attrDomain": 0.2951,
+            "multiplicity": 0.2645,
+            "isolated": 0.1861,
+            "viewConsistency": 0.7755,
+            "acyclic": 1.1445,
+            "tracePolicy": 0.5034
+          },
+          "ops": {
+            "all": 32562,
+            "local": 30969,
+            "global": 1593,
+            "relationType": 1995,
+            "requiredAttr": 2003,
+            "attrDomain": 1446,
+            "multiplicity": 3352,
+            "isolated": 946,
+            "viewConsistency": 21227,
+            "acyclic": 1000,
+            "tracePolicy": 593
+          }
+        },
+        {
+          "n": 1000,
+          "seed": 21002,
+          "nodes": 1000,
+          "edges": 2020,
+          "violations": 0,
+          "time": {
+            "all": 8.3903,
+            "local": 3.4415,
+            "global": 1.958,
+            "relationType": 0.714,
+            "requiredAttr": 0.3671,
+            "attrDomain": 0.4198,
+            "multiplicity": 0.2742,
+            "isolated": 0.236,
+            "viewConsistency": 0.7409,
+            "acyclic": 0.9986,
+            "tracePolicy": 0.4152
+          },
+          "ops": {
+            "all": 32616,
+            "local": 31018,
+            "global": 1598,
+            "relationType": 2020,
+            "requiredAttr": 2003,
+            "attrDomain": 1446,
+            "multiplicity": 3406,
+            "isolated": 946,
+            "viewConsistency": 21197,
+            "acyclic": 1000,
+            "tracePolicy": 598
+          }
+        },
+        {
+          "n": 3000,
+          "seed": 21000,
+          "nodes": 3000,
+          "edges": 6011,
+          "violations": 0,
+          "time": {
+            "all": 21.9884,
+            "local": 17.818,
+            "global": 7.5997,
+            "relationType": 3.0649,
+            "requiredAttr": 1.3355,
+            "attrDomain": 1.0622,
+            "multiplicity": 0.7828,
+            "isolated": 0.5919,
+            "viewConsistency": 5.0118,
+            "acyclic": 2.686,
+            "tracePolicy": 0.6867
+          },
+          "ops": {
+            "all": 217833,
+            "local": 213046,
+            "global": 4787,
+            "relationType": 6011,
+            "requiredAttr": 6008,
+            "attrDomain": 4336,
+            "multiplicity": 10134,
+            "isolated": 2836,
+            "viewConsistency": 183721,
+            "acyclic": 3000,
+            "tracePolicy": 1787
+          }
+        },
+        {
+          "n": 3000,
+          "seed": 21001,
+          "nodes": 3000,
+          "edges": 5982,
+          "violations": 0,
+          "time": {
+            "all": 16.2159,
+            "local": 17.8252,
+            "global": 7.9238,
+            "relationType": 2.8573,
+            "requiredAttr": 1.2015,
+            "attrDomain": 0.7604,
+            "multiplicity": 0.797,
+            "isolated": 0.8879,
+            "viewConsistency": 9.0255,
+            "acyclic": 4.9807,
+            "tracePolicy": 1.2431
+          },
+          "ops": {
+            "all": 217752,
+            "local": 212981,
+            "global": 4771,
+            "relationType": 5982,
+            "requiredAttr": 6008,
+            "attrDomain": 4336,
+            "multiplicity": 10118,
+            "isolated": 2836,
+            "viewConsistency": 183701,
+            "acyclic": 3000,
+            "tracePolicy": 1771
+          }
+        },
+        {
+          "n": 3000,
+          "seed": 21002,
+          "nodes": 3000,
+          "edges": 5938,
+          "violations": 0,
+          "time": {
+            "all": 19.7223,
+            "local": 11.4012,
+            "global": 7.6349,
+            "relationType": 2.4845,
+            "requiredAttr": 1.4838,
+            "attrDomain": 1.1036,
+            "multiplicity": 1.1491,
+            "isolated": 0.7537,
+            "viewConsistency": 6.3686,
+            "acyclic": 5.0461,
+            "tracePolicy": 0.8678
+          },
+          "ops": {
+            "all": 217632,
+            "local": 212853,
+            "global": 4779,
+            "relationType": 5938,
+            "requiredAttr": 6008,
+            "attrDomain": 4336,
+            "multiplicity": 10038,
+            "isolated": 2836,
+            "viewConsistency": 183697,
+            "acyclic": 3000,
+            "tracePolicy": 1779
+          }
+        },
+        {
+          "n": 10000,
+          "seed": 21000,
+          "nodes": 10000,
+          "edges": 19843,
+          "violations": 0,
+          "time": {
+            "all": 180.1633,
+            "local": 133.8819,
+            "global": 37.1843,
+            "relationType": 15.0868,
+            "requiredAttr": 9.1289,
+            "attrDomain": 7.3603,
+            "multiplicity": 9.4084,
+            "isolated": 5.5836,
+            "viewConsistency": 77.1077,
+            "acyclic": 39.9666,
+            "tracePolicy": 7.6913
+          },
+          "ops": {
+            "all": 2125574,
+            "local": 2109657,
+            "global": 15917,
+            "relationType": 19843,
+            "requiredAttr": 20025,
+            "attrDomain": 14450,
+            "multiplicity": 33548,
+            "isolated": 9450,
+            "viewConsistency": 2012341,
+            "acyclic": 10000,
+            "tracePolicy": 5917
+          }
+        },
+        {
+          "n": 10000,
+          "seed": 21001,
+          "nodes": 10000,
+          "edges": 19971,
+          "violations": 0,
+          "time": {
+            "all": 202.4546,
+            "local": 145.2682,
+            "global": 37.4603,
+            "relationType": 13.8357,
+            "requiredAttr": 7.5016,
+            "attrDomain": 3.3888,
+            "multiplicity": 8.4158,
+            "isolated": 2.8433,
+            "viewConsistency": 70.2084,
+            "acyclic": 38.0707,
+            "tracePolicy": 7.7275
+          },
+          "ops": {
+            "all": 2126022,
+            "local": 2110088,
+            "global": 15934,
+            "relationType": 19971,
+            "requiredAttr": 20025,
+            "attrDomain": 14450,
+            "multiplicity": 33746,
+            "isolated": 9450,
+            "viewConsistency": 2012446,
+            "acyclic": 10000,
+            "tracePolicy": 5934
+          }
+        },
+        {
+          "n": 10000,
+          "seed": 21002,
+          "nodes": 10000,
+          "edges": 20038,
+          "violations": 0,
+          "time": {
+            "all": 165.172,
+            "local": 127.1293,
+            "global": 44.2696,
+            "relationType": 18.97,
+            "requiredAttr": 8.7255,
+            "attrDomain": 5.3739,
+            "multiplicity": 7.7528,
+            "isolated": 5.2453,
+            "viewConsistency": 85.8512,
+            "acyclic": 43.3323,
+            "tracePolicy": 10.7214
+          },
+          "ops": {
+            "all": 2126039,
+            "local": 2110086,
+            "global": 15953,
+            "relationType": 20038,
+            "requiredAttr": 20025,
+            "attrDomain": 14450,
+            "multiplicity": 33766,
+            "isolated": 9450,
+            "viewConsistency": 2012357,
+            "acyclic": 10000,
+            "tracePolicy": 5953
+          }
+        },
+        {
+          "n": 30000,
+          "seed": 21000,
+          "nodes": 30000,
+          "edges": 59898,
+          "violations": 0,
+          "time": {
+            "all": 1810.3765,
+            "local": 1633.5543,
+            "global": 191.0188,
+            "relationType": 97.7851,
+            "requiredAttr": 45.4436,
+            "attrDomain": 34.8511,
+            "multiplicity": 48.5285,
+            "isolated": 28.5488,
+            "viewConsistency": 1235.4062,
+            "acyclic": 182.8821,
+            "tracePolicy": 28.1688
+          },
+          "ops": {
+            "all": 18377737,
+            "local": 18329967,
+            "global": 47770,
+            "relationType": 59898,
+            "requiredAttr": 60075,
+            "attrDomain": 43350,
+            "multiplicity": 101026,
+            "isolated": 28350,
+            "viewConsistency": 18037268,
+            "acyclic": 30000,
+            "tracePolicy": 17770
+          }
+        },
+        {
+          "n": 30000,
+          "seed": 21001,
+          "nodes": 30000,
+          "edges": 59812,
+          "violations": 0,
+          "time": {
+            "all": 1797.167,
+            "local": 1688.3533,
+            "global": 208.896,
+            "relationType": 97.097,
+            "requiredAttr": 48.538,
+            "attrDomain": 40.0064,
+            "multiplicity": 41.726,
+            "isolated": 27.0306,
+            "viewConsistency": 1398.0181,
+            "acyclic": 182.263,
+            "tracePolicy": 34.5769
+          },
+          "ops": {
+            "all": 18377515,
+            "local": 18329748,
+            "global": 47767,
+            "relationType": 59812,
+            "requiredAttr": 60075,
+            "attrDomain": 43350,
+            "multiplicity": 100920,
+            "isolated": 28350,
+            "viewConsistency": 18037241,
+            "acyclic": 30000,
+            "tracePolicy": 17767
+          }
+        },
+        {
+          "n": 30000,
+          "seed": 21002,
+          "nodes": 30000,
+          "edges": 59999,
+          "violations": 0,
+          "time": {
+            "all": 1868.0794,
+            "local": 1667.9379,
+            "global": 223.2839,
+            "relationType": 118.3722,
+            "requiredAttr": 62.7152,
+            "attrDomain": 43.6017,
+            "multiplicity": 57.8256,
+            "isolated": 22.5276,
+            "viewConsistency": 1440.4097,
+            "acyclic": 171.0648,
+            "tracePolicy": 45.2084
+          },
+          "ops": {
+            "all": 18377816,
+            "local": 18330035,
+            "global": 47781,
+            "relationType": 59999,
+            "requiredAttr": 60075,
+            "attrDomain": 43350,
+            "multiplicity": 101122,
+            "isolated": 28350,
+            "viewConsistency": 18037139,
+            "acyclic": 30000,
+            "tracePolicy": 17781
+          }
+        }
+      ]
+    },
+    "target": {
+      "perSize": [
+        {
+          "n": 1000,
+          "seeds": 3,
+          "medianNodes": 1000,
+          "medianEdges": 2012,
+          "medianTimeMs": {
+            "all": 5.867,
+            "local": 3.59,
+            "global": 2.101,
+            "relationType": 0.816,
+            "requiredAttr": 0.535,
+            "attrDomain": 0.307,
+            "multiplicity": 0.367,
+            "isolated": 0.258,
+            "viewConsistency": 0.412,
+            "acyclic": 1.72,
+            "tracePolicy": 0.386
+          },
+          "medianOps": {
+            "all": 13449,
+            "local": 11851,
+            "global": 1598,
+            "relationType": 2012,
+            "requiredAttr": 2003,
+            "attrDomain": 1446,
+            "multiplicity": 3398,
+            "isolated": 946,
+            "viewConsistency": 2046,
+            "acyclic": 1000,
+            "tracePolicy": 598
+          },
+          "medianOpsPerElement": {
+            "all": 4.4675,
+            "local": 3.9346,
+            "global": 0.5319,
+            "relationType": 0.668,
+            "requiredAttr": 0.665,
+            "attrDomain": 0.4801,
+            "multiplicity": 1.1278,
+            "isolated": 0.3141,
+            "viewConsistency": 0.6793,
+            "acyclic": 0.332,
+            "tracePolicy": 0.198
+          },
+          "medianNsPerOp": {
+            "all": 436.25,
+            "local": 302.94,
+            "global": 1308.85,
+            "relationType": 409.12,
+            "requiredAttr": 267.05,
+            "attrDomain": 211.96,
+            "multiplicity": 107.66,
+            "isolated": 272.94,
+            "viewConsistency": 201.12,
+            "acyclic": 1719.9,
+            "tracePolicy": 638.35
+          },
+          "violations": 0
+        },
+        {
+          "n": 3000,
+          "seeds": 3,
+          "medianNodes": 3000,
+          "medianEdges": 5982,
+          "medianTimeMs": {
+            "all": 19.78,
+            "local": 13.701,
+            "global": 10.021,
+            "relationType": 3.518,
+            "requiredAttr": 2.104,
+            "attrDomain": 1.182,
+            "multiplicity": 1.634,
+            "isolated": 0.971,
+            "viewConsistency": 1.069,
+            "acyclic": 8.443,
+            "tracePolicy": 1.897
+          },
+          "medianOps": {
+            "all": 40233,
+            "local": 35462,
+            "global": 4779,
+            "relationType": 5982,
+            "requiredAttr": 6008,
+            "attrDomain": 4336,
+            "multiplicity": 10118,
+            "isolated": 2836,
+            "viewConsistency": 6182,
+            "acyclic": 3000,
+            "tracePolicy": 1779
+          },
+          "medianOpsPerElement": {
+            "all": 4.4793,
+            "local": 3.9481,
+            "global": 0.5312,
+            "relationType": 0.666,
+            "requiredAttr": 0.6689,
+            "attrDomain": 0.4827,
+            "multiplicity": 1.1246,
+            "isolated": 0.3157,
+            "viewConsistency": 0.6883,
+            "acyclic": 0.334,
+            "tracePolicy": 0.1983
+          },
+          "medianNsPerOp": {
+            "all": 493.24,
+            "local": 387.87,
+            "global": 2096.92,
+            "relationType": 588.08,
+            "requiredAttr": 350.15,
+            "attrDomain": 272.67,
+            "multiplicity": 161.51,
+            "isolated": 342.52,
+            "viewConsistency": 172.77,
+            "acyclic": 2814.23,
+            "tracePolicy": 1066.33
+          },
+          "violations": 0
+        },
+        {
+          "n": 10000,
+          "seeds": 3,
+          "medianNodes": 10000,
+          "medianEdges": 19971,
+          "medianTimeMs": {
+            "all": 120.325,
+            "local": 76.76,
+            "global": 52.492,
+            "relationType": 19.91,
+            "requiredAttr": 9.489,
+            "attrDomain": 9.152,
+            "multiplicity": 12.364,
+            "isolated": 5.062,
+            "viewConsistency": 7.774,
+            "acyclic": 46.036,
+            "tracePolicy": 9.766
+          },
+          "medianOps": {
+            "all": 134239,
+            "local": 118286,
+            "global": 15934,
+            "relationType": 19971,
+            "requiredAttr": 20025,
+            "attrDomain": 14450,
+            "multiplicity": 33746,
+            "isolated": 9450,
+            "viewConsistency": 20607,
+            "acyclic": 10000,
+            "tracePolicy": 5934
+          },
+          "medianOpsPerElement": {
+            "all": 4.4813,
+            "local": 3.9496,
+            "global": 0.5316,
+            "relationType": 0.6663,
+            "requiredAttr": 0.6681,
+            "attrDomain": 0.4821,
+            "multiplicity": 1.1241,
+            "isolated": 0.3153,
+            "viewConsistency": 0.6905,
+            "acyclic": 0.3337,
+            "tracePolicy": 0.1982
+          },
+          "medianNsPerOp": {
+            "all": 899.02,
+            "local": 650.93,
+            "global": 3292.2,
+            "relationType": 1003.4,
+            "requiredAttr": 473.87,
+            "attrDomain": 633.34,
+            "multiplicity": 366.16,
+            "isolated": 535.64,
+            "viewConsistency": 374.98,
+            "acyclic": 4603.56,
+            "tracePolicy": 1650.53
+          },
+          "violations": 0
+        },
+        {
+          "n": 30000,
+          "seeds": 3,
+          "medianNodes": 30000,
+          "medianEdges": 59898,
+          "medianTimeMs": {
+            "all": 587.026,
+            "local": 304.21,
+            "global": 251.349,
+            "relationType": 101.883,
+            "requiredAttr": 42.99,
+            "attrDomain": 33.273,
+            "multiplicity": 46.947,
+            "isolated": 27.855,
+            "viewConsistency": 25.873,
+            "acyclic": 165.727,
+            "tracePolicy": 41.022
+          },
+          "medianOps": {
+            "all": 402461,
+            "local": 354691,
+            "global": 47770,
+            "relationType": 59898,
+            "requiredAttr": 60075,
+            "attrDomain": 43350,
+            "multiplicity": 101026,
+            "isolated": 28350,
+            "viewConsistency": 61992,
+            "acyclic": 30000,
+            "tracePolicy": 17770
+          },
+          "medianOpsPerElement": {
+            "all": 4.4769,
+            "local": 3.9455,
+            "global": 0.5314,
+            "relationType": 0.6663,
+            "requiredAttr": 0.6683,
+            "attrDomain": 0.4822,
+            "multiplicity": 1.1237,
+            "isolated": 0.3154,
+            "viewConsistency": 0.6896,
+            "acyclic": 0.3337,
+            "tracePolicy": 0.1977
+          },
+          "medianNsPerOp": {
+            "all": 1459.15,
+            "local": 857.68,
+            "global": 5261.98,
+            "relationType": 1703.39,
+            "requiredAttr": 715.6,
+            "attrDomain": 767.55,
+            "multiplicity": 465.19,
+            "isolated": 982.54,
+            "viewConsistency": 417.35,
+            "acyclic": 5524.24,
+            "tracePolicy": 2307.09
+          },
+          "violations": 0
+        }
+      ],
+      "regressionAll": {
+        "all": {
+          "time": {
+            "exponent": 1.263,
+            "ci95": [
+              1.071,
+              1.423
+            ],
+            "r2": 0.9549,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.001,
+            "ci95": [
+              1,
+              1.002
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "local": {
+          "time": {
+            "exponent": 1.325,
+            "ci95": [
+              1.291,
+              1.368
+            ],
+            "r2": 0.9978,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.001,
+            "ci95": [
+              1,
+              1.002
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "global": {
+          "time": {
+            "exponent": 1.407,
+            "ci95": [
+              1.385,
+              1.424
+            ],
+            "r2": 0.9994,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1,
+            "ci95": [
+              0.999,
+              1.001
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "relationType": {
+          "time": {
+            "exponent": 1.416,
+            "ci95": [
+              1.347,
+              1.49
+            ],
+            "r2": 0.9937,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1,
+            "ci95": [
+              0.999,
+              1
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "requiredAttr": {
+          "time": {
+            "exponent": 1.326,
+            "ci95": [
+              1.264,
+              1.397
+            ],
+            "r2": 0.9947,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.001,
+            "ci95": [
+              0.999,
+              1.002
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "attrDomain": {
+          "time": {
+            "exponent": 1.402,
+            "ci95": [
+              1.344,
+              1.486
+            ],
+            "r2": 0.9914,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.001,
+            "ci95": [
+              0.999,
+              1.002
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "multiplicity": {
+          "time": {
+            "exponent": 1.453,
+            "ci95": [
+              1.378,
+              1.544
+            ],
+            "r2": 0.9922,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1,
+            "ci95": [
+              0.999,
+              1.001
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "isolated": {
+          "time": {
+            "exponent": 1.343,
+            "ci95": [
+              1.231,
+              1.468
+            ],
+            "r2": 0.9808,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.001,
+            "ci95": [
+              0.999,
+              1.002
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "viewConsistency": {
+          "time": {
+            "exponent": 1.263,
+            "ci95": [
+              1.185,
+              1.385
+            ],
+            "r2": 0.9811,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.004,
+            "ci95": [
+              1.001,
+              1.007
+            ],
+            "r2": 1,
+            "includesOne": false,
+            "points": 12
+          }
+        },
+        "acyclic": {
+          "time": {
+            "exponent": 1.377,
+            "ci95": [
+              1.3,
+              1.47
+            ],
+            "r2": 0.9926,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 1.001,
+            "ci95": [
+              0.999,
+              1.002
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        },
+        "tracePolicy": {
+          "time": {
+            "exponent": 1.399,
+            "ci95": [
+              1.348,
+              1.456
+            ],
+            "r2": 0.9964,
+            "includesOne": false,
+            "points": 12
+          },
+          "ops": {
+            "exponent": 0.998,
+            "ci95": [
+              0.996,
+              1
+            ],
+            "r2": 1,
+            "includesOne": true,
+            "points": 12
+          }
+        }
+      },
+      "points": [
+        {
+          "n": 1000,
+          "seed": 21000,
+          "nodes": 1000,
+          "edges": 2012,
+          "violations": 0,
+          "time": {
+            "all": 19.4913,
+            "local": 3.5901,
+            "global": 2.1007,
+            "relationType": 0.8111,
+            "requiredAttr": 0.5349,
+            "attrDomain": 0.3958,
+            "multiplicity": 0.288,
+            "isolated": 0.2582,
+            "viewConsistency": 0.4115,
+            "acyclic": 1.1547,
+            "tracePolicy": 0.3862
+          },
+          "ops": {
+            "all": 13456,
+            "local": 11851,
+            "global": 1605,
+            "relationType": 2012,
+            "requiredAttr": 2003,
+            "attrDomain": 1446,
+            "multiplicity": 3398,
+            "isolated": 946,
+            "viewConsistency": 2046,
+            "acyclic": 1000,
+            "tracePolicy": 605
+          }
+        },
+        {
+          "n": 1000,
+          "seed": 21001,
+          "nodes": 1000,
+          "edges": 1995,
+          "violations": 0,
+          "time": {
+            "all": 5.6769,
+            "local": 3.2866,
+            "global": 2.176,
+            "relationType": 0.8162,
+            "requiredAttr": 0.4216,
+            "attrDomain": 0.3065,
+            "multiplicity": 0.4442,
+            "isolated": 0.2913,
+            "viewConsistency": 0.3641,
+            "acyclic": 1.7199,
+            "tracePolicy": 0.4024
+          },
+          "ops": {
+            "all": 13389,
+            "local": 11796,
+            "global": 1593,
+            "relationType": 1995,
+            "requiredAttr": 2003,
+            "attrDomain": 1446,
+            "multiplicity": 3352,
+            "isolated": 946,
+            "viewConsistency": 2054,
+            "acyclic": 1000,
+            "tracePolicy": 593
+          }
+        },
+        {
+          "n": 1000,
+          "seed": 21002,
+          "nodes": 1000,
+          "edges": 2020,
+          "violations": 0,
+          "time": {
+            "all": 5.8671,
+            "local": 4.0448,
+            "global": 2.0248,
+            "relationType": 1.0424,
+            "requiredAttr": 0.5586,
+            "attrDomain": 0.2758,
+            "multiplicity": 0.3667,
+            "isolated": 0.2427,
+            "viewConsistency": 0.5423,
+            "acyclic": 1.8168,
+            "tracePolicy": 0.2878
+          },
+          "ops": {
+            "all": 13449,
+            "local": 11851,
+            "global": 1598,
+            "relationType": 2020,
+            "requiredAttr": 2003,
+            "attrDomain": 1446,
+            "multiplicity": 3406,
+            "isolated": 946,
+            "viewConsistency": 2030,
+            "acyclic": 1000,
+            "tracePolicy": 598
+          }
+        },
+        {
+          "n": 3000,
+          "seed": 21000,
+          "nodes": 3000,
+          "edges": 6011,
+          "violations": 0,
+          "time": {
+            "all": 18.6734,
+            "local": 12.6606,
+            "global": 9.8194,
+            "relationType": 2.7807,
+            "requiredAttr": 2.1037,
+            "attrDomain": 1.1823,
+            "multiplicity": 1.5052,
+            "isolated": 0.9714,
+            "viewConsistency": 1.0693,
+            "acyclic": 8.4427,
+            "tracePolicy": 1.9285
+          },
+          "ops": {
+            "all": 40301,
+            "local": 35514,
+            "global": 4787,
+            "relationType": 6011,
+            "requiredAttr": 6008,
+            "attrDomain": 4336,
+            "multiplicity": 10134,
+            "isolated": 2836,
+            "viewConsistency": 6189,
+            "acyclic": 3000,
+            "tracePolicy": 1787
+          }
+        },
+        {
+          "n": 3000,
+          "seed": 21001,
+          "nodes": 3000,
+          "edges": 5982,
+          "violations": 0,
+          "time": {
+            "all": 24.5797,
+            "local": 13.8705,
+            "global": 11.058,
+            "relationType": 3.5179,
+            "requiredAttr": 2.1088,
+            "attrDomain": 1.1753,
+            "multiplicity": 1.6342,
+            "isolated": 1.1027,
+            "viewConsistency": 0.929,
+            "acyclic": 9.0668,
+            "tracePolicy": 1.7735
+          },
+          "ops": {
+            "all": 40233,
+            "local": 35462,
+            "global": 4771,
+            "relationType": 5982,
+            "requiredAttr": 6008,
+            "attrDomain": 4336,
+            "multiplicity": 10118,
+            "isolated": 2836,
+            "viewConsistency": 6182,
+            "acyclic": 3000,
+            "tracePolicy": 1771
+          }
+        },
+        {
+          "n": 3000,
+          "seed": 21002,
+          "nodes": 3000,
+          "edges": 5938,
+          "violations": 0,
+          "time": {
+            "all": 19.7801,
+            "local": 13.7008,
+            "global": 10.0212,
+            "relationType": 3.5414,
+            "requiredAttr": 1.8214,
+            "attrDomain": 1.2969,
+            "multiplicity": 1.6715,
+            "isolated": 0.6519,
+            "viewConsistency": 1.3219,
+            "acyclic": 7.5854,
+            "tracePolicy": 1.897
+          },
+          "ops": {
+            "all": 40102,
+            "local": 35323,
+            "global": 4779,
+            "relationType": 5938,
+            "requiredAttr": 6008,
+            "attrDomain": 4336,
+            "multiplicity": 10038,
+            "isolated": 2836,
+            "viewConsistency": 6167,
+            "acyclic": 3000,
+            "tracePolicy": 1779
+          }
+        },
+        {
+          "n": 10000,
+          "seed": 21000,
+          "nodes": 10000,
+          "edges": 19843,
+          "violations": 0,
+          "time": {
+            "all": 120.3246,
+            "local": 76.7599,
+            "global": 56.8553,
+            "relationType": 19.9104,
+            "requiredAttr": 10.3639,
+            "attrDomain": 11.0024,
+            "multiplicity": 12.4164,
+            "isolated": 4.647,
+            "viewConsistency": 8.8248,
+            "acyclic": 40.2266,
+            "tracePolicy": 9.7662
+          },
+          "ops": {
+            "all": 133840,
+            "local": 117923,
+            "global": 15917,
+            "relationType": 19843,
+            "requiredAttr": 20025,
+            "attrDomain": 14450,
+            "multiplicity": 33548,
+            "isolated": 9450,
+            "viewConsistency": 20607,
+            "acyclic": 10000,
+            "tracePolicy": 5917
+          }
+        },
+        {
+          "n": 10000,
+          "seed": 21001,
+          "nodes": 10000,
+          "edges": 19971,
+          "violations": 0,
+          "time": {
+            "all": 120.1961,
+            "local": 73.796,
+            "global": 52.4579,
+            "relationType": 23.9139,
+            "requiredAttr": 9.4892,
+            "attrDomain": 7.6474,
+            "multiplicity": 11.8123,
+            "isolated": 5.0618,
+            "viewConsistency": 7.7741,
+            "acyclic": 47.9285,
+            "tracePolicy": 7.9981
+          },
+          "ops": {
+            "all": 134308,
+            "local": 118374,
+            "global": 15934,
+            "relationType": 19971,
+            "requiredAttr": 20025,
+            "attrDomain": 14450,
+            "multiplicity": 33746,
+            "isolated": 9450,
+            "viewConsistency": 20732,
+            "acyclic": 10000,
+            "tracePolicy": 5934
+          }
+        },
+        {
+          "n": 10000,
+          "seed": 21002,
+          "nodes": 10000,
+          "edges": 20038,
+          "violations": 0,
+          "time": {
+            "all": 136.0475,
+            "local": 77.5587,
+            "global": 52.4923,
+            "relationType": 17.128,
+            "requiredAttr": 8.5098,
+            "attrDomain": 9.1518,
+            "multiplicity": 12.3637,
+            "isolated": 7.8435,
+            "viewConsistency": 7.0704,
+            "acyclic": 46.0356,
+            "tracePolicy": 9.8965
+          },
+          "ops": {
+            "all": 134239,
+            "local": 118286,
+            "global": 15953,
+            "relationType": 20038,
+            "requiredAttr": 20025,
+            "attrDomain": 14450,
+            "multiplicity": 33766,
+            "isolated": 9450,
+            "viewConsistency": 20557,
+            "acyclic": 10000,
+            "tracePolicy": 5953
+          }
+        },
+        {
+          "n": 30000,
+          "seed": 21000,
+          "nodes": 30000,
+          "edges": 59898,
+          "violations": 0,
+          "time": {
+            "all": 594.7958,
+            "local": 304.2102,
+            "global": 247.4935,
+            "relationType": 98.854,
+            "requiredAttr": 40.0337,
+            "attrDomain": 33.0716,
+            "multiplicity": 37.8068,
+            "isolated": 15.4463,
+            "viewConsistency": 25.8726,
+            "acyclic": 165.7273,
+            "tracePolicy": 45.5257
+          },
+          "ops": {
+            "all": 402461,
+            "local": 354691,
+            "global": 47770,
+            "relationType": 59898,
+            "requiredAttr": 60075,
+            "attrDomain": 43350,
+            "multiplicity": 101026,
+            "isolated": 28350,
+            "viewConsistency": 61992,
+            "acyclic": 30000,
+            "tracePolicy": 17770
+          }
+        },
+        {
+          "n": 30000,
+          "seed": 21001,
+          "nodes": 30000,
+          "edges": 59812,
+          "violations": 0,
+          "time": {
+            "all": 587.0257,
+            "local": 292.8865,
+            "global": 251.3491,
+            "relationType": 101.8834,
+            "requiredAttr": 57.2321,
+            "attrDomain": 33.2731,
+            "multiplicity": 46.9467,
+            "isolated": 27.8551,
+            "viewConsistency": 24.9568,
+            "acyclic": 156.3407,
+            "tracePolicy": 40.9843
+          },
+          "ops": {
+            "all": 402307,
+            "local": 354540,
+            "global": 47767,
+            "relationType": 59812,
+            "requiredAttr": 60075,
+            "attrDomain": 43350,
+            "multiplicity": 100920,
+            "isolated": 28350,
+            "viewConsistency": 62033,
+            "acyclic": 30000,
+            "tracePolicy": 17767
+          }
+        },
+        {
+          "n": 30000,
+          "seed": 21002,
+          "nodes": 30000,
+          "edges": 59999,
+          "violations": 0,
+          "time": {
+            "all": 538.4625,
+            "local": 337.4862,
+            "global": 261.2016,
+            "relationType": 111.8433,
+            "requiredAttr": 42.9898,
+            "attrDomain": 34.4578,
+            "multiplicity": 53.0983,
+            "isolated": 28.9564,
+            "viewConsistency": 30.2429,
+            "acyclic": 171.0183,
+            "tracePolicy": 41.0224
+          },
+          "ops": {
+            "all": 402588,
+            "local": 354807,
+            "global": 47781,
+            "relationType": 59999,
+            "requiredAttr": 60075,
+            "attrDomain": 43350,
+            "multiplicity": 101122,
+            "isolated": 28350,
+            "viewConsistency": 61911,
+            "acyclic": 30000,
+            "tracePolicy": 17781
+          }
+        }
+      ]
+    }
+  }
+}

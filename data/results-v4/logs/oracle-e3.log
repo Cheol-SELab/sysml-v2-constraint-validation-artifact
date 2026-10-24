@@ -1,0 +1,14 @@
+[2026-10-22 20:39:16] start oracle-e3: node --max-old-space-size=16000 dist-r8/cli-oracle.js e3 --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/oracle --work G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/work/oracle-e3
+E3 aerospace n=100: runs so far 30, defects 79
+E3 aerospace n=500: runs so far 60, defects 172
+E3 aerospace n=1000: runs so far 90, defects 280
+E3 automotive n=100: runs so far 120, defects 359
+E3 automotive n=500: runs so far 150, defects 452
+E3 automotive n=1000: runs so far 180, defects 560
+E3 robotics n=100: runs so far 210, defects 636
+E3 robotics n=500: runs so far 240, defects 745
+E3 robotics n=1000: runs so far 270, defects 871
+written: results-v4\oracle\e3-oracle-rescoring.json
+written: results-v4\oracle\e3-oracle-raw.json
+done in 9021.3 s
+[2026-10-22 23:09:38] end oracle-e3 rc=0 elapsed=9022s

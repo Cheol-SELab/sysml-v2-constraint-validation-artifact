@@ -1,0 +1,11 @@
+{
+  "experiment": "shacl-core-variants",
+  "method": "Same random models (5 fixed catalogs x 1000, seeds 930000+i; 100 random catalogs x 25, seed 940000) validated with the SPARQL-based oracle and with the SHACL Core variants of tracePolicy (oneOrMorePath + qualifiedMinCount) and acyclic (oneOrMorePath + sh:disjoint over an auxiliary o:self triple). Acyclic compared as the set of nodes on cycles.",
+  "cases": 7500,
+  "agreeingCases": 7500,
+  "traceViolations": 4845,
+  "acyclicCycleNodes": 2366,
+  "disagreements": [],
+  "sparqlMs": 413238.8520996319,
+  "coreMs": 251302.22889990546
+}

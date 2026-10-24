@@ -1,0 +1,3717 @@
+{
+  "meta": {
+    "command": "node dist-r8\\cli-r8.js adjsample --in results-v4/sysml/x2-adjudications-primary.json --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/n15-adjudication",
+    "node": "v22.15.1",
+    "execArgv": [],
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "loadavgAtStart": [
+      0,
+      0,
+      0
+    ],
+    "startedAt": "2026-10-23T06:10:11.156Z",
+    "elapsedSec": 0.1
+  },
+  "source": "x2-adjudications-primary.json",
+  "sourceSha256": "4b39436db429881863916b5a445e749d119cc5491ad16c5e3589951d79743d93",
+  "population": 7019,
+  "strata": {
+    "ATTR|N2": {
+      "population": 9,
+      "sampled": 3
+    },
+    "ATTR|P1": {
+      "population": 3554,
+      "sampled": 99
+    },
+    "ATTR|P2": {
+      "population": 110,
+      "sampled": 3
+    },
+    "DOM|P3": {
+      "population": 25,
+      "sampled": 3
+    },
+    "ISO|N3": {
+      "population": 46,
+      "sampled": 3
+    },
+    "ISO|N4": {
+      "population": 72,
+      "sampled": 3
+    },
+    "ISO|P6": {
+      "population": 196,
+      "sampled": 4
+    },
+    "ISO|P7": {
+      "population": 736,
+      "sampled": 19
+    },
+    "MULT|N3": {
+      "population": 1,
+      "sampled": 1
+    },
+    "MULT|N4": {
+      "population": 17,
+      "sampled": 3
+    },
+    "MULT|P5": {
+      "population": 673,
+      "sampled": 17
+    },
+    "MULT|P7": {
+      "population": 374,
+      "sampled": 9
+    },
+    "TRACE|P6": {
+      "population": 474,
+      "sampled": 12
+    },
+    "TRACE|P7": {
+      "population": 201,
+      "sampled": 4
+    },
+    "TYPE|N1": {
+      "population": 4,
+      "sampled": 3
+    },
+    "TYPE|P4": {
+      "population": 441,
+      "sampled": 11
+    },
+    "VIEW|P6": {
+      "population": 86,
+      "sampled": 3
+    }
+  },
+  "seed": 20261022,
+  "items": [
+    {
+      "itemId": "A001",
+      "stratum": "TYPE|P4",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "TYPE:contain",
+      "witness": [
+        "contain#17809#61"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 605,
+          "text": "port lugNutPort :>> lugNutPort [5];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    },
+    {
+      "itemId": "A002",
+      "stratum": "MULT|P5",
+      "unit": "examples/Requirements Examples",
+      "ruleId": "MULT:Requirement|verify|in",
+      "witness": [
+        "Passengers#15629"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Requirements Examples/HSUVRequirements.sysml",
+          "line": 6,
+          "text": "requirement Passengers;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A003",
+      "stratum": "ISO|P7",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "PartsTreeView#18587"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1564,
+          "text": "view def PartsTreeView:>TreeView {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A004",
+      "stratum": "ATTR|P1",
+      "unit": "training/36. Variability",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "transmission#20678"
+      ],
+      "evidence": [
+        {
+          "file": "training/36. Variability/Variation Usages.sysml",
+          "line": 12,
+          "text": "variation part transmission : Transmission[1] {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A005",
+      "stratum": "ATTR|P1",
+      "unit": "validation/14-Language Extensions",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "part_X#23056"
+      ],
+      "evidence": [
+        {
+          "file": "validation/14-Language Extensions/14a-Language Extensions.sysml",
+          "line": 18,
+          "text": "part part_X {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A006",
+      "stratum": "ISO|P7",
+      "unit": "validation/05-State-based Behavior",
+      "ruleId": "ISO:Function",
+      "witness": [
+        "Vehicle States#21870"
+      ],
+      "evidence": [
+        {
+          "file": "validation/05-State-based Behavior/5-State-based Behavior-2.sysml",
+          "line": 16,
+          "text": "state def 'Vehicle States';"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A007",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "wheel1#18077"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 957,
+          "text": "part wheel1:Wheel{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A008",
+      "stratum": "ATTR|P1",
+      "unit": "validation/08-Requirements",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "Vehicle#22246"
+      ],
+      "evidence": [
+        {
+          "file": "validation/08-Requirements/8-Requirements.sysml",
+          "line": 9,
+          "text": "part def Vehicle {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A009",
+      "stratum": "MULT|P7",
+      "unit": "examples/Simple Tests",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "MassSum#15898"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/CalculationTest.sysml",
+          "line": 17,
+          "text": "calc def MassSum {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A010",
+      "stratum": "ATTR|P1",
+      "unit": "validation/05-State-based Behavior",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "vehicleController#21857"
+      ],
+      "evidence": [
+        {
+          "file": "validation/05-State-based Behavior/5-State-based Behavior-1a.sysml",
+          "line": 232,
+          "text": "part vehicleController: VehicleController {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A011",
+      "stratum": "ATTR|P1",
+      "unit": "validation/01-Parts Tree",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "FrontAxle#21026"
+      ],
+      "evidence": [
+        {
+          "file": "validation/01-Parts Tree/1c-Parts Tree Redefinition.sysml",
+          "line": 12,
+          "text": "part def FrontAxle :> Axle {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A012",
+      "stratum": "ISO|P6",
+      "unit": "validation/08-Requirements",
+      "ruleId": "ISO:Requirement",
+      "witness": [
+        "vehicleMass2#22306"
+      ],
+      "evidence": [
+        {
+          "file": "validation/08-Requirements/8-Requirements.sysml",
+          "line": 121,
+          "text": "requirement <'2.1'> vehicleMass2: MassLimitationRequirement {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A013",
+      "stratum": "ISO|P7",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "Engine#16529"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/TradeStudyTest.sysml",
+          "line": 5,
+          "text": "part def Engine;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A014",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Variability Examples",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "cylinder#17249"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Variability Examples/VehicleVariabilityModel.sysml",
+          "line": 33,
+          "text": "part cylinder : Cylinder[2..*];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A015",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "frontAxle#18712"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/VehicleUsages.sysml",
+          "line": 39,
+          "text": "part frontAxle: Axle;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A016",
+      "stratum": "MULT|P5",
+      "unit": "training/33. Analysis",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "costRollup#20520"
+      ],
+      "evidence": [
+        {
+          "file": "training/33. Analysis/Trade Study Analysis Example.sysml",
+          "line": 33,
+          "text": "calc costRollup: CostRollup { in engine = anEngine; return cost; }"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A017",
+      "stratum": "ISO|P7",
+      "unit": "validation/12-Dependency Relationships",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "PhysicalElement#22868"
+      ],
+      "evidence": [
+        {
+          "file": "validation/12-Dependency Relationships/12b-Allocation-1.sysml",
+          "line": 36,
+          "text": "part def PhysicalElement;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A018",
+      "stratum": "ATTR|P1",
+      "unit": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "WheelAssembly#17028"
+      ],
+      "evidence": [
+        {
+          "file": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly/Wheel Package.sysml",
+          "line": 20,
+          "text": "part def WheelAssembly {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A019",
+      "stratum": "ISO|N3",
+      "unit": "examples/Interaction Sequencing Examples",
+      "ruleId": "ISO:Port",
+      "witness": [
+        "SubscriptionPort#15057"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Interaction Sequencing Examples/ServerSequenceOutsideRealization-3.sysml",
+          "line": 12,
+          "text": "port def SubscriptionPort {"
+        },
+        {
+          "file": "examples/Interaction Sequencing Examples/ServerSequenceOutsideRealization-3.sysml",
+          "line": 96,
+          "text": "flow subscribe_request from subscription_interface.source.subscribe to subscription_interface.target.subscribe;"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N3"
+    },
+    {
+      "itemId": "A020",
+      "stratum": "ATTR|P1",
+      "unit": "training/09. Connections",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "LugBoltThreadableHole#18886"
+      ],
+      "evidence": [
+        {
+          "file": "training/09. Connections/Connections Example.sysml",
+          "line": 11,
+          "text": "part def LugBoltThreadableHole;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A021",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Requirement.priority",
+      "witness": [
+        "torqueGenerationRequirement#18045"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 907,
+          "text": "requirement torqueGenerationRequirement : TorqueGenerationRequirement{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A022",
+      "stratum": "TRACE|P6",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "openDoor_out#18414"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1368,
+          "text": "action openDoor_out;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A023",
+      "stratum": "ATTR|P1",
+      "unit": "training/32. Requirements",
+      "ruleId": "ATTR:Requirement.priority",
+      "witness": [
+        "drivePowerInterface#20360"
+      ],
+      "evidence": [
+        {
+          "file": "training/32. Requirements/Requirement Groups.sysml",
+          "line": 24,
+          "text": "requirement drivePowerInterface : DrivePowerInterface {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A024",
+      "stratum": "ATTR|P1",
+      "unit": "training/29. Expressions",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "c#19952"
+      ],
+      "evidence": [
+        {
+          "file": "training/29. Expressions/Car Mass Rollup Example 1.sysml",
+          "line": 26,
+          "text": "part c :> car {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A025",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Physical#15813"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/AllocationTest.sysml",
+          "line": 6,
+          "text": "part def Physical {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A026",
+      "stratum": "TRACE|P6",
+      "unit": "training/33. Analysis",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "massRollup#20512"
+      ],
+      "evidence": [
+        {
+          "file": "training/33. Analysis/Trade Study Analysis Example.sysml",
+          "line": 31,
+          "text": "calc massRollup: MassRollup { in engine = anEngine; return mass; }"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A027",
+      "stratum": "ATTR|P1",
+      "unit": "validation/07-Variant Configuration",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "subsystemB#22101"
+      ],
+      "evidence": [
+        {
+          "file": "validation/07-Variant Configuration/7a-Variant Configuration - General Concept.sysml",
+          "line": 45,
+          "text": "part :>> subsystemB = subsystemB::subsystem3;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A028",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "starterMotor#17833"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 645,
+          "text": "part starterMotor:StarterMotor;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A029",
+      "stratum": "ATTR|P1",
+      "unit": "training/12. Binding Connectors",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "tank#18971"
+      ],
+      "evidence": [
+        {
+          "file": "training/12. Binding Connectors/Binding Connectors Example-1.sysml",
+          "line": 23,
+          "text": "part tank : FuelTank {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A030",
+      "stratum": "ISO|P7",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ISO:Interface",
+      "witness": [
+        "FuelInterface#17554"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 318,
+          "text": "interface def FuelInterface {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A031",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "B#16382"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/PartTest.sysml",
+          "line": 15,
+          "text": "abstract part def <xx> B {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A032",
+      "stratum": "ATTR|P1",
+      "unit": "training/10. Ports",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Fuel#18917"
+      ],
+      "evidence": [
+        {
+          "file": "training/10. Ports/Port Example.sysml",
+          "line": 5,
+          "text": "part def Fuel;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A033",
+      "stratum": "TRACE|P7",
+      "unit": "examples/State Space Representation Examples",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "RangeAnalysis#16751"
+      ],
+      "evidence": [
+        {
+          "file": "examples/State Space Representation Examples/EVSample.sysml",
+          "line": 101,
+          "text": "analysis def RangeAnalysis :> VehicleAnalysis {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A034",
+      "stratum": "ATTR|P1",
+      "unit": "validation/03-Function-based Behavior",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "VehicleFrame#21507"
+      ],
+      "evidence": [
+        {
+          "file": "validation/03-Function-based Behavior/3c-Function-based Behavior-structure mod-3.sysml",
+          "line": 4,
+          "text": "part def VehicleFrame;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A035",
+      "stratum": "ATTR|P1",
+      "unit": "validation/13-Model Containment",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "bodyAssy#23028"
+      ],
+      "evidence": [
+        {
+          "file": "validation/13-Model Containment/13b-Safety and Security Features Element Group.sysml",
+          "line": 10,
+          "text": "part bodyAssy {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A036",
+      "stratum": "ATTR|P1",
+      "unit": "validation/07-Variant Configuration",
+      "ruleId": "ATTR:Port.direction",
+      "witness": [
+        "vehicleToRoadPort#22192"
+      ],
+      "evidence": [
+        {
+          "file": "validation/07-Variant Configuration/7b-Variant Configurations.sysml",
+          "line": 56,
+          "text": "port vehicleToRoadPort : VehicleToRoadPort {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A037",
+      "stratum": "ATTR|P1",
+      "unit": "validation/15-Properties-Values-Expressions",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Vehicle#23300"
+      ],
+      "evidence": [
+        {
+          "file": "validation/15-Properties-Values-Expressions/15_04-Logical Expressions.sysml",
+          "line": 12,
+          "text": "part def Vehicle {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A038",
+      "stratum": "MULT|P7",
+      "unit": "training/14. Action Definitions",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "Shoot#19120"
+      ],
+      "evidence": [
+        {
+          "file": "training/14. Action Definitions/Action Succession Example-2.sysml",
+          "line": 7,
+          "text": "action def Shoot { in image: Image; out picture : Picture; }"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A039",
+      "stratum": "TYPE|N1",
+      "unit": "validation/12-Dependency Relationships",
+      "ruleId": "TYPE:allocate",
+      "witness": [
+        "allocate#22896#9"
+      ],
+      "evidence": [
+        {
+          "file": "validation/12-Dependency Relationships/12b-Allocation.sysml",
+          "line": 24,
+          "text": "allocate torqueGenerator.generateTorque to powerTrain.engine.generateTorque;"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N1"
+    },
+    {
+      "itemId": "A040",
+      "stratum": "ATTR|P1",
+      "unit": "training/31. Constraints",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "engine#20257"
+      ],
+      "evidence": [
+        {
+          "file": "training/31. Constraints/Constraints Example-2.sysml",
+          "line": 24,
+          "text": "part engine : Engine {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A041",
+      "stratum": "MULT|P5",
+      "unit": "validation/05-State-based Behavior",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "off#21924"
+      ],
+      "evidence": [
+        {
+          "file": "validation/05-State-based Behavior/5-State-based Behavior-2.sysml",
+          "line": 97,
+          "text": "state off;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A042",
+      "stratum": "ATTR|P1",
+      "unit": "training/10. Ports",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Engine#18928"
+      ],
+      "evidence": [
+        {
+          "file": "training/10. Ports/Port Example.sysml",
+          "line": 23,
+          "text": "part def Engine {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A043",
+      "stratum": "ATTR|P1",
+      "unit": "examples/v1 Spec Examples/8.4.5 Constraining Decomposition",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "vehicle model 2#17112"
+      ],
+      "evidence": [
+        {
+          "file": "examples/v1 Spec Examples/8.4.5 Constraining Decomposition/Vehicle Decomposition - Updated.sysml",
+          "line": 56,
+          "text": "part 'vehicle model 2' :> vehicle {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A044",
+      "stratum": "ISO|N3",
+      "unit": "examples/Interaction Sequencing Examples",
+      "ruleId": "ISO:Port",
+      "witness": [
+        "PublicationPort#15054"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Interaction Sequencing Examples/ServerSequenceOutsideRealization-3.sysml",
+          "line": 8,
+          "text": "port def PublicationPort {"
+        },
+        {
+          "file": "examples/Interaction Sequencing Examples/ServerSequenceOutsideRealization-3.sysml",
+          "line": 48,
+          "text": "flow publish_request from publication_interface.source.publish to publication_interface.target.publish;"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N3"
+    },
+    {
+      "itemId": "A045",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Mass Roll-up Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "transmission#15489"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Mass Roll-up Example/Vehicles.sysml",
+          "line": 18,
+          "text": "part transmission :> simpleThing, carParts {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A046",
+      "stratum": "ISO|P7",
+      "unit": "examples/State Space Representation Examples",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "Battery#16706"
+      ],
+      "evidence": [
+        {
+          "file": "examples/State Space Representation Examples/EVSample.sysml",
+          "line": 27,
+          "text": "part def Battery {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A047",
+      "stratum": "ATTR|P1",
+      "unit": "training/32. Requirements",
+      "ruleId": "ATTR:Requirement.priority",
+      "witness": [
+        "engineSpecification#20357"
+      ],
+      "evidence": [
+        {
+          "file": "training/32. Requirements/Requirement Groups.sysml",
+          "line": 19,
+          "text": "requirement engineSpecification {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A048",
+      "stratum": "ISO|P7",
+      "unit": "examples/Association Examples",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "SingleProductSelection#14242"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Association Examples/ProductSelection_OwnedEnds.sysml",
+          "line": 23,
+          "text": "connection def SingleProductSelection specializes ProductSelection {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A049",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "speedSensor#17978"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 827,
+          "text": "part redefines speedSensor{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A050",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "y#16265"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/InterfaceTest.sysml",
+          "line": 20,
+          "text": "part y {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A051",
+      "stratum": "MULT|P7",
+      "unit": "examples/State Space Representation Examples",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "VehicleAnalysis#16741"
+      ],
+      "evidence": [
+        {
+          "file": "examples/State Space Representation Examples/EVSample.sysml",
+          "line": 87,
+          "text": "analysis def VehicleAnalysis {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A052",
+      "stratum": "TRACE|P6",
+      "unit": "training/14. Action Definitions",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "shoot#19077"
+      ],
+      "evidence": [
+        {
+          "file": "training/14. Action Definitions/Action Shorthand Example.sysml",
+          "line": 20,
+          "text": "then action shoot: Shoot {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A053",
+      "stratum": "MULT|P5",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "driverGetInVehicle#18442"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1406,
+          "text": "action driverGetInVehicle subsets getInVehicle_a[1];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A054",
+      "stratum": "ATTR|P1",
+      "unit": "validation/15-Properties-Values-Expressions",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "Tire#23286"
+      ],
+      "evidence": [
+        {
+          "file": "validation/15-Properties-Values-Expressions/15_03-Value Expression.sysml",
+          "line": 25,
+          "text": "part def Tire {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A055",
+      "stratum": "MULT|N4",
+      "unit": "examples/Arrowhead Framework Example",
+      "ruleId": "MULT:Port|contain|in",
+      "witness": [
+        "authorisation#13930"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Arrowhead Framework Example/AHFCoreLib.sysml",
+          "line": 48,
+          "text": "#servicedd :>> authorisation {"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N4"
+    },
+    {
+      "itemId": "A056",
+      "stratum": "TRACE|P7",
+      "unit": "examples/Analysis Examples",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "Reversible Adiabatic Process#13638"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Analysis Examples/Turbojet Stage Analysis.sysml",
+          "line": 78,
+          "text": "action def 'Reversible Adiabatic Process' specializes 'Adiabatic Process';"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A057",
+      "stratum": "ATTR|P1",
+      "unit": "training/27. Occurrences",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "driver#19827"
+      ],
+      "evidence": [
+        {
+          "file": "training/27. Occurrences/Interaction Realization-2.sysml",
+          "line": 54,
+          "text": "part :>> driver :>> driver_b {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A058",
+      "stratum": "ISO|P7",
+      "unit": "validation/11-View and Viewpoint",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "Vehicle#22744"
+      ],
+      "evidence": [
+        {
+          "file": "validation/11-View and Viewpoint/11a-View-Viewpoint.sysml",
+          "line": 6,
+          "text": "part def Vehicle;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A059",
+      "stratum": "ATTR|P1",
+      "unit": "validation/08-Requirements",
+      "ruleId": "ATTR:Requirement.priority",
+      "witness": [
+        "vehicleMass2#22306"
+      ],
+      "evidence": [
+        {
+          "file": "validation/08-Requirements/8-Requirements.sysml",
+          "line": 121,
+          "text": "requirement <'2.1'> vehicleMass2: MassLimitationRequirement {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A060",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Geometry Examples",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "chassis#14762"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Geometry Examples/VehicleGeometryAndCoordinateFrames.sysml",
+          "line": 83,
+          "text": "part chassis : Chassis[1] :> componentParts {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A061",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Association Examples",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "ProductSelection#14232"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Association Examples/ProductSelection_OwnedEnds.sysml",
+          "line": 8,
+          "text": "connection def ProductSelection {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A062",
+      "stratum": "ATTR|P1",
+      "unit": "examples/v1 Spec Examples/8.4.5 Constraining Decomposition",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "chs#17113"
+      ],
+      "evidence": [
+        {
+          "file": "examples/v1 Spec Examples/8.4.5 Constraining Decomposition/Vehicle Decomposition - Updated.sysml",
+          "line": 57,
+          "text": "part redefines chs {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A063",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "p#15942"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/ConjugationTest.sysml",
+          "line": 20,
+          "text": "part p {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A064",
+      "stratum": "TRACE|P7",
+      "unit": "training/35. Use Cases",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "Enter Vehicle#20606"
+      ],
+      "evidence": [
+        {
+          "file": "training/35. Use Cases/Use Case Definition Example.sysml",
+          "line": 23,
+          "text": "use case def 'Enter Vehicle' {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A065",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "B_b#16402"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/PartTest.sysml",
+          "line": 41,
+          "text": "part B_b redefines B::b;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A066",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Room Model",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "h#15749"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Room Model/RoomModel.sysml",
+          "line": 51,
+          "text": "part h:Hallway;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A067",
+      "stratum": "ATTR|P1",
+      "unit": "validation/15-Properties-Values-Expressions",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "ManualTransmission#23298"
+      ],
+      "evidence": [
+        {
+          "file": "validation/15-Properties-Values-Expressions/15_04-Logical Expressions.sysml",
+          "line": 9,
+          "text": "part def ManualTransmission :> Transmission;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A068",
+      "stratum": "ATTR|P1",
+      "unit": "validation/10-Analysis and Trades",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "6cylEngine#22509"
+      ],
+      "evidence": [
+        {
+          "file": "validation/10-Analysis and Trades/10b-Trade-off Among Alternative Configurations.sysml",
+          "line": 46,
+          "text": "variant part '6cylEngine' {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A069",
+      "stratum": "ATTR|P1",
+      "unit": "validation/15-Properties-Values-Expressions",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "6CylEngine#23296"
+      ],
+      "evidence": [
+        {
+          "file": "validation/15-Properties-Values-Expressions/15_04-Logical Expressions.sysml",
+          "line": 6,
+          "text": "part def '6CylEngine' :> Engine;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A070",
+      "stratum": "TYPE|P4",
+      "unit": "examples/Analysis Examples",
+      "ruleId": "TYPE:contain",
+      "witness": [
+        "contain#13648#8"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Analysis Examples/Turbojet Stage Analysis.sysml",
+          "line": 95,
+          "text": "calc 'Solve for Pressure2' : 'Ideal Gas Law' {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    },
+    {
+      "itemId": "A071",
+      "stratum": "MULT|P5",
+      "unit": "training/27. Occurrences",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "sendFuelCommand#19765"
+      ],
+      "evidence": [
+        {
+          "file": "training/27. Occurrences/Interaction Realization-1.sysml",
+          "line": 15,
+          "text": "then action sendFuelCommand send new FuelCommand() to engine_a;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A072",
+      "stratum": "TRACE|P6",
+      "unit": "validation/03-Function-based Behavior",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "provide power#21266"
+      ],
+      "evidence": [
+        {
+          "file": "validation/03-Function-based Behavior/3a-Function-based Behavior-1.sysml",
+          "line": 37,
+          "text": "action 'provide power': 'Provide Power'{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A073",
+      "stratum": "ATTR|P1",
+      "unit": "examples/State Space Representation Examples",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "largeEVRangeContext#16882"
+      ],
+      "evidence": [
+        {
+          "file": "examples/State Space Representation Examples/EVSample.sysml",
+          "line": 273,
+          "text": "part largeEVRangeContext {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A074",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "y#16334"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/OccurrenceTest.sysml",
+          "line": 7,
+          "text": "part y;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A075",
+      "stratum": "ISO|P7",
+      "unit": "training/30. Calculations",
+      "ruleId": "ISO:Function",
+      "witness": [
+        "Acceleration#20013"
+      ],
+      "evidence": [
+        {
+          "file": "training/30. Calculations/Calculation Definitions.sysml",
+          "line": 12,
+          "text": "calc def Acceleration { in tp: PowerValue; in tm : MassValue; in v : SpeedValue;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A076",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "alternator#17838"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 649,
+          "text": "part alternator{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A077",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Road#17468"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 207,
+          "text": "part def Road{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A078",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Import Tests",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "z1#14832"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Import Tests/PrivateImportTest.sysml",
+          "line": 31,
+          "text": "part z1: A;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A079",
+      "stratum": "ATTR|P1",
+      "unit": "training/40. Filtering",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "vehicle#20801"
+      ],
+      "evidence": [
+        {
+          "file": "training/40. Filtering/Filtering Example-1.sysml",
+          "line": 8,
+          "text": "part vehicle {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A080",
+      "stratum": "ATTR|P1",
+      "unit": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "wheel#16999"
+      ],
+      "evidence": [
+        {
+          "file": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly/Wheel Package - Updated.sysml",
+          "line": 71,
+          "text": "part wheel: WheelAssembly[1] {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A081",
+      "stratum": "ATTR|P1",
+      "unit": "training/11. Interfaces",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "FuelInterface#18947"
+      ],
+      "evidence": [
+        {
+          "file": "training/11. Interfaces/Interface Example.sysml",
+          "line": 6,
+          "text": "interface def FuelInterface {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A082",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:VerificationCase.method",
+      "witness": [
+        "massTests#18266"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1215,
+          "text": "verification massTests:MassTest {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A083",
+      "stratum": "ATTR|P1",
+      "unit": "training/09. Connections",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "t#18893"
+      ],
+      "evidence": [
+        {
+          "file": "training/09. Connections/Connections Example.sysml",
+          "line": 22,
+          "text": "part t : Tire[1] {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A084",
+      "stratum": "ATTR|P1",
+      "unit": "validation/17-Sequence Modeling",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "server#23677"
+      ],
+      "evidence": [
+        {
+          "file": "validation/17-Sequence Modeling/17a-Sequence-Modeling.sysml",
+          "line": 28,
+          "text": "part server[1] {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A085",
+      "stratum": "ATTR|N2",
+      "unit": "validation/10-Analysis and Trades",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "vehicle#22439"
+      ],
+      "evidence": [
+        {
+          "file": "validation/10-Analysis and Trades/10a-Analysis.sysml",
+          "line": 11,
+          "text": "part vehicle {"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N2"
+    },
+    {
+      "itemId": "A086",
+      "stratum": "MULT|P7",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "MULT:Requirement|satisfy|in",
+      "witness": [
+        "ReliabilityRequirement#17622"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 382,
+          "text": "requirement def ReliabilityRequirement{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A087",
+      "stratum": "ATTR|P1",
+      "unit": "validation/03-Function-based Behavior",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "Pump#21530"
+      ],
+      "evidence": [
+        {
+          "file": "validation/03-Function-based Behavior/3d-Function-based Behavior-item.sysml",
+          "line": 14,
+          "text": "part def Pump {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A088",
+      "stratum": "MULT|N3",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "providePower#17903"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 726,
+          "text": "action providePower:ProvidePower{"
+        },
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 704,
+          "text": "allocate ActionTree::providePower.generateToAmplify to engineToTransmissionInterface;"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N3"
+    },
+    {
+      "itemId": "A089",
+      "stratum": "ATTR|N2",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "vehicle_UnitUnderTest#18290"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1241,
+          "text": "part vehicle_UnitUnderTest :> vehicle_b;"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N2"
+    },
+    {
+      "itemId": "A090",
+      "stratum": "ATTR|P1",
+      "unit": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Hub#16992"
+      ],
+      "evidence": [
+        {
+          "file": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly/Wheel Package - Updated.sysml",
+          "line": 61,
+          "text": "part def Hub;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A091",
+      "stratum": "TRACE|P6",
+      "unit": "examples/Simple Tests",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "engineTradeStudy#16532"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/TradeStudyTest.sysml",
+          "line": 9,
+          "text": "analysis engineTradeStudy : TradeStudy {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A092",
+      "stratum": "MULT|P5",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "off#17440"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 167,
+          "text": "state off;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A093",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "P#16241"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/IndividualTest.sysml",
+          "line": 22,
+          "text": "part def P {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A094",
+      "stratum": "ISO|P6",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "c#16320"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/MultiplicityTest.sysml",
+          "line": 8,
+          "text": "part c : P[2..*];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A095",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Arrowhead Framework Example",
+      "ruleId": "ATTR:Port.direction",
+      "witness": [
+        "idds#14104"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Arrowhead Framework Example/AHFProfileLib.sysml",
+          "line": 48,
+          "text": "port idds:IDD[*]; // nested protocol-specific services"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A096",
+      "stratum": "ATTR|P2",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Component#16016"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/ConstraintTest.sysml",
+          "line": 13,
+          "text": "part def Component {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P2"
+    },
+    {
+      "itemId": "A097",
+      "stratum": "DOM|P3",
+      "unit": "training/10. Ports",
+      "ruleId": "DOM:Port.direction",
+      "witness": [
+        "engineFuelPort#18914"
+      ],
+      "evidence": [
+        {
+          "file": "training/10. Ports/Port Conjugation Example.sysml",
+          "line": 18,
+          "text": "port engineFuelPort : ~FuelPort;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P3"
+    },
+    {
+      "itemId": "A098",
+      "stratum": "TYPE|N1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "TYPE:allocate",
+      "witness": [
+        "allocate#17729#266"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 507,
+          "text": "allocate vehicleLogical.torqueGenerator.generateTorque to vehicle_b.engine.generateTorque;"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N1"
+    },
+    {
+      "itemId": "A099",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "TorqueGenerator#17478"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 220,
+          "text": "part def TorqueGenerator;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A100",
+      "stratum": "TRACE|P6",
+      "unit": "examples/Camera Example",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "shoot#14303"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Camera Example/PictureTaking.sysml",
+          "line": 10,
+          "text": "action shoot: Shoot[1];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A101",
+      "stratum": "TRACE|P6",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "driverGetInVehicle#18442"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1406,
+          "text": "action driverGetInVehicle subsets getInVehicle_a[1];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A102",
+      "stratum": "TYPE|P4",
+      "unit": "examples/Simple Tests",
+      "ruleId": "TYPE:contain",
+      "witness": [
+        "contain#15865#20"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/AssignmentTest.sysml",
+          "line": 22,
+          "text": "then state wait;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    },
+    {
+      "itemId": "A103",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Geometry Examples",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Camera#14599"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Geometry Examples/SimpleQuadcopter.sysml",
+          "line": 84,
+          "text": "part def Camera :> SpatialItem {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A104",
+      "stratum": "ATTR|P1",
+      "unit": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "PressureSeat#16964"
+      ],
+      "evidence": [
+        {
+          "file": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly/Wheel Package - Updated.sysml",
+          "line": 27,
+          "text": "connection def PressureSeat {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A105",
+      "stratum": "MULT|P5",
+      "unit": "training/25. Transitions",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "ServerBehavior#19649"
+      ],
+      "evidence": [
+        {
+          "file": "training/25. Transitions/Local Clock Example.sysml",
+          "line": 14,
+          "text": "state ServerBehavior {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A106",
+      "stratum": "ATTR|P1",
+      "unit": "training/25. Transitions",
+      "ruleId": "ATTR:Port.direction",
+      "witness": [
+        "requestPort#19648"
+      ],
+      "evidence": [
+        {
+          "file": "training/25. Transitions/Local Clock Example.sysml",
+          "line": 12,
+          "text": "port requestPort;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A107",
+      "stratum": "ISO|P7",
+      "unit": "training/27. Occurrences",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "Engine#19704"
+      ],
+      "evidence": [
+        {
+          "file": "training/27. Occurrences/Event Occurrence Example.sysml",
+          "line": 5,
+          "text": "part def Engine;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A108",
+      "stratum": "MULT|P5",
+      "unit": "examples/State Space Representation Examples",
+      "ruleId": "MULT:Requirement|satisfy|in",
+      "witness": [
+        "vehicleRequirement#16853"
+      ],
+      "evidence": [
+        {
+          "file": "examples/State Space Representation Examples/EVSample.sysml",
+          "line": 228,
+          "text": "requirement :>> vehicleRequirement = smallEVRequirement;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A109",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "A#15927"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/CommentTest.sysml",
+          "line": 43,
+          "text": "part def A;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A110",
+      "stratum": "TRACE|P7",
+      "unit": "validation/10-Analysis and Trades",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "EngineEvaluation#22519"
+      ],
+      "evidence": [
+        {
+          "file": "validation/10-Analysis and Trades/10b-Trade-off Among Alternative Configurations.sysml",
+          "line": 65,
+          "text": "calc def EngineEvaluation {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A111",
+      "stratum": "ATTR|P1",
+      "unit": "validation/12-Dependency Relationships",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "powerTrain#22891"
+      ],
+      "evidence": [
+        {
+          "file": "validation/12-Dependency Relationships/12b-Allocation.sysml",
+          "line": 16,
+          "text": "part powerTrain {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A112",
+      "stratum": "ATTR|P1",
+      "unit": "training/11. Interfaces",
+      "ruleId": "ATTR:Port.direction",
+      "witness": [
+        "hot#18940"
+      ],
+      "evidence": [
+        {
+          "file": "training/11. Interfaces/Interface Decomposition Example.sysml",
+          "line": 15,
+          "text": "port hot : FaucetInlet;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A113",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "CruiseController#17445"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 181,
+          "text": "part def CruiseController:>Software {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A114",
+      "stratum": "MULT|N4",
+      "unit": "examples/Arrowhead Framework Example",
+      "ruleId": "MULT:Port|contain|in",
+      "witness": [
+        "tellu#14005"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Arrowhead Framework Example/AHFNorwayTopics.sysml",
+          "line": 72,
+          "text": "#servicedd tellu:~APIS_DD; // providing the APISService"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N4"
+    },
+    {
+      "itemId": "A115",
+      "stratum": "ATTR|P1",
+      "unit": "validation/08-Requirements",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "EngineToTransmissionInterface#22257"
+      ],
+      "evidence": [
+        {
+          "file": "validation/08-Requirements/8-Requirements.sysml",
+          "line": 27,
+          "text": "interface def EngineToTransmissionInterface {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A116",
+      "stratum": "TRACE|P6",
+      "unit": "examples/Analysis Examples",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "fuelConsumptionAnalysis#13858"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Analysis Examples/Vehicle Analysis Demo.sysml",
+          "line": 225,
+          "text": "action fuelConsumptionAnalysis {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A117",
+      "stratum": "ISO|P7",
+      "unit": "validation/03-Function-based Behavior",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "Vehicle#21573"
+      ],
+      "evidence": [
+        {
+          "file": "validation/03-Function-based Behavior/3e-Function-based Behavior-item.sysml",
+          "line": 9,
+          "text": "part def Vehicle :> AssembledVehicle;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A118",
+      "stratum": "TRACE|P6",
+      "unit": "validation/05-State-based Behavior",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "operational controller states#21834"
+      ],
+      "evidence": [
+        {
+          "file": "validation/05-State-based Behavior/5-State-based Behavior-1a.sysml",
+          "line": 169,
+          "text": "state 'operational controller states' {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A119",
+      "stratum": "ATTR|P1",
+      "unit": "training/27. Occurrences",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "driver_a#19757"
+      ],
+      "evidence": [
+        {
+          "file": "training/27. Occurrences/Interaction Realization-1.sysml",
+          "line": 4,
+          "text": "part driver_a : Driver {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A120",
+      "stratum": "ISO|N4",
+      "unit": "examples/Arrowhead Framework Example",
+      "ruleId": "ISO:Port",
+      "witness": [
+        "authorisation#13915"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Arrowhead Framework Example/AHFCoreLib.sysml",
+          "line": 32,
+          "text": "#service authorisation : Authorisation;"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N4"
+    },
+    {
+      "itemId": "A121",
+      "stratum": "TYPE|P4",
+      "unit": "validation/10-Analysis and Trades",
+      "ruleId": "TYPE:contain",
+      "witness": [
+        "contain#22469#5"
+      ],
+      "evidence": [
+        {
+          "file": "validation/10-Analysis and Trades/10a-Analysis.sysml",
+          "line": 61,
+          "text": "analysis massAnalysisCase : MassAnalysisCase {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    },
+    {
+      "itemId": "A122",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "cruiseController#17984"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 834,
+          "text": "part redefines cruiseController{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A123",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Arrowhead Framework Example",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "MQTTServer#14060"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Arrowhead Framework Example/AHFNorwayTopics.sysml",
+          "line": 122,
+          "text": "part MQTTServer {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A124",
+      "stratum": "MULT|P7",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "MULT:Requirement|verify|in",
+      "witness": [
+        "MassRequirement#17615"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 376,
+          "text": "requirement def MassRequirement{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A125",
+      "stratum": "ATTR|P1",
+      "unit": "examples/v1 Spec Examples/8.4.5 Constraining Decomposition",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "w#17135"
+      ],
+      "evidence": [
+        {
+          "file": "examples/v1 Spec Examples/8.4.5 Constraining Decomposition/Vehicle Decomposition.sysml",
+          "line": 24,
+          "text": "part w : Wheel[4];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A126",
+      "stratum": "ATTR|P1",
+      "unit": "validation/07-Variant Configuration",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "vehicle_c1#22237"
+      ],
+      "evidence": [
+        {
+          "file": "validation/07-Variant Configuration/7b-Variant Configurations.sysml",
+          "line": 136,
+          "text": "variant part vehicle_c1;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A127",
+      "stratum": "ATTR|P1",
+      "unit": "validation/07-Variant Configuration",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Vehicle#22164"
+      ],
+      "evidence": [
+        {
+          "file": "validation/07-Variant Configuration/7b-Variant Configurations.sysml",
+          "line": 14,
+          "text": "part def Vehicle;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A128",
+      "stratum": "ISO|P7",
+      "unit": "training/35. Use Cases",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "Person#20596"
+      ],
+      "evidence": [
+        {
+          "file": "training/35. Use Cases/Use Case Definition Example.sysml",
+          "line": 4,
+          "text": "part def Person;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A129",
+      "stratum": "DOM|P3",
+      "unit": "examples/Interaction Sequencing Examples",
+      "ruleId": "DOM:Port.direction",
+      "witness": [
+        "SubscriptionPort#15264"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Interaction Sequencing Examples/ServerSequenceRealization-3.sysml",
+          "line": 12,
+          "text": "port def SubscriptionPort {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P3"
+    },
+    {
+      "itemId": "A130",
+      "stratum": "MULT|P5",
+      "unit": "training/14. Action Definitions",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "focus#19129"
+      ],
+      "evidence": [
+        {
+          "file": "training/14. Action Definitions/Action Succession Example-2.sysml",
+          "line": 15,
+          "text": "action focus: Focus { in scene; out image; }"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A131",
+      "stratum": "ATTR|P1",
+      "unit": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "WirelessTirePressureMonitor#16979"
+      ],
+      "evidence": [
+        {
+          "file": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly/Wheel Package - Updated.sysml",
+          "line": 42,
+          "text": "part def WirelessTirePressureMonitor {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A132",
+      "stratum": "MULT|P5",
+      "unit": "examples/Simple Tests",
+      "ruleId": "MULT:Requirement|verify|in",
+      "witness": [
+        "c2#16632"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/ViewTest.sysml",
+          "line": 30,
+          "text": "concern c2;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A133",
+      "stratum": "MULT|P5",
+      "unit": "examples/Camera Example",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "shoot#14303"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Camera Example/PictureTaking.sysml",
+          "line": 10,
+          "text": "action shoot: Shoot[1];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A134",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "hub1#18080"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 962,
+          "text": "part hub1:Hub{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A135",
+      "stratum": "MULT|P7",
+      "unit": "examples/Simple Tests",
+      "ruleId": "MULT:Requirement|verify|in",
+      "witness": [
+        "VP#16625"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/ViewTest.sysml",
+          "line": 19,
+          "text": "viewpoint def VP {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A136",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Geometry Examples",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "rightRearWheel#14790"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Geometry Examples/VehicleGeometryAndCoordinateFrames.sysml",
+          "line": 121,
+          "text": "part rightRearWheel : Wheel[1] :> componentParts {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A137",
+      "stratum": "MULT|P5",
+      "unit": "training/32. Requirements",
+      "ruleId": "MULT:Requirement|verify|in",
+      "witness": [
+        "fullVehicleMassLimit#20386"
+      ],
+      "evidence": [
+        {
+          "file": "training/32. Requirements/Requirement Usages.sysml",
+          "line": 5,
+          "text": "requirement <'1.1'> fullVehicleMassLimit : VehicleMassLimitationRequirement {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A138",
+      "stratum": "MULT|P5",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "on#17370"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 47,
+          "text": "state on {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A139",
+      "stratum": "ATTR|P1",
+      "unit": "training/07. Parts",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "bigVehicle#18865"
+      ],
+      "evidence": [
+        {
+          "file": "training/07. Parts/Parts Example-2.sysml",
+          "line": 23,
+          "text": "part bigVehicle :> vehicle {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A140",
+      "stratum": "TRACE|P6",
+      "unit": "training/38. Allocation",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "providePower#20725"
+      ],
+      "evidence": [
+        {
+          "file": "training/38. Allocation/Allocation Usage Example.sysml",
+          "line": 8,
+          "text": "action providePower : ProvidePower {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A141",
+      "stratum": "TYPE|N1",
+      "unit": "validation/12-Dependency Relationships",
+      "ruleId": "TYPE:allocate",
+      "witness": [
+        "allocate#22880#7"
+      ],
+      "evidence": [
+        {
+          "file": "validation/12-Dependency Relationships/12b-Allocation-1.sysml",
+          "line": 54,
+          "text": "allocate torqueGenerator.generateTorque to powerTrain.engine.generateTorque;"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N1"
+    },
+    {
+      "itemId": "A142",
+      "stratum": "ISO|P6",
+      "unit": "training/19. Terminate Actions",
+      "ruleId": "ISO:Function",
+      "witness": [
+        "terminateProcessing#19422"
+      ],
+      "evidence": [
+        {
+          "file": "training/19. Terminate Actions/Terminate Actions Example-2.sysml",
+          "line": 12,
+          "text": "action terminateProcessing {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A143",
+      "stratum": "MULT|P5",
+      "unit": "training/15. Actions",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "focus#19163"
+      ],
+      "evidence": [
+        {
+          "file": "training/15. Actions/Action Decomposition.sysml",
+          "line": 14,
+          "text": "action focus : Focus {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A144",
+      "stratum": "MULT|P5",
+      "unit": "validation/09-Verification",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "evaluateData#22397"
+      ],
+      "evidence": [
+        {
+          "file": "validation/09-Verification/9-Verification-simplified.sysml",
+          "line": 68,
+          "text": "action evaluateData {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A145",
+      "stratum": "TRACE|P6",
+      "unit": "training/25. Transitions",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "performSelfTest#19667"
+      ],
+      "evidence": [
+        {
+          "file": "training/25. Transitions/Transition Actions.sysml",
+          "line": 14,
+          "text": "action performSelfTest { in vehicle : Vehicle; }"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A146",
+      "stratum": "ISO|P7",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "TorqueGenerator#17478"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 220,
+          "text": "part def TorqueGenerator;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A147",
+      "stratum": "ATTR|P1",
+      "unit": "validation/05-State-based Behavior",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "vehicleController#21857"
+      ],
+      "evidence": [
+        {
+          "file": "validation/05-State-based Behavior/5-State-based Behavior-1a.sysml",
+          "line": 232,
+          "text": "part vehicleController: VehicleController {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A148",
+      "stratum": "TRACE|P6",
+      "unit": "validation/12-Dependency Relationships",
+      "ruleId": "TRACE:FUN2REQ",
+      "witness": [
+        "providePower#22885"
+      ],
+      "evidence": [
+        {
+          "file": "validation/12-Dependency Relationships/12b-Allocation.sysml",
+          "line": 6,
+          "text": "action providePower {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A149",
+      "stratum": "ISO|N4",
+      "unit": "validation/17-Sequence Modeling",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "producer#23674"
+      ],
+      "evidence": [
+        {
+          "file": "validation/17-Sequence Modeling/17a-Sequence-Modeling.sysml",
+          "line": 22,
+          "text": "part producer[1] {"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N4"
+    },
+    {
+      "itemId": "A150",
+      "stratum": "ATTR|P1",
+      "unit": "validation/03-Function-based Behavior",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Trailer#21483"
+      ],
+      "evidence": [
+        {
+          "file": "validation/03-Function-based Behavior/3c-Function-based Behavior-structure mod-2.sysml",
+          "line": 9,
+          "text": "part def Trailer;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A151",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Metadata Examples",
+      "ruleId": "ATTR:VerificationCase.method",
+      "witness": [
+        "MassTest#15586"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Metadata Examples/VerificationMetadataExample.sysml",
+          "line": 5,
+          "text": "verification def MassTest;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A152",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Variability Examples",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "cylinder#17251"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Variability Examples/VehicleVariabilityModel.sysml",
+          "line": 37,
+          "text": "part :>> cylinder[4];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A153",
+      "stratum": "ISO|P7",
+      "unit": "training/16. Conditional Succession",
+      "ruleId": "ISO:Function",
+      "witness": [
+        "Shoot#19213"
+      ],
+      "evidence": [
+        {
+          "file": "training/16. Conditional Succession/Conditional Succession Example-2.sysml",
+          "line": 9,
+          "text": "action def Shoot { in image: Image; out picture : Picture; }"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A154",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "P1#15800"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/AliasTest.sysml",
+          "line": 5,
+          "text": "part def P1 {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A155",
+      "stratum": "ATTR|P1",
+      "unit": "validation/07-Variant Configuration",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "part4#22112"
+      ],
+      "evidence": [
+        {
+          "file": "validation/07-Variant Configuration/7a1-Variant Configuration - General Concept-a.sysml",
+          "line": 11,
+          "text": "part part4;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A156",
+      "stratum": "ATTR|P1",
+      "unit": "examples/State Space Representation Examples",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "context#16659"
+      ],
+      "evidence": [
+        {
+          "file": "examples/State Space Representation Examples/CartSample.sysml",
+          "line": 32,
+          "text": "part context {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A157",
+      "stratum": "ISO|P6",
+      "unit": "training/36. Variability",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "automaticTransmission#20675"
+      ],
+      "evidence": [
+        {
+          "file": "training/36. Variability/Variation Usages.sysml",
+          "line": 7,
+          "text": "part automaticTransmission;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A158",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Port.direction",
+      "witness": [
+        "setSpeedPort#17955"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 787,
+          "text": "port redefines setSpeedPort{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A159",
+      "stratum": "VIEW|P6",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "VIEW:View",
+      "witness": [
+        "rearWheel2#17810",
+        "vehiclePartsTree_Safety#18594"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1573,
+          "text": "view vehiclePartsTree_Safety:PartsTreeView{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A160",
+      "stratum": "TYPE|P4",
+      "unit": "examples/Requirements Examples",
+      "ruleId": "TYPE:contain",
+      "witness": [
+        "contain#15633#4"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Requirements Examples/HSUVRequirements.sysml",
+          "line": 12,
+          "text": "requirement <'URI1.2.1'> Emissions: PerformanceRequirementCheck {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    },
+    {
+      "itemId": "A161",
+      "stratum": "TYPE|P4",
+      "unit": "validation/05-State-based Behavior",
+      "ruleId": "TYPE:contain",
+      "witness": [
+        "contain#21837#23"
+      ],
+      "evidence": [
+        {
+          "file": "validation/05-State-based Behavior/5-State-based Behavior-1a.sysml",
+          "line": 174,
+          "text": "state off;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    },
+    {
+      "itemId": "A162",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Simple Tests",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "AB#16001"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/ConnectionTest.sysml",
+          "line": 67,
+          "text": "connection def AB {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A163",
+      "stratum": "ISO|N3",
+      "unit": "examples/Interaction Sequencing Examples",
+      "ruleId": "ISO:Function",
+      "witness": [
+        "subscribe#15141"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Interaction Sequencing Examples/ServerSequenceOutsideRealization-3.sysml",
+          "line": 114,
+          "text": "action subscribe {"
+        },
+        {
+          "file": "examples/Interaction Sequencing Examples/ServerSequenceOutsideRealization-3.sysml",
+          "line": 108,
+          "text": "flow subscribe_request from consumerBehavior.subscribe.request to subscriptionPort.subscribe"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N3"
+    },
+    {
+      "itemId": "A164",
+      "stratum": "MULT|P7",
+      "unit": "training/17. Control",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "EndCharging#19285"
+      ],
+      "evidence": [
+        {
+          "file": "training/17. Control/Decision Example.sysml",
+          "line": 11,
+          "text": "action def EndCharging;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A165",
+      "stratum": "ATTR|P1",
+      "unit": "training/29. Expressions",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "CarPart#19961"
+      ],
+      "evidence": [
+        {
+          "file": "training/29. Expressions/Car Mass Rollup Example 2.sysml",
+          "line": 5,
+          "text": "part def CarPart :> MassedThing {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A166",
+      "stratum": "ATTR|N2",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "vehicle_b_engine4cyl#18232"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1168,
+          "text": "part vehicle_b_engine4cyl:>vehicleAlternatives{"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N2"
+    },
+    {
+      "itemId": "A167",
+      "stratum": "ATTR|P1",
+      "unit": "validation/02-Parts Interconnection",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "rearAxle#21160"
+      ],
+      "evidence": [
+        {
+          "file": "validation/02-Parts Interconnection/2a-Parts Interconnection.sysml",
+          "line": 164,
+          "text": "part rearAxle: RearAxle {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A168",
+      "stratum": "MULT|P7",
+      "unit": "training/32. Requirements",
+      "ruleId": "MULT:Requirement|verify|in",
+      "witness": [
+        "DrivePowerInterface#20340"
+      ],
+      "evidence": [
+        {
+          "file": "training/32. Requirements/Requirement Definitions.sysml",
+          "line": 33,
+          "text": "requirement def <'2'> DrivePowerInterface {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A169",
+      "stratum": "ATTR|P1",
+      "unit": "validation/15-Properties-Values-Expressions",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Tire#23264"
+      ],
+      "evidence": [
+        {
+          "file": "validation/15-Properties-Values-Expressions/15_02-Basic Value Properties.sysml",
+          "line": 13,
+          "text": "part def Tire {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A170",
+      "stratum": "TYPE|P4",
+      "unit": "examples/State Space Representation Examples",
+      "ruleId": "TYPE:contain",
+      "witness": [
+        "contain#16893#36"
+      ],
+      "evidence": [
+        {
+          "file": "examples/State Space Representation Examples/EVSample.sysml",
+          "line": 286,
+          "text": "requirement <L1> rangeRequirementLarge :> largeEVRequirement : RangeRequirement {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    },
+    {
+      "itemId": "A171",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "cylinder1#18062"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 932,
+          "text": "part cylinder1 subsets cylinders[1];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A172",
+      "stratum": "TYPE|P4",
+      "unit": "examples/State Space Representation Examples",
+      "ruleId": "TYPE:contain",
+      "witness": [
+        "contain#16661#2"
+      ],
+      "evidence": [
+        {
+          "file": "examples/State Space Representation Examples/CartSample.sysml",
+          "line": 34,
+          "text": "action cartBehavior : ContinuousStateSpaceDynamics {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    },
+    {
+      "itemId": "A173",
+      "stratum": "ATTR|P2",
+      "unit": "training/08. Items",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Vehicle#18872"
+      ],
+      "evidence": [
+        {
+          "file": "training/08. Items/Items Example.sysml",
+          "line": 7,
+          "text": "part def Vehicle {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P2"
+    },
+    {
+      "itemId": "A174",
+      "stratum": "ISO|P7",
+      "unit": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "Wheel#16969"
+      ],
+      "evidence": [
+        {
+          "file": "examples/v1 Spec Examples/8.4.1 Wheel Hub Assembly/Wheel Package - Updated.sysml",
+          "line": 32,
+          "text": "part def Wheel {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A175",
+      "stratum": "MULT|P7",
+      "unit": "examples/Requirements Examples",
+      "ruleId": "MULT:Requirement|verify|in",
+      "witness": [
+        "Req1#15650"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Requirements Examples/RequirementDerivationExample.sysml",
+          "line": 4,
+          "text": "requirement def Req1;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A176",
+      "stratum": "ISO|P7",
+      "unit": "training/09. Connections",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "PressureSeat#18888"
+      ],
+      "evidence": [
+        {
+          "file": "training/09. Connections/Connections Example.sysml",
+          "line": 14,
+          "text": "connection def PressureSeat {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A177",
+      "stratum": "ATTR|P1",
+      "unit": "validation/14-Language Extensions",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "CanBus#23074"
+      ],
+      "evidence": [
+        {
+          "file": "validation/14-Language Extensions/14b-Language Extensions.sysml",
+          "line": 19,
+          "text": "part def CanBus;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A178",
+      "stratum": "ISO|P7",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "Vehicle#18607"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/VehicleDefinitions.sysml",
+          "line": 15,
+          "text": "part def Vehicle {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A179",
+      "stratum": "MULT|P5",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "MULT:Function|allocate|out",
+      "witness": [
+        "degraded#17388"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 83,
+          "text": "state degraded;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A180",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Geometry Examples",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "propellerMotorAssy4#14702"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Geometry Examples/SimpleQuadcopter.sysml",
+          "line": 227,
+          "text": "part propellerMotorAssy4 : PropellerMotorAssy :> subSpatialParts {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A181",
+      "stratum": "TYPE|P4",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "TYPE:contain",
+      "witness": [
+        "contain#17505#31"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 253,
+          "text": "port lugNutPort:LugNutPort [*];"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    },
+    {
+      "itemId": "A182",
+      "stratum": "ATTR|P1",
+      "unit": "training/28. Individuals",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "done#19934"
+      ],
+      "evidence": [
+        {
+          "file": "training/28. Individuals/Individuals and Time Slices.sysml",
+          "line": 16,
+          "text": "snapshot :>> done {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A183",
+      "stratum": "MULT|N4",
+      "unit": "training/11. Interfaces",
+      "ruleId": "MULT:Port|contain|in",
+      "witness": [
+        "cold#18941"
+      ],
+      "evidence": [
+        {
+          "file": "training/11. Interfaces/Interface Decomposition Example.sysml",
+          "line": 16,
+          "text": "port cold : FaucetInlet;"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N4"
+    },
+    {
+      "itemId": "A184",
+      "stratum": "VIEW|P6",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "VIEW:View",
+      "witness": [
+        "driverAirBag#17879",
+        "vehiclePartsTree_Safety#18594"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1573,
+          "text": "view vehiclePartsTree_Safety:PartsTreeView{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A185",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "vehicle_b#17954"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 786,
+          "text": "part vehicle_b:>PartsTree::vehicle_b{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A186",
+      "stratum": "ATTR|P1",
+      "unit": "training/09. Connections",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "w#18895"
+      ],
+      "evidence": [
+        {
+          "file": "training/09. Connections/Connections Example.sysml",
+          "line": 25,
+          "text": "part w: Wheel[1] {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A187",
+      "stratum": "TYPE|P4",
+      "unit": "validation/12-Dependency Relationships",
+      "ruleId": "TYPE:allocate",
+      "witness": [
+        "allocate#22895#8"
+      ],
+      "evidence": [
+        {
+          "file": "validation/12-Dependency Relationships/12b-Allocation.sysml",
+          "line": 23,
+          "text": "allocate torqueGenerator to powerTrain {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    },
+    {
+      "itemId": "A188",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "engine#18233"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1169,
+          "text": "part engine redefines engine{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A189",
+      "stratum": "MULT|P5",
+      "unit": "validation/14-Language Extensions",
+      "ruleId": "MULT:Requirement|satisfy|in",
+      "witness": [
+        "req2#23196"
+      ],
+      "evidence": [
+        {
+          "file": "validation/14-Language Extensions/14c-Language Extensions.sysml",
+          "line": 149,
+          "text": "#fmeaspec requirement req2 {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P5"
+    },
+    {
+      "itemId": "A190",
+      "stratum": "ISO|N4",
+      "unit": "training/17. Control",
+      "ruleId": "ISO:Function",
+      "witness": [
+        "monitor#19263"
+      ],
+      "evidence": [
+        {
+          "file": "training/17. Control/Control Structures Example.sysml",
+          "line": 15,
+          "text": "action monitor : MonitorBattery {"
+        }
+      ],
+      "machineVerdict": "N",
+      "machineCode": "N4"
+    },
+    {
+      "itemId": "A191",
+      "stratum": "ISO|P7",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ISO:Component",
+      "witness": [
+        "VehicleSoftware#17434"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 161,
+          "text": "part def VehicleSoftware:>Software;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A192",
+      "stratum": "ATTR|P1",
+      "unit": "validation/07-Variant Configuration",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Vehicle#22074"
+      ],
+      "evidence": [
+        {
+          "file": "validation/07-Variant Configuration/7a-Variant Configuration - General Concept.sysml",
+          "line": 3,
+          "text": "part def Vehicle;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A193",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Room Model",
+      "ruleId": "ATTR:Component.criticality",
+      "witness": [
+        "Air#15737"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Room Model/RoomModel.sysml",
+          "line": 36,
+          "text": "part def Air;"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A194",
+      "stratum": "DOM|P3",
+      "unit": "training/10. Ports",
+      "ruleId": "DOM:Port.direction",
+      "witness": [
+        "FuelInPort#18922"
+      ],
+      "evidence": [
+        {
+          "file": "training/10. Ports/Port Example.sysml",
+          "line": 13,
+          "text": "port def FuelInPort {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P3"
+    },
+    {
+      "itemId": "A195",
+      "stratum": "ATTR|P1",
+      "unit": "validation/03-Function-based Behavior",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "vehicle#21557"
+      ],
+      "evidence": [
+        {
+          "file": "validation/03-Function-based Behavior/3d-Function-based Behavior-item.sysml",
+          "line": 62,
+          "text": "part vehicle : Vehicle {"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A196",
+      "stratum": "VIEW|P6",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "VIEW:View",
+      "witness": [
+        "generateElectricity#17839",
+        "vehiclePartsTree_Safety#18594"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 1573,
+          "text": "view vehiclePartsTree_Safety:PartsTreeView{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P6"
+    },
+    {
+      "itemId": "A197",
+      "stratum": "ATTR|P1",
+      "unit": "examples/Metadata Examples",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "EngineToTransmissionInterface#15505"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Metadata Examples/IssueMetadataExample.sysml",
+          "line": 13,
+          "text": "interface def EngineToTransmissionInterface{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P1"
+    },
+    {
+      "itemId": "A198",
+      "stratum": "ATTR|P2",
+      "unit": "examples/Vehicle Example",
+      "ruleId": "ATTR:Component.mass",
+      "witness": [
+        "Engine#17394"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Vehicle Example/SysML v2 Spec Annex A SimpleVehicleModel.sysml",
+          "line": 110,
+          "text": "part def Engine{"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P2"
+    },
+    {
+      "itemId": "A199",
+      "stratum": "ISO|P7",
+      "unit": "validation/05-State-based Behavior",
+      "ruleId": "ISO:Function",
+      "witness": [
+        "Sense Temperature#21874"
+      ],
+      "evidence": [
+        {
+          "file": "validation/05-State-based Behavior/5-State-based Behavior-2.sysml",
+          "line": 21,
+          "text": "action def 'Sense Temperature' { out temp: TemperatureValue; }"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P7"
+    },
+    {
+      "itemId": "A200",
+      "stratum": "TYPE|P4",
+      "unit": "examples/Simple Tests",
+      "ruleId": "TYPE:connect",
+      "witness": [
+        "connect#15981#116"
+      ],
+      "evidence": [
+        {
+          "file": "examples/Simple Tests/ConnectionTest.sysml",
+          "line": 43,
+          "text": "connection bus : C connect (d1, d2, d3, d4);"
+        }
+      ],
+      "machineVerdict": "P",
+      "machineCode": "P4"
+    }
+  ]
+}

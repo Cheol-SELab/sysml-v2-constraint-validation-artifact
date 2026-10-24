@@ -1,0 +1,86 @@
+{
+  "experiment": "shacl-expressiveness",
+  "layers": {
+    "core": "SHACL Core only (sh:class/sh:or, sh:minCount, sh:in, sh:datatype, sh:minInclusive/maxInclusive, sh:minLength, sh:qualifiedValueShape with qualifiedMin/MaxCount over sh:inversePath)",
+    "sparql": "SHACL-SPARQL constraint without property paths (value comparison across two paths)",
+    "sparql-path": "SHACL-SPARQL constraint with a SPARQL 1.1 property path (transitive closure: *, +); not expressible in SHACL Core"
+  },
+  "incremental": "SHACL (W3C Recommendation 2017) defines no incremental validation; pySHACL re-validates the whole data graph. No incremental comparison is possible.",
+  "rows": [
+    {
+      "catalog": "aerospace",
+      "engineRules": 41,
+      "oracleRules": 41,
+      "rulesByLayer": {
+        "core": {
+          "relationType": 8,
+          "requiredAttr": 12,
+          "attrDomain": 7,
+          "multiplicity": 5,
+          "isolated": 6
+        },
+        "sparql": {
+          "viewConsistency": 1
+        },
+        "sparql-path": {
+          "acyclic": 1,
+          "tracePolicy": 1
+        }
+      },
+      "shapesTurtleLines": 103,
+      "shapesTriples": 428,
+      "catalogJsonLines": 214,
+      "file": "results-v4\\oracle-small\\shapes\\aerospace.shapes.ttl"
+    },
+    {
+      "catalog": "automotive",
+      "engineRules": 41,
+      "oracleRules": 41,
+      "rulesByLayer": {
+        "core": {
+          "relationType": 8,
+          "requiredAttr": 12,
+          "attrDomain": 7,
+          "multiplicity": 5,
+          "isolated": 6
+        },
+        "sparql": {
+          "viewConsistency": 1
+        },
+        "sparql-path": {
+          "acyclic": 1,
+          "tracePolicy": 1
+        }
+      },
+      "shapesTurtleLines": 103,
+      "shapesTriples": 424,
+      "catalogJsonLines": 212,
+      "file": "results-v4\\oracle-small\\shapes\\automotive.shapes.ttl"
+    },
+    {
+      "catalog": "robotics",
+      "engineRules": 43,
+      "oracleRules": 43,
+      "rulesByLayer": {
+        "core": {
+          "relationType": 8,
+          "requiredAttr": 13,
+          "attrDomain": 8,
+          "multiplicity": 5,
+          "isolated": 6
+        },
+        "sparql": {
+          "viewConsistency": 1
+        },
+        "sparql-path": {
+          "acyclic": 1,
+          "tracePolicy": 1
+        }
+      },
+      "shapesTurtleLines": 107,
+      "shapesTriples": 449,
+      "catalogJsonLines": 219,
+      "file": "results-v4\\oracle-small\\shapes\\robotics.shapes.ttl"
+    }
+  ]
+}

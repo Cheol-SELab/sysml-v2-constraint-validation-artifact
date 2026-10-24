@@ -1,0 +1,627 @@
+{
+  "meta": {
+    "command": "node dist-r8\\cli-r8.js gcdiag --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/n13",
+    "node": "v22.15.1",
+    "execArgv": [
+      "--expose-gc",
+      "--max-old-space-size=24000"
+    ],
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "loadavgAtStart": [
+      0,
+      0,
+      0
+    ],
+    "startedAt": "2026-10-23T03:43:18.093Z",
+    "elapsedSec": 39.6
+  },
+  "gcBeforeTiming": true,
+  "rows": [
+    {
+      "n": 10000,
+      "seed": 21000,
+      "nodes": 10000,
+      "edges": 14904,
+      "perKind": {
+        "relationType": {
+          "map": 3.976,
+          "csr": 0.153,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "requiredAttr": {
+          "map": 2.718,
+          "csr": 0.265,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "attrDomain": {
+          "map": 1.84,
+          "csr": 0.472,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "multiplicity": {
+          "map": 1.929,
+          "csr": 0.228,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "isolated": {
+          "map": 1.128,
+          "csr": 0.152,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "viewConsistency": {
+          "map": 0.626,
+          "csr": 0.077,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "acyclic": {
+          "map": 10.716,
+          "csr": 0.655,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "tracePolicy": {
+          "map": 2.056,
+          "csr": 0.391,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        }
+      },
+      "lookupPassMs": {
+        "map": 0.762,
+        "csr": 0.051,
+        "mapShuffledEdgeLookups": 1.099
+      },
+      "lookupNsPerEntry": {
+        "map": 30.59,
+        "csr": 2.03,
+        "mapShuffled": 73.75
+      },
+      "heapUsedMiB": 18.1
+    },
+    {
+      "n": 10000,
+      "seed": 21001,
+      "nodes": 10000,
+      "edges": 14959,
+      "perKind": {
+        "relationType": {
+          "map": 3.657,
+          "csr": 1.477,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "requiredAttr": {
+          "map": 2.998,
+          "csr": 0.237,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "attrDomain": {
+          "map": 1.705,
+          "csr": 0.378,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "multiplicity": {
+          "map": 1.633,
+          "csr": 0.208,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "isolated": {
+          "map": 1.098,
+          "csr": 0.101,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "viewConsistency": {
+          "map": 0.593,
+          "csr": 0.122,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "acyclic": {
+          "map": 10.061,
+          "csr": 0.649,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "tracePolicy": {
+          "map": 1.853,
+          "csr": 0.2,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        }
+      },
+      "lookupPassMs": {
+        "map": 0.832,
+        "csr": 0.032,
+        "mapShuffledEdgeLookups": 0.697
+      },
+      "lookupNsPerEntry": {
+        "map": 33.35,
+        "csr": 1.28,
+        "mapShuffled": 46.62
+      },
+      "heapUsedMiB": 14.7
+    },
+    {
+      "n": 10000,
+      "seed": 21002,
+      "nodes": 10000,
+      "edges": 15056,
+      "perKind": {
+        "relationType": {
+          "map": 4.671,
+          "csr": 0.138,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "requiredAttr": {
+          "map": 2.898,
+          "csr": 0.249,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "attrDomain": {
+          "map": 1.958,
+          "csr": 0.389,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "multiplicity": {
+          "map": 1.739,
+          "csr": 0.414,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "isolated": {
+          "map": 1.111,
+          "csr": 0.151,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "viewConsistency": {
+          "map": 0.637,
+          "csr": 0.08,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "acyclic": {
+          "map": 11.966,
+          "csr": 0.76,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "tracePolicy": {
+          "map": 2.332,
+          "csr": 0.207,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        }
+      },
+      "lookupPassMs": {
+        "map": 0.907,
+        "csr": 0.032,
+        "mapShuffledEdgeLookups": 0.764
+      },
+      "lookupNsPerEntry": {
+        "map": 36.19,
+        "csr": 1.28,
+        "mapShuffled": 50.76
+      },
+      "heapUsedMiB": 14.9
+    },
+    {
+      "n": 30000,
+      "seed": 21000,
+      "nodes": 30000,
+      "edges": 44959,
+      "perKind": {
+        "relationType": {
+          "map": 16.505,
+          "csr": 0.417,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "requiredAttr": {
+          "map": 16.352,
+          "csr": 1.705,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "attrDomain": {
+          "map": 7.792,
+          "csr": 1.956,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "multiplicity": {
+          "map": 10.852,
+          "csr": 3.529,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "isolated": {
+          "map": 7.172,
+          "csr": 0.494,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "viewConsistency": {
+          "map": 4.163,
+          "csr": 0.886,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "acyclic": {
+          "map": 52.906,
+          "csr": 2.594,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "tracePolicy": {
+          "map": 8.275,
+          "csr": 0.924,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        }
+      },
+      "lookupPassMs": {
+        "map": 3.756,
+        "csr": 0.127,
+        "mapShuffledEdgeLookups": 2.191
+      },
+      "lookupNsPerEntry": {
+        "map": 50.11,
+        "csr": 1.7,
+        "mapShuffled": 48.73
+      },
+      "heapUsedMiB": 32.6
+    },
+    {
+      "n": 30000,
+      "seed": 21001,
+      "nodes": 30000,
+      "edges": 44859,
+      "perKind": {
+        "relationType": {
+          "map": 20.953,
+          "csr": 0.376,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "requiredAttr": {
+          "map": 11.288,
+          "csr": 0.733,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "attrDomain": {
+          "map": 6.777,
+          "csr": 1.242,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "multiplicity": {
+          "map": 7.155,
+          "csr": 0.722,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "isolated": {
+          "map": 6.174,
+          "csr": 0.194,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "viewConsistency": {
+          "map": 4.077,
+          "csr": 0.882,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "acyclic": {
+          "map": 71.068,
+          "csr": 2.118,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "tracePolicy": {
+          "map": 8.893,
+          "csr": 0.563,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        }
+      },
+      "lookupPassMs": {
+        "map": 4.845,
+        "csr": 0.119,
+        "mapShuffledEdgeLookups": 2.062
+      },
+      "lookupNsPerEntry": {
+        "map": 64.73,
+        "csr": 1.59,
+        "mapShuffled": 45.98
+      },
+      "heapUsedMiB": 32.6
+    },
+    {
+      "n": 30000,
+      "seed": 21002,
+      "nodes": 30000,
+      "edges": 45072,
+      "perKind": {
+        "relationType": {
+          "map": 17.583,
+          "csr": 0.465,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "requiredAttr": {
+          "map": 9.688,
+          "csr": 0.676,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "attrDomain": {
+          "map": 10.203,
+          "csr": 1.099,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "multiplicity": {
+          "map": 8.402,
+          "csr": 0.559,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "isolated": {
+          "map": 6.931,
+          "csr": 0.465,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "viewConsistency": {
+          "map": 2.698,
+          "csr": 0.12,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "acyclic": {
+          "map": 65.59,
+          "csr": 3.09,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "tracePolicy": {
+          "map": 12.661,
+          "csr": 0.445,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        }
+      },
+      "lookupPassMs": {
+        "map": 3.339,
+        "csr": 0.121,
+        "mapShuffledEdgeLookups": 3.38
+      },
+      "lookupNsPerEntry": {
+        "map": 44.48,
+        "csr": 1.62,
+        "mapShuffled": 74.99
+      },
+      "heapUsedMiB": 32.7
+    },
+    {
+      "n": 100000,
+      "seed": 21000,
+      "nodes": 100000,
+      "edges": 149740,
+      "perKind": {
+        "relationType": {
+          "map": 91.436,
+          "csr": 1.274,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "requiredAttr": {
+          "map": 57.3,
+          "csr": 3.007,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "attrDomain": {
+          "map": 38.591,
+          "csr": 3.917,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "multiplicity": {
+          "map": 40.507,
+          "csr": 2.215,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "isolated": {
+          "map": 35.667,
+          "csr": 1.043,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "viewConsistency": {
+          "map": 17.823,
+          "csr": 0.442,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "acyclic": {
+          "map": 247.753,
+          "csr": 7.532,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "tracePolicy": {
+          "map": 49.345,
+          "csr": 2.056,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        }
+      },
+      "lookupPassMs": {
+        "map": 21.467,
+        "csr": 0.307,
+        "mapShuffledEdgeLookups": 19.232
+      },
+      "lookupNsPerEntry": {
+        "map": 85.96,
+        "csr": 1.23,
+        "mapShuffled": 128.44
+      },
+      "heapUsedMiB": 98.3
+    },
+    {
+      "n": 100000,
+      "seed": 21001,
+      "nodes": 100000,
+      "edges": 149722,
+      "perKind": {
+        "relationType": {
+          "map": 104.898,
+          "csr": 1.41,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "requiredAttr": {
+          "map": 64.759,
+          "csr": 2.454,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "attrDomain": {
+          "map": 56.803,
+          "csr": 4.815,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "multiplicity": {
+          "map": 43.993,
+          "csr": 2.041,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "isolated": {
+          "map": 32.684,
+          "csr": 1.003,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "viewConsistency": {
+          "map": 17.022,
+          "csr": 0.322,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "acyclic": {
+          "map": 255.411,
+          "csr": 7.534,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "tracePolicy": {
+          "map": 53.985,
+          "csr": 1.986,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        }
+      },
+      "lookupPassMs": {
+        "map": 18.138,
+        "csr": 0.351,
+        "mapShuffledEdgeLookups": 18.443
+      },
+      "lookupNsPerEntry": {
+        "map": 72.63,
+        "csr": 1.41,
+        "mapShuffled": 123.18
+      },
+      "heapUsedMiB": 98.2
+    },
+    {
+      "n": 100000,
+      "seed": 21002,
+      "nodes": 100000,
+      "edges": 149674,
+      "perKind": {
+        "relationType": {
+          "map": 104.674,
+          "csr": 2.102,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "requiredAttr": {
+          "map": 69.872,
+          "csr": 3.38,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "attrDomain": {
+          "map": 48.413,
+          "csr": 4.091,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "multiplicity": {
+          "map": 47.524,
+          "csr": 2.197,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "isolated": {
+          "map": 27.32,
+          "csr": 0.514,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "viewConsistency": {
+          "map": 15.574,
+          "csr": 0.462,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "acyclic": {
+          "map": 257.264,
+          "csr": 8.052,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        },
+        "tracePolicy": {
+          "map": 55.915,
+          "csr": 2.654,
+          "mapGcMs": 0,
+          "csrGcMs": 0
+        }
+      },
+      "lookupPassMs": {
+        "map": 22.847,
+        "csr": 0.304,
+        "mapShuffledEdgeLookups": 23.051
+      },
+      "lookupNsPerEntry": {
+        "map": 91.51,
+        "csr": 1.22,
+        "mapShuffled": 154.01
+      },
+      "heapUsedMiB": 98.3
+    }
+  ]
+}

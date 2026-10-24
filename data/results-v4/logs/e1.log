@@ -1,0 +1,3 @@
+[2026-10-22 22:22:02] start e1: node --max-old-space-size=24000 dist-r8/cli-v2.js e1 --output G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/e1
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\e1\e1-proof-mechanization-v2.json (1363.2 s)
+[2026-10-22 22:44:45] end e1 rc=0 elapsed=1363s

@@ -1,0 +1,9 @@
+[2026-10-23 02:47:30] start full: node r10-mutation/run-mutation-r10.js --output results-v4/mutation-r10 --workers 3
+baseline: {"killedBy":null,"detail":"","timing":{"BE-base":14582,"BE-ext":43106,"PB":1307,"INV":262,"R10-IN":250,"R10-SES":37829,"R10-API":72},"ms":97878}
+mutation-r10: 25/391 (26 -> BE-base)
+mutation-r10: 50/391 (51 -> BE-base)
+mutation-r10: 75/391 (76 -> BE-base)
+mutation-r10: 100/391 (99 -> R10-SES)
+mutation-r10: 125/391 (124 -> R10-SES)
+mutation-r10: 150/391 (151 -> crash:BE-base)
+mutation-r10: 175/391 (176 -> BE-base)

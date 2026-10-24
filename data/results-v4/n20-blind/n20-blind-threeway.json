@@ -1,0 +1,345 @@
+{
+  "experiment": "n20-blind-threeway",
+  "inputs": {
+    "batchBlind": "..\\oracle-blind\\inputs\\batch-blind.json",
+    "batchBlindSha256": "ce6df31dfbbaeff14576c90fa011b25b0fe7d50449301515809e6972406907b5",
+    "storedBlindOutputSha256": "304446e725f57ce1a8a6a1f3724a3225d73d75b3c38a2b9c421a59ffc1170d30",
+    "sqlValidatorSha256": "0262e79a19fd2129c3c178bfff1d2e9ef102262c48f5bdce7d9cd7b9f229b5cf",
+    "interpretationSha256": "42af6a384da691e2e73a61dc79e44a94c829a23ab716f698556f1539736e3f9f",
+    "generator": "codes/_mk_blind_inputs.js: oracle/randomModels.randomModel (dangling endpoint \"ghost\" with p = 0.04 per endpoint), 3 evaluation catalogs x 300 (seed 20261022) + 20 random catalogs x 100 (seeds 7000+k)"
+  },
+  "normalization": {
+    "K1": "ATTR:<t>.<a> (blind, engine) -> REQ:<t>.<a> (oracle rule name)",
+    "K2": "blind VIEW -> VIEW:<viewPolicy.viewType>; other rule instance names identical",
+    "K3": "evidence ids sorted; TYPE evidence = edge id (oracle (e,src,tgt) projected to e); ACYC evidence = SCC node set (oracle cyclic edges -> weak components)",
+    "K4": "keys compared as sets",
+    "dangling": "engine (model/graph.normalizeToTypedGraph) and oracle (rdf_export.add_model) remove edges with a missing endpoint; the blind oracle keeps them. \"sanitized\" = the same input with those edges removed before the blind oracle runs."
+  },
+  "storedBlindOutputReproduced": true,
+  "models": 2900,
+  "edges": 17055,
+  "danglingEdges": 1351,
+  "modelsWithDanglingEdges": 1011,
+  "totals": {
+    "E": 36514,
+    "O": 36514,
+    "B": 37612,
+    "Bsan": 36514,
+    "R": 36514
+  },
+  "perClass": {
+    "B": {
+      "TYPE": 12688,
+      "REQ": 6818,
+      "MULT": 7460,
+      "ISO": 1784,
+      "TRACE": 1804,
+      "DOM": 5482,
+      "VIEW": 246,
+      "ACYC": 1330
+    },
+    "E": {
+      "TYPE": 11488,
+      "REQ": 6818,
+      "MULT": 7505,
+      "ISO": 1859,
+      "TRACE": 1804,
+      "DOM": 5482,
+      "VIEW": 238,
+      "ACYC": 1320
+    },
+    "O": {
+      "ISO": 1859,
+      "MULT": 7505,
+      "REQ": 6818,
+      "TRACE": 1804,
+      "TYPE": 11488,
+      "DOM": 5482,
+      "VIEW": 238,
+      "ACYC": 1320
+    },
+    "Bsan": {
+      "TYPE": 11488,
+      "REQ": 6818,
+      "MULT": 7505,
+      "ISO": 1859,
+      "TRACE": 1804,
+      "DOM": 5482,
+      "VIEW": 238,
+      "ACYC": 1320
+    }
+  },
+  "mismatchingModels": {
+    "EvsO": 0,
+    "EvsB": 929,
+    "OvsB": 929,
+    "EvsBsan": 0,
+    "OvsBsan": 0,
+    "EvsRef": 0
+  },
+  "keyPatternsOriginal": {
+    "B": 1227,
+    "EO": 129
+  },
+  "keyPatternsSanitized": {},
+  "byClassPatternOriginal": {
+    "TYPE": {
+      "B": 1200
+    },
+    "MULT": {
+      "EO": 53,
+      "B": 8
+    },
+    "ISO": {
+      "EO": 75
+    },
+    "VIEW": {
+      "B": 8
+    },
+    "ACYC": {
+      "B": 11,
+      "EO": 1
+    }
+  },
+  "byClassPatternSanitized": {},
+  "patternLegend": "sides holding the key: E engine, O SHACL oracle, B blind SQL oracle; keys held by all three are omitted",
+  "examples": {
+    "orig:TYPE:B": [
+      {
+        "caseId": "aerospace-1",
+        "key": "TYPE:satisfy|e1",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-1",
+        "key": "TYPE:allocate|e2",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-2",
+        "key": "TYPE:expose|e2",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-2",
+        "key": "TYPE:subject|e6",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-10",
+        "key": "TYPE:expose|e2",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-11",
+        "key": "TYPE:dependOn|e4",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      }
+    ],
+    "orig:MULT:EO": [
+      {
+        "caseId": "aerospace-45",
+        "key": "MULT:Port|contain|in|n2",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      },
+      {
+        "caseId": "aerospace-50",
+        "key": "MULT:Requirement|verify|in|n3",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      },
+      {
+        "caseId": "aerospace-181",
+        "key": "MULT:Function|allocate|out|n0",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      },
+      {
+        "caseId": "aerospace-233",
+        "key": "MULT:Function|allocate|out|n1",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      },
+      {
+        "caseId": "aerospace-274",
+        "key": "MULT:Requirement|verify|in|n2",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      },
+      {
+        "caseId": "aerospace-279",
+        "key": "MULT:Port|contain|in|n2",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      }
+    ],
+    "orig:ISO:EO": [
+      {
+        "caseId": "aerospace-46",
+        "key": "ISO:VerificationCase|n7",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-100",
+        "key": "ISO:Requirement|n0",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-114",
+        "key": "ISO:Interface|n7",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-144",
+        "key": "ISO:Requirement|n3",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-156",
+        "key": "ISO:Port|n5",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-218",
+        "key": "ISO:Requirement|n0",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      }
+    ],
+    "orig:VIEW:B": [
+      {
+        "caseId": "aerospace-91",
+        "key": "VIEW:View|ghost,n4",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "aerospace-272",
+        "key": "VIEW:View|ghost,n4",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "automotive-91",
+        "key": "VIEW:View|ghost,n4",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "automotive-272",
+        "key": "VIEW:View|ghost,n4",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "rc2-77",
+        "key": "VIEW:D|ghost,n3",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "rc2-78",
+        "key": "VIEW:D|ghost,n1",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      }
+    ],
+    "orig:ACYC:B": [
+      {
+        "caseId": "aerospace-139",
+        "key": "ACYC:dependOn|ghost",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "automotive-139",
+        "key": "ACYC:dependOn|ghost",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "robotics-159",
+        "key": "ACYC:dependOn|ghost",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "rc2-30",
+        "key": "ACYC:r|ghost,n2",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "rc3-73",
+        "key": "ACYC:r|ghost",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      },
+      {
+        "caseId": "rc7-77",
+        "key": "ACYC:q|ghost,n0",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      }
+    ],
+    "orig:MULT:B": [
+      {
+        "caseId": "robotics-285",
+        "key": "MULT:Function|allocate|out|n1",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      },
+      {
+        "caseId": "rc4-69",
+        "key": "MULT:C|q|out|n3",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      },
+      {
+        "caseId": "rc5-60",
+        "key": "MULT:C|p|in|n5",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      },
+      {
+        "caseId": "rc7-56",
+        "key": "MULT:B|p|in|n3",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      },
+      {
+        "caseId": "rc7-77",
+        "key": "MULT:D|q|out|n0",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      },
+      {
+        "caseId": "rc13-53",
+        "key": "MULT:C|q|in|n2",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": false
+      }
+    ],
+    "orig:ACYC:EO": [
+      {
+        "caseId": "rc7-77",
+        "key": "ACYC:q|n0",
+        "modelHasDangling": true,
+        "evidenceTouchesDanglingEdge": true
+      }
+    ]
+  },
+  "seconds": 237.95
+}

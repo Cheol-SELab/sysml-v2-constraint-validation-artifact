@@ -1,0 +1,24 @@
+claim_id,manuscript_location,claim,evidence_relative_to_package_root,scope_or_limit
+C01,Section V,Graph evaluator correctness,ieee-access/main.tex,Conditional mathematical argument; not end-to-end SysML preservation
+C02,Section V,Sufficient exact local revalidation region,ieee-access/main.tex,Not a minimal affected region; complete graph support required
+C03,Section V,Combined local and global correctness,ieee-access/main.tex,Supported edits and witness reconstruction; no general dynamic time bound
+C04,Section V,Noninterfering injection labels,ieee-access/main.tex,Disjoint influence is sufficient not necessary; selective injected population
+E01,Section VII-A,Bounded single-type agreement,data/results-v4/e1/,Finite code checks not machine-checked theorem proofs
+E02,Section VII-A,Mutation score 0.824,data/results-v4/mutation-r10/,Single-type implementation; survivor classification includes human judgment
+E03,Abstract and Section VII-B,25000 random graphs agree,data/results-v4/oracle-random/,Graph encoding; source parser outside independent oracle
+E04,Abstract and Section VII-B,664 multi-type public configurations agree,data/results-v4/n1-spec-oracle-corpus/n1-spec-oracle-corpus.json,Shared node extraction and inherited values; separate from E1
+E05,Section VII-B,Blind SQL reimplementation,data/results-v4/n20-blind/n20-blind-threeway.json,Single-type LLM implementation; instruction-level isolation
+E06,Section VII-C,5316 injected instances and 6956 expected violations,data/results-v4/e3/,Specification agreement not natural defect precision
+E07,Section VII-C,Noninterference ablation,data/results-v4/e3sched/,Controlled injection-label experiment
+E08,Abstract and Section VII-D,SHACL Core 185-297 and Jena 9-38 ratios,data/results-v3/n2-shacl-bench/n2-summary.json,Separate session; Core subset versus all-rule batch comparison
+E09,Section VII-D,One-edit Jena ratio 536-5275,data/results-v3/n2-shacl-bench/compare.json,Incremental versus batch; list included; not superiority over incremental query engines
+E10,Section VII-E,Scattered-change crossover,data/results-v4/e5/e5-incremental-v4.json,Incremental full list excluded; synthetic aerospace workload
+E11,Abstract and Section VII-E,Historical full-list speedup 6.9,data/results-v4/n14/n14-e5-history.json,summary.corpus.speedupTime.S3e; normalized graph differences already available
+E12,Section VII-E,Historical maintenance speedup 22.6,data/results-v4/n14/n14-e5-history.json,summary.corpus.speedupTime.S3; excludes incremental full-list construction
+E13,Section VII-F,Time exponent 1.223 and operation exponent 1.000,data/results-v4/e6/,Abstract operation model differs from wall-clock hypothesis
+E14,Section VII-F,CSR diagnostic comparison,data/results-v4/n13/n13-e6-csr.json,Representation construction excluded; causal mechanism not uniquely identified
+E15,Abstract and Section VII-G,83 models and 30.9 percent statement loss,data/results-v4/sysml/x1-corpus-normalization.json,Subset normalization not complete language parsing
+E16,Section VII-G,Public report classification,data/results-v4/sysml/x2-adjudications-primary.json,Mechanical classification; independent expert precision pending
+E17,Section VII-G,Hierarchy-edit boundary,data/results-v4/n1-spec-oracle-x3/n1-x3-oracle.json,Multi-type hybrid; name-resolution dependencies remain incomplete
+E18,Section VII-G,Generator holdout mismatch,data/results-v4/sysml/x4-calibration-holdout.json,Synthetic workload not demonstrated representative
+E19,Section VII-G,Normalization median 3.5ms and validation 0.048ms,data/results-v4/sysml/x5-timing.json,Separate stage medians not an end-to-end speedup

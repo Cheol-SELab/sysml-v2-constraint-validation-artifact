@@ -1,0 +1,11 @@
+{
+  "experiment": "e3-reproduction-check",
+  "matchKey": "(catalog, n, seed, defect type); defect ids are a process-global counter and are normalised away",
+  "storedRecords": 871,
+  "regeneratedRecords": 871,
+  "identicalExpectedSets": 871,
+  "differing": 0,
+  "notFound": 0,
+  "examples": [],
+  "storedFile": "results/e3-raw-records.json of the v1 archive (= PKG/data/results/e3-raw-records.json)"
+}

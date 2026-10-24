@@ -1,0 +1,218 @@
+{
+  "experiment": "oracle-independence",
+  "statement": "The oracle derives SHACL shapes from catalog data (JSON.stringify of the objects built in catalog/domains.ts) and converts raw model JSON to RDF itself. No oracle file imports or embeds engine.ts, rules.ts (deriveRules, inDomain, makeViolation), referenceSemantics.ts or model/graph.ts (normalizeToTypedGraph). Validation is performed by pySHACL/rdflib, a third-party SHACL engine. src/oracle/*.ts only serialises data, spawns the oracle and compares outputs.",
+  "oracleFiles": [
+    {
+      "file": "oracle-py/export_ttl.py",
+      "sha256": "5f3dee0b80d790d36821efecc4500211d75368e2528a2f07f226882e34d701c2",
+      "lines": 53,
+      "imports": [
+        "import json",
+        "import sys",
+        "from rdflib import Graph, Namespace",
+        "from rdf_export import add_model",
+        "from shapes import translate"
+      ],
+      "forbiddenTokenHits": [
+        "engine"
+      ]
+    },
+    {
+      "file": "oracle-py/oracle_spec.py",
+      "sha256": "8b2aa5941004865aaecacbc4d9aec069f502d738ee231241226f48f79bb176d6",
+      "lines": 68,
+      "imports": [],
+      "forbiddenTokenHits": [
+        "engine",
+        "rules.ts",
+        "referenceSemantics",
+        ".ts"
+      ]
+    },
+    {
+      "file": "oracle-py/rdf_export.py",
+      "sha256": "44a6aa25605f2551cc955a208e481379cd102c3b0d6872198216739c3150dca6",
+      "lines": 113,
+      "imports": [
+        "from urllib.parse import quote, unquote",
+        "from rdflib import Graph, Literal, URIRef",
+        "from rdflib.namespace import RDF"
+      ],
+      "forbiddenTokenHits": [
+        ".ts"
+      ]
+    },
+    {
+      "file": "oracle-py/run_oracle.py",
+      "sha256": "a40f82d9186074c6645cd2ae3a7ed0c8382719cc015aca8a52e457c1c2603069",
+      "lines": 132,
+      "imports": [
+        "import json",
+        "import sys",
+        "import time",
+        "from pyshacl import validate",
+        "from rdflib import Graph, URIRef",
+        "from rdflib.namespace import Namespace",
+        "from rdf_export import SRC, TGT, add_model, parse_iri",
+        "from shapes import translate"
+      ],
+      "forbiddenTokenHits": []
+    },
+    {
+      "file": "oracle-py/run_oracle_multi.py",
+      "sha256": "921c4aa6e8cda302ed5db46869021688f4441fadc769a1ba8a5fd97e37d6bef0",
+      "lines": 145,
+      "imports": [
+        "import json",
+        "import sys",
+        "import time",
+        "from pyshacl import validate",
+        "from rdflib import Graph, URIRef",
+        "from rdflib.namespace import RDF, RDFS",
+        "from rdf_export import BASE, EDGE, ELEMENT, SRC, TGT, attr_iri, edge_iri, edgetype_iri, node_iri, parse_iri, q, \\",
+        "from run_oracle import parse_report",
+        "from shapes import translate",
+        "import owlrl",
+        "from urllib.parse import unquote"
+      ],
+      "forbiddenTokenHits": []
+    },
+    {
+      "file": "oracle-py/shapes.py",
+      "sha256": "873e51e8e78296d1d0cd33b5902eac5604a586de1b49f8b8c09051f3de3a9675",
+      "lines": 164,
+      "imports": [
+        "import json",
+        "from oracle_spec import PREFIX, SHACL_LAYER",
+        "from rdf_export import BASE, attr_iri, edgetype_iri, q, rel_iri, type_iri"
+      ],
+      "forbiddenTokenHits": [
+        "rules.ts",
+        ".ts"
+      ]
+    },
+    {
+      "file": "oracle-py/shapes_core.py",
+      "sha256": "2f19ea75a7de486ab9b2e0c3510fcebc507b5fcd74fd21a7a64d3c5c1de82220",
+      "lines": 121,
+      "imports": [
+        "import copy",
+        "import json",
+        "import sys",
+        "import time",
+        "from rdflib import Graph, URIRef",
+        "from rdf_export import BASE, ELEMENT, add_model, rel_iri, type_iri",
+        "from run_oracle import parse_report, run_shacl",
+        "from shapes import iri, shape_iri, translate",
+        "from rdflib.namespace import RDF"
+      ],
+      "forbiddenTokenHits": []
+    },
+    {
+      "file": "oracle-py/shared_code_mutants.py",
+      "sha256": "f038e8eff7114ea8cc2c91573b4b165af130bf3808e8c7c642ce8640e8037d9c",
+      "lines": 129,
+      "imports": [
+        "import json",
+        "import os",
+        "import shutil",
+        "import subprocess",
+        "import sys"
+      ],
+      "forbiddenTokenHits": [
+        "engine",
+        "rules.ts",
+        "dist/",
+        ".ts"
+      ]
+    },
+    {
+      "file": "oracle-py/test_oracle.py",
+      "sha256": "248bed31b5b93bd2429ce8aa1c7bc073ce485216f1b20b441977292b7c9b055f",
+      "lines": 192,
+      "imports": [
+        "import copy",
+        "import json",
+        "import os",
+        "import unittest",
+        "from rdflib import Graph",
+        "from rdf_export import add_model",
+        "from run_oracle import parse_report, run_shacl",
+        "from shapes import translate"
+      ],
+      "forbiddenTokenHits": []
+    },
+    {
+      "file": "oracle-py/time_pyshacl.py",
+      "sha256": "746b6417bd8a7f687faaf0efe8e01df55cf7f699fc088dc71da9f76c99cc3b57",
+      "lines": 61,
+      "imports": [
+        "import json",
+        "import os",
+        "import sys",
+        "import time",
+        "import pyshacl",
+        "from pyshacl import validate",
+        "from rdflib import Graph",
+        "from rdflib.namespace import Namespace"
+      ],
+      "forbiddenTokenHits": [
+        "engine"
+      ]
+    }
+  ],
+  "bridgeFiles": [
+    {
+      "file": "src/oracle/bridge.ts",
+      "sha256": "367865410d76926132f7093aabf81c900e6a3e3c351677d080fb9803c49fb35a",
+      "imports": [
+        "import { spawnSync } from 'child_process';",
+        "import * as fs from 'fs';",
+        "import * as path from 'path';",
+        "import { Catalog, SysMLLikeModel } from '../model/types';"
+      ]
+    },
+    {
+      "file": "src/oracle/compare.ts",
+      "sha256": "51021689403422d17bb9f62422c73a81a0a0f2e99e80e7d23d8002dfe575a213",
+      "imports": [
+        "import { Violation } from '../model/types';",
+        "import { OracleViolation } from './bridge';"
+      ]
+    },
+    {
+      "file": "src/oracle/randomModels.ts",
+      "sha256": "9e0974216209a9e4b961c8e16b38fc88dff72fdac5ccf73224d5b5f7265d28a9",
+      "imports": [
+        "import { AttrValue, Catalog, DomainSpec, ModelEdge, ModelNode, SysMLLikeModel } from '../model/types';",
+        "import { Rng } from '../util/rng';"
+      ]
+    }
+  ],
+  "note": "forbiddenTokenHits lists occurrences of engine identifiers in oracle files; occurrences inside the explanatory docstring of oracle_spec.py (which names the modules it does NOT use) are expected and are not code references.",
+  "pythonPackages": [
+    "html5rdf==1.2.1",
+    "importlib_metadata==9.0.1",
+    "owlrl==7.6.2",
+    "packaging==26.3",
+    "prettytable==3.18.0",
+    "pyparsing==3.3.3",
+    "pyshacl==0.40.1",
+    "rdflib==7.6.0",
+    "wcwidth==0.9.3",
+    "zipp==4.1.1"
+  ],
+  "codeIdentity": {
+    "src/validator/engine.ts": "c6b09f34e5642e85428aa139223745dd0c3ff01abc0ee786857041b502c85303",
+    "src/catalog/rules.ts": "aa8a5187a59b3c5471c9d49171166a67d9d4ee1b7855f4c2480ddf421b5f8fd6",
+    "src/catalog/domains.ts": "d60c2c1164a0d22ffbfaac0702d1ff06ddc9a2b68acf3282915c4541eb64c545",
+    "src/reference/referenceSemantics.ts": "1f5fe5b605b38d08e6c751c234438fc7da5aa4fae195f1eace14002d9799a72f",
+    "src/model/graph.ts": "798fcb25b25a5a8611e1b16bedfdfffe4ebcd674ffe2dd71dbd8c3c847b460e1",
+    "src/injector/defectInjector.ts": "f65791c772c852fccc5d4fa1e278172f48d0a5a98a3842b9b22c7289fb18e735",
+    "src/generator/syntheticModelGenerator.ts": "a294ab144c822a102e5501d55266ad6e53a30782107c39810a639e6bd8098cb7",
+    "oracle-py/oracle_spec.py": "8b2aa5941004865aaecacbc4d9aec069f502d738ee231241226f48f79bb176d6",
+    "oracle-py/rdf_export.py": "44a6aa25605f2551cc955a208e481379cd102c3b0d6872198216739c3150dca6",
+    "oracle-py/shapes.py": "873e51e8e78296d1d0cd33b5902eac5604a586de1b49f8b8c09051f3de3a9675",
+    "oracle-py/run_oracle.py": "a40f82d9186074c6645cd2ae3a7ed0c8382719cc015aca8a52e457c1c2603069"
+  }
+}

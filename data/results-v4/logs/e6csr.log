@@ -1,0 +1,54 @@
+[2026-10-22 23:15:29] start e6csr:  node --expose-gc --max-old-space-size=24000 dist-r8/cli-r8.js e6csr --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/n13
+pin: could not set affinity/priority: The property 'ProcessorAffinity' cannot be found on this object. Verify that the property exists and can be set.
+pin: affinity=0x4 priority=AboveNormal pid=
+[2026-10-22 23:15:30] end e6csr rc=0 elapsed=1s
+[2026-10-22 23:34:11] start e6csr:  node --expose-gc --max-old-space-size=24000 dist-r8/cli-r8.js e6csr --out G:/SW/SW-SELab/SELab-Researches/selab-research-papers/2026/codes/selab-metamodel-validator/results-v4/n13
+pin: affinity=0x4 priority=AboveNormal pid=74676
+E6csr n=1000 seed=0 map=23.40ms csr=2.75ms build=1.55ms sort=0.09ms eq=true
+E6csr n=1000 seed=1 map=2.70ms csr=0.46ms build=1.13ms sort=0.09ms eq=true
+E6csr n=1000 seed=2 map=3.18ms csr=0.26ms build=0.30ms sort=0.08ms eq=true
+E6csr n=1000 seed=3 map=2.34ms csr=0.22ms build=0.33ms sort=0.08ms eq=true
+E6csr n=1000 seed=4 map=2.32ms csr=0.28ms build=0.32ms sort=0.08ms eq=true
+E6csr n=1000 seed=5 map=2.20ms csr=0.26ms build=0.32ms sort=0.08ms eq=true
+E6csr n=1000 seed=6 map=3.06ms csr=0.25ms build=0.32ms sort=0.08ms eq=true
+E6csr n=1000 seed=7 map=2.11ms csr=0.28ms build=0.49ms sort=0.08ms eq=true
+E6csr n=1000 seed=8 map=2.07ms csr=0.28ms build=0.34ms sort=0.08ms eq=true
+E6csr n=1000 seed=9 map=2.15ms csr=0.28ms build=0.33ms sort=0.08ms eq=true
+E6csr n=3000 seed=0 map=6.37ms csr=0.68ms build=1.02ms sort=0.16ms eq=true
+E6csr n=3000 seed=1 map=6.30ms csr=0.65ms build=1.37ms sort=0.16ms eq=true
+E6csr n=3000 seed=2 map=6.19ms csr=0.65ms build=0.91ms sort=0.16ms eq=true
+E6csr n=3000 seed=3 map=6.14ms csr=0.65ms build=0.90ms sort=0.16ms eq=true
+E6csr n=3000 seed=4 map=6.30ms csr=0.68ms build=0.94ms sort=0.16ms eq=true
+E6csr n=3000 seed=5 map=6.55ms csr=0.68ms build=0.89ms sort=0.17ms eq=true
+E6csr n=3000 seed=6 map=6.41ms csr=0.69ms build=0.90ms sort=0.16ms eq=true
+E6csr n=3000 seed=7 map=6.50ms csr=0.67ms build=0.92ms sort=0.17ms eq=true
+E6csr n=3000 seed=8 map=6.73ms csr=0.66ms build=0.92ms sort=0.17ms eq=true
+E6csr n=3000 seed=9 map=6.08ms csr=0.68ms build=0.92ms sort=0.16ms eq=true
+E6csr n=10000 seed=0 map=25.99ms csr=1.84ms build=3.21ms sort=0.53ms eq=true
+E6csr n=10000 seed=1 map=25.15ms csr=1.85ms build=3.43ms sort=0.53ms eq=true
+E6csr n=10000 seed=2 map=26.36ms csr=2.07ms build=3.41ms sort=0.52ms eq=true
+E6csr n=10000 seed=3 map=25.68ms csr=1.79ms build=3.38ms sort=0.55ms eq=true
+E6csr n=10000 seed=4 map=26.86ms csr=1.96ms build=3.38ms sort=0.53ms eq=true
+E6csr n=10000 seed=5 map=24.84ms csr=1.86ms build=3.24ms sort=0.53ms eq=true
+E6csr n=10000 seed=6 map=32.98ms csr=1.90ms build=3.49ms sort=0.53ms eq=true
+E6csr n=10000 seed=7 map=24.25ms csr=1.69ms build=3.43ms sort=0.53ms eq=true
+E6csr n=10000 seed=8 map=25.11ms csr=1.82ms build=3.56ms sort=0.53ms eq=true
+E6csr n=10000 seed=9 map=28.19ms csr=1.64ms build=3.28ms sort=0.53ms eq=true
+E6csr n=30000 seed=0 map=102.85ms csr=5.53ms build=10.90ms sort=1.72ms eq=true
+E6csr n=30000 seed=1 map=102.84ms csr=5.58ms build=10.51ms sort=1.69ms eq=true
+E6csr n=30000 seed=2 map=92.14ms csr=5.21ms build=10.80ms sort=1.69ms eq=true
+E6csr n=30000 seed=3 map=113.97ms csr=5.71ms build=10.42ms sort=1.84ms eq=true
+E6csr n=30000 seed=4 map=94.53ms csr=5.44ms build=10.44ms sort=1.79ms eq=true
+E6csr n=100000 seed=0 map=466.80ms csr=18.51ms build=49.41ms sort=5.36ms eq=true
+E6csr n=100000 seed=1 map=515.24ms csr=18.48ms build=45.13ms sort=5.72ms eq=true
+E6csr n=100000 seed=2 map=474.63ms csr=18.66ms build=51.10ms sort=5.53ms eq=true
+E6csr n=100000 seed=3 map=575.35ms csr=18.90ms build=53.74ms sort=5.39ms eq=true
+E6csr n=100000 seed=4 map=484.66ms csr=18.62ms build=50.79ms sort=6.32ms eq=true
+E6csr n=300000 seed=0 map=1946.11ms csr=57.74ms build=248.40ms sort=15.25ms eq=true
+E6csr n=300000 seed=1 map=1916.54ms csr=56.84ms build=266.05ms sort=16.39ms eq=true
+E6csr n=300000 seed=2 map=1925.90ms csr=56.24ms build=249.51ms sort=18.85ms eq=true
+E6csr n=1000000 seed=0 map=8543.58ms csr=242.84ms build=2078.71ms sort=57.30ms eq=true
+E6csr n=1000000 seed=1 map=10697.65ms csr=270.42ms build=2140.52ms sort=66.60ms eq=true
+E6csr n=1000000 seed=2 map=9272.44ms csr=232.47ms build=2166.05ms sort=65.32ms eq=true
+written: G:\SW\SW-SELab\SELab-Researches\selab-research-papers\2026\codes\selab-metamodel-validator\results-v4\n13\n13-e6-csr.json
+[2026-10-22 23:43:16] end e6csr rc=0 elapsed=544s

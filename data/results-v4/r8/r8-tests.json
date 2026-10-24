@@ -1,0 +1,70 @@
+{
+  "tests": [
+    {
+      "name": "n21 duplicate node id is rejected",
+      "ok": true
+    },
+    {
+      "name": "n21 duplicate edge id is rejected",
+      "ok": true
+    },
+    {
+      "name": "n21 dangling edge: dropped and reported (default policy)",
+      "ok": true
+    },
+    {
+      "name": "n21 dangling edge: rejected under policy reject",
+      "ok": true
+    },
+    {
+      "name": "n21 checkModelInput lists every defect class incl. P_own",
+      "ok": true
+    },
+    {
+      "name": "n21 P_own violation is reported but not rejected (MULT can still fire)",
+      "ok": true
+    },
+    {
+      "name": "n21 addEdge with an existing id is rejected and leaves G unchanged",
+      "ok": true
+    },
+    {
+      "name": "n21 applyChanges ignores a duplicate addEdge (no touched ids)",
+      "ok": true
+    },
+    {
+      "name": "n21 incremental session equals batch after a duplicate addEdge (all strategies)",
+      "ok": true
+    },
+    {
+      "name": "n21 a dependOn 2-cycle created through a fresh id is still detected",
+      "ok": true
+    },
+    {
+      "name": "n12 Baseline B warns on a dependOn cycle (2-cycle, self-loop) and not on a DAG",
+      "ok": true
+    },
+    {
+      "name": "n12 Baseline B warns on a requirement without satisfy",
+      "ok": true
+    },
+    {
+      "name": "n12 Baseline B output does not depend on the catalog (Prop. 1 premise)",
+      "ok": true
+    },
+    {
+      "name": "n17 worked example: S1 (keyword) output is the Table-3 graph",
+      "ok": true
+    },
+    {
+      "name": "n17 NamespaceExpose X::* gives subject(view, X) and expose(view, member)",
+      "ok": true
+    },
+    {
+      "name": "n17 legacy exposure mapping (no subject) is still available for impact measurement",
+      "ok": true
+    }
+  ],
+  "passed": 16,
+  "failed": 0
+}

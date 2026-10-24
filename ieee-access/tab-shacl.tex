@@ -1,0 +1,24 @@
+\begin{table*}[t]
+\centering\scriptsize
+\caption{Separate N2 session: validation milliseconds and median per-seed time ratios. Core excludes VIEW, ACYC, and TRACE.}
+\label{tab:shacl}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}rrrrrrrrr@{}}
+\toprule
+$n$ & Engine-All & Engine-Core & Jena-All & Jena/All & shacl-engine-Core & Core/Core & pySHACL-All & pySHACL/All \\
+\midrule
+$10^3$ & 3.00 & 1.43 & 121.05 & 37.6 & 424.47 & 297.2 & 6,097.02 & 2,035.6 \\
+$10^4$ & 34.70 & 21.22 & 676.89 & 21.5 & 5,867.91 & 260.4 & 60,460.08 & 1,755.4 \\
+$10^5$ & 695.70 & 401.41 & 6,487.04 & 9.3 & 69,233.38 & 185.4 & -- & -- \\
+\midrule
+\multicolumn{9}{l}{Jena post-edit batch / seed-level typical incremental step (all rules)}\\
+$n$ & \multicolumn{2}{c}{Engine step (ms)} & Jena (ms) & Jena/step & \multicolumn{4}{l}{Seed/post-edit records}\\
+$10^3$ & \multicolumn{2}{c}{0.24215} & 130.45 & 536.1 & \multicolumn{4}{l}{9}\\
+$10^4$ & \multicolumn{2}{c}{0.40870} & 678.07 & 1,761.4 & \multicolumn{4}{l}{9}\\
+$10^5$ & \multicolumn{2}{c}{1.16140} & 6,143.52 & 5,274.8 & \multicolumn{4}{l}{3}\\
+\bottomrule
+\end{tabular}
+\begin{minipage}{0.98\textwidth}\footnotesize
+Times are medians of per-seed medians; ratios are medians of per-record ratios, not ratios of the displayed medians. For example, $121.05/3.00$ need not equal 37.6. All uses the complete rule set; Core uses the same restricted set on both sides. One-edit ratios divide each post-edit batch time by its seed\textquotesingle s median over 20 incremental edits, not the time of that individual edit; initialization is excluded. The original session includes full-list construction. Session identity: \texttt{data/results-v3/n2-shacl-bench}; raw samples and input hashes are retained. Numerical reaggregation is supported; identical-execution reconstruction of the original session is limited. -- indicates no recorded measurement.
+\end{minipage}
+\end{table*}

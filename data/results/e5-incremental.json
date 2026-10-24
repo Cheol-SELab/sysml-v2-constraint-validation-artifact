@@ -1,0 +1,377 @@
+{
+  "experiment": "E5",
+  "correctness": [
+    {
+      "catalog": "aerospace",
+      "n": 500,
+      "seeds": 3,
+      "steps": 50,
+      "comparisons": 150,
+      "mismatches": 0
+    },
+    {
+      "catalog": "aerospace",
+      "n": 1000,
+      "seeds": 3,
+      "steps": 50,
+      "comparisons": 150,
+      "mismatches": 0
+    },
+    {
+      "catalog": "automotive",
+      "n": 500,
+      "seeds": 3,
+      "steps": 50,
+      "comparisons": 150,
+      "mismatches": 0
+    },
+    {
+      "catalog": "automotive",
+      "n": 1000,
+      "seeds": 3,
+      "steps": 50,
+      "comparisons": 150,
+      "mismatches": 0
+    },
+    {
+      "catalog": "robotics",
+      "n": 500,
+      "seeds": 3,
+      "steps": 50,
+      "comparisons": 150,
+      "mismatches": 0
+    },
+    {
+      "catalog": "robotics",
+      "n": 1000,
+      "seeds": 3,
+      "steps": 50,
+      "comparisons": 150,
+      "mismatches": 0
+    }
+  ],
+  "counterexampleFamilies": [
+    {
+      "family": "cycle",
+      "k": 1,
+      "nodes": 8,
+      "ruleUnderTest": "ACYC:dependOn",
+      "violationsBeforeChange": 0,
+      "strategy1Missed": 1,
+      "strategy1Spurious": 2,
+      "strategy1Radius": 1,
+      "strategy2Missed": 0,
+      "strategy2Spurious": 0,
+      "strategy2Radius": 2,
+      "strategy3Missed": 0,
+      "strategy3Spurious": 0,
+      "strategy3Radius": 2
+    },
+    {
+      "family": "trace",
+      "k": 1,
+      "nodes": 8,
+      "ruleUnderTest": "TRACE:COMP2REQ",
+      "violationsBeforeChange": 0,
+      "strategy1Missed": 1,
+      "strategy1Spurious": 2,
+      "strategy1Radius": 1,
+      "strategy2Missed": 0,
+      "strategy2Spurious": 0,
+      "strategy2Radius": 2,
+      "strategy3Missed": 0,
+      "strategy3Spurious": 0,
+      "strategy3Radius": 2
+    },
+    {
+      "family": "cycle",
+      "k": 2,
+      "nodes": 10,
+      "ruleUnderTest": "ACYC:dependOn",
+      "violationsBeforeChange": 0,
+      "strategy1Missed": 1,
+      "strategy1Spurious": 3,
+      "strategy1Radius": 2,
+      "strategy2Missed": 0,
+      "strategy2Spurious": 0,
+      "strategy2Radius": 2,
+      "strategy3Missed": 0,
+      "strategy3Spurious": 0,
+      "strategy3Radius": 2
+    },
+    {
+      "family": "trace",
+      "k": 2,
+      "nodes": 10,
+      "ruleUnderTest": "TRACE:COMP2REQ",
+      "violationsBeforeChange": 0,
+      "strategy1Missed": 1,
+      "strategy1Spurious": 3,
+      "strategy1Radius": 2,
+      "strategy2Missed": 0,
+      "strategy2Spurious": 0,
+      "strategy2Radius": 2,
+      "strategy3Missed": 0,
+      "strategy3Spurious": 0,
+      "strategy3Radius": 2
+    },
+    {
+      "family": "cycle",
+      "k": 4,
+      "nodes": 14,
+      "ruleUnderTest": "ACYC:dependOn",
+      "violationsBeforeChange": 0,
+      "strategy1Missed": 1,
+      "strategy1Spurious": 5,
+      "strategy1Radius": 4,
+      "strategy2Missed": 0,
+      "strategy2Spurious": 0,
+      "strategy2Radius": 2,
+      "strategy3Missed": 0,
+      "strategy3Spurious": 0,
+      "strategy3Radius": 2
+    },
+    {
+      "family": "trace",
+      "k": 4,
+      "nodes": 14,
+      "ruleUnderTest": "TRACE:COMP2REQ",
+      "violationsBeforeChange": 0,
+      "strategy1Missed": 1,
+      "strategy1Spurious": 5,
+      "strategy1Radius": 4,
+      "strategy2Missed": 0,
+      "strategy2Spurious": 0,
+      "strategy2Radius": 2,
+      "strategy3Missed": 0,
+      "strategy3Spurious": 0,
+      "strategy3Radius": 2
+    },
+    {
+      "family": "cycle",
+      "k": 8,
+      "nodes": 22,
+      "ruleUnderTest": "ACYC:dependOn",
+      "violationsBeforeChange": 0,
+      "strategy1Missed": 1,
+      "strategy1Spurious": 9,
+      "strategy1Radius": 8,
+      "strategy2Missed": 0,
+      "strategy2Spurious": 0,
+      "strategy2Radius": 2,
+      "strategy3Missed": 0,
+      "strategy3Spurious": 0,
+      "strategy3Radius": 2
+    },
+    {
+      "family": "trace",
+      "k": 8,
+      "nodes": 22,
+      "ruleUnderTest": "TRACE:COMP2REQ",
+      "violationsBeforeChange": 0,
+      "strategy1Missed": 1,
+      "strategy1Spurious": 9,
+      "strategy1Radius": 8,
+      "strategy2Missed": 0,
+      "strategy2Spurious": 0,
+      "strategy2Radius": 2,
+      "strategy3Missed": 0,
+      "strategy3Spurious": 0,
+      "strategy3Radius": 2
+    }
+  ],
+  "speedup": [
+    {
+      "n": 500,
+      "changeRatio": 0.001,
+      "seeds": 10,
+      "medianScopeShare": 0.0411,
+      "strategy3SpeedupMedian": 8.25,
+      "strategy3SpeedupCI": [
+        6.34,
+        10.24
+      ],
+      "strategy2SpeedupMedian": 2.03,
+      "strategy2SpeedupCI": [
+        1.72,
+        2.24
+      ]
+    },
+    {
+      "n": 500,
+      "changeRatio": 0.01,
+      "seeds": 10,
+      "medianScopeShare": 0.191,
+      "strategy3SpeedupMedian": 2.04,
+      "strategy3SpeedupCI": [
+        1.96,
+        2.37
+      ],
+      "strategy2SpeedupMedian": 1.23,
+      "strategy2SpeedupCI": [
+        1.15,
+        1.42
+      ]
+    },
+    {
+      "n": 500,
+      "changeRatio": 0.05,
+      "seeds": 10,
+      "medianScopeShare": 0.5087,
+      "strategy3SpeedupMedian": 0.83,
+      "strategy3SpeedupCI": [
+        0.8,
+        0.89
+      ],
+      "strategy2SpeedupMedian": 0.65,
+      "strategy2SpeedupCI": [
+        0.61,
+        0.71
+      ]
+    },
+    {
+      "n": 500,
+      "changeRatio": 0.1,
+      "seeds": 10,
+      "medianScopeShare": 0.6201,
+      "strategy3SpeedupMedian": 0.6,
+      "strategy3SpeedupCI": [
+        0.58,
+        0.65
+      ],
+      "strategy2SpeedupMedian": 0.53,
+      "strategy2SpeedupCI": [
+        0.52,
+        0.59
+      ]
+    },
+    {
+      "n": 1000,
+      "changeRatio": 0.001,
+      "seeds": 10,
+      "medianScopeShare": 0.0193,
+      "strategy3SpeedupMedian": 13.2,
+      "strategy3SpeedupCI": [
+        12.42,
+        18.54
+      ],
+      "strategy2SpeedupMedian": 2.4,
+      "strategy2SpeedupCI": [
+        2.06,
+        2.88
+      ]
+    },
+    {
+      "n": 1000,
+      "changeRatio": 0.01,
+      "seeds": 10,
+      "medianScopeShare": 0.1806,
+      "strategy3SpeedupMedian": 2.45,
+      "strategy3SpeedupCI": [
+        1.92,
+        2.8
+      ],
+      "strategy2SpeedupMedian": 1.46,
+      "strategy2SpeedupCI": [
+        1.21,
+        1.88
+      ]
+    },
+    {
+      "n": 1000,
+      "changeRatio": 0.05,
+      "seeds": 10,
+      "medianScopeShare": 0.5104,
+      "strategy3SpeedupMedian": 0.84,
+      "strategy3SpeedupCI": [
+        0.74,
+        0.91
+      ],
+      "strategy2SpeedupMedian": 0.64,
+      "strategy2SpeedupCI": [
+        0.6,
+        0.74
+      ]
+    },
+    {
+      "n": 1000,
+      "changeRatio": 0.1,
+      "seeds": 10,
+      "medianScopeShare": 0.6019,
+      "strategy3SpeedupMedian": 0.58,
+      "strategy3SpeedupCI": [
+        0.52,
+        0.69
+      ],
+      "strategy2SpeedupMedian": 0.55,
+      "strategy2SpeedupCI": [
+        0.46,
+        0.65
+      ]
+    },
+    {
+      "n": 5000,
+      "changeRatio": 0.001,
+      "seeds": 10,
+      "medianScopeShare": 0.0221,
+      "strategy3SpeedupMedian": 12.6,
+      "strategy3SpeedupCI": [
+        11.4,
+        14.25
+      ],
+      "strategy2SpeedupMedian": 2.28,
+      "strategy2SpeedupCI": [
+        2.14,
+        2.59
+      ]
+    },
+    {
+      "n": 5000,
+      "changeRatio": 0.01,
+      "seeds": 10,
+      "medianScopeShare": 0.1753,
+      "strategy3SpeedupMedian": 1.74,
+      "strategy3SpeedupCI": [
+        1.57,
+        1.85
+      ],
+      "strategy2SpeedupMedian": 1.1,
+      "strategy2SpeedupCI": [
+        0.95,
+        1.17
+      ]
+    },
+    {
+      "n": 5000,
+      "changeRatio": 0.05,
+      "seeds": 10,
+      "medianScopeShare": 0.5136,
+      "strategy3SpeedupMedian": 0.46,
+      "strategy3SpeedupCI": [
+        0.41,
+        0.57
+      ],
+      "strategy2SpeedupMedian": 0.43,
+      "strategy2SpeedupCI": [
+        0.37,
+        0.55
+      ]
+    },
+    {
+      "n": 5000,
+      "changeRatio": 0.1,
+      "seeds": 10,
+      "medianScopeShare": 0.6029,
+      "strategy3SpeedupMedian": 0.3,
+      "strategy3SpeedupCI": [
+        0.28,
+        0.33
+      ],
+      "strategy2SpeedupMedian": 0.29,
+      "strategy2SpeedupCI": [
+        0.27,
+        0.32
+      ]
+    }
+  ]
+}

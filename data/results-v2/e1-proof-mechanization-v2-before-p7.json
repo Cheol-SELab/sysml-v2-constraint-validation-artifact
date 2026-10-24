@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "command": "node dist/cli-v2.js e1 --output G:\\SW\\SW-SELab\\SELab-Researches\\selab-research-papers\\2026\\codes\\selab-metamodel-validator\\results-v2",
+    "subcommand": "e1",
+    "node": "v22.15.1",
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13600KF",
+    "logicalCpus": 20,
+    "memoryGiB": 63.8,
+    "maxOldSpaceMiB": 8240,
+    "startedAt": "2026-10-21T06:29:41.557Z",
+    "elapsedSec": 844.9
+  },
+  "experiment": "E1-v2",
+  "boundedExhaustive": {
+    "bounds": [
+      {
+        "nodes": 1,
+        "maxEdges": 3,
+        "attributeVariants": 3
+      },
+      {
+        "nodes": 2,
+        "maxEdges": 3,
+        "attributeVariants": 3
+      },
+      {
+        "nodes": 3,
+        "maxEdges": 3,
+        "attributeVariants": 3
+      },
+      {
+        "nodes": 4,
+        "maxEdges": 2,
+        "attributeVariants": 3
+      }
+    ],
+    "incrementalTemplates": "T1 delete first edge; T2 insert t(last,first); T3 set p=3 on first; T4 insert r(last,first); T5 insert s(last,first); T6 insert t self loop on first; T7 delete first node; T8 add C node nx with s(last,nx); T9 retype first node (C<->A, invalid-witness fallback); T10 delete last edge and unset p on first (two-change set). T4-T10 apply when the model has the required elements.",
+    "graphsEnumerated": 1552752,
+    "semanticsChecks": 1552752,
+    "orderChecks": 1552752,
+    "incrementalChecks": 15525192,
+    "fallbackChecks": 1552752,
+    "counterexamples": 0,
+    "firstCounterexamples": [],
+    "elapsedMs": 837728
+  },
+  "propertyBased": {
+    "cases": 30,
+    "changeSteps": 3000,
+    "checks": {
+      "P1": 30,
+      "P1f": 103,
+      "P2": 30,
+      "P3": 30,
+      "P4": 1500,
+      "P5": 1500,
+      "P6": 30
+    },
+    "nonEmptyP1f": 103,
+    "counterexamples": 0,
+    "firstFailures": [],
+    "elapsedMs": 4514
+  },
+  "invariance": {
+    "cases": 60,
+    "checks": {
+      "I1": 180,
+      "I1reference": 180,
+      "I2": 60,
+      "I2reference": 60,
+      "I3": 1200
+    },
+    "nonEmptyOutputs": 60,
+    "meanViolationsPerModel": 19,
+    "counterexamples": 0,
+    "firstFailures": [],
+    "elapsedMs": 2295
+  }
+}

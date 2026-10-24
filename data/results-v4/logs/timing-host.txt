@@ -1,0 +1,15 @@
+SC2_x64.exe                  60588 Console                    1  2,092,644 K
+SnippingTool.exe             73868 Console                    1    750,812 K
+claude.exe                   12996 Console                    1    602,720 K
+vmmemWSL                     26300 Services                   0    557,332 K
+MsMpEng.exe                  15028 Services                   0    491,904 K
+explorer.exe                 67944 Console                    1    424,268 K
+Orca.exe                     31928 Console                    1    423,884 K
+chrome.exe                   44164 Console                    1    393,040 K
+chrome.exe                   55460 Console                    1    387,844 K
+chrome.exe                   20916 Console                    1    377,416 K
+chrome.exe                   37376 Console                    1    359,744 K
+Dropbox.exe                  75308 Console                    1    347,520 K
+chrome.exe                   81564 Console                    1    343,888 K
+Orca.exe                     18872 Console                    1    303,304 K
+claude.exe                   44044 Console                    1    288,120 K

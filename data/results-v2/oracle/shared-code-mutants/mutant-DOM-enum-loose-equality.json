@@ -1,0 +1,1395 @@
+{
+  "experiment": "differential-random",
+  "bounds": {
+    "fixedCatalogModels": 400,
+    "fixedMaxNodes": 7,
+    "fixedMaxEdges": 10,
+    "randomCatalogs": 50,
+    "modelsPerRandomCatalog": 25,
+    "randomMaxNodes": 6,
+    "randomMaxEdges": 9
+  },
+  "seeds": {
+    "fixed": "910000 + catalog index",
+    "randomCatalogs": 920000
+  },
+  "stats": {
+    "fixed:aerospace": {
+      "cases": 400,
+      "engineViolations": 5272,
+      "oracleViolations": 5272,
+      "agreeingCases": 400,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "DOM": 734,
+        "MULT": 1022,
+        "REQ": 1052,
+        "TYPE": 1837,
+        "ISO": 311,
+        "TRACE": 223,
+        "ACYC": 64,
+        "VIEW": 29
+      },
+      "ruleCountMismatches": 0
+    },
+    "fixed:automotive": {
+      "cases": 400,
+      "engineViolations": 5315,
+      "oracleViolations": 5315,
+      "agreeingCases": 400,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "DOM": 731,
+        "MULT": 988,
+        "REQ": 1077,
+        "TYPE": 1813,
+        "ACYC": 86,
+        "ISO": 373,
+        "VIEW": 19,
+        "TRACE": 228
+      },
+      "ruleCountMismatches": 0
+    },
+    "fixed:robotics": {
+      "cases": 400,
+      "engineViolations": 5308,
+      "oracleViolations": 5308,
+      "agreeingCases": 400,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "DOM": 781,
+        "REQ": 1137,
+        "TYPE": 1731,
+        "ACYC": 84,
+        "MULT": 957,
+        "VIEW": 33,
+        "TRACE": 209,
+        "ISO": 376
+      },
+      "ruleCountMismatches": 0
+    },
+    "fixed:swap-restrictive": {
+      "cases": 400,
+      "engineViolations": 5207,
+      "oracleViolations": 5207,
+      "agreeingCases": 400,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "DOM": 731,
+        "MULT": 968,
+        "REQ": 1076,
+        "TYPE": 1756,
+        "TRACE": 223,
+        "ACYC": 71,
+        "ISO": 352,
+        "VIEW": 30
+      },
+      "ruleCountMismatches": 0
+    },
+    "fixed:counterexample": {
+      "cases": 400,
+      "engineViolations": 5597,
+      "oracleViolations": 5597,
+      "agreeingCases": 400,
+      "mismatchingCases": 0,
+      "mismatchingCasesReference": 0,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {},
+      "violationsByRuleClass": {
+        "REQ": 1134,
+        "TYPE": 1765,
+        "DOM": 712,
+        "ISO": 411,
+        "MULT": 1019,
+        "TRACE": 467,
+        "ACYC": 64,
+        "VIEW": 25
+      },
+      "ruleCountMismatches": 0
+    },
+    "randomCatalogs": {
+      "cases": 1250,
+      "engineViolations": 11036,
+      "oracleViolations": 11041,
+      "agreeingCases": 1245,
+      "mismatchingCases": 5,
+      "mismatchingCasesReference": 5,
+      "engineVsReferenceMismatchingCases": 0,
+      "engineOnlyByRule": {},
+      "oracleOnlyByRule": {
+        "DOM": 5
+      },
+      "violationsByRuleClass": {
+        "DOM": 1898,
+        "ISO": 454,
+        "MULT": 2414,
+        "REQ": 1709,
+        "TYPE": 3002,
+        "VIEW": 103,
+        "TRACE": 951,
+        "ACYC": 510
+      },
+      "ruleCountMismatches": 0
+    }
+  },
+  "mismatchesKept": 5,
+  "mismatches": [
+    {
+      "caseId": "rc2-3",
+      "catalog": "rc2",
+      "engineOnly": [],
+      "oracleOnly": [
+        "DOM:D.k|n3"
+      ],
+      "referenceOnlyVsOracle": [],
+      "oracleOnlyVsReference": [
+        "DOM:D.k|n3"
+      ],
+      "model": {
+        "id": "rc2-3",
+        "nodes": [
+          {
+            "id": "n0",
+            "type": "E",
+            "attrs": {
+              "name": 1,
+              "k": "",
+              "w": "y"
+            }
+          },
+          {
+            "id": "n1",
+            "type": "C",
+            "attrs": {
+              "name": " ",
+              "k": -1
+            }
+          },
+          {
+            "id": "n2",
+            "type": "A",
+            "attrs": {
+              "name": "y",
+              "w": -1
+            }
+          },
+          {
+            "id": "n3",
+            "type": "D",
+            "attrs": {
+              "name": 1,
+              "k": "1"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "e0",
+            "type": "q",
+            "src": "n1",
+            "tgt": "n1"
+          },
+          {
+            "id": "e1",
+            "type": "s",
+            "src": "n3",
+            "tgt": "ghost"
+          }
+        ]
+      },
+      "catalogData": {
+        "id": "rc2",
+        "nodeTypes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "edgeTypes": [
+          "p",
+          "q",
+          "r",
+          "s"
+        ],
+        "allowed": {
+          "p": {
+            "src": [
+              "A",
+              "B"
+            ],
+            "tgt": [
+              "A",
+              "B",
+              "E"
+            ]
+          },
+          "q": {
+            "src": [
+              "B"
+            ],
+            "tgt": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "r": {
+            "src": [
+              "D",
+              "E"
+            ],
+            "tgt": [
+              "A",
+              "C",
+              "D"
+            ]
+          },
+          "s": {
+            "src": [
+              "A",
+              "B",
+              "D",
+              "E"
+            ],
+            "tgt": [
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          }
+        },
+        "requiredAttr": {
+          "A": [],
+          "B": [
+            "name"
+          ],
+          "C": [],
+          "D": [
+            "name",
+            "k",
+            "w"
+          ],
+          "E": [
+            "k"
+          ]
+        },
+        "domain": {
+          "A.name": {
+            "kind": "nonEmptyString"
+          },
+          "A.w": {
+            "kind": "nonEmptyString"
+          },
+          "B.w": {
+            "kind": "enum",
+            "values": [
+              "x",
+              "y",
+              1,
+              2
+            ]
+          },
+          "C.k": {
+            "kind": "enum",
+            "values": [
+              "z"
+            ]
+          },
+          "D.name": {
+            "kind": "nonEmptyString"
+          },
+          "D.k": {
+            "kind": "enum",
+            "values": [
+              "x",
+              "y",
+              1,
+              2,
+              true
+            ]
+          },
+          "D.w": {
+            "kind": "nonEmptyString"
+          },
+          "E.k": {
+            "kind": "nonEmptyString"
+          },
+          "E.w": {
+            "kind": "range",
+            "min": -1,
+            "max": 3
+          }
+        },
+        "multiplicity": {
+          "A|q|out": [
+            0,
+            1
+          ],
+          "A|r|out": [
+            1,
+            -1
+          ],
+          "A|s|out": [
+            2,
+            2
+          ],
+          "B|p|out": [
+            1,
+            3
+          ],
+          "C|r|out": [
+            2,
+            4
+          ],
+          "C|s|in": [
+            2,
+            4
+          ],
+          "E|p|in": [
+            0,
+            0
+          ],
+          "E|p|out": [
+            2,
+            2
+          ]
+        },
+        "acyclic": [
+          "p"
+        ],
+        "tracePolicy": [
+          {
+            "id": "T0",
+            "sourceType": "B",
+            "edgeTypes": [
+              "r",
+              "s"
+            ],
+            "targetType": "E"
+          },
+          {
+            "id": "T1",
+            "sourceType": "D",
+            "edgeTypes": [
+              "p"
+            ],
+            "targetType": "B"
+          }
+        ],
+        "nonIsolated": [
+          "B",
+          "C",
+          "D"
+        ],
+        "viewPolicy": {
+          "viewType": "D",
+          "subjectEdgeType": "s",
+          "exposeEdgeType": "p",
+          "containEdgeType": "p"
+        }
+      }
+    },
+    {
+      "caseId": "rc2-18",
+      "catalog": "rc2",
+      "engineOnly": [],
+      "oracleOnly": [
+        "DOM:B.w|n1"
+      ],
+      "referenceOnlyVsOracle": [],
+      "oracleOnlyVsReference": [
+        "DOM:B.w|n1"
+      ],
+      "model": {
+        "id": "rc2-18",
+        "nodes": [
+          {
+            "id": "n0",
+            "type": "D",
+            "attrs": {
+              "name": -1
+            }
+          },
+          {
+            "id": "n1",
+            "type": "B",
+            "attrs": {
+              "name": "y",
+              "k": 10000,
+              "w": "1"
+            }
+          },
+          {
+            "id": "n2",
+            "type": "B",
+            "attrs": {
+              "name": 2,
+              "k": true
+            }
+          },
+          {
+            "id": "n3",
+            "type": "D",
+            "attrs": {
+              "name": 1,
+              "k": "x"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "e0",
+            "type": "q",
+            "src": "n1",
+            "tgt": "n3"
+          },
+          {
+            "id": "e1",
+            "type": "q",
+            "src": "n3",
+            "tgt": "n2"
+          },
+          {
+            "id": "e2",
+            "type": "r",
+            "src": "n0",
+            "tgt": "n0"
+          }
+        ]
+      },
+      "catalogData": {
+        "id": "rc2",
+        "nodeTypes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "edgeTypes": [
+          "p",
+          "q",
+          "r",
+          "s"
+        ],
+        "allowed": {
+          "p": {
+            "src": [
+              "A",
+              "B"
+            ],
+            "tgt": [
+              "A",
+              "B",
+              "E"
+            ]
+          },
+          "q": {
+            "src": [
+              "B"
+            ],
+            "tgt": [
+              "A",
+              "B",
+              "D"
+            ]
+          },
+          "r": {
+            "src": [
+              "D",
+              "E"
+            ],
+            "tgt": [
+              "A",
+              "C",
+              "D"
+            ]
+          },
+          "s": {
+            "src": [
+              "A",
+              "B",
+              "D",
+              "E"
+            ],
+            "tgt": [
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          }
+        },
+        "requiredAttr": {
+          "A": [],
+          "B": [
+            "name"
+          ],
+          "C": [],
+          "D": [
+            "name",
+            "k",
+            "w"
+          ],
+          "E": [
+            "k"
+          ]
+        },
+        "domain": {
+          "A.name": {
+            "kind": "nonEmptyString"
+          },
+          "A.w": {
+            "kind": "nonEmptyString"
+          },
+          "B.w": {
+            "kind": "enum",
+            "values": [
+              "x",
+              "y",
+              1,
+              2
+            ]
+          },
+          "C.k": {
+            "kind": "enum",
+            "values": [
+              "z"
+            ]
+          },
+          "D.name": {
+            "kind": "nonEmptyString"
+          },
+          "D.k": {
+            "kind": "enum",
+            "values": [
+              "x",
+              "y",
+              1,
+              2,
+              true
+            ]
+          },
+          "D.w": {
+            "kind": "nonEmptyString"
+          },
+          "E.k": {
+            "kind": "nonEmptyString"
+          },
+          "E.w": {
+            "kind": "range",
+            "min": -1,
+            "max": 3
+          }
+        },
+        "multiplicity": {
+          "A|q|out": [
+            0,
+            1
+          ],
+          "A|r|out": [
+            1,
+            -1
+          ],
+          "A|s|out": [
+            2,
+            2
+          ],
+          "B|p|out": [
+            1,
+            3
+          ],
+          "C|r|out": [
+            2,
+            4
+          ],
+          "C|s|in": [
+            2,
+            4
+          ],
+          "E|p|in": [
+            0,
+            0
+          ],
+          "E|p|out": [
+            2,
+            2
+          ]
+        },
+        "acyclic": [
+          "p"
+        ],
+        "tracePolicy": [
+          {
+            "id": "T0",
+            "sourceType": "B",
+            "edgeTypes": [
+              "r",
+              "s"
+            ],
+            "targetType": "E"
+          },
+          {
+            "id": "T1",
+            "sourceType": "D",
+            "edgeTypes": [
+              "p"
+            ],
+            "targetType": "B"
+          }
+        ],
+        "nonIsolated": [
+          "B",
+          "C",
+          "D"
+        ],
+        "viewPolicy": {
+          "viewType": "D",
+          "subjectEdgeType": "s",
+          "exposeEdgeType": "p",
+          "containEdgeType": "p"
+        }
+      }
+    },
+    {
+      "caseId": "rc11-15",
+      "catalog": "rc11",
+      "engineOnly": [],
+      "oracleOnly": [
+        "DOM:D.w|n2"
+      ],
+      "referenceOnlyVsOracle": [],
+      "oracleOnlyVsReference": [
+        "DOM:D.w|n2"
+      ],
+      "model": {
+        "id": "rc11-15",
+        "nodes": [
+          {
+            "id": "n0",
+            "type": "E",
+            "attrs": {
+              "name": "x",
+              "w": 10001
+            }
+          },
+          {
+            "id": "n1",
+            "type": "B",
+            "attrs": {
+              "name": "out"
+            }
+          },
+          {
+            "id": "n2",
+            "type": "D",
+            "attrs": {
+              "w": "1"
+            }
+          },
+          {
+            "id": "n3",
+            "type": "C",
+            "attrs": {
+              "w": 2
+            }
+          },
+          {
+            "id": "n4",
+            "type": "D",
+            "attrs": {
+              "k": 10000,
+              "w": 0
+            }
+          },
+          {
+            "id": "n5",
+            "type": "B",
+            "attrs": {
+              "w": "1"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "e0",
+            "type": "p",
+            "src": "n5",
+            "tgt": "n0"
+          },
+          {
+            "id": "e1",
+            "type": "p",
+            "src": "n2",
+            "tgt": "n5"
+          },
+          {
+            "id": "e2",
+            "type": "r",
+            "src": "n4",
+            "tgt": "n4"
+          },
+          {
+            "id": "e3",
+            "type": "p",
+            "src": "n2",
+            "tgt": "n4"
+          }
+        ]
+      },
+      "catalogData": {
+        "id": "rc11",
+        "nodeTypes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "edgeTypes": [
+          "p",
+          "q",
+          "r",
+          "s"
+        ],
+        "allowed": {
+          "p": {
+            "src": [
+              "C"
+            ],
+            "tgt": [
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
+          "q": {
+            "src": [
+              "A",
+              "C",
+              "D",
+              "E"
+            ],
+            "tgt": [
+              "A",
+              "E"
+            ]
+          },
+          "r": {
+            "src": [
+              "E"
+            ],
+            "tgt": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
+          "s": {
+            "src": [
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "tgt": [
+              "A",
+              "B",
+              "D"
+            ]
+          }
+        },
+        "requiredAttr": {
+          "A": [
+            "k"
+          ],
+          "B": [
+            "name",
+            "k"
+          ],
+          "C": [
+            "k"
+          ],
+          "D": [
+            "k"
+          ],
+          "E": [
+            "name"
+          ]
+        },
+        "domain": {
+          "A.w": {
+            "kind": "nonEmptyString"
+          },
+          "D.w": {
+            "kind": "enum",
+            "values": [
+              "y",
+              "z",
+              1
+            ]
+          }
+        },
+        "multiplicity": {
+          "A|s|out": [
+            1,
+            1
+          ],
+          "B|p|out": [
+            2,
+            3
+          ],
+          "C|q|out": [
+            2,
+            3
+          ],
+          "D|r|in": [
+            2,
+            4
+          ]
+        },
+        "acyclic": [
+          "q",
+          "r"
+        ],
+        "tracePolicy": [],
+        "nonIsolated": [
+          "A",
+          "D"
+        ],
+        "viewPolicy": {
+          "viewType": "A",
+          "subjectEdgeType": "r",
+          "exposeEdgeType": "q",
+          "containEdgeType": "q"
+        }
+      }
+    },
+    {
+      "caseId": "rc45-2",
+      "catalog": "rc45",
+      "engineOnly": [],
+      "oracleOnly": [
+        "DOM:B.name|n3"
+      ],
+      "referenceOnlyVsOracle": [],
+      "oracleOnlyVsReference": [
+        "DOM:B.name|n3"
+      ],
+      "model": {
+        "id": "rc45-2",
+        "nodes": [
+          {
+            "id": "n0",
+            "type": "A",
+            "attrs": {
+              "k": ""
+            }
+          },
+          {
+            "id": "n1",
+            "type": "A",
+            "attrs": {
+              "w": ""
+            }
+          },
+          {
+            "id": "n2",
+            "type": "D",
+            "attrs": {
+              "k": "",
+              "w": -1
+            }
+          },
+          {
+            "id": "n3",
+            "type": "B",
+            "attrs": {
+              "name": "1",
+              "k": 2,
+              "w": "out"
+            }
+          },
+          {
+            "id": "n4",
+            "type": "E",
+            "attrs": {
+              "name": 1,
+              "w": true
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "e0",
+            "type": "r",
+            "src": "n2",
+            "tgt": "ghost"
+          },
+          {
+            "id": "e1",
+            "type": "s",
+            "src": "n0",
+            "tgt": "n0"
+          },
+          {
+            "id": "e2",
+            "type": "p",
+            "src": "n2",
+            "tgt": "n1"
+          },
+          {
+            "id": "e3",
+            "type": "p",
+            "src": "n0",
+            "tgt": "n4"
+          },
+          {
+            "id": "e4",
+            "type": "r",
+            "src": "n3",
+            "tgt": "n3"
+          },
+          {
+            "id": "e5",
+            "type": "r",
+            "src": "n4",
+            "tgt": "n0"
+          }
+        ]
+      },
+      "catalogData": {
+        "id": "rc45",
+        "nodeTypes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "edgeTypes": [
+          "p",
+          "q",
+          "r",
+          "s"
+        ],
+        "allowed": {
+          "p": {
+            "src": [
+              "D"
+            ],
+            "tgt": [
+              "C",
+              "D"
+            ]
+          },
+          "q": {
+            "src": [
+              "A",
+              "B",
+              "C"
+            ],
+            "tgt": [
+              "A",
+              "D"
+            ]
+          },
+          "r": {
+            "src": [
+              "E"
+            ],
+            "tgt": [
+              "B",
+              "D"
+            ]
+          }
+        },
+        "requiredAttr": {
+          "A": [
+            "k"
+          ],
+          "B": [],
+          "C": [
+            "k"
+          ],
+          "D": [
+            "k",
+            "w"
+          ],
+          "E": [
+            "w"
+          ]
+        },
+        "domain": {
+          "A.w": {
+            "kind": "range",
+            "min": 2,
+            "max": 5
+          },
+          "B.name": {
+            "kind": "enum",
+            "values": [
+              "y",
+              1
+            ]
+          },
+          "C.k": {
+            "kind": "nonEmptyString"
+          }
+        },
+        "multiplicity": {
+          "B|s|out": [
+            1,
+            -1
+          ],
+          "C|p|out": [
+            2,
+            -1
+          ],
+          "D|r|out": [
+            2,
+            -1
+          ],
+          "E|p|out": [
+            2,
+            3
+          ],
+          "E|q|out": [
+            0,
+            1
+          ],
+          "E|s|in": [
+            1,
+            2
+          ]
+        },
+        "acyclic": [],
+        "tracePolicy": [],
+        "nonIsolated": [
+          "B"
+        ],
+        "viewPolicy": {
+          "viewType": "C",
+          "subjectEdgeType": "r",
+          "exposeEdgeType": "q",
+          "containEdgeType": "r"
+        }
+      }
+    },
+    {
+      "caseId": "rc48-16",
+      "catalog": "rc48",
+      "engineOnly": [],
+      "oracleOnly": [
+        "DOM:A.w|n2"
+      ],
+      "referenceOnlyVsOracle": [],
+      "oracleOnlyVsReference": [
+        "DOM:A.w|n2"
+      ],
+      "model": {
+        "id": "rc48-16",
+        "nodes": [
+          {
+            "id": "n0",
+            "type": "B",
+            "attrs": {
+              "k": "A"
+            }
+          },
+          {
+            "id": "n1",
+            "type": "C",
+            "attrs": {
+              "name": "y",
+              "w": 1
+            }
+          },
+          {
+            "id": "n2",
+            "type": "A",
+            "attrs": {
+              "name": 2,
+              "k": -1,
+              "w": "1"
+            }
+          },
+          {
+            "id": "n3",
+            "type": "D",
+            "attrs": {
+              "k": 1
+            }
+          },
+          {
+            "id": "n4",
+            "type": "D",
+            "attrs": {
+              "w": "1"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "e0",
+            "type": "q",
+            "src": "n3",
+            "tgt": "ghost"
+          },
+          {
+            "id": "e1",
+            "type": "r",
+            "src": "ghost",
+            "tgt": "n4"
+          },
+          {
+            "id": "e2",
+            "type": "s",
+            "src": "n4",
+            "tgt": "n4"
+          },
+          {
+            "id": "e3",
+            "type": "p",
+            "src": "n0",
+            "tgt": "n1"
+          },
+          {
+            "id": "e4",
+            "type": "s",
+            "src": "n2",
+            "tgt": "n1"
+          },
+          {
+            "id": "e5",
+            "type": "p",
+            "src": "n0",
+            "tgt": "n0"
+          },
+          {
+            "id": "e6",
+            "type": "r",
+            "src": "n4",
+            "tgt": "n1"
+          },
+          {
+            "id": "e7",
+            "type": "p",
+            "src": "n3",
+            "tgt": "n0"
+          },
+          {
+            "id": "e8",
+            "type": "q",
+            "src": "n3",
+            "tgt": "n2"
+          }
+        ]
+      },
+      "catalogData": {
+        "id": "rc48",
+        "nodeTypes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "edgeTypes": [
+          "p",
+          "q",
+          "r",
+          "s"
+        ],
+        "allowed": {
+          "p": {
+            "src": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "tgt": [
+              "B",
+              "D",
+              "E"
+            ]
+          },
+          "q": {
+            "src": [
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "tgt": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ]
+          },
+          "r": {
+            "src": [
+              "C",
+              "D"
+            ],
+            "tgt": [
+              "C",
+              "D"
+            ]
+          },
+          "s": {
+            "src": [
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "tgt": [
+              "B",
+              "C",
+              "D"
+            ]
+          }
+        },
+        "requiredAttr": {
+          "A": [],
+          "B": [],
+          "C": [],
+          "D": [],
+          "E": [
+            "k"
+          ]
+        },
+        "domain": {
+          "A.name": {
+            "kind": "range",
+            "min": 0,
+            "max": 2
+          },
+          "A.w": {
+            "kind": "enum",
+            "values": [
+              "y",
+              1,
+              true
+            ]
+          },
+          "B.name": {
+            "kind": "range",
+            "min": 1,
+            "max": 1
+          },
+          "B.k": {
+            "kind": "enum",
+            "values": [
+              "z",
+              1,
+              2,
+              true
+            ]
+          },
+          "C.w": {
+            "kind": "enum",
+            "values": [
+              "x",
+              true
+            ]
+          },
+          "D.w": {
+            "kind": "nonEmptyString"
+          }
+        },
+        "multiplicity": {
+          "B|r|out": [
+            2,
+            3
+          ],
+          "D|p|in": [
+            1,
+            2
+          ],
+          "E|p|in": [
+            2,
+            2
+          ],
+          "E|r|in": [
+            1,
+            2
+          ]
+        },
+        "acyclic": [
+          "p",
+          "r"
+        ],
+        "tracePolicy": [
+          {
+            "id": "T0",
+            "sourceType": "C",
+            "edgeTypes": [
+              "p",
+              "q",
+              "r",
+              "s"
+            ],
+            "targetType": "E"
+          },
+          {
+            "id": "T1",
+            "sourceType": "B",
+            "edgeTypes": [
+              "r"
+            ],
+            "targetType": "D"
+          }
+        ],
+        "nonIsolated": [],
+        "viewPolicy": {
+          "viewType": "E",
+          "subjectEdgeType": "p",
+          "exposeEdgeType": "p",
+          "containEdgeType": "q"
+        }
+      }
+    }
+  ],
+  "seconds": 230.826,
+  "codeIdentity": {
+    "src/validator/engine.ts": "2f82c6bb22ecbe3bd2fe556ab7f5422409febd37394eb15aeab5da832d2ceed4",
+    "src/catalog/rules.ts": "74dc3b3d26ea855d435fb504b9e6702717c230c8a9a7305f3b64159b6401192c",
+    "src/catalog/domains.ts": "d60c2c1164a0d22ffbfaac0702d1ff06ddc9a2b68acf3282915c4541eb64c545",
+    "src/reference/referenceSemantics.ts": "1f5fe5b605b38d08e6c751c234438fc7da5aa4fae195f1eace14002d9799a72f",
+    "src/model/graph.ts": "fe4c6ecd3c8317f943b8e16ca53f477aff64b5db2923f3b708077069d3de2100",
+    "src/injector/defectInjector.ts": "10e06f1943ac571e250676f122bb64b1a9c9bf86905193f0b3e2e5de25f7982d",
+    "src/generator/syntheticModelGenerator.ts": "c84354f2a23bddca56d6e6fe9b451dc8fe5e657b25869a92228e37c32384d356",
+    "oracle-py/oracle_spec.py": "8b2aa5941004865aaecacbc4d9aec069f502d738ee231241226f48f79bb176d6",
+    "oracle-py/rdf_export.py": "44a6aa25605f2551cc955a208e481379cd102c3b0d6872198216739c3150dca6",
+    "oracle-py/shapes.py": "987857e51000d0df61fe2d5e2dfb1623fa6bc7fb31ebff974435a224c7ae9195",
+    "oracle-py/run_oracle.py": "a40f82d9186074c6645cd2ae3a7ed0c8382719cc015aca8a52e457c1c2603069"
+  }
+}
